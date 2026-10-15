@@ -1,4 +1,3 @@
-Step-by-Step Guide to Automating Monthly Sales Consolidation Using Excel Power Query
 How to Generate Complex Regex and Data Cleaning Formulas in Google Sheets with ChatGPT
 How to Auto-Extract First Names and Clean Messy Email Lists in Excel Using AI
 How to Build an Automated Currency Converter Dashboard in Google Sheets Without Paid Plugins

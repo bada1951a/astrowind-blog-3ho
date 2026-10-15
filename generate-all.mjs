@@ -97,7 +97,7 @@ const TARGET_LANGS = [
   { code: 'nl', name: 'Dutch', persona: 'Nederlandse productiviteits- en AI-specialist die slimme werkmethoden uitlegt', osUi: 'Bestand > Opties, Gegevens > Power Query, Formules, Invoegtoepassingen', localeContext: 'Zuidas zakendistrict in Amsterdam, acute spreadsheetproblemen vlak voor de directiemeeting' },
   { code: 'pl', name: 'Polish', persona: 'Polski ekspert od automatyzacji biurowej i narzędzi AI tłumaczący triki krok po kroku', osUi: 'Plik > Opcje, Dane > Power Query, Formuły, Dodatki', localeContext: 'Warszawskie centrum biznesowe, awaria formuł w arkuszu tuż przed wysłaniem raportu do zarządu' },
   { code: 'id', name: 'Indonesian', persona: 'Praktisi produktivitas dan otomatisasi kantor yang berbagi solusi praktis sehari-hari', osUi: 'File > Opsi, Data > Power Query, Rumus, Add-in', localeContext: 'Kawasan bisnis SCBD Jakarta, lembur menyelesaikan rekap data tahunan yang error' },
-  { code: 'vi', name: 'Vietnamese', persona: 'Chuyên viên tối ưu hóa quy trình làm việc và công cụ AI thực chiến', osUi: 'Tệp > Tùy chọn, Dữ liệu > Power Query, Công thức, Tiện ích bổ sung', localeContext: 'Văn phòng tại TP.HCM / Hà Nội, áp lực hoàn thành báo cáo số liệu trước giờ tan ca' }
+  { code: 'vi', name: 'Vietnamese', persona: 'Chuyên viên tối ưu hóa quy trình làm việc và công cụ AI thực chiến', osUi: 'Tệp > Tùy chọn, Dữ liệu > Power Query, Công thức, Tiện ích bổ sung', localeContext: 'Văn phòng tại TP.HCM / Hà Nội, áp력 hoàn thành báo cáo số liệu trước giờ tan ca' }
 ];
 
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
@@ -112,7 +112,7 @@ async function fetchWithRetry(prompt, maxRetries = 15, delayMs = 20000) {
       });
       return response.text;
     } catch (error) {
-      console.warn(`⚠️ [호출 지연/에러] 시도 ${attempt}/${maxRetries}:${error.message}`);
+      console.warn(`⚠️ [호출 지연/에러] 시도 ${attempt}/${maxRetries}: ${error.message}`);
       if (attempt === maxRetries) {
         throw error;
       }
@@ -126,7 +126,7 @@ async function generateSinglePost(lang, index) {
   const selectedTheme = THEME_PRESETS[Math.floor(Math.random() * THEME_PRESETS.length)];
   const { coverUrl, bodyUrl } = getDistributedImages(index, currentTopic + fileSlug);
 
-  console.log(`\n🚀 [${index + 1}/12]${lang.name} (${lang.code}) 3호기 자동화 포스팅 생성 중... (적용 테마: ${selectedTheme.name})`);
+  console.log(`\n🚀 [${index + 1}/12] ${lang.name} (${lang.code}) 3호기 자동화 포스팅 생성 중... (적용 테마: ${selectedTheme.name})`);
 
   const postDate = new Date();
   const baseMinutes = 8 * 60 + 30 + Math.floor(index * 75);
@@ -135,4 +135,177 @@ async function generateSinglePost(lang, index) {
 
   const prompt = `
 You are a ${lang.persona}.
-Write a highly practical, conversational, 1st-person workflow troubleshooting guide
+Write a highly practical, conversational, 1st-person workflow troubleshooting guide natively in ${lang.name}.
+CRITICAL: DO NOT translate literally from Korean. Write completely from scratch as an authentic native professional working in THAT specific country/culture.
+
+[Topic]
+${currentTopic}
+
+[CRITICAL LOCALIZATION & REAL WORLD WORKPLACE CONTEXT (MANDATORY)]
+- Target Locale Context: "${lang.localeContext}"
+- ABSOLUTELY FORBIDDEN for non-Korean languages:
+  * NEVER mention Korean infrastructure, companies, or services (NO Seoul, NO Kakao, NO Naver) in non-Korean languages.
+  * Your opening story MUST naturally incorporate the authentic local environment:
+    - English (en): Silicon Valley / NYC corporate offices, executive syncs, Slack threads.
+    - Japanese (ja): Marunouchi / Shinagawa offices, urgent monthly sales aggregation deadlines.
+    - German (de): Frankfurt financial district, quarterly board reports.
+    - And corresponding native business context for other languages.
+  * The protagonist must be 100% perceived as a local professional of that country.
+
+[CRITICAL OUTPUT LANGUAGE INTEGRITY - ZERO HANGUL IN GLOBAL POSTS]
+- If target language is NOT Korean (ko):
+  * Absolutely NEVER include any Korean Hangul characters (가-힣) anywhere in the title, description, tags, or body.
+  * Every single character in the title and description MUST strictly be in native ${lang.name}.
+
+[WRITING STYLE: PLAIN & PRACTICAL FOR EVERYDAY PROFESSIONALS]
+1. Plain & Easy Explanations:
+   - Avoid overly abstract academic math theory.
+   - Write in warm, friendly, everyday language that any busy desk worker or manager can immediately follow.
+   - Give concrete formulas, prompts, or step-by-step clicks.
+2. Laser-Focused Narrative:
+   - The opening emergency story MUST be 100% strictly about the assigned [Topic] (${currentTopic}).
+   - Keep the opening story centered around the exact moment this specific workflow roadblock or formula error threatened the workday.
+
+[TECHNICAL TEXT FORMATTING RULE (STRICT NO LATEX)]
+- ABSOLUTELY FORBIDDEN: NEVER use LaTeX math delimiters or academic math symbols (DO NOT use $, $$, \\times, \\approx, \\degree).
+- Always use plain, human-readable numbers, formulas, and units:
+  * Write "A1 * B1" instead of "$A1 \\times B1$"
+  * Write "42°C" instead of "$42^{\\circ}C$"
+- Clean 2-column key-value lists or bulleted cards instead of overly wide 4-column tables that break on mobile screens.
+
+[Design Theme & Layout Dynamic Rules (MANDATORY)]
+- Assigned Theme: "${selectedTheme.name}"
+- Primary Accent Color: ${selectedTheme.primaryColor}
+- Layout Characteristic: ${selectedTheme.layout}
+- You MUST incorporate native Markdown and inline styled HTML callouts tailored to this theme.
+- Use custom styled tip/warning boxes (e.g., <div style="border-left: 4px solid ${selectedTheme.primaryColor}; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">...</div>).
+  * CRITICAL: All text inside callout/tip/warning boxes MUST be crisp dark charcoal/black (color: #111827) so it is 100% legible against any background.
+
+[Tone & Writing Style Rules (STRICT - NO AI VIBE)]
+1. Mandatory Opening:
+   - Absolutely FORBIDDEN: Boring textbook intros like "Hello", "In this post", "Today we will explore".
+   - Start immediately with an intense, relatable workplace emergency scenario strictly about [Topic] (e.g., "15 minutes before the client presentation with broken formulas", "hours wasted copying and pasting messy data").
+2. Tone & Voice:
+   - Write like a real colleague sharing an honest, battle-tested productivity solution on a professional community.
+3. Fast-Paced 3-Step Narrative:
+   - Step 1: Sudden workflow panic regarding [Topic] set in ${lang.localeContext}.
+   - Step 2: Wasted manual effort and trial-and-error.
+   - Step 3: The breakthrough actionable tip & clear step-by-step setup.
+
+[Content & Structure (AdSense E-E-A-T Compliant)]
+1. Opening Story: Intense real workplace incident strictly regarding this topic.
+2. Root Cause Breakdown: Clearly explain 3 realistic root causes behind the bottleneck or error.
+3. Step-by-Step Resolution:
+   - Use official local software UI terminology matching: "${lang.osUi}".
+   - Provide exact clicks, copy-pasteable formulas, prompts, or setting steps.
+4. Expert Warning / Advice: Practical precautions regarding data privacy, backup, or error prevention.
+5. Frequently Asked Questions (FAQ): Exactly 3 realistic, high-value Q&As that everyday users would ask.
+
+[Length & Richness Rules]
+- Korean (ko): Minimum 2,500 characters of rich, deep, non-repetitive text.
+- Other languages: 1,200 to 1,500 words of thorough practical explanation.
+
+[Strict Output Format]
+Return ONLY raw Markdown. DO NOT wrap the output in markdown code fences. DO NOT include the post title as an H1 (# Title) in the body. Begin immediately with the frontmatter:
+
+---
+title: "Native Catchy Title in ${lang.name}"
+description: "Native concise description in ${lang.name} under 160 characters"
+publishDate: ${pubDateIso}
+image: "${coverUrl}"
+category: "automation"
+tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]
+theme: "${selectedTheme.name}"
+---
+
+(Body starts directly here without H1 header)
+`;
+
+  try {
+    let rawText = await fetchWithRetry(prompt);
+    let text = rawText.trim();
+    if (text.startsWith('```markdown')) text = text.replace(/^```markdown\n/, '').replace(/\n```$/, '');
+    if (text.startsWith('```')) text = text.replace(/^```\n/, '').replace(/\n```$/, '');
+
+    text = text.replace(/\$([^$]+)\$/g, '$1')
+               .replace(/\\times/g, 'x')
+               .replace(/\\circ/g, '°')
+               .replace(/\\approx/g, '≈');
+
+    if (lang.code !== 'ko') {
+      text = text.replace(/(title:\s*")([^"]*)(")/g, (match, p1, p2, p3) => {
+        return `${p1}${p2.replace(/[가-힣]+/g, '').trim()}${p3}`;
+      });
+      text = text.replace(/(description:\s*")([^"]*)(")/g, (match, p1, p2, p3) => {
+        return `${p1}${p2.replace(/[가-힣]+/g, '').trim()}${p3}`;
+      });
+    }
+
+    const fmMatch = text.match(/^---[\s\S]*?---\n*/);
+    if (fmMatch) {
+      let frontmatter = fmMatch[0];
+      let body = text.slice(frontmatter.length).trim();
+      body = body.replace(/^#\s+[^\n]+\n+/, '');
+
+      // 3호기 404 방지: AI 출력과 상관없이 category를 무조건 'automation'으로 강제 고정
+      frontmatter = frontmatter.replace(/category:\s*["'][^"']*["']/i, "category: 'automation'")
+                               .replace(/category:\s*[^\n\r]+/i, "category: 'automation'");
+
+      const middleImageMarkdown = `\n\n![AI Productivity & Workflow Automation](${bodyUrl})\n\n`;
+      if (body.includes('## 2.') || body.includes('### 2.')) {
+        body = body.replace(/(#{2,3}\s*2\.[^\n]+)/, `${middleImageMarkdown}$1`);
+      } else {
+        const paragraphs = body.split('\n\n');
+        if (paragraphs.length >= 3) {
+          paragraphs.splice(2, 0, middleImageMarkdown.trim());
+          body = paragraphs.join('\n\n');
+        } else {
+          body = `${middleImageMarkdown}${body}`;
+        }
+      }
+
+      text = `${frontmatter}\n${body}\n`;
+    }
+
+    const targetDir = path.join(POSTS_BASE_DIR, lang.code);
+    if (!fs.existsSync(targetDir)) {
+      fs.mkdirSync(targetDir, { recursive: true });
+    }
+
+    const filePath = path.join(targetDir, `${fileSlug}.md`);
+    fs.writeFileSync(filePath, text, 'utf-8');
+    console.log(`✅ [성공] 3호기 저장 완료: src/data/post/${lang.code}/${fileSlug}.md (테마: ${selectedTheme.name})`);
+    return true;
+  } catch (error) {
+    console.error(`❌ [최종 실패] ${lang.name} 생성 실패:`, error.message);
+    return false;
+  }
+}
+
+async function run() {
+  console.log("==================================================");
+  console.log("⚡ 3호기 AI & 업무자동화 12개국 초고속 자동 포스팅 파이프라인 시작 (Picsum 고속 이미지)");
+  console.log("==================================================");
+
+  let successCount = 0;
+
+  for (let i = 0; i < TARGET_LANGS.length; i++) {
+    const isSuccess = await generateSinglePost(TARGET_LANGS[i], i);
+    if (isSuccess) successCount++;
+    if (i < TARGET_LANGS.length - 1) {
+      await delay(5000);
+    }
+  }
+
+  if (successCount > 0) {
+    lines.shift();
+    fs.writeFileSync(TOPICS_FILE, lines.join('\n'), 'utf-8');
+    console.log(`\n🧹 총 ${successCount}개국 포스팅 완료. topics.txt에서 주제를 삭제했습니다.`);
+    console.log(`📊 남은 주제 수: ${lines.length}개`);
+  } else {
+    console.error("\n❌ 모든 언어 생성이 실패하여 topics.txt를 유지합니다.");
+    process.exit(1);
+  }
+}
+
+run();

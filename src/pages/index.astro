@@ -3,11 +3,11 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 
-// 2호기 대문 이미지 불러오기
-import moonImg from '~/assets/images/moon.jpg';
+// 3호기 대문 이미지 불러오기
+import universeImg from '~/assets/images/universe.jpg';
 
 const metadata = {
-  title: 'Story Daily Tech — Practical Life & Tech Insights',
+  title: 'Story Daily Work — AI & Workflow Automation',
   ignoreTitleTemplate: true,
 };
 ---
@@ -18,30 +18,30 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Explore Articles',
-        href: '/blog',
+        text: 'Explore Automation',
+        href: '/category/automation',
         icon: 'tabler:chevron-right',
       },
     ]}
     image={{
-      src: moonImg,
-      alt: 'Story Daily Tech - Troubleshooting Guides & Solutions',
+      src: universeImg,
+      alt: 'Automation - AI & Workflow Solutions',
     }}
   >
     <Fragment slot="title">
-      Practical Life & Tech Insights,<br />
-      <span class="text-accent dark:text-white highlight">Story Daily Tech</span>
+      Automation & Productivity,<br />
+      <span class="text-accent dark:text-white highlight">AI & Workflow Solutions</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Practical troubleshooting guides, mobile diagnostics, and actionable digital workflows for everyday tech.
+      Eliminate repetitive manual tasks. Master modern AI tools, Excel Power Query, and smart office automation workflows.
     </Fragment>
   </Hero>
 
   <!-- Latest Posts Section -->
   <BlogLatestPosts
     title="Latest Articles"
-    information="Explore verified troubleshooting workflows and practical tech guides."
+    information="Explore actionable AI prompts, spreadsheet formulas, and verified automation workflows."
     count={6}
   />
 </Layout>

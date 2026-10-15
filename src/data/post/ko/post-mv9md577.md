@@ -3,7 +3,7 @@ title: "판교 IT기업 월말 야근 탈출! 엑셀 파워 쿼리로 월별 매
 description: "매달 수십 개의 엑셀 파일을 복사·붙여넣기 하느라 야근하시나요? 파워 쿼리 하나로 월별 매출 취합을 완전 자동화하고 칼퇴하는 실무 비법을 공개합니다."
 publishDate: 2026-10-15T08:30:00.000Z
 image: "https://picsum.photos/seed/tech997/900/600"
-category: "Productivity"
+category: "Automation"
 tags: ["Excel", "PowerQuery", "Automation", "OfficeTips"]
 theme: "Modern Minimalist Slate"
 ---

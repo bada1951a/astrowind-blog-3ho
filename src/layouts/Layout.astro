@@ -11,6 +11,7 @@ import CustomStyles from '~/components/CustomStyles.astro';
 import ApplyColorMode from '~/components/common/ApplyColorMode.astro';
 import Metadata from '~/components/common/Metadata.astro';
 import SiteVerification from '~/components/common/SiteVerification.astro';
+import Analytics from '~/components/common/Analytics.astro';
 import Intersect from '~/components/common/Intersect.astro';
 
 // Comment the line below to disable View Transitions
@@ -29,22 +30,12 @@ const { language, textDirection } = I18N;
 <!doctype html>
 <html lang={language} dir={textDirection} class="2xl:text-[20px]">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-1W6TYCNJK9"></script>
-    <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-1W6TYCNJK9');
-    </script>
-
     <meta name="naver-site-verification" content="3578141ffb7f513ab5393a1adb11d369be8c2f35" />
 
-    <!-- Open Graph 기본 메타태그 -->
+    <!-- Open Graph 기본 메타태그 (3호기 업무자동화) -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="업무 자동화 인사이트" />
-    <meta property="og:description" content="직장인을 위한 실전 AI 업무 자동화 및 생산성 향상 가이드" />
+    <meta property="og:title" content="스마트 워크 인사이트 - AI 업무자동화" />
+    <meta property="og:description" content="직장인을 위한 실전 AI 프롬프트와 업무자동화 가이드" />
     <meta property="og:url" content="https://work.storydailyview.com" />
 
     <CommonMeta />
@@ -54,6 +45,7 @@ const { language, textDirection } = I18N;
     <ApplyColorMode />
     <Metadata {...metadata} />
     <SiteVerification />
+    <Analytics />
 
     <link rel="preconnect" href="https://images.unsplash.com" />
 

@@ -15,7 +15,7 @@ export const headerData = {
       href: getPermalink('/category/automation'),
     },
   ],
-  actions: [{ text: 'Explore Articles', href: getBlogPermalink() }],
+  actions: [],
 };
 
 export const footerData = {
@@ -43,6 +43,6 @@ export const footerData = {
   ],
   socialLinks: [],
   footNote: `
-    © 2026 Smart Work Insights. All rights reserved.
+    © 2026 Daily Work Hack. All rights reserved.
   `,
 };

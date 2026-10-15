@@ -57,3 +57,4 @@ analytics:
   vendors:
     googleAnalytics:
       id: 'G-1W6TYCNJK9'
+      partytown: false

@@ -30,14 +30,21 @@ const { language, textDirection } = I18N;
 <!doctype html>
 <html lang={language} dir={textDirection} class="2xl:text-[20px]">
   <head>
-    <meta name="naver-site-verification" content="3578141ffb7f513ab5393a1adb11d369be8c2f35" />
+<meta name="naver-site-verification" content="3578141ffb7f513ab5393a1adb11d369be8c2f35" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1W6TYCNJK9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    <!-- Open Graph 기본 메타태그 -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="스마트 워크 인사이트 - AI 업무자동화" />
-    <meta property="og:description" content="직장인을 위한 실전 AI 프롬프트와 업무자동화 가이드" />
-    <meta property="og:url" content="https://work.storydailyview.com" />
-
+  gtag('config', 'G-1W6TYCNJK9');
+</script>
+<!-- Open Graph 기본 메타태그 -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="스마트 워크 인사이트 - AI 업무자동화" />
+<meta property="og:description" content="직장인을 위한 실전 AI 프롬프트와 업무자동화 가이드" />
+<meta property="og:url" content="https://work.storydailyview.com" />
     <CommonMeta />
     <Favicons />
     <Font cssVariable="--font-inter" preload />

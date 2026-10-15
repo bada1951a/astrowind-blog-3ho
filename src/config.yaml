@@ -1,6 +1,6 @@
 site:
-  name: 'Story Daily Tech'
-  site: 'https://m.storydailyview.com'
+  name: 'Smart Work Insights'
+  site: 'https://work.storydailyview.com'
   base: '/'
   trailingSlash: false
 
@@ -9,14 +9,14 @@ site:
 # Metadata
 metadata:
   title:
-    default: 'Story Daily Tech'
-    template: '%s — Story Daily Tech'
-  description: 'Practical Life & Tech Insights, Mobile Diagnostics, and Real-World Troubleshooting.'
+    default: 'Smart Work Insights'
+    template: '%s — Smart Work Insights'
+  description: 'AI Tools, Practical Office Automation, and Productivity Workflows for Modern Professionals.'
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: 'Story Daily Tech'
+    site_name: 'Smart Work Insights'
     type: website
 
 i18n:

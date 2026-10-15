@@ -1,4 +1,3 @@
-How to Use ChatGPT to Fix Broken Excel XLOOKUP and Nested IF Formulas
 How to Connect Gemini API with Google Sheets via Apps Script for Bulk Text Categorization
 Step-by-Step Guide to Automating Monthly Sales Consolidation Using Excel Power Query
 How to Generate Complex Regex and Data Cleaning Formulas in Google Sheets with ChatGPT

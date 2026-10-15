@@ -43,7 +43,7 @@ function getDistributedImages(langIndex, seedStr) {
   const coverSeed = ((baseNum + (langIndex * 73)) % 1000) + 1;
   const bodySeed = ((coverSeed + 499) % 1000) + 1;
 
-  // 엑박 원천 차단: 안정적인 Picsum 고해상도 이미지
+  // 엑박 원천 차단: 안정적인 Picsum 고해상도 이미지 (업무/테크 전용)
   const coverUrl = `https://picsum.photos/seed/tech${coverSeed}/1200/630`;
   const bodyUrl = `https://picsum.photos/seed/office${bodySeed}/1000/550`;
 

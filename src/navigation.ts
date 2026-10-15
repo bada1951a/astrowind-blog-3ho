@@ -11,11 +11,7 @@ export const headerData = {
       href: getBlogPermalink(),
     },
     {
-      text: 'AI Tools',
-      href: getPermalink('/category/ai-tools'),
-    },
-    {
-      text: 'Automation',
+      text: 'AI & Automation',
       href: getPermalink('/category/automation'),
     },
   ],
@@ -28,8 +24,7 @@ export const footerData = {
       title: 'Categories',
       links: [
         { text: 'All Articles', href: getBlogPermalink() },
-        { text: 'AI Tools', href: getPermalink('/category/ai-tools') },
-        { text: 'Automation', href: getPermalink('/category/automation') },
+        { text: 'AI & Automation', href: getPermalink('/category/automation') },
       ],
     },
     {

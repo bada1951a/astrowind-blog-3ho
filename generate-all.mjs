@@ -97,7 +97,7 @@ const TARGET_LANGS = [
   { code: 'nl', name: 'Dutch', persona: 'Nederlandse productiviteits- en AI-specialist die slimme werkmethoden uitlegt', osUi: 'Bestand > Opties, Gegevens > Power Query, Formules, Invoegtoepassingen', localeContext: 'Zuidas zakendistrict in Amsterdam, acute spreadsheetproblemen vlak voor de directiemeeting' },
   { code: 'pl', name: 'Polish', persona: 'Polski ekspert od automatyzacji biurowej i narzędzi AI tłumaczący triki krok po kroku', osUi: 'Plik > Opcje, Dane > Power Query, Formuły, Dodatki', localeContext: 'Warszawskie centrum biznesowe, awaria formuł w arkuszu tuż przed wysłaniem raportu do zarządu' },
   { code: 'id', name: 'Indonesian', persona: 'Praktisi produktivitas dan otomatisasi kantor yang berbagi solusi praktis sehari-hari', osUi: 'File > Opsi, Data > Power Query, Rumus, Add-in', localeContext: 'Kawasan bisnis SCBD Jakarta, lembur menyelesaikan rekap data tahunan yang error' },
-  { code: 'vi', name: 'Vietnamese', persona: 'Chuyên viên tối ưu hóa quy trình làm việc và công cụ AI thực chiến', osUi: 'Tệp > Tùy chọn, Dữ liệu > Power Query, Công thức, Tiện ích bổ sung', localeContext: 'Văn phòng tại TP.HCM / Hà Nội, áp력 hoàn thành báo cáo số liệu trước giờ tan ca' }
+  { code: 'vi', name: 'Vietnamese', persona: 'Chuyên viên tối ưu hóa quy trình làm việc và công cụ AI thực chiến', osUi: 'Tệp > Tùy chọn, Dữ liệu > Power Query, Công thức, Tiện ích bổ sung', localeContext: 'Văn phòng tại TP.HCM / Hà Nội, áp lực hoàn thành báo cáo số liệu trước giờ tan ca' }
 ];
 
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
@@ -250,6 +250,9 @@ theme: "${selectedTheme.name}"
       // 3호기 404 방지: AI 출력과 상관없이 category를 무조건 'automation'으로 강제 고정
       frontmatter = frontmatter.replace(/category:\s*["'][^"']*["']/i, "category: 'automation'")
                                .replace(/category:\s*[^\n\r]+/i, "category: 'automation'");
+
+      // Cloudflare 빌드 실패 방지: publishDate의 불필요한 따옴표 자동 제거
+      frontmatter = frontmatter.replace(/publishDate:\s*["']([^"']+)["']/i, "publishDate: $1");
 
       const middleImageMarkdown = `\n\n![AI Productivity & Workflow Automation](${bodyUrl})\n\n`;
       if (body.includes('## 2.') || body.includes('### 2.')) {

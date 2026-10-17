@@ -2,10 +2,9 @@ name: Auto Multi-Language Blog Publishing Pipeline (3ho)
 
 on:
   schedule:
-    # 3호기 스케줄: 한국 시간 아침 07:18 (UTC 22:18) / 밤 22:38 (UTC 13:38)
-    # 1호기(06:00, 21:00), 2호기(06:28, 21:28)와 시차 분산
-    - cron: '18 22 * * *'
-    - cron: '38 13 * * *'
+    # 3호기 스케줄: 한국 시간(KST) 매일 오후 3시 15분 (15:15 KST) 1회 발행
+    # UTC 기준: 06:15 (1호기 14:45, 2호기 15:00에 이은 15분 간격 분산)
+    - cron: '15 6 * * *'
 
   workflow_dispatch:
 

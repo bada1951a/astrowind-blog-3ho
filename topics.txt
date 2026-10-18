@@ -1,4 +1,3 @@
-How to Convert Scanned Paper Invoices into Clean Excel Sheets Using Free OCR and AI
 How to Automate Duplicate Customer Removal in Google Sheets Using Gemini Prompts
 How to Write Custom Apps Script to Email Weekly PDF Reports from Google Sheets
 How to Use AI to Predict Next Quarter Inventory Needs Directly in Excel Spreadsheets

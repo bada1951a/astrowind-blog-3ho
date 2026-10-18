@@ -11,7 +11,6 @@ if (!GEMINI_API_KEY) {
 const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
 const POSTS_BASE_DIR = path.resolve('src/data/post');
 const TOPICS_FILE = path.resolve('topics.txt');
-const LOCAL_IMAGE_BASE_DIR = path.resolve('public/assets/images');
 
 if (!fs.existsSync(TOPICS_FILE)) {
   console.error("❌ topics.txt 파일이 존재하지 않습니다.");
@@ -30,41 +29,26 @@ const currentTopic = lines[0];
 console.log(`📌 오늘 처리할 주제 (3호기 AI/업무자동화): "${currentTopic}"`);
 
 // =========================================================================
-// [3호기 전용] 무료 실사 AI/업무자동화 이미지 다운로드 및 로컬 에셋 저장 로직
+// [3호기 전용] 검증된 고속 AI/오피스 생산성/자동화 실사 CDN 매핑
 // =========================================================================
-async function downloadAndSaveImage(promptText, saveRelativePath) {
-  const fullSavePath = path.resolve('public', saveRelativePath.replace(/^\//, ''));
-  const dir = path.dirname(fullSavePath);
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
-  }
+function getAutomationKeyword(topic = '') {
+  const t = topic.toLowerCase();
+  if (/엑셀|파워쿼리|vlookup|함수|수식|스프레드시트|excel|spreadsheet/.test(t)) return 'spreadsheet,data-analysis,workspace';
+  if (/프롬프트|gpt|gemini|llm|인공지능|ai|노코드/.test(t)) return 'artificial-intelligence,laptop-code,office';
+  if (/파이썬|스크립트|크롤링|자동화|매크로|api|webhook/.test(t)) return 'coding,programmer,dual-monitor';
+  if (/노션|생산성|시간관리|업무|보고서|대시보드/.test(t)) return 'dashboard,analytics,modern-office';
+  return 'office-technology,productivity,working-laptop';
+}
 
-  const encodedPrompt = encodeURIComponent(promptText);
-  const seed = Math.floor(Math.random() * 999999);
-  const imageUrl = `https://image.pollinations.ai/prompt/${encodedPrompt}?width=1200&height=675&nologo=true&seed=${seed}`;
+function getPostImages(topic, index) {
+  const kw = getAutomationKeyword(topic);
+  const sig1 = (index * 23 + 13) % 500;
+  const sig2 = (index * 37 + 19) % 500;
 
-  // 최대 3회 재시도 (다운로드 안전망 확보)
-  for (let attempt = 1; attempt <= 3; attempt++) {
-    try {
-      const response = await fetch(imageUrl, { signal: AbortSignal.timeout(25000) });
-      if (response.ok) {
-        const arrayBuffer = await response.arrayBuffer();
-        const buffer = Buffer.from(arrayBuffer);
-        if (buffer.length > 5000) {
-          fs.writeFileSync(fullSavePath, buffer);
-          // AstroWind 에셋 참조 경로 반환
-          return `~/assets/images/${saveRelativePath.replace(/^assets\/images\//, '')}`;
-        }
-      }
-    } catch (err) {
-      console.warn(`  ⚠️ [3호기 이미지] 다운로드 재시도 (${attempt}/3): ${err.message}`);
-      await delay(3000);
-    }
-  }
-
-  // 타임아웃 예외 발생 시 생산성/오피스 테크 실사로 안전 대체
-  console.warn(`  ⚠️ AI 이미지 생성 지연, 업무자동화 실사로 안전 대체합니다.`);
-  return `https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop&q=80`;
+  return {
+    coverUrl: `https://images.unsplash.com/featured/1200x675/?${kw}&sig=${sig1}`,
+    bodyUrl: `https://images.unsplash.com/featured/1000x550/?${kw},workspace&sig=${sig2}`
+  };
 }
 
 // 30가지 고유 시각 스타일 및 글 구조 테마 프리셋
@@ -114,7 +98,7 @@ const TARGET_LANGS = [
   { code: 'nl', name: 'Dutch', persona: 'Nederlandse productiviteits- en AI-specialist die slimme werkmethoden uitlegt', osUi: 'Bestand > Opties, Gegevens > Power Query, Formules, Invoegtoepassingen', localeContext: 'Zuidas zakendistrict in Amsterdam, acute spreadsheetproblemen vlak voor de directiemeeting' },
   { code: 'pl', name: 'Polish', persona: 'Polski ekspert od automatyzacji biurowej i narzędzi AI tłumaczący triki krok po kroku', osUi: 'Plik > Opcje, Dane > Power Query, Formuły, Dodatki', localeContext: 'Warszawskie centrum biznesowe, awaria formuł w arkuszu tuż przed wysłaniem raportu do zarządu' },
   { code: 'id', name: 'Indonesian', persona: 'Praktisi produktivitas dan otomatisasi kantor yang berbagi solusi praktis sehari-hari', osUi: 'File > Opsi, Data > Power Query, Rumus, Add-in', localeContext: 'Kawasan bisnis SCBD Jakarta, lembur menyelesaikan rekap data tahunan yang error' },
-  { code: 'vi', name: 'Vietnamese', persona: 'Chuyên viên tối ưu hóa quy trình làm việc và công cụ AI thực chiến', osUi: 'Tệp > Tùy chọn, Dữ liệu > Power Query, Công thức, Tiện ích bổ sung', localeContext: 'Văn phòng tại TP.HCM / Hà Nội, áp력 hoàn thành báo cáo số liệu trước giờ tan ca' }
+  { code: 'vi', name: 'Vietnamese', persona: 'Chuyên viên tối ưu hóa quy trình làm việc và công cụ AI thực chiến', osUi: 'Tệp > Tùy chọn, Dữ liệu > Power Query, Công thức, Tiện ích bổ sung', localeContext: 'Văn phòng tại TP.HCM / Hà Nội, áp lực hoàn thành báo cáo số liệu trước giờ tan ca' }
 ];
 
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
@@ -144,16 +128,8 @@ async function generateSinglePost(lang, index) {
 
   console.log(`\n🚀 [${index + 1}/12] ${lang.name} (${lang.code}) 3호기 자동화 포스팅 생성 중... (적용 테마: ${selectedTheme.name})`);
 
-  // 1. 3호기 전용 AI/업무자동화/생산성 실사 매칭 이미지 생성 및 로컬 다운로드
-  const coverPrompt = `A high quality realistic photograph representing ${currentTopic}, modern corporate office setting, laptop displaying spreadsheet dashboard or automation interface, natural office lighting, crisp professional photography, no text, no watermark`;
-  const bodyPrompt = `A close-up realistic photograph of an office desk setup related to ${currentTopic}, showing dual monitors, data graphs, sleek keyboard and coffee cup, clean minimalist workspace, no text`;
-
-  console.log(`  📸 3호기 주제 매칭 생산성/자동화 이미지 다운로드 중...`);
-  const coverRelativePath = `assets/images/${lang.code}/${fileSlug}-cover.jpg`;
-  const bodyRelativePath = `assets/images/${lang.code}/${fileSlug}-body.jpg`;
-
-  const coverUrl = await downloadAndSaveImage(coverPrompt, coverRelativePath);
-  const bodyUrl = await downloadAndSaveImage(bodyPrompt, bodyRelativePath);
+  // 고속 AI/자동화 실사 이미지 즉시 배정 (다운로드 타임아웃 0초)
+  const { coverUrl, bodyUrl } = getPostImages(currentTopic, index);
 
   const postDate = new Date();
   const baseMinutes = 8 * 60 + 30 + Math.floor(index * 75);
@@ -186,12 +162,12 @@ ${currentTopic}
 
 [WRITING STYLE: PLAIN & PRACTICAL FOR EVERYDAY PROFESSIONALS]
 1. Plain & Easy Explanations:
-   - Avoid overly abstract academic math theory.
-   - Write in warm, friendly, everyday language that any busy desk worker or manager can immediately follow.
-   - Give concrete formulas, prompts, or step-by-step clicks.
+    - Avoid overly abstract academic math theory.
+    - Write in warm, friendly, everyday language that any busy desk worker or manager can immediately follow.
+    - Give concrete formulas, prompts, or step-by-step clicks.
 2. Laser-Focused Narrative:
-   - The opening emergency story MUST be 100% strictly about the assigned [Topic] (${currentTopic}).
-   - Keep the opening story centered around the exact moment this specific workflow roadblock or formula error threatened the workday.
+    - The opening emergency story MUST be 100% strictly about the assigned [Topic] (${currentTopic}).
+    - Keep the opening story centered around the exact moment this specific workflow roadblock or formula error threatened the workday.
 
 [TECHNICAL TEXT FORMATTING RULE (STRICT NO LATEX)]
 - ABSOLUTELY FORBIDDEN: NEVER use LaTeX math delimiters or academic math symbols (DO NOT use $, $$, \\times, \\approx, \\degree).
@@ -210,21 +186,21 @@ ${currentTopic}
 
 [Tone & Writing Style Rules (STRICT - NO AI VIBE)]
 1. Mandatory Opening:
-   - Absolutely FORBIDDEN: Boring textbook intros like "Hello", "In this post", "Today we will explore".
-   - Start immediately with an intense, relatable workplace emergency scenario strictly about [Topic] (e.g., "15 minutes before the client presentation with broken formulas", "hours wasted copying and pasting messy data").
+    - Absolutely FORBIDDEN: Boring textbook intros like "Hello", "In this post", "Today we will explore".
+    - Start immediately with an intense, relatable workplace emergency scenario strictly about [Topic] (e.g., "15 minutes before the client presentation with broken formulas", "hours wasted copying and pasting messy data").
 2. Tone & Voice:
-   - Write like a real colleague sharing an honest, battle-tested productivity solution on a professional community.
+    - Write like a real colleague sharing an honest, battle-tested productivity solution on a professional community.
 3. Fast-Paced 3-Step Narrative:
-   - Step 1: Sudden workflow panic regarding [Topic] set in ${lang.localeContext}.
-   - Step 2: Wasted manual effort and trial-and-error.
-   - Step 3: The breakthrough actionable tip & clear step-by-step setup.
+    - Step 1: Sudden workflow panic regarding [Topic] set in ${lang.localeContext}.
+    - Step 2: Wasted manual effort and trial-and-error.
+    - Step 3: The breakthrough actionable tip & clear step-by-step setup.
 
 [Content & Structure (AdSense E-E-A-T Compliant)]
 1. Opening Story: Intense real workplace incident strictly regarding this topic.
 2. Root Cause Breakdown: Clearly explain 3 realistic root causes behind the bottleneck or error.
 3. Step-by-Step Resolution:
-   - Use official local software UI terminology matching: "${lang.osUi}".
-   - Provide exact clicks, copy-pasteable formulas, prompts, or setting steps.
+    - Use official local software UI terminology matching: "${lang.osUi}".
+    - Provide exact clicks, copy-pasteable formulas, prompts, or setting steps.
 4. Expert Warning / Advice: Practical precautions regarding data privacy, backup, or error prevention.
 5. Frequently Asked Questions (FAQ): Exactly 3 realistic, high-value Q&As that everyday users would ask.
 
@@ -274,7 +250,7 @@ theme: "${selectedTheme.name}"
       let body = text.slice(frontmatter.length).trim();
       body = body.replace(/^#\s+[^\n]+\n+/, '');
 
-      // 3호기 카테고리 영구 고정 규칙 (automation)
+      // 3호기 영구 고정 규칙: category: 'automation'
       frontmatter = frontmatter.replace(/category:\s*["'][^"']*["']/i, "category: 'automation'")
                                .replace(/category:\s*[^\n\r]+/i, "category: 'automation'");
 
@@ -307,7 +283,7 @@ theme: "${selectedTheme.name}"
 
     const filePath = path.join(targetDir, `${fileSlug}.md`);
     fs.writeFileSync(filePath, text, 'utf-8');
-    console.log(`✅ [성공] 3호기 저장 완료: src/data/post/${lang.code}/${fileSlug}.md (로컬 에셋 연동 완료)`);
+    console.log(`✅ [성공] 3호기 저장 완료: src/data/post/${lang.code}/${fileSlug}.md (자동화 이미지 적용 완료)`);
     return true;
   } catch (error) {
     console.error(`❌ [최종 실패] ${lang.name} 생성 실패:`, error.message);
@@ -317,7 +293,7 @@ theme: "${selectedTheme.name}"
 
 async function run() {
   console.log("==================================================");
-  console.log("⚡ 3호기 AI & 업무자동화 12개국 초고속 자동 포스팅 파이프라인 시작 (로컬 실사 AI 이미지)");
+  console.log("⚡ 3호기 AI & 업무자동화 12개국 초고속 자동 포스팅 파이프라인 시작");
   console.log("==================================================");
 
   let successCount = 0;

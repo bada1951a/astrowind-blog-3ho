@@ -11,6 +11,7 @@ if (!GEMINI_API_KEY) {
 const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
 const POSTS_BASE_DIR = path.resolve('src/data/post');
 const TOPICS_FILE = path.resolve('topics.txt');
+const LOCAL_IMAGE_BASE_DIR = path.resolve('public/assets/images');
 
 if (!fs.existsSync(TOPICS_FILE)) {
   console.error("❌ topics.txt 파일이 존재하지 않습니다.");
@@ -29,25 +30,41 @@ const currentTopic = lines[0];
 console.log(`📌 오늘 처리할 주제 (3호기 AI/업무자동화): "${currentTopic}"`);
 
 // =========================================================================
-// [3호기 전용] 차단 없는 고속 CDN (Picsum) 기반 안정적 테크/생산성 이미지
+// [3호기 전용] 무료 실사 AI/업무자동화 이미지 다운로드 및 로컬 에셋 저장 로직
 // =========================================================================
-function getDistributedImages(langIndex, seedStr) {
-  let hash = 0;
-  for (let i = 0; i < seedStr.length; i++) {
-    hash = ((hash << 5) - hash) + seedStr.charCodeAt(i);
-    hash |= 0;
+async function downloadAndSaveImage(promptText, saveRelativePath) {
+  const fullSavePath = path.resolve('public', saveRelativePath.replace(/^\//, ''));
+  const dir = path.dirname(fullSavePath);
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
   }
 
-  // 1부터 1000 사이의 고유 Seed 번호 연산
-  const baseNum = (Math.abs(hash) % 1000) + 1;
-  const coverSeed = ((baseNum + (langIndex * 73)) % 1000) + 1;
-  const bodySeed = ((coverSeed + 499) % 1000) + 1;
+  const encodedPrompt = encodeURIComponent(promptText);
+  const seed = Math.floor(Math.random() * 999999);
+  const imageUrl = `https://image.pollinations.ai/prompt/${encodedPrompt}?width=1200&height=675&nologo=true&seed=${seed}`;
 
-  // 엑박 원천 차단: 안정적인 Picsum 고해상도 이미지 (업무/테크 전용)
-  const coverUrl = `https://picsum.photos/seed/tech${coverSeed}/900/600`;
-  const bodyUrl = `https://picsum.photos/seed/office${bodySeed}/1000/550`;
+  // 최대 3회 재시도 (다운로드 안전망 확보)
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      const response = await fetch(imageUrl, { signal: AbortSignal.timeout(25000) });
+      if (response.ok) {
+        const arrayBuffer = await response.arrayBuffer();
+        const buffer = Buffer.from(arrayBuffer);
+        if (buffer.length > 5000) {
+          fs.writeFileSync(fullSavePath, buffer);
+          // AstroWind 에셋 참조 경로 반환
+          return `~/assets/images/${saveRelativePath.replace(/^assets\/images\//, '')}`;
+        }
+      }
+    } catch (err) {
+      console.warn(`  ⚠️ [3호기 이미지] 다운로드 재시도 (${attempt}/3): ${err.message}`);
+      await delay(3000);
+    }
+  }
 
-  return { coverUrl, bodyUrl };
+  // 타임아웃 예외 발생 시 생산성/오피스 테크 실사로 안전 대체
+  console.warn(`  ⚠️ AI 이미지 생성 지연, 업무자동화 실사로 안전 대체합니다.`);
+  return `https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop&q=80`;
 }
 
 // 30가지 고유 시각 스타일 및 글 구조 테마 프리셋
@@ -97,7 +114,7 @@ const TARGET_LANGS = [
   { code: 'nl', name: 'Dutch', persona: 'Nederlandse productiviteits- en AI-specialist die slimme werkmethoden uitlegt', osUi: 'Bestand > Opties, Gegevens > Power Query, Formules, Invoegtoepassingen', localeContext: 'Zuidas zakendistrict in Amsterdam, acute spreadsheetproblemen vlak voor de directiemeeting' },
   { code: 'pl', name: 'Polish', persona: 'Polski ekspert od automatyzacji biurowej i narzędzi AI tłumaczący triki krok po kroku', osUi: 'Plik > Opcje, Dane > Power Query, Formuły, Dodatki', localeContext: 'Warszawskie centrum biznesowe, awaria formuł w arkuszu tuż przed wysłaniem raportu do zarządu' },
   { code: 'id', name: 'Indonesian', persona: 'Praktisi produktivitas dan otomatisasi kantor yang berbagi solusi praktis sehari-hari', osUi: 'File > Opsi, Data > Power Query, Rumus, Add-in', localeContext: 'Kawasan bisnis SCBD Jakarta, lembur menyelesaikan rekap data tahunan yang error' },
-  { code: 'vi', name: 'Vietnamese', persona: 'Chuyên viên tối ưu hóa quy trình làm việc và công cụ AI thực chiến', osUi: 'Tệp > Tùy chọn, Dữ liệu > Power Query, Công thức, Tiện ích bổ sung', localeContext: 'Văn phòng tại TP.HCM / Hà Nội, áp lực hoàn thành báo cáo số liệu trước giờ tan ca' }
+  { code: 'vi', name: 'Vietnamese', persona: 'Chuyên viên tối ưu hóa quy trình làm việc và công cụ AI thực chiến', osUi: 'Tệp > Tùy chọn, Dữ liệu > Power Query, Công thức, Tiện ích bổ sung', localeContext: 'Văn phòng tại TP.HCM / Hà Nội, áp력 hoàn thành báo cáo số liệu trước giờ tan ca' }
 ];
 
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
@@ -107,7 +124,7 @@ async function fetchWithRetry(prompt, maxRetries = 15, delayMs = 20000) {
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
       const response = await ai.models.generateContent({
-        model: 'gemini-3.5-flash-lite',
+        model: 'gemini-2.5-flash',
         contents: prompt,
       });
       return response.text;
@@ -124,9 +141,19 @@ async function fetchWithRetry(prompt, maxRetries = 15, delayMs = 20000) {
 
 async function generateSinglePost(lang, index) {
   const selectedTheme = THEME_PRESETS[Math.floor(Math.random() * THEME_PRESETS.length)];
-  const { coverUrl, bodyUrl } = getDistributedImages(index, currentTopic + fileSlug);
 
   console.log(`\n🚀 [${index + 1}/12] ${lang.name} (${lang.code}) 3호기 자동화 포스팅 생성 중... (적용 테마: ${selectedTheme.name})`);
+
+  // 1. 3호기 전용 AI/업무자동화/생산성 실사 매칭 이미지 생성 및 로컬 다운로드
+  const coverPrompt = `A high quality realistic photograph representing ${currentTopic}, modern corporate office setting, laptop displaying spreadsheet dashboard or automation interface, natural office lighting, crisp professional photography, no text, no watermark`;
+  const bodyPrompt = `A close-up realistic photograph of an office desk setup related to ${currentTopic}, showing dual monitors, data graphs, sleek keyboard and coffee cup, clean minimalist workspace, no text`;
+
+  console.log(`  📸 3호기 주제 매칭 생산성/자동화 이미지 다운로드 중...`);
+  const coverRelativePath = `assets/images/${lang.code}/${fileSlug}-cover.jpg`;
+  const bodyRelativePath = `assets/images/${lang.code}/${fileSlug}-body.jpg`;
+
+  const coverUrl = await downloadAndSaveImage(coverPrompt, coverRelativePath);
+  const bodyUrl = await downloadAndSaveImage(bodyPrompt, bodyRelativePath);
 
   const postDate = new Date();
   const baseMinutes = 8 * 60 + 30 + Math.floor(index * 75);
@@ -247,14 +274,17 @@ theme: "${selectedTheme.name}"
       let body = text.slice(frontmatter.length).trim();
       body = body.replace(/^#\s+[^\n]+\n+/, '');
 
-      // 3호기 404 방지: AI 출력과 상관없이 category를 무조건 'automation'으로 강제 고정
+      // 3호기 카테고리 영구 고정 규칙 (automation)
       frontmatter = frontmatter.replace(/category:\s*["'][^"']*["']/i, "category: 'automation'")
                                .replace(/category:\s*[^\n\r]+/i, "category: 'automation'");
 
-      // Cloudflare 빌드 실패 방지: publishDate의 불필요한 따옴표 자동 제거
+      // Cloudflare 빌드 실패 방지: publishDate 따옴표 제거
       frontmatter = frontmatter.replace(/publishDate:\s*["']([^"']+)["']/i, "publishDate: $1");
 
-      const middleImageMarkdown = `\n\n![AI Productivity & Workflow Automation](${bodyUrl})\n\n`;
+      // 대표 이미지 경로 강제 동기화
+      frontmatter = frontmatter.replace(/image:\s*["'][^"']*["']/i, `image: '${coverUrl}'`);
+
+      const middleImageMarkdown = `\n\n![${currentTopic} AI Automation Guide](${bodyUrl})\n\n`;
       if (body.includes('## 2.') || body.includes('### 2.')) {
         body = body.replace(/(#{2,3}\s*2\.[^\n]+)/, `${middleImageMarkdown}$1`);
       } else {
@@ -277,7 +307,7 @@ theme: "${selectedTheme.name}"
 
     const filePath = path.join(targetDir, `${fileSlug}.md`);
     fs.writeFileSync(filePath, text, 'utf-8');
-    console.log(`✅ [성공] 3호기 저장 완료: src/data/post/${lang.code}/${fileSlug}.md (테마: ${selectedTheme.name})`);
+    console.log(`✅ [성공] 3호기 저장 완료: src/data/post/${lang.code}/${fileSlug}.md (로컬 에셋 연동 완료)`);
     return true;
   } catch (error) {
     console.error(`❌ [최종 실패] ${lang.name} 생성 실패:`, error.message);
@@ -287,7 +317,7 @@ theme: "${selectedTheme.name}"
 
 async function run() {
   console.log("==================================================");
-  console.log("⚡ 3호기 AI & 업무자동화 12개국 초고속 자동 포스팅 파이프라인 시작 (Picsum 고속 이미지)");
+  console.log("⚡ 3호기 AI & 업무자동화 12개국 초고속 자동 포스팅 파이프라인 시작 (로컬 실사 AI 이미지)");
   console.log("==================================================");
 
   let successCount = 0;

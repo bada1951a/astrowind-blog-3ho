@@ -29,25 +29,16 @@ const currentTopic = lines[0];
 console.log(`📌 오늘 처리할 주제 (3호기 AI/업무자동화): "${currentTopic}"`);
 
 // =========================================================================
-// [3호기 전용] 검증된 고속 AI/오피스 생산성/자동화 실사 CDN 매핑
+// [3호기 전용] 100% 무에러 영구 고정 Picsum 실사 CDN 매핑
 // =========================================================================
-function getAutomationKeyword(topic = '') {
-  const t = topic.toLowerCase();
-  if (/엑셀|파워쿼리|vlookup|함수|수식|스프레드시트|excel|spreadsheet/.test(t)) return 'spreadsheet,data-analysis,workspace';
-  if (/프롬프트|gpt|gemini|llm|인공지능|ai|노코드/.test(t)) return 'artificial-intelligence,laptop-code,office';
-  if (/파이썬|스크립트|크롤링|자동화|매크로|api|webhook/.test(t)) return 'coding,programmer,dual-monitor';
-  if (/노션|생산성|시간관리|업무|보고서|대시보드/.test(t)) return 'dashboard,analytics,modern-office';
-  return 'office-technology,productivity,working-laptop';
-}
-
 function getPostImages(topic, index) {
-  const kw = getAutomationKeyword(topic);
-  const sig1 = (index * 23 + 13) % 500;
-  const sig2 = (index * 37 + 19) % 500;
+  const seedBase = Date.now().toString(36);
+  const coverSeed = `work-${seedBase}-${index}-c`;
+  const bodySeed = `work-${seedBase}-${index}-b`;
 
   return {
-    coverUrl: `https://images.unsplash.com/featured/1200x675/?${kw}&sig=${sig1}`,
-    bodyUrl: `https://images.unsplash.com/featured/1000x550/?${kw},workspace&sig=${sig2}`
+    coverUrl: `https://picsum.photos/seed/${coverSeed}/1200/675.jpg`,
+    bodyUrl: `https://picsum.photos/seed/${bodySeed}/1000/550.jpg`
   };
 }
 
@@ -128,7 +119,7 @@ async function generateSinglePost(lang, index) {
 
   console.log(`\n🚀 [${index + 1}/12] ${lang.name} (${lang.code}) 3호기 자동화 포스팅 생성 중... (적용 테마: ${selectedTheme.name})`);
 
-  // 고속 AI/자동화 실사 이미지 즉시 배정 (다운로드 타임아웃 0초)
+  // 영구 고정 Picsum 실사 이미지 즉시 배정
   const { coverUrl, bodyUrl } = getPostImages(currentTopic, index);
 
   const postDate = new Date();
@@ -283,7 +274,7 @@ theme: "${selectedTheme.name}"
 
     const filePath = path.join(targetDir, `${fileSlug}.md`);
     fs.writeFileSync(filePath, text, 'utf-8');
-    console.log(`✅ [성공] 3호기 저장 완료: src/data/post/${lang.code}/${fileSlug}.md (자동화 이미지 적용 완료)`);
+    console.log(`✅ [성공] 3호기 저장 완료: src/data/post/${lang.code}/${fileSlug}.md (Picsum 이미지 적용 완료)`);
     return true;
   } catch (error) {
     console.error(`❌ [최종 실패] ${lang.name} 생성 실패:`, error.message);

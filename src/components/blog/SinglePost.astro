@@ -104,3 +104,55 @@ const { post, url } = Astro.props;
     </div>
   </article>
 </section>
+<script>
+  function fixContentImages() {
+    const content = document.querySelector('.prose');
+    if (!content) return;
+
+    // 마크다운 렌더링 시 문단이 분리되어 텍스트로 노출되는 현상 방지 및 img 태그 변환
+    const pElements = Array.from(content.querySelectorAll('p'));
+    for (let i = 0; i < pElements.length; i++) {
+      const p1 = pElements[i];
+      const text1 = p1.textContent.trim();
+
+      if (text1.startsWith('![') && (text1.endsWith(']') || text1.endsWith(')'))) {
+        let altText = text1.replace(/^!\[/, '').replace(/[\]\)]$/, '').trim();
+        
+        if (i + 1 < pElements.length) {
+          const p2 = pElements[i + 1];
+          const text2 = p2.textContent.trim();
+          
+          if (text2.startsWith('(') && text2.endsWith(')') && (text2.includes('picsum.photos') || text2.includes('/images/'))) {
+            const rawSrc = text2.slice(1, -1).trim();
+            const imgP = document.createElement('p');
+            imgP.className = 'my-6 text-center';
+            imgP.innerHTML = `<img src="${rawSrc}" alt="${altText}" class="mx-auto rounded-md shadow-lg max-w-full h-auto inline-block" />`;
+            
+            p1.parentNode.insertBefore(imgP, p1);
+            p1.remove();
+            p2.remove();
+            i++;
+            continue;
+          }
+        }
+      }
+
+      if (text1.startsWith('![') && (text1.includes('picsum.photos') || text1.includes('/images/')) && text1.endsWith(')')) {
+        const match = text1.match(/^!\[(.*?)\]\s*\((.*?)\)$/);
+        if (match) {
+          const altText = match[1].trim();
+          const rawSrc = match[2].trim();
+          p1.className = 'my-6 text-center';
+          p1.innerHTML = `<img src="${rawSrc}" alt="${altText}" class="mx-auto rounded-md shadow-lg max-w-full h-auto inline-block" />`;
+        }
+      }
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', fixContentImages);
+  } else {
+    fixContentImages();
+  }
+  document.addEventListener('astro:page-load', fixContentImages);
+</script>

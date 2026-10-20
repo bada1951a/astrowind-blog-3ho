@@ -163,8 +163,8 @@ ${currentTopic}
 [TECHNICAL TEXT FORMATTING RULE (STRICT NO LATEX)]
 - ABSOLUTELY FORBIDDEN: NEVER use LaTeX math delimiters or academic math symbols (DO NOT use $, $$, \\times, \\approx, \\degree).
 - Always use plain, human-readable numbers, formulas, and units:
-  * Write "A1 * B1" instead of "$A1 \\times B1$"
-  * Write "42°C" instead of "$42^{\\circ}C$"
+    * Write "A1 * B1" instead of "$A1 \\times B1$"
+    * Write "42°C" instead of "$42^{\\circ}C$"
 - Clean 2-column key-value lists or bulleted cards instead of overly wide 4-column tables that break on mobile screens.
 
 [Design Theme & Layout Dynamic Rules (MANDATORY)]
@@ -251,7 +251,10 @@ theme: "${selectedTheme.name}"
       // 대표 이미지 경로 강제 동기화
       frontmatter = frontmatter.replace(/image:\s*["'][^"']*["']/i, `image: '${coverUrl}'`);
 
-      const middleImageMarkdown = `\n\n![${currentTopic} AI Automation Guide](${bodyUrl})\n\n`;
+      // 이미지 alt 텍스트 특수문자 제거 방어 로직 (마크다운 깨짐 방지)
+      const safeAlt = currentTopic.replace(/[\[\]\(\)"']/g, '').trim();
+      const middleImageMarkdown = `\n\n![${safeAlt} AI Automation Guide](${bodyUrl})\n\n`;
+
       if (body.includes('## 2.') || body.includes('### 2.')) {
         body = body.replace(/(#{2,3}\s*2\.[^\n]+)/, `${middleImageMarkdown}$1`);
       } else {

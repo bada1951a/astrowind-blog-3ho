@@ -160,12 +160,14 @@ ${currentTopic}
     - The opening emergency story MUST be 100% strictly about the assigned [Topic] (${currentTopic}).
     - Keep the opening story centered around the exact moment this specific workflow roadblock or formula error threatened the workday.
 
-[TECHNICAL TEXT FORMATTING RULE (STRICT NO LATEX)]
+[TECHNICAL TEXT FORMATTING RULE (STRICT NO LATEX & NO TILDE)]
 - ABSOLUTELY FORBIDDEN: NEVER use LaTeX math delimiters or academic math symbols (DO NOT use $, $$, \\times, \\approx, \\degree).
 - Always use plain, human-readable numbers, formulas, and units:
     * Write "A1 * B1" instead of "$A1 \\times B1$"
     * Write "42°C" instead of "$42^{\\circ}C$"
 - Clean 2-column key-value lists or bulleted cards instead of overly wide 4-column tables that break on mobile screens.
+- ABSOLUTELY FORBIDDEN: NEVER use the tilde character (~) anywhere in numbers or ranges (e.g., NEVER write "10~20%", "5~10 min", "100~200").
+  Always use a hyphen or dash (-) instead (e.g., "10-20%", "5-10 min", "100-200") to prevent accidental Markdown strikethrough rendering bugs.
 
 [Design Theme & Layout Dynamic Rules (MANDATORY)]
 - Assigned Theme: "${selectedTheme.name}"
@@ -225,6 +227,12 @@ theme: "${selectedTheme.name}"
                .replace(/\\times/g, 'x')
                .replace(/\\circ/g, '°')
                .replace(/\\approx/g, '≈');
+
+    // [취소선 버그 원천 차단 후처리]
+    // 1) 숫자~숫자 또는 문자~문자 사이의 물결표를 하이픈(-)으로 변환
+    text = text.replace(/(\S)\s*~\s*(\S)/g, '$1 - $2');
+    // 2) 잔여 물결표(~) 치환
+    text = text.replace(/~/g, '-');
 
     if (lang.code !== 'ko') {
       text = text.replace(/(title:\s*")([^"]*)(")/g, (match, p1, p2, p3) => {

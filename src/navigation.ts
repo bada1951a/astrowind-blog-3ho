@@ -11,11 +11,11 @@ export const headerData = {
       href: getBlogPermalink(),
     },
     {
-      text: 'AI & Automation',
+      text: 'Automation',
       href: getPermalink('/category/automation'),
     },
   ],
-  actions: [],
+  actions: [{ text: 'Explore Articles', href: getBlogPermalink() }],
 };
 
 export const footerData = {
@@ -24,7 +24,7 @@ export const footerData = {
       title: 'Categories',
       links: [
         { text: 'All Articles', href: getBlogPermalink() },
-        { text: 'AI & Automation', href: getPermalink('/category/automation') },
+        { text: 'Automation', href: getPermalink('/category/automation') },
       ],
     },
     {

@@ -1,7 +1,7 @@
 ---
 title: "Biến báo cáo tài chính Google Sheets thành biểu đồ tương tác cực nhanh với AI"
 description: "Mẹo thực chiến xử lý báo cáo tài chính gấp tại văn phòng TP.HCM, tự động hóa biểu đồ Google Sheets và tối ưu hóa thời gian trước giờ tan ca."
-publishDate: 2026-10-21T22:15:00.000Z
+publishDate: 2026-10-22T03:00:00.000Z
 image: 'https://picsum.photos/seed/work-mvhr3rlm-11-c/1200/675.jpg'
 category: 'automation'
 tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]

@@ -1,7 +1,7 @@
 ---
 title: "Modélisation financière interactive sur Google Sheets avec l'IA"
 description: "Évitez la panique à La Défense : créez des graphiques financiers interactifs et dynamiques sur Google Sheets grâce aux suggestions de l'IA."
-publishDate: 2026-10-21T13:30:00.000Z
+publishDate: 2026-10-22T03:00:00.000Z
 image: 'https://picsum.photos/seed/work-mvhr1yj8-4-c/1200/675.jpg'
 category: 'automation'
 tags: ["Google Sheets", "IA", "Productivité", "Finance"]

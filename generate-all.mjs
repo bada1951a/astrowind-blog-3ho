@@ -21,8 +21,8 @@ function getPostImages(topic, index) {
   const bodySeed = `work-${seedBase}-${index}-b`;
 
   return {
-    coverUrl: `[https://picsum.photos/seed/$](https://picsum.photos/seed/$){coverSeed}/1200/675.jpg`,
-    bodyUrl: `[https://picsum.photos/seed/$](https://picsum.photos/seed/$){bodySeed}/1000/550.jpg`
+    coverUrl: `https://picsum.photos/seed/${coverSeed}/1200/675.jpg`,
+    bodyUrl: `https://picsum.photos/seed/${bodySeed}/1000/550.jpg`
   };
 }
 
@@ -46,20 +46,14 @@ function getKstPublishDateIso(index) {
 function sanitizeMarkdownFormatting(content) {
   let cleaned = content;
 
-  // 1) 3개 이상 연달아 붙은 별표(***) 정제 -> **로 통일
   cleaned = cleaned.replace(/\*{3,}/g, '**');
-
-  // 2) 별표 안쪽에 특수기호나 따옴표가 어긋나게 갇힌 경우 정제
   cleaned = cleaned.replace(/\*\*\[([^\]]+)\]\*\*/g, '[**$1**]');
   cleaned = cleaned.replace(/\*\*"([^"]+)"\*\*/g, '"**$1**"');
   cleaned = cleaned.replace(/\*\*'([^']+)'\*\*/g, '\'**$1**\'');
-
-  // 3) 별표 시작 뒤 또는 끝 바로 앞에 공백이 있어 마크다운이 파싱되지 않는 경우 정제
   cleaned = cleaned.replace(/\*\*\s+([^\*\n]+?)\s+\*\*/g, '**$1**');
   cleaned = cleaned.replace(/\*\*\s+([^\*\n]+?)\*\*/g, '**$1**');
   cleaned = cleaned.replace(/\*\*([^\*\n]+?)\s+\*\*/g, '**$1**');
 
-  // 4) 짝이 맞지 않는 고립된 단일 ** 제거 (홀수 개수로 남는 경우 방지)
   const lines = cleaned.split('\n');
   const fixedLines = lines.map(line => {
     if (line.trim().startsWith('```') || line.trim().startsWith('`')) return line;
@@ -89,6 +83,49 @@ if (lines.length === 0) {
 
 const currentTopic = lines[0];
 console.log(`📌 오늘 처리할 주제 (3호기 AI/업무자동화): "${currentTopic}"`);
+
+// =========================================================================
+// [도입부 다양화] 3호기 엑셀/업무자동화/AI 실무 위기 시나리오 30개 풀
+// =========================================================================
+const AUTOMATION_CRISIS_SCENARIOS_30 = [
+  // [1~8: 마감 및 퇴근 직전 수식/데이터 에러]
+  "금요일 오후 5시 45분, 마지막 주간 실적 엑셀을 저장하려는데 #REF!와 #VALUE! 에러가 수십 개 셀에 동시다발로 터진 순간",
+  "월말 결산일 당일, 수만 행짜리 로우데이터(Raw Data) VLOOKUP 수식을 걸자마자 '응답 없음'으로 엑셀이 하얗게 굳어버렸을 때",
+  "임원진에게 공유된 실시간 구글 스프레드시트에서 누군가 필터를 잘못 건드려 전사 매출 지표 합계가 뒤틀린 아찔한 상황",
+  "점심시간 10분 전, 수기로 복사 붙여넣기 하던 작업 시트의 행 번호가 한 칸씩 밀려 이전 작업 2시간 치가 백지로 돌아갈 위기",
+  "퇴근 알람이 울리기 직전, 팀장님이 '이 파일 다른 부서 형식에 맞춰서 10분 안에 양식 바꿔와'라고 불시에 시트를 던졌을 때",
+  "월요일 출근하자마자 본사에서 내려온 100MB가 넘는 CSV 파일이 열리지 않아 메모장과 씨름하던 긴박한 오전",
+  "해외 지사에서 제각각 다른 포맷으로 보내온 12개 엑셀 파일을 하나로 합쳐야 하는데 폰트와 날짜 형식이 제각각 깨져 있을 때",
+  "야간 잔업 중, 2시간 동안 작성한 피벗 테이블과 매크로가 저장 버튼을 누르기 직전 비정상 종료로 날아갔을 때",
+
+  // [9~16: 파워쿼리, 매크로 및 외부 연동 병목]
+  "기존 담당자가 인수인계 없이 남겨둔 정체불명의 복잡한 VBA 매크로 버튼을 눌렀다가 디버그(Debug) 런타임 오류가 떴을 때",
+  "ERP 전산 시스템에서 내려받은 원장 데이터를 파워 쿼리로 불러오는 중 알 수 없는 데이터 형식 충돌로 새로고침이 멈춘 순간",
+  "사내 업무 툴 간 웹훅(Webhook) 및 Zapier 자동화 트리거가 중간에 끊겨 고객 주문 건 300개가 누락될 뻔한 상황",
+  "매달 반복되는 수작업 서식 변환 작업 때문에 신입 사원 셋이 달라붙어 반나절을 허비하고 있는 비효율을 목격했을 때",
+  "구글 앱스 스크립트(GAS)로 자동 메일 발송 트리거를 걸어두었는데 발송 할당량(Quota) 초과로 정지 경고가 뜬 아침",
+  "거래처 50곳에 각각 다른 첨부파일과 맞춤형 견적서를 메일로 일괄 발송해야 하는 촉박한 마감 30분 전",
+  "데이터베이스(DB)에서 쿼리로 추출한 텍스트 데이터의 앞뒤 공백과 유령 줄바꿈 때문에 함수 인식이 전혀 안 될 때",
+  "엑셀 버전이 다른 부서 간 파일 공유 과정에서 최신 동적 배열 함수(XLOOKUP, FILTER)가 구버전에서 인식 불가가 되었을 때",
+
+  // [17~24: AI 툴 및 프롬프트 실무 활용 난관]
+  "챗GPT나 Claude에게 방대한 회의록 정리를 맡겼는데 핵심 내용은 다 빠뜨리고 엉뚱한 요약본만 내놓아 답답했던 순간",
+  "기획안 초안을 30분 만에 작성해야 하는데 AI 프롬프트 답변이 겉도는 교과서적 말투만 반복해 당황스러웠을 때",
+  "복잡한 다중 조건 IF 수식을 짜기 위해 AI에게 질문했으나 괄호 개수도 안 맞는 엉터리 수식을 알려줘 머리가 지끈거릴 때",
+  "사내 보안 규정상 민감한 고객 개인정보를 직접 AI에 넣을 수 없어 가명 처리와 자동화 사이에서 딜레마에 빠진 상황",
+  "AI로 대량의 마케팅 카피 50개를 뽑아냈지만 브랜드 톤앤매너와 완전히 어긋나 처음부터 다시 프롬프트를 빌드해야 할 때",
+  "노코드 웹 크롤러를 돌려 경쟁사 가격 모니터링을 자동화하려다 사이트 구조 변경으로 스크래핑 에러가 쏟아진 날",
+  "팀 회의에서 '업무 자동화 도입 방안'을 갑작스럽게 발표하게 되어 당장 보여줄 수 있는 실질적인 데모가 필요할 때",
+  "PDF 전자문서 100장에 흩어진 계약 조건 표를 엑셀 데이터 테이블로 빠르게 변환해야 하는 긴급 업무가 떨어졌을 때",
+
+  // [25~30: 시스템 규격, 보안 감사 및 휴먼 에러]
+  "중요한 사내 감사 직전, 자동화 스크립트가 실수로 폴더 내 원본 마스터 파일을 덮어써서 백업본을 찾아 헤매던 순간",
+  "동료가 보호된 워크시트 암호를 잊어버려 당장 수정해야 하는 기안서 파일의 수식 잠금을 해제하지 못하던 상황",
+  "클라우드 공유 드라이브 버전 충돌로 인해 같은 파일이 '사본(1)', '사본(2)'로 끝없이 분열되어 작업이 꼬였을 때",
+  "텍스트로 저장된 숫자가 일반 숫자로 변환되지 않아 SUM 함수 결과값이 계속 '0'으로 찍히는 어처구니없는 상황",
+  "타 부서에서 링크로 걸어둔 외부 참조 엑셀 파일의 경로가 바뀌어 통합 문서 전체에 보안 경고창이 도배되었을 때",
+  "보고서 그래프와 차트 데이터 범위가 고정되어 있어 신규 데이터가 들어와도 시각화가 자동 반영되지 않던 난감한 시점"
+];
 
 // 30가지 고유 시각 스타일 및 글 구조 테마 프리셋
 const THEME_PRESETS = [
@@ -126,18 +163,18 @@ const THEME_PRESETS = [
 
 // 글로벌 12개국 페르소나 및 실무 환경
 const TARGET_LANGS = [
-  { code: 'ko', name: 'Korean', persona: '친절하고 경험 많은 엑셀/AI 자동화 실무 전문가 (사내 칼퇴 치트키 장인)', osUi: '파일 > 옵션, 데이터 > 파워 쿼리, 수식 탭, 확장 프로그램', localeContext: '서울/판교 IT 기업, 보고서 마감 전 엑셀 오류로 야근 위기에 처한 상황' },
-  { code: 'en', name: 'English', persona: 'Friendly Silicon Valley productivity specialist sharing no-code and AI shortcuts', osUi: 'File > Options, Data > Power Query, Formula Tab, Add-ons', localeContext: 'Silicon Valley tech firm / NYC financial office, 15 minutes before the weekly executive sync' },
-  { code: 'ja', name: 'Japanese', persona: '業務効率化とAIツール活用を分かりやすく教える日本の現役ITワーカー', osUi: 'ファイル > オプション, データ > パワークエリ, 数式タブ, 拡張機能', localeContext: '丸の内・品川のオフィス, 月末の売上集計締切直前に数式エラーが発生した緊急事態' },
-  { code: 'de', name: 'German', persona: 'Praxisnaher deutscher Automatisierungs-Experte für Office- und KI-Tools', osUi: 'Datei > Optionen, Daten > Power Query, Formeln, Add-Ins', localeContext: 'Frankfurter Finanzdistrikt, dringende Monatsabschlussberichte vor dem Vorstandstreffen' },
-  { code: 'fr', name: 'French', persona: 'Spécialiste support bureautique et IA expliquant les astuces de productivité', osUi: 'Fichier > Options, Données > Power Query, Formules, Extensions', localeContext: 'Bureau à La Défense, panique générale face à un tableau Excel bloqué avant la réunion' },
-  { code: 'es', name: 'Spanish', persona: 'Especialista en productividad y automatización que explica trucos prácticos sin rodeos', osUi: 'Archivo > Opciones, Datos > Power Query, Fórmulas, Complementos', localeContext: 'Oficina en Madrid, reporte urgente de métricas con fórmulas rotas minutos antes de presentarlo' },
-  { code: 'it', name: 'Italian', persona: 'Esperto di automazione e AI che semplifica il lavoro d\'ufficio quotidiano', osUi: 'File > Opzioni, Dati > Power Query, Formule, Componenti aggiuntivi', localeContext: 'Ufficio a Milano, corsa contro il tempo per correggere i dati prima della riunione col cliente' },
-  { code: 'pt', name: 'Portuguese', persona: 'Especialista em automação de escritório que ensina truques práticos de produtividade', osUi: 'Arquivo > Opções, Dados > Power Query, Fórmulas, Suplementos', localeContext: 'Escritório corporativo em São Paulo, fechamento de relatórios em meio à correria do fim do mês' },
-  { code: 'nl', name: 'Dutch', persona: 'Nederlandse productiviteits- en AI-specialist die slimme werkmethoden uitlegt', osUi: 'Bestand > Opties, Gegevens > Power Query, Formules, Invoegtoepassingen', localeContext: 'Zuidas zakendistrict in Amsterdam, acute spreadsheetproblemen vlak voor de directiemeeting' },
-  { code: 'pl', name: 'Polish', persona: 'Polski ekspert od automatyzacji biurowej i narzędzi AI tłumaczący triki krok po kroku', osUi: 'Plik > Opcje, Dane > Power Query, Formuły, Dodatki', localeContext: 'Warszawskie centrum biznesowe, awaria formuł w arkuszu tuż przed wysłaniem raportu do zarządu' },
-  { code: 'id', name: 'Indonesian', persona: 'Praktisi produktivitas dan otomatisasi kantor yang berbagi solusi praktis sehari-hari', osUi: 'File > Opsi, Data > Power Query, Rumus, Add-in', localeContext: 'Kawasan bisnis SCBD Jakarta, lembur menyelesaikan rekap data tahunan yang error' },
-  { code: 'vi', name: 'Vietnamese', persona: 'Chuyên viên tối ưu hóa quy trình làm việc và công cụ AI thực chiến', osUi: 'Tệp > Tùy chọn, Dữ liệu > Power Query, Công thức, Tiện ích bổ sung', localeContext: 'Văn phòng tại TP.HCM / Hà Nội, áp lực hoàn thành báo cáo số liệu trước giờ tan ca' }
+  { code: 'ko', name: 'Korean', persona: '친절하고 경험 많은 엑셀/AI 자동화 실무 전문가 (사내 칼퇴 치트키 장인)', osUi: '파일 > 옵션, 데이터 > 파워 쿼리, 수식 탭, 확장 프로그램', localeContext: '서울/판교 IT 기업 및 대기업 오피스' },
+  { code: 'en', name: 'English', persona: 'Friendly Silicon Valley productivity specialist sharing no-code and AI shortcuts', osUi: 'File > Options, Data > Power Query, Formula Tab, Add-ons', localeContext: 'Silicon Valley tech firm / NYC corporate finance office' },
+  { code: 'ja', name: 'Japanese', persona: '業務効率化とAIツール活用を分かりやすく教える日本の現役ITワーカー', osUi: 'ファイル > オプション, データ > パワークエリ, 数式タブ, 拡張機能', localeContext: '丸の内・品川のビジネスオフィス' },
+  { code: 'de', name: 'German', persona: 'Praxisnaher deutscher Automatisierungs-Experte für Office- und KI-Tools', osUi: 'Datei > Optionen, Daten > Power Query, Formeln, Add-Ins', localeContext: 'Frankfurter Finanzdistrikt und Industrieunternehmen' },
+  { code: 'fr', name: 'French', persona: 'Spécialiste support bureautique et IA expliquant les astuces de productivité', osUi: 'Fichier > Options, Données > Power Query, Formules, Extensions', localeContext: 'Siège d\'entreprise à Paris La Défense' },
+  { code: 'es', name: 'Spanish', persona: 'Especialista en productividad y automatización que explica trucos prácticos sin rodeos', osUi: 'Archivo > Opciones, Datos > Power Query, Fórmulas, Complementos', localeContext: 'Oficina corporativa en Madrid y centros de negocio' },
+  { code: 'it', name: 'Italian', persona: 'Esperto di automazione e AI che semplifica il lavoro d\'ufficio quotidiano', osUi: 'File > Opzioni, Dati > Power Query, Formule, Componenti aggiuntivi', localeContext: 'Uffici direzionali e aziende a Milano' },
+  { code: 'pt', name: 'Portuguese', persona: 'Especialista em automação de escritório que ensina truques práticos de produtividade', osUi: 'Arquivo > Opções, Dados > Power Query, Fórmulas, Suplementos', localeContext: 'Escritório corporativo na Avenida Paulista em São Paulo' },
+  { code: 'nl', name: 'Dutch', persona: 'Nederlandse productiviteits- en AI-specialist die slimme werkmethoden uitlegt', osUi: 'Bestand > Opties, Gegevens > Power Query, Formules, Invoegtoepassingen', localeContext: 'Zuidas zakendistrict in Amsterdam' },
+  { code: 'pl', name: 'Polish', persona: 'Polski ekspert od automatyzacji biurowej i narzędzi AI tłumaczący triki krok po kroku', osUi: 'Plik > Opcje, Dane > Power Query, Formuły, Dodatki', localeContext: 'Warszawskie centrum biznesowe' },
+  { code: 'id', name: 'Indonesian', persona: 'Praktisi produktivitas dan otomatisasi kantor yang berbagi solusi praktis sehari-hari', osUi: 'File > Opsi, Data > Power Query, Rumus, Add-in', localeContext: 'Kawasan bisnis SCBD Jakarta' },
+  { code: 'vi', name: 'Vietnamese', persona: 'Chuyên viên tối ưu hóa quy trình làm việc và công cụ AI thực chiến', osUi: 'Tệp > Tùy chọn, Dữ liệu > Power Query, Công thức, Tiện ích bổ sung', localeContext: 'Tòa nhà văn phòng trung tâm tại TP.HCM / Hà Nội' }
 ];
 
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
@@ -164,10 +201,11 @@ async function fetchWithRetry(prompt, maxRetries = 15, delayMs = 20000) {
 
 async function generateSinglePost(lang, index) {
   const selectedTheme = THEME_PRESETS[Math.floor(Math.random() * THEME_PRESETS.length)];
+  const selectedScenario = AUTOMATION_CRISIS_SCENARIOS_30[Math.floor(Math.random() * AUTOMATION_CRISIS_SCENARIOS_30.length)];
 
   console.log(`\n🚀 [${index + 1}/12]${lang.name} (${lang.code}) 3호기 자동화 포스팅 생성 중... (적용 테마: ${selectedTheme.name})`);
+  console.log(`   🎭 선택된 자동화 위기 시나리오: "${selectedScenario.slice(0, 30)}..."`);
 
-  // 영구 고정 Picsum 실사 이미지 즉시 배정
   const { coverUrl, bodyUrl } = getPostImages(currentTopic, index);
   const pubDateIso = getKstPublishDateIso(index);
 
@@ -179,13 +217,16 @@ CRITICAL: DO NOT translate literally from Korean. Write completely from scratch 
 [Topic]
 ${currentTopic}
 
+[Workplace Incident Context]
+- Target City/Culture: "${lang.localeContext}"
+- Assigned Emergency Scenario: "${selectedScenario}"
+
 [CRITICAL LOCALIZATION & REAL WORLD WORKPLACE CONTEXT (MANDATORY)]
-- Target Locale Context: "${lang.localeContext}"
 - ABSOLUTELY FORBIDDEN for non-Korean languages:
   * NEVER mention Korean infrastructure, companies, or services (NO Seoul, NO Kakao, NO Naver) in non-Korean languages.
   * Your opening story MUST naturally incorporate the authentic local environment:
     - English (en): Silicon Valley / NYC corporate offices, executive syncs, Slack threads.
-    - Japanese (ja): Marunouchi / Shinagawa offices, urgent monthly sales aggregation deadlines.
+    - Japanese (ja): Marunouchi / Shinagawa offices, urgent sales aggregation deadlines.
     - German (de): Frankfurt financial district, quarterly board reports.
     - And corresponding native business context for other languages.
   * The protagonist must be 100% perceived as a local professional of that country.
@@ -201,8 +242,11 @@ ${currentTopic}
     - Write in warm, friendly, everyday language that any busy desk worker or manager can immediately follow.
     - Give concrete formulas, prompts, or step-by-step clicks.
 2. Laser-Focused Narrative:
-    - The opening emergency story MUST be 100% strictly about the assigned [Topic] (${currentTopic}).
-    - Keep the opening story centered around the exact moment this specific workflow roadblock or formula error threatened the workday.
+    - The opening emergency story MUST be 100% strictly about the assigned [Topic] (${currentTopic}) and reflect the given [Assigned Emergency Scenario].
+
+[MANDATORY OPENING VARIATION RULE - ZERO CLICHE REPETITION]
+- You MUST start the opening story based strictly on the assigned scenario: "${selectedScenario}".
+- ABSOLUTELY FORBIDDEN: Do NOT default to a generic "meeting in 15 minutes" trope. Adapt the specific incident (e.g., raw data corruption, broken formula before clocking out, massive CSV loading failure, missing webhooks) naturally into the local daily office culture of ${lang.name}.
 
 [STRICT MARKDOWN & FORMATTING RULES - NO RENDERING GLITCHES]
 1. BOLD FORMATTING RULE:
@@ -226,11 +270,11 @@ ${currentTopic}
 [Tone & Writing Style Rules (STRICT - NO AI VIBE)]
 1. Mandatory Opening:
     - Absolutely FORBIDDEN: Boring textbook intros like "Hello", "In this post", "Today we will explore".
-    - Start immediately with an intense, relatable workplace emergency scenario strictly about [Topic] (e.g., "15 minutes before the client presentation with broken formulas", "hours wasted copying and pasting messy data").
+    - Start immediately with an intense, relatable workplace emergency scenario strictly about [Topic] based on the assigned scenario.
 2. Tone & Voice:
     - Write like a real colleague sharing an honest, battle-tested productivity solution on a professional community.
 3. Fast-Paced 3-Step Narrative:
-    - Step 1: Sudden workflow panic regarding [Topic] set in ${lang.localeContext}.
+    - Step 1: Sudden workflow panic regarding [Topic] set in the assigned incident.
     - Step 2: Wasted manual effort and trial-and-error.
     - Step 3: The breakthrough actionable tip & clear step-by-step setup.
 
@@ -274,7 +318,6 @@ theme: "${selectedTheme.name}"
                .replace(/\\circ/g, '°')
                .replace(/\\approx/g, '≈');
 
-    // [취소선 버그 원천 차단 후처리]
     text = text.replace(/(\S)\s*~\s*(\S)/g, '$1 - $2');
     text = text.replace(/~/g, '-');
 
@@ -306,7 +349,7 @@ theme: "${selectedTheme.name}"
       // 본문 별표(**) 서식 오류 정제
       body = sanitizeMarkdownFormatting(body);
 
-      // 이미지 alt 텍스트 특수문자 제거 방어 로직 (마크다운 깨짐 방지)
+      // 이미지 alt 텍스트 특수문자 제거 방어 로직
       const safeAlt = currentTopic.replace(/[\[\]\(\)"']/g, '').trim();
       const middleImageMarkdown = `\n\n![${safeAlt} AI Automation Guide](${bodyUrl})\n\n`;
 
@@ -332,7 +375,7 @@ theme: "${selectedTheme.name}"
 
     const filePath = path.join(targetDir, `${fileSlug}.md`);
     fs.writeFileSync(filePath, text, 'utf-8');
-    console.log(`✅ [성공] 3호기 저장 완료: src/data/post/${lang.code}/${fileSlug}.md (Picsum 이미지 적용 완료)`);
+    console.log(`✅ [성공] 3호기 저장 완료: src/data/post/${lang.code}/${fileSlug}.md (automation / 테마: ${selectedTheme.name})`);
     return true;
   } catch (error) {
     console.error(`❌ [최종 실패] ${lang.name} 생성 실패:`, error.message);
@@ -342,7 +385,7 @@ theme: "${selectedTheme.name}"
 
 async function run() {
   console.log("==================================================");
-  console.log("⚡ 3호기 AI & 업무자동화 12개국 초고속 자동 포스팅 파이프라인 시작");
+  console.log("⚡ 3호기 AI & 업무자동화 12개국 30개 위기 시나리오 자동 포스팅 파이프라인 시작");
   console.log("==================================================");
 
   let successCount = 0;

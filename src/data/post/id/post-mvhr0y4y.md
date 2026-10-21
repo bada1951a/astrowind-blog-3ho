@@ -1,7 +1,7 @@
 ---
 title: "Cara Bikin Grafik Finansial Interaktif di Google Sheets Pakai AI"
 description: "Pusing rekap data tahunan SCBD error mendadak? Begini cara kilat bikin grafik finansial interaktif di Google Sheets dibantu saran AI."
-publishDate: 2026-10-21T21:00:00.000Z
+publishDate: 2026-10-22T03:00:00.000Z
 image: 'https://picsum.photos/seed/work-mvhr3i3u-10-c/1200/675.jpg'
 category: 'automation'
 tags: ["Google Sheets", "Financial Modeling", "AI Tools", "Produktivitas Kantor"]

@@ -1,7 +1,7 @@
 ---
 title: "Modelli finanziari interattivi in Google Sheets con l'AI: Salva il tuo budget prima del cliente"
 description: "Crea grafici finanziari interattivi in Google Sheets sfruttando i suggerimenti dell'AI. Risolvi il panico da riunione a Milano."
-publishDate: 2026-10-21T16:00:00.000Z
+publishDate: 2026-10-22T03:00:00.000Z
 image: 'https://picsum.photos/seed/work-mvhr2g4q-6-c/1200/675.jpg'
 category: 'automation'
 tags: ["Google Sheets", "AI Tools", "Financial Modeling", "Office Tips"]

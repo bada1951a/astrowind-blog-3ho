@@ -1,7 +1,7 @@
 ---
 title: "Modelos financieros interactivos en Google Sheets con sugerencias de IA"
 description: "Aprende a crear gráficos financieros interactivos en Google Sheets usando IA. Soluciona métricas rotas en minutos desde tu oficina en Madrid."
-publishDate: 2026-10-21T14:45:00.000Z
+publishDate: 2026-10-22T03:00:00.000Z
 image: 'https://picsum.photos/seed/work-mvhr270x-5-c/1200/675.jpg'
 category: 'automation'
 tags: ["Google Sheets", "Inteligencia Artificial", "Finanzas", "Productividad"]

@@ -1,7 +1,7 @@
 ---
 title: "How to Build Interactive Financial Charts in Google Sheets with AI"
 description: "Turn messy financial data into executive-ready interactive charts in Google Sheets using AI suggestions before your next sync."
-publishDate: 2026-10-21T09:45:00.000Z
+publishDate: 2026-10-22T03:00:00.000Z
 image: 'https://picsum.photos/seed/work-mvhr1794-1-c/1200/675.jpg'
 category: 'automation'
 tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]

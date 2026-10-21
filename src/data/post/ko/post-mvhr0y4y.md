@@ -1,7 +1,7 @@
 ---
 title: "구글 시트 AI 기능으로 재무 모델링 차트 1분 만에 완성하는 실무 칼퇴 치트키"
 description: "서울 판교 IT 기업 보고서 마감 전, 구글 시트 AI 제안 기능과 대화형 재무 모델링 차트 작성법으로 야근을 탈출하는 실무 치트키를 공개합니다."
-publishDate: 2026-10-21T08:30:00.000Z
+publishDate: 2026-10-22T03:00:00.000Z
 image: 'https://picsum.photos/seed/work-mvhr0y4y-0-c/1200/675.jpg'
 category: 'automation'
 tags: ["Google Sheets", "Financial Modeling", "AI Automation", "Office Tips"]

@@ -25,9 +25,9 @@ May mắn thay, câu chuyện đã khác kể từ khi chúng ta biết cách bi
 
 Khi đối mặt với một bảng dữ liệu hỗn độn sát giờ deadline, việc áp dụng sai phương pháp thường xuất phát từ 3 nguyên nhân chính sau đây:
 
-1. **Thiếu kiến thức nền tảng về Regex:** Cú pháp của Regular Expression (Biểu thức chính quy) cực kỳ khó nhớ với các ký tự đặc biệt như `^`, ``, `.*`, `\d+`. Chỉ cần gõ sai một dấu chấm hay dấu ngoặc là công thức vô tác dụng.
-2. **Hạn chế của các hàm chuẩn trong Sheets:** Các hàm như `SUBSTITUTE` hay `MID` thông thường chỉ xử lý được các chuỗi đơn giản. Khi dữ liệu có biến động về định dạng (ví dụ: số điện thoại có độ dài khác nhau), các hàm này hoàn toàn "bó tay".
-3. **Áp lực thời gian tạo ra tâm lý hoảng loạn:** Càng vội vàng, chúng ta càng dễ gõ sai cú pháp hoặc áp dụng nhầm công thức Excel sang Google Sheets (vốn có một số điểm khác biệt nhỏ về cấu trúc hàm).
+1. Thiếu kiến thức nền tảng về Regex: Cú pháp của Regular Expression (Biểu thức chính quy) cực kỳ khó nhớ với các ký tự đặc biệt như `^`, ``, `.*`, `\d+`. Chỉ cần gõ sai một dấu chấm hay dấu ngoặc là công thức vô tác dụng.
+2. Hạn chế của các hàm chuẩn trong Sheets: Các hàm như `SUBSTITUTE` hay `MID` thông thường chỉ xử lý được các chuỗi đơn giản. Khi dữ liệu có biến động về định dạng (ví dụ: số điện thoại có độ dài khác nhau), các hàm này hoàn toàn "bó tay".
+3. Áp lực thời gian tạo ra tâm lý hoảng loạn: Càng vội vàng, chúng ta càng dễ gõ sai cú pháp hoặc áp dụng nhầm công thức Excel sang Google Sheets (vốn có một số điểm khác biệt nhỏ về cấu trúc hàm).
 
 ---
 
@@ -60,9 +60,9 @@ Ngay lập tức, bạn sẽ nhận được một phiên bản công thức nâ
 
 Trước khi hào hứng copy toàn bộ dữ liệu công ty đưa lên các công cụ AI, hãy ghi nhớ những quy tắc an toàn sau:
 
-- **Ẩn danh hóa thông tin nhạy cảm:** Tuyệt đối không đưa họ tên thật, số căn cước, thông tin tài khoản ngân hàng hoặc số điện thoại thật của khách hàng lên ChatGPT công khai. Hãy thay thế bằng dữ liệu giả lập (Mock data) trước khi nhờ AI viết công thức.
-- **Luôn kiểm tra thủ công mẫu ngẫu nhiên (Sampling):** Sau khi áp dụng công thức tự động cho 10.000 dòng, hãy dùng bộ lọc (Filter) kiểm tra ngẫu nhiên vài dòng ở đầu, giữa và cuối file để đảm bảo không có sai sót ngầm.
-- **Sao lưu file gốc:** Trước khi chạy bất kỳ đoạn mã lệnh hoặc công thức Regex hàng loạt nào, hãy luôn nhấn `Tệp > Bản sao` (Make a copy) để lưu lại một bản dự phòng an toàn.
+- Ẩn danh hóa thông tin nhạy cảm: Tuyệt đối không đưa họ tên thật, số căn cước, thông tin tài khoản ngân hàng hoặc số điện thoại thật của khách hàng lên ChatGPT công khai. Hãy thay thế bằng dữ liệu giả lập (Mock data) trước khi nhờ AI viết công thức.
+- Luôn kiểm tra thủ công mẫu ngẫu nhiên (Sampling): Sau khi áp dụng công thức tự động cho 10.000 dòng, hãy dùng bộ lọc (Filter) kiểm tra ngẫu nhiên vài dòng ở đầu, giữa và cuối file để đảm bảo không có sai sót ngầm.
+- Sao lưu file gốc: Trước khi chạy bất kỳ đoạn mã lệnh hoặc công thức Regex hàng loạt nào, hãy luôn nhấn `Tệp > Bản sao` (Make a copy) để lưu lại một bản dự phòng an toàn.
 
 ---
 

@@ -23,9 +23,9 @@ Passer des heures à chercher sur les forums la syntaxe exacte d'une expression 
 
 Face à un gros volume de données mal formatées dans Google Sheets, les méthodes traditionnelles atteignent vite leurs limites pour trois raisons principales :
 
-* **La complexité des Regex (Expressions Régulières) :** La syntaxe de REGEEXMATCH ou REGEXEXTRACT est austère. Un simple oubli de parenthèse ou de métacaractère (comme `.*` ou `\d+`) fait tout planter.
-* **L'hétérogénéité des données clients :** Un coup le format est `Nom Prénom (01.23.45.67.89)`, le suivant c'est `Prénom Nom - 0145678910`. Les fonctions de base comme `GAUCHE` ou `STXT` sont incapables de s'adapter à ces variations.
-* **Le stress de la deadline :** Plus on est pressé, moins on est concentré, ce qui multiplie les erreurs de syntaxe dans les formules imbriquées (`SI`, `RECHERCHEV`, `INDEX`).
+* La complexité des Regex (Expressions Régulières) : La syntaxe de REGEEXMATCH ou REGEXEXTRACT est austère. Un simple oubli de parenthèse ou de métacaractère (comme `.*` ou `\d+`) fait tout planter.
+* L'hétérogénéité des données clients : Un coup le format est `Nom Prénom (01.23.45.67.89)`, le suivant c'est `Prénom Nom - 0145678910`. Les fonctions de base comme `GAUCHE` ou `STXT` sont incapables de s'adapter à ces variations.
+* Le stress de la deadline : Plus on est pressé, moins on est concentré, ce qui multiplie les erreurs de syntaxe dans les formules imbriquées (`SI`, `RECHERCHEV`, `INDEX`).
 
 ---
 
@@ -56,19 +56,19 @@ Ouvrez ChatGPT et utilisez un prompt ultra-contextuel. Ne lui demandez pas juste
 
 Même si l'IA fait des miracles, la prudence reste de mise dans un contexte professionnel :
 
-* **Attention à la confidentialité :** N'envoyez jamais de données bancaires, de secrets industriels ou de données nominatives hautement confidentielles (NIR, données de santé) dans les versions gratuites de ChatGPT si les conditions d'utilisation de votre entreprise l'interdisent. Utilisez des données factices pour concevoir la formule.
-* **Le piège des guillemets :** Parfois, ChatGPT génère des formules avec des guillemets typographiques (`“` ou `”`). Google Sheets exige des guillemets droits (`"`). Si vous obtenez une erreur de syntaxe immédiate, vérifiez ce point en premier.
-* **Testez sur une copie :** Ne testez jamais une macro de nettoyage destructrice directement sur l'unique fichier validé par la direction. Dupliquez l'onglet (`Clic droit sur l'onglet > Dupliquer`) pour travailler en toute sérénité.
+* Attention à la confidentialité : N'envoyez jamais de données bancaires, de secrets industriels ou de données nominatives hautement confidentielles (NIR, données de santé) dans les versions gratuites de ChatGPT si les conditions d'utilisation de votre entreprise l'interdisent. Utilisez des données factices pour concevoir la formule.
+* Le piège des guillemets : Parfois, ChatGPT génère des formules avec des guillemets typographiques (`“` ou `”`). Google Sheets exige des guillemets droits (`"`). Si vous obtenez une erreur de syntaxe immédiate, vérifiez ce point en premier.
+* Testez sur une copie : Ne testez jamais une macro de nettoyage destructrice directement sur l'unique fichier validé par la direction. Dupliquez l'onglet (`Clic droit sur l'onglet > Dupliquer`) pour travailler en toute sérénité.
 
 ---
 
 ## Questions Fréquemment Posées (FAQ)
 
-**1. Que faire si la formule générée par ChatGPT renvoie une erreur #REF! ou #VALEUR! ?**
+1. Que faire si la formule générée par ChatGPT renvoie une erreur #REF! ou #VALEUR! ?
 Le plus souvent, c'est un problème de décalage de plage ou de séparateur d'arguments. En français, Google Sheets utilise le point-virgule (`;`) pour séparer les arguments, tandis que ChatGPT oublie parfois cette règle et met une virgule (`,`). Remplacez simplement les virgules par des points-virgules dans la formule.
 
-**2. Puis-je utiliser cette méthode pour fusionner plusieurs colonnes de texte mal rangées ?**
+2. Puis-je utiliser cette méthode pour fusionner plusieurs colonnes de texte mal rangées ?
 Absolument. Il suffit de demander à ChatGPT de combiner les cellules `A2`, `B2` et `C2` en éliminant les espaces superflus et en mettant la première lettre en majuscule en utilisant des fonctions comme `TEXTJOIN` combinées à des expressions adaptées.
 
-**3. Faut-il une version payante de ChatGPT pour faire cela ?**
+3. Faut-il une version payante de ChatGPT pour faire cela ?
 Non, la version gratuite (GPT-4o mini ou équivalent) gère parfaitement la syntaxe des formules Google Sheets et les expressions régulières complexes. L'important est surtout la précision de votre prompt initial.

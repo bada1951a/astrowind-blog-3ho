@@ -25,9 +25,9 @@ If you have ever found yourself staring at thousands of SKU rows right before a 
 
 Before fixing our panic-inducing bottleneck, let us look at why traditional inventory forecasting in spreadsheets always feels like pulling teeth:
 
-1. **Static Historical Data Traps:** Most teams rely on basic `=AVERAGE()` formulas that completely ignore seasonal spikes, holiday trends, and sudden shifts in customer demand rates.
-2. **The Manual Export-Import Loop:** Constantly downloading raw data from enterprise resource planning tools into static CSV files creates version control nightmares and breaks formula links right before deadlines.
-3. **Lack of Native Predictive Awareness:** Standard Excel users often forget that advanced built-in forecasting tools and AI-assisted add-ins already exist within their ribbon menus, opting instead for overly complex manual calculations.
+1. Static Historical Data Traps: Most teams rely on basic `=AVERAGE()` formulas that completely ignore seasonal spikes, holiday trends, and sudden shifts in customer demand rates.
+2. The Manual Export-Import Loop: Constantly downloading raw data from enterprise resource planning tools into static CSV files creates version control nightmares and breaks formula links right before deadlines.
+3. Lack of Native Predictive Awareness: Standard Excel users often forget that advanced built-in forecasting tools and AI-assisted add-ins already exist within their ribbon menus, opting instead for overly complex manual calculations.
 
 ---
 
@@ -47,15 +47,15 @@ AI models and forecasting algorithms need clean data inputs to generate reliable
 Instead of writing complex regression formulas manually, let Excel's underlying algorithm do the heavy lifting.
 
 1. Select your date and historical quantity columns.
-2. Navigate to the top ribbon and click on the **Data** tab.
-3. In the Forecast group, click on **Forecast Sheet**.
+2. Navigate to the top ribbon and click on the Data tab.
+3. In the Forecast group, click on Forecast Sheet.
 4. A preview dialog box will immediately appear showing a visual line chart with confidence bounds. 
 
 <div style="border-left: 4px solid #0284c7; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Pro Tip:</strong> Adjust the Forecast End date to the exact final month of next quarter. Make sure to check the Options dropdown to explicitly define seasonality if your products experience recurring quarterly surges.
 </div>
 
-5. Click **Create**. Excel will instantly generate a brand-new worksheet containing exact predicted values, lower confidence bounds, and upper confidence bounds.
+5. Click Create. Excel will instantly generate a brand-new worksheet containing exact predicted values, lower confidence bounds, and upper confidence bounds.
 
 ### Step 3: Enhance the Output with AI Prompt Integration
 Now that you have your baseline statistical forecast, you need executive-ready context. Copy your newly generated forecast table and paste it into your preferred AI assistant (or your organization's secure internal LLM tool) using this exact prompt structure:
@@ -75,19 +75,19 @@ Take the AI-generated executive summary, drop it into a clean text box above you
 
 ## Expert Warnings and Best Practices
 
-* **Data Privacy:** Never paste sensitive, proprietary customer lists or unmasked financial data into public AI chatbots. Always utilize enterprise-grade, privacy-compliant AI instances provided by your IT department.
-* **Always Account for Lead Times:** Predictive inventory models tell you when stock will be consumed, but they do not automatically calculate supplier shipping delays. Always add a buffer formula column for lead-time variance.
-* **Keep a Raw Backup Tab:** Never run forecasting models directly on your raw, master database tab. Always duplicate your data into a dedicated working sheet labeled `Forecast_Model_Working`.
+* Data Privacy: Never paste sensitive, proprietary customer lists or unmasked financial data into public AI chatbots. Always utilize enterprise-grade, privacy-compliant AI instances provided by your IT department.
+* Always Account for Lead Times: Predictive inventory models tell you when stock will be consumed, but they do not automatically calculate supplier shipping delays. Always add a buffer formula column for lead-time variance.
+* Keep a Raw Backup Tab: Never run forecasting models directly on your raw, master database tab. Always duplicate your data into a dedicated working sheet labeled `Forecast_Model_Working`.
 
 ---
 
 ## Frequently Asked Questions (FAQ)
 
 ### Q1: Can I use this method if my inventory data is weekly instead of monthly?
-**A:** Absolutely. Excel's Forecast Sheet feature and AI models can easily process daily, weekly, monthly, or even quarterly data intervals. Just ensure your date column is formatted uniformly as actual Excel date serial numbers so the algorithm correctly recognizes the time gaps.
+A: Absolutely. Excel's Forecast Sheet feature and AI models can easily process daily, weekly, monthly, or even quarterly data intervals. Just ensure your date column is formatted uniformly as actual Excel date serial numbers so the algorithm correctly recognizes the time gaps.
 
 ### Q2: What should I do if the AI-generated forecast seems unrealistically high?
-**A:** This usually happens when a massive one-off promotional spike or holiday anomaly skews the historical training data. Go back to your source table, identify outlier months, normalize those specific data points, and regenerate your forecast sheet.
+A: This usually happens when a massive one-off promotional spike or holiday anomaly skews the historical training data. Go back to your source table, identify outlier months, normalize those specific data points, and regenerate your forecast sheet.
 
 ### Q3: Do I need a paid AI subscription to make this work?
-**A:** No. The core predictive engine (Exponential Smoothing / ETS algorithm) is built directly into modern versions of Microsoft Excel (Microsoft 365 and Excel 2016+). External AI assistants are simply used at the end to draft the executive presentation talking points.
+A: No. The core predictive engine (Exponential Smoothing / ETS algorithm) is built directly into modern versions of Microsoft Excel (Microsoft 365 and Excel 2016+). External AI assistants are simply used at the end to draft the executive presentation talking points.

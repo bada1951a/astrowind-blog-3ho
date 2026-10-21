@@ -21,9 +21,9 @@ Se você já passou por isso, sabe que o processo tradicional de transcrição m
 
 Antes de irmos para a solução definitiva, vale a pena entender os três vilões silenciosos que estragam os seus dados na hora do fechamento:
 
-1. **PDFs Escaneados como Imagens:** Muitas notas fiscais enviadas por fornecedores são, na verdade, fotos ou digitalizações chapadas. O Excel e os leitores de PDF comuns enxergam apenas uma imagem única, sem conseguir selecionar textos ou reconhecer limites de colunas.
-2. **Quebras de Linha Irregulares:** Quando você consegue extrair algum texto bruto, as quebras de linha das descrições longas de produtos quebram a formatação das linhas no Excel, jogando os valores de preços para colunas totalmente erradas.
-3. **Incompatibilidade de Caracteres Especiais:** R$ e pontos/vírgulas em formato brasileiro frequentemente se corrompem na conversão direta, exigindo horas de limpeza com fórmulas manuais do tipo SUBSTITUIR ou VALOR.
+1. PDFs Escaneados como Imagens: Muitas notas fiscais enviadas por fornecedores são, na verdade, fotos ou digitalizações chapadas. O Excel e os leitores de PDF comuns enxergam apenas uma imagem única, sem conseguir selecionar textos ou reconhecer limites de colunas.
+2. Quebras de Linha Irregulares: Quando você consegue extrair algum texto bruto, as quebras de linha das descrições longas de produtos quebram a formatação das linhas no Excel, jogando os valores de preços para colunas totalmente erradas.
+3. Incompatibilidade de Caracteres Especiais: R$ e pontos/vírgulas em formato brasileiro frequentemente se corrompem na conversão direta, exigindo horas de limpeza com fórmulas manuais do tipo SUBSTITUIR ou VALOR.
 
 ---
 
@@ -42,7 +42,7 @@ Em vez de usar softwares legados ultrapassados, abra uma ferramenta de IA genera
 
 ### Passo 3: A Importação Limpa para o Excel
 1. A IA gerará uma tabela limpa e formatada na sua tela em questão de segundos.
-2. Clique no botão **"Copiar tabela"** (Copy table) no canto superior direito do bloco de código gerado pela IA.
+2. Clique no botão "Copiar tabela" (Copy table) no canto superior direito do bloco de código gerado pela IA.
 3. Abra a sua planilha do Excel, clique na célula de destino (ex: `A1`) e pressione `Ctrl + V`.
 4. Pronto! Todos os dados estarão perfeitamente alinhados em suas respectivas colunas, sem células mescladas indesejadas.
 
@@ -56,8 +56,8 @@ Em vez de usar softwares legados ultrapassados, abra uma ferramenta de IA genera
 
 Trabalhar com dados financeiros e notas fiscais exige atenção rigorosa à privacidade e à conformidade corporativa:
 
-* **Privacidade de Dados (LGPD):** Evite enviar notas fiscais de clientes finais ou dados altamente confidenciais para versões públicas de IAs sem antes verificar a política de privacidade da plataforma ou utilizar ambientes corporativos homologados pelo setor de TI da sua empresa.
-* **A Regra de Ouro da Validação:** Nunca envie um relatório financeiro gerado por IA para a diretoria sem fazer a conferência rápida dos totais. Utilize a fórmula `=SOMA()` na coluna de valores totais do Excel para bater o resultado final com o rodapé da nota fiscal original.
+* Privacidade de Dados (LGPD): Evite enviar notas fiscais de clientes finais ou dados altamente confidenciais para versões públicas de IAs sem antes verificar a política de privacidade da plataforma ou utilizar ambientes corporativos homologados pelo setor de TI da sua empresa.
+* A Regra de Ouro da Validação: Nunca envie um relatório financeiro gerado por IA para a diretoria sem fazer a conferência rápida dos totais. Utilize a fórmula `=SOMA()` na coluna de valores totais do Excel para bater o resultado final com o rodapé da nota fiscal original.
 
 ---
 

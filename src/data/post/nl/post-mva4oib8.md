@@ -21,9 +21,9 @@ In deze gids laat ik je zien hoe je ChatGPT inzet als je persoonlijke spreadshee
 
 Voordat we naar de oplossing kijken, moeten we begrijpen waarom het zo vaak misgaat in spreadsheets. Dit zijn de drie grootste boosdoeners bij data-opschoning:
 
-1. **De complexiteit van Reguliere Expressies (Regex):** Syntax zoals `^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$` leest als een geheime code. Eén verkeerd geplaatst sterretje of puntje zorgt ervoor dat de hele formule faalt in Google Sheets (die werkt met de RE2-standaard).
-2. **Oneindig geneste formules:** Als je `ALS`, `VERT.ZOEKEN`, `INDEX` en `VERGELIJKEN` door elkaar gaat gebruiken, raak je snel de draad kwijt met haakjes die niet sluiten.
-3. **Beperkte zoektijd onder druk:** Vlak voor een meeting zoek je op Google naar vergelijkbare situaties op fora, maar de oplossingen sluiten net niet aan op jouw specifieke kolomstructuur.
+1. De complexiteit van Reguliere Expressies (Regex): Syntax zoals `^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$` leest als een geheime code. Eén verkeerd geplaatst sterretje of puntje zorgt ervoor dat de hele formule faalt in Google Sheets (die werkt met de RE2-standaard).
+2. Oneindig geneste formules: Als je `ALS`, `VERT.ZOEKEN`, `INDEX` en `VERGELIJKEN` door elkaar gaat gebruiken, raak je snel de draad kwijt met haakjes die niet sluiten.
+3. Beperkte zoektijd onder druk: Vlak voor een meeting zoek je op Google naar vergelijkbare situaties op fora, maar de oplossingen sluiten net niet aan op jouw specifieke kolomstructuur.
 
 <div style="border-left: 4px solid #10b981; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Tijd-besparingsindicator:</strong> Waar je vroeger al snel 30 tot 45 minuten kwijt was aan het debuggen van één enkele regex of formule, reduceer je dit met AI tot minder dan 60 seconden.
@@ -41,7 +41,7 @@ Voordat je ChatGPTent, kopieer je een anoniem voorbeeld van drie rijen uit je Go
 ### Stap 2: Gebruik de juiste prompt-structuur
 Geef ChatGPT een specifieke rol en vertel exact wat het invoerformaat en het gewenste uitvoerformaat is. 
 
-**Kopieer deze kant-en-klare prompt:**
+Kopieer deze kant-en-klare prompt:
 > "Je bent een expert in Google Sheets en reguliere expressies (regex). Ik heb een kolom in Google Sheets (kolom A) met slordige data, bijvoorbeeld: 'Bedrijf B - 020-1234567 - Amsterdam'. Schrijf voor mij een Google Sheets formule met REGEXEXTRACT of REGEXREPLACE om alleen het telefoonnummer eruit te filteren. Geef direct de formule en leg in één zin uit hoe ik hem moet aanpassen als de kolomwijziging verschuift."
 
 ### Stap 3: Plak en test in Google Sheets
@@ -60,9 +60,9 @@ Krijg je alsnog een foutmelding? Copy-paste de foutmelding direct terug naar Cha
 
 Hoewel AI een enorme tijdsbesparing oplevert, moet je slim omgaan met bedrijfsdata en automatisering:
 
-* **Let op privacy en AVG:** Upload nooit gevoelige persoonsgegevens (PII), salarisadministraties of vertrouwelijke financiële cijfers naar openbare AI-tools. Anonimiseer altijd je testdata.
-* **Controleer steekproefsgewijs:** Vertrouw nooit blind op een gegenereerde formule met tienduizenden rijen. Check altijd de eerste tien en laatste tien rijen van je dataset om onverwachte uitschieters te ontdekken.
-* **Documenteer je succes:** Sla succesvolle prompts op in een gezamenlijk teamdocument (zoals Notion of Confluence), zodat collega's bij volgende rapportages niet opnieuw het wiel hoeven uit te vinden.
+* Let op privacy en AVG: Upload nooit gevoelige persoonsgegevens (PII), salarisadministraties of vertrouwelijke financiële cijfers naar openbare AI-tools. Anonimiseer altijd je testdata.
+* Controleer steekproefsgewijs: Vertrouw nooit blind op een gegenereerde formule met tienduizenden rijen. Check altijd de eerste tien en laatste tien rijen van je dataset om onverwachte uitschieters te ontdekken.
+* Documenteer je succes: Sla succesvolle prompts op in een gezamenlijk teamdocument (zoals Notion of Confluence), zodat collega's bij volgende rapportages niet opnieuw het wiel hoeven uit te vinden.
 
 ---
 

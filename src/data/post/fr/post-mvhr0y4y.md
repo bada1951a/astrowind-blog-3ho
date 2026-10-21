@@ -21,9 +21,9 @@ Il est 14h15 au 18e étage d'une tour à La Défense. Le comité de direction d�
 
 Ce genre de situation ne relève pas de la fatalité, mais de trois causes techniques bien précises que l'on retrouve dans la plupart des services financiers :
 
-1. **La structure des données non normalisée :** Vos lignes de revenus et de charges sont éparpillées sur plusieurs onglets sans structure de base de données propre, ce qui empêche l'outil d'interpréter correctement les axes.
-2. **L'absence de contrôles interactifs :** Utiliser des plages de cellules fixes (comme "A1:G12") au lieu de plages dynamiques avec des menus déroulants ou des curseurs bloque toute mise à jour en direct pendant la réunion.
-3. **Le piège de la mise en forme manuelle :** Passer trop de temps à ajuster les couleurs, les légendes et les échelles logarithmiques à la main au lieu de laisser l'IA suggérer la typologie de graphique optimale (cascade, aires empilées ou graphiques combinés).
+1. La structure des données non normalisée : Vos lignes de revenus et de charges sont éparpillées sur plusieurs onglets sans structure de base de données propre, ce qui empêche l'outil d'interpréter correctement les axes.
+2. L'absence de contrôles interactifs : Utiliser des plages de cellules fixes (comme "A1:G12") au lieu de plages dynamiques avec des menus déroulants ou des curseurs bloque toute mise à jour en direct pendant la réunion.
+3. Le piège de la mise en forme manuelle : Passer trop de temps à ajuster les couleurs, les légendes et les échelles logarithmiques à la main au lieu de laisser l'IA suggérer la typologie de graphique optimale (cascade, aires empilées ou graphiques combinés).
 
 ## Guide d'implémentation : Créez votre modèle en 3 étapes
 
@@ -37,14 +37,14 @@ Avant d'invoquer l'IA, vos données brutes doivent être prêtes. Rassemblez vos
 
 ### Étape 2 : Activer l'assistant IA et générer les suggestions
 Ouvrez votre panneau latéral Google Sheets et utilisez l'intelligence artificielle intégrée pour concevoir la structure visuelle.
-- Allez dans le menu **Extensions** ou cliquez directement sur l'icône **Explorer** (en bas à droite de votre écran).
+- Allez dans le menu Extensions ou cliquez directement sur l'icône Explorer (en bas à droite de votre écran).
 - Dans la barre de recherche des requêtes IA ou de l'outil Explorer, tapez une consigne précise en langage naturel : 
   `Crée un graphique combiné interactif montrant l'évolution de l'EBITDA et de la marge nette avec des filtres par trimestre.`
 - Analysez les suggestions de graphiques proposées par l'IA et sélectionnez celle qui met le mieux en valeur les flux de trésorerie.
 
 ### Étape 3 : Ajouter des commandes interactives (Slicers et Menus déroulants)
 Pour rendre le modèle véritablement interactif pendant la présentation :
-- Cliquez sur **Données** > **Ajouter un segment (Slicer)** pour filtrer dynamiquement vos départements ou vos entités régionales en un clic.
+- Cliquez sur Données > Ajouter un segment (Slicer) pour filtrer dynamiquement vos départements ou vos entités régionales en un clic.
 - Insérez des cases à cocher ou des menus déroulants (`Insertion` > `Menu déroulant`) reliés à vos cellules de simulation pour basculer instantanément entre un scénario pessimiste, médian ou optimiste. Le graphique s'ajustera tout seul en temps réel.
 
 <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

@@ -25,9 +25,9 @@ Si trabajas con equipos internacionales, sabrás que depender de extensiones de 
 
 Antes de pasar al montaje rápido, veamos por qué caemos en estos callejones sin salida:
 
-1. **Dependencia de complementos de pago:** Los add-ons del Marketplace suelen ofrecer pruebas gratuitas que expiran en el peor momento operativo.
-2. **Uso de funciones obsoletas:** Intentar rastrear APIs externas mediante secuencias de código complejo en Apps Script sin control de errores.
-3. **Estructura de fechas rígida:** No fijar correctamente la divisa base, lo que rompe toda la matriz de conversión al arrastrar las fórmulas hacia abajo.
+1. Dependencia de complementos de pago: Los add-ons del Marketplace suelen ofrecer pruebas gratuitas que expiran en el peor momento operativo.
+2. Uso de funciones obsoletas: Intentar rastrear APIs externas mediante secuencias de código complejo en Apps Script sin control de errores.
+3. Estructura de fechas rígida: No fijar correctamente la divisa base, lo que rompe toda la matriz de conversión al arrastrar las fórmulas hacia abajo.
 
 ---
 
@@ -76,13 +76,13 @@ Formatea esa celda yendo al menú superior: `Formato > Número > Fecha y hora`. 
 
 ### Preguntas Frecuentes (FAQ)
 
-**1. ¿Qué pasa si Google Finance muestra un error #N/A de repente?**
+1. ¿Qué pasa si Google Finance muestra un error #N/A de repente?
 Suele ocurrir si el mercado está cerrado (fines de semana o festivos) o si escribes mal el código de la divisa. Para solucionarlo y mantener el reporte limpio, envuelve tu fórmula en un `SI.ERROR`:
 `=SI.ERROR(GOOGLEFINANCE("CURRENCY:USDEUR"); 0.92)`
 Esto asegura que, si la API flaquea, el sistema mantenga la última tasa de cambio estimada por defecto.
 
-**2. ¿Puedo usar esto para criptomonedas o materias primas?**
+2. ¿Puedo usar esto para criptomonedas o materias primas?
 ¡Sí! Google Finance no solo soporta divisas fiat tradicionales como el euro o el dólar. Puedes rastrear Bitcoin escribiendo `"CURRENCY:BTCEUR"` o acciones del IBEX y del S&P 500 usando sus Nemotécnicos bursátiles habituales.
 
-**3. ¿Este método consume recursos o ralentiza mi Google Drive?**
+3. ¿Este método consume recursos o ralentiza mi Google Drive?
 Para nada. Al utilizar funciones nativas del propio ecosistema de Google, el procesamiento ocurre en sus servidores en la nube y no consume memoria local de tu ordenador, manteniendo tu navegador ágil incluso con hojas de cálculo kilométricas.

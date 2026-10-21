@@ -25,9 +25,9 @@ Por suerte, rescaté la situación utilizando un truco rápido con IA integrada 
 
 Antes de pasar a la solución, veamos por qué este problema nos amarga la vida tan seguido en la oficina:
 
-1. **Datos de múltiples fuentes:** Los comerciales pegan leads de LinkedIn, formularios web y tarjetas de visita sin ningún filtro. El resultado es un cementerio de formatos: mayúsculas, minúsculas, correos con espacios al inicio y nombres al revés (Apellido, Nombre).
-2. **Fórmulas rígidas:** Las funciones tradicionales de Excel son literales. Si un correo tiene un espacio invisible al final o un punto de más, toda la lógica condicional se viene abajo.
-3. **Falta de estandarización:** Sin un proceso automatizado previo, intentar arreglar manualmente columnas masivas genera errores humanos inevitables y un desgaste mental innecesario.
+1. Datos de múltiples fuentes: Los comerciales pegan leads de LinkedIn, formularios web y tarjetas de visita sin ningún filtro. El resultado es un cementerio de formatos: mayúsculas, minúsculas, correos con espacios al inicio y nombres al revés (Apellido, Nombre).
+2. Fórmulas rígidas: Las funciones tradicionales de Excel son literales. Si un correo tiene un espacio invisible al final o un punto de más, toda la lógica condicional se viene abajo.
+3. Falta de estandarización: Sin un proceso automatizado previo, intentar arreglar manualmente columnas masivas genera errores humanos inevitables y un desgaste mental innecesario.
 
 ---
 
@@ -45,7 +45,7 @@ Esto elimina los dobles espacios y estandariza los correos electrónicos a minú
 ### Paso 2: Usa la IA o Relleno Flash (Flash Fill) para extraer nombres
 Si tienes celdas como "Juan Carlos Pérez García <juan.perez@empresa.es>", olvídate de fórmulas complejas. 
 1. En la celda de al lado, escribe manualmente el primer nombre extraído ("Juan").
-2. Presiona la combinación de teclas **Ctrl + E** (o ve a la pestaña *Datos > Relleno Rápido*).
+2. Presiona la combinación de teclas Ctrl + E (o ve a la pestaña *Datos > Relleno Rápido*).
 3. Excel detectará el patrón automáticamente y llenará toda la columna con los primeros nombres en un segundo.
 
 ### Paso 3: El prompt definitivo si usas Copilot o ChatGPT para arreglar correos caóticos
@@ -63,18 +63,18 @@ Copia la tabla limpia que te devuelve la IA y pégala directamente en tu archivo
 
 Cuando trabajes con información corporativa sensible o datos de clientes (RGPD mediante), ten cuidado al subir información a herramientas de IA externas. 
 
-* **Anonimiza siempre:** Si vas a usar una IA basada en la nube para limpiar datos, sustituye los nombres reales por nombres ficticios (como Cliente 1, Cliente 2) o utiliza únicamente las estructuras de correo que no contengan datos altamente confidenciales.
-* **Haz una copia de seguridad:** Nunca ejecutes macros de IA o complementos masivos sobre tu archivo original. Guarda siempre una copia limpia etiquetada con la fecha del día (`_backup_final.xlsx`).
+* Anonimiza siempre: Si vas a usar una IA basada en la nube para limpiar datos, sustituye los nombres reales por nombres ficticios (como Cliente 1, Cliente 2) o utiliza únicamente las estructuras de correo que no contengan datos altamente confidenciales.
+* Haz una copia de seguridad: Nunca ejecutes macros de IA o complementos masivos sobre tu archivo original. Guarda siempre una copia limpia etiquetada con la fecha del día (`_backup_final.xlsx`).
 
 ---
 
 ## Preguntas frecuentes (FAQ)
 
 ### ¿Qué hago si el Relleno Flash (Ctrl + E) no detecta el patrón del nombre?
-A veces, cuando los datos son muy heterogéneos, el atajo se confunde. Ayúdale escribiendo manualmente los dos primeros ejemplos correctos en celdas consecutivas antes de presionar **Ctrl + E** de nuevo para forzar el reconocimiento del patrón.
+A veces, cuando los datos son muy heterogéneos, el atajo se confunde. Ayúdale escribiendo manualmente los dos primeros ejemplos correctos en celdas consecutivas antes de presionar Ctrl + E de nuevo para forzar el reconocimiento del patrón.
 
 ### ¿Puedo hacer esto directamente dentro de Excel sin salirme a una IA externa?
-Sí. Si tu empresa cuenta con la licencia corporativa de Microsoft 365, puedes utilizar **Copilot en Excel** directamente desde el panel lateral para pedirle mediante lenguaje natural que limpie columnas, elimine duplicados o extraiga cadenas de texto específicas.
+Sí. Si tu empresa cuenta con la licencia corporativa de Microsoft 365, puedes utilizar Copilot en Excel directamente desde el panel lateral para pedirle mediante lenguaje natural que limpie columnas, elimine duplicados o extraiga cadenas de texto específicas.
 
 ### ¿Cómo evito que los correos electrónicos pierdan el formato de hipervínculo al limpiarlos?
 Al usar funciones como `ESPACIOS` o fórmulas de texto, el resultado se convierte en texto plano. Si necesitas que vuelvan a ser enlaces clickeables, puedes rodear tu fórmula final con la función `=HIPERVINCULO("mailto:" & B2; B2)` o simplemente seleccionarlos y dejar que Excel los reconozca de nuevo.

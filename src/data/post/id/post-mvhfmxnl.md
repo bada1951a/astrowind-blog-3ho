@@ -27,9 +27,9 @@ Jika Anda pernah berada di posisi saya, terjebak lembur karena urusan rekap data
 
 Sebelum masuk ke solusi teknis, mari kita bedah akar masalah mengapa metode lama sering membuat kita lembur di kantor:
 
-1. **Pola Musiman yang Diabaikan:** Rumus dasar seperti rata-rata bergerak (moving average) gagal mendeteksi lonjakan musiman, misalnya kenaikan permintaan menjelang libur panjang atau akhir tahun.
-2. **Human Error pada Formula Rumit:** Mengetik rumus matematika yang panjang dan bercabang sering kali berujung pada pesan *#VALUE!* atau *#REF!* yang bikin stres mendadak.
-3. **Skala Data yang Terlalu Besar:** Mengolah ribuan baris data transaksi historis secara manual membuat aplikasi Excel *lag* atau *not responding* di saat-saat paling krusial.
+1. Pola Musiman yang Diabaikan: Rumus dasar seperti rata-rata bergerak (moving average) gagal mendeteksi lonjakan musiman, misalnya kenaikan permintaan menjelang libur panjang atau akhir tahun.
+2. Human Error pada Formula Rumit: Mengetik rumus matematika yang panjang dan bercabang sering kali berujung pada pesan *#VALUE!* atau *#REF!* yang bikin stres mendadak.
+3. Skala Data yang Terlalu Besar: Mengolah ribuan baris data transaksi historis secara manual membuat aplikasi Excel *lag* atau *not responding* di saat-saat paling krusial.
 
 ---
 
@@ -43,14 +43,14 @@ Pastikan data historis Anda tersusun rapi dalam bentuk tabel standar di Excel.
 - Kolom B: Kode Produk atau SKU
 - Kolom C: Jumlah Unit Terjual
 
-Sorot seluruh tabel data Anda, lalu pilih menu **Sisipkan (Insert) > Tabel** untuk mengubahnya menjadi format tabel resmi Excel agar mudah dibaca oleh sistem AI.
+Sorot seluruh tabel data Anda, lalu pilih menu Sisipkan (Insert) > Tabel untuk mengubahnya menjadi format tabel resmi Excel agar mudah dibaca oleh sistem AI.
 
 #### Langkah 2: Aktifkan Fitur Forecast Sheet Bawaan Excel
 Daripada menebak-nebak angka, gunakan fitur analisis prediktif berbasis algoritma eksponensial smoothing yang ada di Excel:
 1. Klik pada salah satu sel di dalam tabel data Anda.
-2. Masuk ke tab menu **Data** di bagian atas ribbon Excel.
-3. Klik tombol **Lembar Perkiraan (Forecast Sheet)**.
-4. Jendela pratinjau akan muncul secara otomatis menampilkan grafik garis dengan batas kepercayaan (*confidence bounds*) atas dan bawah. Atur tanggal akhir peramalan sesuai target kuartal depan yang Anda inginkan, lalu klik **Buat (Create)**.
+2. Masuk ke tab menu Data di bagian atas ribbon Excel.
+3. Klik tombol Lembar Perkiraan (Forecast Sheet).
+4. Jendela pratinjau akan muncul secara otomatis menampilkan grafik garis dengan batas kepercayaan (*confidence bounds*) atas dan bawah. Atur tanggal akhir peramalan sesuai target kuartal depan yang Anda inginkan, lalu klik Buat (Create).
 
 #### Langkah 3: Gunakan Prompt AI untuk Analisis Naratif dan Penyesuaian
 Grafik saja tidak cukup untuk bos Anda di SCBD. Mereka butuh alasan dan narasi bisnis. Salin ringkasan data tren dari Excel, lalu gunakan asisten AI (seperti ChatGPT atau Copilot) dengan prompt spesifik berikut:
@@ -67,18 +67,18 @@ Tempel hasil analisis naratif dari AI tersebut di samping lembar kerja Excel And
 <strong>Peringatan Profesional:</strong> Selalu anonimkan data sensitif perusahaan (seperti nama klien atau margin keuntungan rahasia) sebelum Anda memasukkannya ke dalam platform AI berbasis publik demi menjaga keamanan data perusahaan.
 </div>
 
-- **Selalu Cadangkan File:** Buat salinan (duplikat) file Excel Anda sebelum menjalankan fungsi pembersihan data otomatis atau makro tingkat lanjut.
-- **Validasi Logika:** AI sangat bagus untuk memperkirakan pola, tetapi akal sehat manusia tetap dibutuhkan untuk memperhitungkan faktor eksternal mendadak, seperti perubahan regulasi impor atau kebijakan pajak baru.
+- Selalu Cadangkan File: Buat salinan (duplikat) file Excel Anda sebelum menjalankan fungsi pembersihan data otomatis atau makro tingkat lanjut.
+- Validasi Logika: AI sangat bagus untuk memperkirakan pola, tetapi akal sehat manusia tetap dibutuhkan untuk memperhitungkan faktor eksternal mendadak, seperti perubahan regulasi impor atau kebijakan pajak baru.
 
 ---
 
 ### Tanya Jawab Populer (FAQ)
 
-**Q: Apakah saya memerlukan langganan Microsoft 365 berbayar untuk melakukan ini?**
+Q: Apakah saya memerlukan langganan Microsoft 365 berbayar untuk melakukan ini?
 A: Fitur dasar seperti *Forecast Sheet* sudah tersedia di versi Microsoft Excel modern (Excel 2016 ke atas). Untuk integrasi AI generatif yang lebih dalam, Anda bisa menggunakan Copilot atau menyalin data ke alat AI eksternal secara gratis.
 
-**Q: Bagaimana jika data penjualan saya tidak lengkap atau ada bulan yang kosong?**
+Q: Bagaimana jika data penjualan saya tidak lengkap atau ada bulan yang kosong?
 A: Anda harus mengisi kekosongan tersebut terlebih dahulu. Jangan biarkan sel kosong bernilai nol jika memang tidak ada transaksi, karena hal itu akan mendistorsi hasil prediksi algoritma AI. Gunakan metode interpolasi sederhana atau isi dengan rata-rata bulan terdekat.
 
-**Q: Apakah metode ini bisa langsung dipakai untuk ribuan SKU produk sekaligus?**
+Q: Apakah metode ini bisa langsung dipakai untuk ribuan SKU produk sekaligus?
 A: Disarankan untuk mengelompokkan produk berdasarkan kategori atau volume penjualan terbesar (Analisis ABC) terlebih dahulu. Memproses ribuan SKU secara bersamaan tanpa pengelompokan akan membuat hasil prediksi kurang tajam dan sulit dianalisis.

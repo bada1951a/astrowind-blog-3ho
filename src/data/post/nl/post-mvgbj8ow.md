@@ -26,9 +26,9 @@ Hier is precies hoe je dit inricht, zodat jij voortaan om vijf uur de laptop dic
 ### Waarom handmatige rapportages gedoemd zijn te mislukken
 
 Voordat we de code induiken, even een korte analyse van waarom dit proces misgaat in de praktijk:
-1. **Menselijke factor en vergeetachtigheid:** Vrijdagmiddagdrukte zorgt ervoor dat je de deadline mist of halverwege wordt afgeleid.
-2. **Opmaakverschillen:** Verschillende schermformaten en printers gooien de PDF-layout in de war als je het handmatig exporteert via *Bestand > Downloaden > PDF*.
-3. **Versiebeheer chaos:** Oudste versies van rapporten die per ongeluk worden gemaild omdat bestandsnamen niet uniform zijn.
+1. Menselijke factor en vergeetachtigheid: Vrijdagmiddagdrukte zorgt ervoor dat je de deadline mist of halverwege wordt afgeleid.
+2. Opmaakverschillen: Verschillende schermformaten en printers gooien de PDF-layout in de war als je het handmatig exporteert via *Bestand > Downloaden > PDF*.
+3. Versiebeheer chaos: Oudste versies van rapporten die per ongeluk worden gemaild omdat bestandsnamen niet uniform zijn.
 
 ---
 
@@ -37,7 +37,7 @@ Voordat we de code induiken, even een korte analyse van waarom dit proces misgaa
 Je hebt geen geavanceerde programmeerachtergrond nodig. Volg simpelweg onderstaande stappen in je Google Sheets-omgeving.
 
 #### Stap 1: Open de Apps Script Editor
-Open je Google Spreadsheet met het wekelijkse rapport. Klik in het bovenste menu op **Extensies** en kies vervolgens voor **Apps Script**. Er opent een nieuw tabblad met een lege code-editor.
+Open je Google Spreadsheet met het wekelijkse rapport. Klik in het bovenste menu op Extensies en kies vervolgens voor Apps Script. Er opent een nieuw tabblad met een lege code-editor.
 
 #### Stap 2: Plak het geoptimaliseerde script
 Verwijder eventuele aanwezige voorbeeldcode en plak onderstaand script in de editor. Dit script converteert automatisch een specifiek tabblad naar een PDF en eist dat het via Gmail wordt verzonden.
@@ -90,16 +90,16 @@ function sendWeeklyReportPDF() {
 }
 ```
 
-Klik op het **floppy-icoontje** (Opslaan) boven in de balk om het script op te slaan.
+Klik op het floppy-icoontje (Opslaan) boven in de balk om het script op te slaan.
 
 #### Stap 3: Installeer de automatische trigger (Wekelijks schema)
 Nu de code klaar staat, zorgen we dat deze elke week automatisch draait:
-1. Klik aan de linkerkant in het Apps Script menu op het **klok-icoontje** (**Triggers**).
-2. Klik rechtsonder op de knop **Trigger toevoegen**.
+1. Klik aan de linkerkant in het Apps Script menu op het klok-icoontje (Triggers).
+2. Klik rechtsonder op de knop Trigger toevoegen.
 3. Kies bij functie: `sendWeeklyReportPDF`.
-4. Kies bij gebeurtenisbron: **Op tijd gebaseerd**.
-5. Selecteer tijdsinterval: **Wekelijks tijdschema** en kies bijvoorbeeld elke maandag ochtend om 08:00 uur.
-6. Klik op **Opslaan**. Google vraagt nu om eenmalig toestemming (machtigingen verlenen) om je Gmail en Spreadsheet te mogen koppelen.
+4. Kies bij gebeurtenisbron: Op tijd gebaseerd.
+5. Selecteer tijdsinterval: Wekelijks tijdschema en kies bijvoorbeeld elke maandag ochtend om 08:00 uur.
+6. Klik op Opslaan. Google vraagt nu om eenmalig toestemming (machtigingen verlenen) om je Gmail en Spreadsheet te mogen koppelen.
 
 <div style="border-left: 4px solid #10b981; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Belangrijke tip:</strong> Voer de functie de eerste keer handmatig uit door op de 'Uitvoeren' (Play) knop te klikken in de Apps Script editor. Zo controleer je direct of de e-mail correct aankomt en de machtigingen goed zijn ingesteld.
@@ -110,18 +110,18 @@ Nu de code klaar staat, zorgen we dat deze elke week automatisch draait:
 ### Expert Waarschuwing: Veiligheid en Bereik
 
 Houd rekening met de volgende praktische richtlijnen bij het automatiseren van bedrijfskritische processen:
-* **API Limieten:** Google heeft dagelijkse limieten voor het verzenden van e-mails via scripts (voor normale Gmail-accounts is dit doorgaans 100 per dag, voor Google Workspace accounts 1.500 per dag). Meer dan genoeg voor wekelijkse rapporten, maar houd er rekening mee bij grote distributielijsten.
-* **Geheime Data:** Zorg ervoor dat tabbladen die gevoelige financiële of HR-data bevatten goed zijn afgeschermd met tabblad-beveiliging, zodat het script nooit per ongeluk ongeautoriseerde gegevens meeneemt in de export.
+* API Limieten: Google heeft dagelijkse limieten voor het verzenden van e-mails via scripts (voor normale Gmail-accounts is dit doorgaans 100 per dag, voor Google Workspace accounts 1.500 per dag). Meer dan genoeg voor wekelijkse rapporten, maar houd er rekening mee bij grote distributielijsten.
+* Geheime Data: Zorg ervoor dat tabbladen die gevoelige financiële of HR-data bevatten goed zijn afgeschermd met tabblad-beveiliging, zodat het script nooit per ongeluk ongeautoriseerde gegevens meeneemt in de export.
 
 ---
 
 ### Veelgestelde Vragen (FAQ)
 
-**1. Kan ik het rapport naar meerdere ontvangers tegelijk sturen?**
+1. Kan ik het rapport naar meerdere ontvangers tegelijk sturen?
 Ja zeker. Je kunt in de variabele `emailTo` meerdere e-mailadressen scheiden met een komma, bijvoorbeeld: `"manager@bedrijf.nl, directeur@bedrijf.nl"`. Wil je een grotere distributielijst beheren? Maak dan in Google Contacten een e-mailgroep aan en vul dat groepsadres in.
 
-**2. Wat gebeurt er als de structuur van mijn spreadsheet verandert?**
+2. Wat gebeurt er als de structuur van mijn spreadsheet verandert?
 Het script exporteert het tabblad op basis van de `SheetId`. Zolang je het specifieke tabblad niet verwijdert, blijft de koppeling werken. Verander je de naam van het tabblad? Pas dan simpelweg de regel `getSheetByName("Dashboard")` in de code aan naar de nieuwe naam.
 
-**3. Waarom krijg ik een foutmelding over autorisatie bij de eerste uitvoering?**
+3. Waarom krijg ik een foutmelding over autorisatie bij de eerste uitvoering?
 Google beveiligt scripts streng. Omdat het script jouw persoonlijke Gmail gebruikt om namens jou een e-mail te sturen, moet je eenmalig op 'Geavanceerd' klikken en doorklikken naar 'Naam van je project (onveilig)' om de benodigde rechten toe te kennen. Dit is een standaard beveiligingsprocedure van Google voor zelfgeschreven scripts.

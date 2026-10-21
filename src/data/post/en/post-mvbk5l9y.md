@@ -25,9 +25,9 @@ Paying 50 dollars a month for a basic exchange rate extension was out of the que
 
 Before diving into the fix, let us diagnose why most DIY attempts at currency conversion break down under pressure:
 
-1. **Over-Reliance on Fragile Web Scraping (IMPORTXML):** Many analysts try to scrape live rates using `IMPORTXML` from finance sites. When the source website updates its CSS classes or blocks bot traffic, your entire executive dashboard shows `#N/A` errors right before a major presentation.
-2. **Static Manual Inputs:** Hardcoding exchange rates into cells works for today, but creates massive compounding discrepancies in historical financial modeling and multi-region revenue tracking.
-3. **Third-Party Add-on Dependency:** Relying on marketplace extensions introduces security vulnerabilities, unexpected subscription paywalls, and API rate limits that crash your sheets when multiple team members open the document simultaneously.
+1. Over-Reliance on Fragile Web Scraping (IMPORTXML): Many analysts try to scrape live rates using `IMPORTXML` from finance sites. When the source website updates its CSS classes or blocks bot traffic, your entire executive dashboard shows `#N/A` errors right before a major presentation.
+2. Static Manual Inputs: Hardcoding exchange rates into cells works for today, but creates massive compounding discrepancies in historical financial modeling and multi-region revenue tracking.
+3. Third-Party Add-on Dependency: Relying on marketplace extensions introduces security vulnerabilities, unexpected subscription paywalls, and API rate limits that crash your sheets when multiple team members open the document simultaneously.
 
 ---
 
@@ -74,18 +74,18 @@ Where `B2` contains the specific date of the transaction. Google Sheets will fet
 ### Expert Warning: Managing API Limits and Volatility
 
 While native Google Sheets functions are powerful, keep these operational guardrails in mind:
-- **Rate Limits:** If you have thousands of individual rows querying `GOOGLEFINANCE` simultaneously, Google Sheets may temporarily return `#N/A` due to rate-limiting. Always aggregate your data into summary tables first, and convert totals rather than querying every single line item individually.
-- **Weekend Pricing:** Remember that currency markets close on weekends. `GOOGLEFINANCE` will return the last available closing price from Friday until markets reopen on Sunday evening.
+- Rate Limits: If you have thousands of individual rows querying `GOOGLEFINANCE` simultaneously, Google Sheets may temporarily return `#N/A` due to rate-limiting. Always aggregate your data into summary tables first, and convert totals rather than querying every single line item individually.
+- Weekend Pricing: Remember that currency markets close on weekends. `GOOGLEFINANCE` will return the last available closing price from Friday until markets reopen on Sunday evening.
 
 ---
 
 ### Frequently Asked Questions (FAQ)
 
-**Q: Can I use this method to track cryptocurrencies like Bitcoin or Ethereum alongside fiat currencies?**
+Q: Can I use this method to track cryptocurrencies like Bitcoin or Ethereum alongside fiat currencies?
 A: Yes! `GOOGLEFINANCE` supports major cryptocurrencies. You can pull live crypto rates by formatting your query string like this: `=GOOGLEFINANCE("CURRENCY:BTCUSD")`.
 
-**Q: What happens to my dashboard formulas if Google Sheets experiences an outage or API delay?**
+Q: What happens to my dashboard formulas if Google Sheets experiences an outage or API delay?
 A: Because `GOOGLEFINANCE` relies on live server calls, temporary connectivity issues can occasionally show loading errors. To bulletproof your executive presentation, select your calculated currency columns, hit `Copy`, and use `Paste special > Paste values only` right before your meeting starts.
 
-**Q: Is there any risk of data privacy leaks when using native Google Finance formulas?**
+Q: Is there any risk of data privacy leaks when using native Google Finance formulas?
 A: None at all. Unlike third-party plugins that require broad OAuth permissions to read and write across your entire Google Drive, native formulas execute entirely within your secure spreadsheet environment without exposing your proprietary financial data to external developers.

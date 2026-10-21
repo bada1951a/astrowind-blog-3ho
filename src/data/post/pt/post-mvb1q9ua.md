@@ -19,9 +19,9 @@ Eram 18h45 de uma sexta-feira chuvosa em um escritório corporativo na região d
 
 Antes de aplicar a solução definitiva com Inteligência Artificial, vale entender por que o método convencional costuma deixar o profissional na mão sob pressão:
 
-1. **Padrões de Nomes Inconsistentes:** Alguns cadastros trazem "João da Silva Santos", outros "MARIA APARECIDA", e há registros com o sobrenome antes da vírgula. Fórmulas fixas de separação por espaço falham miseravelmente.
-2. **Erros Ocultos em E-mails:** Espaços invisíveis nas pontas, pontos duplicados e caracteres especiais geram falhas de entrega que só aparecem depois que o disparo em massa já foi feito.
-3. **Falta de Tempo para Regex:** Criar expressões regulares avançadas no Power Query exige um conhecimento de programação que a maioria dos gerentes e analistas não tem tempo de dominar durante o expediente corrido.
+1. Padrões de Nomes Inconsistentes: Alguns cadastros trazem "João da Silva Santos", outros "MARIA APARECIDA", e há registros com o sobrenome antes da vírgula. Fórmulas fixas de separação por espaço falham miseravelmente.
+2. Erros Ocultos em E-mails: Espaços invisíveis nas pontas, pontos duplicados e caracteres especiais geram falhas de entrega que só aparecem depois que o disparo em massa já foi feito.
+3. Falta de Tempo para Regex: Criar expressões regulares avançadas no Power Query exige um conhecimento de programação que a maioria dos gerentes e analistas não tem tempo de dominar durante o expediente corrido.
 
 ---
 
@@ -31,8 +31,8 @@ Para resolver esse problema de forma cirúrgica, vamos utilizar recursos de IA d
 
 ### Passo 1: Preparação e Importação via Power Query
 Abra sua planilha no Excel e garanta que os dados brutos estejam estruturados como uma Tabela (atalho `Ctrl + T`). 
-* Vá na guia **Dados > Obter Dados > Da Tabela/Intervalo**.
-* Isso abrirá o editor do **Power Query**, garantindo que suas alterações sejam rastreáveis e reversíveis.
+* Vá na guia Dados > Obter Dados > Da Tabela/Intervalo.
+* Isso abrirá o editor do Power Query, garantindo que suas alterações sejam rastreáveis e reversíveis.
 
 ### Passo 2: O Prompt Inteligente para Extração e Limpeza
 Em vez de quebrar a cabeça com fórmulas aninhadas, peça para a IA gerar a coluna condicional exata ou use o recurso de Coluna por Exemplo turbinado por IA. Se estiver usando um assistente de IA externo para gerar fórmulas personalizadas, utilize este modelo de prompt validado em ambiente corporativo brasileiro:
@@ -57,8 +57,8 @@ Para normalizar o e-mail corrompido, a IA geralmente sugere substituir os erros 
 <strong>Aviso de LGPD e Segurança de Dados:</strong> Nunca envie dados confidenciais de clientes, CPFs ou faturamento real diretamente para versões públicas de IAs de chat sem anonimizar os campos críticos antes. Prefira ferramentas corporativas homologadas pelo setor de TI da sua empresa.
 </div>
 
-* **Sempre faça backup:** Antes de rodar macros ou atualizações em massa no Power Query, salve uma cópia da planilha original na pasta de rede da equipe.
-* **Validação por amostragem:** Após o processamento da IA, filtre 20 linhas aleatórias (início, meio e fim da base) para checar se nomes compostos ou e-mails corporativos complexos não foram cortados incorretamente.
+* Sempre faça backup: Antes de rodar macros ou atualizações em massa no Power Query, salve uma cópia da planilha original na pasta de rede da equipe.
+* Validação por amostragem: Após o processamento da IA, filtre 20 linhas aleatórias (início, meio e fim da base) para checar se nomes compostos ou e-mails corporativos complexos não foram cortados incorretamente.
 
 ---
 
@@ -72,7 +72,7 @@ Sim. Você pode usar qualquer assistente de IA externo (como o ChatGPT ou Claude
 ![AI Productivity & Workflow Automation](https://picsum.photos/seed/office502/1000/550)
 
 ### 2. E se a minha base tiver mais de 50 mil linhas e travar o Excel?
-Nesses cenários, o ideal é processar os dados utilizando o **Power Query** (`Dados > Transformar Dados`) combinando etapas de substituição de valores e divisão de colunas por delimitador, o que consome muito menos memória RAM do que fórmulas arrastadas célula a célula.
+Nesses cenários, o ideal é processar os dados utilizando o Power Query (`Dados > Transformar Dados`) combinando etapas de substituição de valores e divisão de colunas por delimitador, o que consome muito menos memória RAM do que fórmulas arrastadas célula a célula.
 
 ### 3. Como lidar com nomes compostos como "Maria de Lourdes"?
 Fórmulas simples baseadas apenas no primeiro espaço vão retornar apenas "Maria". Se você precisa capturar nomes compostos específicos, o ideal é instruir a IA no prompt a tratar exceções de preposições comuns em português ("de", "da", "do").

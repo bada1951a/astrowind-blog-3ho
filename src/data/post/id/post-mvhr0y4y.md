@@ -23,9 +23,9 @@ Kalau Anda pernah berada di posisi terjepit seperti ini, buru-buru menyalin data
 
 Sebelum kita masuk ke solusi teknis, mari kita identifikasi tiga akar masalah utama yang sering membuat grafik finansial kantor hancur di saat-saat genting:
 
-1. **Format Data Mentah Tidak Konsisten:** Divisi berbeda sering mengirim data dengan format teks dan angka yang bercampur (misalnya ada simbol mata uang IDR yang diselipkan manual di setiap sel), sehingga rumus otomatis dan grafik gagal membaca rentang nilai.
-2. **Struktur Tabel Terlalu Kaku:** Pemodelan finansial yang baik butuh fleksibilitas skenario (misalnya simulasi skenario optimis vs pesimis). Jika tabel dibuat satu arah secara statis, grafik tidak akan bisa merespons perubahan asumsi variabel.
-3. **Keterbatasan Visualisasi Standar:** Mengandalkan menu sisipkan grafik bawaan tanpa penyesuaian sering kali menghasilkan grafik batang atau garis yang terlalu padat informasi, membuat para manajer pusing alih-alih paham.
+1. Format Data Mentah Tidak Konsisten: Divisi berbeda sering mengirim data dengan format teks dan angka yang bercampur (misalnya ada simbol mata uang IDR yang diselipkan manual di setiap sel), sehingga rumus otomatis dan grafik gagal membaca rentang nilai.
+2. Struktur Tabel Terlalu Kaku: Pemodelan finansial yang baik butuh fleksibilitas skenario (misalnya simulasi skenario optimis vs pesimis). Jika tabel dibuat satu arah secara statis, grafik tidak akan bisa merespons perubahan asumsi variabel.
+3. Keterbatasan Visualisasi Standar: Mengandalkan menu sisipkan grafik bawaan tanpa penyesuaian sering kali menghasilkan grafik batang atau garis yang terlalu padat informasi, membuat para manajer pusing alih-alih paham.
 
 ## Langkah-Langkah Membuat Grafik Finansial Interaktif dengan Bantuan AI
 
@@ -39,13 +39,13 @@ Pastikan data Anda tersusun dalam format kolom yang bersih.
 ### Langkah 2: Gunakan Fitur AI Suggestion di Google Sheets
 Manfaatkan panel AI internal Google Sheets untuk mendapatkan rekomendasi grafik paling relevan secara instan:
 1. Blok seluruh rentang data tabel finansial Anda (misalnya dari sel A1 sampai D13).
-2. Klik ikon **Explore** (Eksplorasi) di pojok kanan bawah layar Google Sheets, atau gunakan pintasan pencarian alat.
+2. Klik ikon Explore (Eksplorasi) di pojok kanan bawah layar Google Sheets, atau gunakan pintasan pencarian alat.
 3. Ketikkan perintah atau pertanyaan di kolom AI yang tersedia, seperti: *"Buat grafik tren laba bersih bulanan"* atau *"Tunjukkan korelasi antara pendapatan dan biaya"*.
 4. Google Sheets akan menampilkan saran visualisasi grafik terbaik secara otomatis. Pilih grafik yang paling mewakili skenario finansial Anda, lalu klik tombol sisipkan (*Insert*) untuk memasukkannya langsung ke lembar kerja.
 
 ### Langkah 3: Tambahkan Elemen Interaktif dengan Data Validation (Dropdown)
 Agar grafik Anda tidak sekadar statis tapi bisa diubah-ubah variabelnya sesuai kebutuhan rapat:
-1. Buat sel kontrol interaktif, misalnya di sel F2, buat menu dropdown untuk memilih skenario (Skenario A: Normal, Skenario B: Ekspansi). Caranya: klik kanan sel F2 > pilih **Data validation** > pilih jenis aturan **Dropdown (from a range)** atau masukkan item kustom.
+1. Buat sel kontrol interaktif, misalnya di sel F2, buat menu dropdown untuk memilih skenario (Skenario A: Normal, Skenario B: Ekspansi). Caranya: klik kanan sel F2 > pilih Data validation > pilih jenis aturan Dropdown (from a range) atau masukkan item kustom.
 2. Gunakan rumus logika sederhana seperti `IFS` atau `CHOOSE` pada tabel utama Anda agar data angka berubah secara dinamis mengikuti pilihan di sel F2.
 3. Hubungkan grafik Anda ke tabel dinamis tersebut. Kini, setiap kali direksi meminta perubahan asumsi, Anda cukup mengubah pilihan di menu dropdown, dan grafik finansial akan langsung memperbarui tampilannya secara interaktif!
 
@@ -55,11 +55,11 @@ Agar grafik Anda tidak sekadar statis tapi bisa diubah-ubah variabelnya sesuai k
 
 ## Tanya Jawab Populer (FAQ)
 
-**1. Apakah fitur AI Suggestion di Google Sheets bisa diakses secara gratis?**
+1. Apakah fitur AI Suggestion di Google Sheets bisa diakses secara gratis?
 Ya, fitur Explore dan saran grafik dasar berbasis AI sudah tersedia secara gratis di dalam ekosistem Google Sheets untuk akun pribadi maupun Workspace standar.
 
-**2. Bagaimana jika rumus saya tetap error saat dihubungkan ke grafik interaktif?**
+2. Bagaimana jika rumus saya tetap error saat dihubungkan ke grafik interaktif?
 Biasanya error terjadi karena sel kosong atau adanya teks "N/A" di tengah rentang data angka. Gunakan fungsi `IFNA()` atau `IFERROR()` pada rumus rekap Anda agar sel yang kosong bernilai nol (0) dan grafik tetap bisa dirender dengan mulus.
 
-**3. Bisakah grafik interaktif ini diekspor ke format presentasi seperti Google Slides atau PowerPoint?**
-Sangat bisa. Cukup klik ikon titik tiga di sudut kanan atas grafik Anda di Google Sheets, pilih **Publish chart** atau **Copy chart**, lalu tempelkan ke slide presentasi Anda. Pilih opsi "Link to spreadsheet" agar grafik otomatis terbarui jika data di Sheets berubah.
+3. Bisakah grafik interaktif ini diekspor ke format presentasi seperti Google Slides atau PowerPoint?
+Sangat bisa. Cukup klik ikon titik tiga di sudut kanan atas grafik Anda di Google Sheets, pilih Publish chart atau Copy chart, lalu tempelkan ke slide presentasi Anda. Pilih opsi "Link to spreadsheet" agar grafik otomatis terbarui jika data di Sheets berubah.

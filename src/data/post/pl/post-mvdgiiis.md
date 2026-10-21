@@ -21,9 +21,9 @@ Godzina 17:40 w biurze w samym sercu warszawskiego centrum biznesowego. Za dwadz
 
 Zanim przejdziemy do skutecznego rozwiązania, warto zrozumieć, dlaczego zwykłe kopiowanie i proste programy OCR często generują błędy:
 
-1. **Zła jakość skanów i dokumentów termicznych:** Faktury drukowane na papierze termicznym blakną, a zdjęcia robione smartfonem pod kątem mają zniekształconą perspektywę, której tradycyjny OCR nie potrafi poprawnie zinterpretować.
-2. **Niestandardowe układy tabel:** Każdy dostawca ma inny wzór faktury. Automatyczne wykrywanie kolumn gubi się, gdy opis towaru przechodzi do następnej linii, a cena jednostkowa ląduje w kolumnie z ilością.
-3. **Brak kontekstu walutowego i podatkowego:** Zwykłe programy do odczytu tekstu widzą ciąg cyfr, ale nie rozróżniają kwoty netto, stawki VAT (np. 23%) oraz kwoty brutto, co powoduje totalny chaos w formułach arkusza.
+1. Zła jakość skanów i dokumentów termicznych: Faktury drukowane na papierze termicznym blakną, a zdjęcia robione smartfonem pod kątem mają zniekształconą perspektywę, której tradycyjny OCR nie potrafi poprawnie zinterpretować.
+2. Niestandardowe układy tabel: Każdy dostawca ma inny wzór faktury. Automatyczne wykrywanie kolumn gubi się, gdy opis towaru przechodzi do następnej linii, a cena jednostkowa ląduje w kolumnie z ilością.
+3. Brak kontekstu walutowego i podatkowego: Zwykłe programy do odczytu tekstu widzą ciąg cyfr, ale nie rozróżniają kwoty netto, stawki VAT (np. 23%) oraz kwoty brutto, co powoduje totalny chaos w formułach arkusza.
 
 ---
 
@@ -43,9 +43,9 @@ Przeciągnij swój plik do darmowego narzędzia AI (np. ChatGPT z funkcją zał�
 
 ### Krok 3: Wklejenie i finalne dopracowanie w Excelu
 Gdy AI wygeneruje gotową tabelę:
-1. Zaznacz wygenerowaną tabelę na ekranie i wybierz opcję **Kopiuj**.
-2. Otwórz swój arkusz Excela, kliknij wybraną komórkę, przejdź do zakładki **Narzędzia główne > Wklej** lub użyj skrótu Ctrl + Alt + V, wybierając formatowanie tekstowe.
-3. Jeśli liczby mają kropki zamiast przecinków (częsty problem po eksporcie z AI), zaznacz kolumnę z kwotami, naciśnij `Ctrl + H` (Znajdź i zamień), wpisz kropkę w pole "Znajdź" oraz przecinek w pole "Zamień na", a następnie kliknij **Zamień wszystko**.
+1. Zaznacz wygenerowaną tabelę na ekranie i wybierz opcję Kopiuj.
+2. Otwórz swój arkusz Excela, kliknij wybraną komórkę, przejdź do zakładki Narzędzia główne > Wklej lub użyj skrótu Ctrl + Alt + V, wybierając formatowanie tekstowe.
+3. Jeśli liczby mają kropki zamiast przecinków (częsty problem po eksporcie z AI), zaznacz kolumnę z kwotami, naciśnij `Ctrl + H` (Znajdź i zamień), wpisz kropkę w pole "Znajdź" oraz przecinek w pole "Zamień na", a następnie kliknij Zamień wszystko.
 
 <div style="border-left: 4px solid #be123c; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Wskazówka eksperta:</strong> Aby uniknąć błędów w podsumowaniach, upewnij się, że kolumny z cenami mają w Excelu ustawiony format liczbowy lub walutowy, a nie tekstowy. Zwróć uwagę na zielone trójkąty w rogu komórek – jeśli się pojawią, kliknij je i wybierz "Konwertuj na liczbę".
@@ -62,7 +62,7 @@ Jeśli pracujesz na dokumentach zawierających poufne dane klientów lub tajemni
 Modele AI świetnie radzą sobie z językiem naturalnym, ale specyficzne kody magazynowe bywają trudne. Najlepszym sposobem jest dodanie do promptu słownika branżowego lub krótka korekta bezpośrednio po wklejeniu danych do Excela przy użyciu funkcji Filtra.
 
 ### Czy Excel ma wbudowane narzędzie do odczytu danych ze zdjęć?
-Tak! W nowszych wersjach programu Excel (dla systemu Windows i Mac w ramach subskrypcji) w zakładce **Dane** znajdziesz opcję **Z obrazu** (Data from Picture). Narzędzie to automatycznie konwertuje zdjęcia tabel na żywe arkusze bez potrzeby korzystania z zewnętrznych stron internetowych.
+Tak! W nowszych wersjach programu Excel (dla systemu Windows i Mac w ramach subskrypcji) w zakładce Dane znajdziesz opcję Z obrazu (Data from Picture). Narzędzie to automatycznie konwertuje zdjęcia tabel na żywe arkusze bez potrzeby korzystania z zewnętrznych stron internetowych.
 
 ---
 

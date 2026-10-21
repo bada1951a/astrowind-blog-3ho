@@ -19,16 +19,16 @@ Es ist kurz vor 17:00 Uhr an einem grauen Dienstag im Frankfurter Finanzdistrikt
 
 Bevor wir die Lösung anwenden, müssen wir verstehen, warum Standard-Workflows hier an ihre Grenzen stoßen:
 
-1. **Inkonsistente Namensstrukturen:** Manchmal ist die E-Mail aufgebaut als `vorname.nachname@firma.de`, ein anderes Mal nur als `v.nachname@firma.de` oder es sind reine Vorname-Nachname-Kombinationen ohne System in einer Zelle.
-2. **Versteckte Syntaxfehler:** Leerzeichen am Anfang oder Ende, doppelte Punkte und falsche Domain-Endungen (`.de.de` oder `gmial.com`) lassen sich mit einfachen SVERWEIS- oder Textformeln kaum automatisiert abfangen.
-3. **Mangelnde Skalierbarkeit:** Das manuelle Bearbeiten von tausenden Datensätzen führt unweigerlich zu menschlichen Fehlern, die bei wichtigen Berichten vor dem Vorstand fatal sein können.
+1. Inkonsistente Namensstrukturen: Manchmal ist die E-Mail aufgebaut als `vorname.nachname@firma.de`, ein anderes Mal nur als `v.nachname@firma.de` oder es sind reine Vorname-Nachname-Kombinationen ohne System in einer Zelle.
+2. Versteckte Syntaxfehler: Leerzeichen am Anfang oder Ende, doppelte Punkte und falsche Domain-Endungen (`.de.de` oder `gmial.com`) lassen sich mit einfachen SVERWEIS- oder Textformeln kaum automatisiert abfangen.
+3. Mangelnde Skalierbarkeit: Das manuelle Bearbeiten von tausenden Datensätzen führt unweigerlich zu menschlichen Fehlern, die bei wichtigen Berichten vor dem Vorstand fatal sein können.
 
 ---
 
 ## Schritt-für-Schritt-Anleitung: So lösen Sie das Problem mit KI und Excel
 
 ### Schritt 1: Datenexport vorbereiten und Duplikate entfernen
-Öffnen Sie Ihre Excel-Datei, markieren Sie den Datenbereich und navigieren Sie im Menüband auf **Daten > Duplikate entfernen**. Damit stellen wir sicher, dass wir keine redundanten E-Mail-Adressen verarbeiten.
+Öffnen Sie Ihre Excel-Datei, markieren Sie den Datenbereich und navigieren Sie im Menüband auf Daten > Duplikate entfernen. Damit stellen wir sicher, dass wir keine redundanten E-Mail-Adressen verarbeiten.
 
 ### Schritt 2: Den KI-Prompt für die Namensextraktion nutzen
 Anstatt komplexe Formel-Ungetüme zu schreiben, nutzen wir ein modernes KI-Tool oder ein integriertes Excel-KI-Add-In (wie Copilot oder ChatGPT für die Datenaufbereitung). 
@@ -38,7 +38,7 @@ Kopieren Sie Ihre unvollständige Namens- oder E-Mail-Spalte und übergeben Sie 
 > "Analysiere die folgende Liste von E-Mail-Adressen und Namen. Extrahiere den reinen Vornamen in eine separate Spalte. Korrigiere offensichtliche Tippfehler in den E-Mail-Domains (z.B. gmial zu gmail). Gib das Ergebnis in einem sauberen Tabellenformat (CSV oder Spaltenform) zurück:"
 
 ### Schritt 3: Daten via Power Query sauber einlesen
-Sobald die KI die bereinigten Daten ausgespuckt hat, fügen Sie diese über **Daten > Daten abrufen > Aus Text/CSV** in Ihr bestehendes Excel-Workbook ein. Nutzen Sie hierbei die Power Query-Oberfläche, um Datentypen zu definieren und sicherzustellen, dass Umlaute (ä, ö, ü) korrekt als UTF-8 interpretiert werden.
+Sobald die KI die bereinigten Daten ausgespuckt hat, fügen Sie diese über Daten > Daten abrufen > Aus Text/CSV in Ihr bestehendes Excel-Workbook ein. Nutzen Sie hierbei die Power Query-Oberfläche, um Datentypen zu definieren und sicherzustellen, dass Umlaute (ä, ö, ü) korrekt als UTF-8 interpretiert werden.
 
 <div style="border-left: 4px solid #2563eb; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Pro-Tipp für Profis:</strong> Speichern Sie diesen Transformationsschritt direkt in Power Query als Abfrage ab. Wenn nächste Woche neue Daten kommen, reicht ein Klick auf "Aktualisieren", und die gesamte Bereinigung läuft vollautomatisch im Hintergrund durch.
@@ -48,8 +48,8 @@ Sobald die KI die bereinigten Daten ausgespuckt hat, fügen Sie diese über **Da
 
 ## Wichtige Experten-Warnungen für den Büroalltag
 
-* **Datenschutz (DSGVO):** Laden Sie niemals sensible Kundendaten oder personenbezogene Daten (PII) in öffentliche, kostenlose KI-Tools hoch, ohne vorher die Compliance-Richtlinien Ihres Unternehmens (insbesondere im Finanz- oder Bankensektor) zu prüfen. Nutzen Sie Unternehmenskonten mit garantierter Datenisolierung.
-* **Backup anlegen:** Machen Sie immer eine unberührte Kopie der Originaldatei, bevor Sie Massenbereinigungen oder Makros darauf loslassen.
+* Datenschutz (DSGVO): Laden Sie niemals sensible Kundendaten oder personenbezogene Daten (PII) in öffentliche, kostenlose KI-Tools hoch, ohne vorher die Compliance-Richtlinien Ihres Unternehmens (insbesondere im Finanz- oder Bankensektor) zu prüfen. Nutzen Sie Unternehmenskonten mit garantierter Datenisolierung.
+* Backup anlegen: Machen Sie immer eine unberührte Kopie der Originaldatei, bevor Sie Massenbereinigungen oder Makros darauf loslassen.
 
 ---
 

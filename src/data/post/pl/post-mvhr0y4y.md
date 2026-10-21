@@ -21,9 +21,9 @@ Ten scenariusz to koszmar każdego analityka. Ręczne budowanie wykresów finans
 
 Zanim przejdziemy do naprawy, spójrzmy prawdzie w oczy. Istnieją trzy główne powody, przez które standardowe modele finansowe padają w najmniej oczekiwanym momencie:
 
-1. **Sztywne odwołania do komórek:** Używanie bezwzględnych adresów typu A1:Z100 zamiast elastycznych zakresów nazwalnych, które psują się przy każdej dodanej kolumnie.
-2. **Brak separacji danych surowych od warstwy prezentacji:** Mieszanie surowych danych księgowych z obliczeniami wykresów w jednym arkuszu roboczym.
-3. **Ręczne formatowanie wykresów:** Tracenie cennych minut na poprawianie osi czasowych, kolorów i etykiet zamiast automatycznego generowania czytelnych wizualizacji za pomocą promptów AI.
+1. Sztywne odwołania do komórek: Używanie bezwzględnych adresów typu A1:Z100 zamiast elastycznych zakresów nazwalnych, które psują się przy każdej dodanej kolumnie.
+2. Brak separacji danych surowych od warstwy prezentacji: Mieszanie surowych danych księgowych z obliczeniami wykresów w jednym arkuszu roboczym.
+3. Ręczne formatowanie wykresów: Tracenie cennych minut na poprawianie osi czasowych, kolorów i etykiet zamiast automatycznego generowania czytelnych wizualizacji za pomocą promptów AI.
 
 ---
 
@@ -34,7 +34,7 @@ Wykorzystamy kombinację wbudowanych funkcji Google Sheets oraz asystenta AI (np
 ### Krok 1: Oczyszczenie struktury i naprawa formuł za pomocą promptu AI
 Jeśli Twoje formuły wyrzucają błędy, nie szukaj literówki w każdej komórce z osobna. Zaznacz cały blok danych finansowych, skopiuj go i poproś asystenta AI o audyt kodu.
 
-* **Wklej ten prompt do okna czatu AI:**
+* Wklej ten prompt do okna czatu AI:
   "Przeanalizuj poniższy zestaw danych finansowych z Google Sheets. Wskaż, które formuły powodują błędy typu #ARG! lub #ADR!, i podaj mi gotowe, poprawione formuły w formacie zgodnym z polską wersją językową arkuszy (np. ŚREDNIA, JEŻELI)."
 
 Gdy otrzymasz poprawione formuły, wklej je do arkusza. Upewnij się, że używasz średników (;) jako separatorów argumentów, co jest standardem w polskiej lokalizacji Google Sheets.
@@ -43,16 +43,16 @@ Gdy otrzymasz poprawione formuły, wklej je do arkusza. Upewnij się, że używa
 Zamiast tworzyć dziesiątki osobnych wykresów dla różnych scenariuszy (optymistyczny, realistyczny, pesymistyczny), stwórz jeden wykres reagujący na zmienną.
 
 1. W wybranej komórce (np. B1) wpisz domyślną wartość wzrostu, np. "0.05" (5%).
-2. Kliknij w menu górnym: **Wstaw > Dropdown (Menu rozwijane)** lub **Wstaw > Suwak (Slider)**, aby zarząd mógł łatwo zmieniać założenia na żywo podczas prezentacji.
+2. Kliknij w menu górnym: Wstaw > Dropdown (Menu rozwijane) lub Wstaw > Suwak (Slider), aby zarząd mógł łatwo zmieniać założenia na żywo podczas prezentacji.
 3. W formułach obliczających przyszłe przychody odwołaj się bezpośrednio do tej komórki, na przykład: `=B2 * (1 + B1)`.
 
 ### Krok 3: Wygenerowanie inteligentnego wykresu finansowego
 Standardowe wykresy kolumnowe są nudne i mało czytelne dla zarządu. Użyjemy wykresów połączonych z filtrami danych.
 
 1. Zaznacz przefiltrowany zakres danych.
-2. Kliknij **Wstaw > Wykres**.
-3. W panelu bocznym edytora wykresów przejdź do zakładki **Dostosuj**.
-4. W sekcji **Wykres** zaznacz opcję **Wygładź** (dla wykresów liniowych pokazujących trend gotówki) oraz dodaj **Linie trendu** z uwzględnieniem wielomianu drugiego stopnia, co AI często sugeruje do prognoz płynnościowych.
+2. Kliknij Wstaw > Wykres.
+3. W panelu bocznym edytora wykresów przejdź do zakładki Dostosuj.
+4. W sekcji Wykres zaznacz opcję Wygładź (dla wykresów liniowych pokazujących trend gotówki) oraz dodaj Linie trendu z uwzględnieniem wielomianu drugiego stopnia, co AI często sugeruje do prognoz płynnościowych.
 
 ---
 
@@ -74,7 +74,7 @@ Warto włączyć w ustawieniach arkusza (Plik > Ustawienia arkusza spulchnionego
 ![How to Create Interactive Financial Modeling Charts in Google Sheets with AI Suggestions AI Automation Guide](https://picsum.photos/seed/work-mvhr38nx-9-b/1000/550.jpg)
 
 ### 2. Jak zabezpieczyć model przed przypadkowym nadpisaniem przez innych pracowników?
-Zaznacz komórki zawierające kluczowe formuły i zaostrzenia, kliknij prawym przyciskiem myszy, wybierz **Zabezpiecz zakres** i ustaw uprawnienia tak, aby tylko Ty lub wyznaczeni managerowie mogli je edytować. Pozostali użytkownicy będą mogli ruszać tylko suwakami scenariuszy.
+Zaznacz komórki zawierające kluczowe formuły i zaostrzenia, kliknij prawym przyciskiem myszy, wybierz Zabezpiecz zakres i ustaw uprawnienia tak, aby tylko Ty lub wyznaczeni managerowie mogli je edytować. Pozostali użytkownicy będą mogli ruszać tylko suwakami scenariuszy.
 
 ### 3. Czy te metody zadziałają w Microsoft Excel, czy tylko w Google Sheets?
 Większość zasad (używanie zakresów nazwnych, suwaków i promptowania AI) działa identycznie w Excelu online. Różnica polega głównie na nazewnictwie menu (np. zamiast "Wstaw > Suwak" w Excelu używamy formantów formularza lub funkcji Power Query).

@@ -25,9 +25,9 @@ Voici comment automatiser ce nettoyage redoutable et transformer un enfer de don
 
 Avant de passer à la solution magique, faisons face à la réalité. Si vous en êtes là, c'est que vous vous êtes heurté à ces trois murs invisibles :
 
-1. **Les variations de casse et d'espaces :** Pour un tableur, "Martin & Co" et "martin & co " sont deux entités totalement différentes. Le résultat, c'est que vos e-mails marketing risquent d'être envoyés deux fois au même client.
-2. **Les fautes de frappe et variations de saisie :** "Jean-François Dupont" d'un côté, "Jean Francois Dupont" de l'autre. Aucune formule standard de suppression de doublons ne détectera qu'il s'agit de la même personne physique.
-3. **Le piège des données partielles :** Une ligne contient le numéro de téléphone mais pas l'e-mail, tandis que la ligne du dessous a l'e-mail mais pas le téléphone. Si vous supprimez bêtement un doublon, vous perdez de l'information précieuse.
+1. Les variations de casse et d'espaces : Pour un tableur, "Martin & Co" et "martin & co " sont deux entités totalement différentes. Le résultat, c'est que vos e-mails marketing risquent d'être envoyés deux fois au même client.
+2. Les fautes de frappe et variations de saisie : "Jean-François Dupont" d'un côté, "Jean Francois Dupont" de l'autre. Aucune formule standard de suppression de doublons ne détectera qu'il s'agit de la même personne physique.
+3. Le piège des données partielles : Une ligne contient le numéro de téléphone mais pas l'e-mail, tandis que la ligne du dessous a l'e-mail mais pas le téléphone. Si vous supprimez bêtement un doublon, vous perdez de l'information précieuse.
 
 ---
 
@@ -61,18 +61,18 @@ Gemini va vous générer une formule sur-mesure ou un script Google Apps Script 
 
 Avant de balancer la base de données de vos clients grands comptes dans une IA, gardez en tête ces quelques règles d'or en entreprise :
 
-- **Anonymisation :** Si vous travaillez sur des données sensibles ou couvertes par le RGPD, remplacez les noms réels par des pseudonymes (Client_A, Client_B) avant de les soumettre à Gemini, ou utilisez la version d'entreprise de Workspace qui garantit la confidentialité de vos données promptées.
-- **Sauvegarde systématique :** Ne travaillez jamais sur l'exemplaire unique. Conservez toujours une version brute "archive" au cas où le script nettoyeur serait un peu trop zélé.
+- Anonymisation : Si vous travaillez sur des données sensibles ou couvertes par le RGPD, remplacez les noms réels par des pseudonymes (Client_A, Client_B) avant de les soumettre à Gemini, ou utilisez la version d'entreprise de Workspace qui garantit la confidentialité de vos données promptées.
+- Sauvegarde systématique : Ne travaillez jamais sur l'exemplaire unique. Conservez toujours une version brute "archive" au cas où le script nettoyeur serait un peu trop zélé.
 
 ---
 
 ### Foire aux questions (FAQ)
 
-**1. Est-ce que Gemini peut supprimer directement les lignes dans mon Google Sheets à ma place ?**
+1. Est-ce que Gemini peut supprimer directement les lignes dans mon Google Sheets à ma place ?
 Si vous utilisez Gemini directement intégré dans l'écosystème Google Workspace (via le panneau latéral payant), il peut interagir plus facilement, mais la méthode la plus robuste et gratuite reste de lui demander de rédiger un script Apps Script que vous exécutez en un clic dans les extensions.
 
-**2. Comment l'IA gère-t-elle les homonymes parfaits mais qui sont des personnes différentes ?**
+2. Comment l'IA gère-t-elle les homonymes parfaits mais qui sont des personnes différentes ?
 C'est pour cela qu'il ne faut jamais automatiser à l'aveugle. Demandez toujours à Gemini de lister les "doublons probables" dans une colonne de revue pour valider visuellement avant la suppression définitive.
 
-**3. Cette méthode fonctionne-t-elle avec des fichiers Excel traditionnels ?**
+3. Cette méthode fonctionne-t-elle avec des fichiers Excel traditionnels ?
 Le principe reste le même, mais la synergie est optimale avec Google Sheets grâce à la passerelle naturelle avec l'écosystème Google et les scripts JavaScript intégrés. Pour Excel, vous passerez par l'assistant Copilot ou l'import direct des données nettoyées par Gemini.

@@ -27,9 +27,9 @@ Di sinilah titik baliknya. Daripada terus menerus menebak letak kerusakan sel at
 
 Sebelum langsung ke solusi teknis, mari kita bedah tiga akar masalah utama yang sering membuat file Excel kantor berukuran raksasa menjadi sangat lambat:
 
-1. **Volatile Formulas yang Berlebihan:** Penggunaan fungsi seperti INDIRECT, OFFSET, TODAY, atau NOW secara berlebihan membuat Excel harus menghitung ulang seluruh lembar kerja setiap kali ada satu sel yang berubah.
-2. **Bloated Conditional Formatting:** Salinan aturan format bersyarat yang menumpuk dari proses *copy-paste* data lintas departemen bisa menciptakan ribuan *rule* tersembunyi yang membebani memori RAM.
-3. **Ghost Ranges & Corrupted Styles:** Rusaknya *metadata* file, sisa baris kosong yang dianggap terisi hingga baris 1.048.576, serta definisi *named ranges* yang merujuk ke error eksternal.
+1. Volatile Formulas yang Berlebihan: Penggunaan fungsi seperti INDIRECT, OFFSET, TODAY, atau NOW secara berlebihan membuat Excel harus menghitung ulang seluruh lembar kerja setiap kali ada satu sel yang berubah.
+2. Bloated Conditional Formatting: Salinan aturan format bersyarat yang menumpuk dari proses *copy-paste* data lintas departemen bisa menciptakan ribuan *rule* tersembunyi yang membebani memori RAM.
+3. Ghost Ranges & Corrupted Styles: Rusaknya *metadata* file, sisa baris kosong yang dianggap terisi hingga baris 1.048.576, serta definisi *named ranges* yang merujuk ke error eksternal.
 
 ---
 
@@ -62,18 +62,18 @@ Jalankan kembali skrip tersebut. Dalam beberapa detik, file baru yang bersih, ri
 <strong>Peringatan Keamanan Data Perusahaan:</strong> Jika file Excel Anda berisi data finansial sensitif, gaji karyawan, atau rahasia perusahaan SCBD, <strong>jangan pernah</strong> mengunggah file mentah tersebut secara langsung ke platform AI publik. Selalu gunakan skrip lokal di komputer Anda atau anonimisasi data (ubah angka dan nama menjadi dummy) sebelum meminta bantuan analisis kode.
 </div>
 
-- **Selalu Buat Salinan (Backup):** Jangan pernah menjalankan skrip modifikasi langsung pada file master yang asli. Selalu duplikat file terlebih dahulu ke folder terpisah.
-- **Gunakan Format XLSB Jika Perlu:** Jika ukuran data Anda memang masif (di atas 50 MB), pertimbangkan untuk mengubah format file dari XLSX ke XLSB (Excel Binary Workbook) setelah dibersihkan agar performa pemuatan jauh lebih cepat.
+- Selalu Buat Salinan (Backup): Jangan pernah menjalankan skrip modifikasi langsung pada file master yang asli. Selalu duplikat file terlebih dahulu ke folder terpisah.
+- Gunakan Format XLSB Jika Perlu: Jika ukuran data Anda memang masif (di atas 50 MB), pertimbangkan untuk mengubah format file dari XLSX ke XLSB (Excel Binary Workbook) setelah dibersihkan agar performa pemuatan jauh lebih cepat.
 
 ---
 
 ### Tanya Jawab Umum (FAQ)
 
-**1. Apakah saya harus menginstal software tambahan di laptop kantor untuk menjalankan Python?**
+1. Apakah saya harus menginstal software tambahan di laptop kantor untuk menjalankan Python?
 Ya, Anda memerlukan Python dan pustaka pendukung seperti `pandas` dan `openpyxl`. Jika kebijakan IT kantor melarang instalasi software baru, Anda bisa menggunakan Google Colab di browser tanpa perlu menginstal apa pun di komputer lokal.
 
-**2. Apakah rumus-rumus penting di Excel saya akan hilang jika dibersihkan dengan skrip Python?**
+2. Apakah rumus-rumus penting di Excel saya akan hilang jika dibersihkan dengan skrip Python?
 Tergantung instruksi pada prompt Anda. Jika Anda hanya meminta skrip untuk membersihkan baris kosong dan *formatting* yang rusak, rumus kalkulasi utama Anda akan tetap aman. Pastikan membaca baris kode Python sebelum mengeksekusinya.
 
-**3. Mengapa tidak menggunakan fitur "Inspect Workbook" bawaan Excel saja?**
+3. Mengapa tidak menggunakan fitur "Inspect Workbook" bawaan Excel saja?
 Fitur bawaan Excel sangat bagus untuk masalah ringan. Namun, jika file sudah berada di tahap "Not Responding" dan tidak bisa dibuka sama sekali, Excel akan selalu *crash* sebelum Anda sempat mengakses menu inspeksi tersebut. Pendekatan luar sistem via Python adalah jalan pintas satu-satunya.

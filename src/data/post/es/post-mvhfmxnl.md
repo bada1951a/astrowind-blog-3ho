@@ -23,9 +23,9 @@ Si te suena familiar esta pesadilla de última hora, sabes perfectamente que el 
 
 Antes de aplicar la solución, hay que entender por qué el método artesanal destruye la productividad en la oficina:
 
-1. **Estacionalidad oculta y datos dispersos:** Las hojas de cálculo tradicionales calculan medias aritméticas simples (PROMEDIO), ignorando picos de consumo estacionales típicos del mercado europeo, como las campañas de rebajas o el parón de agosto.
-2. **Dependencia de macros obsoletas:** Archivos con código VBA escrito hace diez años que fallan al actualizar la versión de Office, generando bloqueos intermitentes justo cuando exportas el reporte mensual.
-3. **Cuellos de botella manuales:** Copiar y pegar datos de ventas mes a mes para pasarlos a herramientas externas rompe los rangos dinámicos y genera referencias nulas en tablas dinámicas clave.
+1. Estacionalidad oculta y datos dispersos: Las hojas de cálculo tradicionales calculan medias aritméticas simples (PROMEDIO), ignorando picos de consumo estacionales típicos del mercado europeo, como las campañas de rebajas o el parón de agosto.
+2. Dependencia de macros obsoletas: Archivos con código VBA escrito hace diez años que fallan al actualizar la versión de Office, generando bloqueos intermitentes justo cuando exportas el reporte mensual.
+3. Cuellos de botella manuales: Copiar y pegar datos de ventas mes a mes para pasarlos a herramientas externas rompe los rangos dinámicos y genera referencias nulas en tablas dinámicas clave.
 
 ## Guía paso a paso: Predice el inventario con IA directamente en tu hoja de cálculo
 
@@ -34,8 +34,8 @@ Para solucionar este caos de forma definitiva, vamos a estructurar el proceso en
 ### Paso 1: Preparación y limpieza exprés con Datos > Power Query
 No le pidas a una IA que analice un archivo desordenado. Primero normaliza la estructura del inventario.
 * Selecciona tu rango de datos de ventas de los últimos doce meses.
-* Ve a la pestaña **Datos** en la cinta de opciones superior y haz clic en **Obtener datos > Desde una tabla o rango**.
-* En el editor de Power Query, asegúrate de que las columnas de fechas tengan formato de fecha y las de cantidad tengan formato numérico. Elimina filas vacías con un par de clics y pulsa **Cerrar y cargar**.
+* Ve a la pestaña Datos en la cinta de opciones superior y haz clic en Obtener datos > Desde una tabla o rango.
+* En el editor de Power Query, asegúrate de que las columnas de fechas tengan formato de fecha y las de cantidad tengan formato numérico. Elimina filas vacías con un par de clics y pulsa Cerrar y cargar.
 
 ### Paso 2: Generación del prompt y análisis predictivo
 Aquí es donde entra la automatización inteligente. En lugar de aplicar fórmulas manuales de previsión lineal (que no contemplan variables complejas), utiliza un asistente de IA o un complemento compatible con tu versión de Excel para procesar los datos limpios.
@@ -49,9 +49,9 @@ Actua como un analista experto en cadena de suministro. Analiza los siguientes d
 ### Paso 3: Inserción de la función de pronóstico nativa (Forecast Sheet)
 Si trabajas con versiones recientes de Microsoft 365, puedes combinar el análisis con la herramienta nativa de predicción sin salir de la interfaz:
 * Selecciona tus columnas de fecha y ventas históricas en la hoja limpia.
-* Ve a **Datos > Hoja de pronóstico (Forecast Sheet)**.
+* Ve a Datos > Hoja de pronóstico (Forecast Sheet).
 * Configura el límite de finalización del pronóstico para el final del próximo trimestre y ajusta los intervalos de confianza según tu tolerancia al riesgo de rotura de stock.
-* Haz clic en **Crear**. Excel generará automáticamente una nueva hoja con las fórmulas de pronóstico integradas (PRONÓSTICO.ETS) y gráficos de banda que se actualizan solos al modificar los datos de entrada.
+* Haz clic en Crear. Excel generará automáticamente una nueva hoja con las fórmulas de pronóstico integradas (PRONÓSTICO.ETS) y gráficos de banda que se actualizan solos al modificar los datos de entrada.
 
 <div style="border-left: 4px solid #4338ca; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Consejo de seguridad:</strong> Antes de aplicar cualquier cambio masivo en hojas compartidas de la empresa, guarda una copia de respaldo con la fecha del día en una carpeta local aislada.

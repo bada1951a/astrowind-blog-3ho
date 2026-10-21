@@ -25,9 +25,9 @@ Quay cuồng trong đống hỗn độn đó, tôi tự nhủ phải tìm ra cá
 
 Trước khi nhảy vào cách làm, hãy điểm mặt lại những cái bẫy mà dân văn phòng hay mắc phải khiến việc làm báo cáo tài chính trở thành ác mộng:
 
-1. **Phụ thuộc vào tra cứu thủ công:** Mỗi lần làm báo cáo là lại mở tab mới, gõ "tỷ giá USD VND hôm nay", copy dán vào file Excel/Sheets. Chỉ cần sơ suất copy nhầm giá mua vào thành giá bán ra là lệch cả triệu đồng.
-2. **Dùng Add-on trả phí không rõ nguồn gốc:** Cài mấy tiện ích mở rộng trên mạng đòi quyền truy cập toàn bộ tài khoản Google Drive, vừa tốn tiền subscription hàng tháng vừa vi phạm bảo mật dữ liệu công ty.
-3. **Cấu trúc file thiếu linh hoạt:** Hard-code (cố định) con số tỷ giá vào công thức tính toán. Hôm nay tỷ giá khác, ngày mai khác là phải vào sửa từng công thức trong hàng trăm ô tính.
+1. Phụ thuộc vào tra cứu thủ công: Mỗi lần làm báo cáo là lại mở tab mới, gõ "tỷ giá USD VND hôm nay", copy dán vào file Excel/Sheets. Chỉ cần sơ suất copy nhầm giá mua vào thành giá bán ra là lệch cả triệu đồng.
+2. Dùng Add-on trả phí không rõ nguồn gốc: Cài mấy tiện ích mở rộng trên mạng đòi quyền truy cập toàn bộ tài khoản Google Drive, vừa tốn tiền subscription hàng tháng vừa vi phạm bảo mật dữ liệu công ty.
+3. Cấu trúc file thiếu linh hoạt: Hard-code (cố định) con số tỷ giá vào công thức tính toán. Hôm nay tỷ giá khác, ngày mai khác là phải vào sửa từng công thức trong hàng trăm ô tính.
 
 ---
 
@@ -74,11 +74,11 @@ Cách làm này giúp bạn chỉ cần update tỷ giá ở một nơi duy nh�
 
 ### Giải đáp thắc mắc thường gặp (FAQ)
 
-**1. Dữ liệu tỷ giá từ hàm GOOGLEFINANCE có được cập nhật theo thời gian thực không?**
+1. Dữ liệu tỷ giá từ hàm GOOGLEFINANCE có được cập nhật theo thời gian thực không?
 Dữ liệu của GOOGLEFINANCE được lấy từ các sàn giao dịch tài chính lớn và có thể có độ trễ từ 10 đến 20 phút so với thời gian thực. Tuy nhiên, mức độ chính xác này hoàn toàn đáp ứng tốt cho các báo cáo nội chính, tài chính tuần và tháng của doanh nghiệp.
 
-**2. Tại sao công thức của tôi báo lỗi #NAME? mặc dù đã nhập đúng cú pháp?**
+2. Tại sao công thức của tôi báo lỗi #NAME? mặc dù đã nhập đúng cú pháp?
 Lỗi này thường xảy ra do ngôn ngữ của file Google Sheets đang được cài đặt là tiếng Việt nhưng cú pháp hàm yêu cầu dấu phân cách là dấu phẩy (,) thay vì chấm phẩy (;), hoặc ngược lại. Hãy kiểm tra lại định dạng ngôn ngữ trong phần *Tệp > Cài đặt bảng tính* (File > Spreadsheet settings) hoặc đổi dấu phẩy trong hàm thành dấu chấm phẩy tùy theo máy.
 
-**3. Tôi có thể dùng cách này để quy đổi ngược từ VND sang ngoại tệ không?**
+3. Tôi có thể dùng cách này để quy đổi ngược từ VND sang ngoại tệ không?
 Hoàn toàn được. Nếu bạn có số tiền VND và muốn quy đổi ra USD, bạn chỉ cần lấy 1 chia cho tỷ giá USDVND vừa lấy được, hoặc đơn giản là đảo chiều cặp tiền tệ trong hàm thành `=GOOGLEFINANCE("CURRENCY:VNDUSD")` tùy thuộc vào bài toán báo cáo của bạn.

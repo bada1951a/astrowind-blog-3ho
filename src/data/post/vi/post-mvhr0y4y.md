@@ -21,9 +21,9 @@ Chính lúc áp lực đè nặng trước giờ tan ca, tôi nhận ra mình c�
 
 Trước khi áp dụng AI để tăng tốc, chúng ta cần nhìn nhận rõ tại sao những bảng tính thông thường lại biến thành "thảm họa" trực quan:
 
-1. **Cấu trúc bảng dữ liệu sai chuẩn phân tích (Unstructured Data):** Dữ liệu để ngang dòng thay vì dọc cột, hoặc trộn lẫn các trường dữ liệu tiền tệ và tỷ lệ phần trăm khiến AI lẫn Google Sheets không thể tự nhận diện trục X và trục Y.
-2. **Thiếu bộ lọc tương tác (Slicers & Dropdowns):** Biểu đồ tĩnh (static chart) hiển thị tất cả mọi thứ cùng một lúc, khiến người xem khó theo dõi riêng biệt số liệu của từng khu vực hoặc từng dòng sản phẩm.
-3. **Lạm dụng định dạng rườm rà:** Quá nhiều màu sắc và hiệu ứng thừa thãi làm che khuất các chỉ số tài chính cốt lõi như Biên lợi nhuận gộp (Gross Margin) hay Dòng tiền thuần (Net Cash Flow).
+1. Cấu trúc bảng dữ liệu sai chuẩn phân tích (Unstructured Data): Dữ liệu để ngang dòng thay vì dọc cột, hoặc trộn lẫn các trường dữ liệu tiền tệ và tỷ lệ phần trăm khiến AI lẫn Google Sheets không thể tự nhận diện trục X và trục Y.
+2. Thiếu bộ lọc tương tác (Slicers & Dropdowns): Biểu đồ tĩnh (static chart) hiển thị tất cả mọi thứ cùng một lúc, khiến người xem khó theo dõi riêng biệt số liệu của từng khu vực hoặc từng dòng sản phẩm.
+3. Lạm dụng định dạng rườm rà: Quá nhiều màu sắc và hiệu ứng thừa thãi làm che khuất các chỉ số tài chính cốt lõi như Biên lợi nhuận gộp (Gross Margin) hay Dòng tiền thuần (Net Cash Flow).
 
 ---
 
@@ -33,25 +33,25 @@ Trước khi áp dụng AI để tăng tốc, chúng ta cần nhìn nhận rõ t
 
 Đừng vội bấm vào mục Chèn biểu đồ (Insert Chart). Hãy đảm bảo bảng dữ liệu của bạn có hàng tiêu đề rõ ràng ở dòng đầu tiên. Sau đó, sử dụng câu lệnh (prompt) tối ưu trên các công cụ AI tích hợp hoặc Google Workspace Labs để yêu cầu AI đề xuất loại biểu đồ phù hợp nhất với mô hình tài chính.
 
-* **Prompt mẫu gửi cho AI:** 
+* Prompt mẫu gửi cho AI: 
 > "Tôi có bảng dữ liệu Google Sheets gồm Doanh thu, Giá vốn, Chi phí vận hành theo từng tháng từ tháng 1 đến tháng 12. Hãy gợi ý cho tôi cấu trúc bảng chuẩn và xác định loại biểu đồ tương tác nào tốt nhất để thể hiện sự tăng trưởng lợi nhuận ròng."
 
-* **Thao tác trên Google Sheets:** Sau khi AI đưa ra gợi ý về cấu trúc, hãy sắp xếp lại các cột theo dạng chuỗi thời gian dọc.
+* Thao tác trên Google Sheets: Sau khi AI đưa ra gợi ý về cấu trúc, hãy sắp xếp lại các cột theo dạng chuỗi thời gian dọc.
 
 ### Bước 2: Thêm Slicer (Bộ lọc tương tác) vào Google Sheets
 
 Một biểu đồ tài chính chuyên nghiệp bắt buộc phải có tính năng tương tác để người xem có thể chủ động lọc dữ liệu.
 
 1. Bôi đen toàn bộ vùng dữ liệu bảng tính của bạn.
-2. Trên thanh menu, chọn **Dữ liệu (Data) > Thêm bộ lọc (Add a slicer)**.
+2. Trên thanh menu, chọn Dữ liệu (Data) > Thêm bộ lọc (Add a slicer).
 3. Ở bảng điều khiển bên phải xuất hiện, chọn cột cần lọc tương tác (ví dụ: Cột "Chi nhánh" hoặc "Quý").
 4. Bây giờ, khi bạn hoặc sếp bấm vào bộ lọc trên màn hình, toàn bộ biểu đồ sẽ tự động cập nhật số liệu theo đúng phạm vi được chọn.
 
 ### Bước 3: Chèn và tinh chỉnh biểu đồ kết hợp AI gợi ý trực quan
 
-1. Chọn vùng dữ liệu chính, bấm **Chèn (Insert) > Biểu đồ (Chart)**.
-2. Ở bảng thiết lập biểu đồ (Chart editor), mục *Loại biểu đồ (Chart type)*, hãy chọn dạng **Biểu đồ kết hợp (Combo chart)** nếu bạn muốn hiển thị đồng thời Doanh thu (dạng cột) và Tỷ suất lợi nhuận (dạng đường).
-3. Sử dụng tính năng **Khám phá (Explore)** ở góc dưới bên phải Google Sheets (biểu tượng ngôi sao nhỏ) hoặc hỏi AI: *"Làm thế nào để thêm đường xu hướng (Trendline) cho biểu đồ doanh thu này?"*. Google Sheets sẽ tự động tính toán và vẽ đường dự báo tài chính cực kỳ chính xác.
+1. Chọn vùng dữ liệu chính, bấm Chèn (Insert) > Biểu đồ (Chart).
+2. Ở bảng thiết lập biểu đồ (Chart editor), mục *Loại biểu đồ (Chart type)*, hãy chọn dạng Biểu đồ kết hợp (Combo chart) nếu bạn muốn hiển thị đồng thời Doanh thu (dạng cột) và Tỷ suất lợi nhuận (dạng đường).
+3. Sử dụng tính năng Khám phá (Explore) ở góc dưới bên phải Google Sheets (biểu tượng ngôi sao nhỏ) hoặc hỏi AI: *"Làm thế nào để thêm đường xu hướng (Trendline) cho biểu đồ doanh thu này?"*. Google Sheets sẽ tự động tính toán và vẽ đường dự báo tài chính cực kỳ chính xác.
 
 <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Mẹo chuyên gia:</strong> Hãy đặt tên các dải ô (Named Ranges) trong Google Sheets trước khi yêu cầu AI viết công thức phức tạp như QUERY hoặc FILTER. Điều này giúp hạn chế tối đa lỗi #REF! khi bạn di chuyển hoặc thêm dòng dữ liệu mới.
@@ -61,8 +61,8 @@ Một biểu đồ tài chính chuyên nghiệp bắt buộc phải có tính n�
 
 ## Những lưu ý quan trọng về bảo mật và vận hành
 
-* **Bảo mật dữ liệu tài chính:** Khi sử dụng các công cụ AI bên thứ ba để tối ưu hóa công thức hoặc phân tích biểu đồ, tuyệt đối không tải lên các tệp chứa thông tin nhạy cảm định danh khách hàng hoặc lương nhân sự cốt lõi. Hãy ẩn (hide) hoặc thay thế các cột dữ liệu nhạy cảm bằng số giả lập trước khi nhờ AI hỗ trợ.
-* **Kiểm tra công thức gốc:** AI có thể đưa ra gợi ý trực quan rất đẹp, nhưng luôn dùng hàm kiểm tra toán học cơ bản (như SUM hoặc AVERAGE) để đối chiếu lại kết quả hiển thị trên biểu đồ nhằm tránh sai sót số liệu trước giờ lên sóng.
+* Bảo mật dữ liệu tài chính: Khi sử dụng các công cụ AI bên thứ ba để tối ưu hóa công thức hoặc phân tích biểu đồ, tuyệt đối không tải lên các tệp chứa thông tin nhạy cảm định danh khách hàng hoặc lương nhân sự cốt lõi. Hãy ẩn (hide) hoặc thay thế các cột dữ liệu nhạy cảm bằng số giả lập trước khi nhờ AI hỗ trợ.
+* Kiểm tra công thức gốc: AI có thể đưa ra gợi ý trực quan rất đẹp, nhưng luôn dùng hàm kiểm tra toán học cơ bản (như SUM hoặc AVERAGE) để đối chiếu lại kết quả hiển thị trên biểu đồ nhằm tránh sai sót số liệu trước giờ lên sóng.
 
 ---
 

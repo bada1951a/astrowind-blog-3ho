@@ -21,9 +21,9 @@ Eran las 8:45 de la mañana en nuestra oficina del Paseo de la Castellana en Mad
 
 Tras aquel susto matutino, me senté a analizar qué había fallado en mi flujo de trabajo para evitar que volviera a ocurrir. Identifiqué tres causas raíz muy claras que arruinan cualquier modelado financiero bajo presión:
 
-1. **Estructuras de datos rígidas:** Diseñar celdas con referencias absolutas y relativas mal enlazadas que se rompen en cuanto añades una nueva columna de gastos imprevistos.
-2. **Falta de visualización dinámica:** Depender de gráficos circulares o de columnas tradicionales que no permiten filtrar escenarios o cambiar variables mediante controles deslizantes o menús desplegables.
-3. **Resistencia a usar IA como asistente de fórmulas:** Perder valiosas horas buscando en foros de ayuda la sintaxis exacta de funciones financieras complejas en lugar de delegar la generación inicial del código y las sugerencias visuales en la inteligencia artificial integrada.
+1. Estructuras de datos rígidas: Diseñar celdas con referencias absolutas y relativas mal enlazadas que se rompen en cuanto añades una nueva columna de gastos imprevistos.
+2. Falta de visualización dinámica: Depender de gráficos circulares o de columnas tradicionales que no permiten filtrar escenarios o cambiar variables mediante controles deslizantes o menús desplegables.
+3. Resistencia a usar IA como asistente de fórmulas: Perder valiosas horas buscando en foros de ayuda la sintaxis exacta de funciones financieras complejas en lugar de delegar la generación inicial del código y las sugerencias visuales en la inteligencia artificial integrada.
 
 ## Guia paso a paso: Modelos financieros interactivos con IA en Google Sheets
 
@@ -43,14 +43,14 @@ Copia la fórmula sugerida, pégala en tu hoja y arrastra hacia abajo. Te ahorra
 
 ### Paso 3: Crear controles interactivos (Menús desplegables y Casillas de verificación)
 Para que el modelo sea interactivo ante el comité de dirección:
-1. Ve a **Datos > Validación de datos** en el menú superior.
+1. Ve a Datos > Validación de datos en el menú superior.
 2. Añade un criterio de lista desplegable con los escenarios: "Optimista", "Conservador", "Pesimista".
 3. Utiliza una función condicional simple (como `SI(B1="Optimista"; D5*1.2; D5*0.9)`) para que los gráficos recalculen los valores automáticamente al cambiar la opción del menú.
 
 ### Paso 4: Insertar gráficos interactivos y sugerencias automáticas
-1. Selecciona tu rango de datos limpios y haz clic en **Insertar > Gráfico**.
-2. En el panel lateral derecho del gráfico, ve a la pestaña **Personalizar** para ajustar los colores de tu marca y hacerlos legibles.
-3. Utiliza la función **Explorar** (el icono de IA situado en la esquina inferior derecha de Google Sheets) o haz clic en las sugerencias automáticas de gráficos que la IA te propone basándose en las tendencias de tus datos financieros.
+1. Selecciona tu rango de datos limpios y haz clic en Insertar > Gráfico.
+2. En el panel lateral derecho del gráfico, ve a la pestaña Personalizar para ajustar los colores de tu marca y hacerlos legibles.
+3. Utiliza la función Explorar (el icono de IA situado en la esquina inferior derecha de Google Sheets) o haz clic en las sugerencias automáticas de gráficos que la IA te propone basándose en las tendencias de tus datos financieros.
 
 <div style="border-left: 4px solid #b45309; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Consejo de seguridad:</strong> Cuando utilices herramientas de IA en la nube corporativa para analizar datos financieros sensibles, asegúrate de anonimizar los nombres de clientes o importes exactos si las políticas internas de cumplimiento de tu empresa lo exigen.
@@ -58,11 +58,11 @@ Para que el modelo sea interactivo ante el comité de dirección:
 
 ## Preguntas Frecuentes (FAQ)
 
-**¿Qué hago si la IA me sugiere una fórmula que Google Sheets no reconoce?**
-Asegúrate de cambiar la configuración regional de tu hoja de cálculo (**Archivo > Configuración > Configuración regional**). Muchas veces la IA redacta en formato anglosajón usando comas (,) para separar argumentos, mientras que tu Google Sheets en España puede requerir punto y coma (;).
+¿Qué hago si la IA me sugiere una fórmula que Google Sheets no reconoce?
+Asegúrate de cambiar la configuración regional de tu hoja de cálculo (Archivo > Configuración > Configuración regional). Muchas veces la IA redacta en formato anglosajón usando comas (,) para separar argumentos, mientras que tu Google Sheets en España puede requerir punto y coma (;).
 
-**¿Puedo conectar estos gráficos interactivos a una presentación de Google Slides?**
-Sí. Una vez que tu gráfico en Google Sheets sea interactivo y responda a los menús desplegables, ve a Google Slides, haz clic en **Insertar > Gráfico > Desde Hojas de cálculo**, selecciona tu archivo y marca la opción "Vincular a la hoja de cálculo". Así, cualquier cambio que hagas en directo frente a los directores se actualizará en la presentación.
+¿Puedo conectar estos gráficos interactivos a una presentación de Google Slides?
+Sí. Una vez que tu gráfico en Google Sheets sea interactivo y responda a los menús desplegables, ve a Google Slides, haz clic en Insertar > Gráfico > Desde Hojas de cálculo, selecciona tu archivo y marca la opción "Vincular a la hoja de cálculo". Así, cualquier cambio que hagas en directo frente a los directores se actualizará en la presentación.
 
-**¿Cuánto tiempo se tarda en automatizar un modelo desde cero?**
+¿Cuánto tiempo se tarda en automatizar un modelo desde cero?
 Siguiendo este método de 4 pasos, un profesional con soltura puede reestructurar y dejar operativo un modelo financiero interactivo en 15-20 minutos, evitando horas de corrección manual de errores de fórmulas.

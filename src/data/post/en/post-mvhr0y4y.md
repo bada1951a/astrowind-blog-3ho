@@ -27,9 +27,9 @@ Here is the exact battle-tested playbook I used to survive that afternoon, desig
 
 Before jumping into the fix, let us diagnose why traditional financial modeling in spreadsheets usually crumbles right before a deadline:
 
-1. **Rigid Data Structures:** Raw financial data exported from ERP or billing systems comes in messy, wide formats. Standard charts break when columns span multiple quarters without a clean, consolidated pivot foundation.
-2. **Lack of Interactivity:** Standard Google Sheets charts are static images. When executives ask "What if we filter out enterprise tier accounts?", static charts require rebuilding the entire view on the fly.
-3. **Overcomplicated Manual Styling:** Trying to make a spreadsheet look like a polished financial presentation often results in messy conditional formatting rules, mismatched fonts, and broken formula references.
+1. Rigid Data Structures: Raw financial data exported from ERP or billing systems comes in messy, wide formats. Standard charts break when columns span multiple quarters without a clean, consolidated pivot foundation.
+2. Lack of Interactivity: Standard Google Sheets charts are static images. When executives ask "What if we filter out enterprise tier accounts?", static charts require rebuilding the entire view on the fly.
+3. Overcomplicated Manual Styling: Trying to make a spreadsheet look like a polished financial presentation often results in messy conditional formatting rules, mismatched fonts, and broken formula references.
 
 ---
 
@@ -51,13 +51,13 @@ Instead of writing complex nested IF or INDEX/MATCH statements manually, use the
 
 #### Step 3: Generate AI Chart Suggestions
 Google Sheets has built-in AI capabilities in the Explore panel that analyze trends and suggest relevant visualizations instantly.
-* Click the **Explore** icon in the bottom right corner of Google Sheets (or press `Alt + Shift + X` on Windows, `Option + Shift + X` on Mac).
+* Click the Explore icon in the bottom right corner of Google Sheets (or press `Alt + Shift + X` on Windows, `Option + Shift + X` on Mac).
 * Scroll down past the default insights to view AI-recommended charts tailored to your financial metrics.
-* Click **Insert chart** on the suggested combo chart or waterfall chart that best highlights your financial trends.
+* Click Insert chart on the suggested combo chart or waterfall chart that best highlights your financial trends.
 
 #### Step 4: Add Interactive Controls (Slicers and Dropdowns)
 To make your financial model truly interactive for the executive sync, add data slicers so stakeholders can filter data live during the meeting.
-* Click on your newly inserted chart, then go to **Data > Add a slicer**.
+* Click on your newly inserted chart, then go to Data > Add a slicer.
 * Choose your control column (e.g., "Region" or "Department").
 * Position the slicer neatly at the top of your dashboard. Now, whenever an executive asks about a specific region, you can filter the entire chart instantly with a single click.
 

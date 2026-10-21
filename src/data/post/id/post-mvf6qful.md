@@ -23,9 +23,9 @@ Jam sudah menunjukkan pukul 21.30 WIB di salah satu menara perkantoran kawasan b
 
 Sebelum menemukan jalan keluar yang elegan, saya sempat membuang waktu satu jam penuh mencoba berbagai cara manual yang berujung buntu. Berikut adalah tiga akar masalah utama yang sering bikin kita stres di kantor:
 
-1. **Variasi Karakter Tersembunyi (Invisible Characters):** Data yang di-copy paste dari sistem CRM sering membawa spasi ekstra di awal atau akhir kata (`trailing/leading spaces`), membuat fungsi pencocokan standar menganggapnya sebagai data yang berbeda.
-2. **Format Penulisan Tidak Konsisten:** Ada yang menulis "Jakarta Selatan", ada yang "Jaksel", atau penulisan nama perusahaan dengan singkatan PT yang berbeda titik dan spasinya.
-3. **Keterbatasan Rumus Dasar:** Mengandalkan menu `Data > Data cleanup > Remove duplicates` bawaan Google Sheets tidak cukup pintar untuk mengenali kesamaan makna, sehingga data penting yang mirip sering terhapus atau malah lolos seleksi.
+1. Variasi Karakter Tersembunyi (Invisible Characters): Data yang di-copy paste dari sistem CRM sering membawa spasi ekstra di awal atau akhir kata (`trailing/leading spaces`), membuat fungsi pencocokan standar menganggapnya sebagai data yang berbeda.
+2. Format Penulisan Tidak Konsisten: Ada yang menulis "Jakarta Selatan", ada yang "Jaksel", atau penulisan nama perusahaan dengan singkatan PT yang berbeda titik dan spasinya.
+3. Keterbatasan Rumus Dasar: Mengandalkan menu `Data > Data cleanup > Remove duplicates` bawaan Google Sheets tidak cukup pintar untuk mengenali kesamaan makna, sehingga data penting yang mirip sering terhapus atau malah lolos seleksi.
 
 ### Langkah-Langkah Solusi Kilat Menggunakan Gemini AI
 
@@ -37,12 +37,12 @@ Buka Gemini, lalu masukkan prompt berikut untuk meminta kode pembersihan data:<b
 <em>"Tolong buatkan fungsi Google Apps Script untuk Google Sheets yang otomatis mendeteksi dan menghapus baris duplikat berdasarkan kolom Nama Pelanggan dan Email. Script harus membersihkan spasi berlebih (TRIM), menyamakan huruf kecil (LOWER) sebelum pengecekan duplikat, dan menyisakan data terakhir yang dimasukkan."</em>
 </div>
 
-2. **Pasang Kode ke Google Sheets:**
-   - Di file Google Sheets Anda, klik menu **Ekstensi > Apps Script**.
+2. Pasang Kode ke Google Sheets:
+   - Di file Google Sheets Anda, klik menu Ekstensi > Apps Script.
    - Hapus semua kode default di editor, lalu *paste* kode yang diberikan oleh Gemini.
    - Simpan (*Save*) proyek tersebut dengan nama `PembersihDuplikat`.
 
-3. **Eksekusi dan Verifikasi:**
+3. Eksekusi dan Verifikasi:
    - Kembali ke lembar kerja Google Sheets Anda, refresh halaman. Menu kustom baru akan muncul di deretan menu atas.
    - Klik menu tersebut, jalankan fungsi pembersihan, berikan izin akses (*authorize*) sekali saja, dan saksikan riboron baris data berantakan dirapikan serta dibersihkan dari duplikat dalam waktu kurang dari 5 detik.
 
@@ -57,11 +57,11 @@ Sebelum memasukkan data mentah ke AI publik, pastikan Anda telah menghapus atau 
 
 ### Tanya Jawab Populer (FAQ)
 
-**Q: Apakah cara ini aman untuk file Google Sheets dengan ukuran ribuan baris?**
+Q: Apakah cara ini aman untuk file Google Sheets dengan ukuran ribuan baris?
 A: Sangat aman. Google Apps Script berjalan di server cloud Google, sehingga tidak akan membuat laptop lemot atau aplikasi *crash* seperti saat menggunakan makro di komputer lokal.
 
-**Q: Bagaimana jika format nama pelanggan menggunakan bahasa asing atau karakter khusus?**
+Q: Bagaimana jika format nama pelanggan menggunakan bahasa asing atau karakter khusus?
 A: Gemini sangat handal mengenali berbagai variasi karakter unicode. Anda bisa menambahkan instruksi khusus di dalam prompt untuk mengabaikan tanda baca tertentu jika diperlukan.
 
-**Q: Apakah saya harus berlangganan versi berbayar Gemini untuk melakukan trik ini?**
+Q: Apakah saya harus berlangganan versi berbayar Gemini untuk melakukan trik ini?
 A: Tidak perlu. Versi gratis Gemini sudah lebih dari cukup untuk menghasilkan kode Apps Script yang akurat dan memandu proses pembersihan data harian Anda di kantor.

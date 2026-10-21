@@ -23,9 +23,9 @@ Ese fue mi punto de quiebre. Decidí que nunca más volvería a perder un vierne
 
 Antes de aplicar la solución, analicemos por qué caemos en este bucle de estrés cada fin de mes:
 
-1. **Dependencia de rutas y nombres fijos:** Si tus fórmulas dependen de que el archivo se llame "Ventas_Definitivo_Final_v2.xlsx", en cuanto alguien guarde el archivo con otro nombre, todo se rompe.
-2. **Estructuras de datos inconsistentes:** El equipo comercial de la zona norte usa un formato de fecha (DD/MM/AAAA) y el equipo de levante usa otro (MM/DD/AAAA), lo que descoloca cualquier suma global.
-3. **Procesos manuales propensos al error humano:** Hacer un pegado masivo de 5,000 filas a medianoche es la receta perfecta para arrastrar errores de un mes a otro sin darte cuenta.
+1. Dependencia de rutas y nombres fijos: Si tus fórmulas dependen de que el archivo se llame "Ventas_Definitivo_Final_v2.xlsx", en cuanto alguien guarde el archivo con otro nombre, todo se rompe.
+2. Estructuras de datos inconsistentes: El equipo comercial de la zona norte usa un formato de fecha (DD/MM/AAAA) y el equipo de levante usa otro (MM/DD/AAAA), lo que descoloca cualquier suma global.
+3. Procesos manuales propensos al error humano: Hacer un pegado masivo de 5,000 filas a medianoche es la receta perfecta para arrastrar errores de un mes a otro sin darte cuenta.
 
 ---
 
@@ -37,24 +37,24 @@ Power Query viene integrado de serie en Excel (a partir de la versión 2016 y en
 Crea una carpeta en tu ordenador o servidor compartido (por ejemplo: `C:\ReportesMensuales\Ventas2026`). Coloca allí exclusivamente los archivos de Excel de cada delegación o mes que quieras consolidar. Asegúrate de que todos compartan una estructura tabular similar (columnas de Fecha, Producto, Cantidad, Precio).
 
 ### Paso 2: Conecta Excel a la carpeta mágica
-Abre un libro de Excel nuevo que será tu **Reporte Maestro**. 
-1. Ve a la pestaña superior **Datos**.
-2. Haz clic en **Obtener datos** > **De un archivo** > **De una carpeta**.
-3. Selecciona la carpeta `Ventas2026` que creaste en el paso anterior y pulsa **Abrir**.
+Abre un libro de Excel nuevo que será tu Reporte Maestro. 
+1. Ve a la pestaña superior Datos.
+2. Haz clic en Obtener datos > De un archivo > De una carpeta.
+3. Selecciona la carpeta `Ventas2026` que creaste en el paso anterior y pulsa Abrir.
 
 ### Paso 3: Combina y Transforma los datos
-Se abrirá una ventana de vista previa. No le des directamente a combinar; haz clic en **Transformar datos** para abrir el Editor de Power Query. Aquí es donde ocurre la magia:
+Se abrirá una ventana de vista previa. No le des directamente a combinar; haz clic en Transformar datos para abrir el Editor de Power Query. Aquí es donde ocurre la magia:
 * Verás una columna llamada `Content` con los archivos. Haz clic en el botón de combinar archivos (los dos iconos de flechas hacia abajo en la cabecera de la columna).
-* Power Query te pedirá que elijas una muestra (selecciona la Hoja1 o la tabla principal). Pulsa **Aceptar**.
+* Power Query te pedirá que elijas una muestra (selecciona la Hoja1 o la tabla principal). Pulsa Aceptar.
 * Automáticamente se creará un paso aplicado que une todo el contenido de la carpeta en una sola tabla gigante.
 
 ### Paso 4: Limpieza exprés (Adiós duplicados y errores)
-* **Promover encabezados:** Si la primera fila de tus archivos son los títulos, ve a **Inicio** > **Usar la primera fila como encabezado**.
-* **Filtrar nulos:** Haz clic en la flecha del filtro de la columna de producto y desmarca los valores vacíos o nulos (`null`).
-* **Tipo de datos:** Asegúrate de que la columna de *Fecha* tenga icono de calendario, *Cantidad* sea número entero y *Precio* sea decimal. (Haz clic sobre el icono del tipo de dato junto al nombre de la columna para cambiarlo si es necesario).
+* Promover encabezados: Si la primera fila de tus archivos son los títulos, ve a Inicio > Usar la primera fila como encabezado.
+* Filtrar nulos: Haz clic en la flecha del filtro de la columna de producto y desmarca los valores vacíos o nulos (`null`).
+* Tipo de datos: Asegúrate de que la columna de *Fecha* tenga icono de calendario, *Cantidad* sea número entero y *Precio* sea decimal. (Haz clic sobre el icono del tipo de dato junto al nombre de la columna para cambiarlo si es necesario).
 
 ### Paso 5: Carga el resultado final
-1. En la esquina superior izquierda del Editor de Power Query, haz clic en **Cerrar y cargar**.
+1. En la esquina superior izquierda del Editor de Power Query, haz clic en Cerrar y cargar.
 2. ¡Listo! Se generará una nueva pestaña en tu libro de Excel con la tabla consolidada de todos tus archivos.
 
 <div style="border-left: 4px solid #be123c; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -71,11 +71,11 @@ Cuidado con las rutas locales absolutas (`C:\Users\TuNombre\Desktop\...`) si com
 
 ## Preguntas Frecuentes (FAQ)
 
-**1. ¿Qué pasa si un archivo nuevo tiene una columna extra que los demás no tienen?**
+1. ¿Qué pasa si un archivo nuevo tiene una columna extra que los demás no tienen?
 Power Query es lo suficientemente inteligente como para integrarla. Creará una columna nueva en la tabla consolidada y pondrá valores vacíos (`null`) en las filas de los meses anteriores que no la tenían, sin romper ninguna fórmula.
 
-**2. ¿Funciona si los archivos de Excel tienen contraseñas o están protegidos?**
+2. ¿Funciona si los archivos de Excel tienen contraseñas o están protegidos?
 Por motivos de seguridad, Power Query no puede extraer datos de archivos protegidos con contraseña de apertura de forma automática. Los archivos en la carpeta de origen deben ser accesibles libremente por el sistema.
 
-**3. ¿Puedo usar Power Query para consolidar archivos CSV en lugar de Excel?**
+3. ¿Puedo usar Power Query para consolidar archivos CSV en lugar de Excel?
 ¡Por supuesto! El proceso es prácticamente idéntico. En lugar de seleccionar "De una carpeta" y filtrar archivos Excel, puedes usar la opción de combinar archivos CSV desde una carpeta y el editor aplicará la misma lógica de transformación.

@@ -23,9 +23,9 @@ Il problema non è solo il tempo che manca, ma la natura stessa di quei fogli: c
 
 Prima di trovare il metodo definitivo che mi ha salvato la riunione, ho sbattuto la testa contro tre problemi classici che mandano in tilt qualsiasi sistema tradizionale:
 
-1. **La formattazione tabellare complessa:** Le fatture non seguono uno standard rigido. Descrizioni lunghe su più righe, codici articolo spezzati e prezzi allineati male fanno impazzire i vecchi software di riconoscimento ottico dei caratteri.
-2. **Qualità delle scansioni scadenti:** Foto fatte con lo smartphone in fretta o vecchi fax digitalizzati producono un rumore visivo che confonde le lettere con i numeri (per esempio, scambiare la lettera 'O' con lo zero '0' o la 'I' con l'uno '1').
-3. **Mancanza di contesto semantico:** I normali convertitori PDF-to-Excel estraggono il testo come mucchi di parole sparse. Non capiscono qual è la "Partita IVA", qual è il "Totale imponibile" e quale la "Aliquota IVA".
+1. La formattazione tabellare complessa: Le fatture non seguono uno standard rigido. Descrizioni lunghe su più righe, codici articolo spezzati e prezzi allineati male fanno impazzire i vecchi software di riconoscimento ottico dei caratteri.
+2. Qualità delle scansioni scadenti: Foto fatte con lo smartphone in fretta o vecchi fax digitalizzati producono un rumore visivo che confonde le lettere con i numeri (per esempio, scambiare la lettera 'O' con lo zero '0' o la 'I' con l'uno '1').
+3. Mancanza di contesto semantico: I normali convertitori PDF-to-Excel estraggono il testo come mucchi di parole sparse. Non capiscono qual è la "Partita IVA", qual è il "Totale imponibile" e quale la "Aliquota IVA".
 
 ## Il metodo in 3 passi per trasformare la carta in Excel pulito
 

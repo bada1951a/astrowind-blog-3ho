@@ -27,9 +27,9 @@ Within six minutes, I diagnosed the silent killers inside the workbook, stripped
 
 Before jumping into the fix, let us diagnose why large Excel models suddenly turn into sluggish nightmares. Usually, it is not just raw data volume; it is architectural inefficiency.
 
-1. **Volatile Formula Overload:** Functions like TODAY(), NOW(), OFFSET(), and INDIRECT recalculate every single time *any* cell in the workbook changes. If you have thousands of volatile formulas referencing each other, Excel enters a continuous, heavy recalculation loop.
-2. **Invisible Bloat and Ghost Ranges:** Formatting cells across entire rows or columns (e.g., coloring the entire column A through XFD) corrupts Excel's "Used Range" memory. Your actual data might only be 500 rows, but Excel thinks you are managing 1,048,576 rows.
-3. **Redundant Cross-Sheet Lookups:** Heavy, unstructured VLOOKUP or XLOOKUP formulas scanning entire unindexed sheets on every single row create exponential computational drag.
+1. Volatile Formula Overload: Functions like TODAY(), NOW(), OFFSET(), and INDIRECT recalculate every single time *any* cell in the workbook changes. If you have thousands of volatile formulas referencing each other, Excel enters a continuous, heavy recalculation loop.
+2. Invisible Bloat and Ghost Ranges: Formatting cells across entire rows or columns (e.g., coloring the entire column A through XFD) corrupts Excel's "Used Range" memory. Your actual data might only be 500 rows, but Excel thinks you are managing 1,048,576 rows.
+3. Redundant Cross-Sheet Lookups: Heavy, unstructured VLOOKUP or XLOOKUP formulas scanning entire unindexed sheets on every single row create exponential computational drag.
 
 ---
 
@@ -61,18 +61,18 @@ Once ChatGPT runs the code, it will output a clear diagnostic breakdown. It will
 
 | Metric | Traditional Manual Audit | ChatGPT Python Code Analysis |
 | :--- | :--- | :--- |
-| **Time Investment** | 2 to 4 hours of tedious clicking | Under 10 minutes end-to-end |
-| **Error Rate** | High (easy to miss hidden formulas) | Near zero (algorithmic precision) |
-| **Used Range Cleanup** | Manual row/column deletion | Automated script execution |
-| **Stress Level** | Overwhelming during emergencies | Calm and methodical |
+| Time Investment | 2 to 4 hours of tedious clicking | Under 10 minutes end-to-end |
+| Error Rate | High (easy to miss hidden formulas) | Near zero (algorithmic precision) |
+| Used Range Cleanup | Manual row/column deletion | Automated script execution |
+| Stress Level | Overwhelming during emergencies | Calm and methodical |
 
 ---
 
 ### Expert Safety Precautions
 
-- **Data Privacy & Compliance:** Never upload raw, unmasked financial records or proprietary company data to public AI tools unless your firm maintains an enterprise-grade, zero-data-retention agreement (such as ChatGPT Team or Enterprise).
-- **Always Keep a Backup:** Before running any automated cleaning script or bulk formula conversion, make a dated local copy of your original workbook in a secure archive folder.
-- **Manual Verification:** Once ChatGPT returns your optimized file, open it in Excel, press `F9` to force a full recalculation, and verify that key summary totals match your original baseline.
+- Data Privacy & Compliance: Never upload raw, unmasked financial records or proprietary company data to public AI tools unless your firm maintains an enterprise-grade, zero-data-retention agreement (such as ChatGPT Team or Enterprise).
+- Always Keep a Backup: Before running any automated cleaning script or bulk formula conversion, make a dated local copy of your original workbook in a secure archive folder.
+- Manual Verification: Once ChatGPT returns your optimized file, open it in Excel, press `F9` to force a full recalculation, and verify that key summary totals match your original baseline.
 
 ---
 
@@ -89,4 +89,4 @@ If your internal IT policy restricts file uploads, you can still use ChatGPT loc
 It can if you are not careful. Use Python to identify formulas that only need to update monthly or quarterly, and selectively paste them as values. Keep dynamic formulas active only where real-time sensitivity analysis is strictly necessary.
 
 #### 3. How do I stop Excel from expanding my Used Range automatically?
-Ghost ranges usually happen when users apply background colors, borders, or conditional formatting to entire rows or columns. To fix this manually, select all unused rows below your actual data, right-click, select **Delete**, and then save and close the workbook to reset the XML memory footprint.
+Ghost ranges usually happen when users apply background colors, borders, or conditional formatting to entire rows or columns. To fix this manually, select all unused rows below your actual data, right-click, select Delete, and then save and close the workbook to reset the XML memory footprint.

@@ -21,9 +21,9 @@ Zamiast panicznie szukać karty kredytowej, żeby wykupić drogi abonament, post
 
 Zanim przejdziemy do naprawy, warto zrozumieć, dlaczego standardowe podejścia zawodzą w najmniej odpowiednim momencie. Oto trzy główne przyczyny:
 
-1. **Zależność od zewnętrznych dostawców API:** Płatne dodatki z marketplace Google Workspace często korzystają z niestabilnych serwerów pośredniczących, które padają pod wpływem dużego ruchu lub nagłych zmian polityki dostarczeœć danych finansowych.
-2. **Sztywne formuły bez mechanizmu buforowania:** Używanie zapytań pobierających dane bezpośrednio w każdej komórce (np. setki razy `=GOOGLEFINANCE`) powoduje przekroczenie limitów Google i blokadę całego pliku na kilka godzin.
-3. **Brak lokalnego awaryjnego planu B:** Brak statycznej tabeli referencyjnej sprawia, że w przypadku braku połączenia z internetem cały arkusz staje się pusty i bezużyteczny.
+1. Zależność od zewnętrznych dostawców API: Płatne dodatki z marketplace Google Workspace często korzystają z niestabilnych serwerów pośredniczących, które padają pod wpływem dużego ruchu lub nagłych zmian polityki dostarczeœć danych finansowych.
+2. Sztywne formuły bez mechanizmu buforowania: Używanie zapytań pobierających dane bezpośrednio w każdej komórce (np. setki razy `=GOOGLEFINANCE`) powoduje przekroczenie limitów Google i blokadę całego pliku na kilka godzin.
+3. Brak lokalnego awaryjnego planu B: Brak statycznej tabeli referencyjnej sprawia, że w przypadku braku połączenia z internetem cały arkusz staje się pusty i bezużyteczny.
 
 ## Instrukcja krok po kroku: Budujemy darmowy i stabilny pulpit walutowy
 
@@ -32,13 +32,13 @@ Cała magia polega na sprytnym połączeniu funkcji `GOOGLEFINANCE` z centralną
 ### Krok 1: Przygotowanie tabeli referencyjnej kursów
 W nowym arkuszu (lub dedykowanej zakładce "Ustawienia") stwórz prostą tabelę kursów głównych, które obsługujesz w firmie (np. USD, EUR, GBP).
 
-* W komórce **A1** wpisz nagłówek: `Waluta`
-* W komórce **B1** wpisz nagłówek: `Aktualny Kurs`
-* W komórce **A2** wpisz: `USD`
-* W komórce **A3** wpisz: `EUR`
-* W komórce **A4** wpisz: `GBP`
+* W komórce A1 wpisz nagłówek: `Waluta`
+* W komórce B1 wpisz nagłówek: `Aktualny Kurs`
+* W komórce A2 wpisz: `USD`
+* W komórce A3 wpisz: `EUR`
+* W komórce A4 wpisz: `GBP`
 
-Teraz w komórce **B2** wklej następującą formułę, która automatycznie pobiera dzisiejszy kurs z gier finansowych Google:
+Teraz w komórce B2 wklej następującą formułę, która automatycznie pobiera dzisiejszy kurs z gier finansowych Google:
 
 ```text
 =GOOGLEFINANCE("CURRENCY:" & A2 & "PLN")
@@ -49,7 +49,7 @@ Przeciągnij formułę w dół dla pozostałych walut (EUR, GBP). W ten sposób 
 ### Krok 2: Dynamiczne przypisanie w głównym raporcie kosztowym
 Zamiast wpisywać formułę pobierającą kurs w każdej pozycji wydatków, odwołaj się bezpośrednio do naszej centralnej tabeli referencyjnej za pomocą funkcji `WYSZUKAJ.PIONOWO` (ang. `VLOOKUP`) lub prostego wskaźnika komórki.
 
-Załóżmy, że w kolumnie **C** masz kwotę w walucie obcej, a w kolumnie **D** kod waluty (np. USD). W kolumnie **E**, gdzie chcesz uzyskać przeliczenie na PLN, wpisz formułę:
+Załóżmy, że w kolumnie C masz kwotę w walucie obcej, a w kolumnie D kod waluty (np. USD). W kolumnie E, gdzie chcesz uzyskać przeliczenie na PLN, wpisz formułę:
 
 ```text
 =C2 * SZUKAJ.TEJ.WARTOŚCI(D2; Ustawienia!A2:B10; 2; FAŁSZ)
@@ -75,9 +75,9 @@ W komórce kursu w tabeli referencyjnej zmień formułę na:
 
 Zbudowanie własnego pulpitu bez płatnych wtyczek to nie tylko oszczędność budżetu firmowego, ale przede wszystkim pełna kontrola nad bezpieczeństwem danych. 
 
-* **Prywatność danych:** Zewnętrzne wtyczki często wymagają szerokich uprawnień do odczytu całego Twojego Dysku Google. Korzystając ze wbudowanych funkcji, dane pozostają w bezpiecznym ekosystemie korporacyjnym.
-* **Wersjonowanie arkusza:** Zanim wdrożysz nowe formuły w pliku produkcyjnym, wykonaj kopię zapasową (`Plik > Utwórz kopię`), aby w razie literówki w formule nie stracić historycznych danych raportowych.
-* **Testowanie w warunkach bojowych:** Sprawdzaj działanie arkusza rano, przed oficjalnym otwarciem rynków walutowych, kiedy zapytania bywają czyszczone lub odświeżane przez algorytmy Google.
+* Prywatność danych: Zewnętrzne wtyczki często wymagają szerokich uprawnień do odczytu całego Twojego Dysku Google. Korzystając ze wbudowanych funkcji, dane pozostają w bezpiecznym ekosystemie korporacyjnym.
+* Wersjonowanie arkusza: Zanim wdrożysz nowe formuły w pliku produkcyjnym, wykonaj kopię zapasową (`Plik > Utwórz kopię`), aby w razie literówki w formule nie stracić historycznych danych raportowych.
+* Testowanie w warunkach bojowych: Sprawdzaj działanie arkusza rano, przed oficjalnym otwarciem rynków walutowych, kiedy zapytania bywają czyszczone lub odświeżane przez algorytmy Google.
 
 ---
 

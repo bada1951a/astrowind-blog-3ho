@@ -25,9 +25,9 @@ Se anche tu ti sei trovato almeno una volta a fissare un file Excel infinito la 
 
 Prima di passare alla soluzione automatizzata, analizziamo perché il vecchio modo di gestire l'inventario in ufficio ci fa perdere così tanto tempo:
 
-1. **La trappola della media mobile semplice:** Usare la media degli ultimi tre mesi ignora completamente i picchi stagionali, i trend di mercato emergenti e le variazioni dovute ai giorni festivi.
-2. **Eccesso di dati non strutturati:** Spesso i dati di vendita arrivano da esportazioni grezze dell'ERP aziendale, pieni di formati data sballati, codici prodotto doppi e zeri nascosti che falsano i calcoli.
-3. **Formule fragili e rigide:** Basta una riga cancellata per errore o un intervallo di celle mal definito per rompere interi mesi di analisi predittiva, costringendoci a ricominciare da capo sotto pressione.
+1. La trappola della media mobile semplice: Usare la media degli ultimi tre mesi ignora completamente i picchi stagionali, i trend di mercato emergenti e le variazioni dovute ai giorni festivi.
+2. Eccesso di dati non strutturati: Spesso i dati di vendita arrivano da esportazioni grezze dell'ERP aziendale, pieni di formati data sballati, codici prodotto doppi e zeri nascosti che falsano i calcoli.
+3. Formule fragili e rigide: Basta una riga cancellata per errore o un intervallo di celle mal definito per rompere interi mesi di analisi predittiva, costringendoci a ricominciare da capo sotto pressione.
 
 ## La Soluzione: Usare l'AI per Prevedere le Scorte in 3 Step
 
@@ -35,9 +35,9 @@ Ecco il flusso di lavoro rapido e testato sul campo per ribaltare la situazione,
 
 ### Step 1: Preparazione e Pulizia dei Dati con Power Query
 Prima di dare in pasto i dati all'AI, dobbiamo assicurarci che la tabella sia pulita. 
-- Apri Excel e vai su **Dati > Ottieni dati > Da file > Da cartella di lavoro**.
+- Apri Excel e vai su Dati > Ottieni dati > Da file > Da cartella di lavoro.
 - Seleziona il tuo file con lo storico delle vendite degli ultimi 24 mesi.
-- Usa **Dati > Power Query** per rimuovere le righe vuote, normalizzare i codici SKU e formattare la colonna della data in formato standard (AAAA-MM-GG). Questo evita che l'intelligenza artificiale interpreti male i dati temporali.
+- Usa Dati > Power Query per rimuovere le righe vuote, normalizzare i codici SKU e formattare la colonna della data in formato standard (AAAA-MM-GG). Questo evita che l'intelligenza artificiale interpreti male i dati temporali.
 
 ### Step 2: Generazione del Prompt Predittivo
 Invece di scrivere formule statistiche complesse come previsione.lineare o regressioni che nessuno in ufficio saprebbe spiegare al capo, usiamo un assistente AI (come Copilot integrato in Office o un modello avanzato tramite componente aggiuntivo).
@@ -49,8 +49,8 @@ Copia e incolla questo prompt strutturato direttamente nella chat dell'AI colleg
 ### Step 3: Validazione e Formattazione Visiva
 Una volta che l'AI ha sputato fuori i dati previsionali nelle celle adiacenti:
 - Seleziona la nuova colonna delle previsioni.
-- Vai su **Home > Formattazione condizionale > Scale di colori** per evidenziare subito con sfumature dal verde al rosso i prodotti che richiederanno un riordino urgente.
-- Crea un grafico a linee rapido (**Inserisci > Grafico consigliato**) per mostrare visivamente al cliente o al management il confronto tra il venduto storico e la previsione del prossimo trimestre.
+- Vai su Home > Formattazione condizionale > Scale di colori per evidenziare subito con sfumature dal verde al rosso i prodotti che richiederanno un riordino urgente.
+- Crea un grafico a linee rapido (Inserisci > Grafico consigliato) per mostrare visivamente al cliente o al management il confronto tra il venduto storico e la previsione del prossimo trimestre.
 
 <div style="border-left: 4px solid #64748b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Consiglio dell'Esperto sulla Sicurezza dei Dati</strong><br>

@@ -25,9 +25,11 @@ Heureusement, inutile de passer la soirée au bureau. Voici la méthode exacte q
 
 Avant de foncer tête baissée, comprenons pourquoi ce type de tâche s'éternise habituellement :
 
-1. **Le piège du PDF image (non textuel) :** Un scan de facture n'est qu'une photo. Si vous tentez un simple copier-coller dans Excel, vous récupérez un bloc de texte illisible, sans colonnes, collé en vrac dans la cellule A1.
-2. **Les outils OCR basiques aveugles :** Les logiciels de reconnaissance de caractères traditionnels s'emmêlent les pinceaux dès qu'il s'agit de tableaux complexes avec des lignes de TVA croisées, des remises en pied de page ou des polices de caractères fantaisistes.
-3. **L'absence de structure tabulaire :** Même quand un outil extrait le texte, il ignore la logique des tableaux Excel. Les libellés d'articles se retrouvent décalés par rapport aux montants hors taxes, ruinant toute tentative de formule de sommation ultérieure.
+1. Le piège du PDF image (non textuel) : Un scan de facture n'est qu'une photo. Si vous tentez un simple copier-coller dans Excel, vous récupérez un bloc de texte illisible, sans colonnes, collé en vrac dans la cellule
+
+A1.
+2. Les outils OCR basiques aveugles : Les logiciels de reconnaissance de caractères traditionnels s'emmêlent les pinceaux dès qu'il s'agit de tableaux complexes avec des lignes de TVA croisées, des remises en pied de page ou des polices de caractères fantaisistes.
+3. L'absence de structure tabulaire : Même quand un outil extrait le texte, il ignore la logique des tableaux Excel. Les libellés d'articles se retrouvent décalés par rapport aux montants hors taxes, ruinant toute tentative de formule de sommation ultérieure.
 
 ---
 
@@ -49,10 +51,10 @@ Copiez-collez ce prompt exact dans l'interface de l'IA :
 
 #### Étape 3 : Injection propre dans Excel sans erreur de format
 Une fois que l'IA vous renvoie le tableau en format Markdown (avec les barres verticales et tirets) :
-1. Sélectionnez le tableau généré directement dans la fenêtre du chat et faites **Copier** (Ctrl + C ou Cmd + C).
+1. Sélectionnez le tableau généré directement dans la fenêtre du chat et faites Copier (Ctrl + C ou Cmd + C).
 2. Ouvrez votre feuille de calcul Excel vierge.
-3. Cliquez sur la cellule de destination (par exemple A1), faites un clic droit et choisissez **Collage spécial** ou utilisez simplement le raccourci **Coller** (Ctrl + V).
-4. Pour nettoyer les éventuels formats de texte indésirables sur les montants, utilisez la fonction rapide de conversion : sélectionnez votre colonne de prix, allez dans l'onglet **Données** > **Convertir**, ou utilisez une formule simple dans une colonne voisine comme `=CNUM(TRIM(A2))`.
+3. Cliquez sur la cellule de destination (par exemple A1), faites un clic droit et choisissez Collage spécial ou utilisez simplement le raccourci Coller (Ctrl + V).
+4. Pour nettoyer les éventuels formats de texte indésirables sur les montants, utilisez la fonction rapide de conversion : sélectionnez votre colonne de prix, allez dans l'onglet Données > Convertir, ou utilisez une formule simple dans une colonne voisine comme `=CNUM(TRIM(A2))`.
 
 <div style="border-left: 4px solid #ffffff; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Astuce Pro :</strong> Si vos factures contiennent des données nominatives sensibles ou des informations bancaires confidentielles d'entreprise, privilégiez des environnements d'IA sécurisés d'entreprise (comme Copilot Studio ou les versions pro conformes RGPD) pour éviter toute fuite de données sensibles hors du réseau de l'entreprise.
@@ -62,11 +64,11 @@ Une fois que l'IA vous renvoie le tableau en format Markdown (avec les barres ve
 
 ### Foire aux questions (FAQ)
 
-**Q : Que faire si l'IA oublie des lignes de produits sur une facture de trois pages ?**
+Q : Que faire si l'IA oublie des lignes de produits sur une facture de trois pages ?
 R : Divisez le travail. Plutôt de traiter tout d'un coup, envoyez les pages une par une ou précisez explicitement dans votre prompt : "Attention, cette facture comporte 15 lignes de produits, assure-toi de lister exhaustivement chaque article sans en omettre aucun."
 
-**Q : Mes prix affichent des symboles monétaires (EUR, €) et Excel refuse de faire les additions (somme = 0). Comment régler ça ?**
+Q : Mes prix affichent des symboles monétaires (EUR, €) et Excel refuse de faire les additions (somme = 0). Comment régler ça ?
 R : C'est un classique. Le texte extrait contient des caractères non numériques. Dans une colonne adjacente, utilisez la formule de nettoyage rapide : `=SUBSTITUE(SUBSTITUE(A2; "€"; ""); " "; "") * 1` pour forcer Excel à transformer ce texte en véritable format nombre.
 
-**Q : Est-ce que cette méthode fonctionne avec des factures manuscrites ?**
+Q : Est-ce que cette méthode fonctionne avec des factures manuscrites ?
 R : Partiellement, mais le taux d'erreur augmente fortement selon la lisibilité de l'écriture cursive. Pour des factures papier imprimées ou des reçus de caisse thermiques, le taux de réussite atteint 99%. Pour du manuscrit, prévoyez une vérification visuelle systématique des montants totaux.

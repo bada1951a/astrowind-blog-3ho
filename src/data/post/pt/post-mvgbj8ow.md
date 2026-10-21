@@ -23,9 +23,9 @@ Eram exatas 18h45 de uma sexta-feira chuvosa em São Paulo. O ar-condicionado do
 
 Antes de colocar a mão na massa, vale entender os três vilões que transformam uma tarefa simples em um pesadelo corporativo:
 
-1. **O Fator Humano e o Esquecimento:** Depender da memória para enviar relatórios semanais na correria do fechamento é pedir para tomar puxão de orelha na reunião de diretoria de segunda-feira.
-2. **Exportações Manuais Inconsistentes:** Salvar como PDF pelo navegador muitas vezes quebra a formatação, corta colunas importantes ou deixa as margens totalmente desalinhadas.
-3. **Falta de Integração Nativa Simples:** Embora o Google Sheets seja poderoso, ele não vem com um botão pronto de "enviar PDF personalizado toda sexta-feira" — o que obriga a gente a desbravar o Google Apps Script.
+1. O Fator Humano e o Esquecimento: Depender da memória para enviar relatórios semanais na correria do fechamento é pedir para tomar puxão de orelha na reunião de diretoria de segunda-feira.
+2. Exportações Manuais Inconsistentes: Salvar como PDF pelo navegador muitas vezes quebra a formatação, corta colunas importantes ou deixa as margens totalmente desalinhadas.
+3. Falta de Integração Nativa Simples: Embora o Google Sheets seja poderoso, ele não vem com um botão pronto de "enviar PDF personalizado toda sexta-feira" — o que obriga a gente a desbravar o Google Apps Script.
 
 ---
 
@@ -34,7 +34,7 @@ Antes de colocar a mão na massa, vale entender os três vilões que transformam
 Esqueça códigos complexos de programação. Vamos usar um script pronto, testado no campo de batalha dos escritórios, adaptado para rodar em minutos.
 
 #### Passo 1: Abrir o Editor de Código
-No seu Google Sheets, vá no menu superior e clique em **Extensões > Apps Script**. Isso vai abrir a interface de desenvolvimento do Google no seu navegador.
+No seu Google Sheets, vá no menu superior e clique em Extensões > Apps Script. Isso vai abrir a interface de desenvolvimento do Google no seu navegador.
 
 #### Passo 2: Inserir o Script de Geração e Envio
 Apague qualquer código que estiver na tela e cole o bloco abaixo. Ele converte a aba ativa em PDF usando parâmetros de URL e dispara via `MailApp`:
@@ -87,10 +87,10 @@ function enviarRelatorioSemanal() {
 ```
 
 #### Passo 3: Configurar a Automação (Gatilho)
-1. No painel esquerdo do Apps Script, clique no ícone de relógio (**Acionadores** / Triggers).
-2. No canto inferior direito, clique em **Adicionar acionador**.
+1. No painel esquerdo do Apps Script, clique no ícone de relógio (Acionadores / Triggers).
+2. No canto inferior direito, clique em Adicionar acionador.
 3. Escolha a função `enviarRelatorioSemanal`.
-4. Em "Selecione o tipo de acionador baseado no tempo", escolha **Unidade de tempo baseada na semana**.
+4. Em "Selecione o tipo de acionador baseado no tempo", escolha Unidade de tempo baseada na semana.
 5. Defina o dia da semana (ex: Sexta-feira) e o horário desejado (ex: 18h - 19h). Salve e dê as permissões necessárias na sua conta Google.
 
 ---
@@ -105,11 +105,11 @@ function enviarRelatorioSemanal() {
 
 ### Perguntas Frequentes (FAQ)
 
-**1. O script vai rodar se o meu computador estiver desligado?**  
+1. O script vai rodar se o meu computador estiver desligado?  
 Sim! Como o Google Apps Script roda diretamente nos servidores em nuvem do Google, a automação será disparada no dia e horário programados, mesmo que você esteja com o notebook fechado aproveitando o fim de semana.
 
-**2. Posso enviar o PDF para mais de uma pessoa ao mesmo tempo?**  
+2. Posso enviar o PDF para mais de uma pessoa ao mesmo tempo?  
 Com certeza. Na variável `destinatario` dentro do código, você pode separar os e-mails por vírgula (ex: `"chefe@empresa.com.br, socio@empresa.com.br"`) ou adaptar o script para puxar uma lista direto de um intervalo de células da planilha.
 
-**3. Como faço para testar o script antes de agendar o envio automático?**  
-Basta voltar ao editor do Apps Script, selecionar a função `enviarRelatorioSemanal` no menu superior suspenso e clicar no botão **Executar**. Verifique sua caixa de entrada de e-mails enviados logo em seguida para conferir se o PDF chegou certinho.
+3. Como faço para testar o script antes de agendar o envio automático?  
+Basta voltar ao editor do Apps Script, selecionar a função `enviarRelatorioSemanal` no menu superior suspenso e clicar no botão Executar. Verifique sua caixa de entrada de e-mails enviados logo em seguida para conferir se o PDF chegou certinho.

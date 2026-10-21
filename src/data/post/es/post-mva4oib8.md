@@ -25,9 +25,9 @@ Fue entonces cuando tiré de mi truco definitivo: dejar que ChatGPT redacte la f
 
 Antes de ver la solución paso a paso, analicemos por qué sufrimos tanto con estas tareas cotidianas en la oficina:
 
-1. **Inconsistencia en el origen de los datos:** Los formularios web, los archivos CSV exportados desde el CRM y los copias-pegas de la web traen basuras invisibles (saltos de línea, espacios de non-breaking, caracteres UTF-8 corruptos) que rompen las funciones nativas.
-2. **Limitaciones de las funciones nativas estándar:** Funciones básicas como `IZQUIERDA` o `REPLACE` se quedan cortas cuando el patrón cambia de una celda a otra. Ahí es donde entra en juego el motor de expresiones regulares (`REGEXEXTRACT`, `REGEXREPLACE`, `REDUCE`), cuya sintaxis suele ser un dolor de cabeza crónico.
-3. **Bloqueo mental por la presión del tiempo:** Mirar una pantalla llena de errores con una cuenta atrás de diez minutos nubla cualquier capacidad de lógica analítica avanzada.
+1. Inconsistencia en el origen de los datos: Los formularios web, los archivos CSV exportados desde el CRM y los copias-pegas de la web traen basuras invisibles (saltos de línea, espacios de non-breaking, caracteres UTF-8 corruptos) que rompen las funciones nativas.
+2. Limitaciones de las funciones nativas estándar: Funciones básicas como `IZQUIERDA` o `REPLACE` se quedan cortas cuando el patrón cambia de una celda a otra. Ahí es donde entra en juego el motor de expresiones regulares (`REGEXEXTRACT`, `REGEXREPLACE`, `REDUCE`), cuya sintaxis suele ser un dolor de cabeza crónico.
+3. Bloqueo mental por la presión del tiempo: Mirar una pantalla llena de errores con una cuenta atrás de diez minutos nubla cualquier capacidad de lógica analítica avanzada.
 
 ---
 
@@ -57,10 +57,10 @@ Pega la fórmula proporcionada por ChatGPT en la celda superior de tu columna de
 
 | Situación | Método Tradicional (Manual / Foros) | Método Automatizado con ChatGPT |
 | :--- | :--- | :--- |
-| **Tiempo invertido** | 25 a 45 minutos de ensayo y error | Menos de 60 segundos |
-| **Nivel de estrés** | Extremo (riesgo de entregar tarde) | Nulo (copiar, pegar y listo) |
-| **Mantenimiento** | Frágil ante nuevos formatos de datos | Fácil de actualizar pidiendo una variante a la IA |
-| **Curva de aprendizaje** | Alta (aprender sintaxis Regex compleja) | Inmediata (lenguaje natural) |
+| Tiempo invertido | 25 a 45 minutos de ensayo y error | Menos de 60 segundos |
+| Nivel de estrés | Extremo (riesgo de entregar tarde) | Nulo (copiar, pegar y listo) |
+| Mantenimiento | Frágil ante nuevos formatos de datos | Fácil de actualizar pidiendo una variante a la IA |
+| Curva de aprendizaje | Alta (aprender sintaxis Regex compleja) | Inmediata (lenguaje natural) |
 
 ---
 
@@ -70,8 +70,8 @@ Pega la fórmula proporcionada por ChatGPT en la celda superior de tu columna de
 <strong>Precaución de seguridad:</strong> Si trabajas con datos protegidos por el RGPD (nombres reales, DNI, datos bancarios de clientes europeos), anonimiza la información antes de pegarla en herramientas externas de IA. Sustituye los nombres por "Cliente A" o usa identificadores genéricos.
 </div>
 
-- **Bloquea los valores estáticos:** Una vez que la fórmula de ChatGPT te devuelva los datos limpios, selecciónalos todos, haz clic en *Copiar* y luego ve a *Pegado especial > Pegar solo valores*. Esto evita que la hoja recalcule constantemente y ganes velocidad de procesamiento.
-- **Guarda tus prompts ganadores:** Crea una pestaña en tus notas personales con los prompts que te funcionaron. Te servirán como plantilla para el próximo reporte urgente de fin de mes.
+- Bloquea los valores estáticos: Una vez que la fórmula de ChatGPT te devuelva los datos limpios, selecciónalos todos, haz clic en *Copiar* y luego ve a *Pegado especial > Pegar solo valores*. Esto evita que la hoja recalcule constantemente y ganes velocidad de procesamiento.
+- Guarda tus prompts ganadores: Crea una pestaña en tus notas personales con los prompts que te funcionaron. Te servirán como plantilla para el próximo reporte urgente de fin de mes.
 
 ---
 
@@ -81,7 +81,7 @@ Pega la fórmula proporcionada por ChatGPT en la celda superior de tu columna de
 Asegúrate de que el separador de argumentos de tu Google Sheets coincida con lo que da la IA. En entornos configurados en español, las fórmulas suelen usar punto y coma (`;`) en lugar de comas (`,`). Pídele explícitamente a ChatGPT: *"Dame la fórmula usando punto y coma como separador para Google Sheets en español"*.
 
 ### ¿Las expresiones regulares de Google Sheets son iguales a las de Excel?
-No del todo. Google Sheets utiliza la librería de expresiones regulares RE2, que tiene pequeñas diferencias de sintaxis en comparación con las macros de VBA o las nuevas funciones nativas de Excel. Por eso es vital especificarle siempre a ChatGPT que la fórmula es estrictamente para **Google Sheets**.
+No del todo. Google Sheets utiliza la librería de expresiones regulares RE2, que tiene pequeñas diferencias de sintaxis en comparación con las macros de VBA o las nuevas funciones nativas de Excel. Por eso es vital especificarle siempre a ChatGPT que la fórmula es estrictamente para Google Sheets.
 
 ### ¿Puedo limpiar columnas enteras con una sola fórmula sin arrastrar celdas?
 Sí. Si utilizas funciones de matriz moderna como `MAP`, `LAMBDA` o `BYROW` combinadas con la IA, puedes generar una fórmula única en la cabecera que procese toda la columna de forma automática sin necesidad de arrastrar hacia abajo. Pídeselo directamente a ChatGPT en tu prompt.

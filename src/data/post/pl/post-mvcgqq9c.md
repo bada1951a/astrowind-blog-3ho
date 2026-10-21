@@ -21,9 +21,9 @@ Zamiast tracić nerwy na ręczne przeszukiwanie tysięcy komórek w poszukiwaniu
 
 Zanim przejdziemy do naprawy, warto zrozumieć, co zazwyczaj doprowadza pliki do stanu agonii:
 
-1. **Nadmiar lotnych formuł (Volatile Formulas):** Funkcje takie jak DZIŚ(), TERAZ(), PRzesunięcie czy POŚREDNI przeliczają się na nowo przy każdej najmniejszej zmianie w całym skoroszycie, katastrofalnie obciążając procesor.
-2. **Rozdmuchany obszar wydruku i formatowanie:** Użytkownicy często kopiują dane ze stron internetowych, co przenosi ukryte style, zbędne obiekty graficzne i miliony pustych wierszy z ustawionym formatowaniem warunkowym.
-3. **Zepsute odwołania zewnętrzne i zapętlone zależności:** Ukryte linki do nieistniejących plików sieciowych sprawiają, że Excel uporczywie próbuje je zaktualizować przy każdym otwarciu.
+1. Nadmiar lotnych formuł (Volatile Formulas): Funkcje takie jak DZIŚ(), TERAZ(), PRzesunięcie czy POŚREDNI przeliczają się na nowo przy każdej najmniejszej zmianie w całym skoroszycie, katastrofalnie obciążając procesor.
+2. Rozdmuchany obszar wydruku i formatowanie: Użytkownicy często kopiują dane ze stron internetowych, co przenosi ukryte style, zbędne obiekty graficzne i miliony pustych wierszy z ustawionym formatowaniem warunkowym.
+3. Zepsute odwołania zewnętrzne i zapętlone zależności: Ukryte linki do nieistniejących plików sieciowych sprawiają, że Excel uporczywie próbuje je zaktualizować przy każdym otwarciu.
 
 ---
 
@@ -71,8 +71,8 @@ Po uruchomieniu tego skryptu otrzymasz lekki, w pełni responsywny plik gotowy d
 <strong>Wskazówka bezpieczeństwa:</strong> Jeśli pracujesz w korporacji o restrykcyjnych zasadach IT, upewnij się, że korzystasz z lokalnej instancji Pythona zatwierdzonego przez dział bezpieczeństwa lub narzędzi takich jak Microsoft Copilot zintegrowanych bezpośrednio z Twoim środowiskiem firmowym.
 </div>
 
-* **Zmieniaj formuły na wartości:** Jeśli w arkuszu znajdują się historyczne dane miesięczne, które już się nie zmieniają, zaznacz je, skopiuj i wklej jako *Wartości* (Skrót: Ctrl + Alt + V -> Wartości).
-* **Unikaj całych kolumn w odwołaniach:** Zamiast pisać `WYSZUKAJ.PIONOWO(A1; A:Z; 2; FAŁSZ)`, ograniczaj zakres do faktycznie używanych wierszy, np. `A1:Z5000`. Excel nie musi wtedy przeszukiwać miliona pustych wierszy.
+* Zmieniaj formuły na wartości: Jeśli w arkuszu znajdują się historyczne dane miesięczne, które już się nie zmieniają, zaznacz je, skopiuj i wklej jako *Wartości* (Skrót: Ctrl + Alt + V -> Wartości).
+* Unikaj całych kolumn w odwołaniach: Zamiast pisać `WYSZUKAJ.PIONOWO(A1; A:Z; 2; FAŁSZ)`, ograniczaj zakres do faktycznie używanych wierszy, np. `A1:Z5000`. Excel nie musi wtedy przeszukiwać miliona pustych wierszy.
 
 ---
 

@@ -21,9 +21,9 @@ Godzina 16:45 w biurowcu w samym sercu Warszawy. Za piętnaście minut mam wysł
 
 Kiedy nagle termin goni, a arkusz przestaje współpracować, zazwyczaj winne są trzy powody:
 
-1. **Niespójne formatowanie danych historycznych:** Daty zapisane jako tekst, ukryte spacje i brakujące wartości w kolumnach ze sprzedażą całkowicie paraliżują standardowe funkcje prognozowania.
-2. **Sztywne formuły bez uwzględnienia sezonowości:** Zwykła średnia krocząca nie uwzględnia nagłych skoków popytu w okresach świątecznych czy letnich przestojów u dostawców.
-3. **Brak integracji z narzędziami AI:** Tradycyjne podejście opiera się na ręcznym szacowaniu wskaźników rotacji, podczas gdy modele językowe i algorytmy uczenia maszynowego potrafią błyskawicznie wychwycić subtelne trendy w gąszczu cyfr.
+1. Niespójne formatowanie danych historycznych: Daty zapisane jako tekst, ukryte spacje i brakujące wartości w kolumnach ze sprzedażą całkowicie paraliżują standardowe funkcje prognozowania.
+2. Sztywne formuły bez uwzględnienia sezonowości: Zwykła średnia krocząca nie uwzględnia nagłych skoków popytu w okresach świątecznych czy letnich przestojów u dostawców.
+3. Brak integracji z narzędziami AI: Tradycyjne podejście opiera się na ręcznym szacowaniu wskaźników rotacji, podczas gdy modele językowe i algorytmy uczenia maszynowego potrafią błyskawicznie wychwycić subtelne trendy w gąszczu cyfr.
 
 ## Krok po kroku: Jak wdrożyć predykcję AI w Excelu
 
@@ -33,19 +33,19 @@ Aby opanować chaos informacyjny i dostarczyć zarządowi rzetelne dane na kolej
 
 Zanim poprosisz AI o analizę, Twoje dane muszą być czyste. Zapomnij o ręcznym kasowaniu błędów.
 
-* Przejdź do zakładki **Dane > Pobierz dane > Z pliku / Z zakresu**, aby załadować swoją tabelę do edytora Power Query.
+* Przejdź do zakładki Dane > Pobierz dane > Z pliku / Z zakresu, aby załadować swoją tabelę do edytora Power Query.
 * Zaznacz kolumny z datami i upewnij się, że ich typ danych to "Data", a kolumny ze sprzedażą i stanem magazynowym mają format "Liczba całkowita".
-* Kliknij opcję **Usuń duplikaty** oraz **Zastąp wartości**, aby wyczyścić puste komórki wpisując domyślne zero.
+* Kliknij opcję Usuń duplikaty oraz Zastąp wartości, aby wyczyścić puste komórki wpisując domyślne zero.
 
 ### Krok 2: Wykorzystanie wbudowanej funkcji Prognozy (Forecast Sheet)
 
 Nowsze wersje programu Excel posiadają potężne narzędzie oparte na eksponencjalnym wygładzaniu szeregów czasowych (ETS), które działa jak dedykowany model predykcyjny.
 
 * Zaznacz dwie kolumny: kolumnę z datami (miesiące/kwartały) oraz kolumnę z historyczną wielkością sprzedaży.
-* Przejdź do karty **Dane** na wstążce Excela.
-* W sekcji Prognoza kliknij przycisk **Arkusz prognozy**.
+* Przejdź do karty Dane na wstążce Excela.
+* W sekcji Prognoza kliknij przycisk Arkusz prognozy.
 * W oknie dialogowym wybierz wykres liniowy lub słupkowy oraz ustaw datę końcową prognozy na koniec kolejnego kwartału.
-* Kliknij **Utwórz**. Excel wygeneruje zupełnie nowy arkusz zawierający nie tylko przewidywaną wartość sprzedaży, ale również dolne i górne granice przedziału ufności.
+* Kliknij Utwórz. Excel wygeneruje zupełnie nowy arkusz zawierający nie tylko przewidywaną wartość sprzedaży, ale również dolne i górne granice przedziału ufności.
 
 ### Krok 3: Wstrzyknięcie inteligentnego promptu AI przez Copilot lub dodatki LLM
 

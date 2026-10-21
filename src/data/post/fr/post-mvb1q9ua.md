@@ -19,9 +19,9 @@ Si vous vous êtes déjà retrouvé un vendredi soir à 18h à supprimer des esp
 
 Avant de passer à la vitesse supérieure, faisons le point sur les trois raisons principales pour lesquelles ce type de traitement tourne au cauchemar bureautique :
 
-1. **L'hétérogénéité des données :** Dans un même tableau, vous trouverez "JEAN DUPONT", "marie.durand@gmail,com" (avec une virgule) et "paul.martin@ " (avec un espace de fin invisible). Les formules traditionnelles Excel n'ont aucune intuition contextuelle pour deviner ces erreurs.
-2. **Les limites du texte en colonnes :** L'outil natif de découpage par délimiteur échoue dès que la structure varie d'une ligne à l'autre (par exemple, un "Jean-Paul Dupont-Moretti" vs un simple "Lucie Bernard").
-3. **Le piège des expressions régulières (Regex) complexes :** Écrire une formule complexe pour nettoyer des emails demande des compétences en programmation que la majorité des gestionnaires de projets ou assistants de direction n'ont pas le temps d'apprendre entre deux réunions.
+1. L'hétérogénéité des données : Dans un même tableau, vous trouverez "JEAN DUPONT", "marie.durand@gmail,com" (avec une virgule) et "paul.martin@ " (avec un espace de fin invisible). Les formules traditionnelles Excel n'ont aucune intuition contextuelle pour deviner ces erreurs.
+2. Les limites du texte en colonnes : L'outil natif de découpage par délimiteur échoue dès que la structure varie d'une ligne à l'autre (par exemple, un "Jean-Paul Dupont-Moretti" vs un simple "Lucie Bernard").
+3. Le piège des expressions régulières (Regex) complexes : Écrire une formule complexe pour nettoyer des emails demande des compétences en programmation que la majorité des gestionnaires de projets ou assistants de direction n'ont pas le temps d'apprendre entre deux réunions.
 
 ---
 
@@ -48,7 +48,7 @@ Ouvrez votre outil d'IA préféré (ChatGPT, Claude ou l'assistant intégré de 
 #### Étape 2 : Appliquer la formule magique ou utiliser Power Query
 Une fois que l'IA vous a généré la formule (souvent une combinaison astucieuse de `=STXT`, `=CHERCHE` et `=MAJUSCULE`), testez-la sur une colonne vide de votre fichier Excel.
 
-Si vous devez traiter des listes gigantesques régulièrement, passez par **Données > Obtenir des données > Depuis un fichier** pour lancer **Power Query**. C'est l'outil intégré d'Excel le plus sous-estimé : il permet d'enregistrer des étapes de nettoyage (suppression des espaces, mise en majuscule, remplacement de caractères) pour les rejouer en un clic dès que vous recevez un nouveau fichier de prospects.
+Si vous devez traiter des listes gigantesques régulièrement, passez par Données > Obtenir des données > Depuis un fichier pour lancer Power Query. C'est l'outil intégré d'Excel le plus sous-estimé : il permet d'enregistrer des étapes de nettoyage (suppression des espaces, mise en majuscule, remplacement de caractères) pour les rejouer en un clic dès que vous recevez un nouveau fichier de prospects.
 
 #### Étape 3 : Valider la conformité des emails et des prénoms
 Pour les emails récalcitrants qui génèrent des erreurs, demandez à l'IA de concevoir une règle de format conditionnel simple dans Excel. Par exemple, appliquez un fond rouge clair pour les cellules ne contenant pas le symbole "@" ou se terminant par des extensions invalides. Cela vous permet de repérer les anomalies en un coup d'œil avant l'envoi de vos campagnes.
@@ -67,11 +67,11 @@ Sauvegardez toujours une copie brute de votre fichier d'origine (onglet "Brut_Ba
 
 ### Foire Aux Questions (FAQ)
 
-**1. Comment l'IA gère-t-elle les prénoms composés comme "Jean-Pierre" ou "Marie-Claire" ?**
+1. Comment l'IA gère-t-elle les prénoms composés comme "Jean-Pierre" ou "Marie-Claire" ?
 Les LLM modernes comprennent très bien la structure des prénoms français. Si vous leur demandez d'isoler le prénom à partir d'une adresse type `jean.pierre.dupont@entreprise.fr`, l'IA générera une formule ou un script qui préserve le tiret tout en mettant la bonne majuscule ("Jean-Pierre").
 
-**2. Que faire si mon tableau contient plus de 50 000 lignes ?**
-Excel risque de ralentir considérablement si vous utilisez des centaines de lignes de formules complexes. Dans ce cas, demandez à l'IA de vous écrire un court script **VBA (Macro)** ou un script **Python** que vous pourrez exécuter directement dans l'éditeur de code d'Excel pour traiter le tout en moins de deux secondes.
+2. Que faire si mon tableau contient plus de 50 000 lignes ?
+Excel risque de ralentir considérablement si vous utilisez des centaines de lignes de formules complexes. Dans ce cas, demandez à l'IA de vous écrire un court script VBA (Macro) ou un script Python que vous pourrez exécuter directement dans l'éditeur de code d'Excel pour traiter le tout en moins de deux secondes.
 
-**3. Puis-je automatiser cette tâche chaque semaine ?**
-Absolument. Si vos sources de données proviennent du même CRM avec la même structure chaotique, enregistrez les étapes de nettoyage dans **Power Query** (via l'onglet *Données*). Une fois configuré, un simple clic sur "Actualiser" nettoiera vos nouveaux fichiers automatiquement, sans réutiliser l'IA à chaque fois.
+3. Puis-je automatiser cette tâche chaque semaine ?
+Absolument. Si vos sources de données proviennent du même CRM avec la même structure chaotique, enregistrez les étapes de nettoyage dans Power Query (via l'onglet *Données*). Une fois configuré, un simple clic sur "Actualiser" nettoiera vos nouveaux fichiers automatiquement, sans réutiliser l'IA à chaque fois.

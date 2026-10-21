@@ -23,9 +23,9 @@ Genau in solchen Momenten retten uns keine teuren Enterprise-Lizenzen, die erst 
 
 Bevor wir zur Lösung kommen, schauen wir uns an, warum der herkömmliche Weg bei hohem Zeitdruck kollabiert:
 
-1. **Format-Chaos bei Scans:** Unterschiedliche Layouts der Lieferanten sorgen dafür, dass Copy-Paste aus PDFs in Excel die Spalten völlig zerreißt (Beträge landen in der Beschreibung, Steuernummern verschieben sich).
-2. **Die menschliche Ermüdungsfalle:** Nach der zehnten Rechnung schleicht sich der Fehlerteufel ein. Ein verschobenes Komma bei einer fünfstelligen Summe fällt im späten Feierabendverkehr niemandem mehr auf – bis zum Audit.
-3. **Fehlende Struktur für Analysen:** Reine Bild-PDFs lassen sich von Excel ohne Zwischenschritt nicht durchsuchen oder summieren. Die Daten sind im Dokument "gefangen".
+1. Format-Chaos bei Scans: Unterschiedliche Layouts der Lieferanten sorgen dafür, dass Copy-Paste aus PDFs in Excel die Spalten völlig zerreißt (Beträge landen in der Beschreibung, Steuernummern verschieben sich).
+2. Die menschliche Ermüdungsfalle: Nach der zehnten Rechnung schleicht sich der Fehlerteufel ein. Ein verschobenes Komma bei einer fünfstelligen Summe fällt im späten Feierabendverkehr niemandem mehr auf – bis zum Audit.
+3. Fehlende Struktur für Analysen: Reine Bild-PDFs lassen sich von Excel ohne Zwischenschritt nicht durchsuchen oder summieren. Die Daten sind im Dokument "gefangen".
 
 ## Schritt-für-Schritt-Anleitung: Von der Papierrechnung zur perfekten Excel-Tabelle
 
@@ -51,7 +51,7 @@ Kopieren Sie die generierte Tabelle aus dem KI-Chat. Öffnen Sie Excel, markiere
 ## Wichtige Experten-Hinweise zu Datenschutz und Sicherheit
 
 Da wir uns im sensiblen Finanzumfeld bewegen, gilt hier oberste Vorsicht:
-* **Keine vertraulichen Personaldaten oder echten Kundennamen** hochladen, wenn Sie kostenlose, öffentlich zugängliche KI-Tools nutzen. Schwärzen Sie sensible Kontonummern oder vertrauliche Firmengeheimnisse vor dem Upload.
+* Keine vertraulichen Personaldaten oder echten Kundennamen hochladen, wenn Sie kostenlose, öffentlich zugängliche KI-Tools nutzen. Schwärzen Sie sensible Kontonummern oder vertrauliche Firmengeheimnisse vor dem Upload.
 * Nutzen Sie für interne Unternehmensdaten idealerweise die DSGVO-konformen Enterprise-Versionen Ihrer Firmen-KI.
 * Machen Sie immer einen schnellen Plausibilitäts-Check (Stichprobe), bevor Sie die Zahlen an den Vorstand weiterleiten.
 

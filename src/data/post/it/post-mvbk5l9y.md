@@ -17,9 +17,9 @@ Erano le 14:45 e il mio ufficio a Milano sembrava una succursale della Borsa di 
 
 Se lavori nel mondo corporate o in una PMI internazionale, conosci benissimo questa frustrazione. Ogni volta che prepari un preventivo, un budget o un report di fatturato, ti scontri con tre ostacoli classici:
 
-1. **La dipendenza dai plugin a pagamento:** Molti tool esterni promettono meraviglie, ma richiedono abbonamenti mensili salati o si bloccano proprio quando hai più bisogno di loro.
-2. **I tassi fissati a mano:** Copiare i tassi di cambio da siti di notizie finanziarie significa inserire valori statici che diventano obsoleti nel giro di mezz'ora.
-3. **Le formule Google Finance errate o poco curate:** Usare la funzione nativa senza una struttura pulita porta a celle vuote, errori di sintassi e celle che restituiscono il famigerato errore #N/D nel bel mezzo di una presentazione.
+1. La dipendenza dai plugin a pagamento: Molti tool esterni promettono meraviglie, ma richiedono abbonamenti mensili salati o si bloccano proprio quando hai più bisogno di loro.
+2. I tassi fissati a mano: Copiare i tassi di cambio da siti di notizie finanziarie significa inserire valori statici che diventano obsoleti nel giro di mezz'ora.
+3. Le formule Google Finance errate o poco curate: Usare la funzione nativa senza una struttura pulita porta a celle vuote, errori di sintassi e celle che restituiscono il famigerato errore #N/D nel bel mezzo di una presentazione.
 
 <div style="border-left: 4px solid #b45309; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Nota di Officina:</strong> Non serve spendere un centesimo in estrazioni dati o software complessi. Google Sheets ha già tutto il motore di cui hai bisogno integrato nativamente. Dobbiamo solo metterlo in moto nel modo giusto.
@@ -52,8 +52,8 @@ Questa formula prende l'importo in euro, va a pescare il tasso di cambio aggiorn
 I dati di Google Finance possono subire micro-ritardi o, in rari casi di disservizio temporaneo, mostrare errori di caricamento. Prima di esportare il PDF per la riunione o di proiettare lo schermo:
 
 1. Seleziona l'intera colonna dei valori convertiti.
-2. Fai clic su **Modifica > Copia** (oppure `Ctrl+C`).
-3. Fai clic con il tasto destro sulla stessa colonna, vai su **Incolla speciale > Incolla solo valori**.
+2. Fai clic su Modifica > Copia (oppure `Ctrl+C`).
+3. Fai clic con il tasto destro sulla stessa colonna, vai su Incolla speciale > Incolla solo valori.
 
 In questo modo congelerai il tasso esattamente al momento dell'invio, evitando che una fluttuazione di mercato in diretta modifichi i tuoi totali mentre stai parlando con i manager.
 
@@ -63,11 +63,11 @@ In questo modo congelerai il tasso esattamente al momento dell'invio, evitando c
 
 ## Domande Frequenti (FAQ)
 
-**1. Perché la mia formula GOOGLEFINANCE restituisce l'errore #N/D?**
+1. Perché la mia formula GOOGLEFINANCE restituisce l'errore #N/D?
 Di solito capita per due motivi: o il mercato è chiuso (durante il weekend i tassi restano bloccati sull'ultima chiusura disponibile e a volte la funzione impiega qualche secondo a rispondere) oppure hai digitato male il codice della valuta. Ricorda di usare sempre il formato corretto tra virgolette, ad esempio `"CURRENCY:EURGBP"`.
 
-**2. Posso usare questo metodo anche per valute meno comuni come lo Yen o il Dollaro Australiano?**
+2. Posso usare questo metodo anche per valute meno comuni come lo Yen o il Dollaro Australiano?
 Assolutamente sì. Google Finance supporta la maggior parte delle valute mondiali riconosciute dal mercato ufficiale. Ti basta verificare il codice ISO standard a tre lettere (JPY, AUD, CAD) e inserirlo nella stringa della formula.
 
-**3. Questo sistema rallenta il caricamento del mio Google Sheet se ho migliaia di righe?**
+3. Questo sistema rallenta il caricamento del mio Google Sheet se ho migliaia di righe?
 Se inserisci la funzione `GOOGLEFINANCE` in ogni singola riga (magari su 5.000 righe di fatturato), il foglio diventerà inevitabilmente lento a caricarsi perché farà migliaia di chiamate API simultanee. Il trucco consiste nel richiamare il tasso di cambio *una sola volta* in una tabella di riepilogo separata, e poi moltiplicare quell'unico valore in tutte le righe del tuo database.

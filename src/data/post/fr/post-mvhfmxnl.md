@@ -26,9 +26,9 @@ Heureusement, plus besoin de passer la nuit a trifouiller des macros VBA incompr
 
 Avant de crier au miracle technologique, il faut comprendre pourquoi nos methodes habituelles volent en eclats des que la demande bouge un peu. Voici les 3 pieges classiques dans lesquels nous tombons tous :
 
-1. **L'effet tunnel des moyennes mobiles simples :** Calculer la moyenne des trois derniers mois fonctionne tant que le marche est plat. Des qu'une rupture d'approvisionnement ou une campagne marketing aggressive arrive, votre tableau est completement aveugle.
-2. **La lourdeur des outils externes :** Sortir les donnees d'Excel pour les injecter dans un logiciel de planification tiers prend des heures, sans compter les conflits de format de date entre les systemes.
-3. **Le manque de contexte qualitatif :** Un modele mathematique pur ignore completement les evenements exceptionnels (jours feries decales, JO, grèves des transports en commun ou lancements de produits concurrents) qui impactent directement vos volumes.
+1. L'effet tunnel des moyennes mobiles simples : Calculer la moyenne des trois derniers mois fonctionne tant que le marche est plat. Des qu'une rupture d'approvisionnement ou une campagne marketing aggressive arrive, votre tableau est completement aveugle.
+2. La lourdeur des outils externes : Sortir les donnees d'Excel pour les injecter dans un logiciel de planification tiers prend des heures, sans compter les conflits de format de date entre les systemes.
+3. Le manque de contexte qualitatif : Un modele mathematique pur ignore completement les evenements exceptionnels (jours feries decales, JO, grèves des transports en commun ou lancements de produits concurrents) qui impactent directement vos volumes.
 
 ## La methode pas a pas : Integrer l'IA pour vos previsions de stocks
 
@@ -37,7 +37,7 @@ Voici la marche a suivre pour transformer votre tableau Excel en un outil de pre
 ### Etape 1 : Nettoyer et structurer la plage de donnees
 L'IA est intelligente, mais elle deteste le chaos. Assurez-vous que vos donnees historiques sont propres. 
 - Selectionnez votre tableau de ventes des 12 derniers mois.
-- Allez dans l'onglet **Données > Power Query** (ou utilisez l'assistant de nettoyage integre).
+- Allez dans l'onglet Données > Power Query (ou utilisez l'assistant de nettoyage integre).
 - Verifiez que chaque colonne a un en-tete clair : `Date`, `Reference_Article`, `Quantite_Vendue`, et `Stock_Restant`. Evitez absolument les cellules fusionnees ou les totaux intermediaires au milieu des lignes de donnees.
 
 ### Etape 2 : Activer et prompter l'assistant IA
@@ -65,11 +65,11 @@ Avant d'envoyer vos fichiers de stocks et de marges commerciales a une IA connec
 
 ## Foire Aux Questions (FAQ)
 
-**1. Puis-je utiliser cette methode si je n'ai que 3 mois d'historique de ventes ?**
+1. Puis-je utiliser cette methode si je n'ai que 3 mois d'historique de ventes ?
 Techniquement oui, mais les algorithmes de prevision de type lissage exponentiel necessitent idealement au moins 12 mois de donnees pour identifier correctement la saisonnalite. Si vous manquez d'historique, demandez a l'IA d'integrer une moyenne sectorielle generaliste en complement.
 
-**2. Que faire si la formule renvoie une erreur de type # N/A ?**
+2. Que faire si la formule renvoie une erreur de type # N/A ?
 Cela provient generalement d'un decalage dans les plages de dates ou de formats de date non reconnus par Excel (par exemple du texte au lieu de valeurs de date numeriques). Utilisez la fonction `CNUM()` pour convertir vos dates avant d'appliquer le modele.
 
-**3. Est-ce que cela fonctionne sur les anciennes versions d'Excel de bureau ?**
+3. Est-ce que cela fonctionne sur les anciennes versions d'Excel de bureau ?
 Les fonctions avancees comme `PREVISION.ETS` necessitent Excel 2016 ou une version plus recente d'Office 365. Pour les versions anterieures, l'IA vous aidera a concevoir une formule de moyenne ponderee alternative plus classique mais fonctionnelle.

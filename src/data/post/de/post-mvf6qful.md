@@ -23,9 +23,9 @@ Das ist der klassische Moment, in dem man stundenlang manuell Zeilen löschen m�
 
 Bevor ich den rettenden KI-Weg fand, habe ich wertvolle Minuten mit den typischen Stolperfallen verschwendet. Die Ursachen für dieses Chaos sind meistens banal, aber hartnäckig:
 
-1. **Inkonsistente Namenskonventionen:** Mal steht dort "Müller & Partner", mal "Mueller und Partner OHG" oder schlicht "Müller". Reines String-Matching über Formeln scheitert hier gnadenlos.
-2. **Falsch zugeordnete Spalten:** Durch Copy-Paste-Fehler aus verschiedenen CRM-Systemen sind E-Mail-Adressen und Firmennamen in Spalten verrutscht, was Standardfilter unbrauchbar macht.
-3. **Leerzeichen und Sonderzeichen-Salat:** Unsichtbare Leerzeichen am Ende von Zellen verhindern, dass exakte Übereinstimmungen erkannt werden.
+1. Inkonsistente Namenskonventionen: Mal steht dort "Müller & Partner", mal "Mueller und Partner OHG" oder schlicht "Müller". Reines String-Matching über Formeln scheitert hier gnadenlos.
+2. Falsch zugeordnete Spalten: Durch Copy-Paste-Fehler aus verschiedenen CRM-Systemen sind E-Mail-Adressen und Firmennamen in Spalten verrutscht, was Standardfilter unbrauchbar macht.
+3. Leerzeichen und Sonderzeichen-Salat: Unsichtbare Leerzeichen am Ende von Zellen verhindern, dass exakte Übereinstimmungen erkannt werden.
 
 ## In 3 Schritten zur sauberen Dubletten-Bereinigung mit Gemini
 
@@ -52,11 +52,11 @@ Kopieren Sie das von Gemini generierte CSV-Ergebnis. Gehen Sie in Google Sheets 
 
 ## Häufig gestellte Fragen (FAQ)
 
-**1. Was mache ich, wenn Gemini bei sehr großen Tabellen (> 5.000 Zeilen) das Token-Limit erreicht?**
+1. Was mache ich, wenn Gemini bei sehr großen Tabellen (> 5.000 Zeilen) das Token-Limit erreicht?
 Teilen Sie Ihre Daten in handliche Häppchen von je 1.000 bis 1.500 Zeilen auf. Arbeiten Sie sich Block für Block durch die Tabelle und fügen Sie die bereinigten Ergebnisse am Ende in einem Master-Sheet zusammen.
 
-**2. Erkennt Gemini auch Tippfehler wie "Siemens AG" vs. "Seimens AG"?**
+2. Erkennt Gemini auch Tippfehler wie "Siemens AG" vs. "Seimens AG"?
 Ja, genau darin liegt die Stärke von LLMs. Während klassische Excel-Formeln bei Tippfhlern versagen, erkennt Gemini durch den Kontext sofort, dass es sich um denselben Konzern handelt.
 
-**3. Kann ich diesen Prozess dauerhaft als Makro oder App Script automatisieren?**
+3. Kann ich diesen Prozess dauerhaft als Makro oder App Script automatisieren?
 Für einmalige Monatsabschlüsse ist der Prompt-Weg am schnellsten. Wer diesen Prozess wöchentlich benötigt, kann Gemini bitten, ein maßgeschneidertes Google Apps Script zu schreiben, das direkt als Erweiterung in Sheets läuft.

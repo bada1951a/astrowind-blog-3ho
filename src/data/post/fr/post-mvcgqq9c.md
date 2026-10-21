@@ -60,19 +60,19 @@ Exécutez ce script dans votre environnement Python habituel (ou via un notebook
 
 Pour éviter que ce scénario catastrophe ne se reproduise la semaine prochaine, il est essentiel de comprendre ce qui fait plier Excel :
 
-1. **L'inflation invisible des formats conditionnels :** À force de copier-coller des lignes et des tableaux, Excel duplique les règles de mise en forme conditionnelle. Un fichier peut se retrouver avec plus de 500 000 règles redondantes, bloquant le processeur dès l'ouverture.
-2. **Les liaisons externes fantômes et références circulaires :** Des formules pointant vers des serveurs réseau déconnectés ou d'autres fichiers supprimés forcent Excel à tenter des actualisations en boucle au démarrage.
-3. **L'enflure des plages de données (Ghost Rows) :** Des cellules vides en bas de feuille mais ayant conservé une mise en mémoire poussent Excel à calculer des tableaux sur 1 048 576 lignes inutilement.
+1. L'inflation invisible des formats conditionnels : À force de copier-coller des lignes et des tableaux, Excel duplique les règles de mise en forme conditionnelle. Un fichier peut se retrouver avec plus de 500 000 règles redondantes, bloquant le processeur dès l'ouverture.
+2. Les liaisons externes fantômes et références circulaires : Des formules pointant vers des serveurs réseau déconnectés ou d'autres fichiers supprimés forcent Excel à tenter des actualisations en boucle au démarrage.
+3. L'enflure des plages de données (Ghost Rows) : Des cellules vides en bas de feuille mais ayant conservé une mise en mémoire poussent Excel à calculer des tableaux sur 1 048 576 lignes inutilement.
 
 ---
 
 ### Questions Fréquemment Posées (FAQ)
 
-**Est-ce que cette méthode avec ChatGPT présente un risque pour la confidentialité de mes données d'entreprise ?**
+Est-ce que cette méthode avec ChatGPT présente un risque pour la confidentialité de mes données d'entreprise ?
 Oui, si vos données financières ou stratégiques sont hautement confidentielles, ne uploadez jamais le fichier brut directement dans une interface publique de ChatGPT. Préférez copier uniquement la structure XML ou demandez à ChatGPT de rédiger le code Python en lui fournissant uniquement les *noms des feuilles* et les *messages d'erreur*, sans les chiffres sensibles.
 
-**Puis-je utiliser cette astuce si je ne connais absolument rien à Python ?**
+Puis-je utiliser cette astuce si je ne connais absolument rien à Python ?
 Absolument. Vous n'avez pas besoin de savoir coder. Copiez simplement le message d'erreur exact affiché par Windows ou le comportement de votre fichier Excel dans ChatGPT, et demandez-lui : "Donne-moi le code Python exact à copier-coller dans un éditeur pour résoudre ce problème sans que j'aie à modifier le code moi-même."
 
-**Quelle est la meilleure alternative si Python n'est pas autorisé par la DSI sur mon poste de travail ?**
-Vous pouvez utiliser l'outil **Power Query** intégré à Excel (onglet *Données > Obtenir des données*). Power Query permet d'importer et de nettoyer un fichier lourd en contournant l'interface graphique traditionnelle d'Excel, ce qui permet souvent d'ouvrir et de restructurer un classeur récalcitrant sans ligne de code.
+Quelle est la meilleure alternative si Python n'est pas autorisé par la DSI sur mon poste de travail ?
+Vous pouvez utiliser l'outil Power Query intégré à Excel (onglet *Données > Obtenir des données*). Power Query permet d'importer et de nettoyer un fichier lourd en contournant l'interface graphique traditionnelle d'Excel, ce qui permet souvent d'ouvrir et de restructurer un classeur récalcitrant sans ligne de code.

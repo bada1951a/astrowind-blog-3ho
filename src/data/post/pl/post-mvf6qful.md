@@ -38,15 +38,15 @@ Zaznacz problematyczny obszar w Google Sheets (np. kolumny od A do E zawierając
 ### Krok 2: Użycie precyzyjnego promptu dla Gemini
 Otwórz Gemini i wklej swoje dane wraz z konkretnym poleceniem (promptem). Unikaj ogólników – bądź precyzyjny w opisie tego, co chcesz osiągnąć.
 
-> **Sprawdzony prompt do skopiowania:**
+> Sprawdzony prompt do skopiowania:
 > „Mam poniższy zestaw danych klientów z Google Sheets. Zawiera on duplikaty spowodowane literówkami, różnicami w wielkości liter oraz dodatkowymi spacjami w kolumnach z nazwami firm i e-mailami. Napisz mi zaawansowaną formułę Google Sheets (lub krótki skrypt Apps Script), która pozwoli mi zidentyfikować i usunąć te duplikaty, traktując adres e-mail jako klucz główny, a nazwy firm normalizując. Oto moje dane: [Wklej dane]”
 
 ### Krok 3: Wdrożenie rozwiązania w Google Sheets
 Gemini błyskawicznie przeanalizuje strukturę i poda Ci rozwiązanie. Jeśli zaproponuje formułę opartą na `REGEXREPLACE`, `TRIM` i `UNIQUE`:
 1. Wklej nową formułę pomocniczą do pustej kolumny obok swoich danych.
 2. Przeciągnij ją w dół.
-3. Gdy kolumna pomocnicza uporządkuje dane, zaznacz ją, wybierz **Edycja > Kopiuj**, a następnie **Edycja > Wklej specjalne > Wklej tylko wartości**.
-4. Teraz w menu górnym wejdź w **Dane > Oczyszczanie danych > Usuń duplikaty**.
+3. Gdy kolumna pomocnicza uporządkuje dane, zaznacz ją, wybierz Edycja > Kopiuj, a następnie Edycja > Wklej specjalne > Wklej tylko wartości.
+4. Teraz w menu górnym wejdź w Dane > Oczyszczanie danych > Usuń duplikaty.
 
 Problem rozwiązany w niecałe 3 minuty. Raport poszedł do zarządu na czas, a ja mogłem odetchnąć z ulgą.
 
@@ -74,4 +74,4 @@ Nie. Do podstawowego oczyszczania danych i generowania prostych skryptów w zupe
 Błędy typu `#ARG!` lub `#NAZWA?` najczęściej wynikają z różnic w ustawieniach językowych Google Sheets. Angielskie nazwy funkcji (np. `VLOOKUP`, `TRIM`) mogą wymagać polskiego odpowiednika (`WYSULAJ.PIONOWO`, `USUŃ.ZBĘDNE.SPACJE`). Poproś Gemini w kolejnym oświadczeniu: *"Przetłumacz tę formułę na polską wersję językową Google Sheets"*.
 
 ### 3. Czy mogę zautomatyzować ten proces na stałe?
-Tak. Zamiast za każdym razem pytać AI od nowa, poproś Gemini o napisanie gotowego skryptu **Google Apps Script**. Następnie wklej go w Google Sheets pod zakładką **Rozszerzenia > Apps Script**. Stworzysz w ten sposób własny przycisk „Oczyść bazę”, który wykona całą pracę jednym kliknięciem.
+Tak. Zamiast za każdym razem pytać AI od nowa, poproś Gemini o napisanie gotowego skryptu Google Apps Script. Następnie wklej go w Google Sheets pod zakładką Rozszerzenia > Apps Script. Stworzysz w ten sposób własny przycisk „Oczyść bazę”, który wykona całą pracę jednym kliknięciem.

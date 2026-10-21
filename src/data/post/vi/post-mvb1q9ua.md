@@ -19,9 +19,9 @@ theme: "Tokyo Neon Violet"
 
 Trước khi tìm ra giải pháp tự động hóa thực chiến, tôi đã đúc rút được 3 nguyên nhân chính khiến dữ liệu đầu vào luôn biến thành thảm họa:
 
-1. **Dữ liệu nhập thủ công từ nhiều nguồn:** Người bán hàng, nhân viên telesales hay form đăng ký sự kiện mỗi người nhập một kiểu, không có quy chuẩn viết hoa/viết thường hay định dạng ký tự.
-2. **Gộp chung trường thông tin (Name & Email in one cell):** Việc gộp họ tên và email vào chung một cột giúp dễ nhìn bằng mắt thường nhưng lại bất khả thi khi cần chạy chiến dịch Email Marketing hoặc gửi mail cá nhân hóa.
-3. **Ký tự rác và khoảng trắng ẩn:** Các lỗi như khoảng trắng kép (`  `), ký tự xuống dòng ẩn bên trong ô dữ liệu khiến các hàm tìm kiếm như `VLOOKUP` hay `XLOOKUP` trả về lỗi `#N/A` liên tục.
+1. Dữ liệu nhập thủ công từ nhiều nguồn: Người bán hàng, nhân viên telesales hay form đăng ký sự kiện mỗi người nhập một kiểu, không có quy chuẩn viết hoa/viết thường hay định dạng ký tự.
+2. Gộp chung trường thông tin (Name & Email in one cell): Việc gộp họ tên và email vào chung một cột giúp dễ nhìn bằng mắt thường nhưng lại bất khả thi khi cần chạy chiến dịch Email Marketing hoặc gửi mail cá nhân hóa.
+3. Ký tự rác và khoảng trắng ẩn: Các lỗi như khoảng trắng kép (`  `), ký tự xuống dòng ẩn bên trong ô dữ liệu khiến các hàm tìm kiếm như `VLOOKUP` hay `XLOOKUP` trả về lỗi `#N/A` liên tục.
 
 ---
 
@@ -42,11 +42,11 @@ Nếu bạn sử dụng các phiên bản Excel tích hợp AI hoặc các công
 </div>
 
 ### Bước 3: Dùng Flash Fill (Phím tắt thần thánh `Ctrl + E`)
-Đối với những ai không muốn dùng tool ngoài, Excel có sẵn một tính năng tự học cực mạnh mang tên **Flash Fill**:
-1. Tạo một cột mới cạnh bên có tên **"Email Sạch"**.
-2. Ở dòng đầu tiên, bạn hãy **gõ thủ công** lại địa chỉ email đúng chuẩn từ ô dữ liệu lỗi bên cạnh.
-3. Nhấn `Enter` xuống dòng thứ hai, sau đó nhấn tổ hợp phím **`Ctrl + E`**. 
-4. Kỳ diệu xảy ra: Excel sẽ tự động quét toàn bộ hàng nghìn dòng phía dưới và điền sạch sẽ các email còn lại theo đúng mẫu bạn vừa làm. Làm tương tự với cột **"Tên Riêng"**.
+Đối với những ai không muốn dùng tool ngoài, Excel có sẵn một tính năng tự học cực mạnh mang tên Flash Fill:
+1. Tạo một cột mới cạnh bên có tên "Email Sạch".
+2. Ở dòng đầu tiên, bạn hãy gõ thủ công lại địa chỉ email đúng chuẩn từ ô dữ liệu lỗi bên cạnh.
+3. Nhấn `Enter` xuống dòng thứ hai, sau đó nhấn tổ hợp phím `Ctrl + E`. 
+4. Kỳ diệu xảy ra: Excel sẽ tự động quét toàn bộ hàng nghìn dòng phía dưới và điền sạch sẽ các email còn lại theo đúng mẫu bạn vừa làm. Làm tương tự với cột "Tên Riêng".
 
 ---
 
@@ -71,4 +71,4 @@ Nếu dữ liệu quá phức tạp và AI hoặc Flash Fill đoán sai ở dòn
 Bạn có thể kết hợp sử dụng hàm `TRIM()` để xóa khoảng trắng thừa ở đầu và cuối chuỗi, ví dụ: `=TRIM(A2)`. Kết hợp thêm hàm `LOWER()` để chuyển toàn bộ email về chữ thường tránh lỗi gửi thư không hợp lệ: `=LOWER(TRIM(A2))`.
 
 ### 3. Có cách nào tự động hóa hoàn toàn quy trình này hàng tuần không?
-Có. Bạn có thể sử dụng **Data > Get Data (Power Query)** trong Excel để tạo một luồng xử lý tự động (Query). Mỗi khi có file báo cáo mới gửi tới, bạn chỉ cần dán đè dữ liệu vào thư mục nguồn và bấm `Refresh`, toàn bộ các bước lọc khoảng trắng, tách cột sẽ tự động chạy lại từ đầu mà không cần thao tác thủ công.
+Có. Bạn có thể sử dụng Data > Get Data (Power Query) trong Excel để tạo một luồng xử lý tự động (Query). Mỗi khi có file báo cáo mới gửi tới, bạn chỉ cần dán đè dữ liệu vào thư mục nguồn và bấm `Refresh`, toàn bộ các bước lọc khoảng trắng, tách cột sẽ tự động chạy lại từ đầu mà không cần thao tác thủ công.

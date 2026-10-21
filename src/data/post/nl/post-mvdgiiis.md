@@ -27,9 +27,9 @@ In dit artikel deel ik exact hoe je deze nachtmerrie binnen vijf minuten oplost 
 
 Voordat we naar de oplossing kijken, moeten we erkennen waarom de traditionele methode zo frustrerend is. Dit zijn de drie hoofdredenen waarom papieren facturen verwerken in Excel vaak spaak loopt:
 
-1. **Menselijke typefouten:** Na vijftig regels data verslapt je concentratie. Een komma die opeens een punt wordt, sloopt je hele som-formule in Excel.
-2. **Onoverzichtelijke tabellen:** Scans of foto's van papieren facturen hebben vaak rare hoeken, schaduwen of gekreukeld papier, waardoor traditionele PDF-converters onleesbare hiërogliefen spugen.
-3. **Ontbrekende structuur:** Zelfs als het tekst wordt, staat het vaak onder elkaar in plaats van netjes verdeeld over kolommen zoals *Datum*, *Leverancier*, *Omschrijving*, *Bedrag* en *BTW*.
+1. Menselijke typefouten: Na vijftig regels data verslapt je concentratie. Een komma die opeens een punt wordt, sloopt je hele som-formule in Excel.
+2. Onoverzichtelijke tabellen: Scans of foto's van papieren facturen hebben vaak rare hoeken, schaduwen of gekreukeld papier, waardoor traditionele PDF-converters onleesbare hiërogliefen spugen.
+3. Ontbrekende structuur: Zelfs als het tekst wordt, staat het vaak onder elkaar in plaats van netjes verdeeld over kolommen zoals *Datum*, *Leverancier*, *Omschrijving*, *Bedrag* en *BTW*.
 
 ---
 
@@ -57,7 +57,7 @@ Gebruik een directe, no-nonsense prompt die specifiek vraagt om output in tabell
 #### Stap 3: Plakken en controleren in Excel
 1. Open je Excel-werkblad.
 2. Selecteer de tabel die de AI heeft gegenereerd en druk op `Ctrl + C` (of `Cmd + C` op de Mac).
-3. Ga naar cel `A1` in Excel, klik met de rechtermuisknop en kies voor **Plakken** (of gebruik `Ctrl + V`).
+3. Ga naar cel `A1` in Excel, klik met de rechtermuisknop en kies voor Plakken (of gebruik `Ctrl + V`).
 4. Controleer even snel de sommen met een simpele `=SOM()` formule om te zien of alle cijfers correct zijn overgenomen.
 
 ---
@@ -72,11 +72,11 @@ Gebruik een directe, no-nonsense prompt die specifiek vraagt om output in tabell
 
 ### Veelgestelde Vragen (FAQ)
 
-**1. Wat als mijn factuur in het buitenland is opgesteld met afwijkende valuta of datumnotaties?**
+1. Wat als mijn factuur in het buitenland is opgesteld met afwijkende valuta of datumnotaties?
 Geef dit expliciet mee in je prompt aan de AI. Zeg bijvoorbeeld: *"Converteer alle datums naar de Nederlandse notatie (DD-MM-JJJJ) en behoud de originele valuta in een aparte kolom."* De AI past dit direct voor je aan voordat je het naar Excel kopieert.
 
-**2. Kan ik meerdere facturen tegelijk verwerken?**
+2. Kan ik meerdere facturen tegelijk verwerken?
 Jazeker. Je kunt meerdere foto's of een PDF met een multipagina-factuur tegelijk uploaden naar de AI-tool. Vraag de AI in de prompt om alle pagina's samen te voegen tot één doorlopende tabel, zodat je niet per bonnetje hoeft te knippen en plakken.
 
-**3. Wat moet ik doen als Excel de geplakt data in één lange cel zet in plaats van nette kolommen?**
-Als het plakken als één grote tekstblok binnenkomt, ga dan in Excel naar het tabblad **Gegevens** (Data) en kies voor **Tekst naar kolommen**. Selecteer 'Gescheiden' en vink het hokje voor 'Tabulator' aan. Binnen één klik staat alles netjes in aparte kolommen verdeeld.
+3. Wat moet ik doen als Excel de geplakt data in één lange cel zet in plaats van nette kolommen?
+Als het plakken als één grote tekstblok binnenkomt, ga dan in Excel naar het tabblad Gegevens (Data) en kies voor Tekst naar kolommen. Selecteer 'Gescheiden' en vink het hokje voor 'Tabulator' aan. Binnen één klik staat alles netjes in aparte kolommen verdeeld.

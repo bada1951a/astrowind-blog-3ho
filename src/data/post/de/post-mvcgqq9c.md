@@ -23,9 +23,9 @@ Früher habe ich in solchen Paniksituationen stundenlang manuell nach defekten B
 
 Bevor wir das Problem mit KI lösen, müssen wir verstehen, warum Excel den Dienst verweigert:
 
-1. **Unkontrollierte Blähung der XML-Struktur (Bloatware):** Bedingte Formatierungen, die sich über Millionen von Zeilen erstrecken, sprengen die Grenzen der internen XML-Struktur. Excel versucht, jede einzelne Zelle zu überwachen.
-2. **Volatile und redundante Formeln:** Hunderte von `JETZT()`, `HEUTE()` oder extrem verschachtelte `WENN`- und `SVERWEIS`-Abfragen zwingen den Prozessor bei jedem Tastendruck in die Knie, da die gesamte Berechnungskette neu aufgebaut wird.
-3. **Korrupte Namensbereiche und Geister-Links:** Verwaiste externe Verknüpfungen und Tausende von unsichtbaren, automatischen Bereichsnamen, die sich im Hintergrund angesammelt haben.
+1. Unkontrollierte Blähung der XML-Struktur (Bloatware): Bedingte Formatierungen, die sich über Millionen von Zeilen erstrecken, sprengen die Grenzen der internen XML-Struktur. Excel versucht, jede einzelne Zelle zu überwachen.
+2. Volatile und redundante Formeln: Hunderte von `JETZT()`, `HEUTE()` oder extrem verschachtelte `WENN`- und `SVERWEIS`-Abfragen zwingen den Prozessor bei jedem Tastendruck in die Knie, da die gesamte Berechnungskette neu aufgebaut wird.
+3. Korrupte Namensbereiche und Geister-Links: Verwaiste externe Verknüpfungen und Tausende von unsichtbaren, automatischen Bereichsnamen, die sich im Hintergrund angesammelt haben.
 
 ---
 
@@ -52,18 +52,18 @@ Typischerweise entfernt das Skript überflüssige Formatierungsregeln, die sich 
 
 ## Wichtige Experten-Hinweise für den Ernstfall
 
-* **Datenschutz (DSGVO & Compliance):** Da Sie im Finanzsektor oder in sensiblen Unternehmensstrukturen arbeiten, laden Sie *niemals* vertrauliche Kundendaten oder echte Finanzzahlen in öffentliche KI-Modelle hoch. Nutzen Sie für die Analyse anonymisierte Testdateien oder lokale Enterprise-Lizenzen (wie ChatGPT Team/Enterprise mit deaktiviertem Training).
-* **Immer eine Kopie behalten:** Arbeiten Sie im Dateisystem *niemals* direkt auf dem Original. Ein falscher Befehl beim Entpacken und Neuzippen kann die XML-Struktur beschädigen, sodass Excel die Datei komplett als unlesbar einstuft.
+* Datenschutz (DSGVO & Compliance): Da Sie im Finanzsektor oder in sensiblen Unternehmensstrukturen arbeiten, laden Sie *niemals* vertrauliche Kundendaten oder echte Finanzzahlen in öffentliche KI-Modelle hoch. Nutzen Sie für die Analyse anonymisierte Testdateien oder lokale Enterprise-Lizenzen (wie ChatGPT Team/Enterprise mit deaktiviertem Training).
+* Immer eine Kopie behalten: Arbeiten Sie im Dateisystem *niemals* direkt auf dem Original. Ein falscher Befehl beim Entpacken und Neuzippen kann die XML-Struktur beschädigen, sodass Excel die Datei komplett als unlesbar einstuft.
 
 ---
 
 ## Häufig gestellte Fragen (FAQ)
 
-**1. Kann ich diesen Trick auch anwenden, wenn die Datei passwortgeschützt ist?**
+1. Kann ich diesen Trick auch anwenden, wenn die Datei passwortgeschützt ist?
 Nein. Passwahlgeschützte Excel-Dateien sind verschlüsselt. Sie müssen den Schutz in Excel (oder über Spezial-Tools) aufheben, bevor Sie die ZIP-Methode anwenden können. Da Excel bei passwortgeschützten Dateien oft abstürzt, empfiehlt es sich, das Passwort vorab zu entfernen.
 
-**2. Was mache ich, wenn das Problem nach der XML-Bereinigung immer noch besteht?**
+2. Was mache ich, wenn das Problem nach der XML-Bereinigung immer noch besteht?
 Wenn die XML-Struktur sauber ist, liegt das Problem meist an ineffizienten Formeln. Ersetzen Sie rechenintensive `SVERWEIS`-Formeln über ganze Spalten hinweg durch moderne `XVERWEIS`-Funktionen mit exakten Bereichsangaben oder wandeln Sie statische historische Daten über `Daten > Werte einfügen` in reine Text-/Zahlenwerte um.
 
-**3. Unterstützt Excel diesen Eingriff offiziell?**
+3. Unterstützt Excel diesen Eingriff offiziell?
 Microsoft speichert Excel-Dateien standardmässig im standardisierten OpenXML-Format ab. Das Entpacken, Modifizieren und Neuzippen ist technisch gesehen absolut legitim, solange die XML-Validität erhalten bleibt. Genau hierbei hilft das Python-Skript von ChatGPT, Syntaxfehler zu vermeiden.

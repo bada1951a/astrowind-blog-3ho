@@ -21,9 +21,9 @@ Picture this: It is 8:45 AM on a crisp Tuesday in our San Francisco office, exac
 
 Before finding a reliable no-code workflow, I tried every painful shortcut in the book—and watched them all collapse under pressure. Here is why the traditional approach to handling scanned paper invoices always breaks down:
 
-1. **Inconsistent Document Layouts:** Every vendor uses a different invoice template. Standard Excel data-import wizards look for rigid table structures, so they throw errors or scramble columns when faced with random text positioning.
-2. **Poor Scan Quality and Artifacts:** Scanned PDFs or phone pictures of paper receipts often feature shadows, low contrast, or skewed angles, rendering basic optical character recognition completely useless.
-3. **Human Fatigue and Typo Traps:** Staring at rows of numbers at 8:50 AM leads to transposed digits and mismatched totals, which instantly destroys credibility when presented to executive leadership.
+1. Inconsistent Document Layouts: Every vendor uses a different invoice template. Standard Excel data-import wizards look for rigid table structures, so they throw errors or scramble columns when faced with random text positioning.
+2. Poor Scan Quality and Artifacts: Scanned PDFs or phone pictures of paper receipts often feature shadows, low contrast, or skewed angles, rendering basic optical character recognition completely useless.
+3. Human Fatigue and Typo Traps: Staring at rows of numbers at 8:50 AM leads to transposed digits and mismatched totals, which instantly destroys credibility when presented to executive leadership.
 
 ## The 3-Step No-Code Blueprint to Clean Excel Data
 

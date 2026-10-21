@@ -19,9 +19,9 @@ Es ist Donnerstag, 16:45 Uhr im Frankfurter Finanzdistrikt. In genau 45 Minuten 
 
 Bevor wir zur Lösung kommen, schauen wir uns an, warum wir überhaupt in diese Situation geraten sind. Es liegt meist an drei typischen Stolpersteinen im Büroalltag:
 
-1. **Inkonsistente Rohdaten:** Unterschiedliche Quellsysteme nutzen unterschiedliche Trennzeichen (Semikolon, Komma, Leerzeichen) und Formatierungen.
-2. **Die Grenzen normaler Formeln:** Standardfunktionen wie `=TEIL()` oder `=FINDEN()` stoßen bei variablen Textlängen und komplexen Mustern sofort an ihre Grenzen. Man bräuchte Regex-Funktionen wie `=REGEXEXTRACT()`, deren Syntax aber extrem fehleranfällig ist.
-3. **Der Zeitfaktor:** Wer unter Adrenalin versucht, eine verschachtelte Formel zu debuggen, übersieht oft nur ein einziges Anführungszeichen oder eine falsche Klammersetzung.
+1. Inkonsistente Rohdaten: Unterschiedliche Quellsysteme nutzen unterschiedliche Trennzeichen (Semikolon, Komma, Leerzeichen) und Formatierungen.
+2. Die Grenzen normaler Formeln: Standardfunktionen wie `=TEIL()` oder `=FINDEN()` stoßen bei variablen Textlängen und komplexen Mustern sofort an ihre Grenzen. Man bräuchte Regex-Funktionen wie `=REGEXEXTRACT()`, deren Syntax aber extrem fehleranfällig ist.
+3. Der Zeitfaktor: Wer unter Adrenalin versucht, eine verschachtelte Formel zu debuggen, übersieht oft nur ein einziges Anführungszeichen oder eine falsche Klammersetzung.
 
 ## Schritt-für-Schritt-Anleitung: So zähmst du Daten mit ChatGPT und Google Sheets
 
@@ -52,8 +52,8 @@ Bitten Sie ChatGPT in diesem Fall sofort um ein Update mit Fehlerbehandlung:
 <strong>Datenschutz-Warnung (DSGVO):</strong> Lade niemals echte Kundennamen, IBANs oder sensible Finanzdaten unverschlüsselt oder im Klartext in öffentliche KI-Tools hoch! Ersetze sensible Werte in deinen Prompts immer durch anonymisierte Platzhalter wie 'Name, Vorname (Kunde-Nr: 12345-XY)'.
 </div>
 
-* **Immer ein Backup erstellen:** Bevor du komplexe Massenbereinigungen über ein Tabellenblatt laufen lässt, dupliziere das Tabellenblatt über das Kontextmenü unten links.
-* **Formeln in Werte umwandeln:** Sobald die Regex-Bereinigung erfolgreich durchgelaufen ist, markiere die Spalte, drücke `Strg + C` und füge sie via `Strg + Umschalt + V` als reine Werte ein. Das verhindert spätere Neuberechnungsfehler, wenn Quelldaten gelöscht werden.
+* Immer ein Backup erstellen: Bevor du komplexe Massenbereinigungen über ein Tabellenblatt laufen lässt, dupliziere das Tabellenblatt über das Kontextmenü unten links.
+* Formeln in Werte umwandeln: Sobald die Regex-Bereinigung erfolgreich durchgelaufen ist, markiere die Spalte, drücke `Strg + C` und füge sie via `Strg + Umschalt + V` als reine Werte ein. Das verhindert spätere Neuberechnungsfehler, wenn Quelldaten gelöscht werden.
 
 ---
 

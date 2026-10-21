@@ -25,15 +25,15 @@ Zamiast panikować i spędzić wieczór w biurze, postanowiłem wdrożyć rozwi�
 
 Zanim przejdziemy do kodu, przyjrzyjmy się trzem najczęstszym pułapkom, w które wpadamy przy tradycyjnym obiegu dokumentów:
 
-1. **Błędy ludzkie przy eksporcie:** Ręczne pobieranie pliku jako PDF często rozjeżdża formatowanie (obcięte kolumny, brzydkie podziały stron).
-2. **Opóźnienia i zapominalstwo:** W wirze spotkań łatwo zapomnieć o kliknięciu "Wyślij" dokładnie w poniedziałek o 8:00 rano.
-3. **Sztywność danych:** Gdy arkusz ma uszkodzone formuły w momencie wysyłki, zarząd otrzymuje puste lub błędne liczby, co niszczy wiarygodność zespołu.
+1. Błędy ludzkie przy eksporcie: Ręczne pobieranie pliku jako PDF często rozjeżdża formatowanie (obcięte kolumny, brzydkie podziały stron).
+2. Opóźnienia i zapominalstwo: W wirze spotkań łatwo zapomnieć o kliknięciu "Wyślij" dokładnie w poniedziałek o 8:00 rano.
+3. Sztywność danych: Gdy arkusz ma uszkodzone formuły w momencie wysyłki, zarząd otrzymuje puste lub błędne liczby, co niszczy wiarygodność zespołu.
 
 ---
 
 ### Krok po kroku: Twój własny skrypt automatyzujący PDF
 
-Nawet jeśli nie jesteś programistą, poniższy kod wkleisz i dostosujesz w kilka minut. Otwórz swój arkusz Google Sheets, wybierz z górnego menu **Rozszerzenia > Apps Script**, skasuj wszystko i wklej poniższy kod.
+Nawet jeśli nie jesteś programistą, poniższy kod wkleisz i dostosujesz w kilka minut. Otwórz swój arkusz Google Sheets, wybierz z górnego menu Rozszerzenia > Apps Script, skasuj wszystko i wklej poniższy kod.
 
 ```javascript
 function wyslijRaportPDF() {
@@ -84,9 +84,9 @@ function wyslijRaportPDF() {
 
 #### Jak to skonfigurować w 3 prostych krokach:
 
-1. **Dopasuj nazwę arkusza:** W linijce `var sheet = spreadsheet.getSheetByName("RaportTygodniowy");` wpisz dokładnie taką nazwę, jaką ma Twoja zakładka z raportem w Google Sheets.
-2. **Wpisz adres odbiorcy:** Zmień `"zarzad@twojadomena.pl"` na docelowy adres e-mail (lub listę adresów rozdzielonych przecinkami).
-3. **Autoryzuj skrypt:** Kliknij ikonę dysku (Zapisz), a następnie przycisk **Uruchom (Run)**. Google poprosi Cię o uprawnienia do wysyłania maili i odczytu arkusza – przejdź przez standardowy proces autoryzacji (kliknij "Zaawansowane" -> "Przejdź do Bez tytułu (niebezpieczne)").
+1. Dopasuj nazwę arkusza: W linijce `var sheet = spreadsheet.getSheetByName("RaportTygodniowy");` wpisz dokładnie taką nazwę, jaką ma Twoja zakładka z raportem w Google Sheets.
+2. Wpisz adres odbiorcy: Zmień `"zarzad@twojadomena.pl"` na docelowy adres e-mail (lub listę adresów rozdzielonych przecinkami).
+3. Autoryzuj skrypt: Kliknij ikonę dysku (Zapisz), a następnie przycisk Uruchom (Run). Google poprosi Cię o uprawnienia do wysyłania maili i odczytu arkusza – przejdź przez standardowy proces autoryzacji (kliknij "Zaawansowane" -> "Przejdź do Bez tytułu (niebezpieczne)").
 
 ---
 
@@ -94,11 +94,11 @@ function wyslijRaportPDF() {
 
 Nie chcesz przecież klikać "Uruchom" co tydzień ręcznie. Zautomatyzujmy to:
 
-1. W edytorze Apps Script kliknij ikonę **Zegara (Triggers / Wyzwalacze)** po lewej stronie.
-2. Kliknij **Dodaj wyzwalacze** w prawym dolnym rogu.
+1. W edytorze Apps Script kliknij ikonę Zegara (Triggers / Wyzwalacze) po lewej stronie.
+2. Kliknij Dodaj wyzwalacze w prawym dolnym rogu.
 3. Wybierz funkcję `wyslijRaportPDF`.
-4. Jako rodzaj źródła zdarzenia wybierz **Oparte na czasie**.
-5. Wybierz **Wyzwalacz cotygodniowy** i ustaw preferowany dzień oraz godzinę (np. Poniedziałek, 8:00 - 9:00 rano).
+4. Jako rodzaj źródła zdarzenia wybierz Oparte na czasie.
+5. Wybierz Wyzwalacz cotygodniowy i ustaw preferowany dzień oraz godzinę (np. Poniedziałek, 8:00 - 9:00 rano).
 6. Zapisz zmiany.
 
 <div style="border-left: 4px solid #0284c7; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -109,11 +109,11 @@ Nie chcesz przecież klikać "Uruchom" co tydzień ręcznie. Zautomatyzujmy to:
 
 ### Często zadawane pytania (FAQ)
 
-**1. Czy skrypt będzie działał, gdy komputer jest wyłączony?**
+1. Czy skrypt będzie działał, gdy komputer jest wyłączony?
 Tak! Google Apps Script działa w chmurze Google, a nie w Twojej przeglądarce. Kiedy minie wyznaczona godzina, serwery Google uruchomią skrypt automatycznie, nawet przy wyłączonym komputerze.
 
-**2. Co zrobić, jeśli wygenerowany PDF jest rozjechany wizualnie?**
+2. Co zrobić, jeśli wygenerowany PDF jest rozjechany wizualnie?
 Parametry w kodzie takie jak `fitw: 'true'` (dopasuj do szerokości) oraz `portrait: 'false'` (układ poziomy) pomagają utrzymać porządek. Najlepiej przetestować kilka kombinacji, zmieniając układ strony w sekcji `exportOptions`.
 
-**3. Czy mogę wysyłać ten raport do kilku osób jednocześnie?**
+3. Czy mogę wysyłać ten raport do kilku osób jednocześnie?
 Oczywiście. W zmiennej `var emailOdbiorcy` możesz podać kilka adresów e-mail oddzielając je przecinkami, na przykład: `"dyrektor1@firma.pl, dyrektor2@firma.pl"`.

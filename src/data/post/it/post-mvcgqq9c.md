@@ -27,9 +27,9 @@ Ecco esattamente come ho diagnosticato e risolto il problema in meno di sette mi
 
 Prima di passare all'azione, capiamo cosa stava strangolando il file:
 
-1. **Formattazione condizionale "Zombie":** Copia-incolla selvaggi da altri file avevano generato oltre 400.000 regole di formattazione condizionale sovrapposte. Excel controlla ogni singola cella a ogni singolo click, saturando la RAM.
-2. **Formule volatili fuori controllo:** Uso massiccio di `INDIRETTO` (INDIRECT) e `SCARTO` (OFFSET) in tabelle pivot enormi, che costringono il software a ricalcolare l'intero foglio a ogni minima modifica.
-3. **Rifiuti nascosti e formati fantasma:** Righe e colonne vuote ma formattate fino alla riga 1.048.576 che gonfiavano inutilmente il peso del file.
+1. Formattazione condizionale "Zombie": Copia-incolla selvaggi da altri file avevano generato oltre 400.000 regole di formattazione condizionale sovrapposte. Excel controlla ogni singola cella a ogni singolo click, saturando la RAM.
+2. Formule volatili fuori controllo: Uso massiccio di `INDIRETTO` (INDIRECT) e `SCARTO` (OFFSET) in tabelle pivot enormi, che costringono il software a ricalcolare l'intero foglio a ogni minima modifica.
+3. Rifiuti nascosti e formati fantasma: Righe e colonne vuote ma formattate fino alla riga 1.048.576 che gonfiavano inutilmente il peso del file.
 
 ---
 
@@ -67,11 +67,11 @@ Scarica il file ripulito e aprilo. Noterai subito che:
 
 ### Domande Frequenti (FAQ)
 
-**1. Posso usare questa tecnica anche se il file è protetto da password?**
+1. Posso usare questa tecnica anche se il file è protetto da password?
 No, Python non può aprire file Excel protetti da password di cifratura a meno che tu non conosca la password e la rimuova preventivamente aprendo il file (se riesce ad aprirsi abbastanza a lungo da permetterti di salvarne una copia senza protezione).
 
-**2. I miei dati aziendali sono al sicuro caricando il file su ChatGPT?**
+2. I miei dati aziendali sono al sicuro caricando il file su ChatGPT?
 Se utilizzi versioni aziendali (come ChatGPT Team o Enterprise) o le API con opzioni di privacy attivate, i tuoi dati non vengono usati per addestrare i modelli pubblici. In caso di dati finanziari o bancari estremamente critici, è comunque raccomandato usare script Python in locale sul proprio computer anziché caricarli su piattaforme cloud esterne.
 
-**3. Qual è l'alternativa se non ho accesso a ChatGPT Plus?**
+3. Qual è l'alternativa se non ho accesso a ChatGPT Plus?
 Puoi aprire Excel in modalità provvisoria (tenendo premuto il tasto `Ctrl` mentre avvii l'applicazione), disattivare i componenti aggiuntivi (`File > Opzioni > Componenti aggiuntivi`), e usare lo strumento nativo `Dati > Power Query` per importare solo le tabelle che ti servono davvero, scartando i fogli inutili.

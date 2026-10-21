@@ -25,9 +25,9 @@ Zamiast tracić nerwy na pisanie skomplikowanych makr VBA, postanowiłem podejś
 
 Zanim przejdziemy do naprawy, warto zrozumieć, dlaczego standardowe podejście legło w gruzach. Główne źródła błędów w takich bazach to:
 
-1. **Brak jednolitej struktury (Nomenklatura):** Użytkownicy w systemie CRM wpisywali dane "na oko". Masz tam kombinacje `jan.kowalski`, `j.kowalski`, `jan_kowalski` oraz imiona pisane małą i wielką literą.
-2. **Brudne formatowanie i literówki:** Ukryte spacje na końcu wierszy, polskie znaki zamienione na krzaki oraz błędy domeny (`.pll` zamiast `.pl`).
-3. **Sztywność formuł:** Funkcja tekstowa w Excelu szuka konkretnego znaku (np. kropki). Jeśli w adresie e-mail kropki nie ma lub jest ich kilka (np. `jan.piotr.kowalski@corp.com`), formuła się gubi i zwraca błąd.
+1. Brak jednolitej struktury (Nomenklatura): Użytkownicy w systemie CRM wpisywali dane "na oko". Masz tam kombinacje `jan.kowalski`, `j.kowalski`, `jan_kowalski` oraz imiona pisane małą i wielką literą.
+2. Brudne formatowanie i literówki: Ukryte spacje na końcu wierszy, polskie znaki zamienione na krzaki oraz błędy domeny (`.pll` zamiast `.pl`).
+3. Sztywność formuł: Funkcja tekstowa w Excelu szuka konkretnego znaku (np. kropki). Jeśli w adresie e-mail kropki nie ma lub jest ich kilka (np. `jan.piotr.kowalski@corp.com`), formuła się gubi i zwraca błąd.
 
 ---
 
@@ -38,7 +38,7 @@ Całą operację przeprowadzimy bez opuszczania pakietu biurowego lub przy wspar
 #### Krok 1: Wstępne oczyszczenie białych znaków i formatu
 Zanim przekażemy dane do analizy AI, zlikwidujmy podstawowe śmieci za pomocą wbudowanych narzędzi Excela.
 * Zaznacz kolumnę z e-mailami.
-* Przejdź do zakładki **Dane > Tekst jako kolumny** lub użyj niezawodnej formuły czyszczącej w nowej kolumnze pomocniczej:
+* Przejdź do zakładki Dane > Tekst jako kolumny lub użyj niezawodnej formuły czyszczącej w nowej kolumnze pomocniczej:
   `=USUŃ.ZBĘDNE.SPACJE(MAŁE.LITERY(A2))`
 * Ta prosta formuła usunie podwójne spacje i zamieni chaos wielkości liter na jednolitą formę.
 
@@ -53,9 +53,9 @@ Jeśli korzystasz z narzędzia AI połączonego z arkuszem (lub kopiujesz dane d
 #### Krok 3: Wklejenie wyników i walidacja przez Power Query
 Gdy AI wygeneruje dla Ciebie uporządkowaną listę:
 * Skopiuj gotowe kolumny z powrotem do Excela.
-* Przejdź do **Dane > Pobierz dane > Z tabeli/zakresu**, aby uruchomić **Power Query**.
-* W edytorze Power Query kliknij **Usuń duplikaty** na kolumnie z e-mailami, aby upewnić się, że zarząd nie otrzyma zdublowanych rekordów.
-* Kliknij **Zamknij i załaduj** – gotowy, lśniący arkusz ląduje w nowym zeszczycie.
+* Przejdź do Dane > Pobierz dane > Z tabeli/zakresu, aby uruchomić Power Query.
+* W edytorze Power Query kliknij Usuń duplikaty na kolumnie z e-mailami, aby upewnić się, że zarząd nie otrzyma zdublowanych rekordów.
+* Kliknij Zamknij i załaduj – gotowy, lśniący arkusz ląduje w nowym zeszczycie.
 
 ---
 
@@ -69,11 +69,11 @@ Gdy AI wygeneruje dla Ciebie uporządkowaną listę:
 
 ### Często zadawane pytania (FAQ)
 
-**1. Co zrobić, gdy w adresie e-mail nie ma imienia, lecz sam alias działu (np. biuro@firma.pl)?**
+1. Co zrobić, gdy w adresie e-mail nie ma imienia, lecz sam alias działu (np. biuro@firma.pl)?
 Dobre modele AI potrafią rozpoznać brak spersonalizowanego imienia i na podstawie instrukcji (promptu) przypiszą tam wartość domyślną, np. "Zespół" lub "Klient", dzięki czemu wiersz nie zostanie pusty i nie popsuje personalizacji maili wysyłkowych.
 
-**2. Czy muszę mieć płatną subskrypcję Copilota w Excelu, żeby to działało?**
+2. Czy muszę mieć płatną subskrypcję Copilota w Excelu, żeby to działało?
 Niekoniecznie. Możesz bezpiecznie wyeksportować wyczyszczony plik CSV, przepuścić go przez zatwierdzone przez Dział IT narzędzie AI i zaimportować wynik z powrotem. Oczywiście zintegrowane dodatki oszczędzają czas potrzebny na eksport i import.
 
-**3. Jak upewnić się, że adresy e-mail po oczyszczeniu są nadal poprawne składniowo?**
+3. Jak upewnić się, że adresy e-mail po oczyszczeniu są nadal poprawne składniowo?
 Poza czyszczeniem przez AI, warto w nowej kolumnie zastosować prostą walidację formułą: `=CZY.LICZBA(SZUKAJ.TEKSTU("@"; B2)) * CZY.LICZBA(SZUKAJ.TEKSTU(".", B2))`. Jeśli wynik to 1, adres ma poprawną strukturę podstawową.

@@ -19,9 +19,9 @@ Es ist 17:45 Uhr im Frankfurter Bankenviertel. Um 09:00 Uhr morgens muss der fin
 
 Bevor wir zu den praktischen Schritten kommen, werfen wir einen kurzen Blick auf die drei Hauptursachen, warum klassische Tabellenlösungen in stressigen Situationen kollabieren:
 
-- **Unflexible Datenstrukturen:** Rohdaten werden starr kopiert statt über dynamische Bereiche (wie FILTER oder QUERY) verknüpft. Bei jeder Datenänderung bricht das Diagramm zusammen.
-- **Fehlende Interaktivität:** Das Management will Live-Szenarien sehen ("Was passiert, wenn die Zinsen um 0,5% steigen?"). Statische Linien- oder Balkendiagramme bieten hier null Flexibilität.
-- **Mangelnde Nutzung KI-gestützter Einblicke:** Viele Kolleginnen und Kollegen nutzen Google Sheets wie eine digitale Schreibmaschine und ignorieren die integrierten Funktionen zur automatischen Trendanalyse und intelligenten Diagrammerstellung.
+- Unflexible Datenstrukturen: Rohdaten werden starr kopiert statt über dynamische Bereiche (wie FILTER oder QUERY) verknüpft. Bei jeder Datenänderung bricht das Diagramm zusammen.
+- Fehlende Interaktivität: Das Management will Live-Szenarien sehen ("Was passiert, wenn die Zinsen um 0,5% steigen?"). Statische Linien- oder Balkendiagramme bieten hier null Flexibilität.
+- Mangelnde Nutzung KI-gestützter Einblicke: Viele Kolleginnen und Kollegen nutzen Google Sheets wie eine digitale Schreibmaschine und ignorieren die integrierten Funktionen zur automatischen Trendanalyse und intelligenten Diagrammerstellung.
 
 ---
 
@@ -33,18 +33,18 @@ Genug gejammert, krempeln wir die Ärmel hoch. So verwandeln Sie eine unübersic
 Bevor die KI überhaupt verwertbare Vorschläge machen kann, muss die Datenbasis stimmen. 
 1. Öffnen Sie Ihr Google Sheet mit den Finanzdaten.
 2. Markieren Sie Ihren Datenbereich (z.B. Spalten A bis G für Umsatz, Kosten, EBITDA).
-3. Gehen Sie im Menü auf **Daten > Benannte Bereiche** und vergeben Sie einen klaren Namen wie `Finanzdaten_Q3`. Das verhindert Formelfehler bei späteren Aktualisierungen.
+3. Gehen Sie im Menü auf Daten > Benannte Bereiche und vergeben Sie einen klaren Namen wie `Finanzdaten_Q3`. Das verhindert Formelfehler bei späteren Aktualisierungen.
 
 ### Schritt 2: KI-Vorschläge für Diagramme aktivieren ("Mit KI erkunden")
 Google Sheets bringt eine integrierte KI-Funktion mit, die oft übersehen wird, aber Gold wert ist.
-1. Klicken Sie unten rechts in Ihrem Google Sheet auf das kleine Explore-Symbol (den Sternen-Button oder **Erkunden**).
+1. Klicken Sie unten rechts in Ihrem Google Sheet auf das kleine Explore-Symbol (den Sternen-Button oder Erkunden).
 2. Die KI analysiert automatisch Ihre Finanzdaten und schlägt passende Visualisierungen vor.
 3. Anstatt manuell ein Diagramm zusammenzuklicken, ziehen Sie den von der KI vorgeschlagenen Trend- oder Prognosegraphen direkt in Ihr Arbeitsblatt.
 
 ### Schritt 3: Interaktive Steuerelemente (Slicer und Dropdowns) einfügen
 Damit Sie im Meeting flexibel reagieren können, machen wir das Dashboard interaktiv.
 1. Markieren Sie Ihre Datentabelle.
-2. Gehen Sie auf **Daten > Slicer hinzufügen**.
+2. Gehen Sie auf Daten > Slicer hinzufügen.
 3. Wählen Sie als Spalte beispielsweise die Kostenstelle oder die Region aus. Wenn der Vorstand nun nach einer spezifischen Abteilung fragt, wählen Sie diese im Dropdown aus, und das gesamte Diagramm aktualisiert sich in Echtzeit, ganz ohne neue Formeln.
 
 <div style="border-left: 4px solid #64748b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -57,8 +57,8 @@ Damit Sie im Meeting flexibel reagieren können, machen wir das Dashboard intera
 
 Bevor Sie unüberlegt unternehmenskritische Kennzahlen in Cloud-Tools hochladen oder externe KI-Add-ons einbinden, beachten Sie diese Regeln:
 
-- **Datenschutz & Compliance:** Nutzen Sie ausschließlich die nativen, DSGVO-konformen Funktionen Ihrer Firmen-Workspace-Umgebung. Vermeiden Sie ungeprüfte Drittanbieter-Add-ons aus dem Google Workspace Marketplace, die Zugriff auf sensible Finanzdaten fordern.
-- **Immer lokal sichern:** Erstellen Sie vor grossen Umbauten immer eine manuelle Kopie über **Datei > Versionsverlauf > Versionsverlauf benennen**, falls eine Formel im Eifer des Gefechts überschrieben wird.
+- Datenschutz & Compliance: Nutzen Sie ausschließlich die nativen, DSGVO-konformen Funktionen Ihrer Firmen-Workspace-Umgebung. Vermeiden Sie ungeprüfte Drittanbieter-Add-ons aus dem Google Workspace Marketplace, die Zugriff auf sensible Finanzdaten fordern.
+- Immer lokal sichern: Erstellen Sie vor grossen Umbauten immer eine manuelle Kopie über Datei > Versionsverlauf > Versionsverlauf benennen, falls eine Formel im Eifer des Gefechts überschrieben wird.
 
 ---
 

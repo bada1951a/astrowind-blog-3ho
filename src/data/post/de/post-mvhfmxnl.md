@@ -23,9 +23,9 @@ Genau in solchen Momenten bricht das klassische, manuelle Arbeiten im Controllin
 
 Bevor wir zu der schnellen KI-Lösung kommen, sollten wir kurz analysieren, warum die bisherige Methode regelmäßig in Stress ausartet:
 
-1. **Fehlende Saisonalitäts-Erkennung in Standard-Formeln:** Einfache Excel-Formeln wie der gleitende Durchschnitt ignorieren plötzliche Marktschwankungen, Feiertage oder Aktionen komplett.
-2. **Manuelle Dateninkonsistenzen:** Verschiedene Abteilungen liefern Daten in unterschiedlichen Formaten. Das Bereinigen dauert oft doppelt so lange wie die eigentliche Analyse.
-3. **Mangelnde Flexibilität bei What-If-Szenarien:** Wenn der Vorstand fragt: "Was passiert, wenn die Lieferkette um 15 Prozent einbricht?", müssen Sie das Modell komplett neu aufsetzen.
+1. Fehlende Saisonalitäts-Erkennung in Standard-Formeln: Einfache Excel-Formeln wie der gleitende Durchschnitt ignorieren plötzliche Marktschwankungen, Feiertage oder Aktionen komplett.
+2. Manuelle Dateninkonsistenzen: Verschiedene Abteilungen liefern Daten in unterschiedlichen Formaten. Das Bereinigen dauert oft doppelt so lange wie die eigentliche Analyse.
+3. Mangelnde Flexibilität bei What-If-Szenarien: Wenn der Vorstand fragt: "Was passiert, wenn die Lieferkette um 15 Prozent einbricht?", müssen Sie das Modell komplett neu aufsetzen.
 
 ## Schritt-für-Schritt-Anleitung: KI-Bestandsvorhersage direkt in Excel
 
@@ -47,9 +47,9 @@ berechneten Zielwerte direkt in einer neuen Tabelle aus.
 ### Schritt 3: Nutzung der integrierten Excel-Prognoseblätter
 Wenn Sie ohne externe KI-Add-Ins arbeiten möchten, nutzen Sie das native Werkzeug von Excel, das im Hintergrund mit exponentieller Glättung (ETS-Algorithmus) arbeitet:
 1. Markieren Sie Ihre Datenreihe (Datum und Verkaufszahlen).
-2. Navigieren Sie in der Menüleiste auf **Daten > Prognoseblatt** (Forecast Sheet).
+2. Navigieren Sie in der Menüleiste auf Daten > Prognoseblatt (Forecast Sheet).
 3. Wählen Sie als Prognoseende das Ende des nächsten Quartals.
-4. Klicken Sie auf **Erstellen**, um ein voll dynamisches, KI-unterstütztes Diagramm inklusive oberer und unterer Konfidenzintervalle zu erhalten.
+4. Klicken Sie auf Erstellen, um ein voll dynamisches, KI-unterstütztes Diagramm inklusive oberer und unterer Konfidenzintervalle zu erhalten.
 
 <div style="border-left: 4px solid #8b5cf6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Wichtiger Hinweis zum Datenschutz:</strong> Wenn Sie interne Unternehmensdaten in KI-Tools eingeben, stellen Sie sicher, dass Sie die DSGVO-konformen Enterprise-Versionen Ihrer Software (wie Microsoft 365 Copilot mit Unternehmensdatenschutz) verwenden. Speisen Sie niemals vertrauliche Bestandsdaten in öffentliche, kostenlose KI-Websites ein!

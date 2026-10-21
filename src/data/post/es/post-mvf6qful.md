@@ -26,9 +26,9 @@ Ese fue el punto de quiebre donde decidí dejar de sufrir con hojas de cálculo 
 
 Antes de aplicar la solución definitiva, analicemos por qué las herramientas nativas se quedan cortas ante este problema cotidiano:
 
-1. **Sensibilidad a mayúsculas y espacios:** La función nativa de Google Sheets "Eliminar duplicados" distingue entre "Juan Pérez" y "juan perez" o celdas con espacios ocultos al final, dejándolos intactos.
-2. **Variaciones en razones sociales:** Los nombres de empresas se registran de mil formas diferentes ("Telefónica España", "Telefonica", "Telefónica S.A."), lo que confunde a las fórmulas lógicas estándar como BUSCARV o COINCIDIR.
-3. **Falta de contexto relacional:** Las fórmulas complejas de Apps Script requieren tiempo de programación que no tienes cuando el comité directivo está esperando en la sala de juntas.
+1. Sensibilidad a mayúsculas y espacios: La función nativa de Google Sheets "Eliminar duplicados" distingue entre "Juan Pérez" y "juan perez" o celdas con espacios ocultos al final, dejándolos intactos.
+2. Variaciones en razones sociales: Los nombres de empresas se registran de mil formas diferentes ("Telefónica España", "Telefonica", "Telefónica S.A."), lo que confunde a las fórmulas lógicas estándar como BUSCARV o COINCIDIR.
+3. Falta de contexto relacional: Las fórmulas complejas de Apps Script requieren tiempo de programación que no tienes cuando el comité directivo está esperando en la sala de juntas.
 
 ---
 
@@ -57,11 +57,11 @@ Abre el panel lateral de Gemini en Google Workspace o copia los datos en la inte
 
 ## Preguntas Frecuentes (FAQ)
 
-**¿Qué hago si la lista de clientes supera las diez mil filas y Gemini se corta?**
+¿Qué hago si la lista de clientes supera las diez mil filas y Gemini se corta?
 Divide tu base de datos en bloques lógicos de tres mil o cuatro mil filas (por ejemplo, dividiendo alfabéticamente por la inicial del cliente). Procesar lotes más pequeños garantiza que la IA no omita registros debido a límites de tokens en una sola respuesta.
 
-**¿Puedo automatizar esto para que se ejecute solo cada lunes por la mañana?**
+¿Puedo automatizar esto para que se ejecute solo cada lunes por la mañana?
 Sí. Puedes conectar este flujo utilizando Google Apps Script junto con la API de Gemini, configurando un activador temporal (*trigger*) para que limpie la hoja de clientes automáticamente antes de que llegues a la oficina.
 
-**¿Qué pasa si Gemini une por error a dos clientes diferentes con nombres similares?**
+¿Qué pasa si Gemini une por error a dos clientes diferentes con nombres similares?
 La IA es excelente detectando patrones, pero siempre debes revisar visualmente el resultado en la columna de nombres normalizados antes de presentar métricas oficiales. Mantén siempre una copia de seguridad en una pestaña oculta llamada `Backup_Bruto`.

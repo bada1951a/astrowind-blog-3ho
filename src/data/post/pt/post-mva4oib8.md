@@ -23,9 +23,9 @@ Neste guia prático, vou te mostrar o passo a passo exato de como usar o ChatGPT
 
 Antes de aplicar a solução definitiva, vale entender os três vilões clássicos que travam nosso fluxo de trabalho nessas horas:
 
-1. **A opacidade da sintaxe do Google Sheets:** Funções de expressão regular (`REGEXMATCH`, `REGEXEXTRACT`, `REGEXREPLACE`) exigem uma lógica de caracteres curinga estrita. Um único ponto ou barra invertida esquecida quebra toda a lógica.
-2. **Fórmulas monstro intraduzíveis:** Tentar aninhar `SE`, `PROCV`, `FACHADA`, `CORRESP` e tratamentos de erro cria um texto ilegível que ninguém consegue dar manutenção depois.
-3. **Falta de contexto no prompt:** Pedir ao ChatGPT apenas "me dê uma fórmula para limpar dados" traz respostas genéricas que não servem para a estrutura real das suas colunas.
+1. A opacidade da sintaxe do Google Sheets: Funções de expressão regular (`REGEXMATCH`, `REGEXEXTRACT`, `REGEXREPLACE`) exigem uma lógica de caracteres curinga estrita. Um único ponto ou barra invertida esquecida quebra toda a lógica.
+2. Fórmulas monstro intraduzíveis: Tentar aninhar `SE`, `PROCV`, `FACHADA`, `CORRESP` e tratamentos de erro cria um texto ilegível que ninguém consegue dar manutenção depois.
+3. Falta de contexto no prompt: Pedir ao ChatGPT apenas "me dê uma fórmula para limpar dados" traz respostas genéricas que não servem para a estrutura real das suas colunas.
 
 ---
 
@@ -59,18 +59,18 @@ Copie a fórmula fornecida pela IA (geralmente algo combinando `REGEXEXTRACT` co
 
 Trabalhar com ferramentas de IA exige atenção redobrada à segurança da informação corporativa. 
 
-- **Nunca envie dados confidenciais reais:** Se estiver limpando uma base de clientes da empresa, salários ou CPFs verdadeiros, substitua os valores por dados fictícios (ex: `Cliente A`, `CPF 000.000.000-00`) antes de enviar para o ChatGPT.
-- **Faça backup local:** Antes de rodar scripts complexos ou substituir colunas inteiras com fórmulas geradas por IA, duplique a aba da sua planilha (`Clicar com botão direito na aba > Duplicar`). Prevenir a perda de dados em meio à correria salva seu emprego e sua sanidade.
+- Nunca envie dados confidenciais reais: Se estiver limpando uma base de clientes da empresa, salários ou CPFs verdadeiros, substitua os valores por dados fictícios (ex: `Cliente A`, `CPF 000.000.000-00`) antes de enviar para o ChatGPT.
+- Faça backup local: Antes de rodar scripts complexos ou substituir colunas inteiras com fórmulas geradas por IA, duplique a aba da sua planilha (`Clicar com botão direito na aba > Duplicar`). Prevenir a perda de dados em meio à correria salva seu emprego e sua sanidade.
 
 ---
 
 ### Perguntas Frequentes (FAQ)
 
-**1. O ChatGPT costuma errar a sintaxe do Google Sheets em comparação ao Excel?**
+1. O ChatGPT costuma errar a sintaxe do Google Sheets em comparação ao Excel?
 Sim, às vezes a IA confunde funções exclusivas do Excel (como `PROCX` ou sintaxes de separador de argumentos) com o Google Sheets. Se isso acontecer, basta responder no chat: *"Ajuste essa fórmula estritamente para o padrão do Google Sheets, usando vírgula como separador de argumentos e funções compatíveis"*.
 
-**2. Posso usar essa técnica para criar macros ou Apps Script também?**
+2. Posso usar essa técnica para criar macros ou Apps Script também?
 Com certeza. Se a limpeza de dados exigir loops complexos que travam as fórmulas da planilha, peça ao ChatGPT: *"Escreva uma função personalizada em Google Apps Script para automatizar essa limpeza"*. Ele vai gerar o código que você pode colar em `Extensões > Apps Script`.
 
-**3. Como lidar com erros #VALOR! repentinos após colar a fórmula?**
+3. Como lidar com erros #VALOR! repentinos após colar a fórmula?
 Geralmente isso ocorre porque há células em branco na sua seleção ou o formato do texto está como "Automático" e gera conflito. Peça para a IA incluir um tratamento de erro na fórmula, como `SEERRO(sua_formula_aqui; "Dado Inválido")`.

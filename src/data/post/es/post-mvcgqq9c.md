@@ -23,9 +23,9 @@ Revisar celda por celda en un archivo de más de 80,000 filas y 45 columnas era 
 
 Antes de aplicar la solución automatizada, veamos por qué este archivo se convirtió en una bomba de tiempo:
 
-1. **Rangos fantasma (Bloat):** Excel cree que tus datos llegan hasta la fila 1,048,576 aunque solo uses 500 filas, calculando millones de celdas vacías con formato invisible.
-2. **Funciones volátiles abusivas:** Uso excesivo y anidado de BUSCARV (VLOOKUP), INDIRECTO (INDIRECT) y DESREF (OFFSET) que se recalculan por completo cada vez que tocas una sola celda.
-3. **Corrupción de XML internos:** Archivos `.xlsx` que acumulan estilos duplicados, nombres definidos rotos y conexiones de datos obsoletas en su estructura comprimida.
+1. Rangos fantasma (Bloat): Excel cree que tus datos llegan hasta la fila 1,048,576 aunque solo uses 500 filas, calculando millones de celdas vacías con formato invisible.
+2. Funciones volátiles abusivas: Uso excesivo y anidado de BUSCARV (VLOOKUP), INDIRECTO (INDIRECT) y DESREF (OFFSET) que se recalculan por completo cada vez que tocas una sola celda.
+3. Corrupción de XML internos: Archivos `.xlsx` que acumulan estilos duplicados, nombres definidos rotos y conexiones de datos obsoletas en su estructura comprimida.
 
 ---
 
@@ -83,11 +83,11 @@ Ejecuta este script en tu entorno local de Python o directamente en la interfaz 
 
 ### Preguntas Frecuentes (FAQ)
 
-**¿Necesito saber programar en Python para usar este truco?**
+¿Necesito saber programar en Python para usar este truco?
 Para nada. Solo necesitas copiar el archivo, pedirle el script a ChatGPT y ejecutarlo usando herramientas como Google Colab (que funciona directamente en el navegador sin instalar nada) o ejecutando el código que la IA te proporciona paso a paso.
 
-**¿Qué hago si el archivo de Excel tiene contraseña y Python no puede leerlo?**
+¿Qué hago si el archivo de Excel tiene contraseña y Python no puede leerlo?
 Debes remover la contraseña temporalmente desde la aplicación de escritorio de Excel (Archivo > Información > Proteger libro > Cifrar con contraseña, dejando el campo en blanco y guardando) antes de pasarle el archivo al script de análisis.
 
-**¿Por qué es mejor usar Python que las herramientas nativas de Excel para reparar esto?**
+¿Por qué es mejor usar Python que las herramientas nativas de Excel para reparar esto?
 Porque cuando un archivo está corrupto o saturado de metadatos basura en su estructura XML interna, la interfaz gráfica de Excel suele colapsar al intentar procesarlo. Python accede directamente a los componentes internos del archivo comprimido, eliminando el problema de raíz en segundos.

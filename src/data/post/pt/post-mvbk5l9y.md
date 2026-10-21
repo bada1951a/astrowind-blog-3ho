@@ -19,9 +19,9 @@ Eram 18h40 de uma sexta-feira chuvosa no escritório na Avenida Paulista, e o fe
 
 Antes de montarmos a solução definitiva, vale a pena entender os três vilões clássicos que sabotam as planilhas financeiras nas empresas:
 
-1. **O Custo Oculto dos Plugins de Terceiros:** Ferramentas que prometem conversão mágica cobram mensalidades em dólar, exigem renovação de token constante e frequentemente param de funcionar após atualizações de segurança do navegador ou da própria planilha.
-2. **Links Frágeis com Web Scraping Amador:** O uso excessivo da função IMPORTXML em sites de notícias para capturar cotações falha porque os portais mudam a estrutura HTML das páginas sem aviso prévio, gerando erros em cadeia nos relatórios gerenciais.
-3. **Falta de Padronização de Moedas:** Misturar abreviações manuais (USD, US, Dólar) sem uma base centralizada de códigos ISO impede que funções matemáticas reconheçam os dados, exigindo limpezas manuais exaustivas antes de gerar gráficos.
+1. O Custo Oculto dos Plugins de Terceiros: Ferramentas que prometem conversão mágica cobram mensalidades em dólar, exigem renovação de token constante e frequentemente param de funcionar após atualizações de segurança do navegador ou da própria planilha.
+2. Links Frágeis com Web Scraping Amador: O uso excessivo da função IMPORTXML em sites de notícias para capturar cotações falha porque os portais mudam a estrutura HTML das páginas sem aviso prévio, gerando erros em cadeia nos relatórios gerenciais.
+3. Falta de Padronização de Moedas: Misturar abreviações manuais (USD, US, Dólar) sem uma base centralizada de códigos ISO impede que funções matemáticas reconheçam os dados, exigindo limpezas manuais exaustivas antes de gerar gráficos.
 
 ---
 
@@ -52,7 +52,7 @@ Para converter esses valores para Real (BRL) de forma automática e dinâmica, u
 Essa fórmula identifica instantaneamente a moeda da linha, busca o fator de conversão atualizado na aba de parâmetros e multiplica pelo valor original, entregando o resultado exato em segundos.
 
 ### Passo 3: Configurar Atualização Automática e Alerta de Falhas
-Por padrão, o Google Sheets atualiza funções financieras automaticamente ao longo do dia. Para garantir que seu relatório reflita sempre o fechamento mais recente, vá em **Arquivo > Configurações da planilha** e, na aba **Cálculo**, ajuste a opção "Recalcular" para "A cada hora e a cada alteração".
+Por padrão, o Google Sheets atualiza funções financieras automaticamente ao longo do dia. Para garantir que seu relatório reflita sempre o fechamento mais recente, vá em Arquivo > Configurações da planilha e, na aba Cálculo, ajuste a opção "Recalcular" para "A cada hora e a cada alteração".
 
 <div style="border-left: 4px solid #3b82f6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Dica de Ouro:</strong> Para evitar que um erro temporário de conexão da API deixe sua célula em branco, envolva sua fórmula principal com a função SEERRO, exibindo a última taxa válida ou um aviso visual amigável: <code>=SEERRO(GOOGLEFINANCE(B2); "Verificar Conexão")</code>.
@@ -64,8 +64,8 @@ Por padrão, o Google Sheets atualiza funções financieras automaticamente ao l
 
 Mesmo automatizando o processo, alguns cuidados evitam dores de cabeça com auditorias internas:
 
-- **Histórico de Cotações:** A função GOOGLEFINANCE puxa o valor do momento. Para relatórios contábeis que exigem a taxa exata do último dia útil do mês, crie uma coluna estática de "Taxa de Fechamento" onde você cola os valores como texto no último dia do mês, travando o dado contra variações futuras.
-- **Controle de Versão:** Nunca compartilhe a aba de parâmetros de fórmulas com múltiplos editores sem permissão de bloqueio, para evitar que alguém apague acidentalmente as referências dos pares de moedas.
+- Histórico de Cotações: A função GOOGLEFINANCE puxa o valor do momento. Para relatórios contábeis que exigem a taxa exata do último dia útil do mês, crie uma coluna estática de "Taxa de Fechamento" onde você cola os valores como texto no último dia do mês, travando o dado contra variações futuras.
+- Controle de Versão: Nunca compartilhe a aba de parâmetros de fórmulas com múltiplos editores sem permissão de bloqueio, para evitar que alguém apague acidentalmente as referências dos pares de moedas.
 
 ---
 

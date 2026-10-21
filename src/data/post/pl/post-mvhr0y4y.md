@@ -1,7 +1,7 @@
 ---
 title: "Interaktywne modele finansowe w Google Sheets z AI: Ratunek dla raportu zarządu"
 description: "Dowiedz się, jak szybko naprawić awarię finansową w arkuszu i zbudować interaktywne wykresy z pomocą AI, unikając stresu przed spotkaniem zarządu."
-publishDate: 2026-10-21T19:45:00.000Z
+publishDate: 2026-10-22T03:00:00.000Z
 image: 'https://picsum.photos/seed/work-mvhr38nx-9-c/1200/675.jpg'
 category: 'automation'
 tags: ["Google Sheets", "AI Tools", "Financial Modeling", "Office Tips"]

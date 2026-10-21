@@ -1,4 +1,3 @@
-How to Use AI to Predict Next Quarter Inventory Needs Directly in Excel Spreadsheets
 How to Create Interactive Financial Modeling Charts in Google Sheets with AI Suggestions
 How to Calculate Working Hours and Overtime Automatically in Excel Using Simple AI Formulas
 How to Auto-Split Address and Phone Number Columns in Excel with ChatGPT Assistance

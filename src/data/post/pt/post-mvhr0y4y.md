@@ -1,7 +1,7 @@
 ---
 title: "Como Criar Gráficos Financeiros Interativos no Google Planilhas com IA"
 description: "Resolva o fechamento de relatórios em São Paulo criando gráficos financeiros interativos com sugestões de IA no Google Planilhas."
-publishDate: 2026-10-21T17:15:00.000Z
+publishDate: 2026-10-22T03:00:00.000Z
 image: 'https://picsum.photos/seed/work-mvhr2q70-7-c/1200/675.jpg'
 category: 'automation'
 tags: ["Google Planilhas", "Inteligencia Artificial", "Produtividade", "Financas"]

@@ -1,7 +1,7 @@
 ---
 title: "Interaktive Finanzmodelle in Google Sheets mit KI-Vorschlägen erstellen"
 description: "Schluss mit Excel-Chaos vor dem Quartalsmeeting: So erstellen Sie interaktive Finanzmodelle in Google Sheets und nutzen KI-Vorschläge."
-publishDate: 2026-10-21T12:15:00.000Z
+publishDate: 2026-10-22T03:00:00.000Z
 image: 'https://picsum.photos/seed/work-mvhr1pvo-3-c/1200/675.jpg'
 category: 'automation'
 tags: ["Google Sheets", "KI Tools", "Finanzmodellierung", "Automatisierung"]

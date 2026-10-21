@@ -1,7 +1,7 @@
 ---
 title: "Interactieve Financiële Modellen in Google Sheets met AI: Van Paniek op de Zuidas tot Strakke Directiegrafieken"
 description: "Ontdek hoe je bliksemsnel interactieve financiële grafieken bouwt in Google Sheets met AI-suggesties en directieklaar maakt voor je meeting."
-publishDate: 2026-10-21T18:30:00.000Z
+publishDate: 2026-10-22T03:00:00.000Z
 image: 'https://picsum.photos/seed/work-mvhr2yo8-8-c/1200/675.jpg'
 category: 'automation'
 tags: ["Google Sheets", "AI Tools", "Financiële Modellen", "Productiviteit", "Zuidas"]

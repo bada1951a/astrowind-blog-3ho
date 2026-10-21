@@ -1,7 +1,7 @@
 ---
 title: "Googleスプレッドシート×AIで財務モデリングのインタラクティブなグラフを作る方法"
 description: "品川のオフィスで月末の売上集計締切直前に数式エラーが発生！AI提案を活用してGoogleスプレッドシートで動的な財務モデリンググラフを作成し、修羅場を乗り切る実践的ワークフロー。"
-publishDate: 2026-10-21T11:00:00.000Z
+publishDate: 2026-10-22T03:00:00.000Z
 image: 'https://picsum.photos/seed/work-mvhr1ftb-2-c/1200/675.jpg'
 category: 'automation'
 tags: ["Google Sheets", "AI Tools", "Financial Modeling", "Workflow Automation"]

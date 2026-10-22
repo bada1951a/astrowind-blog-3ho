@@ -41,7 +41,7 @@ function getKstPublishDateIso(index) {
 }
 
 // =========================================================================
-// 본문 마크다운 별표(**) 및 FAQ 붙어 깨짐 현상 원천 정제 함수
+// 본문 마크다운 별표(**) 및 FAQ 붙어 깨짐 현상 원천 정제 함수 (완벽 강화 버전)
 // =========================================================================
 function sanitizeMarkdownFormatting(content) {
   let cleaned = content;
@@ -54,8 +54,10 @@ function sanitizeMarkdownFormatting(content) {
   cleaned = cleaned.replace(/\*\*\s+([^\*\n]+?)\*\*/g, '**$1**');
   cleaned = cleaned.replace(/\*\*([^\*\n]+?)\s+\*\*/g, '**$1**');
 
-  // ⚡ FAQ 영역에서 **Q1... **A1... 형태로 한 줄에 붙어 깨지는 현상 자동 줄바꿈 교정
-  cleaned = cleaned.replace(/\*\*Q([0-9]+)\.\s*([^\*]+)\*\*A\1\./g, '**Q$1. $2**\n\n**A$1.**');
+  // ⚡ FAQ 영역에서 Q와 A 사이에 공백이나 줄바꿈이 어떻게 꼬여 있든 완벽한 2줄 개행으로 강제 분리
+  cleaned = cleaned.replace(/\*\*Q([0-9]+)\.\s*([\s\S]*?)\*\*A\1\./g, (match, qNum, qText) => {
+    return `**Q${qNum}. ${qText.trim()}**\n\n**A${qNum}.**`;
+  });
 
   const lines = cleaned.split('\n');
   const fixedLines = lines.map(line => {

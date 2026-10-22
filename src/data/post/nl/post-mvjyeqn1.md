@@ -66,10 +66,10 @@ Hiermee scheid je direct de reguliere uren van de overuren, zonder dat je bang h
 
 ## Veelgestelde Vragen (FAQ)
 
-**Q1. Wat moet ik doen als Excel de berekende uren weergeeft als vreemde datums zoals 02-01-1900?**
+**Q1. Wat moet ik doen als Excel de berekende uren weergeeft als vreemde datums zoals 02-01-1900?****
 
-**A1.****Dit komt doordat de celeigenschappen nog op 'Datum' staan in plaats van 'Standaard' of 'Getal'. Selecteer de betreffende kolommen, klik met je rechtermuisknop, kies [**Celeigenschappen**] en zet de opmaak op [**Getal**] met twee decimalen.**Q2. Hoe voorkom ik dat er in de toekomst weer 'kopie' bestanden ontstaan in onze cloudmap?****
+**A1.******Dit komt doordat de celeigenschappen nog op 'Datum' staan in plaats van 'Standaard' of 'Getal'. Selecteer de betreffende kolommen, klik met je rechtermuisknop, kies [**Celeigenschappen**] en zet de opmaak op [**Getal**] met twee decimalen.**Q2. Hoe voorkom ik dat er in de toekomst weer 'kopie' bestanden ontstaan in onze cloudmap?******
 
-**A2.****Maak gebruik van de co-authoring functie binnen de online versie van het rekenblad in plaats van het lokaal te openen en te uploaden. Als er toch versies ontstaan, gebruik dan de optie [**Gegevens > Gegevens ophalen**] via [**Power Query**] om de tabellen geautomatiseerd samen te voegen op basis van unieke medewerkers-ID's.**Q3. Kan deze AI-formule ook overweg met nachtdiensten die doorlopen na middernacht?****
+**A2.******Maak gebruik van de co-authoring functie binnen de online versie van het rekenblad in plaats van het lokaal te openen en te uploaden. Als er toch versies ontstaan, gebruik dan de optie [**Gegevens > Gegevens ophalen**] via [**Power Query**] om de tabellen geautomatiseerd samen te voegen op basis van unieke medewerkers-ID's.**Q3. Kan deze AI-formule ook overweg met nachtdiensten die doorlopen na middernacht?******
 
-**A3.** Ja, maar dan moet je de formule iets aanpassen omdat de eindtijd dan kleiner is dan de starttijd. Vraag de AI specifiek om een nachtdienst-formule door de toevoeging: "De eindtijd kan op de volgende dag vallen." De AI gebruikt dan de `REST`-functie om dit feilloos op te lossen.
+**A3.**** Ja, maar dan moet je de formule iets aanpassen omdat de eindtijd dan kleiner is dan de starttijd. Vraag de AI specifiek om een nachtdienst-formule door de toevoeging: "De eindtijd kan op de volgende dag vallen." De AI gebruikt dan de `REST`-functie om dit feilloos op te lossen.

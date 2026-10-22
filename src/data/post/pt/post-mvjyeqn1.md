@@ -68,10 +68,10 @@ Cole o resultado gerado diretamente na célula de pagamento e arraste para toda 
 
 ## Perguntas Frequentes (FAQ)
 
-**Q1. Por que o resultado da minha soma de horas exibe valores negativos ou errados no Excel?**
+**Q1. Por que o resultado da minha soma de horas exibe valores negativos ou errados no Excel?****
 
-**A1.****O Excel não exibe horas negativas por padrão e pode reiniciar a contagem após 24 horas. Certifique-se de formatar a célula personalizada como `[h]:mm:ss` para que o acumulador de horas funcione corretamente sem resetar.**Q2. Como evitar que o arquivo volte a se dividir em cópias na nuvem?****
+**A1.******O Excel não exibe horas negativas por padrão e pode reiniciar a contagem após 24 horas. Certifique-se de formatar a célula personalizada como `[h]:mm:ss` para que o acumulador de horas funcione corretamente sem resetar.**Q2. Como evitar que o arquivo volte a se dividir em cópias na nuvem?******
 
-**A2.****Estabeleça um fluxo onde apenas um colaborador por vez edita a planilha principal, ou migre a estrutura de controle para uma lista compartilhada online onde o bloqueio de edição simultânea previne a criação de versões conflitantes.**Q3. Posso usar essa mesma lógica para calcular adicional noturno?****
+**A2.******Estabeleça um fluxo onde apenas um colaborador por vez edita a planilha principal, ou migre a estrutura de controle para uma lista compartilhada online onde o bloqueio de edição simultânea previne a criação de versões conflitantes.**Q3. Posso usar essa mesma lógica para calcular adicional noturno?******
 
-**A3.** Sim. Você pode criar colunas auxiliares que verificam se o horário de saída ultrapassou as 22:00 e aplicar a proporção da hora noturna reduzida (52 minutos e 30 segundos) através de uma função lógica simples com SE e HORARIO.
+**A3.**** Sim. Você pode criar colunas auxiliares que verificam se o horário de saída ultrapassou as 22:00 e aplicar a proporção da hora noturna reduzida (52 minutos e 30 segundos) através de uma função lógica simples com SE e HORARIO.

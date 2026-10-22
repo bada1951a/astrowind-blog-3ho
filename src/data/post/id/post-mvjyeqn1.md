@@ -70,10 +70,10 @@ Selalu buat salinan cadangan atau [**Backup**] di direktori terpisah sebelum men
 
 ### Pertanyaan yang Sering Diajukan (FAQ)
 
-**Q1. Mengapa hasil pengurangan jam di Excel saya sering muncul tanda pagar atau eror nilai?**
+**Q1. Mengapa hasil pengurangan jam di Excel saya sering muncul tanda pagar atau eror nilai?****
 
-**A1.****Hal tersebut biasanya terjadi karena format sel pada kolom jam masih terbaca sebagai teks, atau nilai jam keluar lebih kecil dari jam masuk (misalnya melewati pergantian hari tengah malam). Pastikan sel diatur ke format waktu atau gunakan fungsi tambahan untuk menangani jam kerja lintas hari.**Q2. Bisakah rumus AI ini digunakan untuk menghitung hari libur atau akhir pekan secara otomatis?****
+**A1.******Hal tersebut biasanya terjadi karena format sel pada kolom jam masih terbaca sebagai teks, atau nilai jam keluar lebih kecil dari jam masuk (misalnya melewati pergantian hari tengah malam). Pastikan sel diatur ke format waktu atau gunakan fungsi tambahan untuk menangani jam kerja lintas hari.**Q2. Bisakah rumus AI ini digunakan untuk menghitung hari libur atau akhir pekan secara otomatis?******
 
-**A2.****Bisa. Anda dapat meminta AI untuk menggabungkan rumus di atas dengan fungsi [**NETWORKDAYS**] atau [**WEEKDAY**] agar sistem secara otomatis mengenali hari libur nasional di Indonesia dan tidak keliru menghitung lembur pada hari kerja biasa.**Q3. Bagaimana cara mencegah file master kantor tertimpa secara tidak sengaja oleh skrip otomatisasi di masa mendatang?****
+**A2.******Bisa. Anda dapat meminta AI untuk menggabungkan rumus di atas dengan fungsi [**NETWORKDAYS**] atau [**WEEKDAY**] agar sistem secara otomatis mengenali hari libur nasional di Indonesia dan tidak keliru menghitung lembur pada hari kerja biasa.**Q3. Bagaimana cara mencegah file master kantor tertimpa secara tidak sengaja oleh skrip otomatisasi di masa mendatang?******
 
-**A3.****Selalu simpan templat master laporan dalam format [**Excel Template (.xltx)**] atau atur atribut file menjadi [**Read-Only] pada tingkat properti folder jaringan, sehingga setiap kali file dibuka, pengguna wajib menyimpannya sebagai dokumen baru dengan nama yang berbeda.
+**A3.******Selalu simpan templat master laporan dalam format [**Excel Template (.xltx)**] atau atur atribut file menjadi [**Read-Only] pada tingkat properti folder jaringan, sehingga setiap kali file dibuka, pengguna wajib menyimpannya sebagai dokumen baru dengan nama yang berbeda.

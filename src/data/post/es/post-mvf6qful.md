@@ -17,7 +17,11 @@ Ese fue el punto de quiebre donde decidí dejar de sufrir con hojas de cálculo 
 
 <div style="border-left: 4px solid #64748b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Ticket de Soporte Técnico #MS-2026-04</strong><br>
-<strong>Síntoma:</strong> Duplicados masivos en base de datos de clientes con variaciones tipográficas (ej. "Empresa S.A.", "Empresa SA", "empresa s.a.").<br>
+<strong>Síntoma:</strong> Duplicados masivos en base de datos de clientes con variaciones tipográficas (ej. "Empresa S.
+
+A.", "Empresa SA", "empresa s.
+
+a.").<br>
 <strong>Impacto:</strong> Métricas de conversión infladas y riesgo de fallo en presentación ejecutiva.<br>
 <strong>Solución rápida:</strong> Automatización mediante prompt estructurado en Gemini para Google Workspace.
 </div>
@@ -27,7 +31,9 @@ Ese fue el punto de quiebre donde decidí dejar de sufrir con hojas de cálculo 
 Antes de aplicar la solución definitiva, analicemos por qué las herramientas nativas se quedan cortas ante este problema cotidiano:
 
 1. Sensibilidad a mayúsculas y espacios: La función nativa de Google Sheets "Eliminar duplicados" distingue entre "Juan Pérez" y "juan perez" o celdas con espacios ocultos al final, dejándolos intactos.
-2. Variaciones en razones sociales: Los nombres de empresas se registran de mil formas diferentes ("Telefónica España", "Telefonica", "Telefónica S.A."), lo que confunde a las fórmulas lógicas estándar como BUSCARV o COINCIDIR.
+2. Variaciones en razones sociales: Los nombres de empresas se registran de mil formas diferentes ("Telefónica España", "Telefonica", "Telefónica S.
+
+A."), lo que confunde a las fórmulas lógicas estándar como BUSCARV o COINCIDIR.
 3. Falta de contexto relacional: Las fórmulas complejas de Apps Script requieren tiempo de programación que no tienes cuando el comité directivo está esperando en la sala de juntas.
 
 ---
@@ -42,7 +48,9 @@ Selecciona únicamente las columnas críticas que necesitas depurar (por ejemplo
 ### Paso 2: Ejecución del Prompt Maestro en Gemini
 Abre el panel lateral de Gemini en Google Workspace o copia los datos en la interfaz web de Gemini. Utiliza este prompt exacto y directo al grano:
 
-> "Actúa como un analista de datos experto en Google Sheets. Tengo una lista de clientes con nombres duplicados debido a errores tipográficos, mayúsculas y variaciones en sufijos legales (como S.A., SL, etc.). Analiza los datos pegados a continuación, unifica los registros que correspondan a la misma entidad real basándote en el correo electrónico o similitud de nombre, y devuélveme una tabla limpia en formato CSV con tres columnas: ID Único, Nombre Normalizado y Correo Principal. No incluyas texto adicional, solo los datos listos para copiar."
+> "Actúa como un analista de datos experto en Google Sheets. Tengo una lista de clientes con nombres duplicados debido a errores tipográficos, mayúsculas y variaciones en sufijos legales (como S.
+
+A., SL, etc.). Analiza los datos pegados a continuación, unifica los registros que correspondan a la misma entidad real basándote en el correo electrónico o similitud de nombre, y devuélveme una tabla limpia en formato CSV con tres columnas: ID Único, Nombre Normalizado y Correo Principal. No incluyas texto adicional, solo los datos listos para copiar."
 
 ### Paso 3: Importación y validación rápida
 1. Copia la tabla limpia que te devolvió Gemini.

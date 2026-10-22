@@ -72,22 +72,14 @@ AI wypluje dla ciebie gotowe formuły. Dla kolumny F (Czas pracy) otrzymasz zazw
 
 ## Często Zadawane Pytania (FAQ)
 
-
-
 Q1. Co zrobić, gdy Excel zamiast wyniku pokazuje serię płotków (#####)?
-
-
 
 A1.Oznacza to, że kolumna jest zbyt wąska, aby pomieścić wynik, albo wynik działania na czasie dał wartość ujemną (np. pracownik wyszedł wcześniej, niż wskazał wejście). Rozszerz kolumnę lub sprawdź poprawność wpisanych godzin.
 
 Q2. Jak zmusić Excela do poprawnego liczenia nadgodzin nocnych przechodzących przez północ?
 
-
-
 A2.Poproś AI o zmodyfikowanie formuły z użyciem funkcji `MOD`. Przykładowy prompt: "Napisz formułę Excela uwzględniającą zmianę nocną, gdzie wyjście następuje następnego dnia". Formuła zazwyczaj przyjmuje postać `=MOD(D2-C2; 1)`.
 
 Q3. Czy mogę zautomatyzować ten proces całkowicie, bez ręcznego wklejania formuł co miesiąc?
-
-
 
 A3.Tak. Najlepszym rozwiązaniem jest użycie wbudowanego w Excela narzędzia [Power Query] (znajdziesz je w zakładce [Dane] > [Pobierz dane]). Pozwala ono zapisać reguły czyszczenia danych i obliczeń raz, a potem po prostu klikać [Odśwież] przy każdym nowym raporcie miesięcznym.

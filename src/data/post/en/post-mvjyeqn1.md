@@ -80,22 +80,14 @@ Always maintain a raw data backup sheet before running global Find & Replace or 
 
 ### Frequently Asked Questions
 
-
-
 Q1. Why doesn't changing the cell format from Text to Number fix my SUM formula immediately?
-
-
 
 A1.Excel only evaluates formatting changes for newly typed data. Existing cells locked in text mode retain their string property until you explicitly force a recalculation, edit the cell individually, or pass them through a conversion function like `VALUE`.
 
 Q2. Can I fix this entire column at once without creating a helper column?
 
-
-
 A2.Yes. Type `1` into any empty cell, copy that cell (`Ctrl+C` or `Cmd+C`), highlight your corrupted text-number range, right-click, selectPaste Special, and chooseMultiply. This forces Excel to convert the entire range into numbers in one swift move, after which you can delete the spare `1`.
 
 Q3. How do I prevent time-tracking software exports from turning numbers into text in the first place?
-
-
 
 A3.Instead of double-clicking the CSV file to open it directly in Excel, open a blank workbook first, go to theDatatab, selectFrom Text/CSV, and step through the Power Query import wizard to properly define column data types before loading them into your sheet.

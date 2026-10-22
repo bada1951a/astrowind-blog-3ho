@@ -54,10 +54,13 @@ Incolla l'output pulito fornito da Gemini in un nuovo foglio di Google Sheets pe
 ## Domande Frequenti (FAQ)
 
 D: Posso automatizzare questo processo senza copiare e incollare i dati manualmente ogni volta?
+
 R: Sì. Se utilizzi Google Sheets, puoi integrare Gemini tramite Google Apps Script o estensioni dedicate per creare una funzione personalizzata che pulisce i dati in background ogni volta che un nuovo lead viene inserito.
 
 D: Come gestisce Gemini i casi in cui due clienti hanno lo stesso nome ma email diverse?
+
 R: A differenza delle formule rigide di Google Sheets, l'intelligenza artificiale comprende il contesto. Nel prompt puoi specificare esplicitamente di considerare come chiave primaria univoca l'indirizzo email e non il nome del contatto, evitando così di cancellare clienti distinti che condividono lo stesso nome.
 
 D: Cosa faccio se il file Google Sheets supera il limite di righe gestibili in una sola chat?
+
 R: Suddividi il database in blocchi da 1.000 righe ciascuno, oppure utilizza la funzione di analisi dei dati filtrando preventivamente le righe vuote o prive di email prima di interrogare Gemini.

@@ -41,22 +41,21 @@ function getKstPublishDateIso(index) {
 }
 
 // =========================================================================
-// 본문 마크다운 볼드(**) 기호 완전 제거 및 FAQ 줄바꿈 정제 함수 (최종 수정본)
+// [초경량 고속 정제 함수] 볼드 제거 및 다국어 문장/번호 붙음 완전 방어
 // =========================================================================
 function sanitizeMarkdownFormatting(content) {
-  let cleaned = content;
+  // 1) Gukuraho ibimenyetso byose bya bold (**)
+  let cleaned = content.replace(/\*\*/g, '');
 
-  // 1) Q와 A 사이에 문장이 붙어 있는 경우 강제 두 줄 개행
-  cleaned = cleaned.replace(/([^\n])\s*(Q[1-9]\.)/g, '$1\n\n$2');
-  cleaned = cleaned.replace(/([^\n])\s*(A[1-9]\.)/g, '$1\n\n$2');
+  // 2) Gushyiramo umwanya nyuma y'ikimenyetso cy'ikibazo (?) niba inyuguti ikurikiyeho yegeranye
+  cleaned = cleaned.replace(/\?([A-Za-z\u00C0-\u024F\u1EA0-\u1EF9])/g, '? $1');
 
-  // 2) FAQ 영역에서 Q와 A 블록이 꼬인 경우 완벽한 2줄 개행으로 정제
-  cleaned = cleaned.replace(/\*\*Q([0-9]+)\.\s*([\s\S]*?)\*\*A\1\./g, (match, qNum, qText) => {
-    return `Q${qNum}. ${qText.trim()}\n\nA${qNum}.`;
-  });
+  // 3) Gutandukanya interuro n'umubare w'urutonde ukurikiyeho (urugero: "끝.2. 시작" -> "끝.\n\n2. 시작")
+  cleaned = cleaned.replace(/([.?!])\s*([0-9]+\.\s+)/g, '$1\n\n$2');
 
-  // 3) 골칫거리인 모든 마크다운 볼드(**) 기호를 완전히 제거 (대제목/소제목 #은 안전하게 유지됨)
-  cleaned = cleaned.replace(/\*\*/g, '');
+  // 4) Gutunganya Q na A hamwe n'imitwe y'ibibazo mu zindi ndimi (D:, R:, Domande)
+  cleaned = cleaned.replace(/([^\n])\s*(Q[1-9]\.|R[1-9]\.|A[1-9]\.|D[1-9]\.)/g, '$1\n\n$2');
+  cleaned = cleaned.replace(/([.?!])\s*(Q[0-9]*\.|D:|R:|Risposta|Domande)/gi, '$1\n\n$2');
 
   return cleaned;
 }
@@ -164,7 +163,8 @@ const TARGET_LANGS = [
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 const fileSlug = `post-${Date.now().toString(36)}`;
 
-async function fetchWithRetry(prompt, maxRetries = 15, delayMs = 20000) {
+// Gukoresha igihe gito cyo gutegereza kugira ngo bitica umuvuduko (5s aho kuba 20s)
+async function fetchWithRetry(prompt, maxRetries = 5, delayMs = 5000) {
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
       const response = await ai.models.generateContent({
@@ -173,11 +173,10 @@ async function fetchWithRetry(prompt, maxRetries = 15, delayMs = 20000) {
       });
       return response.text;
     } catch (error) {
-      console.warn(`⚠️ [호출 지연/에러] 시도 ${attempt}/${maxRetries}:${error.message}`);
+      console.warn(`⚠️ [호출 지연/에러] 시도 ${attempt}/${maxRetries}: ${error.message}`);
       if (attempt === maxRetries) {
         throw error;
       }
-      console.log(`⏳ ${delayMs / 1000}초 동안 대기 후 다시 시도합니다...`);
       await delay(delayMs);
     }
   }
@@ -187,8 +186,7 @@ async function generateSinglePost(lang, index) {
   const selectedTheme = THEME_PRESETS[Math.floor(Math.random() * THEME_PRESETS.length)];
   const selectedScenario = AUTOMATION_CRISIS_SCENARIOS_30[Math.floor(Math.random() * AUTOMATION_CRISIS_SCENARIOS_30.length)];
 
-  console.log(`\n🚀 [${index + 1}/12]${lang.name} (${lang.code}) 3호기 자동화 포스팅 생성 중... (적용 테마: ${selectedTheme.name})`);
-  console.log(`   🎭 선택된 자동화 위기 시나리오: "${selectedScenario.slice(0, 30)}..."`);
+  console.log(`\n🚀 [${index + 1}/12] ${lang.name} (${lang.code}) 3호기 자동화 포스팅 생성 중... (적용 테마: ${selectedTheme.name})`);
 
   const { coverUrl, bodyUrl } = getPostImages(currentTopic, index);
   const pubDateIso = getKstPublishDateIso(index);
@@ -230,7 +228,7 @@ ${currentTopic}
 
 [MANDATORY OPENING VARIATION RULE - ZERO CLICHE REPETITION]
 - You MUST start the opening story based strictly on the assigned scenario: "${selectedScenario}".
-- ABSOLUTELY FORBIDDEN: Do NOT default to a generic "meeting in 15 minutes" trope. Adapt the specific incident (e.g., raw data corruption, broken formula before clocking out, massive CSV loading failure, missing webhooks) naturally into the local daily office culture of ${lang.name}.
+- ABSOLUTELY FORBIDDEN: Do NOT default to a generic "meeting in 15 minutes" trope. Adapt the specific incident naturally into the local daily office culture of ${lang.name}.
 
 [STRICT MARKDOWN & FORMATTING RULES - NO RENDERING GLITCHES]
 1. BOLD FORMATTING RULE:
@@ -239,7 +237,7 @@ ${currentTopic}
     - Always wrap long formulas, scripts, or terminal commands in standard 3-backtick code blocks (\`\`\`excel, \`\`\`python, or \`\`\`bash) so they never overflow horizontally on mobile screens.
 3. NO LATEX & NO TILDE:
     - ABSOLUTELY FORBIDDEN: NEVER use LaTeX math delimiters ($ or $$). Write plain text formulas (e.g., "A1 * B1").
-    - ABSOLUTELY FORBIDDEN: NEVER use tilde (~) for ranges (e.g., NEVER write "10~20%"). Always use a hyphen (e.g., "10-20%").
+    - ABSOLUTELY FORBIDDEN: NEVER use tilde (~) for ranges. Always use a hyphen (e.g., "10-20%").
 
 [Design Theme & Layout Dynamic Rules (MANDATORY)]
 - Assigned Theme: "${selectedTheme.name}"
@@ -251,7 +249,6 @@ ${currentTopic}
 
 [Tone & Writing Style Rules (STRICT - NO AI VIBE)]
 1. Mandatory Opening:
-    - Absolutely FORBIDDEN: Boring textbook intros like "Hello", "In this post", "Today we will explore".
     - Start immediately with an intense, relatable workplace emergency scenario strictly about [Topic] based on the assigned scenario.
 2. Tone & Voice:
     - Write like a real colleague sharing an honest, battle-tested productivity solution on a professional community.
@@ -274,7 +271,7 @@ ${currentTopic}
 - Other languages: 1,200 to 1,500 words of thorough practical explanation.
 
 [Strict Output Format]
-Return ONLY raw Markdown. DO NOT wrap the output in markdown code fences. DO NOT include the post title as an H1 (# Title) in the body. Begin immediately with the frontmatter:
+Return ONLY raw Markdown starting directly with frontmatter:
 
 ---
 title: "Native Catchy Title in ${lang.name}"
@@ -304,12 +301,8 @@ theme: "${selectedTheme.name}"
     text = text.replace(/~/g, '-');
 
     if (lang.code !== 'ko') {
-      text = text.replace(/(title:\s*")([^"]*)(")/g, (match, p1, p2, p3) => {
-        return `${p1}${p2.replace(/[가-힣]+/g, '').trim()}${p3}`;
-      });
-      text = text.replace(/(description:\s*")([^"]*)(")/g, (match, p1, p2, p3) => {
-        return `${p1}${p2.replace(/[가-힣]+/g, '').trim()}${p3}`;
-      });
+      text = text.replace(/(title:\s*")([^"]*)(")/g, (match, p1, p2, p3) => `${p1}${p2.replace(/[가-힣]+/g, '').trim()}${p3}`);
+      text = text.replace(/(description:\s*")([^"]*)(")/g, (match, p1, p2, p3) => `${p1}${p2.replace(/[가-힣]+/g, '').trim()}${p3}`);
     }
 
     const fmMatch = text.match(/^---[\s\S]*?---\n*/);
@@ -318,20 +311,15 @@ theme: "${selectedTheme.name}"
       let body = text.slice(frontmatter.length).trim();
       body = body.replace(/^#\s+[^\n]+\n+/, '');
 
-      // 3호기 영구 고정 규칙: category: 'automation'
       frontmatter = frontmatter.replace(/category:\s*["'][^"']*["']/i, "category: 'automation'")
                                .replace(/category:\s*[^\n\r]+/i, "category: 'automation'");
 
-      // Cloudflare 빌드 실패 및 날짜 밀림 방지: 정확한 KST 기반 ISO 날짜 강제 주입
       frontmatter = frontmatter.replace(/publishDate:\s*[^\n\r]+/i, `publishDate: ${pubDateIso}`);
-
-      // 대표 이미지 경로 강제 동기화
       frontmatter = frontmatter.replace(/image:\s*["'][^"']*["']/i, `image: '${coverUrl}'`);
 
-      // 본문 별표(**) 서식 오류 정제
+      // Gusukura neza amakosa y'inyandiko (formatting)
       body = sanitizeMarkdownFormatting(body);
 
-      // 이미지 alt 텍스트 특수문자 제거 방어 로직
       const safeAlt = currentTopic.replace(/[\[\]\(\)"']/g, '').trim();
       const middleImageMarkdown = `\n\n![${safeAlt} AI Automation Guide](${bodyUrl})\n\n`;
 
@@ -357,7 +345,7 @@ theme: "${selectedTheme.name}"
 
     const filePath = path.join(targetDir, `${fileSlug}.md`);
     fs.writeFileSync(filePath, text, 'utf-8');
-    console.log(`✅ [성공] 3호기 저장 완료: src/data/post/${lang.code}/${fileSlug}.md (automation / 테마: ${selectedTheme.name})`);
+    console.log(`✅ [성공] 3호기 저장 완료: src/data/post/${lang.code}/${fileSlug}.md`);
     return true;
   } catch (error) {
     console.error(`❌ [최종 실패] ${lang.name} 생성 실패:`, error.message);
@@ -367,7 +355,7 @@ theme: "${selectedTheme.name}"
 
 async function run() {
   console.log("==================================================");
-  console.log("⚡ 3호기 AI & 업무자동화 12개국 30개 위기 시나리오 자동 포스팅 파이프라인 시작");
+  console.log("⚡ 3호기 AI & 업무자동화 12개국 최적화 고속 자동 포스팅 시작");
   console.log("==================================================");
 
   let successCount = 0;
@@ -375,8 +363,9 @@ async function run() {
   for (let i = 0; i < TARGET_LANGS.length; i++) {
     const isSuccess = await generateSinglePost(TARGET_LANGS[i], i);
     if (isSuccess) successCount++;
+    // Igihe cyo gutegereza hagati y'indimi cyagabanijwe kugera kuri 2s
     if (i < TARGET_LANGS.length - 1) {
-      await delay(5000);
+      await delay(2000);
     }
   }
 

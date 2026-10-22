@@ -41,36 +41,24 @@ function getKstPublishDateIso(index) {
 }
 
 // =========================================================================
-// 본문 마크다운 별표(**) 및 FAQ 붙어 깨짐 현상 원천 정제 함수 (완벽 강화 버전)
+// 본문 마크다운 볼드(**) 기호 완전 제거 및 FAQ 줄바꿈 정제 함수 (최종 수정본)
 // =========================================================================
 function sanitizeMarkdownFormatting(content) {
   let cleaned = content;
 
-  cleaned = cleaned.replace(/\*{3,}/g, '**');
-  cleaned = cleaned.replace(/\*\*\[([^\]]+)\]\*\*/g, '[**$1**]');
-  cleaned = cleaned.replace(/\*\*"([^"]+)"\*\*/g, '"**$1**"');
-  cleaned = cleaned.replace(/\*\*'([^']+)'\*\*/g, '\'**$1**\'');
-  cleaned = cleaned.replace(/\*\*\s+([^\*\n]+?)\s+\*\*/g, '**$1**');
-  cleaned = cleaned.replace(/\*\*\s+([^\*\n]+?)\*\*/g, '**$1**');
-  cleaned = cleaned.replace(/\*\*([^\*\n]+?)\s+\*\*/g, '**$1**');
+  // 1) Q와 A 사이에 문장이 붙어 있는 경우 강제 두 줄 개행
+  cleaned = cleaned.replace(/([^\n])\s*(Q[1-9]\.)/g, '$1\n\n$2');
+  cleaned = cleaned.replace(/([^\n])\s*(A[1-9]\.)/g, '$1\n\n$2');
 
-  // ⚡ FAQ 영역에서 Q와 A 사이에 공백이나 줄바꿈이 어떻게 꼬여 있든 완벽한 2줄 개행으로 강제 분리
+  // 2) FAQ 영역에서 Q와 A 블록이 꼬인 경우 완벽한 2줄 개행으로 정제
   cleaned = cleaned.replace(/\*\*Q([0-9]+)\.\s*([\s\S]*?)\*\*A\1\./g, (match, qNum, qText) => {
-    return `**Q${qNum}. ${qText.trim()}**\n\n**A${qNum}.**`;
+    return `Q${qNum}. ${qText.trim()}\n\nA${qNum}.`;
   });
 
-  const lines = cleaned.split('\n');
-  const fixedLines = lines.map(line => {
-    if (line.trim().startsWith('```') || line.trim().startsWith('`')) return line;
-    const matches = line.match(/\*\*/g);
-    if (matches && matches.length % 2 !== 0) {
-      const lastIdx = line.lastIndexOf('**');
-      return line.slice(0, lastIdx) + line.slice(lastIdx + 2);
-    }
-    return line;
-  });
+  // 3) 골칫거리인 모든 마크다운 볼드(**) 기호를 완전히 제거 (대제목/소제목 #은 안전하게 유지됨)
+  cleaned = cleaned.replace(/\*\*/g, '');
 
-  return fixedLines.join('\n');
+  return cleaned;
 }
 
 if (!fs.existsSync(TOPICS_FILE)) {
@@ -246,9 +234,7 @@ ${currentTopic}
 
 [STRICT MARKDOWN & FORMATTING RULES - NO RENDERING GLITCHES]
 1. BOLD FORMATTING RULE:
-    - Standard markdown bold is strictly: **Word**
-    - NEVER put brackets or quotes inside asterisks (FORBIDDEN: **[Word]**, **"Word"**). Instead write: [**Word**] or "**Word**".
-    - NEVER leave space inside asterisks (FORBIDDEN: ** Word **).
+    - Absolutely DO NOT use markdown bold asterisks anywhere in the body text or FAQ. Keep all text in plain standard format.
 2. COMMANDS & FORMULAS / CODE BLOCKS:
     - Always wrap long formulas, scripts, or terminal commands in standard 3-backtick code blocks (\`\`\`excel, \`\`\`python, or \`\`\`bash) so they never overflow horizontally on mobile screens.
 3. NO LATEX & NO TILDE:
@@ -281,7 +267,7 @@ ${currentTopic}
     - Use official local software UI terminology matching: "${lang.osUi}".
     - Provide exact clicks, copy-pasteable formulas, prompts, or setting steps.
 4. Expert Warning / Advice: Practical precautions regarding data privacy, backup, or error prevention.
-5. Frequently Asked Questions (FAQ): Exactly 3 realistic, high-value Q&As that everyday users would ask. (CRITICAL: Every Q and A must start on a fresh new line with proper markdown bolding like **Q1. ...** and **A1.**).
+5. Frequently Asked Questions (FAQ): Exactly 3 realistic, high-value Q&As that everyday users would ask. (CRITICAL: Every Q and A must start on a fresh new line without markdown bolding like Q1. ... and A1.).
 
 [Length & Richness Rules]
 - Korean (ko): Minimum 2,500 characters of rich, deep, non-repetitive text.

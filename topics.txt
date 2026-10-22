@@ -1,4 +1,3 @@
-How to Calculate Working Hours and Overtime Automatically in Excel Using Simple AI Formulas
 How to Auto-Split Address and Phone Number Columns in Excel with ChatGPT Assistance
 How to Scrape Amazon Competitor Pricing into Google Sheets Daily Without Writing Code
 How to Summarize 150-Page Regulatory Compliance PDFs in 3 Minutes Using Claude 3.5 Sonnet

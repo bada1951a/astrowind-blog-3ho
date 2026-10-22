@@ -21,9 +21,9 @@ Es war genau zwei Tage vor der wichtigen internen Revision in unserer Zentrale i
 
 Bevor wir zur eleganten KI-Lösung kommen, sollten wir einen kurzen Blick auf die typischen Stolperfallen werfen, die im Büroalltag immer wieder zu Frust und falschen Abrechnungen führen:
 
-1. **Komplexes Zeitformat in Excel:** Excel behandelt Zeiten intern als Dezimalzahlen (1 Tag = 1.0). Werden Arbeitszeiten (z. B. von 08:30 bis 17:15 Uhr) einfach subtrahiert, führt das bei ungültiger Formatierung schnell zu Darstellungsfehlern oder negativen Werten.
-2. **Unflexible Überstundenregeln:** Pauschale Abzüge für Pausen, Kernarbeitszeiten und individuelle Gleitzeitregelungen sprengen oft den Rahmen einfacher Wenn-Dann-Formeln und laden zu manuellen Korrekturen ein.
-3. **Mangelnde Skalierbarkeit und Risiko von Datenüberschreibungen:** Wie mein Vorfall im Frankfurter Büro gezeigt hat, führen selbstgeschriebene oder kopierte Automatisierungsskripte ohne Fehlerbehandlung oft zu Datenverlusten, anstatt die Arbeit zu erleichtern.
+1. Komplexes Zeitformat in Excel: Excel behandelt Zeiten intern als Dezimalzahlen (1 Tag = 1.0). Werden Arbeitszeiten (z. B. von 08:30 bis 17:15 Uhr) einfach subtrahiert, führt das bei ungültiger Formatierung schnell zu Darstellungsfehlern oder negativen Werten.
+2. Unflexible Überstundenregeln: Pauschale Abzüge für Pausen, Kernarbeitszeiten und individuelle Gleitzeitregelungen sprengen oft den Rahmen einfacher Wenn-Dann-Formeln und laden zu manuellen Korrekturen ein.
+3. Mangelnde Skalierbarkeit und Risiko von Datenüberschreibungen: Wie mein Vorfall im Frankfurter Büro gezeigt hat, führen selbstgeschriebene oder kopierte Automatisierungsskripte ohne Fehlerbehandlung oft zu Datenverlusten, anstatt die Arbeit zu erleichtern.
 
 ## Schritt-für-Schritt-Anleitung: Arbeitszeiten und Überstunden mit KI-Formeln automatisieren
 
@@ -61,8 +61,8 @@ Kopieren Sie diese Formeln in Ihre Excel-Tabelle und formatieren Sie die entspre
 Um sicherzustellen, dass bei der nächsten Betriebsprüfung oder dem internen Audit alles glattläuft, fügen wir eine einfache Plausibilitätsprüfung ein. Nutzen Sie die bedingte Formatierung in Excel, um unzulässige Arbeitszeiten sofort optisch zu markieren:
 
 1. Markieren Sie Ihre Überstundenspalte.
-2. Gehen Sie auf **Start**>**Bedingte Formatierung**>**Regeln zum Hervorheben von Zellen**.
-3. Setzen Sie eine Regel für Werte größer als **4.0** (Überstunden-Warnung bei mehr als 4 Überstunden am Tag) und färben Sie diese dezent orange ein.
+2. Gehen Sie auf Start>Bedingte Formatierung>Regeln zum Hervorheben von Zellen.
+3. Setzen Sie eine Regel für Werte größer als 4.0 (Überstunden-Warnung bei mehr als 4 Überstunden am Tag) und färben Sie diese dezent orange ein.
 
 <div style="border-left: 4px solid #f97316; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Profi-Tipp für den Alltag:</strong> Nutzen Sie die Funktion <strong>Daten > Datenüberprüfung</strong>, um Fehleingaben bei Start- und Endzeiten von vornherein auszuschließen. So verhindern Sie, dass Mitarbeiter versehentlich Zeiten außerhalb des gültigen 24-Stunden-Formats eingeben.
@@ -70,12 +70,24 @@ Um sicherzustellen, dass bei der nächsten Betriebsprüfung oder dem internen Au
 
 ## Häufig gestellte Fragen (FAQ)
 
-**Q1. Was mache ich, wenn eine Schicht über Mitternacht hinausgeht und Excel ein negatives Ergebnis anzeigt?****
 
-**A1.**** Wenn eine Arbeitszeit über Mitternacht geht (z. B. Start um 22:00 Uhr, Ende um 06:00 Uhr am nächsten Tag), erkennt Excel das ohne Datum nicht richtig. Ändern Sie Ihre Formel einfach ab, indem Sie den Datumswechsel mit einbeziehen: `=((C2<B2)+C2-B2)*24`. Damit rechnet Excel automatisch den Tageswechsel korrekt hinzu.
 
-**Q2. Kann ich diesen Workflow direkt in Microsoft Copilot für Excel integrieren?****
+Q1. Was mache ich, wenn eine Schicht über Mitternacht hinausgeht und Excel ein negatives Ergebnis anzeigt?
 
-**A2.******Ja, absolut. Wenn Sie Microsoft 365 Copilot nutzen, können Sie die Tabelle direkt im Copilot-Chat markieren und eingeben: "Füge eine Spalte für Überstunden hinzu, die alle Stunden über 8 Stunden pro Tag separat ausweist und an die HR-Abteilung meldet." Der Copilot generiert die Spalte und wendet die Formel eigenständig an.**Q3. Wie schütze ich das Excel-Masterfile vor erneutem Überschreiben durch Automatisierungen?******
 
-**A3.******Vergeben Sie im Dateimanager immer Schreibschutz-Attribute für die Masterdatei oder nutzen Sie in Excel den Pfad**Datei > Informationen > Arbeitsmappe schützen, um ein Passwort für Änderungen zu hinterlegen. Automatisierte Skripte sollten niemals direkt auf das Master-File schreiben, sondern immer eine datierte Arbeitskopie in einem separaten Export-Ordner erstellen.
+
+A1. Wenn eine Arbeitszeit über Mitternacht geht (z. B. Start um 22:00 Uhr, Ende um 06:00 Uhr am nächsten Tag), erkennt Excel das ohne Datum nicht richtig. Ändern Sie Ihre Formel einfach ab, indem Sie den Datumswechsel mit einbeziehen: `=((C2<B2)+C2-B2)*24`. Damit rechnet Excel automatisch den Tageswechsel korrekt hinzu.
+
+
+
+Q2. Kann ich diesen Workflow direkt in Microsoft Copilot für Excel integrieren?
+
+
+
+A2.Ja, absolut. Wenn Sie Microsoft 365 Copilot nutzen, können Sie die Tabelle direkt im Copilot-Chat markieren und eingeben: "Füge eine Spalte für Überstunden hinzu, die alle Stunden über 8 Stunden pro Tag separat ausweist und an die HR-Abteilung meldet." Der Copilot generiert die Spalte und wendet die Formel eigenständig an.
+
+Q3. Wie schütze ich das Excel-Masterfile vor erneutem Überschreiben durch Automatisierungen?
+
+
+
+A3.Vergeben Sie im Dateimanager immer Schreibschutz-Attribute für die Masterdatei oder nutzen Sie in Excel den PfadDatei > Informationen > Arbeitsmappe schützen, um ein Passwort für Änderungen zu hinterlegen. Automatisierte Skripte sollten niemals direkt auf das Master-File schreiben, sondern immer eine datierte Arbeitskopie in einem separaten Export-Ordner erstellen.

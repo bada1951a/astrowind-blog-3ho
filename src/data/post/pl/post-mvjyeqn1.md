@@ -21,9 +21,9 @@ Wyobraź sobie to popołudnie w warszawskim centrum biznesowym na Rondzie Daszy�
 
 Przed przejściem do rozwiązania, spójrzmy prawdzie w oczy – oto trzy główne powody, przez które twoje dotychczasowe arkusze nadgodzin lądują w koszu:
 
-1. **Chaos formatowania danych**: Wpisywanie godzin w formacie `8:00` zamiast `08:00` albo dodawanie spacji powoduje, że Excel traktuje je jako tekst, a nie czas, co uniemożliwia jakiekolwiek operacje matematyczne.
-2. **Brak obsługi przerw i nadliczbowych**: Standardowa formuła odejmowania czasu `Godzina_Wyjscia - Godzina_Wejścia` nie uwzględnia ustawowej przerwy ani mnożników za nadgodziny (np. 50% lub 100% płatne dodatkowo).
-3. **Problem z przekraczaniem północy**: Jeśli pracownik zostaje na zmianie nocnej, proste odejmowanie daje wynik ujemny, wyprowadzając z równowagi całą księgowość.
+1. Chaos formatowania danych: Wpisywanie godzin w formacie `8:00` zamiast `08:00` albo dodawanie spacji powoduje, że Excel traktuje je jako tekst, a nie czas, co uniemożliwia jakiekolwiek operacje matematyczne.
+2. Brak obsługi przerw i nadliczbowych: Standardowa formuła odejmowania czasu `Godzina_Wyjscia - Godzina_Wejścia` nie uwzględnia ustawowej przerwy ani mnożników za nadgodziny (np. 50% lub 100% płatne dodatkowo).
+3. Problem z przekraczaniem północy: Jeśli pracownik zostaje na zmianie nocnej, proste odejmowanie daje wynik ujemny, wyprowadzając z równowagi całą księgowość.
 
 ---
 
@@ -32,12 +32,12 @@ Przed przejściem do rozwiązania, spójrzmy prawdzie w oczy – oto trzy głów
 Zamiast zgadywać składnię funkcji `JEŻELI` i `SUMA.WARUNKÓW`, zaprzęgniemy do pracy asystenta AI (np. ChatGPT lub Copilota), aby napisał dla nas precyzyjne formuły.
 
 ### Krok 1: Przygotowanie czystej struktury danych w Excelu
-Zanim poprosisz AI o pomoc, upewnij się, że twoja tabela ma jasny układ kolumn. Otwórz [**Excela**] i stwórz następujące nagłówki w pierwszym wierszu:
-- Kolumna A: [**Pracownik**]
-- Kolumna B: [**Data**]
-- Kolumna C: [**Wejście**]
-- Kolumna D: [**Wyjście**]
-- Kolumna E: [**Przerwa (min)**]
+Zanim poprosisz AI o pomoc, upewnij się, że twoja tabela ma jasny układ kolumn. Otwórz [Excela] i stwórz następujące nagłówki w pierwszym wierszu:
+- Kolumna A: [Pracownik]
+- Kolumna B: [Data]
+- Kolumna C: [Wejście]
+- Kolumna D: [Wyjście]
+- Kolumna E: [Przerwa (min)]
 
 ### Krok 2: Wygenerowanie formuły AI dla czasu pracy i nadgodzin
 Zamiast pisać kod samodzielnie, skopiuj poniższy prompt i wklej go do narzędzia AI, z którego korzystasz w firmie:
@@ -62,7 +62,7 @@ AI wypluje dla ciebie gotowe formuły. Dla kolumny F (Czas pracy) otrzymasz zazw
 ### Krok 3: Wklejenie i przetestowanie formuły w arkuszu
 1. Zaznacz komórkę `F2` w swoim arkuszu.
 2. Wklej otrzymaną formułę i przeciągnij ją w dół dla wszystkich wierszy.
-3. Kliknij zakładkę [**Narzędzia główne**] na górnej wstążce Excela i upewnij się, że formatowanie komórek z czasem jest ustawione na typ `Godzina` lub `[hh]:mm`, aby uniknąć błędów przy przekraczaniu 24 godzin.
+3. Kliknij zakładkę [Narzędzia główne] na górnej wstążce Excela i upewnij się, że formatowanie komórek z czasem jest ustawione na typ `Godzina` lub `[hh]:mm`, aby uniknąć błędów przy przekraczaniu 24 godzin.
 
 <div style="border-left: 4px solid #b45309; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>[Wskazówka Bezpieczeństwa]</strong> Pracując z danymi osobowymi i stawkami godzinowymi pracowników, upewnij się, że nie przesyłasz poufnych danych osobowych do publicznych modeli AI. Zmieniaj imiona na anonimowe identyfikery (np. Pracownik 01) przed generowaniem promptów.
@@ -72,10 +72,22 @@ AI wypluje dla ciebie gotowe formuły. Dla kolumny F (Czas pracy) otrzymasz zazw
 
 ## Często Zadawane Pytania (FAQ)
 
-**Q1. Co zrobić, gdy Excel zamiast wyniku pokazuje serię płotków (#####)?****
 
-**A1.******Oznacza to, że kolumna jest zbyt wąska, aby pomieścić wynik, albo wynik działania na czasie dał wartość ujemną (np. pracownik wyszedł wcześniej, niż wskazał wejście). Rozszerz kolumnę lub sprawdź poprawność wpisanych godzin.**Q2. Jak zmusić Excela do poprawnego liczenia nadgodzin nocnych przechodzących przez północ?******
 
-**A2.******Poproś AI o zmodyfikowanie formuły z użyciem funkcji `MOD`. Przykładowy prompt: "Napisz formułę Excela uwzględniającą zmianę nocną, gdzie wyjście następuje następnego dnia". Formuła zazwyczaj przyjmuje postać `=MOD(D2-C2; 1)`.**Q3. Czy mogę zautomatyzować ten proces całkowicie, bez ręcznego wklejania formuł co miesiąc?******
+Q1. Co zrobić, gdy Excel zamiast wyniku pokazuje serię płotków (#####)?
 
-**A3.******Tak. Najlepszym rozwiązaniem jest użycie wbudowanego w Excela narzędzia [**Power Query**] (znajdziesz je w zakładce [**Dane**] > [**Pobierz dane**]). Pozwala ono zapisać reguły czyszczenia danych i obliczeń raz, a potem po prostu klikać [**Odśwież] przy każdym nowym raporcie miesięcznym.
+
+
+A1.Oznacza to, że kolumna jest zbyt wąska, aby pomieścić wynik, albo wynik działania na czasie dał wartość ujemną (np. pracownik wyszedł wcześniej, niż wskazał wejście). Rozszerz kolumnę lub sprawdź poprawność wpisanych godzin.
+
+Q2. Jak zmusić Excela do poprawnego liczenia nadgodzin nocnych przechodzących przez północ?
+
+
+
+A2.Poproś AI o zmodyfikowanie formuły z użyciem funkcji `MOD`. Przykładowy prompt: "Napisz formułę Excela uwzględniającą zmianę nocną, gdzie wyjście następuje następnego dnia". Formuła zazwyczaj przyjmuje postać `=MOD(D2-C2; 1)`.
+
+Q3. Czy mogę zautomatyzować ten proces całkowicie, bez ręcznego wklejania formuł co miesiąc?
+
+
+
+A3.Tak. Najlepszym rozwiązaniem jest użycie wbudowanego w Excela narzędzia [Power Query] (znajdziesz je w zakładce [Dane] > [Pobierz dane]). Pozwala ono zapisać reguły czyszczenia danych i obliczeń raz, a potem po prostu klikać [Odśwież] przy każdym nowym raporcie miesięcznym.

@@ -9,7 +9,7 @@ theme: "Retro Monokai"
 ---
 
 
-It was 6:45 PM on a Thursday at our Palo Alto office, and I was staring at a glowing spreadsheet trying to finalize our quarterly contractor hours sync. The Slack channel was buzzing with leadership asking for the final overtime breakdown, but my master `SUM` formula was stubbornly laughing back at me with a flat, lifeless **0**. Every single working hour cell had a tiny green triangle error flag in the corner. The raw data exported from our time-tracking portal had populated everything as text strings instead of actual numbers. Hitting `F2` and `Enter` on hundreds of rows manually was out of the question, and standard formatting changes to General or Number were doing absolutely nothing. 
+It was 6:45 PM on a Thursday at our Palo Alto office, and I was staring at a glowing spreadsheet trying to finalize our quarterly contractor hours sync. The Slack channel was buzzing with leadership asking for the final overtime breakdown, but my master `SUM` formula was stubbornly laughing back at me with a flat, lifeless 0. Every single working hour cell had a tiny green triangle error flag in the corner. The raw data exported from our time-tracking portal had populated everything as text strings instead of actual numbers. Hitting `F2` and `Enter` on hundreds of rows manually was out of the question, and standard formatting changes to General or Number were doing absolutely nothing. 
 
 If you have ever stared at a column of numbers refusing to add up because Excel treats them like text, you know the exact panic of a broken spreadsheet right before a hard deadline.
 
@@ -25,9 +25,9 @@ If you have ever stared at a column of numbers refusing to add up because Excel 
 
 Before jumping into the fix, let us look at why this frustrating issue happens so frequently in modern corporate workflows:
 
-1. **Hidden Invisible Characters:** Exports from web apps and legacy databases often include non-breaking spaces (ASCII 160) or zero-width spaces wrapped around numerical text, preventing Excel from recognizing them as values.
-2. **Text Formatting Lock:** When cells are pre-formatted as text before data ingestion, any number pasted or imported directly inherits that text lock, ignoring subsequent formatting dropdown changes.
-3. **Locale Mismatch:** Pulling reports across global offices often mixes decimal separators (periods vs. commas), instantly corrupting how Excel parses string inputs into arithmetic quantities.
+1. Hidden Invisible Characters: Exports from web apps and legacy databases often include non-breaking spaces (ASCII 160) or zero-width spaces wrapped around numerical text, preventing Excel from recognizing them as values.
+2. Text Formatting Lock: When cells are pre-formatted as text before data ingestion, any number pasted or imported directly inherits that text lock, ignoring subsequent formatting dropdown changes.
+3. Locale Mismatch: Pulling reports across global offices often mixes decimal separators (periods vs. commas), instantly corrupting how Excel parses string inputs into arithmetic quantities.
 
 ---
 
@@ -64,7 +64,7 @@ And for your overtime calculation in the adjacent column:
 =IF(B2>40, B2-40, 0)
 ```
 
-Wrap your final range in a standard `SUM` formula: `=SUM(C2:C100)` and watch your totals calculate instantly instead of returning **0**.
+Wrap your final range in a standard `SUM` formula: `=SUM(C2:C100)` and watch your totals calculate instantly instead of returning 0.
 
 ---
 
@@ -80,10 +80,22 @@ Always maintain a raw data backup sheet before running global Find & Replace or 
 
 ### Frequently Asked Questions
 
-**Q1. Why doesn't changing the cell format from Text to Number fix my SUM formula immediately?****
 
-**A1.******Excel only evaluates formatting changes for newly typed data. Existing cells locked in text mode retain their string property until you explicitly force a recalculation, edit the cell individually, or pass them through a conversion function like `VALUE`.**Q2. Can I fix this entire column at once without creating a helper column?******
 
-**A2.******Yes. Type `1` into any empty cell, copy that cell (`Ctrl+C` or `Cmd+C`), highlight your corrupted text-number range, right-click, select**Paste Special**, and choose**Multiply**. This forces Excel to convert the entire range into numbers in one swift move, after which you can delete the spare `1`.**Q3. How do I prevent time-tracking software exports from turning numbers into text in the first place?******
+Q1. Why doesn't changing the cell format from Text to Number fix my SUM formula immediately?
 
-**A3.******Instead of double-clicking the CSV file to open it directly in Excel, open a blank workbook first, go to the**Data**tab, select**From Text/CSV, and step through the Power Query import wizard to properly define column data types before loading them into your sheet.
+
+
+A1.Excel only evaluates formatting changes for newly typed data. Existing cells locked in text mode retain their string property until you explicitly force a recalculation, edit the cell individually, or pass them through a conversion function like `VALUE`.
+
+Q2. Can I fix this entire column at once without creating a helper column?
+
+
+
+A2.Yes. Type `1` into any empty cell, copy that cell (`Ctrl+C` or `Cmd+C`), highlight your corrupted text-number range, right-click, selectPaste Special, and chooseMultiply. This forces Excel to convert the entire range into numbers in one swift move, after which you can delete the spare `1`.
+
+Q3. How do I prevent time-tracking software exports from turning numbers into text in the first place?
+
+
+
+A3.Instead of double-clicking the CSV file to open it directly in Excel, open a blank workbook first, go to theDatatab, selectFrom Text/CSV, and step through the Power Query import wizard to properly define column data types before loading them into your sheet.

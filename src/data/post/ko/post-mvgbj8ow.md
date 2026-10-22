@@ -123,19 +123,13 @@ function sendWeeklyReportPDF() {
 
 ## 4. 자주 묻는 질문 (FAQ)
 
-
-
 Q1. 수신자를 여러 명 지정하고 싶을 때는 코드를 어떻게 수정해야 하나요?
 
 A1. `var emailUser = "manager@company.com, boss@company.com";` 형태처럼 쉼표(,)로 구분하여 여러 이메일 주소를 문자열로 입력하거나, 시트의 특정 셀(예: A1 셀)에 이메일 주소들을 적어두고 `sheet.getRange("A1").getValue()`로 불러와 변수에 할당하면 동적으로 수신자를 관리할 수 있습니다.
 
-
-
 Q2. 스크립트 실행 시 "Authorization is required" 에러가 계속 뜹니다.
 
 A2. 구글 보안 정책상 최초 실행 시 권한 승인이 필수적입니다. Apps Script 편집기에서 직접 `실행` 버튼을 한 번 눌러 계정 권한을 승인해 주어야 이후 백그라운드 트리거가 정상 작동합니다.
-
-
 
 Q3. PDF가 너무 길어서 여러 장으로 쪼개지거나 레이아웃이 깨집니다.
 

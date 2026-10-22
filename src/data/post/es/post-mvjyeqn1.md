@@ -21,9 +21,9 @@ Eran las 17:50 de un viernes en nuestra oficina corporativa en el Paseo de la Ca
 
 Antes de aplicar la solucion automatizada con IA, analicemos por que este tipo de tareas rutinarias en Excel suelen convertirse en pesadillas operativas:
 
-1. **Dependencia de rutas de red locales:** Vincular archivos de diferentes departamentos mediante rutas de Windows frágiles (`C:/Users/...` o rutas de red compartidas) se rompe en cuanto alguien cambia el nombre de una carpeta o migra a la nube corporativa.
-2. **Formato de hora binario y decimal confuso:** Excel almacena las horas como fracciones de un día. Restar directamente dos celdas de tipo hora sin convertir a formato decimal destruye cualquier cálculo de horas extra o nocturnas si cruzan la medianoche.
-3. **Fórmulas matriciales obsoletas:** El uso excesivo de funciones complejas como `SI.CONJUNTO` anidadas diez veces hace que la hoja sea ilegible para cualquier otro compañero y propensa a fallos de sintaxis.
+1. Dependencia de rutas de red locales: Vincular archivos de diferentes departamentos mediante rutas de Windows frágiles (`C:/Users/...` o rutas de red compartidas) se rompe en cuanto alguien cambia el nombre de una carpeta o migra a la nube corporativa.
+2. Formato de hora binario y decimal confuso: Excel almacena las horas como fracciones de un día. Restar directamente dos celdas de tipo hora sin convertir a formato decimal destruye cualquier cálculo de horas extra o nocturnas si cruzan la medianoche.
+3. Fórmulas matriciales obsoletas: El uso excesivo de funciones complejas como `SI.CONJUNTO` anidadas diez veces hace que la hoja sea ilegible para cualquier otro compañero y propensa a fallos de sintaxis.
 
 ---
 
@@ -33,14 +33,14 @@ Para evitar depender de archivos externos y calcular las horas ordinarias y extr
 
 ### Paso 1: Romper la dependencia externa con Power Query
 En lugar de usar fórmulas de enlace directo (`='[FicheroExterno.xlsx]Hoja1'!A1`), importa los datos de asistencia directamente mediante la interfaz nativa de Excel:
-- Ve a la pestaña **Datos** en la cinta superior de Excel.
-- Haz clic en **Obtener datos**>**Desde un archivo**>**Desde un libro de Excel**.
+- Ve a la pestaña Datos en la cinta superior de Excel.
+- Haz clic en Obtener datos>Desde un archivo>Desde un libro de Excel.
 - Selecciona el archivo de fichajes limpio y carga la tabla en el modelo de datos. Esto elimina las advertencias de seguridad y mantiene la ruta sincronizada en segundo plano.
 
 ### Paso 2: Generar la formula de horas extra mediante un prompt de IA
 En lugar de escribir manualmente fórmulas complejas que fallen al cruzar las 00:00 horas, utiliza un asistente de IA con este prompt exacto optimizado para entornos de oficina:
 
-> "Actúa como un experto avanzado en Excel. Necesito una fórmula para la celda [**D2**] que calcule las horas extra trabajadas. La hora de entrada está en [**B2**] y la hora de salida en [**C2**]. La jornada ordinaria es de 8 horas. Si la salida es posterior a las 18:00 o cruza la medianoche, calcula la diferencia restando una hora de descanso si el total supera las 6 horas. Devuelve únicamente la fórmula lista para copiar en formato decimal."
+> "Actúa como un experto avanzado en Excel. Necesito una fórmula para la celda [D2] que calcule las horas extra trabajadas. La hora de entrada está en [B2] y la hora de salida en [C2]. La jornada ordinaria es de 8 horas. Si la salida es posterior a las 18:00 o cruza la medianoche, calcula la diferencia restando una hora de descanso si el total supera las 6 horas. Devuelve únicamente la fórmula lista para copiar en formato decimal."
 
 ### Paso 3: Aplicar y verificar la formula limpia
 La IA te devolverá una fórmula robusta utilizando funciones modernas como `SI` y `RESIDUO` para manejar correctamente el cambio de día. Pégala en tu celda correspondiente:
@@ -57,19 +57,31 @@ La IA te devolverá una fórmula robusta utilizando funciones modernas como `SI`
 
 ## Precauciones y Buenas Prácticas de Seguridad
 
-- **Privacidad de datos:** Nunca pegues nombres reales, números de seguridad social o datos salariales sensibles en herramientas de IA públicas. Utiliza siempre códigos de empleado anónimos (ej. *Empleado_01*) al depurar fórmulas con IA.
-- **Validación cruzada:** Antes de enviar el informe definitivo a recursos humanos, prueba la fórmula con un caso extremo (un turno que empiece a las 22:00 y termine a las 06:00 del día siguiente).
+- Privacidad de datos: Nunca pegues nombres reales, números de seguridad social o datos salariales sensibles en herramientas de IA públicas. Utiliza siempre códigos de empleado anónimos (ej. *Empleado_01*) al depurar fórmulas con IA.
+- Validación cruzada: Antes de enviar el informe definitivo a recursos humanos, prueba la fórmula con un caso extremo (un turno que empiece a las 22:00 y termine a las 06:00 del día siguiente).
 
 ---
 
 ## Preguntas Frecuentes (FAQ)
 
-**Q1. ¿Qué hago si la fórmula devuelve un error de valor (#VALOR!) al restar las horas?****
 
-**A1.******Asegúrate de que tanto la celda de entrada como la de salida tengan formato de hora aplicado correctamente en Excel (clic derecho > Formato de celdas > Hora) y que no contengan espacios en blanco ocultos importados de sistemas externos.**Q2. ¿Cómo manejo los turnos nocturnos que superan la medianoche sin romper el cálculo?******
 
-**A2.**** La función `RESIDUO` es tu mejor aliada. Usar `=RESIDUO(Salida - Entrada, 1) * 24` calcula automáticamente la duración correcta incluso si el turno pasa de las 23:00 a las 07:00 del día siguiente.
+Q1. ¿Qué hago si la fórmula devuelve un error de valor (#VALOR!) al restar las horas?
 
-**Q3. ¿Es seguro utilizar Power Query para conectar archivos de otros departamentos?****
 
-**A3.**** Sí, es mucho más seguro que los vínculos directos tradicionales. Power Query almacena la ruta de conexión de forma controlada y te permite actualizar los datos con un solo clic en la pestaña Datos sin disparar alertas de seguridad en cadena.
+
+A1.Asegúrate de que tanto la celda de entrada como la de salida tengan formato de hora aplicado correctamente en Excel (clic derecho > Formato de celdas > Hora) y que no contengan espacios en blanco ocultos importados de sistemas externos.
+
+Q2. ¿Cómo manejo los turnos nocturnos que superan la medianoche sin romper el cálculo?
+
+
+
+A2. La función `RESIDUO` es tu mejor aliada. Usar `=RESIDUO(Salida - Entrada, 1) * 24` calcula automáticamente la duración correcta incluso si el turno pasa de las 23:00 a las 07:00 del día siguiente.
+
+
+
+Q3. ¿Es seguro utilizar Power Query para conectar archivos de otros departamentos?
+
+
+
+A3. Sí, es mucho más seguro que los vínculos directos tradicionales. Power Query almacena la ruta de conexión de forma controlada y te permite actualizar los datos con un solo clic en la pestaña Datos sin disparar alertas de seguridad en cadena.

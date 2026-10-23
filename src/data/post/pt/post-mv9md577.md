@@ -26,7 +26,9 @@ Foi nesse exato momento de desespero, com o dedo já dormente de tanto usar Ctrl
 Antes de irmos direto à solução, vale a pena entender os três vilões silenciosos que destroem sua produtividade no fim do mês:
 
 1. A Ilusão da Planilha Padronizada: Cada gerente regional preenche o relatório do seu jeito. Um usa "Qtd", o outro "Quantidade", e o terceiro apenas "Qt". O Excel padrão sofre para juntar isso sem fórmulas complexas.
+
 2. O Risco do Fator Humano: Copiar dados de dez abas diferentes e colar em uma planilha-mãe é um convite aberto a erros de deslocamento de linhas que passam despercebidos até a apresentação para a diretoria.
+
 3. O Ciclo Vicioso Mensal: Todo mês é a mesma coisa. Você refaz o mesmo trabalho manual do zero, em vez de criar um processo durável.
 
 ---
@@ -39,22 +41,31 @@ O segredo do Power Query é que ele funciona como uma macro sem código: ele gra
 Crie uma pasta dedicada no seu computador ou na rede da empresa exclusivamente para os relatórios do mês (ex: `C:\Vendas\2026\Outubro`). Salve todas as planilhas recebidas das filiais nessa mesma pasta. Dica de ouro: garanta que os dados dentro de cada planilha estejam formatados como Tabela oficial do Excel (atalho Ctrl+T).
 
 #### Passo 2: Importar a Pasta inteira via Power Query
-Abra um arquivo Excel em branco que será o seu "Painel Oficial". 
+Abra um arquivo Excel em branco que será o seu "Painel Oficial".
+
 1. Vá até a guia superior Dados.
+
 2. Clique em Obter Dados > De Arquivo > De Pasta.
+
 3. Selecione a pasta onde estão os relatórios das filiais e clique em Abrir.
+
 4. Na janela de pré-visualização que vai se abrir, NÃO clique em "Carregar" diretamente. Clique em Transformar Dados.
 
 #### Passo 3: Limpar, Filtrar e Consolidar (O Poder do Editor)
 O ambiente do Power Query vai se abrir. É aqui que a mágica acontece.
+
 1. Você verá uma lista com os arquivos da pasta. Procure pela coluna que contém o conteúdo binário e clique no ícone de Combinar Arquivos (duas setinhas apontando para baixo no cabeçalho da coluna).
+
 2. O Excel vai abrir uma amostra da primeira planilha. Selecione a aba ou a tabela correta e clique em OK.
+
 3. Automaticamente, o Power Query criará uma série de etapas à direita (na aba "Etapas Aplicadas"). Ele vai empilhar todas as planilhas das filiais em uma única tabela gigantesca.
+
 4. Use as ferramentas visuais para ajustar o que precisar: remova linhas em branco, renomeie colunas mal formatadas clicando duas vezes no cabeçalho, ou ajuste o tipo de dado (garanta que colunas de valores monetários estejam como "Número Decimal" e datas como "Data").
 
 #### Passo 4: Carregar o Resultado Final
 Quando tudo estiver limpo e organizado:
 1. Vá no canto superior esquerdo e clique em Fechar e Carregar.
+
 2. O Excel criará uma nova aba com a sua tabela de vendas perfeitamente consolidada.
 
 > O toque final de produtividade: No mês que vem, você só precisará substituir os arquivos antigos da pasta pelos novos relatórios mensais, abrir o seu "Painel Oficial", ir na guia Dados e clicar em Atualizar Tudo. Pronto! O relatório de horas de trabalho fica pronto em segundos.

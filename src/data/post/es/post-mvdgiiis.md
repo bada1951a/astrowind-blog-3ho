@@ -26,7 +26,9 @@ Por suerte, descubrí un método rápido combinando herramientas de reconocimien
 Antes de dar con este flujo de trabajo ágil, probé todas las opciones clásicas que solo conseguían retrasarme más:
 
 1. El escaneo plano directo a PDF sin OCR activo: El documento resultante es solo una imagen comprimida. Al intentar seleccionar el texto con el ratón, Excel lo pega como un bloque ilegible o una sola celda gigante imposible de filtrar.
+
 2. Las herramientas de conversión online dudosas: Muchas webs gratuitas prometen pasar PDF a Excel, pero desconfiguran las columnas de los conceptos, mezclan las celdas de IVA con las retenciones y, para colmo, exigen un registro de pago o ponen en riesgo la confidencialidad de los datos fiscales de la empresa.
+
 3. El volcado manual bajo presión: Teclear a velocidad récord con la respiración del jefe en el cuello es la receta perfecta para cometer errores tipográficos. Luego llegan las fórmulas rotas (como los clásicos errores de tipo de dato texto en lugar de número) y el BuscarV deja de funcionar justo en medio de la presentación.
 
 ## Guía paso a paso: De la factura en papel al Excel impecable
@@ -38,7 +40,9 @@ Vamos a dividir el proceso en dos fases muy sencillas: la extracción inteligent
 En lugar de usar software antiguo de oficina, aprovecha cualquier modelo de lenguaje actual con soporte visual gratuito (como ChatGPT, Claude o Google Gemini).
 
 1. Haz una foto con el móvil a las facturas con buena iluminación (o escanéalas en un PDF multipágina).
+
 2. Abre el chat de IA y adjunta la imagen o el PDF.
+
 3. Utiliza este prompt exacto para obtener una tabla perfecta:
 
 > "Actúa como un experto contable y procesador de datos. Extrae la información de las facturas adjuntas y preséntala estrictamente en formato de tabla Markdown. Las columnas deben ser: Fecha, Proveedor, NIF, Base Imponible, IVA y Total. Asegúrate de que los importes numéricos utilicen el punto como separador de miles y la coma como separador de decimales, sin símbolos de moneda para que Excel los reconozca como números puros."
@@ -50,8 +54,11 @@ En lugar de usar software antiguo de oficina, aprovecha cualquier modelo de leng
 Abre tu archivo de Excel en el equipo y sigue esta ruta para evitar que las celdas den problemas con los formatos regionales:
 
 1. Selecciona la celda superior izquierda donde quieres que comience la tabla (por ejemplo, `A1`).
+
 2. Ve a la pestaña Datos > Obtener datos o simplemente haz clic derecho y usa la opción Pegar (o Ctrl + V).
+
 3. Si los números se alinean a la izquierda (señal de que Excel los interpreta como texto), selecciona la columna de importes, ve a Datos > Texto en columnas, pulsa Siguiente dos veces, selecciona General o define el formato numérico adecuado y haz clic en Finalizar.
+
 4. Aplica tu fórmula de suma rápida (`=SUMA(D2:D50)`) y comprueba que el resultado cuadre al instante.
 
 <div style="border-left: 4px solid #06b6d4; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

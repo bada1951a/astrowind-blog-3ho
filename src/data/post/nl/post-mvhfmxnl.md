@@ -24,7 +24,9 @@ Dit soort acute spreadsheetproblemen komen altijd op het slechtste moment. Je zi
 Voordat we naar de oplossing kijken, moeten we erkennen waarom de oude manier niet meer werkt. Veel bedrijven lopen tegen dezelfde drie knelpunten aan:
 
 1. Statische formules missen context: Simpele gemiddelden en historische trends houden geen rekening met plotselinge marktveranderingen of supply chain vertragingen.
+
 2. Handmatige data-silo's: Het kost uren om exportbestanden uit verschillende systemen samen te voegen in één werkblad, wat de kans op menselijke fouten flink vergroot.
+
 3. Geen voorspellend vermogen: Standaard Excel-functies kijken achteruit in plaats van vooruit. Ze vertellen je wat er is verkocht, niet wat je volgende kwartaal écht nodig hebt.
 
 ## Stap-voor-stap: AI-gestuurde voorraadvoorspelling in Excel

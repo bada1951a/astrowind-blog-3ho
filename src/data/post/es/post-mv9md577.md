@@ -24,7 +24,9 @@ Ese fue mi punto de quiebre. Decidí que nunca más volvería a perder un vierne
 Antes de aplicar la solución, analicemos por qué caemos en este bucle de estrés cada fin de mes:
 
 1. Dependencia de rutas y nombres fijos: Si tus fórmulas dependen de que el archivo se llame "Ventas_Definitivo_Final_v2.xlsx", en cuanto alguien guarde el archivo con otro nombre, todo se rompe.
+
 2. Estructuras de datos inconsistentes: El equipo comercial de la zona norte usa un formato de fecha (DD/MM/AAAA) y el equipo de levante usa otro (MM/DD/AAAA), lo que descoloca cualquier suma global.
+
 3. Procesos manuales propensos al error humano: Hacer un pegado masivo de 5,000 filas a medianoche es la receta perfecta para arrastrar errores de un mes a otro sin darte cuenta.
 
 ---
@@ -37,9 +39,12 @@ Power Query viene integrado de serie en Excel (a partir de la versión 2016 y en
 Crea una carpeta en tu ordenador o servidor compartido (por ejemplo: `C:\ReportesMensuales\Ventas2026`). Coloca allí exclusivamente los archivos de Excel de cada delegación o mes que quieras consolidar. Asegúrate de que todos compartan una estructura tabular similar (columnas de Fecha, Producto, Cantidad, Precio).
 
 ### Paso 2: Conecta Excel a la carpeta mágica
-Abre un libro de Excel nuevo que será tu Reporte Maestro. 
+Abre un libro de Excel nuevo que será tu Reporte Maestro.
+
 1. Ve a la pestaña superior Datos.
+
 2. Haz clic en Obtener datos > De un archivo > De una carpeta.
+
 3. Selecciona la carpeta `Ventas2026` que creaste en el paso anterior y pulsa Abrir.
 
 ### Paso 3: Combina y Transforma los datos
@@ -55,6 +60,7 @@ Se abrirá una ventana de vista previa. No le des directamente a combinar; haz c
 
 ### Paso 5: Carga el resultado final
 1. En la esquina superior izquierda del Editor de Power Query, haz clic en Cerrar y cargar.
+
 2. ¡Listo! Se generará una nueva pestaña en tu libro de Excel con la tabla consolidada de todos tus archivos.
 
 <div style="border-left: 4px solid #be123c; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

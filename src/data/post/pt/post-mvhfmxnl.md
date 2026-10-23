@@ -28,7 +28,9 @@ Se você também já perdeu horas tentando adivinhar quanto comprar de mercadori
 Antes de irmos para a solução, vale a pena entender por que o método tradicional de arrastar a fórmula para o lado quase sempre dá errado:
 
 1. Sazonalidade ignorada: Médias simples tratam o mês de dezembro da mesma forma que março, gerando rupturas ou excesso de produtos parados.
+
 2. Dados ruidosos: Picos de vendas causados por promoções pontuais distorcem a tendência real se a inteligência não for capaz de suavizar as exceções.
+
 3. Falta de limites de confiança: Fórmulas comuns dizem apenas um número seco, sem mostrar a margem de erro superior e inferior para evitar falta de insumos.
 
 ---
@@ -45,7 +47,9 @@ Para a IA entender o seu histórico, sua tabela precisa de apenas duas colunas l
 
 #### Etapa 2: Acionar a Ferramenta de Previsão
 1. No menu superior do Excel, clique na aba Dados (Data).
+
 2. No grupo Previsão, clique no botão Folha de Previsão (Forecast Sheet).
+
 3. Uma janela de visualização instantânea vai se abrir na sua tela, mostrando uma linha azul (seus dados reais) e linhas laranjas com a projeção gerada pelo algoritmo de IA, incluindo os limites superior e inferior de confiança.
 
 <div style="border-left: 4px solid #06b6d4; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

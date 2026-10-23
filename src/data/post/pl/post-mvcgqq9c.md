@@ -22,7 +22,9 @@ Zamiast tracić nerwy na ręczne przeszukiwanie tysięcy komórek w poszukiwaniu
 Zanim przejdziemy do naprawy, warto zrozumieć, co zazwyczaj doprowadza pliki do stanu agonii:
 
 1. Nadmiar lotnych formuł (Volatile Formulas): Funkcje takie jak DZIŚ(), TERAZ(), PRzesunięcie czy POŚREDNI przeliczają się na nowo przy każdej najmniejszej zmianie w całym skoroszycie, katastrofalnie obciążając procesor.
+
 2. Rozdmuchany obszar wydruku i formatowanie: Użytkownicy często kopiują dane ze stron internetowych, co przenosi ukryte style, zbędne obiekty graficzne i miliony pustych wierszy z ustawionym formatowaniem warunkowym.
+
 3. Zepsute odwołania zewnętrzne i zapętlone zależności: Ukryte linki do nieistniejących plików sieciowych sprawiają, że Excel uporczywie próbuje je zaktualizować przy każdym otwarciu.
 
 ---
@@ -37,8 +39,11 @@ Skopiuj i wklej ten prompt do ChatGPT:
 ```text
 Napisz krótki skrypt w Pythonie (używając biblioteki openpyxl lub pandas), który przeskanuje wskazany plik Excel i wypisze mi raport zawierający:
 1. Listę wszystkich arkuszy i liczbę zajętych wierszy w każdym z nich.
+
 2. Liczbę i rodzaje formuł (ze szczególnym uwzględnieniem funkcji lotnych: DZIŚ, TERAZ, PRZESUNIĘCIE, POŚREDNI).
+
 3. Rozmiar i liczbę reguł formatowania warunkowego.
+
 4. Listę zewnętrznych odwołań i linków do innych plików.
 ```
 
@@ -56,8 +61,11 @@ Przykładowy prompt:
 ```text
 Mój plik Excel "raport.xlsx" zacina się przez nadmierne formatowanie warunkowe i puste wiersze. Napisz skrypt w Pythonie, który:
 1. Otworzy plik "raport.xlsx".
+
 2. Usunie wszystkie reguły formatowania warunkowego z arkusza "Dane".
+
 3. Obetnie zbędne puste wiersze i kolumny, które sztucznie powiększają obszar roboczy.
+
 4. Zapisze wynik jako "raport_czysty.xlsx".
 ```
 
@@ -72,7 +80,9 @@ Po uruchomieniu tego skryptu otrzymasz lekki, w pełni responsywny plik gotowy d
 </div>
 
 * Zmieniaj formuły na wartości: Jeśli w arkuszu znajdują się historyczne dane miesięczne, które już się nie zmieniają, zaznacz je, skopiuj i wklej jako *Wartości* (Skrót: Ctrl + Alt + V -> Wartości).
-* Unikaj całych kolumn w odwołaniach: Zamiast pisać `WYSZUKAJ.PIONOWO(A1; A:Z; 2; FAŁSZ)`, ograniczaj zakres do faktycznie używanych wierszy, np. `A1:Z5000`. Excel nie musi wtedy przeszukiwać miliona pustych wierszy.
+* Unikaj całych kolumn w odwołaniach: Zamiast pisać `WYSZUKAJ.PIONOWO(A1; A:Z; 2; FAŁSZ)`, ograniczaj zakres do faktycznie używanych wierszy, np. `
+
+A1:Z5000`. Excel nie musi wtedy przeszukiwać miliona pustych wierszy.
 
 ---
 

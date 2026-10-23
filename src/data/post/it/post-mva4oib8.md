@@ -24,7 +24,9 @@ La colonna con i codici cliente e i numeri di telefono è completamente illeggib
 Quando lavoriamo con volumi enormi di dati disordinati in Google Sheets, ci scontriamo quasi sempre con tre problemi di fondo che rallentano tutto:
 
 1. La sintassi impenetrabile delle Regex: Funzioni come `REGEXREPLACE` o `REGEXEXTRACT` sono potentissime, ma ricordare l'ordine esatto dei modificatori, delle classi di caratteri e dei gruppi di cattura richiede una memoria da programmatore puro, non da project manager o impiegato amministrativo.
+
 2. Casi limite nascosti (Edge Cases): Pensi di aver risolto il problema rimuovendo gli spazi, ma ti accorgi troppo tardi che alcuni dati contengono spazi non-breaking, tabulazioni invisibili o formati di date invertiti (AAAA-MM-GG contro GG/MM/AAAA).
+
 3. Il panico da foglio bianco: Di fronte a una cella vuota e a una scadenza imminente, il cervello va in blocco. Tentativi casuali di copia-incolla da forum online finiscono spesso per generare il famigerato errore `#ERRORE!` o peggio, a corrompere l'intero database.
 
 ---
@@ -49,8 +51,11 @@ Copia e adatta questo prompt di altissima precisione:
 Una volta che ChatGPT ti restituisce la formula (ad esempio `=REGEXREPLACE(A2, "[^0-9]", "")`), torna sul tuo foglio di calcolo:
 
 1. Clicca sulla prima cella vuota della colonna di supporto.
+
 2. Incolla la formula e premi Invio.
+
 3. Se il risultato è corretto, trascina l'angolo in basso a destra della cella per applicarla a tutta la colonna.
+
 4. Se vuoi trasformare le formule in valori fissi per evitare rallentamenti, seleziona l'intera colonna, fai *Modifica > Copia*, poi *Modifica > Incolla speciale > Solo valori*.
 
 <div style="border-left: 4px solid #06b6d4; padding: 12px 16px; margin: 20px 0; background-color: rgba(6,182,212,0.05); border-radius: 4px; color: #111827;">

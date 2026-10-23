@@ -20,7 +20,9 @@ Eram 18h40 de uma sexta-feira chuvosa no escritório na Avenida Paulista, e o fe
 Antes de montarmos a solução definitiva, vale a pena entender os três vilões clássicos que sabotam as planilhas financeiras nas empresas:
 
 1. O Custo Oculto dos Plugins de Terceiros: Ferramentas que prometem conversão mágica cobram mensalidades em dólar, exigem renovação de token constante e frequentemente param de funcionar após atualizações de segurança do navegador ou da própria planilha.
+
 2. Links Frágeis com Web Scraping Amador: O uso excessivo da função IMPORTXML em sites de notícias para capturar cotações falha porque os portais mudam a estrutura HTML das páginas sem aviso prévio, gerando erros em cadeia nos relatórios gerenciais.
+
 3. Falta de Padronização de Moedas: Misturar abreviações manuais (USD, US, Dólar) sem uma base centralizada de códigos ISO impede que funções matemáticas reconheçam os dados, exigindo limpezas manuais exaustivas antes de gerar gráficos.
 
 ---
@@ -33,9 +35,15 @@ A boa notícia é que o Google Sheets possui uma ferramenta nativa extremamente 
 Abra uma nova aba na sua planilha e chame-a de "Parametros". Na célula A1, digite "Moeda", na B1 digite "Par", e na C1 digite "Taxa Atual".
 
 Insira os seguintes pares nas linhas abaixo:
-- Célula A2: USD | Célula B2: CURRENCY:USDBRL
-- Célula A3: EUR | Célula B3: CURRENCY:EURBRL
-- Célula A4: GBP | Célula B4: CURRENCY:GBPBRL
+- Célula
+
+A2: USD | Célula B2: CURRENCY:USDBRL
+- Célula
+
+A3: EUR | Célula B3: CURRENCY:EURBRL
+- Célula
+
+A4: GBP | Célula B4: CURRENCY:GBPBRL
 
 Na célula C2, insira a fórmula mágica nativa:
 `=GOOGLEFINANCE(B2)`
@@ -47,7 +55,9 @@ Na sua aba de relatórios mensais, digamos que você tenha a coluna D com os val
 
 Para converter esses valores para Real (BRL) de forma automática e dinâmica, utilize a função PROCV combinada com o seu painel de parâmetros recém-criado. Na célula F2, insira:
 
-`=D2 * PROCV(E2, Parametros!A2:C$4, 3, FALSO)`
+`=D2 * PROCV(E2, Parametros!
+
+A2:C$4, 3, FALSO)`
 
 Essa fórmula identifica instantaneamente a moeda da linha, busca o fator de conversão atualizado na aba de parâmetros e multiplica pelo valor original, entregando o resultado exato em segundos.
 

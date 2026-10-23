@@ -24,7 +24,9 @@ Laten we deze spreadsheet-chaos eens voor eens en voor al oplossen.
 Voordat we de juiste formule erin schieten, moeten we begrijpen waarom het tot nu toe mislukte of waarom je vastloopt op rommelige data.
 
 1. Vastzitten aan statische handmatige data: Je tikt koersen handmatig over van een nieuwswebsite. Zodra de markt sluit of schommelt, klopt je hele financiële model niet meer.
+
 2. Onbetrouwbare of trage web-scrapers: Je gebruikt complexe HTML-importfuncties zoals IMPORTHTML of IMPORTXML die om de haverklap stukgaan omdat websites hun structuur aanpassen.
+
 3. Onwetendheid over de ingebouwde GOOGLEFINANCE functie: Veel professionals denken dat Google Sheets alleen simpele optelsommen kan doen en betalen onnodig voor externe SaaS-tools.
 
 ---

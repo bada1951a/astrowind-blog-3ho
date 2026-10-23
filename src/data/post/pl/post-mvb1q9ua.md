@@ -26,7 +26,9 @@ Zamiast tracić nerwy na pisanie skomplikowanych makr VBA, postanowiłem podejś
 Zanim przejdziemy do naprawy, warto zrozumieć, dlaczego standardowe podejście legło w gruzach. Główne źródła błędów w takich bazach to:
 
 1. Brak jednolitej struktury (Nomenklatura): Użytkownicy w systemie CRM wpisywali dane "na oko". Masz tam kombinacje `jan.kowalski`, `j.kowalski`, `jan_kowalski` oraz imiona pisane małą i wielką literą.
+
 2. Brudne formatowanie i literówki: Ukryte spacje na końcu wierszy, polskie znaki zamienione na krzaki oraz błędy domeny (`.pll` zamiast `.pl`).
+
 3. Sztywność formuł: Funkcja tekstowa w Excelu szuka konkretnego znaku (np. kropki). Jeśli w adresie e-mail kropki nie ma lub jest ich kilka (np. `jan.piotr.kowalski@corp.com`), formuła się gubi i zwraca błąd.
 
 ---
@@ -47,7 +49,9 @@ Jeśli korzystasz z narzędzia AI połączonego z arkuszem (lub kopiujesz dane d
 
 <div style="border-left: 4px solid #14b8a6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Gotowy prompt do skopiowania:</strong><br>
-"Mam poniżej listę surowych adresów e-mail oraz nazwisk z bazy CRM. Twoim zadaniem jest zwrot danych w czystej tabeli składającej się z dwóch kolumn: 'Czysty Email' oraz 'Wyciągnięte Imię (odmienione w mianowniku)'. Popraw oczywiste literówki w domenach (np. @gmial.com na @gmail.com). Jeśli nie możesz ustalić imienia na podstawie adresu, wpisz 'Klient'. Oto dane: [Wklej swój zakres A2:A100]"
+"Mam poniżej listę surowych adresów e-mail oraz nazwisk z bazy CRM. Twoim zadaniem jest zwrot danych w czystej tabeli składającej się z dwóch kolumn: 'Czysty Email' oraz 'Wyciągnięte Imię (odmienione w mianowniku)'. Popraw oczywiste literówki w domenach (np. @gmial.com na @gmail.com). Jeśli nie możesz ustalić imienia na podstawie adresu, wpisz 'Klient'. Oto dane: [Wklej swój zakres
+
+A2:A100]"
 </div>
 
 #### Krok 3: Wklejenie wyników i walidacja przez Power Query

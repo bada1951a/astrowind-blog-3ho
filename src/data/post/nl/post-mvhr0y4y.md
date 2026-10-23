@@ -26,7 +26,9 @@ Oplossing: Implementatie van op AI gebaseerde grafieksuggesties en dynamische be
 Voordat we de oplossing induiken, moeten we even stilstaan bij waarom dit zo vaak misgaat. Er zijn drie hoofdoorzaken waarom je spreadsheetmodellen directieproof falen:
 
 1. Inflexibele datastructuur: Cijfers staan wel netjes in kolommen, maar zijn niet gekoppeld aan formulierbesturingselementen of slicers, waardoor je tijdens een meeting niet live de omzetgroei of kostenbesparing kunt aanpassen.
+
 2. Overload aan informatie: Je probeert te veel data in één enkele grafiek te proppen, waardoor de kernboodschap (bijvoorbeeld de netto winstmarge na belasting) volledig ondersneeuwt.
+
 3. Het ontbreken van context: Standaard Google Sheets grafieken genereren geen automatische inzichten of trendduidingen die direct te gebruiken zijn in een slide-deck.
 
 ## Stap-voor-stap: Zo bouw je interactieve modellen met AI-hulp
@@ -40,8 +42,11 @@ Selecteer je volledige financiële dataset (inclusief rijen voor omzet, EBITDA e
 
 ### Stap 2: Voeg vervolgkeuzemenu's (Dropdowns) toe voor scenario-analyse
 Directieleden willen live 'wat-als'-vragen kunnen stellen. In plaats van drie aparte tabbladen, bouwen we één dynamisch dashboard.
+
 1. Maak een cel aan, bijvoorbeeld cel B1, waar de gebruiker een scenario kan kiezen (bijvoorbeeld: Conservatief, Realistisch, Optimistisch).
+
 2. Ga naar Gegevens > Gegevensvalidatie en kies als criteria Dropdown (uit een bereik). Koppel dit aan je scenario-tabel.
+
 3. Gebruik de functie `VERT.ZOEKEN` (VLOOKUP) of `INDEX/VERGELIJKEN` in je hoofdmodel, zodat alle onderliggende berekeningen direct omschakelen zodra de waarde in cel B1 wijzigt.
 
 ### Stap 3: Genereer dynamische grafieken met AI-suggesties
@@ -52,7 +57,9 @@ Nu je data interactief reageert op de scenario-selector, gaan we de visualisatie
 - Klik op de voorgestelde grafiek om deze direct toe te voegen.
 
 <div style="border-left: 4px solid #64748b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Pro-Tip van de Specialist:</strong> Zorg ervoor dat je celverwijzingen in je grafiekbereik absoluut zijn (met dollarteken, bijvoorbeeld A1:D10). Als directieleden straks live scenario's doorlopen, verspringt het bereik van je grafiek tenminste niet als er rijen worden toegevoegd of verborgen.
+<strong>Pro-Tip van de Specialist:</strong> Zorg ervoor dat je celverwijzingen in je grafiekbereik absoluut zijn (met dollarteken, bijvoorbeeld
+
+A1:D10). Als directieleden straks live scenario's doorlopen, verspringt het bereik van je grafiek tenminste niet als er rijen worden toegevoegd of verborgen.
 </div>
 
 ## Expert Waarschuwing & Preventie

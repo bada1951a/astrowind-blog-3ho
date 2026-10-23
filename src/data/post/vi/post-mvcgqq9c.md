@@ -24,7 +24,9 @@ Trước đây, với những tình huống "sinh tử" này, tôi thường ng�
 Trước khi nhờ AI can thiệp, chúng ta cần hiểu tại sao file Excel bỗng dưng trở nên nặng nề như một khối tạ chì:
 
 1. Rác định dạng có điều kiện (Conditional Formatting Bloat): Khi copy dữ liệu từ nhiều nguồn khác nhau vào báo cáo, Excel tự động nhân bản các quy tắc định dạng lên hàng triệu ô trống, làm tăng dung lượng file một cách vô lý.
+
 2. Hàm Volatile và tham chiếu toàn cột: Sử dụng các hàm tính toán lại liên tục mỗi khi có thay đổi như OFFSET, INDIRECT, hoặc tham chiếu trực tiếp cả cột (A:A) trong hàng nghìn dòng dữ liệu.
+
 3. Hidden Shapes & Objects: Các hộp thoại, hình vẽ, hoặc nút bấm bị lỗi hiển thị nằm ẩn (0 kích thước) chồng đè lên nhau qua nhiều năm tháng sử dụng file template cũ.
 
 ## Các bước xử lý file Excel đơ giật bằng ChatGPT Python Analysis

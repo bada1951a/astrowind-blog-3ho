@@ -24,7 +24,9 @@ Questa è la classica situazione in cui il lavoro d'ufficio si trasforma in un i
 Prima di applicare la soluzione, capiamo perché i metodi tradizionali falliscono miseramente quando gestiamo elenchi di clienti reali:
 
 1. Incoerenza di digitazione umana: Un utente inserisce "Mario Rossi", un altro "mario rossi" e un terzo "Mario Rossi ". Per un foglio di calcolo elettronico si tratta di tre entità distinte.
+
 2. Campi chiave frammentati: Nome, cognome e indirizzo email sono distribuiti su colonne separate, rendendo inefficaci i normali filtri di unicità basati su una sola colonna.
+
 3. Variazioni nei domini e nei formati: Numeri di telefono scritti con o senza prefisso internazionale (+39), email aziendali scritte in modo errato ma simili.
 
 ## Il Metodo in 3 Step: Pulizia Intelligente con Gemini

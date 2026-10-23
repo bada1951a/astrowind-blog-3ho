@@ -30,7 +30,9 @@ Here is how I bypassed the panic, utilized Gemini directly within our workflow, 
 Before jumping into the fix, let us look at why typical spreadsheet methods fail when handling enterprise customer lists:
 
 1. Inconsistent Case Sensitivity: Google Sheets formula checks like `UNIQUE` or `COUNTIF` treat "Jane.Doe@Acme.com" and "jane.doe@acme.com" as completely separate entries if case normalization is missing.
+
 2. Hidden Trailing Spaces & Typos: Copied-pasted CRM data often includes invisible trailing spaces (`"Acme Corp "`), which breaks exact-match deduplication rules.
+
 3. Compound Data Fields: When customer names, company domains, and IDs are lumped into single text strings, sorting or filtering by one column leaves duplicate remnants in the others.
 
 ---

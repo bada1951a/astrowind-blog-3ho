@@ -22,7 +22,9 @@ Se você já passou por isso, sabe que o processo tradicional de transcrição m
 Antes de irmos para a solução definitiva, vale a pena entender os três vilões silenciosos que estragam os seus dados na hora do fechamento:
 
 1. PDFs Escaneados como Imagens: Muitas notas fiscais enviadas por fornecedores são, na verdade, fotos ou digitalizações chapadas. O Excel e os leitores de PDF comuns enxergam apenas uma imagem única, sem conseguir selecionar textos ou reconhecer limites de colunas.
+
 2. Quebras de Linha Irregulares: Quando você consegue extrair algum texto bruto, as quebras de linha das descrições longas de produtos quebram a formatação das linhas no Excel, jogando os valores de preços para colunas totalmente erradas.
+
 3. Incompatibilidade de Caracteres Especiais: R$ e pontos/vírgulas em formato brasileiro frequentemente se corrompem na conversão direta, exigindo horas de limpeza com fórmulas manuais do tipo SUBSTITUIR ou VALOR.
 
 ---
@@ -42,8 +44,11 @@ Em vez de usar softwares legados ultrapassados, abra uma ferramenta de IA genera
 
 ### Passo 3: A Importação Limpa para o Excel
 1. A IA gerará uma tabela limpa e formatada na sua tela em questão de segundos.
+
 2. Clique no botão "Copiar tabela" (Copy table) no canto superior direito do bloco de código gerado pela IA.
+
 3. Abra a sua planilha do Excel, clique na célula de destino (ex: `A1`) e pressione `Ctrl + V`.
+
 4. Pronto! Todos os dados estarão perfeitamente alinhados em suas respectivas colunas, sem células mescladas indesejadas.
 
 <div style="border-left: 4px solid #1d4ed8; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

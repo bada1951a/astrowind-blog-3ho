@@ -22,7 +22,9 @@ In deze gids laat ik je zien hoe je ChatGPT inzet als je persoonlijke spreadshee
 Voordat we naar de oplossing kijken, moeten we begrijpen waarom het zo vaak misgaat in spreadsheets. Dit zijn de drie grootste boosdoeners bij data-opschoning:
 
 1. De complexiteit van Reguliere Expressies (Regex): Syntax zoals `^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$` leest als een geheime code. Eén verkeerd geplaatst sterretje of puntje zorgt ervoor dat de hele formule faalt in Google Sheets (die werkt met de RE2-standaard).
+
 2. Oneindig geneste formules: Als je `ALS`, `VERT.ZOEKEN`, `INDEX` en `VERGELIJKEN` door elkaar gaat gebruiken, raak je snel de draad kwijt met haakjes die niet sluiten.
+
 3. Beperkte zoektijd onder druk: Vlak voor een meeting zoek je op Google naar vergelijkbare situaties op fora, maar de oplossingen sluiten net niet aan op jouw specifieke kolomstructuur.
 
 <div style="border-left: 4px solid #10b981; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -45,10 +47,14 @@ Kopieer deze kant-en-klare prompt:
 > "Je bent een expert in Google Sheets en reguliere expressies (regex). Ik heb een kolom in Google Sheets (kolom A) met slordige data, bijvoorbeeld: 'Bedrijf B - 020-1234567 - Amsterdam'. Schrijf voor mij een Google Sheets formule met REGEXEXTRACT of REGEXREPLACE om alleen het telefoonnummer eruit te filteren. Geef direct de formule en leg in één zin uit hoe ik hem moet aanpassen als de kolomwijziging verschuift."
 
 ### Stap 3: Plak en test in Google Sheets
-ChatGPT geeft je de formule (bijvoorbeeld `=REGEXEXTRACT(A2; "\d{2,3}-\d{6,7}")`). 
+ChatGPT geeft je de formule (bijvoorbeeld `=REGEXEXTRACT(A2; "\d{2,3}-\d{6,7}")`).
+
 1. Ga naar je Google Sheet.
+
 2. Klik op de cel waar het resultaat moet komen.
-3. Plak de formule en druk op Enter. 
+
+3. Plak de formule en druk op Enter.
+
 4. Trek de formule naar beneden via de vulgreep in de hoek van de cel.
 
 ### Stap 4: Finetunen bij foutmeldingen

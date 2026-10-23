@@ -24,7 +24,9 @@ Neste guia prático, vou te mostrar o passo a passo exato de como usar o ChatGPT
 Antes de aplicar a solução definitiva, vale entender os três vilões clássicos que travam nosso fluxo de trabalho nessas horas:
 
 1. A opacidade da sintaxe do Google Sheets: Funções de expressão regular (`REGEXMATCH`, `REGEXEXTRACT`, `REGEXREPLACE`) exigem uma lógica de caracteres curinga estrita. Um único ponto ou barra invertida esquecida quebra toda a lógica.
+
 2. Fórmulas monstro intraduzíveis: Tentar aninhar `SE`, `PROCV`, `FACHADA`, `CORRESP` e tratamentos de erro cria um texto ilegível que ninguém consegue dar manutenção depois.
+
 3. Falta de contexto no prompt: Pedir ao ChatGPT apenas "me dê uma fórmula para limpar dados" traz respostas genéricas que não servem para a estrutura real das suas colunas.
 
 ---

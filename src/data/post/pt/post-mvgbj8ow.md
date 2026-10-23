@@ -24,7 +24,9 @@ Eram exatas 18h45 de uma sexta-feira chuvosa em São Paulo. O ar-condicionado do
 Antes de colocar a mão na massa, vale entender os três vilões que transformam uma tarefa simples em um pesadelo corporativo:
 
 1. O Fator Humano e o Esquecimento: Depender da memória para enviar relatórios semanais na correria do fechamento é pedir para tomar puxão de orelha na reunião de diretoria de segunda-feira.
+
 2. Exportações Manuais Inconsistentes: Salvar como PDF pelo navegador muitas vezes quebra a formatação, corta colunas importantes ou deixa as margens totalmente desalinhadas.
+
 3. Falta de Integração Nativa Simples: Embora o Google Sheets seja poderoso, ele não vem com um botão pronto de "enviar PDF personalizado toda sexta-feira" — o que obriga a gente a desbravar o Google Apps Script.
 
 ---
@@ -88,9 +90,13 @@ function enviarRelatorioSemanal() {
 
 #### Passo 3: Configurar a Automação (Gatilho)
 1. No painel esquerdo do Apps Script, clique no ícone de relógio (Acionadores / Triggers).
+
 2. No canto inferior direito, clique em Adicionar acionador.
+
 3. Escolha a função `enviarRelatorioSemanal`.
+
 4. Em "Selecione o tipo de acionador baseado no tempo", escolha Unidade de tempo baseada na semana.
+
 5. Defina o dia da semana (ex: Sexta-feira) e o horário desejado (ex: 18h - 19h). Salve e dê as permissões necessárias na sua conta Google.
 
 ---

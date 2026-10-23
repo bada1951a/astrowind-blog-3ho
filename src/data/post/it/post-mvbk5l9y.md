@@ -18,7 +18,9 @@ Erano le 14:45 e il mio ufficio a Milano sembrava una succursale della Borsa di 
 Se lavori nel mondo corporate o in una PMI internazionale, conosci benissimo questa frustrazione. Ogni volta che prepari un preventivo, un budget o un report di fatturato, ti scontri con tre ostacoli classici:
 
 1. La dipendenza dai plugin a pagamento: Molti tool esterni promettono meraviglie, ma richiedono abbonamenti mensili salati o si bloccano proprio quando hai più bisogno di loro.
+
 2. I tassi fissati a mano: Copiare i tassi di cambio da siti di notizie finanziarie significa inserire valori statici che diventano obsoleti nel giro di mezz'ora.
+
 3. Le formule Google Finance errate o poco curate: Usare la funzione nativa senza una struttura pulita porta a celle vuote, errori di sintassi e celle che restituiscono il famigerato errore #N/D nel bel mezzo di una presentazione.
 
 <div style="border-left: 4px solid #b45309; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -44,7 +46,9 @@ Ora che hai i tassi fissi nella tua tabellina di riferimento (diciamo nell'inter
 
 Immagina di avere l'importo in Euro nella colonna `D` e la valuta di destinazione nella colonna `E`. Nella cella della conversione (`F2`), scrivi una formula pulita basata su `CERCA.VERT` (o `VLOOKUP` se usi la versione in inglese):
 
-`=D2 * CERCA.VERT(E2; A2:C10; 3; FALSO)`
+`=D2 * CERCA.VERT(E2;
+
+A2:C10; 3; FALSO)`
 
 Questa formula prende l'importo in euro, va a pescare il tasso di cambio aggiornato in tempo reale in base alla sigla inserita nella colonna della valuta, e ti restituisce l'importo convertito all'istante.
 
@@ -52,7 +56,9 @@ Questa formula prende l'importo in euro, va a pescare il tasso di cambio aggiorn
 I dati di Google Finance possono subire micro-ritardi o, in rari casi di disservizio temporaneo, mostrare errori di caricamento. Prima di esportare il PDF per la riunione o di proiettare lo schermo:
 
 1. Seleziona l'intera colonna dei valori convertiti.
+
 2. Fai clic su Modifica > Copia (oppure `Ctrl+C`).
+
 3. Fai clic con il tasto destro sulla stessa colonna, vai su Incolla speciale > Incolla solo valori.
 
 In questo modo congelerai il tasso esattamente al momento dell'invio, evitando che una fluttuazione di mercato in diretta modifichi i tuoi totali mentre stai parlando con i manager.

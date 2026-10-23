@@ -22,7 +22,9 @@ Bạn hoàn toàn có thể đạt được trạng thái "thong thả" này m�
 Trước khi áp dụng tự động hóa, tôi từng trải qua vô số buổi chiều thứ Sáu "địa ngục" chỉ vì những lý do ngớ ngẩn sau:
 
 1. Sai sót định dạng vùng in (Print Area): Khi xuất file PDF thủ công qua mục *Tệp > Tải xuống > Tài liệu PDF*, bảng tính thường bị tràn trang, chữ bị cắt đôi hoặc cột bị đẩy sang trang thứ hai trông rất thiếu chuyên nghiệp.
+
 2. Quên cập nhật số liệu mới nhất: Do vội vàng, nhiều lần tôi gửi nhầm phiên bản báo cáo của tuần trước do chưa kịp tổng hợp dữ liệu mới từ các phòng ban đổ về.
+
 3. Áp lực thời gian cuối ngày: Việc lặp lại các thao tác: Mở file, chọn Tệp, xuất PDF, mở Gmail, tải file lên, nhập tiêu đề, điền người nhận dễ khiến đầu óc mệt mỏi và bấm nhầm lẫn tài liệu nhạy cảm.
 
 ## Hướng dẫn thiết lập Apps Script tự động hóa báo cáo từ A đến Z
@@ -31,6 +33,7 @@ Chúng ta sẽ giải quyết bài toán này bằng một đoạn mã nguồn G
 
 ### Bước 1: Chuẩn bị bảng tính và mở trình soạn thảo mã nguồn
 1. Mở file Google Sheets chứa báo cáo tuần của bạn.
+
 2. Trên thanh thực đơn phía trên, chọn Tiện ích bổ sung (Extensions) > Trình chỉnh sửa tập lệnh (Apps Script). Một tab trình duyệt mới sẽ mở ra với giao diện lập trình.
 
 ### Bước 2: Dán đoạn mã Apps Script thực chiến
@@ -99,10 +102,15 @@ function sendWeeklyReportPDF() {
 ### Bước 3: Cấu hình trình kích hoạt tự động (Triggers) theo lịch trình
 Bạn không muốn phải bấm chạy code thủ công mỗi tuần? Hãy để Google làm thay bạn:
 1. Nhấn vào biểu tượng Trình kích hoạt (hình chiếc đồng hồ bên trái màn hình Apps Script).
+
 2. Nhấn vào nút Thêm trình kích hoạt (Add Trigger) ở góc dưới bên phải.
+
 3. Chọn hàm `sendWeeklyReportPDF`.
+
 4. Ở phần chọn nguồn sự kiện, chọn Theo thời gian (Time-driven).
+
 5. Chọn kiểu thời gian là Bộ hẹn giờ theo tuần (Weekly timer), chọn ngày thứ Sáu và khung giờ phù hợp (ví dụ: 17:00 - 18:00).
+
 6. Nhấn Lưu (Save) và cấp quyền tài khoản Google của bạn khi được hỏi.
 
 <div style="border-left: 4px solid #059669; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

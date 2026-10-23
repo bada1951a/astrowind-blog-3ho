@@ -22,7 +22,9 @@ Eram exatas 18h45 de uma sexta-feira típica na Avenida Paulista, em São Paulo,
 Antes de aplicar a solução definitiva, vale a pena entender onde o processo falha no dia a dia dos escritórios:
 
 1. Conflitos de Sincronização na Nuvem: Quando dois analistas salvam o arquivo simultaneamente offline, a nuvem gera cópias automáticas que corrompem as referências de intervalo e quebram fórmulas de soma condicional.
+
 2. Formatação de Horas Incompatível: O Excel trata horas como frações de dias. Se um funcionário entra às 08:00 e sai às 18:00, a subtração simples funciona, mas somar jornadas que ultrapassam 24 horas exige formatações específicas como `[h]:mm`.
+
 3. Complexidade de Regras Trabalhistas: Misturar tolerâncias de marcação, banco de horas e diferentes percentuais de adicional noturno em uma única planilha sem automação gera retrabalho constante.
 
 ## Passo a Passo: Consolidando Dados e Automatizando o Cálculo com IA
@@ -34,8 +36,11 @@ Para resolver o problema do arquivo corrompido e calcular as horas de forma auto
 Em vez de abrir cada arquivo "copia" manualmente, use a ferramenta nativa do Excel para puxar apenas os dados válidos:
 
 1. Vá na guia Dados>Obter Dados>Do Arquivo>Da Pasta.
+
 2. Aponte para a pasta onde os arquivos de ponto estão salvos. O Power Query listará todas as cópias.
+
 3. Clique em Transformar Dados, filtre a coluna [Name] para remover versões antigas e mantenha apenas a planilha mais recente e oficial.
+
 4. Clique em Fechar e Carregar para consolidar tudo em uma única tabela mestre limpa.
 
 ### Passo 2: A Fórmula Inteligente de Horas e Horas Extras

@@ -26,7 +26,9 @@ Zamiast panikować i spędzić wieczór w biurze, postanowiłem wdrożyć rozwi�
 Zanim przejdziemy do kodu, przyjrzyjmy się trzem najczęstszym pułapkom, w które wpadamy przy tradycyjnym obiegu dokumentów:
 
 1. Błędy ludzkie przy eksporcie: Ręczne pobieranie pliku jako PDF często rozjeżdża formatowanie (obcięte kolumny, brzydkie podziały stron).
+
 2. Opóźnienia i zapominalstwo: W wirze spotkań łatwo zapomnieć o kliknięciu "Wyślij" dokładnie w poniedziałek o 8:00 rano.
+
 3. Sztywność danych: Gdy arkusz ma uszkodzone formuły w momencie wysyłki, zarząd otrzymuje puste lub błędne liczby, co niszczy wiarygodność zespołu.
 
 ---
@@ -85,7 +87,9 @@ function wyslijRaportPDF() {
 #### Jak to skonfigurować w 3 prostych krokach:
 
 1. Dopasuj nazwę arkusza: W linijce `var sheet = spreadsheet.getSheetByName("RaportTygodniowy");` wpisz dokładnie taką nazwę, jaką ma Twoja zakładka z raportem w Google Sheets.
+
 2. Wpisz adres odbiorcy: Zmień `"zarzad@twojadomena.pl"` na docelowy adres e-mail (lub listę adresów rozdzielonych przecinkami).
+
 3. Autoryzuj skrypt: Kliknij ikonę dysku (Zapisz), a następnie przycisk Uruchom (Run). Google poprosi Cię o uprawnienia do wysyłania maili i odczytu arkusza – przejdź przez standardowy proces autoryzacji (kliknij "Zaawansowane" -> "Przejdź do Bez tytułu (niebezpieczne)").
 
 ---
@@ -95,10 +99,15 @@ function wyslijRaportPDF() {
 Nie chcesz przecież klikać "Uruchom" co tydzień ręcznie. Zautomatyzujmy to:
 
 1. W edytorze Apps Script kliknij ikonę Zegara (Triggers / Wyzwalacze) po lewej stronie.
+
 2. Kliknij Dodaj wyzwalacze w prawym dolnym rogu.
+
 3. Wybierz funkcję `wyslijRaportPDF`.
+
 4. Jako rodzaj źródła zdarzenia wybierz Oparte na czasie.
+
 5. Wybierz Wyzwalacz cotygodniowy i ustaw preferowany dzień oraz godzinę (np. Poniedziałek, 8:00 - 9:00 rano).
+
 6. Zapisz zmiany.
 
 <div style="border-left: 4px solid #0284c7; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

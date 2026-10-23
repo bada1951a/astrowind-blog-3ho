@@ -28,7 +28,9 @@ Jika Anda pernah berada di posisi saya, terjebak lembur karena urusan rekap data
 Sebelum masuk ke solusi teknis, mari kita bedah akar masalah mengapa metode lama sering membuat kita lembur di kantor:
 
 1. Pola Musiman yang Diabaikan: Rumus dasar seperti rata-rata bergerak (moving average) gagal mendeteksi lonjakan musiman, misalnya kenaikan permintaan menjelang libur panjang atau akhir tahun.
+
 2. Human Error pada Formula Rumit: Mengetik rumus matematika yang panjang dan bercabang sering kali berujung pada pesan *#VALUE!* atau *#REF!* yang bikin stres mendadak.
+
 3. Skala Data yang Terlalu Besar: Mengolah ribuan baris data transaksi historis secara manual membuat aplikasi Excel *lag* atau *not responding* di saat-saat paling krusial.
 
 ---
@@ -48,8 +50,11 @@ Sorot seluruh tabel data Anda, lalu pilih menu Sisipkan (Insert) > Tabel untuk m
 #### Langkah 2: Aktifkan Fitur Forecast Sheet Bawaan Excel
 Daripada menebak-nebak angka, gunakan fitur analisis prediktif berbasis algoritma eksponensial smoothing yang ada di Excel:
 1. Klik pada salah satu sel di dalam tabel data Anda.
+
 2. Masuk ke tab menu Data di bagian atas ribbon Excel.
+
 3. Klik tombol Lembar Perkiraan (Forecast Sheet).
+
 4. Jendela pratinjau akan muncul secara otomatis menampilkan grafik garis dengan batas kepercayaan (*confidence bounds*) atas dan bawah. Atur tanggal akhir peramalan sesuai target kuartal depan yang Anda inginkan, lalu klik Buat (Create).
 
 #### Langkah 3: Gunakan Prompt AI untuk Analisis Naratif dan Penyesuaian

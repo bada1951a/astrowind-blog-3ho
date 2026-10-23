@@ -26,7 +26,9 @@ If you have ever stared at a column of numbers refusing to add up because Excel 
 Before jumping into the fix, let us look at why this frustrating issue happens so frequently in modern corporate workflows:
 
 1. Hidden Invisible Characters: Exports from web apps and legacy databases often include non-breaking spaces (ASCII 160) or zero-width spaces wrapped around numerical text, preventing Excel from recognizing them as values.
+
 2. Text Formatting Lock: When cells are pre-formatted as text before data ingestion, any number pasted or imported directly inherits that text lock, ignoring subsequent formatting dropdown changes.
+
 3. Locale Mismatch: Pulling reports across global offices often mixes decimal separators (periods vs. commas), instantly corrupting how Excel parses string inputs into arithmetic quantities.
 
 ---
@@ -39,7 +41,9 @@ Instead of manual trial-and-error, here is how you can leverage a quick AI formu
 If you use Copilot or ChatGPT alongside your spreadsheet, stop trying to remember obscure syntax. Paste your corrupted column sample into your AI assistant with this exact prompt:
 
 ```text
-I have a column of working hours in Excel stored as text strings with hidden characters, and SUM results in zero. Give me a clean, robust Excel formula using VALUE or SUBSTITUTE to convert range A2:A100 into actual numbers, and calculate total overtime over 40 hours.
+I have a column of working hours in Excel stored as text strings with hidden characters, and SUM results in zero. Give me a clean, robust Excel formula using VALUE or SUBSTITUTE to convert range
+
+A2:A100 into actual numbers, and calculate total overtime over 40 hours.
 ```
 
 #### Step 2: Apply the Battle-Tested Formula

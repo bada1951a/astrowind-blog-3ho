@@ -22,7 +22,9 @@ My Slack was blowing up. It was 1:45 PM on a Thursday, exactly fifteen minutes b
 If you manage recurring team reports, you have likely run into these three classic bottlenecks:
 
 1. The Formatting Nightmare: Google Sheets export URLs default to standard portrait letter size, chopping off your rightmost columns or squeezing 20 rows of data into an unreadable micro-font.
+
 2. The Timing Crunch: Relying on manual memory means someone always forgets to hit export until leadership asks for the file during the actual meeting.
+
 3. The Stale Cache Problem: Copy-pasting data into static slides or separate PDF editors breaks your single source of truth, leading to conflicting numbers across department decks.
 
 ## Step-by-Step Resolution: Building Your Custom Apps Script
@@ -80,9 +82,13 @@ function sendSheetAsPDF() {
 ### Step 3: Set Up Your Weekly Trigger
 Don't just run it manually—let's automate it on a schedule:
 1. In the left sidebar of the Apps Script editor, click on the Triggers icon (looks like a clock).
+
 2. Click Add Trigger in the bottom right corner.
+
 3. Choose `sendSheetAsPDF` as the function to run.
+
 4. Select event source as Time-driven, choose Week timer, and pick your preferred day and hour (e.g., every Monday at 8:00 AM).
+
 5. Save the trigger and authorize the requested Google account permissions.
 
 <div style="border-left: 4px solid #2563eb; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

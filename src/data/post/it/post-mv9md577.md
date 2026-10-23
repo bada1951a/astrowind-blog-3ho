@@ -26,7 +26,9 @@ Se questa scena ti suona fin troppo familiare, significa che anche tu hai vissut
 Prima di passare alla soluzione, guardiamo in faccia il problema. Perche fare il merge dei report a mano e una pessima idea?
 
 1. Incoerenza dei formati: Ogni reparto inserisce i dati a modo suo. C'è chi usa "Gennaio", chi "01", chi formatta le celle come testo e chi come numero. Quando unisci tutto, le formule saltano.
+
 2. Errore umano inevitabile: Dopo tre ore passate a squadernare tabelle, la soglia di attenzione crolla. Basta saltare una riga o sovrascrivere una formula per compromettere l'intero report mensile.
+
 3. Zero scalabilità: Il mese prossimo saremo punto e a capo, con nuovi file, nuovi formati e lo stesso identico stress sottopressione.
 
 ---

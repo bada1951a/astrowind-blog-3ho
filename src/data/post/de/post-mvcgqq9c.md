@@ -24,7 +24,9 @@ Früher habe ich in solchen Paniksituationen stundenlang manuell nach defekten B
 Bevor wir das Problem mit KI lösen, müssen wir verstehen, warum Excel den Dienst verweigert:
 
 1. Unkontrollierte Blähung der XML-Struktur (Bloatware): Bedingte Formatierungen, die sich über Millionen von Zeilen erstrecken, sprengen die Grenzen der internen XML-Struktur. Excel versucht, jede einzelne Zelle zu überwachen.
+
 2. Volatile und redundante Formeln: Hunderte von `JETZT()`, `HEUTE()` oder extrem verschachtelte `WENN`- und `SVERWEIS`-Abfragen zwingen den Prozessor bei jedem Tastendruck in die Knie, da die gesamte Berechnungskette neu aufgebaut wird.
+
 3. Korrupte Namensbereiche und Geister-Links: Verwaiste externe Verknüpfungen und Tausende von unsichtbaren, automatischen Bereichsnamen, die sich im Hintergrund angesammelt haben.
 
 ---

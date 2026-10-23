@@ -22,7 +22,9 @@ Erano le 14:45 e il mio ufficio a Milano sembrava una pentola a pressione. Manca
 Ogni volta che ci troviamo a gestire database sporchi, commettiamo l'errore di affidarci a soluzioni macchinose. Ecco i tre motivi principali per cui perdi ore su Excel:
 
 1. La funzione "Testo in colonne" va in tilt: Se i caratteri speciali come le parentesi angolari `>` o i punti e virgola variano da riga a riga, il wizard di Excel spezza i dati nelle celle sbagliate.
+
 2. Le formule annidate diventano ileggibili: Combinare `STRINGA.ESTRAI`, `TROVA`, `MAIUSC.INIZ` per estrarre il nome crea una formula chilometrica che restituisce errore `#VALORE!` alla minima eccezione (come un nome composto o un secondo nome puntato).
+
 3. Il copia-incolla manuale è un suicidio operativo: Su liste superiori a 500 righe, l'errore umano è garantito al 100% e la stanchezza visiva prende il sopravvento.
 
 ## La soluzione passo-passo con l'Intelligenza Artificiale
@@ -38,8 +40,11 @@ Prima di dare in pasto i dati all'IA, assicuriamoci che Excel non crei conflitti
 ### Passo 2: Sfruttare il riempimento Flash intelligente (Flash Fill)
 Se non hai un assistente IA integrato direttamente nel tuo abbonamento Microsoft 365, sfrutta la funzione nativa di Excel che sfrutta pattern intelligenti:
 1. Crea una colonna vuota a fianco della tua lista disordinata e chiamala `Nome Pulito`.
+
 2. Nella prima riga, scrivi manualmente il nome corretto (es. "Mario").
+
 3. Spostati sulla cella sottostante e premi la combinazione di tasti Ctrl + E (oppure vai su *Dati > Riempimento Flash*).
+
 4. Magia: Excel analizzerà lo schema e completerà l'intera colonna estraendo solo i nomi di battesimo in un millisecondo. Ripeti l'operazione per la colonna delle email estraendo solo la stringa pulita tra le parentesi o rimuovendo i caratteri sporchi.
 
 ### Passo 3: Ottimizzare con un Prompt IA mirato (se usi Copilot o ChatGPT)

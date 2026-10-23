@@ -24,7 +24,9 @@ Si vous avez déjà passé votre soirée à fusionner des onglets à la main en 
 Avant de découvrir la solution miracle intégrée à votre suite Office, penchons-nous sur les trois causes racines qui transforment cette tâche mensuelle en cauchemar :
 
 1. L'hétérogénéité des formats : Chaque responsable régional renomme les colonnes à sa façon ("CA HT", "Chiffre d'affaires", "Total Ventes"). Résultat : vos formules de liaisons cassent net dès qu'un fichier change.
+
 2. L'effet "usine à gaz" des formules : Empiler des liaisons de classeurs externes et des fonctions RECHERCHEV à rallonge alourdit le fichier au point de le faire planter à la moindre modification.
+
 3. L'absence de traçabilité : En cas d'erreur de saisie dans le rapport d'une filiale, retrouver l'origine de l'écart dans votre master-fichier relève de l'enquête policière.
 
 Heureusement, il existe un outil natif, ultra-puissant et gratuit, déjà installé sur votre poste de travail : Power Query.
@@ -41,14 +43,20 @@ Créez un dossier dédié sur votre réseau ou votre bureau (par exemple, "Vente
 ### Étape 2 : Importer le dossier via Power Query
 Ouvrez un nouveau classeur Excel vide qui servira de tableau de bord final :
 1. Allez dans l'onglet Données du ruban supérieur.
+
 2. Cliquez sur Obtenir des données > À partir de fichiers > À partir d'un dossier.
+
 3. Sélectionnez votre dossier "Ventes_2026" et validez.
 
 ### Étape 3 : Transformer et combiner les données
 Une fenêtre d'aperçu s'ouvre. Ne paniquez pas face à cette nouvelle interface !
+
 1. Cliquez sur le bouton Combiner en bas de la fenêtre, puis sur Combiner et transformer des données.
+
 2. Une boîte de dialogue vous demande de choisir un exemple de fichier (prenez le premier par défaut) et la feuille de calcul correspondante. Validez.
+
 3. L'éditeur Power Query s'ouvre. C'est ici que la magie opère : vous pouvez supprimer les colonnes inutiles, nettoyer les espaces, modifier le type de données (passer en nombre décimal pour le CA) et filtrer les lignes vides en quelques clics.
+
 4. Une fois le nettoyage terminé, cliquez sur Fermer et charger dans l'onglet Accueil.
 
 Et voilà ! Vos données sont maintenant fusionnées, propres et structurées dans un tableau croisé dynamique ou une feuille maître. 

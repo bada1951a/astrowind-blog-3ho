@@ -26,7 +26,9 @@ Por suerte, rescaté la situación utilizando un truco rápido con IA integrada 
 Antes de pasar a la solución, veamos por qué este problema nos amarga la vida tan seguido en la oficina:
 
 1. Datos de múltiples fuentes: Los comerciales pegan leads de LinkedIn, formularios web y tarjetas de visita sin ningún filtro. El resultado es un cementerio de formatos: mayúsculas, minúsculas, correos con espacios al inicio y nombres al revés (Apellido, Nombre).
+
 2. Fórmulas rígidas: Las funciones tradicionales de Excel son literales. Si un correo tiene un espacio invisible al final o un punto de más, toda la lógica condicional se viene abajo.
+
 3. Falta de estandarización: Sin un proceso automatizado previo, intentar arreglar manualmente columnas masivas genera errores humanos inevitables y un desgaste mental innecesario.
 
 ---
@@ -43,9 +45,12 @@ Antes de meter IA compleja, asegúrate de eliminar los espacios basura que arrui
 Esto elimina los dobles espacios y estandariza los correos electrónicos a minúsculas, evitando que sistemas externos los rechacen por formato inválido.
 
 ### Paso 2: Usa la IA o Relleno Flash (Flash Fill) para extraer nombres
-Si tienes celdas como "Juan Carlos Pérez García <juan.perez@empresa.es>", olvídate de fórmulas complejas. 
+Si tienes celdas como "Juan Carlos Pérez García <juan.perez@empresa.es>", olvídate de fórmulas complejas.
+
 1. En la celda de al lado, escribe manualmente el primer nombre extraído ("Juan").
+
 2. Presiona la combinación de teclas Ctrl + E (o ve a la pestaña *Datos > Relleno Rápido*).
+
 3. Excel detectará el patrón automáticamente y llenará toda la columna con los primeros nombres en un segundo.
 
 ### Paso 3: El prompt definitivo si usas Copilot o ChatGPT para arreglar correos caóticos

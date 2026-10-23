@@ -22,9 +22,12 @@ Pendant de longues minutes, j'ai enchaîné les réflexes de survie habituels. D
 Voici la méthode exacte que j'ai utilisée pour sauver la situation et que j'applique désormais à chaque gros plantage de bureau :
 
 ### Étape 1 : Convertir le fichier en Archive ZIP pour inspecter sa structure
-Un fichier Excel moderne au format .xlsx n'est rien d'autre qu'un ensemble de fichiers XML compressés. 
+Un fichier Excel moderne au format .xlsx n'est rien d'autre qu'un ensemble de fichiers XML compressés.
+
 1. Fermez complètement Excel.
+
 2. Faites un clic droit sur votre fichier `rapport_financier.xlsx` et renommez l'extension en `rapport_financier.zip`.
+
 3. Extrayez l'archive dans un nouveau dossier. Vous y trouverez un dossier `xl` contenant les feuilles (`worksheets`), les styles (`styles.xml`) et les connexions.
 
 ### Étape 2 : Utiliser ChatGPT pour repérer les anomalies et nettoyer le code
@@ -61,7 +64,9 @@ Exécutez ce script dans votre environnement Python habituel (ou via un notebook
 Pour éviter que ce scénario catastrophe ne se reproduise la semaine prochaine, il est essentiel de comprendre ce qui fait plier Excel :
 
 1. L'inflation invisible des formats conditionnels : À force de copier-coller des lignes et des tableaux, Excel duplique les règles de mise en forme conditionnelle. Un fichier peut se retrouver avec plus de 500 000 règles redondantes, bloquant le processeur dès l'ouverture.
+
 2. Les liaisons externes fantômes et références circulaires : Des formules pointant vers des serveurs réseau déconnectés ou d'autres fichiers supprimés forcent Excel à tenter des actualisations en boucle au démarrage.
+
 3. L'enflure des plages de données (Ghost Rows) : Des cellules vides en bas de feuille mais ayant conservé une mise en mémoire poussent Excel à calculer des tableaux sur 1 048 576 lignes inutilement.
 
 ---

@@ -46,8 +46,11 @@ Ouvrez ChatGPT et utilisez un prompt ultra-contextuel. Ne lui demandez pas juste
 
 ### Étape 3 : Insérer et propager dans Google Sheets
 1. Retournez dans votre tableau Google Sheets.
+
 2. Cliquez sur la cellule de destination (par exemple, `B2`).
+
 3. Collez la formule générée par ChatGPT et validez avec Entrée.
+
 4. Double-cliquez sur le petit carré bleu en bas à droite de la cellule pour propager la formule à toute la colonne (`Extensions > Macros` ou simple double-clic de recopie incrémentée).
 
 ---

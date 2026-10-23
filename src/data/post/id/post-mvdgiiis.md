@@ -21,7 +21,9 @@ Jam sudah menunjukkan pukul 21.15 WIB di salah satu sudut gedung pencakar langit
 
 Sebelum masuk ke solusi kilatnya, mari kita bedah kenapa pekerjaan ini selalu bikin frustrasi:
 1. Format Vendor Tidak Seragam: Setiap toko atau suplier punya tata letak *invoice* yang berbeda. Ada yang letak totalnya di bawah, ada yang di tengah, bahkan ada yang bentuknya nota kontan tulis tangan.
+
 2. Kualitas Scan yang Buruk: Dokumen sering kali hanya difoto pakai kamera ponsel pintar di dalam mobil atau buru-buru di gudang, menghasilkan bayangan, kertas terlipat, atau pencahayaan yang kurang.
+
 3. Keterbatasan OCR Tradisional: Alat *Optical Character Recognition* lama hanya membaca teks mentah menjadi blok paragraf acak tanpa mengenali mana kolom "Nama Barang", "Harga Satuan", atau "Jumlah Total".
 
 ---
@@ -49,9 +51,13 @@ Unggah file PDF atau kumpulan foto *invoice* Anda ke dalam chat, lalu gunakan *p
 
 ### Langkah 3: Transfer Instan ke Lembar Kerja Excel
 1. Sorot (highlight) seluruh tabel hasil keluaran AI di layar.
+
 2. Salin data tersebut (tekan Ctrl + C).
+
 3. Buka lembar kerja Excel baru Anda.
+
 4. Klik sel `A1`, klik kanan, lalu pilih opsi Paste (atau gunakan Ctrl + V).
+
 5. Jika data belum terbagi ke dalam kolom dengan sempurna, blok kolom `A`, masuk ke menu Data, pilih Text to Columns, lalu centang pilihan yang sesuai (biasanya dipisahkan oleh Tab atau koma).
 
 ---

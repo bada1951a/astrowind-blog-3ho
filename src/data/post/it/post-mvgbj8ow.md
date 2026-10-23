@@ -24,7 +24,9 @@ Il tutto mentre il mio caffè si raffreddava sulla scrivania e ricevevo notifich
 Prima di scrivere anche solo una riga di codice, analizziamo perché il metodo tradizionale basato sul "copia-incolla ed esporta" fa perdere così tanto tempo e genera errori critici:
 
 1. Distrazione e fattore umano: Modificare manualmente i filtri del foglio di calcolo prima dell'esportazione porta spesso a dimenticare una colonna chiave o a inviare dati parziali al management.
+
 2. Problemi di formattazione del PDF: Quando esporti un intero foglio Google in PDF tramite interfaccia grafica, le interruzioni di pagina saltano costantemente, tagliando tabelle importanti a metà e creando documenti illeggibili per i clienti.
+
 3. Mancanza di schedulazione affidabile: Affidarsi alla memoria umana per l'invio puntuale del venerdì significa inevitabilmente dimenticarsene almeno una volta al mese, specialmente sotto pressione o quando si è in trasferta.
 
 ---
@@ -99,10 +101,15 @@ function inviaReportSettimanalePDF() {
 ### Passo 3: Impostare la schedulazione automatica (Trigger)
 Ora che lo script è pronto, dobbiamo fare in modo che si attivi da solo ogni settimana:
 1. Nell'editor di Apps Script, clicca sull'icona a forma di orologio (Attivatori) nella barra laterale sinistra.
+
 2. Clicca sul pulsante in basso a destra Aggiungi attivatore.
+
 3. Nella finestra che si apre, seleziona la funzione `inviaReportSettimanalePDF`.
+
 4. Scegli il tipo di attivatore basato sul tempo: Seleziona timer basato sul tempo.
+
 5. Scegli la frequenza: Timer settimanale, indicando il giorno (es. Venerdì) e la fascia oraria desiderata (es. dalle 17:00 alle 18:00).
+
 6. Clicca su Salva e autorizza l'accesso al tuo account Google quando richiesto.
 
 <div style="border-left: 4px solid #4338ca; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

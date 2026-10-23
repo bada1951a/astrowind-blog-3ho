@@ -26,7 +26,9 @@ To nie był pierwszy raz, kiedy tradycyjne metody zawiodły przy comiesięcznym 
 Zanim przejdziemy do naprawy, spójrzmy prawdzie w oczy. Oto trzy główne powody, dla których dotychczasowy system (lub jego brak) doprowadzał Cię do szewskiej pasji:
 
 1. Ręczne „Kopiuj-Wklej” z dziesiątek plików: Każdy oddział wysyła plik według własnego uznania. W jednym dany miesiąc to kolumna C, w innym F. Przenoszenie tego ręcznie to zaproszenie do pomyłek.
+
 2. Kruchość makr VBA: Ktoś zmieni nazwę arkusza w pliku źródłowym, a Twój skrypt makra wypluwa błąd w linii 42 i nie wiesz, dlaczego.
+
 3. Brak śladu audytowego (Data Lineage): Kiedy zarząd pyta: *„Skąd wzięła się ta kwota w marcu?”*, zaczyna się paniczne szukanie po mailach i starych wersjach plików.
 
 ---
@@ -40,8 +42,11 @@ Utwórz na dysku jeden dedykowany folder na dany miesiąc, na przykład `C:\Rapo
 
 #### Krok 2: Pobranie danych z folderu w Excelu
 1. Otwórz nowy, czysty skoroszyt Excela, który będzie Twoim szablonem raportu.
+
 2. Przejdź do zakładki Dane na wstążce górnej.
+
 3. Kliknij Pobierz dane > Z pliku > Z folderu.
+
 4. Wskaż ścieżkę do naszego folderu `Sprzedaż_2026_10` i kliknij Otwórz.
 
 #### Krok 3: Przekształcenie i oczyszczenie danych (Edytor Power Query)

@@ -20,7 +20,9 @@ Si vous vous êtes déjà retrouvé un vendredi soir à 18h à supprimer des esp
 Avant de passer à la vitesse supérieure, faisons le point sur les trois raisons principales pour lesquelles ce type de traitement tourne au cauchemar bureautique :
 
 1. L'hétérogénéité des données : Dans un même tableau, vous trouverez "JEAN DUPONT", "marie.durand@gmail,com" (avec une virgule) et "paul.martin@ " (avec un espace de fin invisible). Les formules traditionnelles Excel n'ont aucune intuition contextuelle pour deviner ces erreurs.
+
 2. Les limites du texte en colonnes : L'outil natif de découpage par délimiteur échoue dès que la structure varie d'une ligne à l'autre (par exemple, un "Jean-Paul Dupont-Moretti" vs un simple "Lucie Bernard").
+
 3. Le piège des expressions régulières (Regex) complexes : Écrire une formule complexe pour nettoyer des emails demande des compétences en programmation que la majorité des gestionnaires de projets ou assistants de direction n'ont pas le temps d'apprendre entre deux réunions.
 
 ---

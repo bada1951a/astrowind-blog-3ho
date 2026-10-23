@@ -26,7 +26,9 @@ May mắn thay, câu chuyện đã khác kể từ khi chúng ta biết cách bi
 Khi đối mặt với một bảng dữ liệu hỗn độn sát giờ deadline, việc áp dụng sai phương pháp thường xuất phát từ 3 nguyên nhân chính sau đây:
 
 1. Thiếu kiến thức nền tảng về Regex: Cú pháp của Regular Expression (Biểu thức chính quy) cực kỳ khó nhớ với các ký tự đặc biệt như `^`, ``, `.*`, `\d+`. Chỉ cần gõ sai một dấu chấm hay dấu ngoặc là công thức vô tác dụng.
+
 2. Hạn chế của các hàm chuẩn trong Sheets: Các hàm như `SUBSTITUTE` hay `MID` thông thường chỉ xử lý được các chuỗi đơn giản. Khi dữ liệu có biến động về định dạng (ví dụ: số điện thoại có độ dài khác nhau), các hàm này hoàn toàn "bó tay".
+
 3. Áp lực thời gian tạo ra tâm lý hoảng loạn: Càng vội vàng, chúng ta càng dễ gõ sai cú pháp hoặc áp dụng nhầm công thức Excel sang Google Sheets (vốn có một số điểm khác biệt nhỏ về cấu trúc hàm).
 
 ---

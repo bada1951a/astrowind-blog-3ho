@@ -28,7 +28,9 @@ Here is the exact battle-tested playbook I used to survive that afternoon, desig
 Before jumping into the fix, let us diagnose why traditional financial modeling in spreadsheets usually crumbles right before a deadline:
 
 1. Rigid Data Structures: Raw financial data exported from ERP or billing systems comes in messy, wide formats. Standard charts break when columns span multiple quarters without a clean, consolidated pivot foundation.
+
 2. Lack of Interactivity: Standard Google Sheets charts are static images. When executives ask "What if we filter out enterprise tier accounts?", static charts require rebuilding the entire view on the fly.
+
 3. Overcomplicated Manual Styling: Trying to make a spreadsheet look like a polished financial presentation often results in messy conditional formatting rules, mismatched fonts, and broken formula references.
 
 ---

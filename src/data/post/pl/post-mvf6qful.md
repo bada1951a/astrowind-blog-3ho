@@ -46,8 +46,11 @@ Otwórz Gemini i wklej swoje dane wraz z konkretnym poleceniem (promptem). Unika
 ### Krok 3: Wdrożenie rozwiązania w Google Sheets
 Gemini błyskawicznie przeanalizuje strukturę i poda Ci rozwiązanie. Jeśli zaproponuje formułę opartą na `REGEXREPLACE`, `TRIM` i `UNIQUE`:
 1. Wklej nową formułę pomocniczą do pustej kolumny obok swoich danych.
+
 2. Przeciągnij ją w dół.
+
 3. Gdy kolumna pomocnicza uporządkuje dane, zaznacz ją, wybierz Edycja > Kopiuj, a następnie Edycja > Wklej specjalne > Wklej tylko wartości.
+
 4. Teraz w menu górnym wejdź w Dane > Oczyszczanie danych > Usuń duplikaty.
 
 Problem rozwiązany w niecałe 3 minuty. Raport poszedł do zarządu na czas, a ja mogłem odetchnąć z ulgą.

@@ -22,7 +22,9 @@ Eran las 17:50 de un viernes en nuestra oficina corporativa en el Paseo de la Ca
 Antes de aplicar la solucion automatizada con IA, analicemos por que este tipo de tareas rutinarias en Excel suelen convertirse en pesadillas operativas:
 
 1. Dependencia de rutas de red locales: Vincular archivos de diferentes departamentos mediante rutas de Windows frágiles (`C:/Users/...` o rutas de red compartidas) se rompe en cuanto alguien cambia el nombre de una carpeta o migra a la nube corporativa.
+
 2. Formato de hora binario y decimal confuso: Excel almacena las horas como fracciones de un día. Restar directamente dos celdas de tipo hora sin convertir a formato decimal destruye cualquier cálculo de horas extra o nocturnas si cruzan la medianoche.
+
 3. Fórmulas matriciales obsoletas: El uso excesivo de funciones complejas como `SI.CONJUNTO` anidadas diez veces hace que la hoja sea ilegible para cualquier otro compañero y propensa a fallos de sintaxis.
 
 ---

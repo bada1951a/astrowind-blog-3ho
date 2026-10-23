@@ -22,7 +22,11 @@ Il est 14h15 au 18e étage d'une tour à La Défense. Le comité de direction d�
 Ce genre de situation ne relève pas de la fatalité, mais de trois causes techniques bien précises que l'on retrouve dans la plupart des services financiers :
 
 1. La structure des données non normalisée : Vos lignes de revenus et de charges sont éparpillées sur plusieurs onglets sans structure de base de données propre, ce qui empêche l'outil d'interpréter correctement les axes.
-2. L'absence de contrôles interactifs : Utiliser des plages de cellules fixes (comme "A1:G12") au lieu de plages dynamiques avec des menus déroulants ou des curseurs bloque toute mise à jour en direct pendant la réunion.
+
+2. L'absence de contrôles interactifs : Utiliser des plages de cellules fixes (comme "
+
+A1:G12") au lieu de plages dynamiques avec des menus déroulants ou des curseurs bloque toute mise à jour en direct pendant la réunion.
+
 3. Le piège de la mise en forme manuelle : Passer trop de temps à ajuster les couleurs, les légendes et les échelles logarithmiques à la main au lieu de laisser l'IA suggérer la typologie de graphique optimale (cascade, aires empilées ou graphiques combinés).
 
 ## Guide d'implémentation : Créez votre modèle en 3 étapes
@@ -33,7 +37,9 @@ Pour ne plus jamais sueur à grosses gouttes devant un comex exigeant, voici la 
 Avant d'invoquer l'IA, vos données brutes doivent être prêtes. Rassemblez vos flux de trésorerie prévisionnels dans un tableau unique.
 - Assurez-vous que la première ligne contient des en-têtes clairs (Mois, CA, Charges Fixes, EBITDA).
 - Évitez les cellules fusionnées dans la zone de données.
-- Utilisez des plages nommées si nécessaire, ou sélectionnez simplement votre plage (par exemple, "Données_Budget!A1:E12").
+- Utilisez des plages nommées si nécessaire, ou sélectionnez simplement votre plage (par exemple, "Données_Budget!
+
+A1:E12").
 
 ### Étape 2 : Activer l'assistant IA et générer les suggestions
 Ouvrez votre panneau latéral Google Sheets et utilisez l'intelligence artificielle intégrée pour concevoir la structure visuelle.

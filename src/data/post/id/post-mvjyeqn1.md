@@ -18,7 +18,9 @@ Situasi seperti ini sering dialami oleh para profesional kantor yang mengandalka
 Berikut adalah tiga akar permasalahan utama yang sering membuat proses perhitungan jam kerja kantor menjadi kacau:
 
 1. Format Waktu yang Tidak Konsisten: Mesin absensi sering kali mengekspor data dalam format teks (text format) alih-alih format waktu (time format) yang valid, sehingga rumus pengurangan jam keluar dan masuk menghasilkan nilai eror seperti [#VALUE!].
+
 2. Aturan Lembur yang Rumit: Perhitungan jam lembur di luar jam kerja normal sering kali memerlukan logika kondisi bersarang ([Nested IF]) yang panjang dan rentan terhadap kesalahan manusia saat diketik secara manual.
+
 3. Risiko Kehilangan File Asli: Ketiadaan pemisahan antara lembar kerja masukan data mentah dan lembar kerja rekapitulasi akhir membuat file master rentan rusak akibat salah rumus atau skrip otomatisasi yang keliru.
 
 Untuk mengatasi mimpi buruk tersebut tanpa harus lembur semalaman, kita bisa memanfaatkan kecerdasan buatan ([AI]) untuk merumuskan formula Excel instan yang akurat, bersih, dan langsung bisa disalin.

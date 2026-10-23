@@ -24,7 +24,9 @@ Das ist der klassische Moment, in dem man stundenlang manuell Zeilen löschen m�
 Bevor ich den rettenden KI-Weg fand, habe ich wertvolle Minuten mit den typischen Stolperfallen verschwendet. Die Ursachen für dieses Chaos sind meistens banal, aber hartnäckig:
 
 1. Inkonsistente Namenskonventionen: Mal steht dort "Müller & Partner", mal "Mueller und Partner OHG" oder schlicht "Müller". Reines String-Matching über Formeln scheitert hier gnadenlos.
+
 2. Falsch zugeordnete Spalten: Durch Copy-Paste-Fehler aus verschiedenen CRM-Systemen sind E-Mail-Adressen und Firmennamen in Spalten verrutscht, was Standardfilter unbrauchbar macht.
+
 3. Leerzeichen und Sonderzeichen-Salat: Unsichtbare Leerzeichen am Ende von Zellen verhindern, dass exakte Übereinstimmungen erkannt werden.
 
 ## In 3 Schritten zur sauberen Dubletten-Bereinigung mit Gemini

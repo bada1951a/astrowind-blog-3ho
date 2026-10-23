@@ -24,7 +24,9 @@ Jam sudah menunjukkan pukul 21.30 WIB di salah satu menara perkantoran kawasan b
 Sebelum menemukan jalan keluar yang elegan, saya sempat membuang waktu satu jam penuh mencoba berbagai cara manual yang berujung buntu. Berikut adalah tiga akar masalah utama yang sering bikin kita stres di kantor:
 
 1. Variasi Karakter Tersembunyi (Invisible Characters): Data yang di-copy paste dari sistem CRM sering membawa spasi ekstra di awal atau akhir kata (`trailing/leading spaces`), membuat fungsi pencocokan standar menganggapnya sebagai data yang berbeda.
+
 2. Format Penulisan Tidak Konsisten: Ada yang menulis "Jakarta Selatan", ada yang "Jaksel", atau penulisan nama perusahaan dengan singkatan PT yang berbeda titik dan spasinya.
+
 3. Keterbatasan Rumus Dasar: Mengandalkan menu `Data > Data cleanup > Remove duplicates` bawaan Google Sheets tidak cukup pintar untuk mengenali kesamaan makna, sehingga data penting yang mirip sering terhapus atau malah lolos seleksi.
 
 ### Langkah-Langkah Solusi Kilat Menggunakan Gemini AI

@@ -28,7 +28,9 @@ Di sinilah titik baliknya. Daripada terus menerus menebak letak kerusakan sel at
 Sebelum langsung ke solusi teknis, mari kita bedah tiga akar masalah utama yang sering membuat file Excel kantor berukuran raksasa menjadi sangat lambat:
 
 1. Volatile Formulas yang Berlebihan: Penggunaan fungsi seperti INDIRECT, OFFSET, TODAY, atau NOW secara berlebihan membuat Excel harus menghitung ulang seluruh lembar kerja setiap kali ada satu sel yang berubah.
+
 2. Bloated Conditional Formatting: Salinan aturan format bersyarat yang menumpuk dari proses *copy-paste* data lintas departemen bisa menciptakan ribuan *rule* tersembunyi yang membebani memori RAM.
+
 3. Ghost Ranges & Corrupted Styles: Rusaknya *metadata* file, sisa baris kosong yang dianggap terisi hingga baris 1.048.576, serta definisi *named ranges* yang merujuk ke error eksternal.
 
 ---

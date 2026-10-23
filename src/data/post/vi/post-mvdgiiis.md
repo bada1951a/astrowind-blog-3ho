@@ -20,7 +20,9 @@ theme: "Midnight Navy Royal"
 Trước khi tìm ra giải pháp tự động hóa bằng AI, tôi đã thử đủ mọi cách truyền thống và nhận ra 3 nguyên nhân cốt lõi khiến công việc này trở thành bãi mìn:
 
 1. Định dạng hóa đơn không đồng nhất: Mỗi nhà cung cấp sử dụng một mẫu layout khác nhau, chỗ thì đặt bảng mã số thuế ở góc trái, chỗ thì ở góc phải, khiến các công cụ OCR thông thường đọc nhầm vị trí cột.
+
 2. Chất lượng giấy in và chữ viết tay tệ: Hóa đơn để lâu ngày bị mờ mực, nhàu nát, hoặc có thêm chữ ký và ghi chú viết tay chèn lên trên, làm phần mềm quét văn bản thuần túy không nhận diện nổi ký tự.
+
 3. Lỗi định dạng khi xuất sang Excel: Sau khi quét được, dữ liệu thường bị tràn dòng, gộp ô (merged cells) hoặc lỗi font tiếng Việt có dấu, bắt người dùng phải căn chỉnh lại từ đầu cực kỳ mất thời gian.
 
 ---

@@ -26,7 +26,9 @@ Cơn ác mộng thủ công này chắc chắn quá quen thuộc với bất k�
 Trước khi nhảy vào cách sửa, chúng ta hãy điểm qua 3 lý do chính khiến việc gom số liệu hàng tháng của bạn luôn biến thành thảm họa:
 
 1. Dữ liệu đầu vào phân mảnh và không đồng nhất: Mỗi chi nhánh gửi lên một file Excel với cấu trúc tùy ý (chi nhánh A dùng cột "Ma_SP", chi nhánh B lại dùng "Mã sản phẩm", chi nhánh C gộp chung Mã và Tên vào một cột).
+
 2. Sai sót do thao tác thủ công (Human Error): Khi copy hàng nghìn dòng dữ liệu từ nhiều file vào một file tổng, việc lệch dòng, sót dữ liệu hay lỗi định dạng ngày tháng (MM/DD/YYYY thành DD/MM/YYYY) rất dễ xảy ra, dẫn đến sai lệch kết quả tài chính.
+
 3. Quy trình "Làm lại từ đầu" mỗi tháng: Tháng này bạn mất 3 tiếng để xử lý xong, thì sang tháng sau, với 12 file mới tương tự, bạn lại phải lặp lại nguyên vẹn từng bước copy-paste đó một cách vô nghĩa.
 
 ---
@@ -37,12 +39,16 @@ Trước khi nhảy vào cách sửa, chúng ta hãy điểm qua 3 lý do chính
 
 #### Bước 1: Kết nối thư mục dữ liệu qua Power Query
 1. Mở một file Excel trống mới hoàn toàn để làm file tổng hợp báo cáo.
+
 2. Trên thanh công cụ, chọn Dữ liệu (Data) > Lấy Dữ liệu (Get Data) > Từ Tệp (From File) > Từ Thư mục (From Folder).
+
 3. Trỏ đường dẫn đến thư mục `DoanhThuThang10` chứa các file báo cáo chi nhánh, sau đó nhấn Mở (Open).
 
 #### Bước 2: Gom nhóm và kết hợp file (Combine Files)
 1. Trong cửa sổ xem trước hiện ra, thay vì nhấn nút Load trực tiếp, hãy chọn Kết hợp (Combine) > Kết hợp & Chuyển đổi Dữ liệu (Combine & Transform Data).
+
 2. Excel sẽ hiển thị bảng mẫu (Sample File). Chọn sheet chứa dữ liệu doanh thu thực tế của các chi nhánh (ví dụ: Sheet1) rồi nhấn OK.
+
 3. Cửa sổ giao diện chỉnh sửa Power Query Editor sẽ bật lên. Tại đây, bạn sẽ thấy toàn bộ dữ liệu từ các file đã tự động nối đuôi nhau gộp lại thành một bảng lớn duy nhất.
 
 #### Bước 3: Làm sạch và chuẩn hóa dữ liệu
@@ -53,6 +59,7 @@ Trước khi nhảy vào cách sửa, chúng ta hãy điểm qua 3 lý do chính
 
 #### Bước 4: Tải dữ liệu ra bảng tính Excel (Load to)
 1. Sau khi đã làm sạch xong xuôi, trên góc trái Power Query Editor, chọn Đóng & Tải (Close & Load) > Đóng & Tải Đến... (Close & Load To...).
+
 2. Chọn Bảng (Table) và chọn vị trí đặt bảng kết quả trên file Excel của bạn, sau đó nhấn OK.
 
 Từ bây giờ, sang tháng sau, bạn chỉ cần thay thế các file dữ liệu mới vào thư mục `DoanhThuThang10` (giữ nguyên tên hoặc cấu trúc file), quay lại file tổng hợp, nhấp chuột phải vào bảng kết quả và chọn Làm mới (Refresh). Toàn bộ quy trình gom nhóm, lọc rác và tính toán sẽ được tự động thực hiện trong chưa đầy 3 giây.

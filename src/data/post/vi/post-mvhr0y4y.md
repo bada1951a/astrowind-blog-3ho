@@ -22,7 +22,9 @@ Chính lúc áp lực đè nặng trước giờ tan ca, tôi nhận ra mình c�
 Trước khi áp dụng AI để tăng tốc, chúng ta cần nhìn nhận rõ tại sao những bảng tính thông thường lại biến thành "thảm họa" trực quan:
 
 1. Cấu trúc bảng dữ liệu sai chuẩn phân tích (Unstructured Data): Dữ liệu để ngang dòng thay vì dọc cột, hoặc trộn lẫn các trường dữ liệu tiền tệ và tỷ lệ phần trăm khiến AI lẫn Google Sheets không thể tự nhận diện trục X và trục Y.
+
 2. Thiếu bộ lọc tương tác (Slicers & Dropdowns): Biểu đồ tĩnh (static chart) hiển thị tất cả mọi thứ cùng một lúc, khiến người xem khó theo dõi riêng biệt số liệu của từng khu vực hoặc từng dòng sản phẩm.
+
 3. Lạm dụng định dạng rườm rà: Quá nhiều màu sắc và hiệu ứng thừa thãi làm che khuất các chỉ số tài chính cốt lõi như Biên lợi nhuận gộp (Gross Margin) hay Dòng tiền thuần (Net Cash Flow).
 
 ---
@@ -43,14 +45,19 @@ Trước khi áp dụng AI để tăng tốc, chúng ta cần nhìn nhận rõ t
 Một biểu đồ tài chính chuyên nghiệp bắt buộc phải có tính năng tương tác để người xem có thể chủ động lọc dữ liệu.
 
 1. Bôi đen toàn bộ vùng dữ liệu bảng tính của bạn.
+
 2. Trên thanh menu, chọn Dữ liệu (Data) > Thêm bộ lọc (Add a slicer).
+
 3. Ở bảng điều khiển bên phải xuất hiện, chọn cột cần lọc tương tác (ví dụ: Cột "Chi nhánh" hoặc "Quý").
+
 4. Bây giờ, khi bạn hoặc sếp bấm vào bộ lọc trên màn hình, toàn bộ biểu đồ sẽ tự động cập nhật số liệu theo đúng phạm vi được chọn.
 
 ### Bước 3: Chèn và tinh chỉnh biểu đồ kết hợp AI gợi ý trực quan
 
 1. Chọn vùng dữ liệu chính, bấm Chèn (Insert) > Biểu đồ (Chart).
+
 2. Ở bảng thiết lập biểu đồ (Chart editor), mục *Loại biểu đồ (Chart type)*, hãy chọn dạng Biểu đồ kết hợp (Combo chart) nếu bạn muốn hiển thị đồng thời Doanh thu (dạng cột) và Tỷ suất lợi nhuận (dạng đường).
+
 3. Sử dụng tính năng Khám phá (Explore) ở góc dưới bên phải Google Sheets (biểu tượng ngôi sao nhỏ) hoặc hỏi AI: *"Làm thế nào để thêm đường xu hướng (Trendline) cho biểu đồ doanh thu này?"*. Google Sheets sẽ tự động tính toán và vẽ đường dự báo tài chính cực kỳ chính xác.
 
 <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

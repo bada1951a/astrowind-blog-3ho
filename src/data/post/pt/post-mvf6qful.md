@@ -27,7 +27,9 @@ Abra o Google Sheets > Vá em Extensões > Apps Script > Cole o código gerado p
 Antes de aplicar a solução definitiva com o Gemini, vale entender por que o processo padrão de "Remover Duplicadas" do Google Sheets costuma falhar em ambientes corporativos caóticos:
 
 1. Inconsistência de Digitação: O cliente "João Silva" cadastrado como "joao.silva@empresa.com" e "JOAO SILVA" com o e-mail "joao.silva@empresa.com.br" não é reconhecido como duplicata exata pela ferramenta padrão.
+
 2. Erros de Formatação de Dados: Espaços extras no final das células (caracteres invisíveis) que burlam qualquer fórmula de busca ou validação comum.
+
 3. Falta de Contexto Lógico: Planilhas mescladas de diferentes fontes onde o ID do cliente mudou, mas o CPF ou o e-mail é o mesmo, exigindo regras de mesclagem inteligentes.
 
 ---

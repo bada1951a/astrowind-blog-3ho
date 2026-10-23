@@ -24,7 +24,9 @@ Genug ist genug. An diesem Abend habe ich mich hingesetzt und ein sauberes, wied
 Bevor wir in den Code springen, schauen wir uns an, warum der herkömmliche Weg so fehleranfällig ist:
 
 1. Formatierungschaos beim Export: Wenn man unvorbereitete Google Tabellen direkt als PDF exportiert, ignoriert das System oft die definierten Druckbereiche. Spalten werden abgeschnitten, und wichtige Kennzahlen landen auf Seite zwei.
+
 2. Falsche Dateinamen und Versionen: Werden Berichte wöchentlich manuell umbenannt (z.B. *Bericht_final_v2_FINAL.pdf*), führt das unweigerlich zu Verwirrung im Postfach der Geschäftsführung.
+
 3. Faktor Mensch: Freitagnachmittag ist man müde. Da vergisst man schnell mal einen Empfänger im CC oder hängt versehentlich die falsche Vorwochen-Datei an.
 
 ---
@@ -82,8 +84,11 @@ function sendWeeklyReportPDF() {
 ### Schritt 3: Den Trigger (Zeitplan) einrichten
 Damit das Skript nun jeden Freitag vollautomatisch läuft, ohne dass Sie einen Finger rühren müssen:
 1. Klicken Sie im linken Menü des Apps Script Editors auf das Uhren-Symbol (Trigger).
+
 2. Unten rechts auf Trigger hinzufügen klicken.
+
 3. Wählen Sie die Funktion `sendWeeklyReportPDF` aus.
+
 4. Wählen Sie als Ereignisquelle Zeitgesteuert und stellen Sie ein wöchentliches Intervall (z.B. Freitags zwischen 15:00 und 16:00 Uhr) ein.
 
 <div style="border-left: 4px solid #1e40af; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

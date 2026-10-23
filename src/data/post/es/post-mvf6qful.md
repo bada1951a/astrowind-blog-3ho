@@ -31,9 +31,11 @@ a.").<br>
 Antes de aplicar la solución definitiva, analicemos por qué las herramientas nativas se quedan cortas ante este problema cotidiano:
 
 1. Sensibilidad a mayúsculas y espacios: La función nativa de Google Sheets "Eliminar duplicados" distingue entre "Juan Pérez" y "juan perez" o celdas con espacios ocultos al final, dejándolos intactos.
+
 2. Variaciones en razones sociales: Los nombres de empresas se registran de mil formas diferentes ("Telefónica España", "Telefonica", "Telefónica S.
 
 A."), lo que confunde a las fórmulas lógicas estándar como BUSCARV o COINCIDIR.
+
 3. Falta de contexto relacional: Las fórmulas complejas de Apps Script requieren tiempo de programación que no tienes cuando el comité directivo está esperando en la sala de juntas.
 
 ---
@@ -54,7 +56,9 @@ A., SL, etc.). Analiza los datos pegados a continuación, unifica los registros 
 
 ### Paso 3: Importación y validación rápida
 1. Copia la tabla limpia que te devolvió Gemini.
+
 2. En tu Google Sheets, crea una pestaña nueva llamada `Depurado_Final`.
+
 3. Pega los datos y utiliza la validación condicional rápida para confirmar que no queden correos electrónicos repetidos. Reemplaza tu hoja principal con este nuevo rango validado.
 
 <div style="border-left: 4px solid #64748b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

@@ -24,7 +24,9 @@ Dit soort acute spreadsheetproblemen vlak voor een directiemeeting kosten je bak
 Voordat we naar de oplossing duiken, is het handig om te begrijpen waarom dit soort dataproblemen ontstaan en waarom je oude trucs niet werken:
 
 1. Inconsistente naamstructuren in e-mails: Adressen variëren van *voornaam.achternaam@domein.com* tot initialen zoals *j.v.d.berg@bedrijf.nl* of volledige namen zonder scheidingstekens. Excel's 'Tekst naar Kolommen' breekt hier volledig op.
+
 2. Verborgen typfouten en rommel: Spaties voor of na de tekst, onzichtbare regeleinden en speciale tekens zorgen ervoor dat vlookup-formules of mailingsystemen falen met foutmeldingen.
+
 3. Hoofdletterchaos: Namen die volledig in kleine letters of juist in schreeuwerige hoofdletters zijn ingevoerd, ogen onprofessioneel tijdens een high-stakes presentatie.
 
 ---

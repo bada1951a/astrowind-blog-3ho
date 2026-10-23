@@ -24,7 +24,9 @@ Il problema non è solo il tempo che manca, ma la natura stessa di quei fogli: c
 Prima di trovare il metodo definitivo che mi ha salvato la riunione, ho sbattuto la testa contro tre problemi classici che mandano in tilt qualsiasi sistema tradizionale:
 
 1. La formattazione tabellare complessa: Le fatture non seguono uno standard rigido. Descrizioni lunghe su più righe, codici articolo spezzati e prezzi allineati male fanno impazzire i vecchi software di riconoscimento ottico dei caratteri.
+
 2. Qualità delle scansioni scadenti: Foto fatte con lo smartphone in fretta o vecchi fax digitalizzati producono un rumore visivo che confonde le lettere con i numeri (per esempio, scambiare la lettera 'O' con lo zero '0' o la 'I' con l'uno '1').
+
 3. Mancanza di contesto semantico: I normali convertitori PDF-to-Excel estraggono il testo come mucchi di parole sparse. Non capiscono qual è la "Partita IVA", qual è il "Totale imponibile" e quale la "Aliquota IVA".
 
 ## Il metodo in 3 passi per trasformare la carta in Excel pulito
@@ -56,8 +58,11 @@ Ecco il testo grezzo della fattura:
 ### Passo 3: Copia, incolla e validazione rapida su Excel
 L'intelligenza artificiale restituirà una tabella Markdown pulita e ordinata in pochi secondi. A questo punto:
 1. Seleziona la tabella generata dall'IA.
+
 2. Premi `Ctrl + C` per copiarla.
-3. Apri il tuo foglio Excel, posizionati sulla cella A1 e premi `Ctrl + V`. 
+
+3. Apri il tuo foglio Excel, posizionati sulla cella A1 e premi `Ctrl + V`.
+
 4. Esegui un controllo visivo incrociato veloce sui totali confrontandoli con l'originale.
 
 <div style="border-left: 4px solid #a6e22e; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

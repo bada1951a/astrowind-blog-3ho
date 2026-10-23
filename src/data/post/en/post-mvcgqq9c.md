@@ -28,7 +28,9 @@ Within six minutes, I diagnosed the silent killers inside the workbook, stripped
 Before jumping into the fix, let us diagnose why large Excel models suddenly turn into sluggish nightmares. Usually, it is not just raw data volume; it is architectural inefficiency.
 
 1. Volatile Formula Overload: Functions like TODAY(), NOW(), OFFSET(), and INDIRECT recalculate every single time *any* cell in the workbook changes. If you have thousands of volatile formulas referencing each other, Excel enters a continuous, heavy recalculation loop.
+
 2. Invisible Bloat and Ghost Ranges: Formatting cells across entire rows or columns (e.g., coloring the entire column A through XFD) corrupts Excel's "Used Range" memory. Your actual data might only be 500 rows, but Excel thinks you are managing 1,048,576 rows.
+
 3. Redundant Cross-Sheet Lookups: Heavy, unstructured VLOOKUP or XLOOKUP formulas scanning entire unindexed sheets on every single row create exponential computational drag.
 
 ---

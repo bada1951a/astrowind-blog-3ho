@@ -28,7 +28,9 @@ Avant de foncer tête baissée, comprenons pourquoi ce type de tâche s'éternis
 1. Le piège du PDF image (non textuel) : Un scan de facture n'est qu'une photo. Si vous tentez un simple copier-coller dans Excel, vous récupérez un bloc de texte illisible, sans colonnes, collé en vrac dans la cellule
 
 A1.
+
 2. Les outils OCR basiques aveugles : Les logiciels de reconnaissance de caractères traditionnels s'emmêlent les pinceaux dès qu'il s'agit de tableaux complexes avec des lignes de TVA croisées, des remises en pied de page ou des polices de caractères fantaisistes.
+
 3. L'absence de structure tabulaire : Même quand un outil extrait le texte, il ignore la logique des tableaux Excel. Les libellés d'articles se retrouvent décalés par rapport aux montants hors taxes, ruinant toute tentative de formule de sommation ultérieure.
 
 ---
@@ -52,8 +54,11 @@ Copiez-collez ce prompt exact dans l'interface de l'IA :
 #### Étape 3 : Injection propre dans Excel sans erreur de format
 Une fois que l'IA vous renvoie le tableau en format Markdown (avec les barres verticales et tirets) :
 1. Sélectionnez le tableau généré directement dans la fenêtre du chat et faites Copier (Ctrl + C ou Cmd + C).
+
 2. Ouvrez votre feuille de calcul Excel vierge.
+
 3. Cliquez sur la cellule de destination (par exemple A1), faites un clic droit et choisissez Collage spécial ou utilisez simplement le raccourci Coller (Ctrl + V).
+
 4. Pour nettoyer les éventuels formats de texte indésirables sur les montants, utilisez la fonction rapide de conversion : sélectionnez votre colonne de prix, allez dans l'onglet Données > Convertir, ou utilisez une formule simple dans une colonne voisine comme `=CNUM(TRIM(A2))`.
 
 <div style="border-left: 4px solid #ffffff; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

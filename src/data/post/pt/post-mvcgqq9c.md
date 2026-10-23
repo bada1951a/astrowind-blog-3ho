@@ -28,7 +28,9 @@ A solução definitiva que adotou-se na nossa rotina envolve combinar a capacida
 Antes de aplicar a automação, vale entender os três principais vilões que derrubam o desempenho do Excel corporativo:
 
 1. Inchaço de Estilos (Styles Bloat): Cada vez que você copia e cola células de outros arquivos, o Excel importa a formatação junto. Planilhas antigas acumulam milhares de estilos de fontes e cores lixeira que pesam no motor de renderização.
+
 2. Fórmulas Voláteis em Excesso: Funções como `HOJE()`, `AGORA()`, `INDIRETO()` e `DESLOC()` forçam o Excel a recalcular a planilha inteira a cada mínima alteração feita em qualquer célula.
+
 3. Lixo de Intervalo (Used Range Corrupto): O Excel acha que seus dados vão até a linha 1.048.576 porque alguém acidentalmente apertou formatação na linha um milhão, gerando um processamento fantasma absurdo.
 
 ---

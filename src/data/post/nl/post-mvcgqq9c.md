@@ -24,7 +24,11 @@ Dit is het moment waarop je traditionele Excel-kennis je in de steek laat. Je ku
 Voordat we de oplossing induiken, moeten we begrijpen waarom dit soort grote financiële of operationele modellen ineens omslaan in digitale tijdbommen. Drie veelvoorkomende boosdoeners zijn:
 
 1. Vluchtige formules en geheugenlekken (Volatile Functions): Functies zoals INDIRECT(), OFFSET() of TODAY() zorgen ervoor dat Excel bij elke minimale wijziging *elke* afhankelijke cel opnieuw berekent, wat leidt tot een gigantische CPU-belasting.
-2. Onzichtbare 'Ghost Ranges': Soms denkt Excel dat je werkblad niet tot rij 1.000 loopt, maar tot rij 1.048.576. Dit vult je geheugen met miljoenen lege rijen vol onzichtbare opmaak.
+
+2. Onzichtbare 'Ghost Ranges': Soms denkt Excel dat je werkblad niet tot rij 1.000 loopt, maar tot rij 1.048.
+
+576. Dit vult je geheugen met miljoenen lege rijen vol onzichtbare opmaak.
+
 3. Corrupte of cirkelverwijzingen: Formules die naar elkaar verwijzen zonder duidelijke stopconditie, waardoor de processor in een oneindige lus schiet.
 
 ## Stap-voor-stap probleemoplossing met ChatGPT en Python
@@ -58,4 +62,6 @@ Open Excel in de Veilige Modus door de `Ctrl`-toets ingedrukt te houden terwijl 
 Als je gebruikmaakt van ChatGPT met de Python-omgeving, kun je het `.xlsx`-bestand direct uploaden. De AI kan het bestand programmatisch openen met bibliotheken zoals openpyxl of pandas, de corrupte rijen of formules opsporen, het bestand optimaliseren en je een schone downloadlink teruggeven. Let wel op de eerdergenoemde privacy-richtlijnen!
 
 3. Waarom zijn XLOOKUP-functies soms alsnog traag in grote bestanden?
-Hoewel XLOOKUP veel vriendelijker is dan VLOOKUP, kan het alsnog trager worden als je zoekt in niet-gesorteerde volledige kolommen (zoals `A:A` in plaats van een specifiek bereik zoals `A1:A5000`). Door het bereik strak af te bakenen, bespaar je duizenden onnodige berekeningen per seconde.
+Hoewel XLOOKUP veel vriendelijker is dan VLOOKUP, kan het alsnog trager worden als je zoekt in niet-gesorteerde volledige kolommen (zoals `A:A` in plaats van een specifiek bereik zoals `
+
+A1:A5000`). Door het bereik strak af te bakenen, bespaar je duizenden onnodige berekeningen per seconde.

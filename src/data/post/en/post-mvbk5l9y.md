@@ -26,7 +26,9 @@ Paying 50 dollars a month for a basic exchange rate extension was out of the que
 Before diving into the fix, let us diagnose why most DIY attempts at currency conversion break down under pressure:
 
 1. Over-Reliance on Fragile Web Scraping (IMPORTXML): Many analysts try to scrape live rates using `IMPORTXML` from finance sites. When the source website updates its CSS classes or blocks bot traffic, your entire executive dashboard shows `#N/A` errors right before a major presentation.
+
 2. Static Manual Inputs: Hardcoding exchange rates into cells works for today, but creates massive compounding discrepancies in historical financial modeling and multi-region revenue tracking.
+
 3. Third-Party Add-on Dependency: Relying on marketplace extensions introduces security vulnerabilities, unexpected subscription paywalls, and API rate limits that crash your sheets when multiple team members open the document simultaneously.
 
 ---
@@ -38,8 +40,12 @@ Let us build a lightning-fast, resilient currency converter dashboard from scrat
 #### Step 1: Set Up the Reference Rate Table
 Create a clean tab named `Reference` in your Google Sheet. Set up a simple two-column layout for your base currency and your target conversion currencies.
 
-- Cell A1: `Base Currency` | Cell B1: `USD`
-- Cell A3: `Target` | Cell B3: `Currency Name` | Cell C3: `Live Rate`
+- Cell
+
+A1: `Base Currency` | Cell B1: `USD`
+- Cell
+
+A3: `Target` | Cell B3: `Currency Name` | Cell C3: `Live Rate`
 
 In cell C4, write the native Google Finance formula to pull the live exchange rate dynamically:
 ```text
@@ -56,7 +62,9 @@ On your main dashboard tab, where your transaction data or regional revenue item
 
 Assuming your local amount is in column D and your target currency code is in column E, use this clean formula:
 ```text
-=D2 * XLOOKUP(E2, Reference!A4:A10, Reference!C4:C10, 1)
+=D2 * XLOOKUP(E2, Reference!
+
+A4:A10, Reference!C4:C10, 1)
 ```
 This formula multiplies your local amount by the live exchange rate fetched in real time. If a currency code is missing, the fallback value `1` prevents your sheet from breaking into error states.
 

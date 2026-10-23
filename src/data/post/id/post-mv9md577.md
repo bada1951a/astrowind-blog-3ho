@@ -26,7 +26,9 @@ Situasi seperti ini pasti sudah sangat akrab bagi Anda para praktisi kantor, man
 Sebelum masuk ke solusi teknis, mari kita bedah tiga alasan utama mengapa metode konvensional selalu gagal memenuhi tenggat waktu:
 
 1. Format File Cabang yang Tidak Seragam: Setiap kepala cabang sering kali menggunakan format tanggal, penamaan kolom, atau jenis mata uang yang berbeda dalam satu file laporan.
+
 2. Struktur Folder yang Dinamis: Penambahan file baru setiap bulannya membuat rumus manual atau macro VBA lama sering kali patah (*broken link*).
+
 3. Risiko *Human Error* yang Tinggi: Kelelahan saat *copy-paste* data ribuan baris di atas pukul 10 malam hampir selalu berujung pada kesalahan rekap nominal angka penjualan.
 
 ---
@@ -40,19 +42,27 @@ Buat satu folder khusus di komputer kantor Anda, misalnya bernama `Data_Penjuala
 
 #### Langkah 2: Tarik Data ke Power Query via Menu Data
 1. Buka file Excel kosong baru yang akan menjadi dashboard utama laporan Anda.
+
 2. Pada pita menu atas (Ribbon), klik tab Data.
+
 3. Pilih Get Data > From File > From Folder.
+
 4. Cari dan pilih folder `Data_Penjualan_2026` yang sudah Anda siapkan tadi, lalu klik Open.
 
 #### Langkah 3: Gabungkan dan Transformasi Data
 1. Jendela pratinjau akan muncul menampilkan daftar file di dalam folder tersebut. Di bagian bawah, klik tombol Combine > Combine & Transform Data.
+
 2. Pilih *sheet* utama tempat data penjualan berada (misalnya `Sheet1`), lalu klik OK. Jendela editor Power Query akan terbuka secara otomatis.
+
 3. Di sinilah keajaiban terjadi. Anda bisa menghapus kolom yang tidak perlu, mengubah tipe data (misalnya memastikan kolom nominal penjualan terbaca sebagai format *Currency* atau *Decimal Number*), dan merapikan teks dengan mudah.
+
 4. Setiap langkah pembersihan yang Anda lakukan akan terekam otomatis di panel sebelah kanan (*Applied Steps*).
 
 #### Langkah 4: Muat Data ke Lembar Kerja Excel
 1. Setelah data bersih dan sesuai keinginan, klik tab Home di pojok kiri atas editor Power Query.
+
 2. Klik tombol Close & Load.
+
 3. Power Query akan membuat lembar kerja baru yang berisi rangkuman data penjualan dari seluruh cabang secara otomatis.
 
 > Tips Praktis: Bulan depan, ketika Anda menerima file laporan baru dari cabang, cukup *paste* file tersebut ke dalam folder `Data_Penjualan_2026`. Buka file laporan utama Anda, klik kanan padatabel hasil rekap, lalu pilih Refresh. Selesai! Data langsung terupdate tanpa perlu *copy-paste* manual lagi.

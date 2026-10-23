@@ -24,7 +24,9 @@ Si vous en avez assez de copier-coller des données, de générer des PDF à la 
 Avant de plonger dans le code, analysons pourquoi le processus actuel coince :
 
 1. L'oubli ou le retard stratégique : Pris dans une réunion de dernière minute, vous ratez l'horaire d'envoi et votre manager s'interroge sur l'avancement.
+
 2. La mise en page imprévisible : Exporter un Google Sheet en PDF de manière native via l'interface génère souvent des coupures de pages hasardeuses sur les graphiques.
+
 3. La fatigue opérationnelle : Répéter les mêmes clics (Fichier > Télécharger > Document PDF > Ouvrir Gmail > Joindre le fichier) chaque semaine est une source majeure d'erreurs d'inattention.
 
 ---
@@ -90,10 +92,15 @@ function envoyerRapportHebdoPDF() {
 ### Étape 3 : Automatiser l'envoi (Déclencheur)
 Pour que ce script s'exécute tout seul sans intervention humaine :
 1. Dans l'interface Apps Script, cliquez sur l'icône d'horloge à gauche (Déclencheurs).
+
 2. Cliquez sur Ajouter un déclencheur en bas à droite.
+
 3. Choisissez la fonction `envoyerRapportHebdoPDF`.
+
 4. Sélectionnez la source de l'événement : Basé sur le temps.
+
 5. Choisissez le type de déclencheur : Par semaine, puis sélectionnez votre jour (ex: Vendredi) et votre plage horaire (ex: 17h - 18h).
+
 6. Enregistrez et validez les autorisations de compte Google.
 
 <div style="border-left: 4px solid #10b981; padding: 12px 16px; margin: 20px 0; background-color: rgba(16, 185, 129, 0.08); border-radius: 4px; color: #111827;">

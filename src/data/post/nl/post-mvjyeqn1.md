@@ -22,7 +22,9 @@ Het is vrijdagmiddag om vijf uur in het hart van het Zuidas zakendistrict in Ams
 Voordat we naar de oplossing kijken, moeten we begrijpen waarom dit zo vaak misgaat in een drukke kantooromgeving:
 
 1. Versnippering door Cloud-conflicten: Wanneer collega's offline werken en tegelijk online komen, maakt de cloud uit zelfbescherming kopieën aan. Hierdoor verlies je de centrale bron van waarheid voor je gewerkte uren.
+
 2. Complexe Tijdnotaties: Excel ziet tijd vaak als tekst of decimale getallen in plaats van echte tijdseenheden. Als je simpelweg `Eindtijd - Starttijd` doet zonder de juiste opmaak, klopt de overwerkberekening aan het eind van de week van geen kant.
+
 3. Handmatige Overwerkformules: Regels zoals "alles boven de 40 uur per week telt als 150% en weekendwerk als 200%" worden vaak in ingewikkelde, geneste `ALS`-functies gegoten die niemand meer kan ontcijferen als er een fout optreedt.
 
 ## De Oplossing: Automatische uren- en overwerkformules met AI

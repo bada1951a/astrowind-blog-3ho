@@ -28,7 +28,9 @@ Ecco esattamente come ho diagnosticato e risolto il problema in meno di sette mi
 Prima di passare all'azione, capiamo cosa stava strangolando il file:
 
 1. Formattazione condizionale "Zombie": Copia-incolla selvaggi da altri file avevano generato oltre 400.000 regole di formattazione condizionale sovrapposte. Excel controlla ogni singola cella a ogni singolo click, saturando la RAM.
+
 2. Formule volatili fuori controllo: Uso massiccio di `INDIRETTO` (INDIRECT) e `SCARTO` (OFFSET) in tabelle pivot enormi, che costringono il software a ricalcolare l'intero foglio a ogni minima modifica.
+
 3. Rifiuti nascosti e formati fantasma: Righe e colonne vuote ma formattate fino alla riga 1.048.576 che gonfiavano inutilmente il peso del file.
 
 ---

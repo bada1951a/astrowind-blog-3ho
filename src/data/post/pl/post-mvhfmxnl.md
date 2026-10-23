@@ -22,7 +22,9 @@ Godzina 16:45 w biurowcu w samym sercu Warszawy. Za piętnaście minut mam wysł
 Kiedy nagle termin goni, a arkusz przestaje współpracować, zazwyczaj winne są trzy powody:
 
 1. Niespójne formatowanie danych historycznych: Daty zapisane jako tekst, ukryte spacje i brakujące wartości w kolumnach ze sprzedażą całkowicie paraliżują standardowe funkcje prognozowania.
+
 2. Sztywne formuły bez uwzględnienia sezonowości: Zwykła średnia krocząca nie uwzględnia nagłych skoków popytu w okresach świątecznych czy letnich przestojów u dostawców.
+
 3. Brak integracji z narzędziami AI: Tradycyjne podejście opiera się na ręcznym szacowaniu wskaźników rotacji, podczas gdy modele językowe i algorytmy uczenia maszynowego potrafią błyskawicznie wychwycić subtelne trendy w gąszczu cyfr.
 
 ## Krok po kroku: Jak wdrożyć predykcję AI w Excelu

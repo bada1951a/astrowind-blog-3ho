@@ -22,7 +22,9 @@ Zamiast panicznie szukać karty kredytowej, żeby wykupić drogi abonament, post
 Zanim przejdziemy do naprawy, warto zrozumieć, dlaczego standardowe podejścia zawodzą w najmniej odpowiednim momencie. Oto trzy główne przyczyny:
 
 1. Zależność od zewnętrznych dostawców API: Płatne dodatki z marketplace Google Workspace często korzystają z niestabilnych serwerów pośredniczących, które padają pod wpływem dużego ruchu lub nagłych zmian polityki dostarczeœć danych finansowych.
+
 2. Sztywne formuły bez mechanizmu buforowania: Używanie zapytań pobierających dane bezpośrednio w każdej komórce (np. setki razy `=GOOGLEFINANCE`) powoduje przekroczenie limitów Google i blokadę całego pliku na kilka godzin.
+
 3. Brak lokalnego awaryjnego planu B: Brak statycznej tabeli referencyjnej sprawia, że w przypadku braku połączenia z internetem cały arkusz staje się pusty i bezużyteczny.
 
 ## Instrukcja krok po kroku: Budujemy darmowy i stabilny pulpit walutowy
@@ -52,7 +54,9 @@ Zamiast wpisywać formułę pobierającą kurs w każdej pozycji wydatków, odwo
 Załóżmy, że w kolumnie C masz kwotę w walucie obcej, a w kolumnie D kod waluty (np. USD). W kolumnie E, gdzie chcesz uzyskać przeliczenie na PLN, wpisz formułę:
 
 ```text
-=C2 * SZUKAJ.TEJ.WARTOŚCI(D2; Ustawienia!A2:B10; 2; FAŁSZ)
+=C2 * SZUKAJ.TEJ.WARTOŚCI(D2; Ustawienia!
+
+A2:B10; 2; FAŁSZ)
 ```
 
 Dzięki temu, nawet jeśli plik ma 5000 wierszy, zapytanie do sieci wykonuje się tylko raz w tle, a arkusz działa błyskawicznie bez lagów i błędów typu `#LIMIT!`.

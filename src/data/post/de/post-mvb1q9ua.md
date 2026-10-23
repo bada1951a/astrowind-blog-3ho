@@ -20,7 +20,9 @@ Es ist kurz vor 17:00 Uhr an einem grauen Dienstag im Frankfurter Finanzdistrikt
 Bevor wir die Lösung anwenden, müssen wir verstehen, warum Standard-Workflows hier an ihre Grenzen stoßen:
 
 1. Inkonsistente Namensstrukturen: Manchmal ist die E-Mail aufgebaut als `vorname.nachname@firma.de`, ein anderes Mal nur als `v.nachname@firma.de` oder es sind reine Vorname-Nachname-Kombinationen ohne System in einer Zelle.
+
 2. Versteckte Syntaxfehler: Leerzeichen am Anfang oder Ende, doppelte Punkte und falsche Domain-Endungen (`.de.de` oder `gmial.com`) lassen sich mit einfachen SVERWEIS- oder Textformeln kaum automatisiert abfangen.
+
 3. Mangelnde Skalierbarkeit: Das manuelle Bearbeiten von tausenden Datensätzen führt unweigerlich zu menschlichen Fehlern, die bei wichtigen Berichten vor dem Vorstand fatal sein können.
 
 ---

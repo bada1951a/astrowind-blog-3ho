@@ -26,7 +26,9 @@ Quay cuồng trong đống hỗn độn đó, tôi tự nhủ phải tìm ra cá
 Trước khi nhảy vào cách làm, hãy điểm mặt lại những cái bẫy mà dân văn phòng hay mắc phải khiến việc làm báo cáo tài chính trở thành ác mộng:
 
 1. Phụ thuộc vào tra cứu thủ công: Mỗi lần làm báo cáo là lại mở tab mới, gõ "tỷ giá USD VND hôm nay", copy dán vào file Excel/Sheets. Chỉ cần sơ suất copy nhầm giá mua vào thành giá bán ra là lệch cả triệu đồng.
+
 2. Dùng Add-on trả phí không rõ nguồn gốc: Cài mấy tiện ích mở rộng trên mạng đòi quyền truy cập toàn bộ tài khoản Google Drive, vừa tốn tiền subscription hàng tháng vừa vi phạm bảo mật dữ liệu công ty.
+
 3. Cấu trúc file thiếu linh hoạt: Hard-code (cố định) con số tỷ giá vào công thức tính toán. Hôm nay tỷ giá khác, ngày mai khác là phải vào sửa từng công thức trong hàng trăm ô tính.
 
 ---
@@ -57,7 +59,9 @@ Bây giờ, tại bảng doanh thu chính, thay vì gõ cứng con số tỷ gi�
 
 Ví dụ, bạn muốn đổi 5000 USD ở cột Doanh Thu (Ô B5) sang VND, công thức tại ô kết quả sẽ là:
 
-`=B5 * VLOOKUP("USD", Tham_So_Ty_Gia!A2:C10, 3, FALSE)`
+`=B5 * VLOOKUP("USD", Tham_So_Ty_Gia!
+
+A2:C10, 3, FALSE)`
 
 Cách làm này giúp bạn chỉ cần update tỷ giá ở một nơi duy nhất, toàn bộ hàng trăm dòng báo cáo bên dưới sẽ tự động nhảy số theo chuẩn xác từng giây.
 

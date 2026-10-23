@@ -18,7 +18,9 @@ Heureusement, plus besoin de passer la nuit a trifouiller des macros VBA incompr
 <div style="border-left: 4px solid #7c3aed; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Questions frequentes abordees dans ce guide :</strong>
 1. Comment preparer ses donnees historiques pour l'IA sans tout casser ?
+
 2. Quel prompt utiliser pour que l'assistant IA genere la bonne formule de prevision dans Excel ?
+
 3. Comment gerer les variations saisonnières imprévues du prochain trimestre ?
 </div>
 
@@ -27,7 +29,9 @@ Heureusement, plus besoin de passer la nuit a trifouiller des macros VBA incompr
 Avant de crier au miracle technologique, il faut comprendre pourquoi nos methodes habituelles volent en eclats des que la demande bouge un peu. Voici les 3 pieges classiques dans lesquels nous tombons tous :
 
 1. L'effet tunnel des moyennes mobiles simples : Calculer la moyenne des trois derniers mois fonctionne tant que le marche est plat. Des qu'une rupture d'approvisionnement ou une campagne marketing aggressive arrive, votre tableau est completement aveugle.
+
 2. La lourdeur des outils externes : Sortir les donnees d'Excel pour les injecter dans un logiciel de planification tiers prend des heures, sans compter les conflits de format de date entre les systemes.
+
 3. Le manque de contexte qualitatif : Un modele mathematique pur ignore completement les evenements exceptionnels (jours feries decales, JO, grèves des transports en commun ou lancements de produits concurrents) qui impactent directement vos volumes.
 
 ## La methode pas a pas : Integrer l'IA pour vos previsions de stocks
@@ -47,14 +51,18 @@ Copiez-collez ce type de prompt directement dans l'outil d'IA de votre tableur :
 
 <div style="border-left: 4px solid #7c3aed; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Prompt d'IA recommande pour Excel :</strong><br>
-"Agis en tant que responsable Supply Chain senior. Analyse les donnees de la plage A1:D1200. Genere une colonne de prevision pour les 3 prochains mois en tenant compte d'une tendance de croissance estimee a 5% et d'une saisonnalite similaire a l'annee passee. Cree la formule de calcul directement dans la cellule E2 sous forme de fonction previsible (PREVISION.ETS) et explique-la-moi en une phrase."
+"Agis en tant que responsable Supply Chain senior. Analyse les donnees de la plage
+
+A1:D1200. Genere une colonne de prevision pour les 3 prochains mois en tenant compte d'une tendance de croissance estimee a 5% et d'une saisonnalite similaire a l'annee passee. Cree la formule de calcul directement dans la cellule E2 sous forme de fonction previsible (PREVISION.ETS) et explique-la-moi en une phrase."
 </div>
 
 ### Etape 3 : Integrer et tester la formule generee
-L'IA va generalement vous proposer d'utiliser la fonction native d'Excel `PREVISION.ETS` (Lissage Exponentiel Triple), qui integre automatiquement la saisonnalite. 
+L'IA va generalement vous proposer d'utiliser la fonction native d'Excel `PREVISION.ETS` (Lissage Exponentiel Triple), qui integre automatiquement la saisonnalite.
 
 1. Copiez la formule proposee par l'IA (par exemple `=PREVISION.ETS(A2; C2:C12; B2:B12; 1; 1)`).
+
 2. Glissez-la le long de votre colonne pour obtenir vos previsions quantitatives par article.
+
 3. Ajoutez une colonne de marge de securite (par exemple +10% pour absorber les aleas de livraison de derniere minute).
 
 ## Conseil d'expert : Attention a la confidentialite des donnees

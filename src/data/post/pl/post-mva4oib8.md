@@ -22,7 +22,9 @@ W takich momentach człowiek czuje, jak zimny pot oblewa plecy, a perspektywna z
 Praca z danymi importowanymi z różnych zewnętrznych systemów rzadko bywa czysta. Oto trzy najczęstsze pułapki, przez które tracimy godziny na ręczną edycję:
 
 1. Niespójne kodowanie i ukryte znaki: Kopiowanie danych ze stron WWW lub systemów starszego typu przenosi niewidoczne znaki końca linii oraz twarde spacje, których zwykłe narzędzie "Znajdź i zamień" nie widzi.
+
 2. Złożona struktura wyrażeń regularnych (Regex): Składnia regex w Google Sheets (oparta na silniku RE2) różni się od tej znanej z Pythona czy standardowego Excela, co prowadzi do ciągłych błędów składniowych.
+
 3. Ograniczenia funkcji wielopoziomowych: Próba wyciągnięcia np. samego kodu pocztowego z nazwy ulicy i miasta za pomocą dziesięciu zagnieżdżonych funkcji `MID`, `FIND` i `LEN` sprawia, że arkusz staje się nieczytelny i niemożliwy do późniejszej edycji przez inny zespół.
 
 ---
@@ -43,7 +45,9 @@ ChatGPT zwróci Ci gotową formułę. W moim przypadku była to formuła w stylu
 `=REGEXEXTRACT(A2; "NIP:\s*(\d{10})")`
 
 Przejdź do Google Sheets, kliknij w odpowiednią komórkę, wklej formułę i naciśnij Enter. Jeśli chcesz, aby formuła automatycznie rozpychała się na całą kolumnę bez przeciągania, poproś ChatGPT o owinięcie jej w `MAP` lub `BYROW`, na przykład:
-`=MAP(A2:A100; LAMBDA(x; JEŻELI(x=""; ""; REGEXEXTRACT(x; "NIP:\s*(\d{10})"))))`
+`=MAP(
+
+A2:A100; LAMBDA(x; JEŻELI(x=""; ""; REGEXEXTRACT(x; "NIP:\s*(\d{10})"))))`
 
 ### Krok 3: Weryfikacja i obsługa błędów
 Jeśli dane wejściowe mają różne formaty (np. raz jest napisane "NIP:", a raz "Nr NIP"), poproś AI o rozbudowanie wzorca regex o alternatywy:

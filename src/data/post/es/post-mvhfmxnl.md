@@ -24,7 +24,9 @@ Si te suena familiar esta pesadilla de última hora, sabes perfectamente que el 
 Antes de aplicar la solución, hay que entender por qué el método artesanal destruye la productividad en la oficina:
 
 1. Estacionalidad oculta y datos dispersos: Las hojas de cálculo tradicionales calculan medias aritméticas simples (PROMEDIO), ignorando picos de consumo estacionales típicos del mercado europeo, como las campañas de rebajas o el parón de agosto.
+
 2. Dependencia de macros obsoletas: Archivos con código VBA escrito hace diez años que fallan al actualizar la versión de Office, generando bloqueos intermitentes justo cuando exportas el reporte mensual.
+
 3. Cuellos de botella manuales: Copiar y pegar datos de ventas mes a mes para pasarlos a herramientas externas rompe los rangos dinámicos y genera referencias nulas en tablas dinámicas clave.
 
 ## Guía paso a paso: Predice el inventario con IA directamente en tu hoja de cálculo

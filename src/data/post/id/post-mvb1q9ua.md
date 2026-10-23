@@ -22,7 +22,9 @@ Jam 8 malam di kawasan bisnis SCBD Jakarta, kantor sudah mulai sepi, tetapi laya
 Sebelum masuk ke solusi otomatisasi, mari kita bedah tiga penyebab utama mengapa rekap data excel Anda sering berubah menjadi mimpi buruk:
 
 1. Format Nama yang Tidak Konsisten: Pengguna sering mengetik nama lengkap, gelar, atau bahkan menggunakan huruf kapital semua. Rumus standar `FIND(" "; A1)` akan gagal total jika ada spasi di awal (*leading spaces*) atau jika nama klien hanya terdiri dari satu kata.
+
 2. Karakter Tersembunyi (Non-Printable Characters): Data yang disalin langsung dari web atau database lama sering membawa karakter tersembunyi yang membuat rumus pencocokan data (`VLOOKUP` atau `XLOOKUP`) gagal mengenali email yang tampak sama persis.
+
 3. Typo Domain dan Format Email Ganda: Kesalahan ketik umum seperti `@gmal.com` atau spasi ekstra di tengah alamat email membuat sistem pengiriman *newsletter* atau undangan meeting mental (*bounce*).
 
 ---
@@ -45,8 +47,11 @@ AI akan memberikan formula yang jauh lebih bersih dibandingkan metode tradisiona
 Bagi Anda yang tidak ingin repot dengan rumus, Excel memiliki fitur berbasis kecerdasan buatan lokal bernama Flash Fill. Ini adalah penyelamat hidup di tengah deadline lembur:
 
 1. Buat kolom baru di sebelah kolom nama lengkap, beri nama "Nama Depan".
+
 2. Pada baris pertama data Anda (misal sel B2), ketik secara manual nama depan dari data di sel A2 (misal: jika A2 adalah "Muhammad Rizky", ketik "Muhammad").
+
 3. Tekan tombol panah ke bawah, lalu tekan kombinasi keyboard Ctrl + E (atau buka menu Data > Flash Fill di pita atas Excel).
+
 4. Sika ajaib! Excel akan membaca pola dari ketikan manual pertama Anda dan otomatis mengisi seluruh ribuan baris di bawahnya dalam kurun waktu kurang dari satu detik.
 
 ### Langkah 3: Validasi Format Email dengan Power Query
@@ -54,7 +59,9 @@ Bagi Anda yang tidak ingin repot dengan rumus, Excel memiliki fitur berbasis kec
 Untuk memastikan tidak ada lagi email yang *error* sebelum dikirim ke bos atau klien, gunakan fitur Power Query di Excel:
 
 1. Blok seluruh tabel data Anda, lalu pergi ke tab Data > From Table/Range.
+
 2. Di jendela Editor Power Query, pilih kolom Email, klik kanan, pilih Transform > Trim (untuk menghapus spasi) dan Transform > Lowercase (untuk menyeragamkan format huruf kecil).
+
 3. Klik Close & Load di sudut kiri atas untuk memasukkan kembali data yang sudah bersih secara sempurna ke lembar kerja Excel Anda.
 
 ---

@@ -22,7 +22,9 @@ Heureusement, il existe une solution native, gratuite et ultra-fiable directemen
 Avant de plonger dans la solution technique, identifions les trois pièges classiques qui font planter les tableaux de bord au pire moment :
 
 1. La dépendance aux extensions tierces payantes : Installer des modules complémentaires pour récupérer des données financières expose votre budget à des abonnements inutiles et vos fichiers à des risques de rupture de service en cas de mise à jour de l'API tierce.
+
 2. L'oubli des codes ISO des devises : Utiliser des libellés approximatifs comme "Dollar US" ou "Livre" au lieu des codes normalisés (USD, GBP, EUR) perturbe instantanément les fonctions de récupération de données.
+
 3. La volatilité des marchés et le décalage horaire : Un tableau mal structuré ne gère pas la mise à jour automatique des taux de clôture, ce qui fausse les analyses de marge lors des présentations multidevises.
 
 <div style="border-left: 4px solid #e11d48; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -35,7 +37,9 @@ Ouvrez une nouvelle feuille Google Sheets et suivez cette procédure pour bâtir
 
 ### Étape 1 : Structurer les cellules de base
 Dans votre feuille, créez un espace dédié aux taux de change en haut ou dans un onglet "Paramètres" :
-- Cellule A1 : `Devise Source` | Cellule B1 : `Devise Cible` | Cellule C1 : `Taux`
+- Cellule
+
+A1 : `Devise Source` | Cellule B1 : `Devise Cible` | Cellule C1 : `Taux`
 - Dans la ligne 2, mettez par exemple `USD` en A2 et `EUR` en B2.
 
 ### Étape 2 : Utiliser la fonction magique GOOGLEFINANCE

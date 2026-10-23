@@ -22,7 +22,9 @@ Wyobraź sobie to popołudnie w warszawskim centrum biznesowym na Rondzie Daszy�
 Przed przejściem do rozwiązania, spójrzmy prawdzie w oczy – oto trzy główne powody, przez które twoje dotychczasowe arkusze nadgodzin lądują w koszu:
 
 1. Chaos formatowania danych: Wpisywanie godzin w formacie `8:00` zamiast `08:00` albo dodawanie spacji powoduje, że Excel traktuje je jako tekst, a nie czas, co uniemożliwia jakiekolwiek operacje matematyczne.
+
 2. Brak obsługi przerw i nadliczbowych: Standardowa formuła odejmowania czasu `Godzina_Wyjscia - Godzina_Wejścia` nie uwzględnia ustawowej przerwy ani mnożników za nadgodziny (np. 50% lub 100% płatne dodatkowo).
+
 3. Problem z przekraczaniem północy: Jeśli pracownik zostaje na zmianie nocnej, proste odejmowanie daje wynik ujemny, wyprowadzając z równowagi całą księgowość.
 
 ---
@@ -61,7 +63,9 @@ AI wypluje dla ciebie gotowe formuły. Dla kolumny F (Czas pracy) otrzymasz zazw
 
 ### Krok 3: Wklejenie i przetestowanie formuły w arkuszu
 1. Zaznacz komórkę `F2` w swoim arkuszu.
+
 2. Wklej otrzymaną formułę i przeciągnij ją w dół dla wszystkich wierszy.
+
 3. Kliknij zakładkę [Narzędzia główne] na górnej wstążce Excela i upewnij się, że formatowanie komórek z czasem jest ustawione na typ `Godzina` lub `[hh]:mm`, aby uniknąć błędów przy przekraczaniu 24 godzin.
 
 <div style="border-left: 4px solid #b45309; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

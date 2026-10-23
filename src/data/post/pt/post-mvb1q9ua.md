@@ -20,7 +20,9 @@ Eram 18h45 de uma sexta-feira chuvosa em um escritório corporativo na região d
 Antes de aplicar a solução definitiva com Inteligência Artificial, vale entender por que o método convencional costuma deixar o profissional na mão sob pressão:
 
 1. Padrões de Nomes Inconsistentes: Alguns cadastros trazem "João da Silva Santos", outros "MARIA APARECIDA", e há registros com o sobrenome antes da vírgula. Fórmulas fixas de separação por espaço falham miseravelmente.
+
 2. Erros Ocultos em E-mails: Espaços invisíveis nas pontas, pontos duplicados e caracteres especiais geram falhas de entrega que só aparecem depois que o disparo em massa já foi feito.
+
 3. Falta de Tempo para Regex: Criar expressões regulares avançadas no Power Query exige um conhecimento de programação que a maioria dos gerentes e analistas não tem tempo de dominar durante o expediente corrido.
 
 ---

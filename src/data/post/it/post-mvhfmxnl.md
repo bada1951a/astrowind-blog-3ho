@@ -26,7 +26,9 @@ Se anche tu ti sei trovato almeno una volta a fissare un file Excel infinito la 
 Prima di passare alla soluzione automatizzata, analizziamo perché il vecchio modo di gestire l'inventario in ufficio ci fa perdere così tanto tempo:
 
 1. La trappola della media mobile semplice: Usare la media degli ultimi tre mesi ignora completamente i picchi stagionali, i trend di mercato emergenti e le variazioni dovute ai giorni festivi.
+
 2. Eccesso di dati non strutturati: Spesso i dati di vendita arrivano da esportazioni grezze dell'ERP aziendale, pieni di formati data sballati, codici prodotto doppi e zeri nascosti che falsano i calcoli.
+
 3. Formule fragili e rigide: Basta una riga cancellata per errore o un intervallo di celle mal definito per rompere interi mesi di analisi predittiva, costringendoci a ricominciare da capo sotto pressione.
 
 ## La Soluzione: Usare l'AI per Prevedere le Scorte in 3 Step

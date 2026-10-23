@@ -24,7 +24,9 @@ Revisar celda por celda en un archivo de más de 80,000 filas y 45 columnas era 
 Antes de aplicar la solución automatizada, veamos por qué este archivo se convirtió en una bomba de tiempo:
 
 1. Rangos fantasma (Bloat): Excel cree que tus datos llegan hasta la fila 1,048,576 aunque solo uses 500 filas, calculando millones de celdas vacías con formato invisible.
+
 2. Funciones volátiles abusivas: Uso excesivo y anidado de BUSCARV (VLOOKUP), INDIRECTO (INDIRECT) y DESREF (OFFSET) que se recalculan por completo cada vez que tocas una sola celda.
+
 3. Corrupción de XML internos: Archivos `.xlsx` que acumulan estilos duplicados, nombres definidos rotos y conexiones de datos obsoletas en su estructura comprimida.
 
 ---

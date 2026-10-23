@@ -22,7 +22,9 @@ Godzina 17:40 w biurze w samym sercu warszawskiego centrum biznesowego. Za dwadz
 Zanim przejdziemy do skutecznego rozwiązania, warto zrozumieć, dlaczego zwykłe kopiowanie i proste programy OCR często generują błędy:
 
 1. Zła jakość skanów i dokumentów termicznych: Faktury drukowane na papierze termicznym blakną, a zdjęcia robione smartfonem pod kątem mają zniekształconą perspektywę, której tradycyjny OCR nie potrafi poprawnie zinterpretować.
+
 2. Niestandardowe układy tabel: Każdy dostawca ma inny wzór faktury. Automatyczne wykrywanie kolumn gubi się, gdy opis towaru przechodzi do następnej linii, a cena jednostkowa ląduje w kolumnie z ilością.
+
 3. Brak kontekstu walutowego i podatkowego: Zwykłe programy do odczytu tekstu widzą ciąg cyfr, ale nie rozróżniają kwoty netto, stawki VAT (np. 23%) oraz kwoty brutto, co powoduje totalny chaos w formułach arkusza.
 
 ---
@@ -44,7 +46,9 @@ Przeciągnij swój plik do darmowego narzędzia AI (np. ChatGPT z funkcją zał�
 ### Krok 3: Wklejenie i finalne dopracowanie w Excelu
 Gdy AI wygeneruje gotową tabelę:
 1. Zaznacz wygenerowaną tabelę na ekranie i wybierz opcję Kopiuj.
+
 2. Otwórz swój arkusz Excela, kliknij wybraną komórkę, przejdź do zakładki Narzędzia główne > Wklej lub użyj skrótu Ctrl + Alt + V, wybierając formatowanie tekstowe.
+
 3. Jeśli liczby mają kropki zamiast przecinków (częsty problem po eksporcie z AI), zaznacz kolumnę z kwotami, naciśnij `Ctrl + H` (Znajdź i zamień), wpisz kropkę w pole "Znajdź" oraz przecinek w pole "Zamień na", a następnie kliknij Zamień wszystko.
 
 <div style="border-left: 4px solid #be123c; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

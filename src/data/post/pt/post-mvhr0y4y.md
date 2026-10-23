@@ -24,7 +24,9 @@ Foi bem ali, com o cheiro do café frio na xícara e o Slack apitando sem parar,
 Antes de aplicar a automação, vale a pena entender por que criar gráficos financeiros costuma ser uma dor de cabeça tão grande nos fechamentos de trimestre:
 
 1. Estrutura de dados despadronizada: Linhas misturando centros de custo, datas no formato incorreto e colunas sem cabeçalhos claros impedem que qualquer motor de IA compreenda o contexto financeiro.
+
 2. Falta de interatividade: Gráficos estáticos comuns não permitem que a diretoria filtre cenários de receita versus despesa com um simples clique durante a reunião executiva.
+
 3. Excesso de ruído visual: Tentar colocar dezenas de métricas em um único gráfico padrão do Excel ou do Planilhas gera poluição visual, fazendo com que a informação mais importante se perca.
 
 ---
@@ -67,4 +69,6 @@ Sim, desde que a sua conta corporativa do Google Workspace siga as diretrizes de
 A IA se baseia em padrões estatísticos dos seus cabeçalhos. Se o gráfico sugerido não fizer sentido, renomeie os cabeçalhos das colunas para termos mais explícitos (como "Receita Líquida" em vez de apenas "Total") e clique em atualizar no painel de sugestões.
 
 3. Como garantir que os gráficos se atualizem sozinhos quando novos dados forem inseridos no mês seguinte?
-Em vez de selecionar um intervalo fechado (ex: A1:D50), selecione a coluna inteira (ex: A:D) ao criar o gráfico ou utilize intervalos nomeados dinâmicos. Dessa forma, assim que o time financeiro colar os dados novos, o painel interativo refletirá as mudanças automaticamente.
+Em vez de selecionar um intervalo fechado (ex:
+
+A1:D50), selecione a coluna inteira (ex: A:D) ao criar o gráfico ou utilize intervalos nomeados dinâmicos. Dessa forma, assim que o time financeiro colar os dados novos, o painel interativo refletirá as mudanças automaticamente.

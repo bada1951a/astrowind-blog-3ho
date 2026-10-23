@@ -26,7 +26,9 @@ Das musste auch anders gehen – und zwar mit den Bordmitteln von Google Sheets,
 Bevor wir zur Lösung kommen, werfen wir einen kurzen Blick darauf, warum die meisten Standardansätze im Büroalltag scheitern:
 
 1. Abhängigkeit von veralteten Add-ons: Viele Teams verlassen sich auf kostenlose oder kostenpflichtige Marketplace-Erweiterungen, deren APIs plötzlich geändert werden oder deren Server bei hoher Last abstürzen.
+
 2. Statische Kurs-Tabellen: Das manuelle Kopieren von Kursen von Finanz-Websites kostet wertvolle Zeit und führt zu menschlichen Übertragungsfehlern – ein absolutes No-Go im Finanzbereich.
+
 3. Unsaubere Funktions-Syntax: Die Nutzung von `=GOOGLEFINANCE` wird oft falsch aufgebaut, wodurch bei fehlenden Parametern oder Wochenenden `#N/A`-Fehler die gesamte Bilanz zerlegen.
 
 ---

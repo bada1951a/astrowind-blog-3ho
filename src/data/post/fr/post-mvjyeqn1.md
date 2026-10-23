@@ -26,7 +26,9 @@ C'est exactement le genre de goulet d'étranglement bureaucratique qui pénalise
 Avant de passer à la solution, identifions les trois pièges classiques qui font dérailler vos feuilles de calcul :
 
 1. Le format d'heure corrompu : Saisir "35h" ou "17:30" sous forme de texte brut empêche Excel d'effectuer la moindre opération mathématique. Le résultat renvoie immanquablement une erreur de type `#VALEUR!`.
+
 2. La gestion des pauses non standardisées : Soustraire une pause déjeuner fixe ou variable sans logique conditionnelle oblige à tout recalculer à la main pour chaque collaborateur.
+
 3. Le seuil des 35 heures mal géré : Calculer les heures supplémentaires sans formater correctement les durées au format décimal fausse instantanément les calculs de paie ou les indemnités de récupération.
 
 ---

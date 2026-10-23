@@ -26,7 +26,9 @@ Juré que no me volvería a pasar. Si dependía de mi memoria y de mis clics man
 Antes de saltar al código, analicemos por qué este proceso suele volverse un dolor de cabeza en el día a día:
 
 1. Dependencia del factor humano: Si dependes de recordar abrir la hoja de cálculo cada lunes, un día festivo, una baja médica o un simple despiste romperá la cadena de comunicación con los directivos.
+
 2. Exportaciones manuales inconsistentes: Al descargar PDFs de forma manual desde el menú Archivo > Descargar, los márgenes, los saltos de página y las áreas de impresión suelen desconfigurarse, dando una apariencia poco profesional.
+
 3. Falta de manejo de errores en scripts antiguos: Copiar códigos obsoletos de internet sin entender cómo interactúan los permisos de Google Drive y Gmail suele terminar en fallos de autorización silenciosos donde el correo nunca llega.
 
 ---
@@ -88,9 +90,13 @@ function enviarReporteSemanalPDF() {
 
 #### Paso 3: Automatizar el disparador (Trigger)
 1. En el menú lateral izquierdo del editor de Apps Script, haz clic en el icono de Reloj (Activadores).
+
 2. Abajo a la derecha, haz clic en Añadir activador.
+
 3. Selecciona la función `enviarReporteSemanalPDF`.
+
 4. Elige el tipo de fuente de eventos: Basado en el tiempo.
+
 5. Selecciona el tipo de temporizador: Basado en la semana y elige el día y la hora preferidos (por ejemplo, todos los lunes de 8:00 a 9:00). Guarda los cambios y acepta los permisos de cuenta que Google te solicitará por seguridad.
 
 ---

@@ -28,7 +28,9 @@ Here is the exact battle-tested workflow I used to clean 10,000 rows of messy da
 Before fixing the problem, it helps to understand why standard spreadsheet data cleaning usually breaks down in high-stakes environments:
 
 1. The Syntax Complexity Trap: Regular expressions (RegEx) require precise escaping characters and capturing groups. Memorizing whether to use RE2 syntax or standard PCRE syntax in Google Sheets formulas often leads to sudden #VALUE! errors.
+
 2. Unstructured Data Variability: Real-world CSV exports from sales tools or CRMs rarely follow a clean pattern. Extra spaces, hidden line breaks, and bracket variations break rigid text functions like LEFT or MID.
+
 3. The Panic Factor: When leadership is waiting for metrics in 15 minutes, manual troubleshooting turns into frantic copying and pasting from random blogs, usually resulting in broken references and corrupted master sheets.
 
 ---

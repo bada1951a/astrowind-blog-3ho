@@ -21,8 +21,12 @@ Ten scenariusz to koszmar każdego analityka. Ręczne budowanie wykresów finans
 
 Zanim przejdziemy do naprawy, spójrzmy prawdzie w oczy. Istnieją trzy główne powody, przez które standardowe modele finansowe padają w najmniej oczekiwanym momencie:
 
-1. Sztywne odwołania do komórek: Używanie bezwzględnych adresów typu A1:Z100 zamiast elastycznych zakresów nazwalnych, które psują się przy każdej dodanej kolumnie.
+1. Sztywne odwołania do komórek: Używanie bezwzględnych adresów typu
+
+A1:Z100 zamiast elastycznych zakresów nazwalnych, które psują się przy każdej dodanej kolumnie.
+
 2. Brak separacji danych surowych od warstwy prezentacji: Mieszanie surowych danych księgowych z obliczeniami wykresów w jednym arkuszu roboczym.
+
 3. Ręczne formatowanie wykresów: Tracenie cennych minut na poprawianie osi czasowych, kolorów i etykiet zamiast automatycznego generowania czytelnych wizualizacji za pomocą promptów AI.
 
 ---
@@ -43,15 +47,20 @@ Gdy otrzymasz poprawione formuły, wklej je do arkusza. Upewnij się, że używa
 Zamiast tworzyć dziesiątki osobnych wykresów dla różnych scenariuszy (optymistyczny, realistyczny, pesymistyczny), stwórz jeden wykres reagujący na zmienną.
 
 1. W wybranej komórce (np. B1) wpisz domyślną wartość wzrostu, np. "0.05" (5%).
+
 2. Kliknij w menu górnym: Wstaw > Dropdown (Menu rozwijane) lub Wstaw > Suwak (Slider), aby zarząd mógł łatwo zmieniać założenia na żywo podczas prezentacji.
+
 3. W formułach obliczających przyszłe przychody odwołaj się bezpośrednio do tej komórki, na przykład: `=B2 * (1 + B1)`.
 
 ### Krok 3: Wygenerowanie inteligentnego wykresu finansowego
 Standardowe wykresy kolumnowe są nudne i mało czytelne dla zarządu. Użyjemy wykresów połączonych z filtrami danych.
 
 1. Zaznacz przefiltrowany zakres danych.
+
 2. Kliknij Wstaw > Wykres.
+
 3. W panelu bocznym edytora wykresów przejdź do zakładki Dostosuj.
+
 4. W sekcji Wykres zaznacz opcję Wygładź (dla wykresów liniowych pokazujących trend gotówki) oraz dodaj Linie trendu z uwzględnieniem wielomianu drugiego stopnia, co AI często sugeruje do prognoz płynnościowych.
 
 ---

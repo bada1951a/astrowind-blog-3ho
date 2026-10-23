@@ -62,10 +62,15 @@ E per la colonna degli straordinari giornalieri:
 ### Passo 3: Gestire i blocchi di protezione senza stress
 Se il tuo file è protetto da una password dimenticata e devi urgentemente sbloccare le celle per correggere la struttura:
 1. Chiudi il file Excel.
+
 2. Cambia l'estensione del file da `.xlsx` a `.zip`.
+
 3. Estrai l'archivio ZIP in una cartella temporanea.
+
 4. Entra nella cartella `xl` -> `worksheets` e trova il file XML del foglio bloccato (es. `sheet1.xml`).
+
 5. Apri il file con un editor di testo (come Blocco Note), cerca la stringa `<sheetProtection.../>` e cancellala del tutto. Salva il file.
+
 6. Ricomprimi la cartella in formato ZIP e ripristina l'estensione `.xlsx`. Il foglio sarà sbloccato senza password!
 
 ---

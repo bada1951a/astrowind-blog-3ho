@@ -24,7 +24,9 @@ Kalau Anda pernah berada di posisi terjepit seperti ini, buru-buru menyalin data
 Sebelum kita masuk ke solusi teknis, mari kita identifikasi tiga akar masalah utama yang sering membuat grafik finansial kantor hancur di saat-saat genting:
 
 1. Format Data Mentah Tidak Konsisten: Divisi berbeda sering mengirim data dengan format teks dan angka yang bercampur (misalnya ada simbol mata uang IDR yang diselipkan manual di setiap sel), sehingga rumus otomatis dan grafik gagal membaca rentang nilai.
+
 2. Struktur Tabel Terlalu Kaku: Pemodelan finansial yang baik butuh fleksibilitas skenario (misalnya simulasi skenario optimis vs pesimis). Jika tabel dibuat satu arah secara statis, grafik tidak akan bisa merespons perubahan asumsi variabel.
+
 3. Keterbatasan Visualisasi Standar: Mengandalkan menu sisipkan grafik bawaan tanpa penyesuaian sering kali menghasilkan grafik batang atau garis yang terlalu padat informasi, membuat para manajer pusing alih-alih paham.
 
 ## Langkah-Langkah Membuat Grafik Finansial Interaktif dengan Bantuan AI
@@ -39,14 +41,19 @@ Pastikan data Anda tersusun dalam format kolom yang bersih.
 ### Langkah 2: Gunakan Fitur AI Suggestion di Google Sheets
 Manfaatkan panel AI internal Google Sheets untuk mendapatkan rekomendasi grafik paling relevan secara instan:
 1. Blok seluruh rentang data tabel finansial Anda (misalnya dari sel A1 sampai D13).
+
 2. Klik ikon Explore (Eksplorasi) di pojok kanan bawah layar Google Sheets, atau gunakan pintasan pencarian alat.
+
 3. Ketikkan perintah atau pertanyaan di kolom AI yang tersedia, seperti: *"Buat grafik tren laba bersih bulanan"* atau *"Tunjukkan korelasi antara pendapatan dan biaya"*.
+
 4. Google Sheets akan menampilkan saran visualisasi grafik terbaik secara otomatis. Pilih grafik yang paling mewakili skenario finansial Anda, lalu klik tombol sisipkan (*Insert*) untuk memasukkannya langsung ke lembar kerja.
 
 ### Langkah 3: Tambahkan Elemen Interaktif dengan Data Validation (Dropdown)
 Agar grafik Anda tidak sekadar statis tapi bisa diubah-ubah variabelnya sesuai kebutuhan rapat:
 1. Buat sel kontrol interaktif, misalnya di sel F2, buat menu dropdown untuk memilih skenario (Skenario A: Normal, Skenario B: Ekspansi). Caranya: klik kanan sel F2 > pilih Data validation > pilih jenis aturan Dropdown (from a range) atau masukkan item kustom.
+
 2. Gunakan rumus logika sederhana seperti `IFS` atau `CHOOSE` pada tabel utama Anda agar data angka berubah secara dinamis mengikuti pilihan di sel F2.
+
 3. Hubungkan grafik Anda ke tabel dinamis tersebut. Kini, setiap kali direksi meminta perubahan asumsi, Anda cukup mengubah pilihan di menu dropdown, dan grafik finansial akan langsung memperbarui tampilannya secara interaktif!
 
 <div style="border-left: 4px solid #4338ca; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

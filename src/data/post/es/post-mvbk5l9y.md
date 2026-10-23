@@ -26,7 +26,9 @@ Si trabajas con equipos internacionales, sabrás que depender de extensiones de 
 Antes de pasar al montaje rápido, veamos por qué caemos en estos callejones sin salida:
 
 1. Dependencia de complementos de pago: Los add-ons del Marketplace suelen ofrecer pruebas gratuitas que expiran en el peor momento operativo.
+
 2. Uso de funciones obsoletas: Intentar rastrear APIs externas mediante secuencias de código complejo en Apps Script sin control de errores.
+
 3. Estructura de fechas rígida: No fijar correctamente la divisa base, lo que rompe toda la matriz de conversión al arrastrar las fórmulas hacia abajo.
 
 ---

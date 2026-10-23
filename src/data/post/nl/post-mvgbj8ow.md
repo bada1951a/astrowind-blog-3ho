@@ -27,7 +27,9 @@ Hier is precies hoe je dit inricht, zodat jij voortaan om vijf uur de laptop dic
 
 Voordat we de code induiken, even een korte analyse van waarom dit proces misgaat in de praktijk:
 1. Menselijke factor en vergeetachtigheid: Vrijdagmiddagdrukte zorgt ervoor dat je de deadline mist of halverwege wordt afgeleid.
+
 2. Opmaakverschillen: Verschillende schermformaten en printers gooien de PDF-layout in de war als je het handmatig exporteert via *Bestand > Downloaden > PDF*.
+
 3. Versiebeheer chaos: Oudste versies van rapporten die per ongeluk worden gemaild omdat bestandsnamen niet uniform zijn.
 
 ---
@@ -95,10 +97,15 @@ Klik op het floppy-icoontje (Opslaan) boven in de balk om het script op te slaan
 #### Stap 3: Installeer de automatische trigger (Wekelijks schema)
 Nu de code klaar staat, zorgen we dat deze elke week automatisch draait:
 1. Klik aan de linkerkant in het Apps Script menu op het klok-icoontje (Triggers).
+
 2. Klik rechtsonder op de knop Trigger toevoegen.
+
 3. Kies bij functie: `sendWeeklyReportPDF`.
+
 4. Kies bij gebeurtenisbron: Op tijd gebaseerd.
+
 5. Selecteer tijdsinterval: Wekelijks tijdschema en kies bijvoorbeeld elke maandag ochtend om 08:00 uur.
+
 6. Klik op Opslaan. Google vraagt nu om eenmalig toestemming (machtigingen verlenen) om je Gmail en Spreadsheet te mogen koppelen.
 
 <div style="border-left: 4px solid #10b981; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

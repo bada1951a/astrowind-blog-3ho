@@ -26,7 +26,9 @@ Jika Anda pernah berada di posisi terjepit seperti ini, bersiaplah menarik napas
 Sebelum langsung ke solusi, mari kita bedah tiga penyebab utama kenapa pekerjaan merapikan data di kantor sering memakan waktu berjam-jam:
 
 1. Format Data Sumber Tidak Konsisten (Garbage In, Garbage Out): Karyawan dari berbagai divisi menginput data dengan gaya berbeda—ada yang pakai spasi berlebih, format nomor `0812-3456-7890` bercampur dengan `+628123456789`, hingga huruf besar-kecil yang acak.
+
 2. Keterbatasan Memahami Sintaks Regex: Fungsi seperti `REGEXREPLACE`, `REGEXEXTRACT`, atau `SPLIT` sangat kuat di Google Sheets, tetapi logikanya sangat abstrak dan mudah salah tik satu karakter saja rumitnya minta ampun.
+
 3. Terjebak Trial-and-Error Manual: Mencoba menebak-nebak rumus lewat forum internet sering kali berujung pada formula yang tidak sesuai dengan struktur kolom lembar kerja lokal kita.
 
 ---
@@ -38,7 +40,9 @@ Berikut adalah alur kerja kilat yang saya gunakan untuk menyelamatkan malam lemb
 #### Langkah 1: Siapkan Sampel Data yang Jelas untuk Prompt AI
 Jangan meminta ChatGPT membuat rumus secara abstrak. Berikan contoh data mentah (*input*) dan hasil yang Anda inginkan (*output*).
 
-* Contoh Data Mentah di Kolom A2: `Bpk. Budi Santoso (0812-9988-7766) - b.santoso@email.com`
+* Contoh Data Mentah di Kolom
+
+A2: `Bpk. Budi Santoso (0812-9988-7766) - b.santoso@email.com`
 * Hasil yang Diinginkan: Ekstrak hanya nomor HP atau email saja secara otomatis.
 
 #### Langkah 2: Gunakan Prompt Spesifik untuk Regex & Formula

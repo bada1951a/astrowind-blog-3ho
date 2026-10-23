@@ -26,7 +26,9 @@ Malam itu juga, saya bersumpah tidak mau lagi buang waktu berharga untuk hal rem
 Sebelum masuk ke solusi teknis, mari kita bedah tiga alasan utama kenapa pekerjaan rekapitulasi kurs mata uang di kantor sering berujung petaka:
 
 1. Ketergantungan pada Input Manual: Menyalin kurs harian secara manual rentan terhadap *human error*. Salah ketik satu digit saja bisa membuat selisih laporan jutaan rupiah.
+
 2. Add-in Pihak Ketiga yang Berbayar atau Kedaluwarsa: Banyak ekstensi Google Sheets yang menawarkan fitur kurs otomatis, tapi versi gratisnya sangat dibatasi atau tiba-tiba meminta langganan bulanan dalam dolar.
+
 3. Format Tanggal dan Simbol Mata Uang yang Tidak Konsisten: Data mentah dari klien atau cabang global sering kali menggunakan format teks biasa (`USD 1,500`), bukan format angka, sehingga rumus matematika standar langsung memunculkan error `#VALUE!`.
 
 ---

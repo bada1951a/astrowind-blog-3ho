@@ -30,21 +30,30 @@ Bevor wir zu den praktischen Schritten kommen, werfen wir einen kurzen Blick auf
 Genug gejammert, krempeln wir die Ärmel hoch. So verwandeln Sie eine unübersichtliche Finanztabelle in ein interaktives Dashboard, das den Vorstand beeindruckt.
 
 ### Schritt 1: Datenbereinigung und intelligente Benennung
-Bevor die KI überhaupt verwertbare Vorschläge machen kann, muss die Datenbasis stimmen. 
+Bevor die KI überhaupt verwertbare Vorschläge machen kann, muss die Datenbasis stimmen.
+
 1. Öffnen Sie Ihr Google Sheet mit den Finanzdaten.
+
 2. Markieren Sie Ihren Datenbereich (z.B. Spalten A bis G für Umsatz, Kosten, EBITDA).
+
 3. Gehen Sie im Menü auf Daten > Benannte Bereiche und vergeben Sie einen klaren Namen wie `Finanzdaten_Q3`. Das verhindert Formelfehler bei späteren Aktualisierungen.
 
 ### Schritt 2: KI-Vorschläge für Diagramme aktivieren ("Mit KI erkunden")
 Google Sheets bringt eine integrierte KI-Funktion mit, die oft übersehen wird, aber Gold wert ist.
+
 1. Klicken Sie unten rechts in Ihrem Google Sheet auf das kleine Explore-Symbol (den Sternen-Button oder Erkunden).
+
 2. Die KI analysiert automatisch Ihre Finanzdaten und schlägt passende Visualisierungen vor.
+
 3. Anstatt manuell ein Diagramm zusammenzuklicken, ziehen Sie den von der KI vorgeschlagenen Trend- oder Prognosegraphen direkt in Ihr Arbeitsblatt.
 
 ### Schritt 3: Interaktive Steuerelemente (Slicer und Dropdowns) einfügen
 Damit Sie im Meeting flexibel reagieren können, machen wir das Dashboard interaktiv.
+
 1. Markieren Sie Ihre Datentabelle.
+
 2. Gehen Sie auf Daten > Slicer hinzufügen.
+
 3. Wählen Sie als Spalte beispielsweise die Kostenstelle oder die Region aus. Wenn der Vorstand nun nach einer spezifischen Abteilung fragt, wählen Sie diese im Dropdown aus, und das gesamte Diagramm aktualisiert sich in Echtzeit, ganz ohne neue Formeln.
 
 <div style="border-left: 4px solid #64748b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -72,7 +81,9 @@ Ja, über die Funktion "Erkunden" oder durch den Einsatz von intelligenten Diagr
 ![How to Create Interactive Financial Modeling Charts in Google Sheets with AI Suggestions AI Automation Guide](https://picsum.photos/seed/work-mvhr1pvo-3-b/1000/550.jpg)
 
 ### 2. Was mache ich, wenn sich die Datenquelle monatlich ändert?
-Verwenden Sie niemals feste Zellbereiche wie `A1:G100`. Nutzen Sie stattdessen dynamische Bereiche oder stellen Sie sicher, dass Ihre Rohdaten als offizielle Google Sheets-Tabelle formatiert sind. Slicer und KI-Diagramme passen sich dann automatisch an neue Zeilen an.
+Verwenden Sie niemals feste Zellbereiche wie `
+
+A1:G100`. Nutzen Sie stattdessen dynamische Bereiche oder stellen Sie sicher, dass Ihre Rohdaten als offizielle Google Sheets-Tabelle formatiert sind. Slicer und KI-Diagramme passen sich dann automatisch an neue Zeilen an.
 
 ### 3. Funktionieren die Slicer auch offline?
 Google Sheets ist primär für die Cloud ausgelegt. Wenn Sie im Meeting eine schlechte WLAN-Verbindung haben, aktivieren Sie unbedingt vorab die Offline-Bearbeitung in den Google Drive-Einstellungen, damit Ihre interaktiven Filter reibungslos funktionieren.

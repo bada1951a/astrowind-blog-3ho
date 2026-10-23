@@ -22,7 +22,9 @@ Góc làm việc tại văn phòng trung tâm ở Quận 1, TP.HCM lúc này đa
 Trước khi áp dụng AI để tái cấu trúc lại bảng tính, chúng ta cần hiểu rõ vì sao file Excel chấm công lại dễ "phát bệnh" vào những thời điểm nhạy cảm:
 
 1. Phụ thuộc quá nhiều vào External Links (Liên kết ngoài): Việc để các file chấm công phòng ban nằm rải rác và dùng công thức móc nối trực tiếp qua lại rất dễ gãy khi ai đó đổi tên file, đổi thư mục lưu trữ trên server chung của công ty.
+
 2. Công thức tính giờ làm và tăng ca quá phức tạp: Các sếp thường yêu cầu tính lùi giờ nghỉ trưa, làm tròn giờ tăng ca theo block 30 phút, cộng trừ ngày lễ. Dùng chuỗi hàm `IF` lồng nhau dài dằng dặc khiến file nặng nề và khó debug khi xảy ra lỗi.
+
 3. Thiếu sự tự động hóa từ Power Query hoặc AI: Đa phần dân văn phòng vẫn dùng phương pháp copy-paste thủ công mỗi dịp cuối tháng, dễ sót dữ liệu và không có tính năng tự sửa lỗi đường dẫn.
 
 ---
@@ -36,7 +38,9 @@ Trước khi áp dụng AI để tái cấu trúc lại bảng tính, chúng ta 
 Thay vì để file Excel đi "xin" dữ liệu từ các file ngoài gây nguy cơ bảo mật và lỗi đường dẫn, chúng ta gom tất cả file chấm công vào một thư mục và dùng [Power Query] để tự động hóa khâu nhập liệu.
 
 1. Trên thanh thực đơn, chọn [Dữ liệu (Data)] > [Lấy dữ liệu (Get Data)] > [Từ tệp (From File)] > [Từ thư mục (From Folder)].
+
 2. Trỏ đến thư mục chứa các file chấm công gốc của các phòng ban.
+
 3. Nhấn [Combine & Transform Data] để Power Query tự động gộp tất cả cấu trúc bảng lại với nhau mà không cần tạo liên kết ngoài thủ công.
 
 ### Bước 2: Sử dụng AI tạo công thức tính giờ làm và tăng ca chuẩn xác
@@ -62,7 +66,9 @@ Và công thức tính giờ tăng ca tự động làm tròn:
 
 Sau khi AI giúp bạn hoàn thiện cột tính toán, hãy chuyển toàn bộ giá trị công thức thành giá trị cứng (Values) để tránh việc file bị chạy nặng nề hoặc lỗi phát sinh vào phút chót:
 1. Bôi đen vùng dữ liệu giờ làm và tăng ca.
+
 2. Nhấn `Ctrl + C`, sau đó nhấn chuột phải chọn [Dán giá trị (Paste as Values)].
+
 3. Lưu file lại dưới định dạng chuẩn, dọn sạch hoàn toàn các đường dẫn file rác cũ trong [Edit Links].
 
 ---

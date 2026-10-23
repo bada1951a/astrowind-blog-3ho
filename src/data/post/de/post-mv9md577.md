@@ -22,7 +22,9 @@ Es ist exakt 16:45 Uhr an einem Donnerstag im Frankfurter Bankenviertel. In 45 M
 Bevor wir zur Lösung kommen, werfen wir einen kurzen Blick darauf, warum dieser monatliche Albtraum überhaupt entsteht. Hier sind die drei klassischen Stolpersteine im Büroalltag:
 
 1. Inkonsistente Dateiformate: Team A nennt die Spalte "Umsatz (netto)", Team B kürzt sie mit "Umsatz" ab und Team C schreibt schlicht "Betrag" rein. Normale Formeln kapitulieren bei diesem Durcheinander sofort.
+
 2. Das Copy-Paste-Risiko: Wer stundenlang Daten manuell hin und her schiebt, macht Fehler. Vertauschte Zeilen oder vergessene Tabellenblätter fallen oft erst im Meeting vor dem Vorstand auf – der denkbar ungünstigste Moment.
+
 3. Fehlende Skalierbarkeit: Kommt nächsten Monat eine neue Region (zum Beispiel Warschau) hinzu, fängt die Formelanpassung wieder von vorne an.
 
 ## Schritt-für-Schritt-Anleitung: So bändigen Sie Ihre Verkaufsdaten mit Power Query

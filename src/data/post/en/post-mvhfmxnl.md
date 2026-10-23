@@ -26,7 +26,9 @@ If you have ever found yourself staring at thousands of SKU rows right before a 
 Before fixing our panic-inducing bottleneck, let us look at why traditional inventory forecasting in spreadsheets always feels like pulling teeth:
 
 1. Static Historical Data Traps: Most teams rely on basic `=AVERAGE()` formulas that completely ignore seasonal spikes, holiday trends, and sudden shifts in customer demand rates.
+
 2. The Manual Export-Import Loop: Constantly downloading raw data from enterprise resource planning tools into static CSV files creates version control nightmares and breaks formula links right before deadlines.
+
 3. Lack of Native Predictive Awareness: Standard Excel users often forget that advanced built-in forecasting tools and AI-assisted add-ins already exist within their ribbon menus, opting instead for overly complex manual calculations.
 
 ---
@@ -47,8 +49,11 @@ AI models and forecasting algorithms need clean data inputs to generate reliable
 Instead of writing complex regression formulas manually, let Excel's underlying algorithm do the heavy lifting.
 
 1. Select your date and historical quantity columns.
+
 2. Navigate to the top ribbon and click on the Data tab.
+
 3. In the Forecast group, click on Forecast Sheet.
+
 4. A preview dialog box will immediately appear showing a visual line chart with confidence bounds. 
 
 <div style="border-left: 4px solid #0284c7; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -65,7 +70,9 @@ Act as a senior supply chain analyst. Here is our historical and forecasted inve
 
 Please review the numbers and provide:
 1. The top 3 SKUs or periods carrying the highest variance risk.
+
 2. A recommended safety stock buffer percentage based on typical supply chain lead time fluctuations.
+
 3. A concise 3-sentence executive summary explaining these trends that I can read directly in our 3:00 PM leadership sync.
 ```
 
@@ -83,11 +90,17 @@ Take the AI-generated executive summary, drop it into a clean text box above you
 
 ## Frequently Asked Questions (FAQ)
 
-### Q1: Can I use this method if my inventory data is weekly instead of monthly?
+###
+
+Q1: Can I use this method if my inventory data is weekly instead of monthly?
 A: Absolutely. Excel's Forecast Sheet feature and AI models can easily process daily, weekly, monthly, or even quarterly data intervals. Just ensure your date column is formatted uniformly as actual Excel date serial numbers so the algorithm correctly recognizes the time gaps.
 
-### Q2: What should I do if the AI-generated forecast seems unrealistically high?
+###
+
+Q2: What should I do if the AI-generated forecast seems unrealistically high?
 A: This usually happens when a massive one-off promotional spike or holiday anomaly skews the historical training data. Go back to your source table, identify outlier months, normalize those specific data points, and regenerate your forecast sheet.
 
-### Q3: Do I need a paid AI subscription to make this work?
+###
+
+Q3: Do I need a paid AI subscription to make this work?
 A: No. The core predictive engine (Exponential Smoothing / ETS algorithm) is built directly into modern versions of Microsoft Excel (Microsoft 365 and Excel 2016+). External AI assistants are simply used at the end to draft the executive presentation talking points.

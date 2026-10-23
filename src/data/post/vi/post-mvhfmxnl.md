@@ -28,7 +28,9 @@ Rat may, sau nhieu lan "chet duoi" vi deadline chieu thu Sau, toi da tim ra mot 
 Truoc khi ap dung giai phap AI, hay diem qua tai sao viec du doan ton kho trong Excel lai luong thoi gian va gay ra nhieu buc doc den vay:
 
 1. Du lieu tho bi phan manh: So lieu ban hang, nhap kho va ton kho nam o ba sheet khac nhau, dinh dang ngay thang khong dong nhat (ngay/thang/nam vs thang/ngay/nam), khien ham thong ke bi loi lien tuc.
+
 2. Su phu thuoc vao ham thong ke co dien: Cac ham nhu FORECAST hay TREND trong Excel chi dua tren du lieu tuyen tinh don thuan, khong phan tich duoc yeu cau thoi vu, xu huong thi truong dot bien trong quy toi.
+
 3. Thieu cong cu ho tro thong minh truc tiep: Hau het moi nguoi thuong mo mot trinh duyet rieng, copy du lieu, dan vao mot chatbot AI ben ngoai, sau do nhan duoc cau tra loi dang van ban va lai phai go thu cong tung con so vao Excel. Day la mot vong lap gay lang phí thoi gian nghiem trong.
 
 ---

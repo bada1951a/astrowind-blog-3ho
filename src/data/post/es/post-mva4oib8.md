@@ -26,7 +26,9 @@ Fue entonces cuando tiré de mi truco definitivo: dejar que ChatGPT redacte la f
 Antes de ver la solución paso a paso, analicemos por qué sufrimos tanto con estas tareas cotidianas en la oficina:
 
 1. Inconsistencia en el origen de los datos: Los formularios web, los archivos CSV exportados desde el CRM y los copias-pegas de la web traen basuras invisibles (saltos de línea, espacios de non-breaking, caracteres UTF-8 corruptos) que rompen las funciones nativas.
+
 2. Limitaciones de las funciones nativas estándar: Funciones básicas como `IZQUIERDA` o `REPLACE` se quedan cortas cuando el patrón cambia de una celda a otra. Ahí es donde entra en juego el motor de expresiones regulares (`REGEXEXTRACT`, `REGEXREPLACE`, `REDUCE`), cuya sintaxis suele ser un dolor de cabeza crónico.
+
 3. Bloqueo mental por la presión del tiempo: Mirar una pantalla llena de errores con una cuenta atrás de diez minutos nubla cualquier capacidad de lógica analítica avanzada.
 
 ---

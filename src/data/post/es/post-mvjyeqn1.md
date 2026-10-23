@@ -73,20 +73,14 @@ a: Antes de enviar el informe definitivo a recursos humanos, prueba la fórmula 
 
 ## Preguntas Frecuentes (FAQ)
 
-Q1.
-
-¿Qué hago si la fórmula devuelve un error de valor (#VALOR!) al restar las horas?
+Q1. ¿Qué hago si la fórmula devuelve un error de valor (#VALOR!) al restar las horas?
 
 A1.Asegúrate de que tanto la celda de entrada como la de salida tengan formato de hora aplicado correctamente en Excel (clic derecho > Formato de celdas > Hora) y que no contengan espacios en blanco ocultos importados de sistemas externos.
 
-Q2.
-
-¿Cómo manejo los turnos nocturnos que superan la medianoche sin romper el cálculo?
+Q2. ¿Cómo manejo los turnos nocturnos que superan la medianoche sin romper el cálculo?
 
 A2. La función `RESIDUO` es tu mejor aliada. Usar `=RESIDUO(Salida - Entrada, 1) * 24` calcula automáticamente la duración correcta incluso si el turno pasa de las 23:00 a las 07:00 del día siguiente.
 
-Q3.
-
-¿Es seguro utilizar Power Query para conectar archivos de otros departamentos?
+Q3. ¿Es seguro utilizar Power Query para conectar archivos de otros departamentos?
 
 A3. Sí, es mucho más seguro que los vínculos directos tradicionales. Power Query almacena la ruta de conexión de forma controlada y te permite actualizar los datos con un solo clic en la pestaña Datos sin disparar alertas de seguridad en cadena. 

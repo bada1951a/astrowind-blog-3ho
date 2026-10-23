@@ -41,7 +41,9 @@ Bertindaklah sebagai ahli Microsoft Excel. Buatkan saya rumus Excel untuk menghi
 ```
 
 #### Langkah 2: Salin dan Terapkan Rumus ke Lembar Kerja Excel
-AI biasanya akan memberikan rumus bersih yang langsung bisa disalin ke dalam lembar kerja Anda. Sebagai contoh, untuk menghitung durasi jam kerja bersih dengan mengabaikan waktu istirahat, gunakan formula berikut pada sel D2:
+AI biasanya akan memberikan rumus bersih yang langsung bisa disalin ke dalam lembar kerja And
+
+a. Sebagai contoh, untuk menghitung durasi jam kerja bersih dengan mengabaikan waktu istirahat, gunakan formula berikut pada sel D2:
 
 ```excel
 =IF((C2-B2)*24>5, (C2-B2)*24-1, (C2-B2)*24)
@@ -63,10 +65,14 @@ Dengan rumus sederhana ini, kolom E secara otomatis hanya akan mencatat kelebiha
 ### Tips Profesional untuk Keamanan Data Kantor
 
 <div style="border-left: 4px solid #3b82f6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Peringatan Penting Keamanan Data:</strong> Jangan pernah memasukkan data nama lengkap, nomor identitas, atau informasi pribadi karyawan yang bersifat rahasia ke dalam prompt AI publik. Gunakan data tiruan (dummy data) dengan angka acak saat meminta bantuan pembuatan rumus kepada AI guna mematuhi standar privasi data perusahaan.
+<strong>Peringatan Penting Keamanan Dat
+
+a:</strong> Jangan pernah memasukkan data nama lengkap, nomor identitas, atau informasi pribadi karyawan yang bersifat rahasia ke dalam prompt AI publik. Gunakan data tiruan (dummy data) dengan angka acak saat meminta bantuan pembuatan rumus kepada AI guna mematuhi standar privasi data perusahaan.
 </div>
 
-Selalu buat salinan cadangan atau [Backup] di direktori terpisah sebelum menjalankan makro atau skrip otomatisasi apa pun pada file master kantor Anda.
+Selalu buat salinan cadangan atau [Backup] di direktori terpisah sebelum menjalankan makro atau skrip otomatisasi apa pun pada file master kantor And
+
+a.
 
 ---
 
@@ -78,8 +84,14 @@ A1.Hal tersebut biasanya terjadi karena format sel pada kolom jam masih terbaca 
 
 Q2. Bisakah rumus AI ini digunakan untuk menghitung hari libur atau akhir pekan secara otomatis?
 
-A2.Bisa. Anda dapat meminta AI untuk menggabungkan rumus di atas dengan fungsi [NETWORKDAYS] atau [WEEKDAY] agar sistem secara otomatis mengenali hari libur nasional di Indonesia dan tidak keliru menghitung lembur pada hari kerja biasa.
+A2.Bis
+
+a. Anda dapat meminta AI untuk menggabungkan rumus di atas dengan fungsi [NETWORKDAYS] atau [WEEKDAY] agar sistem secara otomatis mengenali hari libur nasional di Indonesia dan tidak keliru menghitung lembur pada hari kerja bias
+
+a.
 
 Q3. Bagaimana cara mencegah file master kantor tertimpa secara tidak sengaja oleh skrip otomatisasi di masa mendatang?
 
-A3.Selalu simpan templat master laporan dalam format [Excel Template (.xltx)] atau atur atribut file menjadi [Read-Only] pada tingkat properti folder jaringan, sehingga setiap kali file dibuka, pengguna wajib menyimpannya sebagai dokumen baru dengan nama yang berbeda.
+A3.Selalu simpan templat master laporan dalam format [Excel Template (.xltx)] atau atur atribut file menjadi [Read-Only] pada tingkat properti folder jaringan, sehingga setiap kali file dibuka, pengguna wajib menyimpannya sebagai dokumen baru dengan nama yang berbed
+
+a.

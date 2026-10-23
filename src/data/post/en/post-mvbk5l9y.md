@@ -60,7 +60,9 @@ Drag this formula down for your target currencies (EUR, GBP, JPY, CAD, AUD).
 #### Step 2: Build the Dynamic Conversion Engine
 On your main dashboard tab, where your transaction data or regional revenue items live, avoid complex nested IF statements. Instead, pair your financial data with an `XLOOKUP` pulling directly from your live `Reference` tab.
 
-Assuming your local amount is in column D and your target currency code is in column E, use this clean formula:
+Assuming your local amount is in column D and your target currency code is in column E, use this clean formul
+
+a:
 ```text
 =D2 * XLOOKUP(E2, Reference!
 
@@ -71,7 +73,9 @@ This formula multiplies your local amount by the live exchange rate fetched in r
 #### Step 3: Implement Automated Historical Locking (Optional for Month-End)
 While live rates are great for forecasts, financial reporting often requires locked historical rates based on the exact transaction date. 
 
-To lock historical rates automatically, add the transaction date as an argument in your `GOOGLEFINANCE` formula:
+To lock historical rates automatically, add the transaction date as an argument in your `GOOGLEFINANCE` formul
+
+a:
 ```text
 =GOOGLEFINANCE("CURRENCY:" & B1 & A4, "price", B2)
 ```
@@ -90,10 +94,13 @@ While native Google Sheets functions are powerful, keep these operational guardr
 ### Frequently Asked Questions (FAQ)
 
 Q: Can I use this method to track cryptocurrencies like Bitcoin or Ethereum alongside fiat currencies?
+
 A: Yes! `GOOGLEFINANCE` supports major cryptocurrencies. You can pull live crypto rates by formatting your query string like this: `=GOOGLEFINANCE("CURRENCY:BTCUSD")`.
 
 Q: What happens to my dashboard formulas if Google Sheets experiences an outage or API delay?
+
 A: Because `GOOGLEFINANCE` relies on live server calls, temporary connectivity issues can occasionally show loading errors. To bulletproof your executive presentation, select your calculated currency columns, hit `Copy`, and use `Paste special > Paste values only` right before your meeting starts.
 
 Q: Is there any risk of data privacy leaks when using native Google Finance formulas?
+
 A: None at all. Unlike third-party plugins that require broad OAuth permissions to read and write across your entire Google Drive, native formulas execute entirely within your secure spreadsheet environment without exposing your proprietary financial data to external developers.

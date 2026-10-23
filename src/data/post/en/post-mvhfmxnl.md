@@ -93,14 +93,19 @@ Take the AI-generated executive summary, drop it into a clean text box above you
 ###
 
 Q1: Can I use this method if my inventory data is weekly instead of monthly?
+
 A: Absolutely. Excel's Forecast Sheet feature and AI models can easily process daily, weekly, monthly, or even quarterly data intervals. Just ensure your date column is formatted uniformly as actual Excel date serial numbers so the algorithm correctly recognizes the time gaps.
 
 ###
 
 Q2: What should I do if the AI-generated forecast seems unrealistically high?
-A: This usually happens when a massive one-off promotional spike or holiday anomaly skews the historical training data. Go back to your source table, identify outlier months, normalize those specific data points, and regenerate your forecast sheet.
+
+A: This usually happens when a massive one-off promotional spike or holiday anomaly skews the historical training dat
+
+a. Go back to your source table, identify outlier months, normalize those specific data points, and regenerate your forecast sheet.
 
 ###
 
 Q3: Do I need a paid AI subscription to make this work?
+
 A: No. The core predictive engine (Exponential Smoothing / ETS algorithm) is built directly into modern versions of Microsoft Excel (Microsoft 365 and Excel 2016+). External AI assistants are simply used at the end to draft the executive presentation talking points.

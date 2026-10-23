@@ -9,7 +9,9 @@ theme: "Graphite Technical Paper"
 ---
 
 
-Siedziałem w szklanej sali konferencyjnej w warszawskim centrum biznesowym, a na moim zegarku wybiła 16:45. Za piętnaście minut miałem wysłać ostateczny raport sprzedażowy do zarządu. Otwieram główny arkusz Google Sheets i nagle widzę czerwoną, pulsującą apokalipsę: formuła wyszukiwania duplikatów całkowicie się sypła, pokazując tysiące przemieszanych wierszy z powtarzającymi się adresami e-mail klientów i literówkami w nazwach firm („Jan Kowalski sp. z o.o.” kontra „Jan Kowalski Sp z o.o.”). Standardowa funkcja usuwania duplikatów w Google Sheets polegająca na dopasowaniu dokładnego tekstu była bezużyteczna, bo dane były brudne. Zbliżał się zawał serca.
+Siedziałem w szklanej sali konferencyjnej w warszawskim centrum biznesowym, a na moim zegarku wybiła 16:45. Za piętnaście minut miałem wysłać ostateczny raport sprzedażowy do zarządu. Otwieram główny arkusz Google Sheets i nagle widzę czerwoną, pulsującą apokalipsę: formuła wyszukiwania duplikatów całkowicie się sypła, pokazując tysiące przemieszanych wierszy z powtarzającymi się adresami e-mail klientów i literówkami w nazwach firm („Jan Kowalski sp. z o.o.” kontra „Jan Kowalski Sp z o.o.”). Standardowa funkcja usuwania duplikatów w Google Sheets polegająca na dopasowaniu dokładnego tekstu była bezużyteczna, bo dane były brudne. Zbliżał się zawał serc
+
+a.
 
 W tym artykule pokażę Ci, jak uratowałem ten raport za pomocą sztucznej inteligencji i jak Ty też możesz zautomatyzować ten proces bez pisania skomplikowanych skryptów Apps Script.
 
@@ -40,7 +42,9 @@ Zaznacz problematyczny obszar w Google Sheets (np. kolumny od A do E zawierając
 ### Krok 2: Użycie precyzyjnego promptu dla Gemini
 Otwórz Gemini i wklej swoje dane wraz z konkretnym poleceniem (promptem). Unikaj ogólników – bądź precyzyjny w opisie tego, co chcesz osiągnąć.
 
-> Sprawdzony prompt do skopiowania:
+> Sprawdzony prompt do skopiowani
+
+a:
 > „Mam poniższy zestaw danych klientów z Google Sheets. Zawiera on duplikaty spowodowane literówkami, różnicami w wielkości liter oraz dodatkowymi spacjami w kolumnach z nazwami firm i e-mailami. Napisz mi zaawansowaną formułę Google Sheets (lub krótki skrypt Apps Script), która pozwoli mi zidentyfikować i usunąć te duplikaty, traktując adres e-mail jako klucz główny, a nazwy firm normalizując. Oto moje dane: [Wklej dane]”
 
 ### Krok 3: Wdrożenie rozwiązania w Google Sheets
@@ -57,7 +61,9 @@ Problem rozwiązany w niecałe 3 minuty. Raport poszedł do zarządu na czas, a 
 
 ---
 
-## Ostrzeżenie eksperta: Bezpieczeństwo danych klientów (RODO)
+## Ostrzeżenie ekspert
+
+a: Bezpieczeństwo danych klientów (RODO)
 
 <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Ważna uwaga dotycząca prywatności:</strong>

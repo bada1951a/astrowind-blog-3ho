@@ -9,29 +9,41 @@ theme: "Rosewood Hardware Guide"
 ---
 
 
-Erano le 14:45 e la riunione col cliente chiave al 26esimo piano qui in centro a Milano era fissata per le 15:30. Sul mio schermo, il file Excel di budget consolidato da 45 megabyte aveva appena deciso di piantarsi definitivamente, lasciando la classica rotellina di caricamento girevole su uno sfondo bianco latte. Nessun messaggio di errore, solo il silenzio tombale di un'applicazione morta con dentro tre mesi di dati sui ricavi. Aprire il Task Manager e killare il processo è stato un riflesso condizionato, ma sapevo che l'autosave mi avrebbe riportato a un quarto d'ora prima, lasciando irrisolti i problemi di lentezza e i calcoli fantasma che facevano inchiodare il foglio ogni volta che modificavo una cella.
+Erano le 14:45 e la riunione col cliente chiave al 26esimo piano qui in centro a Milano era fissata per le 15:30. Sul mio schermo, il file Excel di budget consolidato da 45 megabyte aveva appena deciso di piantarsi definitivamente, lasciando la classica rotellina di caricamento girevole su uno sfondo bianco latte. Nessun messaggio di errore, solo il silenzio tombale di un'applicazione morta con dentro tre mesi di dati sui ricavi. Aprire il Task Manager e killare il processo è stato un riflesso condizionato, ma sapevo che l'autosave mi avrebbe riportato a un quarto d'ora prima, lasciando irrisolti i problemi di lentezza e i calcoli fantasma che facevano inchiodare il foglio ogni volta che modificavo una cell
+
+a.
 
 <div style="border-left: 4px solid #be123c; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Situazione di emergenza:</strong> Quando un Excel supera i 30-40 MB e inizia a rallentare, il problema non è quasi mai la potenza del vostro PC. Spesso si tratta di formattazioni condizionali corrotte, formule volatili stratificate o riferimenti circolari nascosti che mandano in loop il motore di calcolo.
+<strong>Situazione di emergenz
+
+a:</strong> Quando un Excel supera i 30-40 MB e inizia a rallentare, il problema non è quasi mai la potenza del vostro PC. Spesso si tratta di formattazioni condizionali corrotte, formule volatili stratificate o riferimenti circolari nascosti che mandano in loop il motore di calcolo.
 </div>
 
 ![AI Productivity & Workflow Automation](https://picsum.photos/seed/office341/1000/550)
 
-Nel panico generale, invece di perdere altri venti minuti a cercare manualmente la cella difettosa o a cancellare fogli interi a tentativi, ho tirato fuori la mia arma segreta: l'interprete Python integrato in ChatGPT Plus. Invece di provare a leggere migliaia di righe di formule a occhio nudo, ho fatto fare il lavoro sporco al codice.
+Nel panico generale, invece di perdere altri venti minuti a cercare manualmente la cella difettosa o a cancellare fogli interi a tentativi, ho tirato fuori la mia arma segret
+
+a: l'interprete Python integrato in ChatGPT Plus. Invece di provare a leggere migliaia di righe di formule a occhio nudo, ho fatto fare il lavoro sporco al codice.
 
 Ecco esattamente come ho diagnosticato e risolto il problema in meno di sette minuti, salvando la presentazione e i miei nervi.
 
 ---
 
-### Perche il tuo Excel si blocca: I 3 colpevoli nascosti
+### Perche il tuo Excel si blocc
+
+a: I 3 colpevoli nascosti
 
 Prima di passare all'azione, capiamo cosa stava strangolando il file:
 
 1. Formattazione condizionale "Zombie": Copia-incolla selvaggi da altri file avevano generato oltre 400.000 regole di formattazione condizionale sovrapposte. Excel controlla ogni singola cella a ogni singolo click, saturando la RAM.
 
-2. Formule volatili fuori controllo: Uso massiccio di `INDIRETTO` (INDIRECT) e `SCARTO` (OFFSET) in tabelle pivot enormi, che costringono il software a ricalcolare l'intero foglio a ogni minima modifica.
+2. Formule volatili fuori controllo: Uso massiccio di `INDIRETTO` (INDIRECT) e `SCARTO` (OFFSET) in tabelle pivot enormi, che costringono il software a ricalcolare l'intero foglio a ogni minima modific
 
-3. Rifiuti nascosti e formati fantasma: Righe e colonne vuote ma formattate fino alla riga 1.048.576 che gonfiavano inutilmente il peso del file.
+a.
+
+3. Rifiuti nascosti e formati fantasm
+
+a: Righe e colonne vuote ma formattate fino alla riga 1.048.576 che gonfiavano inutilmente il peso del file.
 
 ---
 

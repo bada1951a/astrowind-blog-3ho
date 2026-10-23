@@ -40,7 +40,9 @@ Pour résoudre ce problème une bonne fois pour toutes, voici la méthode exacte
 #### Étape 1 : Générer la formule parfaite avec l'IA
 Au lieu de fouiller dans les forums ou de tâtonner avec des si imbriqués à n'en plus finir, demandez directement à un assistant IA (comme ChatGPT ou Copilot) de rédiger votre formule. 
 
-Copiez-collez ce prompt précis dans votre outil IA :
+Copiez-collez ce prompt précis dans votre outil I
+
+A :
 
 ```text
 Agis en expert Excel avancé. Je gère un tableau de pointage à Paris. 

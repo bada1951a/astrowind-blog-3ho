@@ -47,7 +47,9 @@ Avant d'envoyer vos factures à l'IA, assurez-vous que le fichier est lisible.
 #### Étape 2 : Extraction intelligente via une IA générative gratuite
 Ouvrez votre assistant IA préféré (ChatGPT version gratuite, Claude ou Microsoft Copilot). Ne vous contentez pas de joindre l'image en disant "fais un Excel". Utilisez un prompt chirurgical.
 
-Copiez-collez ce prompt exact dans l'interface de l'IA :
+Copiez-collez ce prompt exact dans l'interface de l'I
+
+A :
 
 > "Agis en tant qu'expert comptable et analyste de données. Analyse cette facture scannée. Extrais les données sous forme de tableau Markdown strict avec les colonnes suivantes : Date, Fournisseur, Libellé, Quantité, Prix unitaire HT, TVA, Total TTC. Ne rajoute aucun commentaire superflu, donne-moi uniquement le tableau prêt à être copié."
 

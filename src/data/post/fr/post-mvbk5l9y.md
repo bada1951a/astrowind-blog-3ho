@@ -51,7 +51,9 @@ Cette fonction interroge en temps réel les marchés financiers mondiaux. Si vou
 
 ### Étape 3 : Automatiser le montant converti dans votre tableau de bord
 Supposons que dans votre tableau de suivi des ventes, le montant en USD se trouve dans la cellule D5. Pour obtenir la conversion instantanée en EUR, appliquez simplement cette formule dans la cellule E5 :
-`=D5 * VLOOKUP("USDEUR", A:C, 3, FALSE)`
+`=D5 * VLOOKUP("USDEUR",
+
+A:C, 3, FALSE)`
 
 Glissez cette formule vers le bas de votre colonne : votre tableau est désormais entièrement dynamique. Aucune intervention manuelle n'est requise lors de l'ouverture du fichier.
 

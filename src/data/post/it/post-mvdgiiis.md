@@ -23,7 +23,9 @@ Il problema non è solo il tempo che manca, ma la natura stessa di quei fogli: c
 
 Prima di trovare il metodo definitivo che mi ha salvato la riunione, ho sbattuto la testa contro tre problemi classici che mandano in tilt qualsiasi sistema tradizionale:
 
-1. La formattazione tabellare complessa: Le fatture non seguono uno standard rigido. Descrizioni lunghe su più righe, codici articolo spezzati e prezzi allineati male fanno impazzire i vecchi software di riconoscimento ottico dei caratteri.
+1. La formattazione tabellare compless
+
+a: Le fatture non seguono uno standard rigido. Descrizioni lunghe su più righe, codici articolo spezzati e prezzi allineati male fanno impazzire i vecchi software di riconoscimento ottico dei caratteri.
 
 2. Qualità delle scansioni scadenti: Foto fatte con lo smartphone in fretta o vecchi fax digitalizzati producono un rumore visivo che confonde le lettere con i numeri (per esempio, scambiare la lettera 'O' con lo zero '0' o la 'I' con l'uno '1').
 
@@ -34,7 +36,9 @@ Prima di trovare il metodo definitivo che mi ha salvato la riunione, ho sbattuto
 Per risolvere la situazione in meno di dieci minuti ho utilizzato un flusso di lavoro snello che sfrutta strumenti gratuiti già disponibili online, senza violare la privacy aziendale (attenzione a non caricare dati sensibili su server sconosciuti, usa strumenti affidabili o anonimizza i dati se necessario).
 
 ### Passo 1: Estrazione del testo con OCR gratuito
-Prendi le tue scansioni o scatta foto nitide con lo smartphone (assicurati che ci sia buona luce). Se usi strumenti gratuiti come Google Lens o la funzione OCR integrata nel tuo lettore PDF di fiducia, estrai tutto il testo grezzo della fattura. Non preoccuparti se l'impaginazione si sballa completamente; l'importante è che tutto il testo sia leggibile e selezionabile.
+Prendi le tue scansioni o scatta foto nitide con lo smartphone (assicurati che ci sia buona luce). Se usi strumenti gratuiti come Google Lens o la funzione OCR integrata nel tuo lettore PDF di fiducia, estrai tutto il testo grezzo della fattur
+
+a. Non preoccuparti se l'impaginazione si sballa completamente; l'importante è che tutto il testo sia leggibile e selezionabile.
 
 ### Passo 2: Pulizia e strutturazione tramite prompt IA
 Copia il testo estratto e incollalo all'interno di un'intelligenza artificiale generativa (come ChatGPT o Claude) usando un prompt strutturato in modo rigoroso. Ecco il prompt esatto che ho usato io per mettere in riga i dati in formato tabellare:
@@ -51,15 +55,21 @@ Le colonne richieste devono essere esattamente queste:
 4. Prezzo Unitario
 5. Totale Riga
 
-Ecco il testo grezzo della fattura:
+Ecco il testo grezzo della fattur
+
+a:
 [INCOLLA QUI IL TESTO ESTRATTO DALL'OCR]
 ```
 
 ### Passo 3: Copia, incolla e validazione rapida su Excel
 L'intelligenza artificiale restituirà una tabella Markdown pulita e ordinata in pochi secondi. A questo punto:
-1. Seleziona la tabella generata dall'IA.
+1. Seleziona la tabella generata dall'I
 
-2. Premi `Ctrl + C` per copiarla.
+A.
+
+2. Premi `Ctrl + C` per copiarl
+
+a.
 
 3. Apri il tuo foglio Excel, posizionati sulla cella A1 e premi `Ctrl + V`.
 
@@ -72,7 +82,9 @@ L'intelligenza artificiale restituirà una tabella Markdown pulita e ordinata in
 ## Domande Frequenti (FAQ)
 
 ### Posso usare questo metodo per fatture con dati sensibili o GDPR?
-Se tratti dati aziendali riservati o fatture con dati personali di clienti, evita di usare versioni gratuite di IA con opzioni di training dei dati attive. Assicurati di disattivare la condivisione della cronologia nelle impostazioni della privacy dell'account IA o utilizza strumenti aziendali interni protetti da NDA.
+Se tratti dati aziendali riservati o fatture con dati personali di clienti, evita di usare versioni gratuite di IA con opzioni di training dei dati attive. Assicurati di disattivare la condivisione della cronologia nelle impostazioni della privacy dell'account IA o utilizza strumenti aziendali interni protetti da ND
+
+A.
 
 ### Cosa faccio se l'IA sbaglia i calcoli tra quantità e prezzo unitario?
 L'IA è eccezionale nel fare il parsing del testo, ma occasionalmente può fare errori di arrotondamento. Aggiungi sempre una colonna di controllo in Excel inserendo la formula base `Quantità * Prezzo Unitario` per verificare che il totale di riga corrisponda perfettamente a quello estratto.

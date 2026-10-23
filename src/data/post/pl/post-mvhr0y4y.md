@@ -11,7 +11,9 @@ theme: "Acid Lime Hacker Space"
 
 Godzina 16:45, warszawskie centrum biznesowe na Rondzie Daszyńskiego. Za piętnaście minut mam wysłać ostateczny kwartalny raport finansowy do zarządu, a kluczowy model w Google Sheets całkowicie się rozjechał. Wykresy pokazują ujemne marże zamiast zysków, formuły prognozujące przychody sypią błędami #ARG!, a szef właśnie napisał na Slacku: "Czy wszystko gotowe na jutrzejsze spotkanie?". Stres sięga zenitu, bo ręczne poprawianie setek komórek w tym stanie zajmie co najmniej dwie godziny.
 
-Ten scenariusz to koszmar każdego analityka. Ręczne budowanie wykresów finansowych, które mają być czytelne dla zarządu, a jednocześnie elastyczne pod kątem zmieniających się założeń rynkowych, często kończy się katastrofą.
+Ten scenariusz to koszmar każdego analityk
+
+a. Ręczne budowanie wykresów finansowych, które mają być czytelne dla zarządu, a jednocześnie elastyczne pod kątem zmieniających się założeń rynkowych, często kończy się katastrofą.
 
 <div style="border-left: 4px solid #84cc16; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Szybki ratunek:</strong> Zamiast panikować i przepisywać dane, wykorzystaj wbudowane wsparcie AI oraz inteligentne zakresy nazwane w arkuszach Google. Poniżej pokazuję, jak przekształcić statyczny, awaryjny arkusz w dynamiczny model sterowany suwakami i podpowiedziami sztucznej inteligencji.
@@ -36,12 +38,16 @@ A1:Z100 zamiast elastycznych zakresów nazwalnych, które psują się przy każd
 Wykorzystamy kombinację wbudowanych funkcji Google Sheets oraz asystenta AI (np. Gemini wbudowanego w Workspace lub zewnętrznego modułu AI), aby uporządkować dane i stworzyć interaktywne wykresy w 3 prostych krokach.
 
 ### Krok 1: Oczyszczenie struktury i naprawa formuł za pomocą promptu AI
-Jeśli Twoje formuły wyrzucają błędy, nie szukaj literówki w każdej komórce z osobna. Zaznacz cały blok danych finansowych, skopiuj go i poproś asystenta AI o audyt kodu.
+Jeśli Twoje formuły wyrzucają błędy, nie szukaj literówki w każdej komórce z osobn
+
+a. Zaznacz cały blok danych finansowych, skopiuj go i poproś asystenta AI o audyt kodu.
 
 * Wklej ten prompt do okna czatu AI:
   "Przeanalizuj poniższy zestaw danych finansowych z Google Sheets. Wskaż, które formuły powodują błędy typu #ARG! lub #ADR!, i podaj mi gotowe, poprawione formuły w formacie zgodnym z polską wersją językową arkuszy (np. ŚREDNIA, JEŻELI)."
 
-Gdy otrzymasz poprawione formuły, wklej je do arkusza. Upewnij się, że używasz średników (;) jako separatorów argumentów, co jest standardem w polskiej lokalizacji Google Sheets.
+Gdy otrzymasz poprawione formuły, wklej je do arkusz
+
+a. Upewnij się, że używasz średników (;) jako separatorów argumentów, co jest standardem w polskiej lokalizacji Google Sheets.
 
 ### Krok 2: Dodanie interaktywnych elementów sterujących (Suwaki i Listy)
 Zamiast tworzyć dziesiątki osobnych wykresów dla różnych scenariuszy (optymistyczny, realistyczny, pesymistyczny), stwórz jeden wykres reagujący na zmienną.
@@ -68,7 +74,9 @@ Standardowe wykresy kolumnowe są nudne i mało czytelne dla zarządu. Użyjemy 
 ## Profesjonalne ostrzeżenie: Bezpieczeństwo danych finansowych
 
 <div style="border-left: 4px solid #84cc16; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Ważna uwaga:</strong> Nigdy nie wklejaj poufnych danych płacowych, imiennych list zarobków ani surowych danych bankowych do publicznych, darmowych narzędzi AI. Korzystaj wyłącznie z korporacyjnych wersji narzędzi (np. Google Workspace z aktywowaną ochroną danych Enterprise) lub anonimizuj wrażliwe kolumny (zastępując nazwy firm np. Klient A, Klient B) przed wysłaniem zapytania do modelu.
+<strong>Ważna uwag
+
+a:</strong> Nigdy nie wklejaj poufnych danych płacowych, imiennych list zarobków ani surowych danych bankowych do publicznych, darmowych narzędzi AI. Korzystaj wyłącznie z korporacyjnych wersji narzędzi (np. Google Workspace z aktywowaną ochroną danych Enterprise) lub anonimizuj wrażliwe kolumny (zastępując nazwy firm np. Klient A, Klient B) przed wysłaniem zapytania do modelu.
 </div>
 
 ---

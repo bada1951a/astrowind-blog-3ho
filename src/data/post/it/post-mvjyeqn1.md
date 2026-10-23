@@ -21,7 +21,9 @@ Prima di mettere le mani sulle formule e sbloccare la situazione, capiamo perch�
 
 * Formato ora non standardizzato: Excel gestisce le ore come frazioni di un giorno. Se inserisci le ore come testo (es. "08.30" con il punto anziché i due punti "08:30"), qualsiasi formula matematica fallisce miseramente restituendo il temuto errore `#VALORE!`.
 * Protezione dei fogli con password dimenticate: Bloccare le celle con le formule è una buona pratica per evitare modifiche accidentali, ma la perdita della password rende impossibile aggiornare i parametri contrattuali annuali.
-* Logica degli straordinari troppo complessa: Calcolare la soglia delle 40 ore settimanali, distinguendo tra straordinario diurno, notturno e festivo con formule manuali nidificate rende il file un labirinto illeggibile per chiunque non sia un mago di Excel.
+* Logica degli straordinari troppo compless
+
+a: Calcolare la soglia delle 40 ore settimanali, distinguendo tra straordinario diurno, notturno e festivo con formule manuali nidificate rende il file un labirinto illeggibile per chiunque non sia un mago di Excel.
 
 ---
 
@@ -34,7 +36,9 @@ Prima di mettere le mani sulle formule e sbloccare la situazione, capiamo perch�
 Per uscire dall'emergenza senza perdere ore in tentativi manuali, ho sfruttato un assistente IA per generare le formule perfette e sbloccare il flusso di lavoro. Ecco il procedimento esatto che puoi replicare subito.
 
 ### Passo 1: Correggere e formattare le celle orarie
-Assicurati che tutte le colonne di entrata e uscita siano impostate sul formato corretto. Seleziona l'intervallo delle ore, vai su Homee nel riquadro Numeri selezionaOra oppure usa una formattazione personalizzata:
+Assicurati che tutte le colonne di entrata e uscita siano impostate sul formato corretto. Seleziona l'intervallo delle ore, vai su Homee nel riquadro Numeri selezionaOra oppure usa una formattazione personalizzat
+
+a:
 
 ```excel
 [h]:mm
@@ -47,7 +51,9 @@ Invece di perdere tempo con formule SE e logiche complesse, ho chiesto direttame
 Copia e incolla questo prompt nel tuo assistente IA di fiducia quando devi creare un prospetto simile:
 > "Scrivi una formula Excel per calcolare le ore lavorate tra la cella B2 (Entrata) e la cella C2 (Uscita), considerando una pausa pranzo fissa di 1 ora se le ore superano le 6. Separa poi le eventuali ore eccedenti le 8 ore giornaliere in una colonna dedicata agli straordinari."
 
-L'IA ti restituirà una struttura pulita simile a questa:
+L'IA ti restituirà una struttura pulita simile a quest
+
+a:
 
 ```excel
 =SE((C2-B2)*24>6; (C2-B2)*24-1; (C2-B2)*24)
@@ -60,12 +66,16 @@ E per la colonna degli straordinari giornalieri:
 *(Dove D2 rappresenta il totale delle ore lavorate calcolato dalla formula precedente).*
 
 ### Passo 3: Gestire i blocchi di protezione senza stress
-Se il tuo file è protetto da una password dimenticata e devi urgentemente sbloccare le celle per correggere la struttura:
+Se il tuo file è protetto da una password dimenticata e devi urgentemente sbloccare le celle per correggere la struttur
+
+a:
 1. Chiudi il file Excel.
 
 2. Cambia l'estensione del file da `.xlsx` a `.zip`.
 
-3. Estrai l'archivio ZIP in una cartella temporanea.
+3. Estrai l'archivio ZIP in una cartella temporane
+
+a.
 
 4. Entra nella cartella `xl` -> `worksheets` e trova il file XML del foglio bloccato (es. `sheet1.xml`).
 
@@ -81,7 +91,9 @@ Se il tuo file è protetto da una password dimenticata e devi urgentemente sbloc
 <strong>AVVISO DI SICUREZZA DATI:</strong> Quando utilizzi strumenti di intelligenza artificiale per correggere file aziendali, assicurati di rimuovere sempre i dati sensibili, i nomi dei dipendenti e i codici fiscali. Condividi con l'IA solo strutture di esempio e numeri fittizi per tutelare la privacy secondo le normative vigenti.
 </div>
 
-* Usa Power Query per i dati ricorrenti:Se ogni fine mese importi file CSV o tracciati presenze dai tornelli, automatizza l'importazione tramiteDati>Ottieni dati>Da file, evitando il copia-incolla manuale che genera errori di battitura.
+* Usa Power Query per i dati ricorrenti:Se ogni fine mese importi file CSV o tracciati presenze dai tornelli, automatizza l'importazione tramiteDati>Ottieni dati>Da file, evitando il copia-incolla manuale che genera errori di battitur
+
+a.
 * Crea un foglio di backup bloccato ma accessibile: Conserva sempre una copia master pulita dei file di calcolo presenze in una cartella condivisa protetta da permessi di rete aziendali, così da non dipendere mai da password locali dimenticate dai singoli.
 
 ---
@@ -94,7 +106,9 @@ A1.Per impostazione predefinita, Excel non supporta i risultati orari negativi. 
 
 Q2. Posso usare l'IA direttamente dentro Excel per calcolare gli straordinari senza copiare le formule?
 
-A2.Sì, se utilizzi Microsoft 365 con Copilot integrato, puoi richiamare il pannello laterale e digitare direttamente il comando in linguaggio naturale per generare e inserire le colonne di calcolo direttamente nella tabella attiva.
+A2.Sì, se utilizzi Microsoft 365 con Copilot integrato, puoi richiamare il pannello laterale e digitare direttamente il comando in linguaggio naturale per generare e inserire le colonne di calcolo direttamente nella tabella attiv
+
+a.
 
 Q3. Perché la mia formula di moltiplicazione delle ore per la tariffa oraria restituisce un numero sballato (es. 0,33 invece di 25 euro)?
 

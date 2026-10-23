@@ -118,7 +118,9 @@ Nu de code klaar staat, zorgen we dat deze elke week automatisch draait:
 
 Houd rekening met de volgende praktische richtlijnen bij het automatiseren van bedrijfskritische processen:
 * API Limieten: Google heeft dagelijkse limieten voor het verzenden van e-mails via scripts (voor normale Gmail-accounts is dit doorgaans 100 per dag, voor Google Workspace accounts 1.500 per dag). Meer dan genoeg voor wekelijkse rapporten, maar houd er rekening mee bij grote distributielijsten.
-* Geheime Data: Zorg ervoor dat tabbladen die gevoelige financiële of HR-data bevatten goed zijn afgeschermd met tabblad-beveiliging, zodat het script nooit per ongeluk ongeautoriseerde gegevens meeneemt in de export.
+* Geheime Dat
+
+a: Zorg ervoor dat tabbladen die gevoelige financiële of HR-data bevatten goed zijn afgeschermd met tabblad-beveiliging, zodat het script nooit per ongeluk ongeautoriseerde gegevens meeneemt in de export.
 
 ---
 

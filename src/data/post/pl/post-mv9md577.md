@@ -16,7 +16,9 @@ To nie był pierwszy raz, kiedy tradycyjne metody zawiodły przy comiesięcznym 
 ![AI Productivity & Workflow Automation](https://picsum.photos/seed/office154/1000/550)
 
 <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Cel tego poradnika:</strong> Pokażę Ci, jak raz skonfigurować automatyczne zapytanie w Excelu, które co miesiąc w kilka sekund pobierze, wyczyści i połączy pliki sprzedaży z całego folderu – bez dotykania kodu VBA i bez płaczu przed deadlinem.
+<strong>Cel tego poradnik
+
+a:</strong> Pokażę Ci, jak raz skonfigurować automatyczne zapytanie w Excelu, które co miesiąc w kilka sekund pobierze, wyczyści i połączy pliki sprzedaży z całego folderu – bez dotykania kodu VBA i bez płaczu przed deadlinem.
 </div>
 
 ---
@@ -25,11 +27,17 @@ To nie był pierwszy raz, kiedy tradycyjne metody zawiodły przy comiesięcznym 
 
 Zanim przejdziemy do naprawy, spójrzmy prawdzie w oczy. Oto trzy główne powody, dla których dotychczasowy system (lub jego brak) doprowadzał Cię do szewskiej pasji:
 
-1. Ręczne „Kopiuj-Wklej” z dziesiątek plików: Każdy oddział wysyła plik według własnego uznania. W jednym dany miesiąc to kolumna C, w innym F. Przenoszenie tego ręcznie to zaproszenie do pomyłek.
+1. Ręczne „Kopiuj-Wklej” z dziesiątek plików: Każdy oddział wysyła plik według własnego uznani
 
-2. Kruchość makr VBA: Ktoś zmieni nazwę arkusza w pliku źródłowym, a Twój skrypt makra wypluwa błąd w linii 42 i nie wiesz, dlaczego.
+a. W jednym dany miesiąc to kolumna C, w innym F. Przenoszenie tego ręcznie to zaproszenie do pomyłek.
 
-3. Brak śladu audytowego (Data Lineage): Kiedy zarząd pyta: *„Skąd wzięła się ta kwota w marcu?”*, zaczyna się paniczne szukanie po mailach i starych wersjach plików.
+2. Kruchość makr VB
+
+A: Ktoś zmieni nazwę arkusza w pliku źródłowym, a Twój skrypt makra wypluwa błąd w linii 42 i nie wiesz, dlaczego.
+
+3. Brak śladu audytowego (Data Lineage): Kiedy zarząd pyt
+
+a: *„Skąd wzięła się ta kwota w marcu?”*, zaczyna się paniczne szukanie po mailach i starych wersjach plików.
 
 ---
 
@@ -50,11 +58,15 @@ Utwórz na dysku jeden dedykowany folder na dany miesiąc, na przykład `C:\Rapo
 4. Wskaż ścieżkę do naszego folderu `Sprzedaż_2026_10` i kliknij Otwórz.
 
 #### Krok 3: Przekształcenie i oczyszczenie danych (Edytor Power Query)
-Zamiast klikać „Połącz”, kliknij Przekształć dane. Otworzy się osobne okno Edytora Power Query. To tutaj dzieje się magia:
+Zamiast klikać „Połącz”, kliknij Przekształć dane. Otworzy się osobne okno Edytora Power Query. To tutaj dzieje się magi
+
+a:
 * Zobaczysz listę plików znajdujących się w folderzie. Kliknij dwukrotnie na ikonę podwójnej strzałki w nagłówku kolumny Content.
 * Power Query automatycznie podglądnie strukturę plików. Wybierz arkusz lub tabelę, z której chcesz pobrać dane.
 * Usuń zbędne wiersze i nagłówki: Jeśli pliki mają na górze puste wiersze lub stopki, użyj opcji Usuń wiersze na karcie Narzędzia główne.
-* Promuj nagłówki: Kliknij przycisk Użyj pierwszego wiersza jako nagłówka.
+* Promuj nagłówki: Kliknij przycisk Użyj pierwszego wiersza jako nagłówk
+
+a.
 
 #### Krok 4: Załaduj wynik do arkusza
 Gdy dane wyglądają już czysto i poprawnie (widzisz złączoną tabelę ze wszystkich plików), w lewym górnym rogu edytora kliknij Zamknij i załaduj. 
@@ -71,7 +83,9 @@ Excel utworzy nową zakładkę z w pełni skonsolidowaną tabelą sprzedaży.
 
 * Bezpieczeństwo ścieżek dostępu: Jeśli trzymasz pliki na sieciowym dysku firmowym (np. SharePoint lub OneDrive), użyj połączenia sieciowego zamiast ścieżki lokalnej `C:\`, aby inni współpracownicy również mogli odświeżać raport.
 * Spójność nazw kolumn: Choć Power Query świetnie radzi sobie z przekształceniami, upewnij się, że kluczowe kolumny (np. „Data”, „Wartość”) są tak samo nazwane w plikach źródłowych. Unikniesz w ten sposób powstawania pustych kolumn.
-* Kopia zapasowa: Zanim wdrożysz automatyzację na produkcyjnych danych zarządu, przetestuj zapytanie na kopii zeszłorocznych plików.
+* Kopia zapasow
+
+a: Zanim wdrożysz automatyzację na produkcyjnych danych zarządu, przetestuj zapytanie na kopii zeszłorocznych plików.
 
 ---
 

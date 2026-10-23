@@ -14,7 +14,9 @@ Godzina 16:50 w biurowcu przy rondzie Daszyńskiego w Warszawie. Za dziesięć m
 Zamiast tracić nerwy na ręczne przeszukiwanie tysięcy komórek w poszukiwaniu uszkodzonych odwołań, wykorzystałem ChatGPT z możliwościami zaawansowanej analizy danych w Pythonie. Poniżej pokazuję krok po kroku, jak w niecałe dziesięć minut zidentyfikować i usunąć ukryte wąskie gardła w Excelu.
 
 <div style="border-left: 4px solid #ffffff; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Szybka wskazówka:</strong> Nigdy nie przesyłaj poufnych danych finansowych ani danych osobowych (RODO) do publicznych modeli AI. Zawsze anonimizuj pliki przed analizą, usuwając rzeczywiste nazwy klientów, kwoty i wrażliwe identyfikatory.
+<strong>Szybka wskazówk
+
+a:</strong> Nigdy nie przesyłaj poufnych danych finansowych ani danych osobowych (RODO) do publicznych modeli AI. Zawsze anonimizuj pliki przed analizą, usuwając rzeczywiste nazwy klientów, kwoty i wrażliwe identyfikatory.
 </div>
 
 ## Dlaczego Twój Excel nagle zwalnia i się zawiesza?
@@ -69,18 +71,24 @@ Mój plik Excel "raport.xlsx" zacina się przez nadmierne formatowanie warunkowe
 4. Zapisze wynik jako "raport_czysty.xlsx".
 ```
 
-Po uruchomieniu tego skryptu otrzymasz lekki, w pełni responsywny plik gotowy do wysłania.
+Po uruchomieniu tego skryptu otrzymasz lekki, w pełni responsywny plik gotowy do wysłani
+
+a.
 
 ---
 
 ## Ekspert radzi: Jak zapobiegać awariom w przyszłości?
 
 <div style="border-left: 4px solid #ffffff; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Wskazówka bezpieczeństwa:</strong> Jeśli pracujesz w korporacji o restrykcyjnych zasadach IT, upewnij się, że korzystasz z lokalnej instancji Pythona zatwierdzonego przez dział bezpieczeństwa lub narzędzi takich jak Microsoft Copilot zintegrowanych bezpośrednio z Twoim środowiskiem firmowym.
+<strong>Wskazówka bezpieczeństw
+
+a:</strong> Jeśli pracujesz w korporacji o restrykcyjnych zasadach IT, upewnij się, że korzystasz z lokalnej instancji Pythona zatwierdzonego przez dział bezpieczeństwa lub narzędzi takich jak Microsoft Copilot zintegrowanych bezpośrednio z Twoim środowiskiem firmowym.
 </div>
 
 * Zmieniaj formuły na wartości: Jeśli w arkuszu znajdują się historyczne dane miesięczne, które już się nie zmieniają, zaznacz je, skopiuj i wklej jako *Wartości* (Skrót: Ctrl + Alt + V -> Wartości).
-* Unikaj całych kolumn w odwołaniach: Zamiast pisać `WYSZUKAJ.PIONOWO(A1; A:Z; 2; FAŁSZ)`, ograniczaj zakres do faktycznie używanych wierszy, np. `
+* Unikaj całych kolumn w odwołaniach: Zamiast pisać `WYSZUKAJ.PIONOWO(A1;
+
+A:Z; 2; FAŁSZ)`, ograniczaj zakres do faktycznie używanych wierszy, np. `
 
 A1:Z5000`. Excel nie musi wtedy przeszukiwać miliona pustych wierszy.
 

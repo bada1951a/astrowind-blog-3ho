@@ -47,7 +47,11 @@ A2:A100 into actual numbers, and calculate total overtime over 40 hours.
 ```
 
 #### Step 2: Apply the Battle-Tested Formula
-The AI will typically hand you a bulletproof array or helper column formula. To fix text numbers instantly without touching the original column, create a adjacent helper column (e.g., Column B) and paste this clean formula:
+The AI will typically hand you a bulletproof array or helper column formul
+
+a. To fix text numbers instantly without touching the original column, create a adjacent helper column (e.g., Column B) and paste this clean formul
+
+a:
 
 ```excel
 =VALUE(CLEAN(TRIM(A2)))
@@ -56,7 +60,9 @@ The AI will typically hand you a bulletproof array or helper column formula. To 
 Drag that formula down your dataset. This strips out hidden web spaces, standardizes line breaks, and forces Excel to convert the text string into a clean, summable number.
 
 #### Step 3: Automate Overtime Calculations
-Once your working hours are properly converted to numbers, calculating standard hours and overtime is effortless. Assuming your converted hours are in Column B, use this straightforward logical formula:
+Once your working hours are properly converted to numbers, calculating standard hours and overtime is effortless. Assuming your converted hours are in Column B, use this straightforward logical formul
+
+a:
 
 ```excel
 =IF(B2>40, 40, B2)
@@ -68,7 +74,9 @@ And for your overtime calculation in the adjacent column:
 =IF(B2>40, B2-40, 0)
 ```
 
-Wrap your final range in a standard `SUM` formula: `=SUM(C2:C100)` and watch your totals calculate instantly instead of returning 0.
+Wrap your final range in a standard `SUM` formul
+
+a: `=SUM(C2:C100)` and watch your totals calculate instantly instead of returning 0.
 
 ---
 
@@ -86,7 +94,9 @@ Always maintain a raw data backup sheet before running global Find & Replace or 
 
 Q1. Why doesn't changing the cell format from Text to Number fix my SUM formula immediately?
 
-A1.Excel only evaluates formatting changes for newly typed data. Existing cells locked in text mode retain their string property until you explicitly force a recalculation, edit the cell individually, or pass them through a conversion function like `VALUE`.
+A1.Excel only evaluates formatting changes for newly typed dat
+
+a. Existing cells locked in text mode retain their string property until you explicitly force a recalculation, edit the cell individually, or pass them through a conversion function like `VALUE`.
 
 Q2. Can I fix this entire column at once without creating a helper column?
 

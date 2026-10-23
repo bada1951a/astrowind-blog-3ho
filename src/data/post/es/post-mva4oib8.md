@@ -11,7 +11,9 @@ theme: "Sunset Horizon Coral"
 
 Eran exactamente las 11:45 de la mañana en nuestra oficina del Paseo de la Castellana en Madrid. A las 12:00 teníamos la reunión mensual de seguimiento con el comité de dirección. Tenía abierta una hoja de cálculo en Google Sheets con el reporte de métricas del trimestre: más de cinco mil filas con correos electrónicos mezclados, números de teléfono mal formateados y códigos de cliente desestructurados. Mi fórmula de extracción con expresiones regulares (REGEXEXTRACT) se había roto por completo tras la última importación de datos. La celda solo devolvía un molino de errores `#VALOR!`. Sudor frío, el corazón a mil por hora y el director general preguntando por Slack si el enlace ya estaba actualizado.
 
-Durante veinte minutos interminables intenté arreglarlo a la antigua usanza. Borré columnas, probé funciones anidadas kilométricas con EXTRAE y HALLAR, y busqué en foros hilos obsoletos de 2018. El caos era total: los datos venían con espacios invisibles, caracteres especiales extraños y dominios de correo mal escritos. Estaba a punto de empezar a limpiar los datos a mano, fila por fila, aceptando mi trágico destino.
+Durante veinte minutos interminables intenté arreglarlo a la antigua usanz
+
+a. Borré columnas, probé funciones anidadas kilométricas con EXTRAE y HALLAR, y busqué en foros hilos obsoletos de 2018. El caos era total: los datos venían con espacios invisibles, caracteres especiales extraños y dominios de correo mal escritos. Estaba a punto de empezar a limpiar los datos a mano, fila por fila, aceptando mi trágico destino.
 
 ![AI Productivity & Workflow Automation](https://picsum.photos/seed/office353/1000/550)
 
@@ -23,13 +25,19 @@ Fue entonces cuando tiré de mi truco definitivo: dejar que ChatGPT redacte la f
 
 ## ¿Por qué fallan siempre las fórmulas de limpieza de datos?
 
-Antes de ver la solución paso a paso, analicemos por qué sufrimos tanto con estas tareas cotidianas en la oficina:
+Antes de ver la solución paso a paso, analicemos por qué sufrimos tanto con estas tareas cotidianas en la oficin
+
+a:
 
 1. Inconsistencia en el origen de los datos: Los formularios web, los archivos CSV exportados desde el CRM y los copias-pegas de la web traen basuras invisibles (saltos de línea, espacios de non-breaking, caracteres UTF-8 corruptos) que rompen las funciones nativas.
 
-2. Limitaciones de las funciones nativas estándar: Funciones básicas como `IZQUIERDA` o `REPLACE` se quedan cortas cuando el patrón cambia de una celda a otra. Ahí es donde entra en juego el motor de expresiones regulares (`REGEXEXTRACT`, `REGEXREPLACE`, `REDUCE`), cuya sintaxis suele ser un dolor de cabeza crónico.
+2. Limitaciones de las funciones nativas estándar: Funciones básicas como `IZQUIERDA` o `REPLACE` se quedan cortas cuando el patrón cambia de una celda a otr
 
-3. Bloqueo mental por la presión del tiempo: Mirar una pantalla llena de errores con una cuenta atrás de diez minutos nubla cualquier capacidad de lógica analítica avanzada.
+a. Ahí es donde entra en juego el motor de expresiones regulares (`REGEXEXTRACT`, `REGEXREPLACE`, `REDUCE`), cuya sintaxis suele ser un dolor de cabeza crónico.
+
+3. Bloqueo mental por la presión del tiempo: Mirar una pantalla llena de errores con una cuenta atrás de diez minutos nubla cualquier capacidad de lógica analítica avanzad
+
+a.
 
 ---
 
@@ -47,15 +55,21 @@ Abre ChatGPT y utiliza una estructura de instrucciones directa y orientada a rol
 Actúa como un experto avanzado en Google Sheets y experto en expresiones regulares (Regex). 
 Tengo una celda en A2 con este texto desestructurado: "[pega aquí tu ejemplo feo]".
 Necesito una fórmula de Google Sheets que extraiga únicamente [lo que necesitas, ej: el código de cinco dígitos o el dominio del correo].
-Por favor, dame solo la fórmula lista para copiar y pegar, explicando brevemente cómo funciona por si necesito ajustarla.
+Por favor, dame solo la fórmula lista para copiar y pegar, explicando brevemente cómo funciona por si necesito ajustarl
+
+a.
 ```
 
 ### Paso 3: Aplicar y arrastrar en tu hoja de cálculo
-Pega la fórmula proporcionada por ChatGPT en la celda superior de tu columna de resultados en Google Sheets. Si el resultado es correcto, haz doble clic en el controlador de relleno (la esquina inferior derecha de la celda) para aplicarla automáticamente a toda la columna.
+Pega la fórmula proporcionada por ChatGPT en la celda superior de tu columna de resultados en Google Sheets. Si el resultado es correcto, haz doble clic en el controlador de relleno (la esquina inferior derecha de la celda) para aplicarla automáticamente a toda la column
+
+a.
 
 ---
 
-## Comparativa: El calvario manual vs. El atajo con ChatGPT
+## Comparativ
+
+a: El calvario manual vs. El atajo con ChatGPT
 
 | Situación | Método Tradicional (Manual / Foros) | Método Automatizado con ChatGPT |
 | :--- | :--- | :--- |
@@ -69,7 +83,9 @@ Pega la fórmula proporcionada por ChatGPT en la celda superior de tu columna de
 ## Consejos de experto para evitar sustos de última hora
 
 <div style="border-left: 4px solid #f97316; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Precaución de seguridad:</strong> Si trabajas con datos protegidos por el RGPD (nombres reales, DNI, datos bancarios de clientes europeos), anonimiza la información antes de pegarla en herramientas externas de IA. Sustituye los nombres por "Cliente A" o usa identificadores genéricos.
+<strong>Precaución de seguridad:</strong> Si trabajas con datos protegidos por el RGPD (nombres reales, DNI, datos bancarios de clientes europeos), anonimiza la información antes de pegarla en herramientas externas de I
+
+A. Sustituye los nombres por "Cliente A" o usa identificadores genéricos.
 </div>
 
 - Bloquea los valores estáticos: Una vez que la fórmula de ChatGPT te devuelva los datos limpios, selecciónalos todos, haz clic en *Copiar* y luego ve a *Pegado especial > Pegar solo valores*. Esto evita que la hoja recalcule constantemente y ganes velocidad de procesamiento.
@@ -80,7 +96,9 @@ Pega la fórmula proporcionada por ChatGPT en la celda superior de tu columna de
 ## Preguntas Frecuentes (FAQ)
 
 ### ¿Qué hago si la fórmula de ChatGPT me devuelve un error en Google Sheets?
-Asegúrate de que el separador de argumentos de tu Google Sheets coincida con lo que da la IA. En entornos configurados en español, las fórmulas suelen usar punto y coma (`;`) en lugar de comas (`,`). Pídele explícitamente a ChatGPT: *"Dame la fórmula usando punto y coma como separador para Google Sheets en español"*.
+Asegúrate de que el separador de argumentos de tu Google Sheets coincida con lo que da la I
+
+A. En entornos configurados en español, las fórmulas suelen usar punto y coma (`;`) en lugar de comas (`,`). Pídele explícitamente a ChatGPT: *"Dame la fórmula usando punto y coma como separador para Google Sheets en español"*.
 
 ### ¿Las expresiones regulares de Google Sheets son iguales a las de Excel?
 No del todo. Google Sheets utiliza la librería de expresiones regulares RE2, que tiene pequeñas diferencias de sintaxis en comparación con las macros de VBA o las nuevas funciones nativas de Excel. Por eso es vital especificarle siempre a ChatGPT que la fórmula es estrictamente para Google Sheets.

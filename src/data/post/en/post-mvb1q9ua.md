@@ -39,7 +39,9 @@ Open your preferred AI assistant or integrated workspace tool. Paste your data a
 
 <div style="border-left: 4px solid #1e40af; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>AI Prompt Template:</strong><br><br>
-"Act as a data cleaning expert. I will provide a messy list of emails and names. Please return a clean, two-column tab-separated output where Column 1 is the Cleaned First Name (properly capitalized, no special characters or initials) and Column 2 is the Cleaned Standardized Email (lowercase, no trailing spaces). Handle edge cases like underscores or hyphens intelligently. Here is the data: [PASTE DATA HERE]"
+"Act as a data cleaning expert. I will provide a messy list of emails and names. Please return a clean, two-column tab-separated output where Column 1 is the Cleaned First Name (properly capitalized, no special characters or initials) and Column 2 is the Cleaned Standardized Email (lowercase, no trailing spaces). Handle edge cases like underscores or hyphens intelligently. Here is the dat
+
+a: [PASTE DATA HERE]"
 </div>
 
 ### Step 3: Paste Back and Validate in Excel

@@ -17,13 +17,19 @@ Ese fue el punto de quiebre donde decidí dejar de sufrir con hojas de cálculo 
 
 <div style="border-left: 4px solid #64748b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Ticket de Soporte Técnico #MS-2026-04</strong><br>
-<strong>Síntoma:</strong> Duplicados masivos en base de datos de clientes con variaciones tipográficas (ej. "Empresa S.
+<strong>Síntom
+
+a:</strong> Duplicados masivos en base de datos de clientes con variaciones tipográficas (ej. "Empresa S.
 
 A.", "Empresa SA", "empresa s.
 
 a.").<br>
-<strong>Impacto:</strong> Métricas de conversión infladas y riesgo de fallo en presentación ejecutiva.<br>
-<strong>Solución rápida:</strong> Automatización mediante prompt estructurado en Gemini para Google Workspace.
+<strong>Impacto:</strong> Métricas de conversión infladas y riesgo de fallo en presentación ejecutiv
+
+a.<br>
+<strong>Solución rápid
+
+a:</strong> Automatización mediante prompt estructurado en Gemini para Google Workspace.
 </div>
 
 ## Diagnóstico: Por qué fallan los métodos tradicionales
@@ -70,10 +76,14 @@ A., SL, etc.). Analiza los datos pegados a continuación, unifica los registros 
 ## Preguntas Frecuentes (FAQ)
 
 ¿Qué hago si la lista de clientes supera las diez mil filas y Gemini se corta?
-Divide tu base de datos en bloques lógicos de tres mil o cuatro mil filas (por ejemplo, dividiendo alfabéticamente por la inicial del cliente). Procesar lotes más pequeños garantiza que la IA no omita registros debido a límites de tokens en una sola respuesta.
+Divide tu base de datos en bloques lógicos de tres mil o cuatro mil filas (por ejemplo, dividiendo alfabéticamente por la inicial del cliente). Procesar lotes más pequeños garantiza que la IA no omita registros debido a límites de tokens en una sola respuest
+
+a.
 
 ¿Puedo automatizar esto para que se ejecute solo cada lunes por la mañana?
-Sí. Puedes conectar este flujo utilizando Google Apps Script junto con la API de Gemini, configurando un activador temporal (*trigger*) para que limpie la hoja de clientes automáticamente antes de que llegues a la oficina.
+Sí. Puedes conectar este flujo utilizando Google Apps Script junto con la API de Gemini, configurando un activador temporal (*trigger*) para que limpie la hoja de clientes automáticamente antes de que llegues a la oficin
+
+a.
 
 ¿Qué pasa si Gemini une por error a dos clientes diferentes con nombres similares?
 La IA es excelente detectando patrones, pero siempre debes revisar visualmente el resultado en la columna de nombres normalizados antes de presentar métricas oficiales. Mantén siempre una copia de seguridad en una pestaña oculta llamada `Backup_Bruto`.

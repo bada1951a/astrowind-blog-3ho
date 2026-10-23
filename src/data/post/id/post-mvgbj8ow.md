@@ -11,7 +11,9 @@ theme: "Pure Titanium Clean"
 
 Jam 8 malam di kawasan bisnis SCBD Jakarta, saya masih terjebak di kantor menyelesaikan rekap data operasional mingguan yang berantakan karena salah rumus. Besok pagi, laporan tersebut harus sudah ada di meja direksi. Masalahnya bukan cuma datanya yang banyak, tapi proses ekspor manual ke PDF lalu melampirkannya ke email setiap minggu benar-benar membuang waktu dan rentan kelupaan. Jika Anda sering mengalami kepanikan lembur akibat tugas repetitif seperti ini, sudah saatnya kita beresin pakai Google Apps Script. 
 
-Mari kita bedah kenapa sistem manual ini sering bikin frustrasi dan bagaimana cara mengotomatisasinya sekali jalan untuk selamanya.
+Mari kita bedah kenapa sistem manual ini sering bikin frustrasi dan bagaimana cara mengotomatisasinya sekali jalan untuk selamany
+
+a.
 
 ![How to Write Custom Apps Script to Email Weekly PDF Reports from Google Sheets AI Automation Guide](https://picsum.photos/seed/work-mvgbluze-10-b/1000/550.jpg)
 
@@ -23,7 +25,9 @@ Sebelum masuk ke kodenya, mari kita pahami tiga biang kerok utama yang biasa bik
 
 2. Keterlambatan Pengiriman: Karena dikerjakan manual, sering kali staf lupa mengirim laporan tepat waktu karena sibuk dengan urusan operasional lain di hari Senin pagi.
 
-3. Format Email yang Tidak Konsisten: Mengetik subjek dan isi email secara manual tiap minggu berisiko salah ketik atau salah melampirkan file versi lama.
+3. Format Email yang Tidak Konsisten: Mengetik subjek dan isi email secara manual tiap minggu berisiko salah ketik atau salah melampirkan file versi lam
+
+a.
 
 <div style="border-left: 4px solid #334155; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Catatan Profesional:</strong> Otomatisasi bukan sekadar soal malas, tapi soal meminimalkan celah kesalahan manusia (human error) pada data penting perusahaan.
@@ -36,14 +40,18 @@ Sebelum masuk ke kodenya, mari kita pahami tiga biang kerok utama yang biasa bik
 Kita tidak butuh aplikasi tambahan yang mahal. Cukup gunakan Google Sheets dan sedikit baris kode Apps Script yang bisa Anda salin langsung.
 
 ### Langkah 1: Buka Editor Apps Script
-1. Buka file Google Sheets laporan Anda.
+1. Buka file Google Sheets laporan And
+
+a.
 
 2. Di menu atas, klik Ekstensi > Apps Script.
 
 3. Hapus semua kode default yang ada di dalam editor.
 
 ### Langkah 2: Masukkan Kode Skrip Otomatis
-Salin kode praktis di bawah ini ke dalam editor Apps Script Anda:
+Salin kode praktis di bawah ini ke dalam editor Apps Script And
+
+a:
 
 ```javascript
 function kirimLaporanMingguan() {
@@ -93,7 +101,9 @@ A1:G20", // sesuaikan range data Anda
 ```
 
 ### Langkah 3: Atur Jadwal Otomatis (Trigger)
-Supaya Anda tidak perlu klik tombol apa pun setiap minggunya:
+Supaya Anda tidak perlu klik tombol apa pun setiap mingguny
+
+a:
 1. Di halaman Apps Script, klik ikon Jam (Pemicu / Triggers) di menu sebelah kiri.
 
 2. Klik tombol Tambah Pemicu di pojok kanan bawah.
@@ -102,7 +112,9 @@ Supaya Anda tidak perlu klik tombol apa pun setiap minggunya:
 
 4. Pilih jenis waktu: Berbasis waktu > Pemicu minggu > Pilih hari Senin jam 07:00 - 08:00 pagi.
 
-5. Simpan dan berikan izin akses akun Google Anda.
+5. Simpan dan berikan izin akses akun Google And
+
+a.
 
 <div style="border-left: 4px solid #334155; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Tips Penting:</strong> Pastikan nama tab sheet di kode (`"Laporan"`) sama persis dengan nama sheet yang ada di file Excel/Google Sheets Anda agar tidak muncul error <em>Sheet not found</em>.
@@ -121,4 +133,6 @@ Anda bisa mengubah variabel `emailPenerima` menjadi bentuk array atau memisahkan
 3. Kenapa file PDF yang terkirim kadang terpotong halamannya?
 Hal ini biasanya karena pengaturan `sheetranges` atau ukuran kolom terlalu lebar. Anda bisa menyesuaikan parameter `sheetranges: "
 
-A1:G20"` di dalam kode agar pas dengan area cetak dokumen Anda.
+A1:G20"` di dalam kode agar pas dengan area cetak dokumen And
+
+a.

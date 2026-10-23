@@ -61,7 +61,9 @@ Một biểu đồ tài chính chuyên nghiệp bắt buộc phải có tính n�
 3. Sử dụng tính năng Khám phá (Explore) ở góc dưới bên phải Google Sheets (biểu tượng ngôi sao nhỏ) hoặc hỏi AI: *"Làm thế nào để thêm đường xu hướng (Trendline) cho biểu đồ doanh thu này?"*. Google Sheets sẽ tự động tính toán và vẽ đường dự báo tài chính cực kỳ chính xác.
 
 <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Mẹo chuyên gia:</strong> Hãy đặt tên các dải ô (Named Ranges) trong Google Sheets trước khi yêu cầu AI viết công thức phức tạp như QUERY hoặc FILTER. Điều này giúp hạn chế tối đa lỗi #REF! khi bạn di chuyển hoặc thêm dòng dữ liệu mới.
+<strong>Mẹo chuyên gi
+
+a:</strong> Hãy đặt tên các dải ô (Named Ranges) trong Google Sheets trước khi yêu cầu AI viết công thức phức tạp như QUERY hoặc FILTER. Điều này giúp hạn chế tối đa lỗi #REF! khi bạn di chuyển hoặc thêm dòng dữ liệu mới.
 </div>
 
 ---

@@ -40,7 +40,9 @@ Zodra je met complexe variaties zit, is AI vele malen slimmer dan complexe genes
 
 > "Ik heb een lijst met e-mailadressen in Excel. Haal uit onderstaande adressen alleen de voornaam. Zet de eerste letter automatisch in een hoofdletter en negeer eventuele initialen of punten. Geef het resultaat terug in een schone lijst die ik direct kan kopiëren."
 
-Plak de schone lijst direct terug in je Excel-sheet naast de originele data.
+Plak de schone lijst direct terug in je Excel-sheet naast de originele dat
+
+a.
 
 ### Stap 2: Schoon e-mailadressen op via Power Query of Excel-formules
 Voor het opschonen van de e-mailadressen zelf (verwijderen van spaties en dubbele rijen) gebruiken we de ingebouwde Excel-functies die nooit falen:

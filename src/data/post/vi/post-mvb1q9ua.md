@@ -17,11 +17,15 @@ theme: "Tokyo Neon Violet"
 
 ## Tại sao file Excel danh sách khách hàng luôn là "ác mộng" giờ tan ca?
 
-Trước khi tìm ra giải pháp tự động hóa thực chiến, tôi đã đúc rút được 3 nguyên nhân chính khiến dữ liệu đầu vào luôn biến thành thảm họa:
+Trước khi tìm ra giải pháp tự động hóa thực chiến, tôi đã đúc rút được 3 nguyên nhân chính khiến dữ liệu đầu vào luôn biến thành thảm họ
+
+a:
 
 1. Dữ liệu nhập thủ công từ nhiều nguồn: Người bán hàng, nhân viên telesales hay form đăng ký sự kiện mỗi người nhập một kiểu, không có quy chuẩn viết hoa/viết thường hay định dạng ký tự.
 
-2. Gộp chung trường thông tin (Name & Email in one cell): Việc gộp họ tên và email vào chung một cột giúp dễ nhìn bằng mắt thường nhưng lại bất khả thi khi cần chạy chiến dịch Email Marketing hoặc gửi mail cá nhân hóa.
+2. Gộp chung trường thông tin (Name & Email in one cell): Việc gộp họ tên và email vào chung một cột giúp dễ nhìn bằng mắt thường nhưng lại bất khả thi khi cần chạy chiến dịch Email Marketing hoặc gửi mail cá nhân hó
+
+a.
 
 3. Ký tự rác và khoảng trắng ẩn: Các lỗi như khoảng trắng kép (`  `), ký tự xuống dòng ẩn bên trong ô dữ liệu khiến các hàm tìm kiếm như `VLOOKUP` hay `XLOOKUP` trả về lỗi `#N/A` liên tục.
 
@@ -51,7 +55,9 @@ Nếu bạn sử dụng các phiên bản Excel tích hợp AI hoặc các công
 
 3. Nhấn `Enter` xuống dòng thứ hai, sau đó nhấn tổ hợp phím `Ctrl + E`.
 
-4. Kỳ diệu xảy ra: Excel sẽ tự động quét toàn bộ hàng nghìn dòng phía dưới và điền sạch sẽ các email còn lại theo đúng mẫu bạn vừa làm. Làm tương tự với cột "Tên Riêng".
+4. Kỳ diệu xảy r
+
+a: Excel sẽ tự động quét toàn bộ hàng nghìn dòng phía dưới và điền sạch sẽ các email còn lại theo đúng mẫu bạn vừa làm. Làm tương tự với cột "Tên Riêng".
 
 ---
 

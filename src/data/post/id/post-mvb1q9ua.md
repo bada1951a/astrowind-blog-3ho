@@ -9,10 +9,14 @@ theme: "Graphite Technical Paper"
 ---
 
 
-Jam 8 malam di kawasan bisnis SCBD Jakarta, kantor sudah mulai sepi, tetapi layar monitor saya masih menyala terang. Saya terjebak lembur menyelesaikan rekap data tahunan perusahaan yang berantakan. Bayangkan, ada lima ribu baris data kontak klien dari berbagai divisi, dan semuanya kacau balau: nama depan dan nama belakang tergabung dalam satu kolom (seperti "Muhammad Rizky Pratama"), huruf besar-kecil yang tidak beraturan, serta alamat email yang penuh dengan typo, spasi tersembunyi, hingga karakter aneh seperti titik ganda. Pimpinan sudah meminta laporan ini siap di meja kerjanya besok pagi jam 9 untuk *executive sync*, sementara saya masih pusing tujuh keliling mencoba merapikannya secara manual menggunakan fungsi `LEFT`, `RIGHT`, dan `FIND` yang terus-menerus menghasilkan error `#VALUE!`.
+Jam 8 malam di kawasan bisnis SCBD Jakarta, kantor sudah mulai sepi, tetapi layar monitor saya masih menyala terang. Saya terjebak lembur menyelesaikan rekap data tahunan perusahaan yang berantakan. Bayangkan, ada lima ribu baris data kontak klien dari berbagai divisi, dan semuanya kacau balau: nama depan dan nama belakang tergabung dalam satu kolom (seperti "Muhammad Rizky Pratama"), huruf besar-kecil yang tidak beraturan, serta alamat email yang penuh dengan typo, spasi tersembunyi, hingga karakter aneh seperti titik gand
+
+a. Pimpinan sudah meminta laporan ini siap di meja kerjanya besok pagi jam 9 untuk *executive sync*, sementara saya masih pusing tujuh keliling mencoba merapikannya secara manual menggunakan fungsi `LEFT`, `RIGHT`, dan `FIND` yang terus-menerus menghasilkan error `#VALUE!`.
 
 <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Catatan Realitas Kantor:</strong> Mengandalkan rumus teks tradisional Excel untuk data mentah yang diimpor dari berbagai sistem (seperti CRM atau Google Forms lama) adalah resep paling cepat untuk membuang waktu lembur Anda. Mari kita selesaikan ini dengan pendekatan berbasis AI yang jauh lebih cerdas.
+<strong>Catatan Realitas Kantor:</strong> Mengandalkan rumus teks tradisional Excel untuk data mentah yang diimpor dari berbagai sistem (seperti CRM atau Google Forms lama) adalah resep paling cepat untuk membuang waktu lembur And
+
+a. Mari kita selesaikan ini dengan pendekatan berbasis AI yang jauh lebih cerdas.
 </div>
 
 ![AI Productivity & Workflow Automation](https://picsum.photos/seed/office721/1000/550)
@@ -21,11 +25,17 @@ Jam 8 malam di kawasan bisnis SCBD Jakarta, kantor sudah mulai sepi, tetapi laya
 
 Sebelum masuk ke solusi otomatisasi, mari kita bedah tiga penyebab utama mengapa rekap data excel Anda sering berubah menjadi mimpi buruk:
 
-1. Format Nama yang Tidak Konsisten: Pengguna sering mengetik nama lengkap, gelar, atau bahkan menggunakan huruf kapital semua. Rumus standar `FIND(" "; A1)` akan gagal total jika ada spasi di awal (*leading spaces*) atau jika nama klien hanya terdiri dari satu kata.
+1. Format Nama yang Tidak Konsisten: Pengguna sering mengetik nama lengkap, gelar, atau bahkan menggunakan huruf kapital semu
+
+a. Rumus standar `FIND(" "; A1)` akan gagal total jika ada spasi di awal (*leading spaces*) atau jika nama klien hanya terdiri dari satu kat
+
+a.
 
 2. Karakter Tersembunyi (Non-Printable Characters): Data yang disalin langsung dari web atau database lama sering membawa karakter tersembunyi yang membuat rumus pencocokan data (`VLOOKUP` atau `XLOOKUP`) gagal mengenali email yang tampak sama persis.
 
-3. Typo Domain dan Format Email Ganda: Kesalahan ketik umum seperti `@gmal.com` atau spasi ekstra di tengah alamat email membuat sistem pengiriman *newsletter* atau undangan meeting mental (*bounce*).
+3. Typo Domain dan Format Email Gand
+
+a: Kesalahan ketik umum seperti `@gmal.com` atau spasi ekstra di tengah alamat email membuat sistem pengiriman *newsletter* atau undangan meeting mental (*bounce*).
 
 ---
 
@@ -37,7 +47,9 @@ Daripada menghabiskan waktu berjam-jam menulis rumus kompleks atau menghapus bar
 
 Buka asisten AI pilihan Anda (seperti ChatGPT atau Claude), lalu salin 5 sampai 10 baris sampel data mentah Anda yang paling berantakan. Gunakan *prompt* spesifik berikut untuk mendapatkan formula atau hasil langsung:
 
-> "Bertindaklah sebagai ahli data analyst. Saya memiliki kolom data di Excel berisi nama lengkap klien yang tidak beraturan (ada yang pakai gelar, huruf kecil semua, atau ada spasi ganda) dan alamat email yang kotor. Berikan saya rumus Excel Flash Fill atau Formula tunggal untuk mengekstrak hanya Nama Depan (First Name) dengan kapitalisasi yang benar, serta bersihkan email dari spasi tersembunyi. Berikan contoh praktisnya."
+> "Bertindaklah sebagai ahli data analyst. Saya memiliki kolom data di Excel berisi nama lengkap klien yang tidak beraturan (ada yang pakai gelar, huruf kecil semua, atau ada spasi ganda) dan alamat email yang kotor. Berikan saya rumus Excel Flash Fill atau Formula tunggal untuk mengekstrak hanya Nama Depan (First Name) dengan kapitalisasi yang benar, serta bersihkan email dari spasi tersembunyi. Berikan contoh praktisny
+
+a."
 
 AI akan memberikan formula yang jauh lebih bersih dibandingkan metode tradisional. Sebagai contoh, untuk membersihkan spasi tersembunyi dan karakter non-print pada email di sel A2, AI biasanya akan menyarankan kombinasi rumus:
 `=CLEAN(TRIM(LOWER(A2)))`
@@ -62,7 +74,9 @@ Untuk memastikan tidak ada lagi email yang *error* sebelum dikirim ke bos atau k
 
 2. Di jendela Editor Power Query, pilih kolom Email, klik kanan, pilih Transform > Trim (untuk menghapus spasi) dan Transform > Lowercase (untuk menyeragamkan format huruf kecil).
 
-3. Klik Close & Load di sudut kiri atas untuk memasukkan kembali data yang sudah bersih secara sempurna ke lembar kerja Excel Anda.
+3. Klik Close & Load di sudut kiri atas untuk memasukkan kembali data yang sudah bersih secara sempurna ke lembar kerja Excel And
+
+a.
 
 ---
 
@@ -80,7 +94,9 @@ Q1: Apa bedanya menggunakan Flash Fill (Ctrl + E) dibanding rumus Excel biasa?
 Flash Fill menggunakan pola pembelajaran mesin lokal untuk menebak teks tanpa memerlukan logika rumus matematika yang rumit. Sangat cepat untuk ekstraksi nama, namun tidak dinamis (jika data asli berubah, data hasil Flash Fill tidak otomatis ikut berubah kecuali Anda mengulang prosesnya).
 
 Q2: Mengapa rumus TRIM saja tidak cukup untuk membersihkan email yang berantakan?
-Fungsi `TRIM` hanya berfungsi menghapus spasi berlebih di awal, di akhir, atau spasi ganda di antara kata. Namun, data email seringkali mengandung karakter tersembunyi dari sistem web (seperti *non-breaking spaces*). Oleh karena itu, Anda wajib menggabungkannya dengan fungsi `=CLEAN(TRIM(A2))`.
+Fungsi `TRIM` hanya berfungsi menghapus spasi berlebih di awal, di akhir, atau spasi ganda di antara kat
+
+a. Namun, data email seringkali mengandung karakter tersembunyi dari sistem web (seperti *non-breaking spaces*). Oleh karena itu, Anda wajib menggabungkannya dengan fungsi `=CLEAN(TRIM(A2))`.
 
 Q3: Apakah cara ini bisa digunakan jika data klien mencapai puluhan ribu baris?
 Ya, terutama jika Anda menggunakan kombinasi Power Query. Power Query dirancang khusus untuk memproses ratusan ribu hingga jutaan baris data dalam hitungan detik tanpa membuat aplikasi Excel Anda *not responding* atau *crash*.

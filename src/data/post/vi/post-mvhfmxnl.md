@@ -43,7 +43,9 @@ De giai quyet triet de van de nay, chung ta se su dung tinh nang tich hop AI (nh
 Truoc khi goi AI, ban phai dam bao du lieu dau vao khong bi rac. 
 * Mo file Excel chua du lieu ton kho.
 * Chon vung du lieu ban hang, vao tab Du lieu (Data) > Chon Tu bang/vung (From Table/Range) de mo giao dien Power Query.
-* Su dung tinh nang thay the loi (Replace Errors) va xoa cac dong trong. Nhan Dong va Tai (Close & Load) de dua du lieu ve mot sheet sach se, chuan hoa.
+* Su dung tinh nang thay the loi (Replace Errors) va xoa cac dong trong. Nhan Dong va Tai (Close & Load) de dua du lieu ve mot sheet sach se, chuan ho
+
+a.
 
 #### buoc 2: Su dung Prompt AI de tao cot du doan ton kho
 Thay vi tu viet cong thuc tinh toan phuc tap cho tung ma hang, hay su dung tro ly AI tich hop ngay trong Excel (hoac thanh ben Copilot):

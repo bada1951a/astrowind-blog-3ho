@@ -9,10 +9,18 @@ theme: "Acid Lime Hacker Space"
 ---
 
 
-Eram exatas 18h45 de uma sexta-feira chuvosa em São Paulo. O ar-condicionado do escritório já tinha desligado sozinho, a equipe de vendas tinha acabado de enviar a última leva de planilhas consolidadas e a minha caixa de entrada parecia um campo de guerra. O ritual de final de mês era sempre o mesmo: abrir cinco planilhas diferentes, formatar os dados de faturamento, exportar cada uma manualmente como PDF, anexar ao e-mail e disparar para a diretoria antes de segunda-feira cedo. Foi bem na hora em que o mouse travou na minha mão que eu decidi: chega de trabalho braçal. Se eu precisava enviar relatórios semanais sem perder meu fim de semana, o Google Sheets e um toque de código teriam que fazer o serviço pesado por mim.
+Eram exatas 18h45 de uma sexta-feira chuvosa em São Paulo. O ar-condicionado do escritório já tinha desligado sozinho, a equipe de vendas tinha acabado de enviar a última leva de planilhas consolidadas e a minha caixa de entrada parecia um campo de guerr
+
+a. O ritual de final de mês era sempre o mesmo: abrir cinco planilhas diferentes, formatar os dados de faturamento, exportar cada uma manualmente como PDF, anexar ao e-mail e disparar para a diretoria antes de segunda-feira cedo. Foi bem na hora em que o mouse travou na minha mão que eu decidi: chega de trabalho braçal. Se eu precisava enviar relatórios semanais sem perder meu fim de semana, o Google Sheets e um toque de código teriam que fazer o serviço pesado por mim.
 
 <div style="border-left: 4px solid #84cc16; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Missão do Dia:</strong> Criar um script automatizado que pega a aba de fechamento da sua planilha, converte em um PDF limpo e formata o disparo por e-mail automaticamente toda semana. Sem plugins pagos, sem dor de cabeça.
+<strong>Missão do Di
+
+a:</strong> Criar um script automatizado que pega a aba de fechamento da sua planilha, converte em um PDF limpo e formata o disparo por e-mail automaticamente toda seman
+
+a. Sem plugins pagos, sem dor de cabeç
+
+a.
 </div>
 
 ![How to Write Custom Apps Script to Email Weekly PDF Reports from Google Sheets AI Automation Guide](https://picsum.photos/seed/work-mvgbl3dg-7-b/1000/550.jpg)
@@ -23,7 +31,9 @@ Eram exatas 18h45 de uma sexta-feira chuvosa em São Paulo. O ar-condicionado do
 
 Antes de colocar a mão na massa, vale entender os três vilões que transformam uma tarefa simples em um pesadelo corporativo:
 
-1. O Fator Humano e o Esquecimento: Depender da memória para enviar relatórios semanais na correria do fechamento é pedir para tomar puxão de orelha na reunião de diretoria de segunda-feira.
+1. O Fator Humano e o Esquecimento: Depender da memória para enviar relatórios semanais na correria do fechamento é pedir para tomar puxão de orelha na reunião de diretoria de segunda-feir
+
+a.
 
 2. Exportações Manuais Inconsistentes: Salvar como PDF pelo navegador muitas vezes quebra a formatação, corta colunas importantes ou deixa as margens totalmente desalinhadas.
 
@@ -44,8 +54,12 @@ Apague qualquer código que estiver na tela e cole o bloco abaixo. Ele converte 
 ```javascript
 function enviarRelatorioSemanal() {
   var planilha = SpreadsheetApp.getActiveSpreadsheet();
-  var aba = planilha.getSheetByName("Resumo_Executivo"); // Substitua pelo nome exato da sua aba
-  var idPlanilha = planilha.getId();
+  var aba = planilh
+
+a.getSheetByName("Resumo_Executivo"); // Substitua pelo nome exato da sua aba
+  var idPlanilha = planilh
+
+a.getId();
   
   // Configurações de exportação em PDF (tamanho A4, retrato, sem grades)
   var urlExportacao = "https://docs.google.com/spreadsheets/d/" + idPlanilha + "/export?";
@@ -60,7 +74,9 @@ function enviarRelatorioSemanal() {
     printtitle: "false",
     sheetnames: "false",
     fzr: "false",
-    gid: aba.getSheetId()
+    gid: ab
+
+a.getSheetId()
   };
   
   var urlCompleta = urlExportacao;
@@ -75,10 +91,14 @@ function enviarRelatorioSemanal() {
     }
   });
   
-  var blobPdf = resposta.getBlob().setName("Relatorio_Semanal_" + Utilities.formatDate(new Date(), "GMT-3", "dd-MM-yyyy") + ".pdf");
+  var blobPdf = respost
+
+a.getBlob().setName("Relatorio_Semanal_" + Utilities.formatDate(new Date(), "GMT-3", "dd-MM-yyyy") + ".pdf");
   
   // Configurações do E-mail
-  var destinatario = "diretoria@suaempresa.com.br";
+  var destinatario = "diretoria@suaempres
+
+a.com.br";
   var assunto = "Relatório Semanal Automatizado - Fechamento";
   var corpo = "Olá,\n\nSegue em anexo o relatório semanal atualizado gerado automaticamente pelo Google Sheets.\n\nAtenciosamente,\nSua Equipe de Operações.";
   
@@ -95,13 +115,17 @@ function enviarRelatorioSemanal() {
 
 3. Escolha a função `enviarRelatorioSemanal`.
 
-4. Em "Selecione o tipo de acionador baseado no tempo", escolha Unidade de tempo baseada na semana.
+4. Em "Selecione o tipo de acionador baseado no tempo", escolha Unidade de tempo baseada na seman
+
+a.
 
 5. Defina o dia da semana (ex: Sexta-feira) e o horário desejado (ex: 18h - 19h). Salve e dê as permissões necessárias na sua conta Google.
 
 ---
 
-### Alertas de Especialista: O que evitar
+### Alertas de Especialist
+
+a: O que evitar
 
 <div style="border-left: 4px solid #84cc16; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Atenção à Privacidade e Cotas:</strong> O Google Apps Script possui limites diários de envio de e-mails (geralmente 100 para contas gratuitas do Gmail e até 1.500 para contas corporativas Google Workspace). Garanta que a aba referenciada no script (`Resumo_Executivo`) tenha seu intervalo de impressão bem definido para evitar PDFs com páginas em branco cortadas incorretamente.
@@ -112,10 +136,20 @@ function enviarRelatorioSemanal() {
 ### Perguntas Frequentes (FAQ)
 
 1. O script vai rodar se o meu computador estiver desligado?  
-Sim! Como o Google Apps Script roda diretamente nos servidores em nuvem do Google, a automação será disparada no dia e horário programados, mesmo que você esteja com o notebook fechado aproveitando o fim de semana.
+Sim! Como o Google Apps Script roda diretamente nos servidores em nuvem do Google, a automação será disparada no dia e horário programados, mesmo que você esteja com o notebook fechado aproveitando o fim de seman
+
+a.
 
 2. Posso enviar o PDF para mais de uma pessoa ao mesmo tempo?  
-Com certeza. Na variável `destinatario` dentro do código, você pode separar os e-mails por vírgula (ex: `"chefe@empresa.com.br, socio@empresa.com.br"`) ou adaptar o script para puxar uma lista direto de um intervalo de células da planilha.
+Com certez
+
+a. Na variável `destinatario` dentro do código, você pode separar os e-mails por vírgula (ex: `"chefe@empres
+
+a.com.br, socio@empres
+
+a.com.br"`) ou adaptar o script para puxar uma lista direto de um intervalo de células da planilh
+
+a.
 
 3. Como faço para testar o script antes de agendar o envio automático?  
 Basta voltar ao editor do Apps Script, selecionar a função `enviarRelatorioSemanal` no menu superior suspenso e clicar no botão Executar. Verifique sua caixa de entrada de e-mails enviados logo em seguida para conferir se o PDF chegou certinho.

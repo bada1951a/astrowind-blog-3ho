@@ -48,7 +48,9 @@ Thay vì để file Excel đi "xin" dữ liệu từ các file ngoài gây nguy 
 Bây giờ dữ liệu đã sạch sẽ trong một bảng thống nhất (Ví dụ: Cột B là Giờ Vào, Cột C là Giờ Ra). Thay vì tự nghĩ hàm `IF` đau đầu, hãy dùng prompt AI (ChatGPT hoặc Claude) để tạo công thức một chạm.
 
 Copy câu lệnh (Prompt) này dán vào AI:
-> "Tôi có bảng chấm công trên Excel. Cột B là giờ vào (định dạng giờ hh:mm), Cột C là giờ ra. Quy định giờ làm tiêu chuẩn từ 08:00 đến 17:00 (nghỉ trưa 1 tiếng từ 12:00 đến 13:00). Hãy viết cho tôi một công thức Excel duy nhất để tính số giờ làm thực tế, và một công thức tính số giờ tăng ca (tính từ sau 17:00, làm tròn theo block 30 phút). Không dùng macro phức tạp, chỉ dùng hàm cơ bản."
+> "Tôi có bảng chấm công trên Excel. Cột B là giờ vào (định dạng giờ hh:mm), Cột C là giờ r
+
+a. Quy định giờ làm tiêu chuẩn từ 08:00 đến 17:00 (nghỉ trưa 1 tiếng từ 12:00 đến 13:00). Hãy viết cho tôi một công thức Excel duy nhất để tính số giờ làm thực tế, và một công thức tính số giờ tăng ca (tính từ sau 17:00, làm tròn theo block 30 phút). Không dùng macro phức tạp, chỉ dùng hàm cơ bản."
 
 AI sẽ trả về cho bạn bộ công thức gọn gàng. Bạn chỉ việc dán vào Excel của mình. Dưới đây là ví dụ công thức tính giờ làm chuẩn sau khi đã tối ưu:
 
@@ -65,7 +67,9 @@ Và công thức tính giờ tăng ca tự động làm tròn:
 ### Bước 3: Đóng băng dữ liệu và kiểm tra tự động
 
 Sau khi AI giúp bạn hoàn thiện cột tính toán, hãy chuyển toàn bộ giá trị công thức thành giá trị cứng (Values) để tránh việc file bị chạy nặng nề hoặc lỗi phát sinh vào phút chót:
-1. Bôi đen vùng dữ liệu giờ làm và tăng ca.
+1. Bôi đen vùng dữ liệu giờ làm và tăng c
+
+a.
 
 2. Nhấn `Ctrl + C`, sau đó nhấn chuột phải chọn [Dán giá trị (Paste as Values)].
 
@@ -85,7 +89,9 @@ Sau khi AI giúp bạn hoàn thiện cột tính toán, hãy chuyển toàn bộ
 
 Q1. Tại sao khi mở file Excel cũ, bảng thông báo bảo mật External Links cứ lặp lại liên tục dù tôi đã bấm Ignore?
 
-A1.Đó là vì trong file có chứa các Defined Names (Tên vùng dữ liệu) ẩn hoặc các công thức dạng Link rác trỏ tới file ngoài đã bị xóa. Để xử lý dứt điểm, bạn vào tab [Formulas] > [Name Manager], tìm và xóa toàn bộ các tên có chứa đường dẫn lạ dạng `[FileName.xlsx]Sheet1!Range`.
+A1.Đó là vì trong file có chứa các Defined Names (Tên vùng dữ liệu) ẩn hoặc các công thức dạng Link rác trỏ tới file ngoài đã bị xó
+
+a. Để xử lý dứt điểm, bạn vào tab [Formulas] > [Name Manager], tìm và xóa toàn bộ các tên có chứa đường dẫn lạ dạng `[FileName.xlsx]Sheet1!Range`.
 
 Q2. Tôi có thể dùng Power Query để tự động hóa việc tính lương hàng tháng luôn được không?
 

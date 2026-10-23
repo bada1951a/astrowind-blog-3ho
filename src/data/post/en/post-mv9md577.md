@@ -42,13 +42,17 @@ Create a dedicated folder on your local network drive or OneDrive called `Monthl
 
 #### Step 2: Initialize Power Query via Data Tab
 Open a fresh, blank Excel workbook that will serve as your master dashboard. 
-- Go to the top ribbon and click Data.
+- Go to the top ribbon and click Dat
+
+a.
 - Select Get Data > From File > From Folder.
 - Browse to your `Monthly_Sales_Raw` folder and click Open.
 
 #### Step 3: Combine and Transform the Files
 A preview window will pop up showing all the files in your folder. 
-- Click the dropdown arrow next to the Combine button at the bottom of the window and select Combine & Transform Data.
+- Click the dropdown arrow next to the Combine button at the bottom of the window and select Combine & Transform Dat
+
+a.
 - Excel will prompt you to select a sample file (choose the first one) and pick the specific worksheet or table name. Click OK.
 - The Power Query Editor will launch. This is your data workshop where the magic happens.
 
@@ -62,7 +66,9 @@ Inside the Power Query Editor, clean up any anomalies:
 - Change data types if needed (ensure dates are formatted as Dates and revenue columns as Decimal Numbers).
 - Click Close & Load in the top-left corner.
 
-Your master sheet will now populate with the cleanly aggregated sales data. Next month, when new regional reports arrive, simply drop them into the `Monthly_Sales_Raw` folder, right-click your master table, and hit Refresh. Done!
+Your master sheet will now populate with the cleanly aggregated sales dat
+
+a. Next month, when new regional reports arrive, simply drop them into the `Monthly_Sales_Raw` folder, right-click your master table, and hit Refresh. Done!
 
 ---
 

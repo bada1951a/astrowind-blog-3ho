@@ -9,7 +9,9 @@ theme: "Bronze Artisan Workshop"
 ---
 
 
-Wyobraź sobie to popołudnie w warszawskim centrum biznesowym na Rondzie Daszyńskiego. Godzina 16:45, a ty siedzisz przed monitorem, próbując na szybko ogarnąć arkusz z rozliczeniem czasu pracy całego zespołu przed jutrzejszym audytem. Miałeś wdrożyć automatyczny monitoring cen konkurencji za pomocą no-code'owego web scrapera, ale strona źródłowa zmieniła strukturę HTML, zasypując cię kaskadą błędów skraplania. W tle pika powiadomienie na Slacku od szefa z pytaniem o raport nadgodzin za zeszły miesiąc, a standardowy arkusz Excela znowu zwraca błąd wartości `#ARG!`, bo ktoś wpisał godziny w formacie tekstowym zamiast liczbowego. Znasz to uczucie, gdy ręczne poprawianie setek wierszy zaczyna przypominać syzyfową pracę?
+Wyobraź sobie to popołudnie w warszawskim centrum biznesowym na Rondzie Daszyńskiego. Godzina 16:45, a ty siedzisz przed monitorem, próbując na szybko ogarnąć arkusz z rozliczeniem czasu pracy całego zespołu przed jutrzejszym audytem. Miałeś wdrożyć automatyczny monitoring cen konkurencji za pomocą no-code'owego web scrapera, ale strona źródłowa zmieniła strukturę HTML, zasypując cię kaskadą błędów skraplani
+
+a. W tle pika powiadomienie na Slacku od szefa z pytaniem o raport nadgodzin za zeszły miesiąc, a standardowy arkusz Excela znowu zwraca błąd wartości `#ARG!`, bo ktoś wpisał godziny w formacie tekstowym zamiast liczbowego. Znasz to uczucie, gdy ręczne poprawianie setek wierszy zaczyna przypominać syzyfową pracę?
 
 <div style="border-left: 4px solid #b45309; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>[Stanowisko Eksperta]</strong> Ręczne obliczanie godzin pracy w Excelu to jeden z najbardziej czasochłonnych i podatnych na błędy procesów biurowych. Zamiast tracić godziny na szukanie błędów w zagnieżdżonych formułach IF, możesz zaparzyć kawę i użyć sztucznej inteligencji, która wygeneruje idealne formuły w kilka sekund.
@@ -31,11 +33,15 @@ Przed przejściem do rozwiązania, spójrzmy prawdzie w oczy – oto trzy głów
 
 ## Krok po kroku: Jak zautomatyzować liczenie godzin za pomocą AI
 
-Zamiast zgadywać składnię funkcji `JEŻELI` i `SUMA.WARUNKÓW`, zaprzęgniemy do pracy asystenta AI (np. ChatGPT lub Copilota), aby napisał dla nas precyzyjne formuły.
+Zamiast zgadywać składnię funkcji `JEŻELI` i `SUM
+
+A.WARUNKÓW`, zaprzęgniemy do pracy asystenta AI (np. ChatGPT lub Copilota), aby napisał dla nas precyzyjne formuły.
 
 ### Krok 1: Przygotowanie czystej struktury danych w Excelu
 Zanim poprosisz AI o pomoc, upewnij się, że twoja tabela ma jasny układ kolumn. Otwórz [Excela] i stwórz następujące nagłówki w pierwszym wierszu:
-- Kolumna A: [Pracownik]
+- Kolumna
+
+A: [Pracownik]
 - Kolumna B: [Data]
 - Kolumna C: [Wejście]
 - Kolumna D: [Wyjście]
@@ -59,7 +65,9 @@ AI wypluje dla ciebie gotowe formuły. Dla kolumny F (Czas pracy) otrzymasz zazw
 =(D2-C2)-(E2/1440)
 ```
 
-*(Uwaga: Dzielimy przez 1440, ponieważ w systemie dat Excela jedna doba to 1, a doba ma 1440 minut).*
+*(Uwag
+
+a: Dzielimy przez 1440, ponieważ w systemie dat Excela jedna doba to 1, a doba ma 1440 minut).*
 
 ### Krok 3: Wklejenie i przetestowanie formuły w arkuszu
 1. Zaznacz komórkę `F2` w swoim arkuszu.

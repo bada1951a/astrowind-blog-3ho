@@ -30,7 +30,9 @@ Bevor wir zur Lösung kommen, schauen wir uns an, warum wir überhaupt in diese 
 Anstatt stundenlang in Foren nach passenden Formelschnipseln zu suchen, nutzen wir ChatGPT als persönlichen Formel-Entwickler. Hier ist der bewährte Workflow, der mich an jenem Nachmittag in Frankfurt gerettet hat.
 
 ### Schritt 1: Den perfekten Prompt für ChatGPT formulieren
-Gebe ChatGPT nicht nur das Ziel, sondern füttere es mit einem konkreten Beispiel. Ein guter Prompt für Regex- und Datenbereinigungsformeln folgt diesem Schema:
+Gebe ChatGPT nicht nur das Ziel, sondern füttere es mit einem konkreten Beispiel. Ein guter Prompt für Regex- und Datenbereinigungsformeln folgt diesem Schem
+
+a:
 
 > "Du bist ein Experte für Google Sheets und reguläre Ausdrücke. Ich habe eine Zelle A2 mit folgendem Inhalt: 'Müller, Hans (Kunde-Nr: 98765-DE)'. Ich brauche eine einzige Google Sheets Formel mit `=REGEXEXTRACT()` oder ähnlichen Funktionen, um nur die Kundennummer (die Zahlen nach 'Kunde-Nr: ') in eine neue Zelle zu extrahieren. Antworte nur mit der Formel und einer kurzen Erklärung."
 

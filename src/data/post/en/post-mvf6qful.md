@@ -11,7 +11,9 @@ theme: "Nordic Clean Ice"
 
 It is 1:45 PM in our Silicon Valley office, exactly 15 minutes before the weekly executive sync. My Slack is pinging like crazy, and our VP of Sales drops a last-minute message into the channel: "Can someone pull the clean Q3 enterprise lead list? The current dashboard is showing double-counted accounts, and the CEO is going to ask about customer acquisition cost metrics in ten minutes." 
 
-I open the master Google Sheet. Total chaos. Because our sales reps imported leads from three different webinar tools and two separate trial sign-up forms, we have over 4,000 rows of customer data. Worse yet, names are formatted differently ("Acme Corp" vs "ACME CORP."), email addresses have stray white spaces, and identical accounts are scattered across rows 120 and 3,450 due to minor capitalization mismatches. Standard conditional formatting and basic Google Sheets filters are completely failing to catch these stealth duplicates. 
+I open the master Google Sheet. Total chaos. Because our sales reps imported leads from three different webinar tools and two separate trial sign-up forms, we have over 4,000 rows of customer dat
+
+a. Worse yet, names are formatted differently ("Acme Corp" vs "ACME CORP."), email addresses have stray white spaces, and identical accounts are scattered across rows 120 and 3,450 due to minor capitalization mismatches. Standard conditional formatting and basic Google Sheets filters are completely failing to catch these stealth duplicates. 
 
 ![How to Automate Duplicate Customer Removal in Google Sheets Using Gemini Prompts AI Automation Guide](https://picsum.photos/seed/work-mvf6qprk-1-b/1000/550.jpg)
 
@@ -44,7 +46,9 @@ To fix our executive sync emergency, I used a structured approach combining a qu
 #### Step 1: Normalize Your Raw Data
 Before asking AI to filter duplicates, sanitize your source columns to give the AI clean inputs. 
 - Go to your data range in Google Sheets.
-- In a helper column next to your email column, type the lowercase trimming formula:
+- In a helper column next to your email column, type the lowercase trimming formul
+
+a:
   `=LOWER(TRIM(B2))`
 - Drag this down to clean all email addresses instantly. This eliminates the invisible spaces and capitalization errors that trick standard filters.
 
@@ -80,10 +84,13 @@ Write a clean, ready-to-run Google Apps Script function named removeSmartDuplica
 ### Frequently Asked Questions (FAQ)
 
 Q: Can I use this method if my Google Sheet has over 50,000 rows?
+
 A: Standard built-in Google Sheets formulas might lag with massive datasets, but Google Apps Script generated via Gemini handles large arrays efficiently by reading data into memory (`getValues()`), processing the rows, and writing them back in a single batch.
 
 Q: What if Gemini's generated script throws a permission error when I click run?
+
 A: This is normal for custom Google Apps Script projects. Google will show a "Google hasn't verified this app" warning screen. Click Advanced, then click Go to Untitled project (unsafe) to grant the necessary sheet-editing permissions to your personal workspace account.
 
 Q: Does this replace a dedicated CRM tool like Salesforce or HubSpot?
+
 A: Not permanently. This workflow is designed as an emergency bridge for quick ad-hoc executive reports, one-off webinar data cleanups, or ad-hoc marketing campaigns where exporting to Sheets is faster than rebuilding CRM duplicate rules.

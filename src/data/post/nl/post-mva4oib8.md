@@ -66,7 +66,9 @@ Krijg je alsnog een foutmelding? Copy-paste de foutmelding direct terug naar Cha
 
 Hoewel AI een enorme tijdsbesparing oplevert, moet je slim omgaan met bedrijfsdata en automatisering:
 
-* Let op privacy en AVG: Upload nooit gevoelige persoonsgegevens (PII), salarisadministraties of vertrouwelijke financiële cijfers naar openbare AI-tools. Anonimiseer altijd je testdata.
+* Let op privacy en AVG: Upload nooit gevoelige persoonsgegevens (PII), salarisadministraties of vertrouwelijke financiële cijfers naar openbare AI-tools. Anonimiseer altijd je testdat
+
+a.
 * Controleer steekproefsgewijs: Vertrouw nooit blind op een gegenereerde formule met tienduizenden rijen. Check altijd de eerste tien en laatste tien rijen van je dataset om onverwachte uitschieters te ontdekken.
 * Documenteer je succes: Sla succesvolle prompts op in een gezamenlijk teamdocument (zoals Notion of Confluence), zodat collega's bij volgende rapportages niet opnieuw het wiel hoeven uit te vinden.
 

@@ -9,9 +9,13 @@ theme: "Mint Fresh Engineering"
 ---
 
 
-Eran las 8:45 de la mañana en nuestra oficina del Paseo de la Castellana en Madrid. Faltaban exactamente quince minutos para que el comité directivo revisara el reporte urgente de métricas comerciales del trimestre. Abrí el archivo de Excel y el caos me golpeó de inmediato: una base de datos con más de cinco mil correos electrónicos mal formateados, nombres mezclados con apellidos en la misma celda, espacios invisibles y caracteres extraños que hacían que las fórmulas de búsqueda devolvieran un fatídico `#VALOR!`. Sudor frío, el café en la mesa empezando a enfriarse y la mirada del director general a punto de caer sobre mi pantalla.
+Eran las 8:45 de la mañana en nuestra oficina del Paseo de la Castellana en Madrid. Faltaban exactamente quince minutos para que el comité directivo revisara el reporte urgente de métricas comerciales del trimestre. Abrí el archivo de Excel y el caos me golpeó de inmediato: una base de datos con más de cinco mil correos electrónicos mal formateados, nombres mezclados con apellidos en la misma celda, espacios invisibles y caracteres extraños que hacían que las fórmulas de búsqueda devolvieran un fatídico `#VALOR!`. Sudor frío, el café en la mesa empezando a enfriarse y la mirada del director general a punto de caer sobre mi pantall
 
-Intenté solucionarlo a las carreras con funciones anidadas de `EXTRAE`, `HALLAR` y `REEMPLAZAR`. Fue una pérdida de tiempo total. Las fórmulas se rompían con cada celda que tenía un formato ligeramente distinto. Copiar y pegar a mano ni se diga: imposible terminar antes de Navidad.
+a.
+
+Intenté solucionarlo a las carreras con funciones anidadas de `EXTRAE`, `HALLAR` y `REEMPLAZAR`. Fue una pérdida de tiempo total. Las fórmulas se rompían con cada celda que tenía un formato ligeramente distinto. Copiar y pegar a mano ni se dig
+
+a: imposible terminar antes de Navidad.
 
 ![AI Productivity & Workflow Automation](https://picsum.photos/seed/office356/1000/550)
 
@@ -23,7 +27,9 @@ Por suerte, rescaté la situación utilizando un truco rápido con IA integrada 
 
 ## ¿Por qué se rompen siempre nuestras listas de datos?
 
-Antes de pasar a la solución, veamos por qué este problema nos amarga la vida tan seguido en la oficina:
+Antes de pasar a la solución, veamos por qué este problema nos amarga la vida tan seguido en la oficin
+
+a:
 
 1. Datos de múltiples fuentes: Los comerciales pegan leads de LinkedIn, formularios web y tarjetas de visita sin ningún filtro. El resultado es un cementerio de formatos: mayúsculas, minúsculas, correos con espacios al inicio y nombres al revés (Apellido, Nombre).
 
@@ -45,7 +51,9 @@ Antes de meter IA compleja, asegúrate de eliminar los espacios basura que arrui
 Esto elimina los dobles espacios y estandariza los correos electrónicos a minúsculas, evitando que sistemas externos los rechacen por formato inválido.
 
 ### Paso 2: Usa la IA o Relleno Flash (Flash Fill) para extraer nombres
-Si tienes celdas como "Juan Carlos Pérez García <juan.perez@empresa.es>", olvídate de fórmulas complejas.
+Si tienes celdas como "Juan Carlos Pérez García <juan.perez@empres
+
+a.es>", olvídate de fórmulas complejas.
 
 1. En la celda de al lado, escribe manualmente el primer nombre extraído ("Juan").
 

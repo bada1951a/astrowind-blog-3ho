@@ -31,13 +31,9 @@ Antes de irmos direto à solução, vale a pena entender os três vilões silenc
 
 a: Cada gerente regional preenche o relatório do seu jeito. Um usa "Qtd", o outro "Quantidade", e o terceiro apenas "Qt". O Excel padrão sofre para juntar isso sem fórmulas complexas.
 
-2. O Risco do Fator Humano: Copiar dados de dez abas diferentes e colar em uma planilha-mãe é um convite aberto a erros de deslocamento de linhas que passam despercebidos até a apresentação para a diretori
+2. O Risco do Fator Humano: Copiar dados de dez abas diferentes e colar em uma planilha-mãe é um convite aberto a erros de deslocamento de linhas que passam despercebidos até a apresentação para a diretoria.
 
-a.
-
-3. O Ciclo Vicioso Mensal: Todo mês é a mesma cois
-
-a. Você refaz o mesmo trabalho manual do zero, em vez de criar um processo durável.
+3. O Ciclo Vicioso Mensal: Todo mês é a mesma coisa. Você refaz o mesmo trabalho manual do zero, em vez de criar um processo durável.
 
 ---
 
@@ -46,18 +42,14 @@ a. Você refaz o mesmo trabalho manual do zero, em vez de criar um processo dur�
 O segredo do Power Query é que ele funciona como uma macro sem código: ele grava os passos de limpeza e união que você faz uma única vez, e repete tudo sozinho sempre que novos dados chegam.
 
 #### Passo 1: Organizar a Pasta de Origem
-Crie uma pasta dedicada no seu computador ou na rede da empresa exclusivamente para os relatórios do mês (ex: `C:\Vendas\2026\Outubro`). Salve todas as planilhas recebidas das filiais nessa mesma past
-
-a. Dica de ouro: garanta que os dados dentro de cada planilha estejam formatados como Tabela oficial do Excel (atalho Ctrl+T).
+Crie uma pasta dedicada no seu computador ou na rede da empresa exclusivamente para os relatórios do mês (ex: `C:\Vendas\2026\Outubro`). Salve todas as planilhas recebidas das filiais nessa mesma pasta. Dica de ouro: garanta que os dados dentro de cada planilha estejam formatados como Tabela oficial do Excel (atalho Ctrl+T).
 
 #### Passo 2: Importar a Pasta inteira via Power Query
 Abra um arquivo Excel em branco que será o seu "Painel Oficial".
 
 1. Vá até a guia superior Dados.
 
-2. Clique em Obter Dados > De Arquivo > De Past
-
-a.
+2. Clique em Obter Dados > De Arquivo > De Pasta.
 
 3. Selecione a pasta onde estão os relatórios das filiais e clique em Abrir.
 
@@ -66,17 +58,11 @@ a.
 #### Passo 3: Limpar, Filtrar e Consolidar (O Poder do Editor)
 O ambiente do Power Query vai se abrir. É aqui que a mágica acontece.
 
-1. Você verá uma lista com os arquivos da past
+1. Você verá uma lista com os arquivos da pasta. Procure pela coluna que contém o conteúdo binário e clique no ícone de Combinar Arquivos (duas setinhas apontando para baixo no cabeçalho da coluna).
 
-a. Procure pela coluna que contém o conteúdo binário e clique no ícone de Combinar Arquivos (duas setinhas apontando para baixo no cabeçalho da coluna).
+2. O Excel vai abrir uma amostra da primeira planilha. Selecione a aba ou a tabela correta e clique em OK.
 
-2. O Excel vai abrir uma amostra da primeira planilh
-
-a. Selecione a aba ou a tabela correta e clique em OK.
-
-3. Automaticamente, o Power Query criará uma série de etapas à direita (na aba "Etapas Aplicadas"). Ele vai empilhar todas as planilhas das filiais em uma única tabela gigantesc
-
-a.
+3. Automaticamente, o Power Query criará uma série de etapas à direita (na aba "Etapas Aplicadas"). Ele vai empilhar todas as planilhas das filiais em uma única tabela gigantesca.
 
 4. Use as ferramentas visuais para ajustar o que precisar: remova linhas em branco, renomeie colunas mal formatadas clicando duas vezes no cabeçalho, ou ajuste o tipo de dado (garanta que colunas de valores monetários estejam como "Número Decimal" e datas como "Data").
 
@@ -84,11 +70,7 @@ a.
 Quando tudo estiver limpo e organizado:
 1. Vá no canto superior esquerdo e clique em Fechar e Carregar.
 
-2. O Excel criará uma nova aba com a sua tabela de vendas perfeitamente consolidad
-
-a.
-
-> O toque final de produtividade: No mês que vem, você só precisará substituir os arquivos antigos da pasta pelos novos relatórios mensais, abrir o seu "Painel Oficial", ir na guia Dados e clicar em Atualizar Tudo. Pronto! O relatório de horas de trabalho fica pronto em segundos.
+2. O Excel criará uma nova aba com a sua tabela de vendas perfeitamente consolidada. > O toque final de produtividade: No mês que vem, você só precisará substituir os arquivos antigos da pasta pelos novos relatórios mensais, abrir o seu "Painel Oficial", ir na guia Dados e clicar em Atualizar Tudo. Pronto! O relatório de horas de trabalho fica pronto em segundos.
 
 ---
 
@@ -100,10 +82,7 @@ a: Cuidados Essenciais
 <strong>Atenção à Segurança de Dados:</strong> O Power Query memoriza o caminho exato dos arquivos no seu computador ou rede. Se você alterar o nome da pasta de destino ou mover os arquivos originais para outro diretório, a conexão pode quebrar ("Erro de Fonte de Dados"). Mantenha uma estrutura de pastas padronizada e imutável.
 </div>
 
-* Cuidado com os cabeçalhos: Certifique-se de que todas as planilhas enviadas pelas filiais mantenham os mesmos nomes exatos nas colunas principais (ex: "ID_Produto", "Valor_Total"). Se alguém mudar "Valor_Total" para "Preço Total", o Power Query pode criar uma coluna separad
-
-a.
-* Faça backup: Antes de automatizar planilhas críticas da empresa, faça uma cópia de segurança da estrutura original.
+* Cuidado com os cabeçalhos: Certifique-se de que todas as planilhas enviadas pelas filiais mantenham os mesmos nomes exatos nas colunas principais (ex: "ID_Produto", "Valor_Total"). Se alguém mudar "Valor_Total" para "Preço Total", o Power Query pode criar uma coluna separada. * Faça backup: Antes de automatizar planilhas críticas da empresa, faça uma cópia de segurança da estrutura original.
 
 ---
 
@@ -113,13 +92,7 @@ a.
 O Power Query lida perfeitamente com múltiplos formatos. Quando você aponta para a pasta inteira, ele consegue extrair e processar arquivos `.xlsx`, `.csv`, `.xls` e até arquivos de texto simultaneamente, desde que a estrutura interna das colunas seja compatível.
 
 2. Preciso saber programar em VBA ou DAX para usar o Power Query?
-Absolutamente não. O Power Query foi desenhado justamente para eliminar o uso de macros VBA complexas. Tudo o que você faz é baseado em cliques na interface gráfic
-
-a. Por trás dos panos ele escreve o código (chamado M), mas você não precisa editá-lo manualmente no dia a di
-
-a.
+Absolutamente não. O Power Query foi desenhado justamente para eliminar o uso de macros VBA complexas. Tudo o que você faz é baseado em cliques na interface gráfica. Por trás dos panos ele escreve o código (chamado M), mas você não precisa editá-lo manualmente no dia a dia.
 
 3. O que acontece se um arquivo na pasta estiver corrompido ou aberto por outro usuário?
-O Power Query pode exibir um erro de leitura durante a atualização se o arquivo estiver bloqueado por edição exclusiv
-
-a. A boa prática é garantir que todas as filiais enviem arquivos fechados e que você salve uma cópia consolidada na sua máquina local antes de rodar a atualização.
+O Power Query pode exibir um erro de leitura durante a atualização se o arquivo estiver bloqueado por edição exclusiva. A boa prática é garantir que todas as filiais enviem arquivos fechados e que você salve uma cópia consolidada na sua máquina local antes de rodar a atualização.

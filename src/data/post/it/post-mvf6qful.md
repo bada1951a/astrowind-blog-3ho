@@ -9,15 +9,7 @@ theme: "Industrial Blueprint"
 ---
 
 
-Erano le 16:45 di un martedì pomeriggio nel nostro ufficio in zona Porta Nuova a Milano. Mancavano esattamente quindici minuti alla riunione di allineamento con il cliente principale e il file Google Sheets con la lista dei lead commerciali era un vero campo di battagli
-
-a. "Ragazzi, abbiamo tre righe diverse per lo stesso cliente con email scritte in minuscolo, maiuscolo e con spazi di troppo," ha esclamato il collega di reparto, indicando lo schermo con la frustrazione dipinta sul volto. Usare la funzione nativa "Rimuovi duplicati" non serviva a nulla, perché le stringhe erano leggermente disallineate e il sistema le considerava unique. Correggere manualmente 4.500 righe prima delle 17:00? Follia pur
-
-a.
-
-Questa è la classica situazione in cui il lavoro d'ufficio si trasforma in un incubo di copia-incoll
-
-a. Se anche tu ti sei trovato a perdere ore preziose cercando di pulire database sporchi prima di una scadenza critica, questa guida fa al caso tuo.
+Erano le 16:45 di un martedì pomeriggio nel nostro ufficio in zona Porta Nuova a Milano. Mancavano esattamente quindici minuti alla riunione di allineamento con il cliente principale e il file Google Sheets con la lista dei lead commerciali era un vero campo di battaglia. "Ragazzi, abbiamo tre righe diverse per lo stesso cliente con email scritte in minuscolo, maiuscolo e con spazi di troppo," ha esclamato il collega di reparto, indicando lo schermo con la frustrazione dipinta sul volto. Usare la funzione nativa "Rimuovi duplicati" non serviva a nulla, perché le stringhe erano leggermente disallineate e il sistema le considerava unique. Correggere manualmente 4.500 righe prima delle 17:00? Follia pura. Questa è la classica situazione in cui il lavoro d'ufficio si trasforma in un incubo di copia-incolla. Se anche tu ti sei trovato a perdere ore preziose cercando di pulire database sporchi prima di una scadenza critica, questa guida fa al caso tuo.
 
 ![How to Automate Duplicate Customer Removal in Google Sheets Using Gemini Prompts AI Automation Guide](https://picsum.photos/seed/work-mvf6ryxe-6-b/1000/550.jpg)
 
@@ -35,9 +27,7 @@ Prima di applicare la soluzione, capiamo perché i metodi tradizionali falliscon
 
 a: Un utente inserisce "Mario Rossi", un altro "mario rossi" e un terzo "Mario Rossi ". Per un foglio di calcolo elettronico si tratta di tre entità distinte.
 
-2. Campi chiave frammentati: Nome, cognome e indirizzo email sono distribuiti su colonne separate, rendendo inefficaci i normali filtri di unicità basati su una sola colonn
-
-a.
+2. Campi chiave frammentati: Nome, cognome e indirizzo email sono distribuiti su colonne separate, rendendo inefficaci i normali filtri di unicità basati su una sola colonna.
 
 3. Variazioni nei domini e nei formati: Numeri di telefono scritti con o senza prefisso internazionale (+39), email aziendali scritte in modo errato ma simili.
 
@@ -62,10 +52,7 @@ Copia e incolla questo prompt testato sul campo:
 Incolla l'output pulito fornito da Gemini in un nuovo foglio di Google Sheets per un controllo visivo rapido (sanity check). Una volta verificata la correttezza, sostituisci il blocco dati originale. 
 
 <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Consiglio Pro:</strong> Se gestisci elenchi estremamente sensibili o coperti da rigide normative sulla privacy aziendale (GDPR), assicurati di anonimizzare i dati nominativi (es. sostituendo i nomi reali con ID cliente temporanei) prima di passarli a qualsiasi prompt di AI estern
-
-a.
-</div>
+<strong>Consiglio Pro:</strong> Se gestisci elenchi estremamente sensibili o coperti da rigide normative sulla privacy aziendale (GDPR), assicurati di anonimizzare i dati nominativi (es. sostituendo i nomi reali con ID cliente temporanei) prima di passarli a qualsiasi prompt di AI esterna. </div>
 
 ## Domande Frequenti (FAQ)
 

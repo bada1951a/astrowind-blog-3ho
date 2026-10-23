@@ -36,9 +36,7 @@ a: Le fatture non seguono uno standard rigido. Descrizioni lunghe su più righe,
 Per risolvere la situazione in meno di dieci minuti ho utilizzato un flusso di lavoro snello che sfrutta strumenti gratuiti già disponibili online, senza violare la privacy aziendale (attenzione a non caricare dati sensibili su server sconosciuti, usa strumenti affidabili o anonimizza i dati se necessario).
 
 ### Passo 1: Estrazione del testo con OCR gratuito
-Prendi le tue scansioni o scatta foto nitide con lo smartphone (assicurati che ci sia buona luce). Se usi strumenti gratuiti come Google Lens o la funzione OCR integrata nel tuo lettore PDF di fiducia, estrai tutto il testo grezzo della fattur
-
-a. Non preoccuparti se l'impaginazione si sballa completamente; l'importante è che tutto il testo sia leggibile e selezionabile.
+Prendi le tue scansioni o scatta foto nitide con lo smartphone (assicurati che ci sia buona luce). Se usi strumenti gratuiti come Google Lens o la funzione OCR integrata nel tuo lettore PDF di fiducia, estrai tutto il testo grezzo della fattura. Non preoccuparti se l'impaginazione si sballa completamente; l'importante è che tutto il testo sia leggibile e selezionabile.
 
 ### Passo 2: Pulizia e strutturazione tramite prompt IA
 Copia il testo estratto e incollalo all'interno di un'intelligenza artificiale generativa (come ChatGPT o Claude) usando un prompt strutturato in modo rigoroso. Ecco il prompt esatto che ho usato io per mettere in riga i dati in formato tabellare:
@@ -67,9 +65,7 @@ L'intelligenza artificiale restituirà una tabella Markdown pulita e ordinata in
 
 A.
 
-2. Premi `Ctrl + C` per copiarl
-
-a.
+2. Premi `Ctrl + C` per copiarla.
 
 3. Apri il tuo foglio Excel, posizionati sulla cella A1 e premi `Ctrl + V`.
 

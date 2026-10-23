@@ -55,10 +55,7 @@ Pas waar nodig de parameters aan door direct te typen in de gegenereerde cellen.
 
 ## Praktische tips voor foutloos werken
 
-- Maak altijd een back-up: Sla een originele versie van je spreadsheet op voordat je grote AI-prompts loslaat op je masterdat
-
-a.
-- Privacy en gevoelige dat
+- Maak altijd een back-up: Sla een originele versie van je spreadsheet op voordat je grote AI-prompts loslaat op je masterdata. - Privacy en gevoelige dat
 
 a: Let op welke bedrijfsgegevens je deelt als je externe AI-plugins gebruikt. Zorg dat je werkt binnen de beveiligde bedrijfsomgeving van Microsoft 365.
 - Test met een kleine subset: Als je duizenden rijen hebt, test de prompt dan eerst op de top 10 best verkokende producten om te zien of de output logisch is.

@@ -66,6 +66,4 @@ Bei sauberer Handschrift leisten moderne OCR-Engines erstaunliche Arbeit, aber b
 Das liegt meist an den Windows-Ländereinstellungen. Nutzen Sie in Excel den Befehl `Suchen und Ersetzen` (`Strg + H`), um amerikanische Punkte (`.`) in deutsche Kommas (`,`) umzuwandeln, bevor Sie Berechnungen durchführen.
 
 ### Kann ich diesen Prozess komplett automatisieren?
-J
-
-a. Wenn Sie diesen Workflow regelmäßig für hunderte Rechnungen benötigen, können Sie Power Query in Excel oder Plattformen wie Microsoft Power Automate nutzen, um den gesamten Scan-zu-Excel-Pfad im Hintergrund ablaufen zu lassen.
+Ja. Wenn Sie diesen Workflow regelmäßig für hunderte Rechnungen benötigen, können Sie Power Query in Excel oder Plattformen wie Microsoft Power Automate nutzen, um den gesamten Scan-zu-Excel-Pfad im Hintergrund ablaufen zu lassen.

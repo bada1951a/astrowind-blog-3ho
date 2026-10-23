@@ -9,11 +9,7 @@ theme: "Midnight Navy Royal"
 ---
 
 
-Ore 17:45 in un ufficio vicino a Corso Como a Milano. Mancano esattamente quindici minuti alla riunione di allineamento con i responsabili commerciali e la schermata del mio PC è un vero campo di battagli
-
-a. Sullo schermo ci sono diciotto file Excel diversi, inviati dai vari reparti regionali, tutti con formati leggermente differenti: date scritte nel formato europeo in uno e americano nell'altro, codici prodotto con spazi superflui e totali che non tornano per via di qualche formattazione di testo nascost
-
-a. Il capo mi scrive su Teams: "Ci sei per i dati aggiornati?". Il panico sale, le dita tremano sulla tastiera mentre cerco disperatamente di incollare l'ennesima riga di dati prima che il sistema si blocchi. Bastava una virgola fuori posto per sballare l'intero bilancio mensile.
+Ore 17:45 in un ufficio vicino a Corso Como a Milano. Mancano esattamente quindici minuti alla riunione di allineamento con i responsabili commerciali e la schermata del mio PC è un vero campo di battaglia. Sullo schermo ci sono diciotto file Excel diversi, inviati dai vari reparti regionali, tutti con formati leggermente differenti: date scritte nel formato europeo in uno e americano nell'altro, codici prodotto con spazi superflui e totali che non tornano per via di qualche formattazione di testo nascosta. Il capo mi scrive su Teams: "Ci sei per i dati aggiornati?". Il panico sale, le dita tremano sulla tastiera mentre cerco disperatamente di incollare l'ennesima riga di dati prima che il sistema si blocchi. Bastava una virgola fuori posto per sballare l'intero bilancio mensile.
 
 Se questa scena ti suona fin troppo familiare, significa che anche tu hai vissuto il dramma del consolidamento vendite manuale.
 
@@ -29,15 +25,11 @@ a:</strong> Smetti di sprecare ore preziose ogni fine mese facendo copia-incolla
 
 ### Perche il metodo manuale fallisce sempre (Analisi delle cause)
 
-Prima di passare alla soluzione, guardiamo in faccia il problem
-
-a. Perche fare il merge dei report a mano e una pessima idea?
+Prima di passare alla soluzione, guardiamo in faccia il problema. Perche fare il merge dei report a mano e una pessima idea?
 
 1. Incoerenza dei formati: Ogni reparto inserisce i dati a modo suo. C'è chi usa "Gennaio", chi "01", chi formatta le celle come testo e chi come numero. Quando unisci tutto, le formule saltano.
 
-2. Errore umano inevitabile: Dopo tre ore passate a squadernare tabelle, la soglia di attenzione croll
-
-a. Basta saltare una riga o sovrascrivere una formula per compromettere l'intero report mensile.
+2. Errore umano inevitabile: Dopo tre ore passate a squadernare tabelle, la soglia di attenzione crolla. Basta saltare una riga o sovrascrivere una formula per compromettere l'intero report mensile.
 
 3. Zero scalabilità: Il mese prossimo saremo punto e a capo, con nuovi file, nuovi formati e lo stesso identico stress sottopressione.
 
@@ -55,15 +47,10 @@ Crea una cartella sul tuo computer (es. "Report_Vendite_Mese") e inserisci dentr
 #### Step 2: Importa la cartella in Excel
 Apri un nuovo file Excel vuoto che userai come dashboard principale:
 - Vai sulla scheda Dati nella barra multifunzione.
-- Clicca su Ottieni dati > Da file > Da cartell
-
-a.
-- Seleziona la cartella "Report_Vendite_Mese" e clicca su *Apri*.
+- Clicca su Ottieni dati > Da file > Da cartella. - Seleziona la cartella "Report_Vendite_Mese" e clicca su *Apri*.
 
 #### Step 3: Combina e trasforma i dati
-Si aprirà una finestra di anteprim
-
-a. Invece di caricare subito i file, clicca sul menu a tendina del pulsante *Combina* e seleziona Combina e trasforma dati.
+Si aprirà una finestra di anteprima. Invece di caricare subito i file, clicca sul menu a tendina del pulsante *Combina* e seleziona Combina e trasforma dati.
 - Scegli il foglio di lavoro da cui estrarre i dati per ciascun file.
 - Si aprirà l'editor di Power Query: qui puoi eliminare le colonne inutili, filtrare le righe vuote e correggere i tipi di dati (assicurati che le date siano impostate come Data e i ricavi come Numero decimale).
 
@@ -72,22 +59,13 @@ a. Invece di caricare subito i file, clicca sul menu a tendina del pulsante *Com
 </div>
 
 #### Step 4: Carica il report finale
-Una volta puliti e aggregati i dati, vai su Home nell'editor di Power Query e clicca su Chiudi e caric
-
-a. Fatto! Ora hai un'unica tabella pulita e dinamic
-
-a. 
-
-Il mese prossimo, quando arriveranno i nuovi file, ti basterà sostituirli nella cartella e premere semplicemente Aggiorna nella scheda Dati di Excel. Zero fatica, zero panico prima delle riunioni importanti.
+Una volta puliti e aggregati i dati, vai su Home nell'editor di Power Query e clicca su Chiudi e carica. Fatto! Ora hai un'unica tabella pulita e dinamica. Il mese prossimo, quando arriveranno i nuovi file, ti basterà sostituirli nella cartella e premere semplicemente Aggiorna nella scheda Dati di Excel. Zero fatica, zero panico prima delle riunioni importanti.
 
 ---
 
 ### Consigli dell'Esperto e Precauzioni di Sicurezza
 
-- Backup dei file originali: Non toccare o modificare i file originali inviati dai colleghi direttamente nella cartella di lavoro di Power Query. Lavora sempre su copie o mantieni una cartella di archivio separat
-
-a.
-- Percorsi dei file: Evita di spostare la cartella di origine su OneDrive o su percorsi di rete complessi dopo aver impostato la query, altrimenti Excel potrebbe perdere il riferimento e richiedere una rapida riconfigurazione del percorso.
+- Backup dei file originali: Non toccare o modificare i file originali inviati dai colleghi direttamente nella cartella di lavoro di Power Query. Lavora sempre su copie o mantieni una cartella di archivio separata. - Percorsi dei file: Evita di spostare la cartella di origine su OneDrive o su percorsi di rete complessi dopo aver impostato la query, altrimenti Excel potrebbe perdere il riferimento e richiedere una rapida riconfigurazione del percorso.
 
 ---
 
@@ -103,6 +81,4 @@ A: Power Query e abbastanza flessibile, ma per evitare errori di mappatura e con
 
 Q: Ho bisogno di conoscere linguaggi di programmazione come VBA o Python per usare Power Query?
 
-A: Assolutamente no. Power Query funziona interamente tramite un'interfaccia visiva a pulsanti (point-and-click). Il linguaggio sottostante (M) viene generato automaticamente in background senza che tu debba scriverne una sola rig
-
-a.
+A: Assolutamente no. Power Query funziona interamente tramite un'interfaccia visiva a pulsanti (point-and-click). Il linguaggio sottostante (M) viene generato automaticamente in background senza che tu debba scriverne una sola riga. 

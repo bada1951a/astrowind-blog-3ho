@@ -11,9 +11,7 @@ theme: "Teal Matrix Digital"
 
 Godzina 16:45, warszawskie centrum biznesowe przy Rondzie Daszyńskiego. Za piętnaście minut mam wysłać do zarządu kluczowy raport kwartalny dotyczący kampanii lead generation. Otwieram główny arkusz i... czarna rozpacz. Baza danych pobrana z systemu CRM to absolutna katastrof
 
-a: kolumna z e-mailami wygląda jak wyciągnięta z generatora losowych ciągów znaków (znaki specjalne, podwójne spacji, literówki typu `@gmial.com`), a imiona klientów są sklejone z nazwiskami w formacie `jan.kowalski@firm
-
-a.pl`. Formuły `LEWY` i `ZNALEŹDI` wypluwają błędy `#ARG!`, bo część adresów zaczyna się od imienia, część od inicjałów, a inne to po prostu nazwy działów. Krew w żyłach tężeje – ręczne poprawianie 1500 wierszy zajmie mi co najmniej trzy godziny.
+a: kolumna z e-mailami wygląda jak wyciągnięta z generatora losowych ciągów znaków (znaki specjalne, podwójne spacji, literówki typu `@gmial.com`), a imiona klientów są sklejone z nazwiskami w formacie `jan.kowalski@firma. pl`. Formuły `LEWY` i `ZNALEŹDI` wypluwają błędy `#ARG!`, bo część adresów zaczyna się od imienia, część od inicjałów, a inne to po prostu nazwy działów. Krew w żyłach tężeje – ręczne poprawianie 1500 wierszy zajmie mi co najmniej trzy godziny.
 
 Zamiast tracić nerwy na pisanie skomplikowanych makr VBA, postanowiłem podejść do tematu nowoczesnymi narzędziami AI zintegrowanymi z arkuszami kalkulacyjnymi. Poniżej pokazuję, jak ten koszmar technologiczny rozwiązać w niespełna pięć minut.
 
@@ -42,10 +40,7 @@ Zanim przejdziemy do naprawy, warto zrozumieć, dlaczego standardowe podejście 
 Całą operację przeprowadzimy bez opuszczania pakietu biurowego lub przy wsparciu dedykowanych paneli bocznych z AI (np. Copilot w Excelu lub sprytne wykorzystanie ChatGPT / Claude przez wklejenie danych do arkusza internetowego).
 
 #### Krok 1: Wstępne oczyszczenie białych znaków i formatu
-Zanim przekażemy dane do analizy AI, zlikwidujmy podstawowe śmieci za pomocą wbudowanych narzędzi Excel
-
-a.
-* Zaznacz kolumnę z e-mailami.
+Zanim przekażemy dane do analizy AI, zlikwidujmy podstawowe śmieci za pomocą wbudowanych narzędzi Excela. * Zaznacz kolumnę z e-mailami.
 * Przejdź do zakładki Dane > Tekst jako kolumny lub użyj niezawodnej formuły czyszczącej w nowej kolumnze pomocniczej:
   `=USUŃ.ZBĘDNE.SPACJE(MAŁE.LITERY(A2))`
 * Ta prosta formuła usunie podwójne spacje i zamieni chaos wielkości liter na jednolitą formę.
@@ -64,10 +59,7 @@ A2:A100]"
 
 #### Krok 3: Wklejenie wyników i walidacja przez Power Query
 Gdy AI wygeneruje dla Ciebie uporządkowaną listę:
-* Skopiuj gotowe kolumny z powrotem do Excel
-
-a.
-* Przejdź do Dane > Pobierz dane > Z tabeli/zakresu, aby uruchomić Power Query.
+* Skopiuj gotowe kolumny z powrotem do Excela. * Przejdź do Dane > Pobierz dane > Z tabeli/zakresu, aby uruchomić Power Query.
 * W edytorze Power Query kliknij Usuń duplikaty na kolumnie z e-mailami, aby upewnić się, że zarząd nie otrzyma zdublowanych rekordów.
 * Kliknij Zamknij i załaduj – gotowy, lśniący arkusz ląduje w nowym zeszczycie.
 
@@ -76,18 +68,13 @@ a.
 ### Ważne wskazówki eksperta (Bezpieczeństwo danych)
 
 <div style="border-left: 4px solid #14b8a6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Ostrzeżenie dotyczące RODO i polityki firmy:</strong> Nigdy nie wrzucaj wrażliwych danych osobowych (pełnych danych klientów, numerów PESEL czy poufnych adresów korporacyjnych) do publicznych, darmowych wersji modeli AI. Korzystaj wyłącznie z narzędzi enterprise zablokowanych wewnątrz dzierżawy firmowej (np. Microsoft Copilot z zachowaniem standardów prywatności) lub usuwaj dane wrażliwe (anonimizacja) przed wysłaniem zapytani
-
-a.
-</div>
+<strong>Ostrzeżenie dotyczące RODO i polityki firmy:</strong> Nigdy nie wrzucaj wrażliwych danych osobowych (pełnych danych klientów, numerów PESEL czy poufnych adresów korporacyjnych) do publicznych, darmowych wersji modeli AI. Korzystaj wyłącznie z narzędzi enterprise zablokowanych wewnątrz dzierżawy firmowej (np. Microsoft Copilot z zachowaniem standardów prywatności) lub usuwaj dane wrażliwe (anonimizacja) przed wysłaniem zapytania. </div>
 
 ---
 
 ### Często zadawane pytania (FAQ)
 
-1. Co zrobić, gdy w adresie e-mail nie ma imienia, lecz sam alias działu (np. biuro@firm
-
-a.pl)?
+1. Co zrobić, gdy w adresie e-mail nie ma imienia, lecz sam alias działu (np. biuro@firma. pl)?
 Dobre modele AI potrafią rozpoznać brak spersonalizowanego imienia i na podstawie instrukcji (promptu) przypiszą tam wartość domyślną, np. "Zespół" lub "Klient", dzięki czemu wiersz nie zostanie pusty i nie popsuje personalizacji maili wysyłkowych.
 
 2. Czy muszę mieć płatną subskrypcję Copilota w Excelu, żeby to działało?

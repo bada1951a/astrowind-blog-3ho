@@ -26,11 +26,7 @@ Abra o Google Sheets > Vá em Extensões > Apps Script > Cole o código gerado p
 
 Antes de aplicar a solução definitiva com o Gemini, vale entender por que o processo padrão de "Remover Duplicadas" do Google Sheets costuma falhar em ambientes corporativos caóticos:
 
-1. Inconsistência de Digitação: O cliente "João Silva" cadastrado como "joao.silva@empres
-
-a.com" e "JOAO SILVA" com o e-mail "joao.silva@empres
-
-a.com.br" não é reconhecido como duplicata exata pela ferramenta padrão.
+1. Inconsistência de Digitação: O cliente "João Silva" cadastrado como "joao.silva@empresa. com" e "JOAO SILVA" com o e-mail "joao.silva@empresa. com.br" não é reconhecido como duplicata exata pela ferramenta padrão.
 
 2. Erros de Formatação de Dados: Espaços extras no final das células (caracteres invisíveis) que burlam qualquer fórmula de busca ou validação comum.
 
@@ -60,16 +56,8 @@ Vá no menu superior do Google Sheets e clique em Extensões > Apps Script. Apag
 
 > "Escreva um código em Google Apps Script para o Google Sheets que analise a aba ativa 'Clientes', verifique duplicatas baseando-se estritamente na coluna de e-mails (coluna C), mantenha sempre a linha mais recente (baseada na data da coluna D) e exclua as linhas duplicadas automaticamente."
 
-Cole o script gerado, salve e clique em Executar. Em segundos, sua base estará limpa e enxut
-
-a.
-
-#### Passo 3: Validação Final e Relatório de Impacto
-Com a base limpa, crie uma tabela dinâmica rápida para garantir que nenhum dado crítico foi perdido durante a varredura automátic
-
-a.
-
----
+Cole o script gerado, salve e clique em Executar. Em segundos, sua base estará limpa e enxuta. #### Passo 3: Validação Final e Relatório de Impacto
+Com a base limpa, crie uma tabela dinâmica rápida para garantir que nenhum dado crítico foi perdido durante a varredura automática. ---
 
 ### Aviso do Especialist
 
@@ -77,9 +65,7 @@ a: Cuidados com Dados Sensíveis
 
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.05); border-radius: 4px; color: #111827;">
 <strong>ALERTA DE SEGURANÇA DE DADOS (LGPD):</strong><br>
-Nunca envie dados reais de clientes (como CPFs completos, nomes reais e telefones) diretamente para versões públicas de ferramentas de IA sem anonimização prévi
-
-a. Substitua dados sensíveis por códigos fictícios (ex: Cliente_001) antes de gerar scripts ou fórmulas complexas.
+Nunca envie dados reais de clientes (como CPFs completos, nomes reais e telefones) diretamente para versões públicas de ferramentas de IA sem anonimização prévia. Substitua dados sensíveis por códigos fictícios (ex: Cliente_001) antes de gerar scripts ou fórmulas complexas.
 </div>
 
 ---

@@ -23,9 +23,7 @@ a:
 
 1. Dữ liệu nhập thủ công từ nhiều nguồn: Người bán hàng, nhân viên telesales hay form đăng ký sự kiện mỗi người nhập một kiểu, không có quy chuẩn viết hoa/viết thường hay định dạng ký tự.
 
-2. Gộp chung trường thông tin (Name & Email in one cell): Việc gộp họ tên và email vào chung một cột giúp dễ nhìn bằng mắt thường nhưng lại bất khả thi khi cần chạy chiến dịch Email Marketing hoặc gửi mail cá nhân hó
-
-a.
+2. Gộp chung trường thông tin (Name & Email in one cell): Việc gộp họ tên và email vào chung một cột giúp dễ nhìn bằng mắt thường nhưng lại bất khả thi khi cần chạy chiến dịch Email Marketing hoặc gửi mail cá nhân hóa.
 
 3. Ký tự rác và khoảng trắng ẩn: Các lỗi như khoảng trắng kép (`  `), ký tự xuống dòng ẩn bên trong ô dữ liệu khiến các hàm tìm kiếm như `VLOOKUP` hay `XLOOKUP` trả về lỗi `#N/A` liên tục.
 

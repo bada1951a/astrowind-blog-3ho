@@ -9,11 +9,7 @@ theme: "Graphite Technical Paper"
 ---
 
 
-Siedziałem w szklanej sali konferencyjnej w warszawskim centrum biznesowym, a na moim zegarku wybiła 16:45. Za piętnaście minut miałem wysłać ostateczny raport sprzedażowy do zarządu. Otwieram główny arkusz Google Sheets i nagle widzę czerwoną, pulsującą apokalipsę: formuła wyszukiwania duplikatów całkowicie się sypła, pokazując tysiące przemieszanych wierszy z powtarzającymi się adresami e-mail klientów i literówkami w nazwach firm („Jan Kowalski sp. z o.o.” kontra „Jan Kowalski Sp z o.o.”). Standardowa funkcja usuwania duplikatów w Google Sheets polegająca na dopasowaniu dokładnego tekstu była bezużyteczna, bo dane były brudne. Zbliżał się zawał serc
-
-a.
-
-W tym artykule pokażę Ci, jak uratowałem ten raport za pomocą sztucznej inteligencji i jak Ty też możesz zautomatyzować ten proces bez pisania skomplikowanych skryptów Apps Script.
+Siedziałem w szklanej sali konferencyjnej w warszawskim centrum biznesowym, a na moim zegarku wybiła 16:45. Za piętnaście minut miałem wysłać ostateczny raport sprzedażowy do zarządu. Otwieram główny arkusz Google Sheets i nagle widzę czerwoną, pulsującą apokalipsę: formuła wyszukiwania duplikatów całkowicie się sypła, pokazując tysiące przemieszanych wierszy z powtarzającymi się adresami e-mail klientów i literówkami w nazwach firm („Jan Kowalski sp. z o.o.” kontra „Jan Kowalski Sp z o.o.”). Standardowa funkcja usuwania duplikatów w Google Sheets polegająca na dopasowaniu dokładnego tekstu była bezużyteczna, bo dane były brudne. Zbliżał się zawał serca. W tym artykule pokażę Ci, jak uratowałem ten raport za pomocą sztucznej inteligencji i jak Ty też możesz zautomatyzować ten proces bez pisania skomplikowanych skryptów Apps Script.
 
 ## Dlaczego standardowe metody zawodzą? Analiza problemu
 

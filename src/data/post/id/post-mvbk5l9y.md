@@ -52,10 +52,7 @@ Contoh formula di sel B2 untuk menarik kurs USD ke IDR hari ini:
 Untuk mata uang lain seperti SGD, EUR, atau JPY, cukup ubah kodenya menjadi `SGDIDR`, `EURIDR`, atau `JPYIDR`.
 
 #### Langkah 2: Bersihkan Data Transaksi Mentah
-Sering kali data transaksi masuk dalam bentuk teks campuran. Gunakan rumus pembersih teks atau pastikan kolom nominal terpisah dari kode mata uangny
-
-a. 
-* Kolom
+Sering kali data transaksi masuk dalam bentuk teks campuran. Gunakan rumus pembersih teks atau pastikan kolom nominal terpisah dari kode mata uangnya. * Kolom
 
 A: Tanggal Transaksi
 * Kolom B: Kode Mata Uang (Contoh: USD)
@@ -83,15 +80,11 @@ Rumus di atas secara otomatis akan membaca nominal di C2, mencari nilai kurs ter
 
 Q: Apakah rumus GOOGLEFINANCE bisa digunakan untuk kripto seperti Bitcoin (BTC) ke IDR?
 
-A: Ya, bis
-
-a. Anda cukup mengetik `=GOOGLEFINANCE("CURRENCY:BTCIDR")` atau menggunakan simbol bursa tertentu, meskipun untuk aset kripto volatilitasnya sangat tinggi dan pembaruannya mengikuti pasar 24 jam.
+A: Ya, bisa. Anda cukup mengetik `=GOOGLEFINANCE("CURRENCY:BTCIDR")` atau menggunakan simbol bursa tertentu, meskipun untuk aset kripto volatilitasnya sangat tinggi dan pembaruannya mengikuti pasar 24 jam.
 
 Q: Kenapa lembar kerja saya tiba-tiba muncul error `#N/A` pada fungsi GOOGLEFINANCE?
 
-A: Error ini biasanya terjadi karena salah penulisan simbol mata uang (misalnya harusnya `USDIDR` malah ditulis `USD-IDR`), atau pasar keuangan sedang tutup (libur nasional/akhir pekan) sehingga Google belum merefresh data terbaru. Cek kembali penulisan kodeny
-
-a.
+A: Error ini biasanya terjadi karena salah penulisan simbol mata uang (misalnya harusnya `USDIDR` malah ditulis `USD-IDR`), atau pasar keuangan sedang tutup (libur nasional/akhir pekan) sehingga Google belum merefresh data terbaru. Cek kembali penulisan kodenya.
 
 Q: Apakah ada batasan jumlah baris (row limit) saat menggunakan rumus ini dalam jumlah besar?
 

@@ -11,9 +11,7 @@ theme: "Nordic Clean Ice"
 
 It is 1:45 PM in our Silicon Valley office, exactly 15 minutes before the weekly executive sync. My Slack is pinging like crazy, and our VP of Sales drops a last-minute message into the channel: "Can someone pull the clean Q3 enterprise lead list? The current dashboard is showing double-counted accounts, and the CEO is going to ask about customer acquisition cost metrics in ten minutes." 
 
-I open the master Google Sheet. Total chaos. Because our sales reps imported leads from three different webinar tools and two separate trial sign-up forms, we have over 4,000 rows of customer dat
-
-a. Worse yet, names are formatted differently ("Acme Corp" vs "ACME CORP."), email addresses have stray white spaces, and identical accounts are scattered across rows 120 and 3,450 due to minor capitalization mismatches. Standard conditional formatting and basic Google Sheets filters are completely failing to catch these stealth duplicates. 
+I open the master Google Sheet. Total chaos. Because our sales reps imported leads from three different webinar tools and two separate trial sign-up forms, we have over 4,000 rows of customer data. Worse yet, names are formatted differently ("Acme Corp" vs "ACME CORP."), email addresses have stray white spaces, and identical accounts are scattered across rows 120 and 3,450 due to minor capitalization mismatches. Standard conditional formatting and basic Google Sheets filters are completely failing to catch these stealth duplicates. 
 
 ![How to Automate Duplicate Customer Removal in Google Sheets Using Gemini Prompts AI Automation Guide](https://picsum.photos/seed/work-mvf6qprk-1-b/1000/550.jpg)
 

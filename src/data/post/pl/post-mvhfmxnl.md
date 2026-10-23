@@ -23,9 +23,7 @@ a:</strong> Zamiast pisać skomplikowane makra VBA od zera, nowoczesny Excel poz
 
 Kiedy nagle termin goni, a arkusz przestaje współpracować, zazwyczaj winne są trzy powody:
 
-1. Niespójne formatowanie danych historycznych: Daty zapisane jako tekst, ukryte spacje i brakujące wartości w kolumnach ze sprzedażą całkowicie paraliżują standardowe funkcje prognozowani
-
-a.
+1. Niespójne formatowanie danych historycznych: Daty zapisane jako tekst, ukryte spacje i brakujące wartości w kolumnach ze sprzedażą całkowicie paraliżują standardowe funkcje prognozowania.
 
 2. Sztywne formuły bez uwzględnienia sezonowości: Zwykła średnia krocząca nie uwzględnia nagłych skoków popytu w okresach świątecznych czy letnich przestojów u dostawców.
 
@@ -48,10 +46,7 @@ Zanim poprosisz AI o analizę, Twoje dane muszą być czyste. Zapomnij o ręczny
 Nowsze wersje programu Excel posiadają potężne narzędzie oparte na eksponencjalnym wygładzaniu szeregów czasowych (ETS), które działa jak dedykowany model predykcyjny.
 
 * Zaznacz dwie kolumny: kolumnę z datami (miesiące/kwartały) oraz kolumnę z historyczną wielkością sprzedaży.
-* Przejdź do karty Dane na wstążce Excel
-
-a.
-* W sekcji Prognoza kliknij przycisk Arkusz prognozy.
+* Przejdź do karty Dane na wstążce Excela. * W sekcji Prognoza kliknij przycisk Arkusz prognozy.
 * W oknie dialogowym wybierz wykres liniowy lub słupkowy oraz ustaw datę końcową prognozy na koniec kolejnego kwartału.
 * Kliknij Utwórz. Excel wygeneruje zupełnie nowy arkusz zawierający nie tylko przewidywaną wartość sprzedaży, ale również dolne i górne granice przedziału ufności.
 
@@ -84,9 +79,5 @@ a:</strong> Zawsze wykonaj kopię zapasową pliku przed uruchomieniem masowych o
 Niekoniecznie. Standardowa funkcja "Arkusz prognozy" wbudowana w pakiet Microsoft 365 korzysta z zaawansowanych algorytmów statystycznych (ETS) bez dodatkowych opłat. Płatne rozwiązania, takie jak Copilot, są opcjonalnym wsparciem dla zapytań w języku naturalnym.
 
 ### Co zrobić, jeśli moje dane historyczne są niepełne?
-Modele AI i algorytmy wygładzania wykładniczego radzą sobie z drobnymi brakami, interpolując brakujące wartości na podstawie trendów z sąsiednich okresów. Niemniej jednak, im czystsze i dłuższe szeregi czasowe dostarczysz (minimum 12-24 miesiące), tym dokładniejsza będzie prognoz
-
-a.
-
-### Czy moje poufne dane magazynowe są bezpieczne podczas korzystania z AI?
+Modele AI i algorytmy wygładzania wykładniczego radzą sobie z drobnymi brakami, interpolując brakujące wartości na podstawie trendów z sąsiednich okresów. Niemniej jednak, im czystsze i dłuższe szeregi czasowe dostarczysz (minimum 12-24 miesiące), tym dokładniejsza będzie prognoza. ### Czy moje poufne dane magazynowe są bezpieczne podczas korzystania z AI?
 Jeżeli korzystasz z korporacyjnej subskrypcji Microsoft 365 Copilot, Twoje dane są chronione polityką prywatności przedsiębiorstwa i nie są wykorzystywane do trenowania publicznych modeli. Unikaj jednak wklejania poufnych informacji do darmowych, publicznych wersji narzędzi online bez zabezpieczeń firmowych.

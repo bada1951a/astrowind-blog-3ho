@@ -9,9 +9,7 @@ theme: "Steel Silver Metallic"
 ---
 
 
-Jam sudah menunjukkan pukul 21.30 WIB di salah satu menara perkantoran kawasan bisnis SCBD Jakart
-
-a. AC sentral kantor sudah mati, menyisakan suara dengung lemari pendingin pantry dan keputusasaan saya menatap layar monitor. Besok pagi, laporan rekapitulasi data pelanggan tahunan harus diserahkan ke meja direksi. Masalahnya? Spreadsheet berisi sepuluh ribu baris data tersebut penuh dengan duplikat nama pelanggan, variasi penulisan email yang berbeda kapitalisasinya, hingga nomor telepon berantakan akibat digabung dari berbagai cabang. Fitur `Remove Duplicates` bawaan Google Sheets gagal total karena perbedaan spasi dan huruf besar-kecil (*case-sensitive*). Mata sudah perih, kopi sudah habis tiga cangkir, dan saya butuh solusi instan sebelum kepala pusing tujuh keliling.
+Jam sudah menunjukkan pukul 21.30 WIB di salah satu menara perkantoran kawasan bisnis SCBD Jakarta. AC sentral kantor sudah mati, menyisakan suara dengung lemari pendingin pantry dan keputusasaan saya menatap layar monitor. Besok pagi, laporan rekapitulasi data pelanggan tahunan harus diserahkan ke meja direksi. Masalahnya? Spreadsheet berisi sepuluh ribu baris data tersebut penuh dengan duplikat nama pelanggan, variasi penulisan email yang berbeda kapitalisasinya, hingga nomor telepon berantakan akibat digabung dari berbagai cabang. Fitur `Remove Duplicates` bawaan Google Sheets gagal total karena perbedaan spasi dan huruf besar-kecil (*case-sensitive*). Mata sudah perih, kopi sudah habis tiga cangkir, dan saya butuh solusi instan sebelum kepala pusing tujuh keliling.
 
 <div style="border-left: 4px solid #64748b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Tiket Dukungan Teknis Internal (ID-8821)</strong><br>
@@ -27,13 +25,9 @@ a:</strong> Data pelanggan dobel dengan variasi ketikan (contoh: "PT Maju Jaya" 
 
 Sebelum menemukan jalan keluar yang elegan, saya sempat membuang waktu satu jam penuh mencoba berbagai cara manual yang berujung buntu. Berikut adalah tiga akar masalah utama yang sering bikin kita stres di kantor:
 
-1. Variasi Karakter Tersembunyi (Invisible Characters): Data yang di-copy paste dari sistem CRM sering membawa spasi ekstra di awal atau akhir kata (`trailing/leading spaces`), membuat fungsi pencocokan standar menganggapnya sebagai data yang berbed
+1. Variasi Karakter Tersembunyi (Invisible Characters): Data yang di-copy paste dari sistem CRM sering membawa spasi ekstra di awal atau akhir kata (`trailing/leading spaces`), membuat fungsi pencocokan standar menganggapnya sebagai data yang berbeda.
 
-a.
-
-2. Format Penulisan Tidak Konsisten: Ada yang menulis "Jakarta Selatan", ada yang "Jaksel", atau penulisan nama perusahaan dengan singkatan PT yang berbeda titik dan spasiny
-
-a.
+2. Format Penulisan Tidak Konsisten: Ada yang menulis "Jakarta Selatan", ada yang "Jaksel", atau penulisan nama perusahaan dengan singkatan PT yang berbeda titik dan spasinya.
 
 3. Keterbatasan Rumus Dasar: Mengandalkan menu `Data > Data cleanup > Remove duplicates` bawaan Google Sheets tidak cukup pintar untuk mengenali kesamaan makna, sehingga data penting yang mirip sering terhapus atau malah lolos seleksi.
 

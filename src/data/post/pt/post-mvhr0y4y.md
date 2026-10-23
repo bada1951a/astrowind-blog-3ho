@@ -9,9 +9,7 @@ theme: "Warm Coffee Latte"
 ---
 
 
-Eram exatas 17h45 em um escritório corporativo na região da Avenida Paulista, em São Paulo. O ar-condicionado já tinha desligado, a sala de reuniões estava reservada para a diretoria em 15 minutos, e o meu relatório de fechamento de mês simplesmente parecia um emaranhado de números sem vid
-
-a. A diretora financeira odiava planilhas estáticas e tabelas complexas que exigiam horas de explicação. Eu precisava transformar projeções de fluxo de caixa em gráficos interativos e atraentes na hora, mas toda tentativa manual de formatar o painel deixava o visual poluído ou quebrava as fórmulas de soma condicional. 
+Eram exatas 17h45 em um escritório corporativo na região da Avenida Paulista, em São Paulo. O ar-condicionado já tinha desligado, a sala de reuniões estava reservada para a diretoria em 15 minutos, e o meu relatório de fechamento de mês simplesmente parecia um emaranhado de números sem vida. A diretora financeira odiava planilhas estáticas e tabelas complexas que exigiam horas de explicação. Eu precisava transformar projeções de fluxo de caixa em gráficos interativos e atraentes na hora, mas toda tentativa manual de formatar o painel deixava o visual poluído ou quebrava as fórmulas de soma condicional. 
 
 Foi bem ali, com o cheiro do café frio na xícara e o Slack apitando sem parar, que decidi parar de lutar contra a interface tradicional e usar o assistente de IA embutido no Google Planilhas para salvar a minha noite.
 
@@ -31,15 +29,9 @@ Antes de aplicar a automação, vale a pena entender por que criar gráficos fin
 
 a: Linhas misturando centros de custo, datas no formato incorreto e colunas sem cabeçalhos claros impedem que qualquer motor de IA compreenda o contexto financeiro.
 
-2. Falta de interatividade: Gráficos estáticos comuns não permitem que a diretoria filtre cenários de receita versus despesa com um simples clique durante a reunião executiv
+2. Falta de interatividade: Gráficos estáticos comuns não permitem que a diretoria filtre cenários de receita versus despesa com um simples clique durante a reunião executiva.
 
-a.
-
-3. Excesso de ruído visual: Tentar colocar dezenas de métricas em um único gráfico padrão do Excel ou do Planilhas gera poluição visual, fazendo com que a informação mais importante se perc
-
-a.
-
----
+3. Excesso de ruído visual: Tentar colocar dezenas de métricas em um único gráfico padrão do Excel ou do Planilhas gera poluição visual, fazendo com que a informação mais importante se perca. ---
 
 ## Passo a Passo: Criando Gráficos Interativos com Sugestões de IA
 
@@ -64,11 +56,7 @@ No canto inferior direito da sua tela do Google Planilhas, localize o ícone do 
 A IA geralmente sugere gráficos de rosca para distribuição de despesas ou gráficos de linha para fluxo de caixa temporal. 
 - Escolha a sugestão mais adequada clicando no botão Inserir gráfico.
 - Para adicionar interatividade real, vá em Inserir > Segmentação de dados (Slicer).
-- Conecte a segmentação de dados à sua coluna de "Centro de Custo" ou "Mês". Assim, quando a diretoria clicar em um departamento específico durante a apresentação, o gráfico inteiro se atualizará instantaneamente na tel
-
-a.
-
-<div style="border-left: 4px solid #78350f; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
+- Conecte a segmentação de dados à sua coluna de "Centro de Custo" ou "Mês". Assim, quando a diretoria clicar em um departamento específico durante a apresentação, o gráfico inteiro se atualizará instantaneamente na tela. <div style="border-left: 4px solid #78350f; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Dica de Ouro:</strong> Utilize formatação condicional baseada em regras simples (por exemplo, valores acima da média em tons suaves de café/marrom) para guiar o olhar do leitor diretamente para as faturas que estouraram o orçamento.
 </div>
 
@@ -77,11 +65,7 @@ a.
 ## Perguntas Frequentes (FAQ)
 
 1. Posso usar as sugestões de IA do Google Planilhas com dados financeiros confidenciais da empresa?
-Sim, desde que a sua conta corporativa do Google Workspace siga as diretrizes de privacidade e conformidade de dados estabelecidas pelo departamento de TI da sua empres
-
-a. Os dados inseridos no painel Explorar não são utilizados para treinar modelos públicos de IA de forma abert
-
-a.
+Sim, desde que a sua conta corporativa do Google Workspace siga as diretrizes de privacidade e conformidade de dados estabelecidas pelo departamento de TI da sua empresa. Os dados inseridos no painel Explorar não são utilizados para treinar modelos públicos de IA de forma aberta.
 
 2. O que fazer se a IA sugerir um gráfico incorreto para o meu fluxo de caixa?
 A IA se baseia em padrões estatísticos dos seus cabeçalhos. Se o gráfico sugerido não fizer sentido, renomeie os cabeçalhos das colunas para termos mais explícitos (como "Receita Líquida" em vez de apenas "Total") e clique em atualizar no painel de sugestões.

@@ -73,9 +73,7 @@ a:
 
 2. Cambia l'estensione del file da `.xlsx` a `.zip`.
 
-3. Estrai l'archivio ZIP in una cartella temporane
-
-a.
+3. Estrai l'archivio ZIP in una cartella temporanea.
 
 4. Entra nella cartella `xl` -> `worksheets` e trova il file XML del foglio bloccato (es. `sheet1.xml`).
 
@@ -91,10 +89,7 @@ a.
 <strong>AVVISO DI SICUREZZA DATI:</strong> Quando utilizzi strumenti di intelligenza artificiale per correggere file aziendali, assicurati di rimuovere sempre i dati sensibili, i nomi dei dipendenti e i codici fiscali. Condividi con l'IA solo strutture di esempio e numeri fittizi per tutelare la privacy secondo le normative vigenti.
 </div>
 
-* Usa Power Query per i dati ricorrenti:Se ogni fine mese importi file CSV o tracciati presenze dai tornelli, automatizza l'importazione tramiteDati>Ottieni dati>Da file, evitando il copia-incolla manuale che genera errori di battitur
-
-a.
-* Crea un foglio di backup bloccato ma accessibile: Conserva sempre una copia master pulita dei file di calcolo presenze in una cartella condivisa protetta da permessi di rete aziendali, così da non dipendere mai da password locali dimenticate dai singoli.
+* Usa Power Query per i dati ricorrenti:Se ogni fine mese importi file CSV o tracciati presenze dai tornelli, automatizza l'importazione tramiteDati>Ottieni dati>Da file, evitando il copia-incolla manuale che genera errori di battitura. * Crea un foglio di backup bloccato ma accessibile: Conserva sempre una copia master pulita dei file di calcolo presenze in una cartella condivisa protetta da permessi di rete aziendali, così da non dipendere mai da password locali dimenticate dai singoli.
 
 ---
 
@@ -106,9 +101,7 @@ A1.Per impostazione predefinita, Excel non supporta i risultati orari negativi. 
 
 Q2. Posso usare l'IA direttamente dentro Excel per calcolare gli straordinari senza copiare le formule?
 
-A2.Sì, se utilizzi Microsoft 365 con Copilot integrato, puoi richiamare il pannello laterale e digitare direttamente il comando in linguaggio naturale per generare e inserire le colonne di calcolo direttamente nella tabella attiv
-
-a.
+A2.Sì, se utilizzi Microsoft 365 con Copilot integrato, puoi richiamare il pannello laterale e digitare direttamente il comando in linguaggio naturale per generare e inserire le colonne di calcolo direttamente nella tabella attiva.
 
 Q3. Perché la mia formula di moltiplicazione delle ore per la tariffa oraria restituisce un numero sballato (es. 0,33 invece di 25 euro)?
 

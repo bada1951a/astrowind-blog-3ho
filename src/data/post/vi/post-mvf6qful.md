@@ -21,17 +21,11 @@ Tôi mở file Google Sheets chứa gần 5.000 dòng dữ liệu vừa được
 
 Trước khi tìm cách giải quyết bằng AI, chúng ta cần hiểu tại sao file Google Sheets của văn phòng lại biến thành một bãi chiến trường như vậy:
 
-1. Định dạng số điện thoại và email không đồng nhất: Người dùng nhập từ điện thoại di động thường bật chế độ tự động viết hoa chữ cái đầu tiên của email, hoặc thêm dấu cách vô tình ở cuối dòng. Số điện thoại lúc thì có dấu chấm (090.123.4567), lúc có dấu cách, lúc thêm mã vùng quốc gi
-
-a.
+1. Định dạng số điện thoại và email không đồng nhất: Người dùng nhập từ điện thoại di động thường bật chế độ tự động viết hoa chữ cái đầu tiên của email, hoặc thêm dấu cách vô tình ở cuối dòng. Số điện thoại lúc thì có dấu chấm (090.123.4567), lúc có dấu cách, lúc thêm mã vùng quốc gia.
 
 2. Sai sót từ khâu nhập liệu thủ công (Human Error): Đội ngũ sales khi nhập tay danh sách khách hàng từ các cuộc gọi hotline thường gõ nhầm một vài ký tự hoặc viết tắt tên công ty, khiến hệ thống nhận diện đây là hai khách hàng hoàn toàn khác nhau.
 
-3. Đổ dữ liệu (Merge Data) từ nhiều nguồn: Khi kết hợp file từ Facebook Ads, Google Ads và Landing Page tự thiết kế, các trường thông tin (Column headers) không khớp nhau, dẫn đến việc trùng lặp khách hàng nhưng nằm ở các cột dịch chuyển lệch ph
-
-a.
-
-## Giải pháp thực chiến: Dùng Google Sheets kết hợp Gemini Prompt để xử lý triệt để
+3. Đổ dữ liệu (Merge Data) từ nhiều nguồn: Khi kết hợp file từ Facebook Ads, Google Ads và Landing Page tự thiết kế, các trường thông tin (Column headers) không khớp nhau, dẫn đến việc trùng lặp khách hàng nhưng nằm ở các cột dịch chuyển lệch pha. ## Giải pháp thực chiến: Dùng Google Sheets kết hợp Gemini Prompt để xử lý triệt để
 
 Thay vì viết những hàm Regex phức tạp hay ngồi dò từng dòng bằng mắt, tôi tận dụng Gemini để tạo ra một đoạn mã Google Apps Script tự động làm sạch và gom nhóm dữ liệu chính xác trong tích tắc.
 

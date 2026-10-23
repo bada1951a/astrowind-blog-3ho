@@ -9,13 +9,9 @@ theme: "Deep Indigo System"
 ---
 
 
-Eran las 8:45 de la mañana en nuestra oficina del Paseo de la Castellana en Madrid. El comité de dirección empezaba a las 9:00 y mi archivo de Excel con el reporte urgente de métricas trimestrales decidió colgarse por tercera vez consecutiv
+Eran las 8:45 de la mañana en nuestra oficina del Paseo de la Castellana en Madrid. El comité de dirección empezaba a las 9:00 y mi archivo de Excel con el reporte urgente de métricas trimestrales decidió colgarse por tercera vez consecutiva. La barra de carga se quedaba congelada al 28% y el ventilador de mi portátil sonaba como un motor de avión a reacción. Cada clic provocaba la temida pantalla en blanco de "Microsoft Excel no responde", y las fórmulas de búsqueda y referencias circulares rotas amenazaban con dejarme sin datos justo enfrente de los socios.
 
-a. La barra de carga se quedaba congelada al 28% y el ventilador de mi portátil sonaba como un motor de avión a reacción. Cada clic provocaba la temida pantalla en blanco de "Microsoft Excel no responde", y las fórmulas de búsqueda y referencias circulares rotas amenazaban con dejarme sin datos justo enfrente de los socios.
-
-Revisar celda por celda en un archivo de más de 80,000 filas y 45 columnas era una misión suicid
-
-a. Borrar formato condicional a ciegas no funcionaba, y las macros heredadas de la antigua gerencia parecían un jeroglífico indescifrable. 
+Revisar celda por celda en un archivo de más de 80,000 filas y 45 columnas era una misión suicida. Borrar formato condicional a ciegas no funcionaba, y las macros heredadas de la antigua gerencia parecían un jeroglífico indescifrable. 
 
 ![AI Productivity & Workflow Automation](https://picsum.photos/seed/office268/1000/550)
 
@@ -29,15 +25,9 @@ Antes de aplicar la solución automatizada, veamos por qué este archivo se conv
 
 1. Rangos fantasma (Bloat): Excel cree que tus datos llegan hasta la fila 1,048,576 aunque solo uses 500 filas, calculando millones de celdas vacías con formato invisible.
 
-2. Funciones volátiles abusivas: Uso excesivo y anidado de BUSCARV (VLOOKUP), INDIRECTO (INDIRECT) y DESREF (OFFSET) que se recalculan por completo cada vez que tocas una sola celd
+2. Funciones volátiles abusivas: Uso excesivo y anidado de BUSCARV (VLOOKUP), INDIRECTO (INDIRECT) y DESREF (OFFSET) que se recalculan por completo cada vez que tocas una sola celda.
 
-a.
-
-3. Corrupción de XML internos: Archivos `.xlsx` que acumulan estilos duplicados, nombres definidos rotos y conexiones de datos obsoletas en su estructura comprimid
-
-a.
-
----
+3. Corrupción de XML internos: Archivos `.xlsx` que acumulan estilos duplicados, nombres definidos rotos y conexiones de datos obsoletas en su estructura comprimida. ---
 
 ### El plan de rescate de 3 pasos con ChatGPT y Python
 
@@ -96,9 +86,7 @@ Ejecuta este script en tu entorno local de Python o directamente en la interfaz 
 ### Preguntas Frecuentes (FAQ)
 
 ¿Necesito saber programar en Python para usar este truco?
-Para nad
-
-a. Solo necesitas copiar el archivo, pedirle el script a ChatGPT y ejecutarlo usando herramientas como Google Colab (que funciona directamente en el navegador sin instalar nada) o ejecutando el código que la IA te proporciona paso a paso.
+Para nada. Solo necesitas copiar el archivo, pedirle el script a ChatGPT y ejecutarlo usando herramientas como Google Colab (que funciona directamente en el navegador sin instalar nada) o ejecutando el código que la IA te proporciona paso a paso.
 
 ¿Qué hago si el archivo de Excel tiene contraseña y Python no puede leerlo?
 Debes remover la contraseña temporalmente desde la aplicación de escritorio de Excel (Archivo > Información > Proteger libro > Cifrar con contraseña, dejando el campo en blanco y guardando) antes de pasarle el archivo al script de análisis.

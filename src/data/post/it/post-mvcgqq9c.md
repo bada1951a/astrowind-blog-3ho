@@ -9,11 +9,7 @@ theme: "Rosewood Hardware Guide"
 ---
 
 
-Erano le 14:45 e la riunione col cliente chiave al 26esimo piano qui in centro a Milano era fissata per le 15:30. Sul mio schermo, il file Excel di budget consolidato da 45 megabyte aveva appena deciso di piantarsi definitivamente, lasciando la classica rotellina di caricamento girevole su uno sfondo bianco latte. Nessun messaggio di errore, solo il silenzio tombale di un'applicazione morta con dentro tre mesi di dati sui ricavi. Aprire il Task Manager e killare il processo è stato un riflesso condizionato, ma sapevo che l'autosave mi avrebbe riportato a un quarto d'ora prima, lasciando irrisolti i problemi di lentezza e i calcoli fantasma che facevano inchiodare il foglio ogni volta che modificavo una cell
-
-a.
-
-<div style="border-left: 4px solid #be123c; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
+Erano le 14:45 e la riunione col cliente chiave al 26esimo piano qui in centro a Milano era fissata per le 15:30. Sul mio schermo, il file Excel di budget consolidato da 45 megabyte aveva appena deciso di piantarsi definitivamente, lasciando la classica rotellina di caricamento girevole su uno sfondo bianco latte. Nessun messaggio di errore, solo il silenzio tombale di un'applicazione morta con dentro tre mesi di dati sui ricavi. Aprire il Task Manager e killare il processo è stato un riflesso condizionato, ma sapevo che l'autosave mi avrebbe riportato a un quarto d'ora prima, lasciando irrisolti i problemi di lentezza e i calcoli fantasma che facevano inchiodare il foglio ogni volta che modificavo una cella. <div style="border-left: 4px solid #be123c; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Situazione di emergenz
 
 a:</strong> Quando un Excel supera i 30-40 MB e inizia a rallentare, il problema non è quasi mai la potenza del vostro PC. Spesso si tratta di formattazioni condizionali corrotte, formule volatili stratificate o riferimenti circolari nascosti che mandano in loop il motore di calcolo.
@@ -37,9 +33,7 @@ Prima di passare all'azione, capiamo cosa stava strangolando il file:
 
 1. Formattazione condizionale "Zombie": Copia-incolla selvaggi da altri file avevano generato oltre 400.000 regole di formattazione condizionale sovrapposte. Excel controlla ogni singola cella a ogni singolo click, saturando la RAM.
 
-2. Formule volatili fuori controllo: Uso massiccio di `INDIRETTO` (INDIRECT) e `SCARTO` (OFFSET) in tabelle pivot enormi, che costringono il software a ricalcolare l'intero foglio a ogni minima modific
-
-a.
+2. Formule volatili fuori controllo: Uso massiccio di `INDIRETTO` (INDIRECT) e `SCARTO` (OFFSET) in tabelle pivot enormi, che costringono il software a ricalcolare l'intero foglio a ogni minima modifica.
 
 3. Rifiuti nascosti e formati fantasm
 

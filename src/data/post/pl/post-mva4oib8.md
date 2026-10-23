@@ -21,9 +21,7 @@ W takich momentach człowiek czuje, jak zimny pot oblewa plecy, a perspektywna z
 
 ## Dlaczego standardowe czyszczenie danych w arkuszach tak często zawodzi?
 
-Praca z danymi importowanymi z różnych zewnętrznych systemów rzadko bywa czyst
-
-a. Oto trzy najczęstsze pułapki, przez które tracimy godziny na ręczną edycję:
+Praca z danymi importowanymi z różnych zewnętrznych systemów rzadko bywa czysta. Oto trzy najczęstsze pułapki, przez które tracimy godziny na ręczną edycję:
 
 1. Niespójne kodowanie i ukryte znaki: Kopiowanie danych ze stron WWW lub systemów starszego typu przenosi niewidoczne znaki końca linii oraz twarde spacje, których zwykłe narzędzie "Znajdź i zamień" nie widzi.
 
@@ -74,9 +72,7 @@ a: Zanim uruchomisz masowe formuły czyszczące oparte na AI, zrób kopię zapas
 ## Często zadawane pytania (FAQ)
 
 ### 1. Dlaczego Google Sheets wyrzuca błąd `#VALUE!` po wklejeniu formuły od ChatGPT?
-Najczęstszą przyczyną są regionalne ustawienia językowe arkusz
-
-a. Polskojęzyczna wersja Google Sheets wymaga średników (;) jako separatorów argumentów oraz polskich nazw funkcji (np. `JEŻELI` zamiast `IF`). Poinformuj o tym ChatGPT w prompcie: *"Użyj polskiej wersji językowej Google Sheets i średników jako separatorów"*.
+Najczęstszą przyczyną są regionalne ustawienia językowe arkusza. Polskojęzyczna wersja Google Sheets wymaga średników (;) jako separatorów argumentów oraz polskich nazw funkcji (np. `JEŻELI` zamiast `IF`). Poinformuj o tym ChatGPT w prompcie: *"Użyj polskiej wersji językowej Google Sheets i średników jako separatorów"*.
 
 
 

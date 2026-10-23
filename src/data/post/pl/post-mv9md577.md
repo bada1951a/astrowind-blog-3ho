@@ -27,9 +27,7 @@ a:</strong> Pokażę Ci, jak raz skonfigurować automatyczne zapytanie w Excelu,
 
 Zanim przejdziemy do naprawy, spójrzmy prawdzie w oczy. Oto trzy główne powody, dla których dotychczasowy system (lub jego brak) doprowadzał Cię do szewskiej pasji:
 
-1. Ręczne „Kopiuj-Wklej” z dziesiątek plików: Każdy oddział wysyła plik według własnego uznani
-
-a. W jednym dany miesiąc to kolumna C, w innym F. Przenoszenie tego ręcznie to zaproszenie do pomyłek.
+1. Ręczne „Kopiuj-Wklej” z dziesiątek plików: Każdy oddział wysyła plik według własnego uznania. W jednym dany miesiąc to kolumna C, w innym F. Przenoszenie tego ręcznie to zaproszenie do pomyłek.
 
 2. Kruchość makr VB
 
@@ -64,11 +62,7 @@ a:
 * Zobaczysz listę plików znajdujących się w folderzie. Kliknij dwukrotnie na ikonę podwójnej strzałki w nagłówku kolumny Content.
 * Power Query automatycznie podglądnie strukturę plików. Wybierz arkusz lub tabelę, z której chcesz pobrać dane.
 * Usuń zbędne wiersze i nagłówki: Jeśli pliki mają na górze puste wiersze lub stopki, użyj opcji Usuń wiersze na karcie Narzędzia główne.
-* Promuj nagłówki: Kliknij przycisk Użyj pierwszego wiersza jako nagłówk
-
-a.
-
-#### Krok 4: Załaduj wynik do arkusza
+* Promuj nagłówki: Kliknij przycisk Użyj pierwszego wiersza jako nagłówka. #### Krok 4: Załaduj wynik do arkusza
 Gdy dane wyglądają już czysto i poprawnie (widzisz złączoną tabelę ze wszystkich plików), w lewym górnym rogu edytora kliknij Zamknij i załaduj. 
 
 Excel utworzy nową zakładkę z w pełni skonsolidowaną tabelą sprzedaży. 

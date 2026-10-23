@@ -24,9 +24,7 @@ a:</strong> Duplicados masivos en base de datos de clientes con variaciones tipo
 A.", "Empresa SA", "empresa s.
 
 a.").<br>
-<strong>Impacto:</strong> Métricas de conversión infladas y riesgo de fallo en presentación ejecutiv
-
-a.<br>
+<strong>Impacto:</strong> Métricas de conversión infladas y riesgo de fallo en presentación ejecutiva. <br>
 <strong>Solución rápid
 
 a:</strong> Automatización mediante prompt estructurado en Gemini para Google Workspace.
@@ -76,14 +74,10 @@ A., SL, etc.). Analiza los datos pegados a continuación, unifica los registros 
 ## Preguntas Frecuentes (FAQ)
 
 ¿Qué hago si la lista de clientes supera las diez mil filas y Gemini se corta?
-Divide tu base de datos en bloques lógicos de tres mil o cuatro mil filas (por ejemplo, dividiendo alfabéticamente por la inicial del cliente). Procesar lotes más pequeños garantiza que la IA no omita registros debido a límites de tokens en una sola respuest
-
-a.
+Divide tu base de datos en bloques lógicos de tres mil o cuatro mil filas (por ejemplo, dividiendo alfabéticamente por la inicial del cliente). Procesar lotes más pequeños garantiza que la IA no omita registros debido a límites de tokens en una sola respuesta.
 
 ¿Puedo automatizar esto para que se ejecute solo cada lunes por la mañana?
-Sí. Puedes conectar este flujo utilizando Google Apps Script junto con la API de Gemini, configurando un activador temporal (*trigger*) para que limpie la hoja de clientes automáticamente antes de que llegues a la oficin
-
-a.
+Sí. Puedes conectar este flujo utilizando Google Apps Script junto con la API de Gemini, configurando un activador temporal (*trigger*) para que limpie la hoja de clientes automáticamente antes de que llegues a la oficina.
 
 ¿Qué pasa si Gemini une por error a dos clientes diferentes con nombres similares?
 La IA es excelente detectando patrones, pero siempre debes revisar visualmente el resultado en la columna de nombres normalizados antes de presentar métricas oficiales. Mantén siempre una copia de seguridad en una pestaña oculta llamada `Backup_Bruto`.

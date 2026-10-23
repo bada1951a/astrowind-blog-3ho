@@ -81,10 +81,7 @@ A: A #VALUE! error in a regex formula usually means the pattern did not find an 
 Q2: Can ChatGPT write Google Apps Script for automated data cleaning instead of formulas?
 <div>
 
-A: Yes! If your spreadsheet lags because you have tens of thousands of rows running heavy regex formulas, prompt ChatGPT to write a custom Google Apps Script function instead. You can paste the script directly into Extensions > Apps Script and run it as a custom formul
-
-a.
-</div>
+A: Yes! If your spreadsheet lags because you have tens of thousands of rows running heavy regex formulas, prompt ChatGPT to write a custom Google Apps Script function instead. You can paste the script directly into Extensions > Apps Script and run it as a custom formula. </div>
 
 Q3: Does Google Sheets use the same regex syntax as Python or Excel?
 

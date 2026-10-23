@@ -9,9 +9,7 @@ theme: "Midnight Navy Royal"
 ---
 
 
-Eram 18h30 de uma sexta-feira típica de fechamento de mês no escritório corporativo na região da Berrini, em São Paulo. A pilha de notas fiscais impressas e PDFs escaneados na minha mesa parecia zombar de mim. O diretor financeiro tinha acabado de passar pela minha baia cobrando o relatório de despesas consolidadas para a reunião de diretoria da segunda-feira cedo. Tentar digitar manualmente centenas de linhas de CNPJ, descrições de produtos, valores e impostos significaria passar a noite inteira no escritório, perdendo o jantar com a famíli
-
-a. O pior? Na tentativa desesperada de copiar e colar dados de um PDF mal escaneado para o Excel algumas horas antes, as colunas vieram todas embaralhadas, transformando uma simples planilha em um quebra-cabeça de células mescladas e erros de formatação.
+Eram 18h30 de uma sexta-feira típica de fechamento de mês no escritório corporativo na região da Berrini, em São Paulo. A pilha de notas fiscais impressas e PDFs escaneados na minha mesa parecia zombar de mim. O diretor financeiro tinha acabado de passar pela minha baia cobrando o relatório de despesas consolidadas para a reunião de diretoria da segunda-feira cedo. Tentar digitar manualmente centenas de linhas de CNPJ, descrições de produtos, valores e impostos significaria passar a noite inteira no escritório, perdendo o jantar com a família. O pior? Na tentativa desesperada de copiar e colar dados de um PDF mal escaneado para o Excel algumas horas antes, as colunas vieram todas embaralhadas, transformando uma simples planilha em um quebra-cabeça de células mescladas e erros de formatação.
 
 Se você já passou por isso, sabe que o processo tradicional de transcrição manual de documentos físicos é um ralo de tempo e uma fonte inesgotável de erros humanos. Mas a boa notícia é que você não precisa mais sofrer com isso. Neste guia prático, vou te mostrar como usar ferramentas gratuitas de OCR e Inteligência Artificial para converter qualquer nota fiscal de papel ou PDF em uma planilha Excel perfeitamente limpa em menos de dois minutos.
 
@@ -67,10 +65,7 @@ Trabalhar com dados financeiros e notas fiscais exige atenção rigorosa à priv
 
 a:
 
-* Privacidade de Dados (LGPD): Evite enviar notas fiscais de clientes finais ou dados altamente confidenciais para versões públicas de IAs sem antes verificar a política de privacidade da plataforma ou utilizar ambientes corporativos homologados pelo setor de TI da sua empres
-
-a.
-* A Regra de Ouro da Validação: Nunca envie um relatório financeiro gerado por IA para a diretoria sem fazer a conferência rápida dos totais. Utilize a fórmula `=SOMA()` na coluna de valores totais do Excel para bater o resultado final com o rodapé da nota fiscal original.
+* Privacidade de Dados (LGPD): Evite enviar notas fiscais de clientes finais ou dados altamente confidenciais para versões públicas de IAs sem antes verificar a política de privacidade da plataforma ou utilizar ambientes corporativos homologados pelo setor de TI da sua empresa. * A Regra de Ouro da Validação: Nunca envie um relatório financeiro gerado por IA para a diretoria sem fazer a conferência rápida dos totais. Utilize a fórmula `=SOMA()` na coluna de valores totais do Excel para bater o resultado final com o rodapé da nota fiscal original.
 
 ---
 

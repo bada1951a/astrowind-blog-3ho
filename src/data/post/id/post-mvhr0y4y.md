@@ -9,13 +9,9 @@ theme: "Deep Indigo System"
 ---
 
 
-Jam menunjukkan pukul 21.30 WIB di kawasan bisnis SCBD Jakart
+Jam menunjukkan pukul 21.30 WIB di kawasan bisnis SCBD Jakarta. AC sentral gedung kantor sudah mati sejak setengah jam lalu, sementara layar monitor saya menyala terang menampilkan rekap data tahunan yang berantakan total. Besok pagi, pukul 09.00 tepat, jajaran direksi akan meminta proyeksi arus kas dan grafik pemodelan finansial untuk rapat anggaran tahun depan. Masalahnya, rumus keuangan yang saya susun sejak sore mendadak *error* karena format sel dari divisi keuangan korporat tidak sinkron. Boro-boro interaktif, grafik bawaan Google Sheets malah terlihat kaku, jelek, dan membingungkan.
 
-a. AC sentral gedung kantor sudah mati sejak setengah jam lalu, sementara layar monitor saya menyala terang menampilkan rekap data tahunan yang berantakan total. Besok pagi, pukul 09.00 tepat, jajaran direksi akan meminta proyeksi arus kas dan grafik pemodelan finansial untuk rapat anggaran tahun depan. Masalahnya, rumus keuangan yang saya susun sejak sore mendadak *error* karena format sel dari divisi keuangan korporat tidak sinkron. Boro-boro interaktif, grafik bawaan Google Sheets malah terlihat kaku, jelek, dan membingungkan.
-
-Kalau Anda pernah berada di posisi terjepit seperti ini, buru-buru menyalin data secara manual jelas bukan solusi. Duduk termenung menatap kolom angka yang tidak berujung hanya akan membuang waktu berharg
-
-a. Mari kita bedah mengapa skenario seperti ini sering terjadi dan bagaimana cara membereskannya dalam hitungan menit menggunakan bantuan AI langsung di Google Sheets.
+Kalau Anda pernah berada di posisi terjepit seperti ini, buru-buru menyalin data secara manual jelas bukan solusi. Duduk termenung menatap kolom angka yang tidak berujung hanya akan membuang waktu berharga. Mari kita bedah mengapa skenario seperti ini sering terjadi dan bagaimana cara membereskannya dalam hitungan menit menggunakan bantuan AI langsung di Google Sheets.
 
 ![How to Create Interactive Financial Modeling Charts in Google Sheets with AI Suggestions AI Automation Guide](https://picsum.photos/seed/work-mvhr3i3u-10-b/1000/550.jpg)
 
@@ -35,11 +31,7 @@ Sebelum kita masuk ke solusi teknis, mari kita identifikasi tiga akar masalah ut
 
 ## Langkah-Langkah Membuat Grafik Finansial Interaktif dengan Bantuan AI
 
-Untuk mengatasi kebuntuan ini dengan cepat, kita akan menggunakan kombinasi fungsi pembersihan data, pemanfaatan panel Explore / AI Suggestion di Google Sheets, serta penambahan menu Dropdown interaktif untuk simulasi dat
-
-a.
-
-### Langkah 1: Bersihkan dan Strukturkan Tabel Finansial
+Untuk mengatasi kebuntuan ini dengan cepat, kita akan menggunakan kombinasi fungsi pembersihan data, pemanfaatan panel Explore / AI Suggestion di Google Sheets, serta penambahan menu Dropdown interaktif untuk simulasi data. ### Langkah 1: Bersihkan dan Strukturkan Tabel Finansial
 Pastikan data Anda tersusun dalam format kolom yang bersih. 
 * Baris pertama wajib diisi header yang jelas (Contoh: Bulan, Pendapatan, Biaya Operasional, Laba Bersih).
 * Hapus semua spasi tersembunyi atau karakter teks pada kolom angka menggunakan fungsi pembersihan teks seperti `VALUE()` atau pastikan format sel diset ke format mata uang atau angka murni.
@@ -52,11 +44,7 @@ Manfaatkan panel AI internal Google Sheets untuk mendapatkan rekomendasi grafik 
 
 3. Ketikkan perintah atau pertanyaan di kolom AI yang tersedia, seperti: *"Buat grafik tren laba bersih bulanan"* atau *"Tunjukkan korelasi antara pendapatan dan biaya"*.
 
-4. Google Sheets akan menampilkan saran visualisasi grafik terbaik secara otomatis. Pilih grafik yang paling mewakili skenario finansial Anda, lalu klik tombol sisipkan (*Insert*) untuk memasukkannya langsung ke lembar kerj
-
-a.
-
-### Langkah 3: Tambahkan Elemen Interaktif dengan Data Validation (Dropdown)
+4. Google Sheets akan menampilkan saran visualisasi grafik terbaik secara otomatis. Pilih grafik yang paling mewakili skenario finansial Anda, lalu klik tombol sisipkan (*Insert*) untuk memasukkannya langsung ke lembar kerja. ### Langkah 3: Tambahkan Elemen Interaktif dengan Data Validation (Dropdown)
 Agar grafik Anda tidak sekadar statis tapi bisa diubah-ubah variabelnya sesuai kebutuhan rapat:
 1. Buat sel kontrol interaktif, misalnya di sel F2, buat menu dropdown untuk memilih skenario (Skenario
 
@@ -78,13 +66,7 @@ a: klik kanan sel F2 > pilih Data validation > pilih jenis aturan Dropdown (from
 Ya, fitur Explore dan saran grafik dasar berbasis AI sudah tersedia secara gratis di dalam ekosistem Google Sheets untuk akun pribadi maupun Workspace standar.
 
 2. Bagaimana jika rumus saya tetap error saat dihubungkan ke grafik interaktif?
-Biasanya error terjadi karena sel kosong atau adanya teks "N/A" di tengah rentang data angk
-
-a. Gunakan fungsi `IFNA()` atau `IFERROR()` pada rumus rekap Anda agar sel yang kosong bernilai nol (0) dan grafik tetap bisa dirender dengan mulus.
+Biasanya error terjadi karena sel kosong atau adanya teks "N/A" di tengah rentang data angka. Gunakan fungsi `IFNA()` atau `IFERROR()` pada rumus rekap Anda agar sel yang kosong bernilai nol (0) dan grafik tetap bisa dirender dengan mulus.
 
 3. Bisakah grafik interaktif ini diekspor ke format presentasi seperti Google Slides atau PowerPoint?
-Sangat bis
-
-a. Cukup klik ikon titik tiga di sudut kanan atas grafik Anda di Google Sheets, pilih Publish chart atau Copy chart, lalu tempelkan ke slide presentasi And
-
-a. Pilih opsi "Link to spreadsheet" agar grafik otomatis terbarui jika data di Sheets berubah.
+Sangat bisa. Cukup klik ikon titik tiga di sudut kanan atas grafik Anda di Google Sheets, pilih Publish chart atau Copy chart, lalu tempelkan ke slide presentasi Anda. Pilih opsi "Link to spreadsheet" agar grafik otomatis terbarui jika data di Sheets berubah.

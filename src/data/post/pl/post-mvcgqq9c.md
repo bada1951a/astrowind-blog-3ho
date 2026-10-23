@@ -71,11 +71,7 @@ Mój plik Excel "raport.xlsx" zacina się przez nadmierne formatowanie warunkowe
 4. Zapisze wynik jako "raport_czysty.xlsx".
 ```
 
-Po uruchomieniu tego skryptu otrzymasz lekki, w pełni responsywny plik gotowy do wysłani
-
-a.
-
----
+Po uruchomieniu tego skryptu otrzymasz lekki, w pełni responsywny plik gotowy do wysłania. ---
 
 ## Ekspert radzi: Jak zapobiegać awariom w przyszłości?
 

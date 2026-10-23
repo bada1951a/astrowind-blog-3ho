@@ -27,11 +27,7 @@ Zanim przejdziemy do skutecznego rozwiązania, warto zrozumieć, dlaczego zwykł
 
 2. Niestandardowe układy tabel: Każdy dostawca ma inny wzór faktury. Automatyczne wykrywanie kolumn gubi się, gdy opis towaru przechodzi do następnej linii, a cena jednostkowa ląduje w kolumnie z ilością.
 
-3. Brak kontekstu walutowego i podatkowego: Zwykłe programy do odczytu tekstu widzą ciąg cyfr, ale nie rozróżniają kwoty netto, stawki VAT (np. 23%) oraz kwoty brutto, co powoduje totalny chaos w formułach arkusz
-
-a.
-
----
+3. Brak kontekstu walutowego i podatkowego: Zwykłe programy do odczytu tekstu widzą ciąg cyfr, ale nie rozróżniają kwoty netto, stawki VAT (np. 23%) oraz kwoty brutto, co powoduje totalny chaos w formułach arkusza. ---
 
 ## Krok po kroku: Jak przejść od skanu do czystego Excela
 
@@ -69,11 +65,7 @@ a:</strong> Aby uniknąć błędów w podsumowaniach, upewnij się, że kolumny 
 Jeśli pracujesz na dokumentach zawierających poufne dane klientów lub tajemnice przedsiębiorstwa, unikaj wrzucania ich do publicznych modeli AI w wersjach darmowych, które mogą uczyć się na Twoich danych. Korzystaj z narzędzi korporacyjnych zapewniających poufność lub lokalnych rozwiązań OCR wbudowanych w pakiety biurkowe (np. funkcje danych z obrazu w Excelu).
 
 ### Co zrobić, gdy AI przekręci nazwy specyficznych produktów lub specyficznych kodów kreskowych?
-Modele AI świetnie radzą sobie z językiem naturalnym, ale specyficzne kody magazynowe bywają trudne. Najlepszym sposobem jest dodanie do promptu słownika branżowego lub krótka korekta bezpośrednio po wklejeniu danych do Excela przy użyciu funkcji Filtr
-
-a.
-
-### Czy Excel ma wbudowane narzędzie do odczytu danych ze zdjęć?
+Modele AI świetnie radzą sobie z językiem naturalnym, ale specyficzne kody magazynowe bywają trudne. Najlepszym sposobem jest dodanie do promptu słownika branżowego lub krótka korekta bezpośrednio po wklejeniu danych do Excela przy użyciu funkcji Filtra. ### Czy Excel ma wbudowane narzędzie do odczytu danych ze zdjęć?
 Tak! W nowszych wersjach programu Excel (dla systemu Windows i Mac w ramach subskrypcji) w zakładce Dane znajdziesz opcję Z obrazu (Data from Picture). Narzędzie to automatycznie konwertuje zdjęcia tabel na żywe arkusze bez potrzeby korzystania z zewnętrznych stron internetowych.
 
 ---

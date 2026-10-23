@@ -21,9 +21,7 @@ a:</strong> Depender de extensões pagas para tarefas básicas do dia a dia corp
 
 Antes de montarmos a solução definitiva, vale a pena entender os três vilões clássicos que sabotam as planilhas financeiras nas empresas:
 
-1. O Custo Oculto dos Plugins de Terceiros: Ferramentas que prometem conversão mágica cobram mensalidades em dólar, exigem renovação de token constante e frequentemente param de funcionar após atualizações de segurança do navegador ou da própria planilh
-
-a.
+1. O Custo Oculto dos Plugins de Terceiros: Ferramentas que prometem conversão mágica cobram mensalidades em dólar, exigem renovação de token constante e frequentemente param de funcionar após atualizações de segurança do navegador ou da própria planilha.
 
 2. Links Frágeis com Web Scraping Amador: O uso excessivo da função IMPORTXML em sites de notícias para capturar cotações falha porque os portais mudam a estrutura HTML das páginas sem aviso prévio, gerando erros em cadeia nos relatórios gerenciais.
 
@@ -54,11 +52,7 @@ Na célula C2, insira a fórmula mágica nativ
 a:
 `=GOOGLEFINANCE(B2)`
 
-Arraste a fórmula para as células C3 e C4. Pronto! O Google Sheets buscará automaticamente a cotação oficial atualizada do mercado financeiro sem depender de nenhuma ferramenta extern
-
-a.
-
-### Passo 2: Criar a Tabela de Conversão Dinâmica na Aba Principal
+Arraste a fórmula para as células C3 e C4. Pronto! O Google Sheets buscará automaticamente a cotação oficial atualizada do mercado financeiro sem depender de nenhuma ferramenta externa. ### Passo 2: Criar a Tabela de Conversão Dinâmica na Aba Principal
 Na sua aba de relatórios mensais, digamos que você tenha a coluna D com os valores originais em moeda estrangeira e a coluna E indicando a moeda correspondente (USD, EUR, etc.).
 
 Para converter esses valores para Real (BRL) de forma automática e dinâmica, utilize a função PROCV combinada com o seu painel de parâmetros recém-criado. Na célula F2, insir
@@ -72,9 +66,7 @@ A2:C$4, 3, FALSO)`
 Essa fórmula identifica instantaneamente a moeda da linha, busca o fator de conversão atualizado na aba de parâmetros e multiplica pelo valor original, entregando o resultado exato em segundos.
 
 ### Passo 3: Configurar Atualização Automática e Alerta de Falhas
-Por padrão, o Google Sheets atualiza funções financieras automaticamente ao longo do di
-
-a. Para garantir que seu relatório reflita sempre o fechamento mais recente, vá em Arquivo > Configurações da planilha e, na aba Cálculo, ajuste a opção "Recalcular" para "A cada hora e a cada alteração".
+Por padrão, o Google Sheets atualiza funções financieras automaticamente ao longo do dia. Para garantir que seu relatório reflita sempre o fechamento mais recente, vá em Arquivo > Configurações da planilha e, na aba Cálculo, ajuste a opção "Recalcular" para "A cada hora e a cada alteração".
 
 <div style="border-left: 4px solid #3b82f6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Dica de Ouro:</strong> Para evitar que um erro temporário de conexão da API deixe sua célula em branco, envolva sua fórmula principal com a função SEERRO, exibindo a última taxa válida ou um aviso visual amigável: <code>=SEERRO(GOOGLEFINANCE(B2); "Verificar Conexão")</code>.

@@ -21,9 +21,7 @@ Laten we deze spreadsheet-chaos eens voor eens en voor al oplossen.
 
 ### Waarom je formules falen: De 3 root causes
 
-Voordat we de juiste formule erin schieten, moeten we begrijpen waarom het tot nu toe mislukte of waarom je vastloopt op rommelige dat
-
-a.
+Voordat we de juiste formule erin schieten, moeten we begrijpen waarom het tot nu toe mislukte of waarom je vastloopt op rommelige data.
 
 1. Vastzitten aan statische handmatige dat
 

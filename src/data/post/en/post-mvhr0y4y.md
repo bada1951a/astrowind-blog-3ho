@@ -18,9 +18,7 @@ That was the exact moment I stopped fighting native spreadsheet limitations and 
 Here is the exact battle-tested playbook I used to survive that afternoon, designed to save your sanity during your next high-stakes financial review.
 
 <div style="border-left: 4px solid #f97316; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Quick Productivity Win:</strong> Stop wasting time guessing which chart type fits your financial dat
-
-a. Let AI analyze your table structure first to recommend the exact metric-to-visual mapping that finance executives care about.
+<strong>Quick Productivity Win:</strong> Stop wasting time guessing which chart type fits your financial data. Let AI analyze your table structure first to recommend the exact metric-to-visual mapping that finance executives care about.
 </div>
 
 ---

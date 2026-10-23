@@ -14,9 +14,7 @@ Erano le 16:45 di un martedì pomeriggio nel nostro ufficio vicino a Piazza Gae 
 a: righe di proiezioni di cassa che non tornavano, tassi di crescita calcolati a mano con formule chilometriche e, ciliegina sulla torta, il grafico a barre principali che mostrava una proiezione piatta e incomprensibile. Il direttore finanziario mi aveva appena scritto su Slack: "Voglio vedere scenari dinamici, non le solite slide statiche". Mancavano quindici minuti. Copiare e incollare dati da Excel continuava a sballare i formati, e ogni volta che modificavo un'ipotesi sui ricavi, dovevo ricalcolare tutto a mano rischiando di fare una brutta figura davanti a tutti.
 
 <div style="border-left: 4px solid #bd93f9; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>L'emergenza in ufficio:</strong> Quando la scadenza si avvicina e i dati finanziari sono disordinati, il panico non aiut
-
-a. Smetti di ricalcolare le celle una per un
+<strong>L'emergenza in ufficio:</strong> Quando la scadenza si avvicina e i dati finanziari sono disordinati, il panico non aiuta. Smetti di ricalcolare le celle una per un
 
 a: Google Sheets e l'intelligenza artificiale possono generare grafici interattivi e suggerimenti strutturati in meno di tre minuti.
 </div>
@@ -44,9 +42,7 @@ Seleziona l'intera tabella del tuo bilancio o del piano finanziario. Vai nel men
 
 ### Passaggio 2: Creare menu a tendina dinamici per gli scenari (Best, Base, Worst)
 Per rendere il modello interattivo durante la presentazione al cliente, devi permettere a chiunque di cambiare scenario con un clic:
-1. Crea una cella di controllo (ad esempio, la cella B1) e inserisci un menu a tendina andando su Dati > Convalida dati > Aggiungi regol
-
-a.
+1. Crea una cella di controllo (ad esempio, la cella B1) e inserisci un menu a tendina andando su Dati > Convalida dati > Aggiungi regola.
 
 2. Imposta i criteri come "Elenco di elementi" e scrivi: `Base, Ottimistico, Pessimistico`.
 
@@ -78,11 +74,7 @@ Prima di condividere il link del foglio Google Sheets con il cliente esterno, ti
 
 - Proteggi i fogli di lavoro: Vai su Formato > Fogli e intervalli protetti per bloccare le celle con le formule di calcolo principali. In questo modo il cliente, navigando nel file durante la riunione, potrà modificare solo le celle dei menu a tendina degli scenari senza rischiare di cancellare formule vitali.
 - Privacy dei dati sensibili: Se utilizzi strumenti AI esterni collegati tramite estensioni di terze parti, assicurati che i dati finanziari aziendali non vengano utilizzati per addestrare modelli pubblici. Utilizza preferibilmente le funzioni native integrate direttamente nell'infrastruttura Google Workspace aziendale.
-- Copia di riserva offline: Fai sempre una copia di backup prima della riunione (`File > Crea una copia`). Se la connessione a Internet dovesse avere un calo improvviso durante la condivisione dello schermo a Milano, avrai una versione locale pronta per l'emergenz
-
-a.
-
-## Domande Frequenti (FAQ)
+- Copia di riserva offline: Fai sempre una copia di backup prima della riunione (`File > Crea una copia`). Se la connessione a Internet dovesse avere un calo improvviso durante la condivisione dello schermo a Milano, avrai una versione locale pronta per l'emergenza. ## Domande Frequenti (FAQ)
 
 ### Posso usare formule avanzate se non conosco la programmazione?
 Certamente. Non serve conoscere la programmazione o lo scripting avanzato. Le funzioni logiche di base come `SE`, `CERC

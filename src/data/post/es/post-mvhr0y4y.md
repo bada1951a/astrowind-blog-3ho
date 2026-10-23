@@ -31,26 +31,15 @@ Tras aquel susto matutino, me senté a analizar qué había fallado en mi flujo 
 
 a: Depender de gráficos circulares o de columnas tradicionales que no permiten filtrar escenarios o cambiar variables mediante controles deslizantes o menús desplegables.
 
-3. Resistencia a usar IA como asistente de fórmulas: Perder valiosas horas buscando en foros de ayuda la sintaxis exacta de funciones financieras complejas en lugar de delegar la generación inicial del código y las sugerencias visuales en la inteligencia artificial integrad
-
-a.
-
-## Guia paso a paso: Modelos financieros interactivos con IA en Google Sheets
+3. Resistencia a usar IA como asistente de fórmulas: Perder valiosas horas buscando en foros de ayuda la sintaxis exacta de funciones financieras complejas en lugar de delegar la generación inicial del código y las sugerencias visuales en la inteligencia artificial integrada. ## Guia paso a paso: Modelos financieros interactivos con IA en Google Sheets
 
 Para solucionar esto de una vez por todas, implementé un sistema basado en las herramientas nativas de Google Sheets combinadas con asistentes de IA (como Gemini para Workspace o complementos especializados). Aquí tienes el paso a paso exacto para montarlo en 10-15 min:
 
 ### Paso 1: Estructurar los datos base y limpiar la matriz
-Antes de tocar cualquier gráfico, asegúrate de que tu tabla financiera esté normalizad
-
-a. 
-* Crea una pestaña llamada "Datos_Base" con columnas limpias: Fecha, Categoría, Ingresos_Proyectados, Gastos_Reales y EBITD
+Antes de tocar cualquier gráfico, asegúrate de que tu tabla financiera esté normalizada. * Crea una pestaña llamada "Datos_Base" con columnas limpias: Fecha, Categoría, Ingresos_Proyectados, Gastos_Reales y EBITD
 
 A.
-* Evita mezclar celdas combinadas en las zonas de cálculo. Deja las celdas combinadas únicamente para los títulos estéticos de la cabecer
-
-a.
-
-### Paso 2: Invocar a la IA para generar fórmulas complejas de escenarios
+* Evita mezclar celdas combinadas en las zonas de cálculo. Deja las celdas combinadas únicamente para los títulos estéticos de la cabecera. ### Paso 2: Invocar a la IA para generar fórmulas complejas de escenarios
 En lugar de escribir funciones SI y BUSCARV anidadas que suelen fallar, utiliza el panel lateral de IA en Google Sheets o pídele un prompt estructurado. Por ejemplo, introduce este comando en tu asistente:
 
 > "Actúa como experto financiero. Dame una fórmula para la celda E2 de Google Sheets que calcule el flujo de caja descontado basándose en una tasa de descuento en la celda B1 y un rango de flujos en E5 hasta E12, asegurando que si hay celdas vacías devuelva cero en lugar de error."

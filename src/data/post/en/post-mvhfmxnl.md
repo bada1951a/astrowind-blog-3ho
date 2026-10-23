@@ -100,9 +100,7 @@ A: Absolutely. Excel's Forecast Sheet feature and AI models can easily process d
 
 Q2: What should I do if the AI-generated forecast seems unrealistically high?
 
-A: This usually happens when a massive one-off promotional spike or holiday anomaly skews the historical training dat
-
-a. Go back to your source table, identify outlier months, normalize those specific data points, and regenerate your forecast sheet.
+A: This usually happens when a massive one-off promotional spike or holiday anomaly skews the historical training data. Go back to your source table, identify outlier months, normalize those specific data points, and regenerate your forecast sheet.
 
 ###
 

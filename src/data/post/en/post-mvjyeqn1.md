@@ -47,9 +47,7 @@ A2:A100 into actual numbers, and calculate total overtime over 40 hours.
 ```
 
 #### Step 2: Apply the Battle-Tested Formula
-The AI will typically hand you a bulletproof array or helper column formul
-
-a. To fix text numbers instantly without touching the original column, create a adjacent helper column (e.g., Column B) and paste this clean formul
+The AI will typically hand you a bulletproof array or helper column formula. To fix text numbers instantly without touching the original column, create a adjacent helper column (e.g., Column B) and paste this clean formul
 
 a:
 
@@ -94,9 +92,7 @@ Always maintain a raw data backup sheet before running global Find & Replace or 
 
 Q1. Why doesn't changing the cell format from Text to Number fix my SUM formula immediately?
 
-A1.Excel only evaluates formatting changes for newly typed dat
-
-a. Existing cells locked in text mode retain their string property until you explicitly force a recalculation, edit the cell individually, or pass them through a conversion function like `VALUE`.
+A1.Excel only evaluates formatting changes for newly typed data. Existing cells locked in text mode retain their string property until you explicitly force a recalculation, edit the cell individually, or pass them through a conversion function like `VALUE`.
 
 Q2. Can I fix this entire column at once without creating a helper column?
 

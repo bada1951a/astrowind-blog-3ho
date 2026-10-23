@@ -9,9 +9,7 @@ theme: "Mint Fresh Engineering"
 ---
 
 
-Đồng hồ trên góc phải màn hình máy tính vừa điểm 17:15 chiều thứ Sáu tại văn phòng ở quận 1, TP.HCM. Sếp lớn vừa ném vào group chat một file Google Sheets chứa hàng chục nghìn dòng dữ liệu khách hàng lộn xộn: số điện thoại lúc có dấu cộng, lúc có khoảng trắng, mã đơn hàng dính chùm các ký tự đặc biệt, và email thì viết hoa viết thường lung tung. Hạn chót gửi báo cáo tổng hợp cho ban giám đốc là 17:45 trước giờ tan c
-
-a. Nhìn đống dữ liệu đó, bạn có cảm giác như mình đang phải mò kim đáy bể với mớ hàm `REGEXREPLACE`, `INDEX/MATCH` hay `QUERY` lằng nhằng mà từ trước đến nay mình chỉ toàn dùng mấy hàm cơ bản như `SUM` hay `VLOOKUP`.
+Đồng hồ trên góc phải màn hình máy tính vừa điểm 17:15 chiều thứ Sáu tại văn phòng ở quận 1, TP.HCM. Sếp lớn vừa ném vào group chat một file Google Sheets chứa hàng chục nghìn dòng dữ liệu khách hàng lộn xộn: số điện thoại lúc có dấu cộng, lúc có khoảng trắng, mã đơn hàng dính chùm các ký tự đặc biệt, và email thì viết hoa viết thường lung tung. Hạn chót gửi báo cáo tổng hợp cho ban giám đốc là 17:45 trước giờ tan ca. Nhìn đống dữ liệu đó, bạn có cảm giác như mình đang phải mò kim đáy bể với mớ hàm `REGEXREPLACE`, `INDEX/MATCH` hay `QUERY` lằng nhằng mà từ trước đến nay mình chỉ toàn dùng mấy hàm cơ bản như `SUM` hay `VLOOKUP`.
 
 Trước đây, trong những tình huống khẩn cấp như thế này, ai cũng sẽ cặm cụi Google tìm kiếm từng dòng hướng dẫn rời rạc trên StackOverflow, copy paste từng đoạn code mẫu rồi sửa đi sửa lại đến khi Google Sheets báo lỗi `#VALUE!` hoặc `#N/A` thì mặt cắt không còn giọt máu. Việc tự mày mò viết biểu thức chính quy (Regex) thủ công để lọc dữ liệu thực sự là một cực hình đối với những ai không phải dân lập trình chuyên nghiệp.
 

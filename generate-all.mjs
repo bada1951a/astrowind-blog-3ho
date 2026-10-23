@@ -41,21 +41,29 @@ function getKstPublishDateIso(index) {
 }
 
 // =========================================================================
-// [초경량 고속 정제 함수] 볼드 제거 및 다국어 문장/번호 붙음 완전 방어
+// [Uburyo bwizewe bwo gusukura inyandiko] 단어 쪼개짐 방지 및 완벽한 개행
 // =========================================================================
 function sanitizeMarkdownFormatting(content) {
+  let cleaned = content;
+
   // 1) Gukuraho ibimenyetso byose bya bold (**)
-  let cleaned = content.replace(/\*\*/g, '');
+  cleaned = cleaned.replace(/\*\*/g, '');
 
-  // 2) Gushyiramo umwanya nyuma y'ikimenyetso cy'ikibazo (?) niba inyuguti ikurikiyeho yegeranye
-  cleaned = cleaned.replace(/\?([A-Za-z\u00C0-\u024F\u1EA0-\u1EF9])/g, '? $1');
+  // 2) Gutandukanya ibimenyetso by'Icyesipanyoli (¿, ¡) n'utudomo tubanza
+  cleaned = cleaned.replace(/([.?!])\s*([¿¡])/g, '$1\n\n$2');
 
-  // 3) Gutandukanya interuro n'umubare w'urutonde ukurikiyeho (urugero: "끝.2. 시작" -> "끝.\n\n2. 시작")
-  cleaned = cleaned.replace(/([.?!])\s*([0-9]+\.\s+)/g, '$1\n\n$2');
+  // 3) Gushyiramo umwanya nyuma y'ikibazo (?) niba kigiye ku magambo
+  cleaned = cleaned.replace(/\?([A-Za-z\u00C0-\u024F\u1EA0-\u1EF9가-힣])/g, '? $1');
 
-  // 4) Gutunganya Q na A hamwe n'imitwe y'ibibazo mu zindi ndimi (D:, R:, Domande)
-  cleaned = cleaned.replace(/([^\n])\s*(Q[1-9]\.|R[1-9]\.|A[1-9]\.|D[1-9]\.)/g, '$1\n\n$2');
-  cleaned = cleaned.replace(/([.?!])\s*(Q[0-9]*\.|D:|R:|Risposta|Domande)/gi, '$1\n\n$2');
+  // 4) Gukata imirongo ibiri gusa ku nyuguti nkuru Q/A (ntikore ku nyuguti nto a.)
+  cleaned = cleaned.replace(/\?\s*([QA][0-9]*\s*[:.])/g, '?\n\n$1');
+
+  // 5) Gukata imirongo ibiri nyuma y'utudomo n'urutonde rw'imibare (1., 2.)
+  cleaned = cleaned.replace(/([.!])\s*([QA][0-9]*\s*[:.]|[0-9]+\.\s+)/g, '$1\n\n$2');
+
+  // 6) Gutunganya imitwe y'ibibazo n'ibisubizo mu buryo butekanye
+  cleaned = cleaned.replace(/([^\n])\s+([QA][0-9]*\s*[:.])/g, '$1\n\n$2');
+  cleaned = cleaned.replace(/([.!])\s*(D:|R:|Risposta|Domande)/gi, '$1\n\n$2');
 
   return cleaned;
 }
@@ -163,7 +171,6 @@ const TARGET_LANGS = [
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 const fileSlug = `post-${Date.now().toString(36)}`;
 
-// Gukoresha igihe gito cyo gutegereza kugira ngo bitica umuvuduko (5s aho kuba 20s)
 async function fetchWithRetry(prompt, maxRetries = 5, delayMs = 5000) {
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
@@ -317,7 +324,7 @@ theme: "${selectedTheme.name}"
       frontmatter = frontmatter.replace(/publishDate:\s*[^\n\r]+/i, `publishDate: ${pubDateIso}`);
       frontmatter = frontmatter.replace(/image:\s*["'][^"']*["']/i, `image: '${coverUrl}'`);
 
-      // Gusukura neza amakosa y'inyandiko (formatting)
+      // Gusukura neza amakosa y'inyandiko
       body = sanitizeMarkdownFormatting(body);
 
       const safeAlt = currentTopic.replace(/[\[\]\(\)"']/g, '').trim();
@@ -363,7 +370,6 @@ async function run() {
   for (let i = 0; i < TARGET_LANGS.length; i++) {
     const isSuccess = await generateSinglePost(TARGET_LANGS[i], i);
     if (isSuccess) successCount++;
-    // Igihe cyo gutegereza hagati y'indimi cyagabanijwe kugera kuri 2s
     if (i < TARGET_LANGS.length - 1) {
       await delay(2000);
     }

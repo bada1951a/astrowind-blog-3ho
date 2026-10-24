@@ -41,28 +41,28 @@ function getKstPublishDateIso(index) {
 }
 
 // =========================================================================
-// [Uburyo bwizewe bwo gusukura inyandiko] 단어 쪼개짐 방지 및 완벽한 개행
+// [최종 안정형 마크다운 정제 함수] 볼드 보존 + Q&A 개행 완벽 방어
 // =========================================================================
 function sanitizeMarkdownFormatting(content) {
   let cleaned = content;
 
-  // 1) Gukuraho ibimenyetso byose bya bold (**)
-  cleaned = cleaned.replace(/\*\*/g, '');
+  // 1) Gukuraho ibimenyetso by'umubyimba biri ku mitwe y'inyandiko (#)
+  cleaned = cleaned.replace(/^(#{1,6}\s*)\*\*(.*?)\*\*/gm, '$1$2');
 
-  // 2) Gutandukanya ibimenyetso by'Icyesipanyoli (¿, ¡) hatarebwe ku mibare y'urutonde (1., 2.)
-  cleaned = cleaned.replace(/([^0-9][.?!])\s*([¿¡])/g, '$1\n\n$2');
+  // 2) Kurinda ko imitwe ya Q&A ifatana: **Q1:**, **A1:** n'ibindi bibone imirongo ibiri
+  cleaned = cleaned.replace(/([^\n])\s*(\*\*?[QA][0-9]*\s*[:.]\*\*?)/gi, '$1\n\n$2');
 
-  // 3) Gushyiramo umwanya nyuma y'ikibazo (?) niba kigiye ku magambo
+  // 3) Gutandukanya imitwe ya Q&A isanzwe itari mu mubyimba
+  cleaned = cleaned.replace(/([^\n])\s+([QA][0-9]*\s*[:.])/g, '$1\n\n$2');
+
+  // 4) Gutandukanya ibimenyetso byo gusoza interuro (.!?) n'ibibazo cyangwa urutonde (1., 2.)
+  cleaned = cleaned.replace(/([.!?])\s*(\*\*?[QA][0-9]*\s*[:.]\*\*?|[0-9]+\.\s+)/gi, '$1\n\n$2');
+
+  // 5) Gushyiramo umwanya nyuma y'ikibazo (?) niba kigiye ku magambo
   cleaned = cleaned.replace(/\?([A-Za-z\u00C0-\u024F\u1EA0-\u1EF9가-힣])/g, '? $1');
 
-  // 4) Gukata imirongo ibiri gusa ku nyuguti nkuru Q/A (ntikore ku nyuguti nto a.)
-  cleaned = cleaned.replace(/\?\s*([QA][0-9]*\s*[:.])/g, '?\n\n$1');
-
-  // 5) Gukata imirongo ibiri nyuma y'utudomo n'urutonde rw'imibare (1., 2.)
-  cleaned = cleaned.replace(/([.!])\s*([QA][0-9]*\s*[:.]|[0-9]+\.\s+)/g, '$1\n\n$2');
-
-  // 6) Gutunganya imitwe y'ibibazo n'ibisubizo mu buryo butekanye
-  cleaned = cleaned.replace(/([^\n])\s+([QA][0-9]*\s*[:.])/g, '$1\n\n$2');
+  // 6) Gutandukanya ibimenyetso by'indimi z'amahanga nka Spanish
+  cleaned = cleaned.replace(/([^0-9][.?!])\s*([¿¡])/g, '$1\n\n$2');
   cleaned = cleaned.replace(/([.!])\s*(D:|R:|Risposta|Domande)/gi, '$1\n\n$2');
 
   return cleaned;
@@ -165,7 +165,7 @@ const TARGET_LANGS = [
   { code: 'nl', name: 'Dutch', persona: 'Nederlandse productiviteits- en AI-specialist die slimme werkmethoden uitlegt', osUi: 'Bestand > Opties, Gegevens > Power Query, Formules, Invoegtoepassingen', localeContext: 'Zuidas zakendistrict in Amsterdam' },
   { code: 'pl', name: 'Polish', persona: 'Polski ekspert od automatyzacji biurowej i narzędzi AI tłumaczący triki krok po kroku', osUi: 'Plik > Opcje, Dane > Power Query, Formuły, Dodatki', localeContext: 'Warszawskie centrum biznesowe' },
   { code: 'id', name: 'Indonesian', persona: 'Praktisi produktivitas dan otomatisasi kantor yang berbagi solusi praktis sehari-hari', osUi: 'File > Opsi, Data > Power Query, Rumus, Add-in', localeContext: 'Kawasan bisnis SCBD Jakarta' },
-  { code: 'vi', name: 'Vietnamese', persona: 'Chuyên viên tối ưu hóa quy trình làm việc và công cụ AI thực chiến', osUi: 'Tệp > Tùy chọn, Dữ liệu > Power Query, Công thức, Tiện ích bổ sung', localeContext: 'Tòa nhà văn phòng trung tâm tại TP.HCM / Hà Nội' }
+  { code: 'vi', name: 'Vietnamese', persona: 'Chuyên viên tối ưu hóa quy trình làm việc 및 công cụ AI thực chiến', osUi: 'Tệp > Tùy chọn, Dữ liệu > Power Query, Công thức, Tiện ích bổ sung', localeContext: 'Tòa nhà văn phòng trung tâm tại TP.HCM / Hà Nội' }
 ];
 
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
@@ -238,11 +238,20 @@ ${currentTopic}
 - ABSOLUTELY FORBIDDEN: Do NOT default to a generic "meeting in 15 minutes" trope. Adapt the specific incident naturally into the local daily office culture of ${lang.name}.
 
 [STRICT MARKDOWN & FORMATTING RULES - NO RENDERING GLITCHES]
-1. BOLD FORMATTING RULE:
-    - Absolutely DO NOT use markdown bold asterisks anywhere in the body text or FAQ. Keep all text in plain standard format.
-2. COMMANDS & FORMULAS / CODE BLOCKS:
+1. HEADINGS & STRUCTURE (MANDATORY):
+    - You MUST use clear markdown headings (## for major sections, ### for subsections) for every section:
+      * ## 1. [Opening Story/Problem]
+      * ## 2. [Root Cause Breakdown]
+      * ## 3. [Step-by-Step Resolution]
+      * ## 4. [Expert Advice]
+      * ## 5. Frequently Asked Questions
+    - NEVER put markdown asterisks inside headings. Keep clean headings like "## 2. Root Cause Breakdown".
+2. BOLD FORMATTING RULE:
+    - Use markdown bold (**) naturally and moderately ONLY for key action words, formulas, UI buttons, or core technical terms.
+    - NEVER bold an entire sentence or overuse bold on every phrase.
+3. COMMANDS & FORMULAS / CODE BLOCKS:
     - Always wrap long formulas, scripts, or terminal commands in standard 3-backtick code blocks (\`\`\`excel, \`\`\`python, or \`\`\`bash) so they never overflow horizontally on mobile screens.
-3. NO LATEX & NO TILDE:
+4. NO LATEX & NO TILDE:
     - ABSOLUTELY FORBIDDEN: NEVER use LaTeX math delimiters ($ or $$). Write plain text formulas (e.g., "A1 * B1").
     - ABSOLUTELY FORBIDDEN: NEVER use tilde (~) for ranges. Always use a hyphen (e.g., "10-20%").
 
@@ -271,7 +280,8 @@ ${currentTopic}
     - Use official local software UI terminology matching: "${lang.osUi}".
     - Provide exact clicks, copy-pasteable formulas, prompts, or setting steps.
 4. Expert Warning / Advice: Practical precautions regarding data privacy, backup, or error prevention.
-5. Frequently Asked Questions (FAQ): Exactly 3 realistic, high-value Q&As that everyday users would ask. (CRITICAL: Every Q and A must start on a fresh new line without markdown bolding like Q1. ... and A1.).
+5. Frequently Asked Questions (FAQ): Exactly 3 realistic, high-value Q&As that everyday users would ask.
+   * CRITICAL: Every single Question (Q) and Answer (A) MUST start on its own separate new line, separated by an empty blank line. Never run Q and A together.
 
 [Length & Richness Rules]
 - Korean (ko): Minimum 2,500 characters of rich, deep, non-repetitive text.
@@ -324,7 +334,7 @@ theme: "${selectedTheme.name}"
       frontmatter = frontmatter.replace(/publishDate:\s*[^\n\r]+/i, `publishDate: ${pubDateIso}`);
       frontmatter = frontmatter.replace(/image:\s*["'][^"']*["']/i, `image: '${coverUrl}'`);
 
-      // Gusukura neza amakosa y'inyandiko
+      // Gusukura neza amakosa y'inyandiko (Gukomeza umubyimba no kurinda Q&A)
       body = sanitizeMarkdownFormatting(body);
 
       const safeAlt = currentTopic.replace(/[\[\]\(\)"']/g, '').trim();

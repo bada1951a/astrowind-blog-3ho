@@ -41,27 +41,147 @@ function getKstPublishDateIso(index) {
 }
 
 // =========================================================================
-// [최종 안정형 마크다운 정제 함수] 볼드 보존 + Q&A 개행 완벽 방어
+// [3호기 전용] 12개국 100% 현지어 섹션 제목 및 치환 딕셔너리
 // =========================================================================
-function sanitizeMarkdownFormatting(content) {
-  let cleaned = content;
+const I18N_SECTIONS = {
+  ko: {
+    s1: "1. 직장인 멘붕 오는 업무 병목 돌발 상황",
+    s2: "2. 수식 에러 및 자동화 실패의 진짜 핵심 원인",
+    s3: "3. 1분 만에 끝내는 단계별 실무 해결법",
+    s4: "4. 현직 자동화 전문가의 핵심 주의사항 및 팁",
+    s5: "5. 자주 묻는 질문 (FAQ)",
+    tags: ["업무자동화", "엑셀팁", "생산성도구", "오피스꿀팁"]
+  },
+  en: {
+    s1: "1. Critical Workplace Bottleneck Emergency",
+    s2: "2. Root Cause Breakdown of Formula and Workflow Errors",
+    s3: "3. Step-by-Step Practical Productivity Resolution",
+    s4: "4. Professional Automation Expert Precautions & Tips",
+    s5: "5. Frequently Asked Questions (FAQ)",
+    tags: ["Workflow", "Automation", "Excel Tips", "Office Productivity"]
+  },
+  ja: {
+    s1: "1. 職場で冷や汗をかいた業務停止トラブル",
+    s2: "2. 数式エラーと自動化トラブルの根本原因",
+    s3: "3. 1分で完了する実践的な業務効率化手順",
+    s4: "4. 現役自動化専門家が教える注意点とコツ",
+    s5: "5. よくある質問 (FAQ)",
+    tags: ["業務効率化", "エクセル時短", "自動化ツール", "オフィスハック"]
+  },
+  de: {
+    s1: "1. Kritische Fehlersituation im Büroalltag",
+    s2: "2. Detaillierte Ursachenanalyse von Formel- und Prozessfehlern",
+    s3: "3. Schritt-für-Schritt-Anleitung zur Effizienzsteigerung",
+    s4: "4. Praxistipps und Warnungen vom Automatisierungs-Experten",
+    s5: "5. Häufig gestellte Fragen (FAQ)",
+    tags: ["Automatisierung", "Excel-Tipps", "Produktivität", "Büro-Tools"]
+  },
+  fr: {
+    s1: "1. Situation d'urgence critique au bureau",
+    s2: "2. Analyse approfondie des erreurs de formule et de processus",
+    s3: "3. Guide étape par étape pour automatiser et résoudre l'erreur",
+    s4: "4. Conseils et précautions d'un expert en automatisation",
+    s5: "5. Foire Aux Questions (FAQ)",
+    tags: ["Automatisation", "Astuces Excel", "Productivité", "Outils Bureautiques"]
+  },
+  es: {
+    s1: "1. Emergencia crítica en el trabajo y bloqueo de tareas",
+    s2: "2. Análisis de causas raíz de errores de fórmulas y flujo",
+    s3: "3. Solución práctica paso a paso para optimizar el flujo",
+    s4: "4. Consejos y advertencias de un experto en productividad",
+    s5: "5. Preguntas Frecuentes (FAQ)",
+    tags: ["Automatización", "Consejos Excel", "Productividad", "Herramientas Oficina"]
+  },
+  it: {
+    s1: "1. Emergenza improvvisa e blocco delle attività in ufficio",
+    s2: "2. Analisi approfondita degli errori di formula e di processo",
+    s3: "3. Guida pratica di risoluzione e ottimizzazione passo dopo passo",
+    s4: "4. Avvertenze e raccomandazioni dell'esperto di automazione",
+    s5: "5. Domande Frequenti (FAQ)",
+    tags: ["Automazione", "Trucchi Excel", "Produttività", "Strumenti Ufficio"]
+  },
+  pt: {
+    s1: "1. Situação de emergência e gargalo crítico no escritório",
+    s2: "2. Análise da causa raiz de falhas de fórmula e processos",
+    s3: "3. Guia prático passo a passo para automação e produtividade",
+    s4: "4. Recomendações e alertas de especialistas em automação",
+    s5: "5. Perguntas Frequentes (FAQ)",
+    tags: ["Automação", "Dicas Excel", "Produtividade", "Rotina de Escritório"]
+  },
+  nl: {
+    s1: "1. Noodsituatie en knelpunt op de werkvloer",
+    s2: "2. Grondige analyse van formulefouten en werkstroomproblemen",
+    s3: "3. Stapsgewijze praktische automatiseringsoplossing",
+    s4: "4. Belangrijke adviezen van automatiseringsspecialisten",
+    s5: "5. Veelgestelde Vragen (FAQ)",
+    tags: ["Automatisering", "Excel Tips", "Productiviteit", "Kantoortools"]
+  },
+  pl: {
+    s1: "1. Awaryjna sytuacja i paraliż pracy w biurze",
+    s2: "2. Szczegółowa analiza przyczyn błędów formuł i procesów",
+    s3: "3. Praktyczne rozwiązanie automatyzujące krok po kroku",
+    s4: "4. Wskazówki i ostrzeżenia eksperta ds. automatyzacji",
+    s5: "5. Najczęściej zadawane pytania (FAQ)",
+    tags: ["Automatyzacja", "Triki Excel", "Produktywność", "Narzędzia Biurowe"]
+  },
+  id: {
+    s1: "1. Situasi Kritis dan Hambatan Kerja Mendesak di Kantor",
+    s2: "2. Analisis Mendalam Akar Masalah Formula dan Alur Kerja",
+    s3: "3. Panduan Langkah demi Langkah Otomatisasi dan Solusi Cepat",
+    s4: "4. Tips & Peringatan Penting Pakar Otomatisasi Kantor",
+    s5: "5. Pertanyaan yang Sering Diajukan (FAQ)",
+    tags: ["Otomatisasi", "Tips Excel", "Produktivitas", "Solusi Kerja"]
+  },
+  vi: {
+    s1: "1. Tình huống sự cố khẩn cấp và tắc nghẽn công việc văn phòng",
+    s2: "2. Phân tích nguyên nhân gốc rễ lỗi công thức và luồng xử lý",
+    s3: "3. Các bước khắc phục và tối ưu hóa quy trình thực tế",
+    s4: "4. Lời khuyên và cảnh báo quan trọng từ chuyên gia tối ưu",
+    s5: "5. Các câu hỏi thường gặp (FAQ)",
+    tags: ["Tự Động Hóa", "Mẹo Excel", "Năng Suất", "Tin Học Văn Phòng"]
+  }
+};
 
-  // 1) Gukuraho ibimenyetso by'umubyimba biri ku mitwe y'inyandiko (#)
+// =========================================================================
+// [최종 안정형 마크다운 정제 함수] 볼드 복구 + 영문 템플릿 강제 박멸
+// =========================================================================
+function sanitizeMarkdownFormatting(content, langCode) {
+  let cleaned = content;
+  const i18n = I18N_SECTIONS[langCode] || I18N_SECTIONS.ko;
+
+  // 1) AI가 출력한 영문 대괄호 템플릿 및 기본 헤더를 12개국 현지 언어로 100% 강제 치환
+  cleaned = cleaned.replace(/^#{1,3}\s*1\.?\s*(\[Opening Story.*?\]|Opening Story.*?)/gmi, `## ${i18n.s1}`);
+  cleaned = cleaned.replace(/^#{1,3}\s*2\.?\s*(\[Root Cause.*?\]|Root Cause.*?)/gmi, `## ${i18n.s2}`);
+  cleaned = cleaned.replace(/^#{1,3}\s*3\.?\s*(\[Step-by-Step.*?\]|Step-by-Step.*?)/gmi, `## ${i18n.s3}`);
+  cleaned = cleaned.replace(/^#{1,3}\s*4\.?\s*(\[Expert.*?\]|Expert.*?)/gmi, `## ${i18n.s4}`);
+  cleaned = cleaned.replace(/^#{1,3}\s*5\.?\s*(\[Frequently Asked Questions.*?\]|Frequently Asked Questions.*?|FAQ)/gmi, `## ${i18n.s5}`);
+
+  // 헤딩(#) 없이 텍스트 번호로 박힌 영문 템플릿도 헤딩 포함 현지어로 강제 변환
+  cleaned = cleaned.replace(/^1\.\s*\[Opening Story.*?\]/gmi, `## ${i18n.s1}`);
+  cleaned = cleaned.replace(/^2\.\s*\[Root Cause.*?\]/gmi, `## ${i18n.s2}`);
+  cleaned = cleaned.replace(/^3\.\s*\[Step-by-Step.*?\]/gmi, `## ${i18n.s3}`);
+  cleaned = cleaned.replace(/^4\.\s*\[Expert.*?\]/gmi, `## ${i18n.s4}`);
+  cleaned = cleaned.replace(/^5\.\s*(Frequently Asked Questions|\[Frequently Asked Questions\])/gmi, `## ${i18n.s5}`);
+
+  // 잔여 영문 태그 찌꺼기 완벽 제거
+  cleaned = cleaned.replace(/\[(Opening Story\/Problem|Root Cause Breakdown|Step-by-Step Resolution|Expert Advice)\]/gi, '');
+
+  // 2) 소제목 헤딩(#)에 묻은 불필요한 볼드 기호 정제 (### **제목** -> ### 제목)
   cleaned = cleaned.replace(/^(#{1,6}\s*)\*\*(.*?)\*\*/gm, '$1$2');
 
-  // 2) Kurinda ko imitwe ya Q&A ifatana: **Q1:**, **A1:** n'ibindi bibone imirongo ibiri
+  // 3) 볼드(**) 기호 깨짐 교정: 단어와 ** 사이에 붙은 공백 및 인접 문자 표준화
+  cleaned = cleaned.replace(/\*\*\s+([^\*]+?)\s+\*\*/g, '**$1**');
+  cleaned = cleaned.replace(/([가-힣a-zA-Z0-9])\*\*([가-힣a-zA-Z0-9])/g, '$1 **$2');
+
+  // 4) Q&A 줄바꿈 및 볼드 보호: Q와 A는 무조건 빈 줄 2개로 분리
   cleaned = cleaned.replace(/([^\n])\s*(\*\*?[QA][0-9]*\s*[:.]\*\*?)/gi, '$1\n\n$2');
-
-  // 3) Gutandukanya imitwe ya Q&A isanzwe itari mu mubyimba
   cleaned = cleaned.replace(/([^\n])\s+([QA][0-9]*\s*[:.])/g, '$1\n\n$2');
+  cleaned = cleaned.replace(/([.!?])\s*(\*\*?[QA][0-9]*\s*[:.]\*\*?)/gi, '$1\n\n$2');
 
-  // 4) Gutandukanya ibimenyetso byo gusoza interuro (.!?) n'ibibazo cyangwa urutonde (1., 2.)
-  cleaned = cleaned.replace(/([.!?])\s*(\*\*?[QA][0-9]*\s*[:.]\*\*?|[0-9]+\.\s+)/gi, '$1\n\n$2');
-
-  // 5) Gushyiramo umwanya nyuma y'ikibazo (?) niba kigiye ku magambo
+  // 5) 물음표 뒤 띄어쓰기 누락 보정
   cleaned = cleaned.replace(/\?([A-Za-z\u00C0-\u024F\u1EA0-\u1EF9가-힣])/g, '? $1');
 
-  // 6) Gutandukanya ibimenyetso by'indimi z'amahanga nka Spanish
+  // 6) 다국어 특수기호 분리
   cleaned = cleaned.replace(/([^0-9][.?!])\s*([¿¡])/g, '$1\n\n$2');
   cleaned = cleaned.replace(/([.!])\s*(D:|R:|Risposta|Domande)/gi, '$1\n\n$2');
 
@@ -156,7 +276,7 @@ const THEME_PRESETS = [
 const TARGET_LANGS = [
   { code: 'ko', name: 'Korean', persona: '친절하고 경험 많은 엑셀/AI 자동화 실무 전문가 (사내 칼퇴 치트키 장인)', osUi: '파일 > 옵션, 데이터 > 파워 쿼리, 수식 탭, 확장 프로그램', localeContext: '서울/판교 IT 기업 및 대기업 오피스' },
   { code: 'en', name: 'English', persona: 'Friendly Silicon Valley productivity specialist sharing no-code and AI shortcuts', osUi: 'File > Options, Data > Power Query, Formula Tab, Add-ons', localeContext: 'Silicon Valley tech firm / NYC corporate finance office' },
-  { code: 'ja', name: 'Japanese', persona: '業務効率化とAIツール活用を分かりやすく教える日本の現役ITワーカー', osUi: 'ファイル > オプション, 데이터 > パワークエリ, 数式タブ, 拡張機能', localeContext: '丸の内・品川のビジネスオフィス' },
+  { code: 'ja', name: 'Japanese', persona: '業務効率化とAIツール活用を分かりやすく教える日本の現役ITワーカー', osUi: 'ファイル > オプション, データ > パワークエリ, 数式タブ, 拡張機能', localeContext: '丸の内・品川のビジネスオフィス' },
   { code: 'de', name: 'German', persona: 'Praxisnaher deutscher Automatisierungs-Experte für Office- und KI-Tools', osUi: 'Datei > Optionen, Daten > Power Query, Formeln, Add-Ins', localeContext: 'Frankfurter Finanzdistrikt und Industrieunternehmen' },
   { code: 'fr', name: 'French', persona: 'Spécialiste support bureautique et IA expliquant les astuces de productivité', osUi: 'Fichier > Options, Données > Power Query, Formules, Extensions', localeContext: 'Siège d\'entreprise à Paris La Défense' },
   { code: 'es', name: 'Spanish', persona: 'Especialista en productividad y automatización que explica trucos prácticos sin rodeos', osUi: 'Archivo > Opciones, Datos > Power Query, Fórmulas, Complementos', localeContext: 'Oficina corporativa en Madrid y centros de negocio' },
@@ -165,18 +285,25 @@ const TARGET_LANGS = [
   { code: 'nl', name: 'Dutch', persona: 'Nederlandse productiviteits- en AI-specialist die slimme werkmethoden uitlegt', osUi: 'Bestand > Opties, Gegevens > Power Query, Formules, Invoegtoepassingen', localeContext: 'Zuidas zakendistrict in Amsterdam' },
   { code: 'pl', name: 'Polish', persona: 'Polski ekspert od automatyzacji biurowej i narzędzi AI tłumaczący triki krok po kroku', osUi: 'Plik > Opcje, Dane > Power Query, Formuły, Dodatki', localeContext: 'Warszawskie centrum biznesowe' },
   { code: 'id', name: 'Indonesian', persona: 'Praktisi produktivitas dan otomatisasi kantor yang berbagi solusi praktis sehari-hari', osUi: 'File > Opsi, Data > Power Query, Rumus, Add-in', localeContext: 'Kawasan bisnis SCBD Jakarta' },
-  { code: 'vi', name: 'Vietnamese', persona: 'Chuyên viên tối ưu hóa quy trình làm việc 및 công cụ AI thực chiến', osUi: 'Tệp > Tùy chọn, Dữ liệu > Power Query, Công thức, Tiện ích bổ sung', localeContext: 'Tòa nhà văn phòng trung tâm tại TP.HCM / Hà Nội' }
+  { code: 'vi', name: 'Vietnamese', persona: 'Chuyên viên tối ưu hóa quy trình làm việc và công cụ AI thực chiến', osUi: 'Tệp > Tùy chọn, Dữ liệu > Power Query, Công thức, Tiện ích bổ sung', localeContext: 'Tòa nhà văn phòng trung tâm tại TP.HCM / Hà Nội' }
 ];
 
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 const fileSlug = `post-${Date.now().toString(36)}`;
 
+// =========================================================================
+// [영구 고정] gemini-3.5-flash-lite + maxOutputTokens: 8192 상한 잠금
+// =========================================================================
 async function fetchWithRetry(prompt, maxRetries = 5, delayMs = 5000) {
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
       const response = await ai.models.generateContent({
         model: 'gemini-3.5-flash-lite',
         contents: prompt,
+        config: {
+          maxOutputTokens: 8192,
+          temperature: 0.7,
+        }
       });
       return response.text;
     } catch (error) {
@@ -192,6 +319,7 @@ async function fetchWithRetry(prompt, maxRetries = 5, delayMs = 5000) {
 async function generateSinglePost(lang, index) {
   const selectedTheme = THEME_PRESETS[Math.floor(Math.random() * THEME_PRESETS.length)];
   const selectedScenario = AUTOMATION_CRISIS_SCENARIOS_30[Math.floor(Math.random() * AUTOMATION_CRISIS_SCENARIOS_30.length)];
+  const i18n = I18N_SECTIONS[lang.code] || I18N_SECTIONS.ko;
 
   console.log(`\n🚀 [${index + 1}/12] ${lang.name} (${lang.code}) 3호기 자동화 포스팅 생성 중... (적용 테마: ${selectedTheme.name})`);
 
@@ -200,8 +328,8 @@ async function generateSinglePost(lang, index) {
 
   const prompt = `
 You are a ${lang.persona}.
-Write a highly practical, conversational, 1st-person workflow troubleshooting guide natively in ${lang.name}.
-CRITICAL: DO NOT translate literally from Korean. Write completely from scratch as an authentic native professional working in THAT specific country/culture.
+Write a definitive, exhaustive, highly professional workflow & AI troubleshooting guide natively in ${lang.name}.
+CRITICAL REQUIREMENT: Write 100% natively in ${lang.name}. NEVER mix English template headings or bracketed words unless writing the English post.
 
 [Topic]
 ${currentTopic}
@@ -220,86 +348,69 @@ ${currentTopic}
     - And corresponding native business context for other languages.
   * The protagonist must be 100% perceived as a local professional of that country.
 
-[CRITICAL OUTPUT LANGUAGE INTEGRITY - ZERO HANGUL IN GLOBAL POSTS]
-- If target language is NOT Korean (ko):
-  * Absolutely NEVER include any Korean Hangul characters (가-힣) anywhere in the title, description, tags, or body.
-  * Every single character in the title and description MUST strictly be in native ${lang.name}.
+[MANDATORY TOTAL LENGTH ENFORCEMENT - ZERO CONDENSATION]
+- For Korean (ko): Total body MUST be AT LEAST 2,500 characters (공백 제외 최소 2,000자 이상). Summarizing or brief outputs are strictly prohibited.
+- For other languages: Total body MUST be AT LEAST 1,400 - 1,800 words of rich technical substance.
 
-[WRITING STYLE: PLAIN & PRACTICAL FOR EVERYDAY PROFESSIONALS]
-1. Plain & Easy Explanations:
-    - Avoid overly abstract academic math theory.
-    - Write in warm, friendly, everyday language that any busy desk worker or manager can immediately follow.
-    - Give concrete formulas, prompts, or step-by-step clicks.
-2. Laser-Focused Narrative:
-    - The opening emergency story MUST be 100% strictly about the assigned [Topic] (${currentTopic}) and reflect the given [Assigned Emergency Scenario].
+[EXHAUSTIVE 5-SECTION STRUCTURE REQUIREMENTS]
+You MUST strictly follow these 5 sections using clean H2 markdown headings (## ):
 
-[MANDATORY OPENING VARIATION RULE - ZERO CLICHE REPETITION]
-- You MUST start the opening story based strictly on the assigned scenario: "${selectedScenario}".
-- ABSOLUTELY FORBIDDEN: Do NOT default to a generic "meeting in 15 minutes" trope. Adapt the specific incident naturally into the local daily office culture of ${lang.name}.
+## ${i18n.s1}
+- Do NOT summarize. Write at least 4 long, vivid paragraphs describing:
+  1) The intense workplace emergency strictly based on: "${selectedScenario}".
+  2) The exact error popup, broken formula (#REF!, #VALUE!), or failed automation run that caused the crisis.
+  3) The naive manual attempts that wasted hours and made things worse.
+  4) The high stakes (missed executive presentation, delayed payroll, client data loss).
 
-[STRICT MARKDOWN & FORMATTING RULES - NO RENDERING GLITCHES]
-1. HEADINGS & STRUCTURE (MANDATORY):
-    - You MUST use clear markdown headings (## for major sections, ### for subsections) for every section:
-      * ## 1. [Opening Story/Problem]
-      * ## 2. [Root Cause Breakdown]
-      * ## 3. [Step-by-Step Resolution]
-      * ## 4. [Expert Advice]
-      * ## 5. Frequently Asked Questions
-    - NEVER put markdown asterisks inside headings. Keep clean headings like "## 2. Root Cause Breakdown".
-2. BOLD FORMATTING RULE:
-    - Use markdown bold (**) naturally and moderately ONLY for key action words, formulas, UI buttons, or core technical terms.
-    - NEVER bold an entire sentence or overuse bold on every phrase.
-3. COMMANDS & FORMULAS / CODE BLOCKS:
-    - Always wrap long formulas, scripts, or terminal commands in standard 3-backtick code blocks (\`\`\`excel, \`\`\`python, or \`\`\`bash) so they never overflow horizontally on mobile screens.
-4. NO LATEX & NO TILDE:
-    - ABSOLUTELY FORBIDDEN: NEVER use LaTeX math delimiters ($ or $$). Write plain text formulas (e.g., "A1 * B1").
-    - ABSOLUTELY FORBIDDEN: NEVER use tilde (~) for ranges. Always use a hyphen (e.g., "10-20%").
+## ${i18n.s2}
+- Do NOT just write 3 quick bullets. Write an exhaustive technical breakdown across at least 4 detailed paragraphs explaining:
+  1) Core calculation logic or syntax breakdown behind the failure.
+  2) Memory bottlenecks, hidden data type mismatches, or API trigger timeouts.
+  3) System/software version differences and structural calculation errors.
 
-[Design Theme & Layout Dynamic Rules (MANDATORY)]
+## ${i18n.s3}
+- Provide at least 3 distinct, complete practical resolution methods matching "${lang.osUi}":
+  * Method 1: GUI-based UI fix with exact clicks and settings navigation.
+  * Method 2: Advanced formula / script solution with exact copy-pasteable snippets.
+  * Method 3: Automated background workflow or macro bypass.
+  * Write step-by-step with clear numbered lists and explain the technical reasoning for each step.
+
+## ${i18n.s4}
+- Write at least 2 in-depth paragraphs of professional automation specialist advice:
+  1) Critical hazards: Overwriting master sheets, security risks with unvetted add-ins, data loss.
+  2) Best maintenance habits: Version control, automated backup routines, scalable templates.
+
+## ${i18n.s5}
+- Provide exactly 3 realistic, highly specific Q&A items:
+  * Each question must be bold (**Q1.**, **Q2.**, **Q3.**) followed by the question text.
+  * Each answer (**A1.**, **A2.**, **A3.**) MUST be a detailed, multi-sentence technical explanation (at least 3-4 sentences per answer).
+  * Put an empty blank line between every Question and Answer.
+
+[STRICT MARKDOWN & FORMATTING RULES]
+1. HEADINGS: Keep clean markdown headings (e.g. "## ${i18n.s2}"). NEVER put bold asterisks (**) inside headings.
+2. BOLD FORMATTING: Use bold (**) ONLY for key button clicks, formulas, or essential UI terms. Always put a space before and after the bold markup if surrounded by words.
+3. COMMANDS & FORMULAS: Always wrap long formulas, scripts, or terminal commands in standard 3-backtick code blocks (\`\`\`excel, \`\`\`python, or \`\`\`bash).
+4. NO LATEX & NO TILDE: NEVER use LaTeX ($ or $$). NEVER use tilde (~) for ranges; use hyphen (-).
+${lang.code !== 'ko' ? `- Absolutely NEVER include any Korean characters (가-힣) anywhere in non-Korean posts.` : ''}
+
+[Design Theme & Layout Dynamic Rules]
 - Assigned Theme: "${selectedTheme.name}"
 - Primary Accent Color: ${selectedTheme.primaryColor}
 - Layout Characteristic: ${selectedTheme.layout}
-- You MUST incorporate native Markdown and inline styled HTML callouts tailored to this theme.
-- Use custom styled tip/warning boxes (e.g., <div style="border-left: 4px solid ${selectedTheme.primaryColor}; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">...</div>).
-  * CRITICAL: All text inside callout/tip/warning boxes MUST be crisp dark charcoal/black (color: #111827) so it is 100% legible against any background.
-
-[Tone & Writing Style Rules (STRICT - NO AI VIBE)]
-1. Mandatory Opening:
-    - Start immediately with an intense, relatable workplace emergency scenario strictly about [Topic] based on the assigned scenario.
-2. Tone & Voice:
-    - Write like a real colleague sharing an honest, battle-tested productivity solution on a professional community.
-3. Fast-Paced 3-Step Narrative:
-    - Step 1: Sudden workflow panic regarding [Topic] set in the assigned incident.
-    - Step 2: Wasted manual effort and trial-and-error.
-    - Step 3: The breakthrough actionable tip & clear step-by-step setup.
-
-[Content & Structure (AdSense E-E-A-T Compliant)]
-1. Opening Story: Intense real workplace incident strictly regarding this topic.
-2. Root Cause Breakdown: Clearly explain 3 realistic root causes behind the bottleneck or error.
-3. Step-by-Step Resolution:
-    - Use official local software UI terminology matching: "${lang.osUi}".
-    - Provide exact clicks, copy-pasteable formulas, prompts, or setting steps.
-4. Expert Warning / Advice: Practical precautions regarding data privacy, backup, or error prevention.
-5. Frequently Asked Questions (FAQ): Exactly 3 realistic, high-value Q&As that everyday users would ask.
-   * CRITICAL: Every single Question (Q) and Answer (A) MUST start on its own separate new line, separated by an empty blank line. Never run Q and A together.
-
-[Length & Richness Rules]
-- Korean (ko): Minimum 2,500 characters of rich, deep, non-repetitive text.
-- Other languages: 1,200 to 1,500 words of thorough practical explanation.
+- Incorporate inline styled HTML callout boxes tailored to this theme:
+  <div style="border-left: 4px solid ${selectedTheme.primaryColor}; padding: 14px 18px; margin: 24px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">...</div>
 
 [Strict Output Format]
 Return ONLY raw Markdown starting directly with frontmatter:
-
 ---
 title: "Native Catchy Title in ${lang.name}"
 description: "Native concise description in ${lang.name} under 160 characters"
 publishDate: ${pubDateIso}
 image: "${coverUrl}"
 category: "automation"
-tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]
+tags: ${JSON.stringify(i18n.tags)}
 theme: "${selectedTheme.name}"
 ---
-
 (Body starts directly here without H1 header)
 `;
 
@@ -334,8 +445,32 @@ theme: "${selectedTheme.name}"
       frontmatter = frontmatter.replace(/publishDate:\s*[^\n\r]+/i, `publishDate: ${pubDateIso}`);
       frontmatter = frontmatter.replace(/image:\s*["'][^"']*["']/i, `image: '${coverUrl}'`);
 
-      // Gusukura neza amakosa y'inyandiko (Gukomeza umubyimba no kurinda Q&A)
-      body = sanitizeMarkdownFormatting(body);
+      // 🛡️ [이중 방어] 12개국 고유 언어로 강제 치환 및 볼드 서식 완벽 정제
+      body = sanitizeMarkdownFormatting(body, lang.code);
+
+      // 🛡️ [글자 수 물리적 강제 루프: 2,200자 미만 시 즉시 재작성]
+      let retryCount = 0;
+      while (lang.code === 'ko' && body.length < 2200 && retryCount < 2) {
+        console.warn(`⚠️ [3호기 분량 부족] 현재 ${body.length}자 -> 목표 2,500자 충족을 위해 재작성 시도 (${retryCount + 1}/2)...`);
+        const retryPrompt = prompt + "\n\nCRITICAL ENFORCEMENT: The previous generated post was strictly too short. You MUST write at least 4 very long, deeply detailed paragraphs for EACH section. Elaborate on every formula, UI click, and automation logic exhaustively to exceed 2,500 Korean characters.";
+        
+        let retryRawText = await fetchWithRetry(retryPrompt);
+        let retryText = retryRawText.trim();
+        if (retryText.startsWith('```markdown')) retryText = retryText.replace(/^```markdown\n/, '').replace(/\n```$/, '');
+        if (retryText.startsWith('```')) retryText = retryText.replace(/^```\n/, '').replace(/\n```$/, '');
+
+        const newFmMatch = retryText.match(/^---[\s\S]*?---\n*/);
+        if (newFmMatch) {
+          let newBody = retryText.slice(newFmMatch[0].length).trim();
+          newBody = newBody.replace(/^#\s+[^\n]+\n+/, '');
+          body = sanitizeMarkdownFormatting(newBody, lang.code);
+        }
+        retryCount++;
+      }
+
+      if (lang.code === 'ko') {
+        console.log(`📏 [3호기 한국어 본문 최종 글자 수] ${body.length}자 (목표: 2,500자 이상)`);
+      }
 
       const safeAlt = currentTopic.replace(/[\[\]\(\)"']/g, '').trim();
       const middleImageMarkdown = `\n\n![${safeAlt} AI Automation Guide](${bodyUrl})\n\n`;

@@ -105,7 +105,7 @@ const I18N_SECTIONS = {
     s2: "2. Análise da causa raiz de falhas de fórmula e processos",
     s3: "3. Guia prático passo a passo para automação e produtividade",
     s4: "4. Recomendações e alertas de especialistas em automação",
-    s5: "5. Perguntas Frequentes (FAQ)",
+    s5: "5. Perguntas Frecuentes (FAQ)",
     tags: ["Automação", "Dicas Excel", "Produtividade", "Rotina de Escritório"]
   },
   nl: {
@@ -143,49 +143,77 @@ const I18N_SECTIONS = {
 };
 
 // =========================================================================
-// [최종 안정형 마크다운 정제 함수] 볼드 복구 + 영문 템플릿 강제 박멸
+// [최종 안정형 마크다운 정제 함수] 상단 공백 압축 + 핀셋 중복제거 + 수식 달러 박멸 + 소제목 강제
 // =========================================================================
 function sanitizeMarkdownFormatting(content, langCode) {
   let cleaned = content;
   const i18n = I18N_SECTIONS[langCode] || I18N_SECTIONS.ko;
 
-  // 1) AI가 출력한 영문 대괄호 템플릿 및 기본 헤더를 12개국 현지 언어로 100% 강제 치환
-  cleaned = cleaned.replace(/^#{1,3}\s*1\.?\s*(\[Opening Story.*?\]|Opening Story.*?)/gmi, `## ${i18n.s1}`);
-  cleaned = cleaned.replace(/^#{1,3}\s*2\.?\s*(\[Root Cause.*?\]|Root Cause.*?)/gmi, `## ${i18n.s2}`);
-  cleaned = cleaned.replace(/^#{1,3}\s*3\.?\s*(\[Step-by-Step.*?\]|Step-by-Step.*?)/gmi, `## ${i18n.s3}`);
-  cleaned = cleaned.replace(/^#{1,3}\s*4\.?\s*(\[Expert.*?\]|Expert.*?)/gmi, `## ${i18n.s4}`);
+  // 1) 상단 빈 줄 압축
+  cleaned = cleaned.replace(/^\n+/, '');
+
+  // 2) 엑셀 수식 및 단축키 주변 달러($) 기호 인라인 백틱화 (예: $A$1 같은 절대참조는 코드 내에만 남기고 일반 텍스트는 백틱 처리)
+  cleaned = cleaned.replace(/\$(?:Strg|Ctrl|Win|Shift|Alt|Esc)\s*[^$\n]*\$/gi, (match) => {
+    return `\`${match.replace(/\$/g, '').trim()}\``;
+  });
+  cleaned = cleaned.replace(/\$([^$\n]+)\$/g, '`$1`');
+
+  // 3) AI가 출력한 영문 대괄호 템플릿 및 기본 헤더를 현지 언어로 100% 강제 치환
+  cleaned = cleaned.replace(/^#{1,3}\s*1\.?\s*(\[Opening Story.*?\]|Opening Story.*?|\[Ouverture.*?\])/gmi, `## ${i18n.s1}`);
+  cleaned = cleaned.replace(/^#{1,3}\s*2\.?\s*(\[Root Cause.*?\]|Root Cause Breakdown.*?|Root Cause.*?)/gmi, `## ${i18n.s2}`);
+  cleaned = cleaned.replace(/^#{1,3}\s*3\.?\s*(\[Step-by-Step.*?\]|Step-by-Step Resolution.*?|Step-by-Step.*?)/gmi, `## ${i18n.s3}`);
+  cleaned = cleaned.replace(/^#{1,3}\s*4\.?\s*(\[Expert.*?\]|Expert Advice.*?|Expert.*?)/gmi, `## ${i18n.s4}`);
   cleaned = cleaned.replace(/^#{1,3}\s*5\.?\s*(\[Frequently Asked Questions.*?\]|Frequently Asked Questions.*?|FAQ)/gmi, `## ${i18n.s5}`);
 
-  // 헤딩(#) 없이 텍스트 번호로 박힌 영문 템플릿도 헤딩 포함 현지어로 강제 변환
   cleaned = cleaned.replace(/^1\.\s*\[Opening Story.*?\]/gmi, `## ${i18n.s1}`);
   cleaned = cleaned.replace(/^2\.\s*\[Root Cause.*?\]/gmi, `## ${i18n.s2}`);
   cleaned = cleaned.replace(/^3\.\s*\[Step-by-Step.*?\]/gmi, `## ${i18n.s3}`);
   cleaned = cleaned.replace(/^4\.\s*\[Expert.*?\]/gmi, `## ${i18n.s4}`);
   cleaned = cleaned.replace(/^5\.\s*(Frequently Asked Questions|\[Frequently Asked Questions\])/gmi, `## ${i18n.s5}`);
 
-  // 잔여 영문 태그 찌꺼기 완벽 제거
+  // 헤딩 기호 누락 시 자동 승격 보정 (3호기 업무자동화/엑셀 테마 키워드)
+  cleaned = cleaned.replace(/^(수식\s*(에러|오류|원인|분석).*?)/gm, `## ${i18n.s2}\n\n$1`);
+  cleaned = cleaned.replace(/^(단계별\s*(해결|실무|조치|가이드).*?)/gm, `## ${i18n.s3}\n\n$1`);
+  cleaned = cleaned.replace(/^(현직\s*자동화\s*전문가.*?)/gm, `## ${i18n.s4}\n\n$1`);
+  cleaned = cleaned.replace(/^#{0,3}\s*(\d\.\s*)?(자주 묻는 질문|Häufig gestellte Fragen|Frequently Asked Questions|よくある(ご)?質問|Questions Fréquemment Posées|Foire [Aa]ux Questions|Preguntas [Ff]recuentes).*?$/gmi, `## ${i18n.s5}`);
+
+  // 번호 없이 단독으로 나온 영문 변칙 헤더 치환
+  cleaned = cleaned.replace(/^#{0,3}\s*Root Cause Breakdown.*$/gmi, `## ${i18n.s2}`);
+  cleaned = cleaned.replace(/^#{0,3}\s*Step-by-Step Resolution.*$/gmi, `## ${i18n.s3}`);
+  cleaned = cleaned.replace(/^#{0,3}\s*Expert (Advice|Warning).*$/gmi, `## ${i18n.s4}`);
+  cleaned = cleaned.replace(/^#{0,3}\s*Frequently Asked Questions.*$/gmi, `## ${i18n.s5}`);
+
+  // 대괄호 영문 태그 찌꺼기 완전 제거
   cleaned = cleaned.replace(/\[(Opening Story\/Problem|Root Cause Breakdown|Step-by-Step Resolution|Expert Advice)\]/gi, '');
 
-  // 2) 소제목 헤딩(#)에 묻은 불필요한 볼드 기호 정제 (### **제목** -> ### 제목)
+  // 4) 1번 헤더 누락 시 주입 및 직후 중복 1줄 정밀 제거
+  if (!cleaned.startsWith('## 1.')) {
+    cleaned = `## ${i18n.s1}\n\n` + cleaned;
+  }
+  cleaned = cleaned.replace(/^(## 1\.[^\n]+)\n+(\s*1\.\s+[^\n]+)\n+/m, '$1\n\n');
+
+  // 5) 소제목 헤딩(#)에 묻은 볼드 기호 정제 (### **제목** -> ### 제목)
   cleaned = cleaned.replace(/^(#{1,6}\s*)\*\*(.*?)\*\*/gm, '$1$2');
 
-  // 3) 볼드(**) 기호 깨짐 교정: 단어와 ** 사이에 붙은 공백 및 인접 문자 표준화
+  // 6) 쪼개진 단어 및 다국어 합성어 띄어쓰기 복원
+  cleaned = cleaned.replace(/derech\s*\n\s*a:/gi, 'derecha:')
+                   .replace(/con la energi\s*\n\s*a:/gi, 'con la energía:')
+                   .replace(/preventiv\s*\n\s*a:/gi, 'preventiva:');
+
+  // 7) 볼드(**) 기호 깨짐 교정
   cleaned = cleaned.replace(/\*\*\s+([^\*]+?)\s+\*\*/g, '**$1**');
   cleaned = cleaned.replace(/([가-힣a-zA-Z0-9])\*\*([가-힣a-zA-Z0-9])/g, '$1 **$2');
 
-  // 4) Q&A 줄바꿈 및 볼드 보호: Q와 A는 무조건 빈 줄 2개로 분리
+  // 8) Q&A 줄바꿈 및 볼드 보호: Q와 A는 무조건 빈 줄 2개로 분리
   cleaned = cleaned.replace(/([^\n])\s*(\*\*?[QA][0-9]*\s*[:.]\*\*?)/gi, '$1\n\n$2');
   cleaned = cleaned.replace(/([^\n])\s+([QA][0-9]*\s*[:.])/g, '$1\n\n$2');
   cleaned = cleaned.replace(/([.!?])\s*(\*\*?[QA][0-9]*\s*[:.]\*\*?)/gi, '$1\n\n$2');
 
-  // 5) 물음표 뒤 띄어쓰기 누락 보정
+  // 9) 물음표 뒤 띄어쓰기 및 과도한 개행 압축
   cleaned = cleaned.replace(/\?([A-Za-z\u00C0-\u024F\u1EA0-\u1EF9가-힣])/g, '? $1');
+  cleaned = cleaned.replace(/\n{3,}/g, '\n\n');
 
-  // 6) 다국어 특수기호 분리
-  cleaned = cleaned.replace(/([^0-9][.?!])\s*([¿¡])/g, '$1\n\n$2');
-  cleaned = cleaned.replace(/([.!])\s*(D:|R:|Risposta|Domande)/gi, '$1\n\n$2');
-
-  return cleaned;
+  return cleaned.trim();
 }
 
 if (!fs.existsSync(TOPICS_FILE)) {
@@ -390,7 +418,9 @@ You MUST strictly follow these 5 sections using clean H2 markdown headings (## )
 1. HEADINGS: Keep clean markdown headings (e.g. "## ${i18n.s2}"). NEVER put bold asterisks (**) inside headings.
 2. BOLD FORMATTING: Use bold (**) ONLY for key button clicks, formulas, or essential UI terms. Always put a space before and after the bold markup if surrounded by words.
 3. COMMANDS & FORMULAS: Always wrap long formulas, scripts, or terminal commands in standard 3-backtick code blocks (\`\`\`excel, \`\`\`python, or \`\`\`bash).
-4. NO LATEX & NO TILDE: NEVER use LaTeX ($ or $$). NEVER use tilde (~) for ranges; use hyphen (-).
+4. ABSOLUTE FORBIDDEN CHARACTERS:
+   - NEVER use LaTeX ($ or $$). NEVER wrap variables, keys, or cell formulas in single dollar signs like $A$1. Wrap them in inline backticks like \`A1\` or standard code blocks.
+   - NEVER use tilde (~) for ranges; use hyphen (-).
 ${lang.code !== 'ko' ? `- Absolutely NEVER include any Korean characters (가-힣) anywhere in non-Korean posts.` : ''}
 
 [Design Theme & Layout Dynamic Rules]
@@ -420,8 +450,7 @@ theme: "${selectedTheme.name}"
     if (text.startsWith('```markdown')) text = text.replace(/^```markdown\n/, '').replace(/\n```$/, '');
     if (text.startsWith('```')) text = text.replace(/^```\n/, '').replace(/\n```$/, '');
 
-    text = text.replace(/\$([^$]+)\$/g, '$1')
-               .replace(/\\times/g, 'x')
+    text = text.replace(/\\times/g, 'x')
                .replace(/\\circ/g, '°')
                .replace(/\\approx/g, '≈');
 
@@ -435,8 +464,8 @@ theme: "${selectedTheme.name}"
 
     const fmMatch = text.match(/^---[\s\S]*?---\n*/);
     if (fmMatch) {
-      let frontmatter = fmMatch[0];
-      let body = text.slice(frontmatter.length).trim();
+      let frontmatter = fmMatch[0].trim();
+      let body = text.slice(fmMatch[0].length).trim();
       body = body.replace(/^#\s+[^\n]+\n+/, '');
 
       frontmatter = frontmatter.replace(/category:\s*["'][^"']*["']/i, "category: 'automation'")
@@ -487,7 +516,8 @@ theme: "${selectedTheme.name}"
         }
       }
 
-      text = `${frontmatter}\n${body}\n`;
+      // 프론트매터와 본문 사이 개행을 딱 2개로 고정하여 21줄 공백 버그 원천 차단
+      text = `${frontmatter}\n\n${body}\n`;
     }
 
     const targetDir = path.join(POSTS_BASE_DIR, lang.code);

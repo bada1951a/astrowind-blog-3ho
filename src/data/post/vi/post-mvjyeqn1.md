@@ -8,6 +8,7 @@ tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]
 theme: "Dracula Purple Dev"
 ---
 
+## 1. Tình huống sự cố khẩn cấp và tắc nghẽn công việc văn phòng
 
 Góc làm việc tại văn phòng trung tâm ở Quận 1, TP.HCM lúc này đang đứng ngồi không yên. Chỉ còn chưa đầy hai tiếng nữa là chốt sổ bảng lương tháng để gửi bộ phận tài chính, thế mà file Excel tổng hợp công ca tự dưng lăn ra chứng. Cả màn hình máy tính của tôi cứ nhảy liên tục bảng thông báo bảo mật vàng chóe: "This workbook contains links to one or more external sources that could be unsafe". Nguyên nhân là do phòng Nhân sự vừa đổi tên thư mục chứa file dữ liệu chấm công gốc, khiến toàn bộ công thức liên kết (External Links) bị đứt gãy. Mỗi lần bấmUpdate, file lại đơ cứng, hiện toàn lỗi [#REF!] ở cột tổng giờ làm và tăng ca của hơn 200 nhân sự. Sếp thì đang đứng sau thúc giục bản chốt số liệu, trong khi thủ công ngồi dò lại từng đường dẫn của mấy chục file con thì chắc đến sáng mai chưa xong.
 

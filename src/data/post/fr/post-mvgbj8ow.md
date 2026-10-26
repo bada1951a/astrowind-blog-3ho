@@ -8,6 +8,7 @@ tags: ["Google Sheets", "Apps Script", "Automation", "Productivite"]
 theme: "Forest Emerald Bio"
 ---
 
+## 1. Situation d'urgence critique au bureau
 
 Il est 17h55 un vendredi au cœur de La Défense, et c'est la panique générale dans l'open space : le tableau de bord des KPIs de la semaine est resté bloqué sur une ancienne version Google Sheets, et le comité de direction s'attend à recevoir son rapport PDF avant 18h00 pile. Pendant que mon collègue s'acharne à exporter manuellement chaque onglet en PDF tout en pestant contre la mise en page qui saute, je me rappelle pourquoi j'ai arrêté de perdre mes vendredis soirs avec des tâches répétitives. 
 

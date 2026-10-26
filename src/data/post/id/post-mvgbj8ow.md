@@ -8,6 +8,7 @@ tags: ["Google Sheets", "Apps Script", "Otomatisasi", "Produktivitas"]
 theme: "Pure Titanium Clean"
 ---
 
+## 1. Situasi Kritis dan Hambatan Kerja Mendesak di Kantor
 
 Jam 8 malam di kawasan bisnis SCBD Jakarta, saya masih terjebak di kantor menyelesaikan rekap data operasional mingguan yang berantakan karena salah rumus. Besok pagi, laporan tersebut harus sudah ada di meja direksi. Masalahnya bukan cuma datanya yang banyak, tapi proses ekspor manual ke PDF lalu melampirkannya ke email setiap minggu benar-benar membuang waktu dan rentan kelupaan. Jika Anda sering mengalami kepanikan lembur akibat tugas repetitif seperti ini, sudah saatnya kita beresin pakai Google Apps Script. 
 
@@ -119,4 +120,4 @@ Anda bisa mengubah variabel `emailPenerima` menjadi bentuk array atau memisahkan
 3. Kenapa file PDF yang terkirim kadang terpotong halamannya?
 Hal ini biasanya karena pengaturan `sheetranges` atau ukuran kolom terlalu lebar. Anda bisa menyesuaikan parameter `sheetranges: "
 
-A1:G20"` di dalam kode agar pas dengan area cetak dokumen Anda. 
+A1:G20"` di dalam kode agar pas dengan area cetak dokumen Anda.

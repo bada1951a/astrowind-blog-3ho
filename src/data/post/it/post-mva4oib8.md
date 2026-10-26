@@ -8,6 +8,7 @@ tags: ["Google Sheets", "ChatGPT", "Automazione", "Produttività"]
 theme: "Electric Cyan Speed"
 ---
 
+## 1. Emergenza improvvisa e blocco delle attività in ufficio
 
 Ore 14:30 in un ufficio vicino a Corso Como a Milano. Mancano esattamente trenta minuti alla riunione strategica con il nuovo cliente e il file Excel, convertito in Google Sheets, è un vero disastro. 
 
@@ -77,4 +78,4 @@ Non sempre. Google Sheets supporta nativamente le espressioni regolari con funzi
 Significa che il tipo di dato non corrisponde a quello attessato dalla funzione (ad esempio, la formula cerca del testo ma trova un valore numerico puro, o viceversa). Chiedi a ChatGPT di correggere la formula aggiungendo un controllo di errore, come l'uso della funzione `SE.ERRORE()` all'esterno della Regex.
 
 ### I miei dati aziendali sono al sicuro inserendoli in ChatGPT?
-Se utilizzi versioni gratuite di ChatGPT, evita di inserire dati sensibili reali (nomi completi di clienti, dati bancari o informazioni personali protette dal GDPR). Per i test, sostituisci sempre i dati reali con stringhe di esempio fittizie ma con la stessa identica struttura. 
+Se utilizzi versioni gratuite di ChatGPT, evita di inserire dati sensibili reali (nomi completi di clienti, dati bancari o informazioni personali protette dal GDPR). Per i test, sostituisci sempre i dati reali con stringhe di esempio fittizie ma con la stessa identica struttura.

@@ -8,6 +8,7 @@ tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]
 theme: "Cyberpunk Terminal"
 ---
 
+## 1. Situation d'urgence critique au bureau
 
 Hier après-midi, dans notre open-space du siège à La Défense, l'ambiance était électrique. J'avais confié à ChatGPT et Claude la lourde tâche de nettoyer et structurer un compte-rendu stratégique et des bases de données de contacts pharaoniques pour le comité de direction. Le résultat ? Une catastrophe absolue. Les IA avaient complètement zappé les chiffres clés, mélangé les numéros de téléphone internationaux avec les adresses postales, et généré un résumé fantaisiste qui ne correspondait en rien à nos tableaux Excel. Face à cette montagne de données brutes où tout était collé dans une seule et même cellule, j'ai failli y passer la nuit à faire du copier-coller manuel. C'est là que j'ai compris qu'il fallait arrêter de demander à l'IA de deviner l'impossible, et plutôt exploiter sa puissance logique pour générer des formules de découpage chirurgicales.
 

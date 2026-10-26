@@ -8,7 +8,6 @@ tags: ["Google Sheets", "Veille Tarifaire", "Productivité", "Automatisation"]
 theme: "Nordic Clean Ice"
 ---
 
-
 ## 1. [Ouverture] L'angoisse de la cloche de fin de journée à La Défense
 
 Il est 17h50, la sonnerie de fin de journée approche à grands pas dans notre tour de La Défense, et je commençais à ranger doucement mon bureau quand mon manager a déboulé près de mon poste. Sans crier gare, il a posé un fichier Excel brut sur mon écran avec un sourire faussement détendu : « Dis donc, le comité de direction veut le suivi des prix de nos cinq principaux concurrents sur Amazon pour demain matin première heure, mais au format du département marketing, et surtout... il faut que ce soit automatisé pour que ça se mette à jour tout seul chaque matin. Tu me fais ça en dix minutes chrono avant de partir ? » 
@@ -19,11 +18,9 @@ Dix minutes. Pour un volume de données conséquent, avec des structures de colo
 <strong>Note du Spécialiste :</strong> Inutile de paniquer face à une demande de scraping de dernière minute. Google Sheets intègre des fonctions web natives redoutables pour extraire des données publiques sans effort technique.
 </div>
 
-
-
 ![How to Scrape Amazon Competitor Pricing into Google Sheets Daily Without Writing Code AI Automation Guide](https://picsum.photos/seed/work-mvmq4z98-4-b/1000/550.jpg)
 
-## 2. Root Cause Breakdown
+## 2. Analyse approfondie des erreurs de formule et de processus
 
 Pourquoi ce type de tâche nous prend-il habituellement des heures de travail manuel ? Analysons les trois pièges classiques qui transforment une simple veille tarifaire en cauchemar bureaucratique :
 
@@ -31,7 +28,7 @@ Pourquoi ce type de tâche nous prend-il habituellement des heures de travail ma
 * **L'obstacle technique du code :** On pense souvent à tort qu'il faut obligatoirement maîtriser le scraping web, des scripts Python, des clés API payantes ou des extensions tierces payantes pour récupérer des données en ligne.
 * **Le formatage rigide des départements :** Chaque service a ses exigences (le marketing veut le nom du produit et le prix en gras, la finance veut l'historique par date). Refaire la mise en forme à la main à chaque mise à jour est un gouffre de productivité.
 
-## 3. Step-by-Step Resolution
+## 3. Guide étape par étape pour automatiser et résoudre l'erreur
 
 Voici la méthode infaillible, testée et approuvée sur le terrain, pour automatiser l'extraction des prix Amazon dans Google Sheets en quelques clics, sans coder.
 
@@ -59,13 +56,13 @@ Pour que votre tableau se mette à jour tout seul chaque matin avant l'arrivée 
 
 Google Sheets interroge ainsi automatiquement les pages Amazon en arrière-plan et actualise les prix sans que vous n'ayez à lever le petit doigt.
 
-## 4. Expert Advice
+## 4. Conseils et précautions d'un expert en automatisation
 
 Quelques précautions indispensables pour éviter les mauvaises surprises lors de vos reportings :
 * **Attention aux limites d'Amazon :** Amazon protège ses pages contre le scraping intensif. Si vous interrogez 500 produits en même temps avec `IMPORTXML`, Google Sheets renverra une erreur `#N/A` ou bloquera temporairement les requêtes. Limitez-vous à une liste ciblée de vos produits clés (top 20 ou 30).
 * **Sauvegarde de sécurité :** Pensez à dupliquer votre feuille de calcul principale et à figer les valeurs (Sélectionner les cellules > Copier > Collage spécial > Valeurs uniquement) une fois par semaine pour conserver un historique propre, car les formules web peuvent parfois casser si Amazon modifie le code source de ses pages.
 
-## 5. Frequently Asked Questions
+## 5. Foire Aux Questions (FAQ)
 
 Q : Que faire si la formule IMPORTXML m'affiche une erreur de type `#N/A` ?
 

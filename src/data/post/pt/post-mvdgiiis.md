@@ -8,6 +8,7 @@ tags: ["Excel", "IA", "Produtividade", "Automação"]
 theme: "Midnight Navy Royal"
 ---
 
+## 1. Situação de emergência e gargalo crítico no escritório
 
 Eram 18h30 de uma sexta-feira típica de fechamento de mês no escritório corporativo na região da Berrini, em São Paulo. A pilha de notas fiscais impressas e PDFs escaneados na minha mesa parecia zombar de mim. O diretor financeiro tinha acabado de passar pela minha baia cobrando o relatório de despesas consolidadas para a reunião de diretoria da segunda-feira cedo. Tentar digitar manualmente centenas de linhas de CNPJ, descrições de produtos, valores e impostos significaria passar a noite inteira no escritório, perdendo o jantar com a família. O pior? Na tentativa desesperada de copiar e colar dados de um PDF mal escaneado para o Excel algumas horas antes, as colunas vieram todas embaralhadas, transformando uma simples planilha em um quebra-cabeça de células mescladas e erros de formatação.
 
@@ -73,8 +74,6 @@ a:
 
 ### 1. Essa técnica funciona com notas fiscais manuscritas?
 O OCR e a IA moderna evoluíram muito na leitura de caligrafias, mas notas fiscais manuscritas ainda apresentam alta taxa de erro. O ideal é reservar esse método para notas impressas, cupons fiscais térmicos legíveis e PDFs.
-
-
 
 ![AI Productivity & Workflow Automation](https://picsum.photos/seed/office21/1000/550)
 

@@ -8,6 +8,7 @@ tags: ["Google Sheets", "IA", "Productivité", "Finance"]
 theme: "Industrial Blueprint"
 ---
 
+## 1. Situation d'urgence critique au bureau
 
 Il est 14h15 au 18e étage d'une tour à La Défense. Le comité de direction débarque dans dix minutes pour valider le budget du prochain trimestre, et mon tableau Google Sheets vient de planter net. Le graphique de modélisation financière que j'avais préparé à la main ressemble à un plat de spaghettis illisible, les axes se croisent n'importe comment, et la direction refuse de voir des données statiques. Bref, c'est la panique générale.
 

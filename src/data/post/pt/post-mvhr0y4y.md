@@ -8,6 +8,7 @@ tags: ["Google Planilhas", "Inteligencia Artificial", "Produtividade", "Financas
 theme: "Warm Coffee Latte"
 ---
 
+## 1. Situação de emergência e gargalo crítico no escritório
 
 Eram exatas 17h45 em um escritório corporativo na região da Avenida Paulista, em São Paulo. O ar-condicionado já tinha desligado, a sala de reuniões estava reservada para a diretoria em 15 minutos, e o meu relatório de fechamento de mês simplesmente parecia um emaranhado de números sem vida. A diretora financeira odiava planilhas estáticas e tabelas complexas que exigiam horas de explicação. Eu precisava transformar projeções de fluxo de caixa em gráficos interativos e atraentes na hora, mas toda tentativa manual de formatar o painel deixava o visual poluído ou quebrava as fórmulas de soma condicional. 
 

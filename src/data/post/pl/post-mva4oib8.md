@@ -8,6 +8,7 @@ tags: ["Google Sheets", "ChatGPT", "Regex", "Automatyzacja", "Excel i Arkusze"]
 theme: "Dark Velvet Obsidian"
 ---
 
+## 1. Awaryjna sytuacja i paraliż pracy w biurze
 
 Była dokładnie 16:45, a za piętnaście trzydziestu dyrektorów z warszawskiego centrum biznesowego miało otrzymać kwartalny raport sprzedażowy. Nagle w kluczowej kolumnie Google Sheets pojawił się błąd `#ARG!`, a dane z systemów CRM zaciągnęły się jako chaotyczna zupa tekstow
 
@@ -73,8 +74,6 @@ a: Zanim uruchomisz masowe formuły czyszczące oparte na AI, zrób kopię zapas
 
 ### 1. Dlaczego Google Sheets wyrzuca błąd `#VALUE!` po wklejeniu formuły od ChatGPT?
 Najczęstszą przyczyną są regionalne ustawienia językowe arkusza. Polskojęzyczna wersja Google Sheets wymaga średników (;) jako separatorów argumentów oraz polskich nazw funkcji (np. `JEŻELI` zamiast `IF`). Poinformuj o tym ChatGPT w prompcie: *"Użyj polskiej wersji językowej Google Sheets i średników jako separatorów"*.
-
-
 
 ![AI Productivity & Workflow Automation](https://picsum.photos/seed/office645/1000/550)
 

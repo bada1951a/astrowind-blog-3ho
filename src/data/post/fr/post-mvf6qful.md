@@ -8,6 +8,7 @@ tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]
 theme: "Warm Coffee Latte"
 ---
 
+## 1. Situation d'urgence critique au bureau
 
 Il est 14h45 au 24e étage d'une tour à La Défense. Le comité de direction commence à 15h00 pile, et mon écran affiche un tableau Google Sheets de 4 500 lignes absolument chaotique. Entre les commerciaux qui ont écrit "Dupont SARL", ceux qui ont noté "dupont sarl" et les fiches doublonnées par trois suite à la fusion des bases de données régionales, le fichier est inexploitable. Mon café est froid, la sueur froide, elle, est bien réelle. Utiliser le bouton natif "Supprimer les doublons" ne sert à rien : les variations orthographiques et les erreurs de frappe trompent l'outil. Heureusement, j'ai ouvert le panneau latéral de Gemini, et cette petite astuce m'a sauvé la mise en moins de deux minutes.
 

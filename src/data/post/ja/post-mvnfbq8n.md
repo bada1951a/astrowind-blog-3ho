@@ -8,7 +8,6 @@ tags: ["Claude 3.5 Sonnet", "業務効率化", "PDF要約", "コンプライア�
 theme: "Industrial Blueprint"
 ---
 
-
 ## 1. 開庁・消えた2時間の絶望と、新たなる業務効率化への目覚め
 
 丸の内のオフィスビルで夜の静けさが漂う中、時計はすでに22時を回っていました。明日の役員向けコンプライアンス会議に向け、膨大な150ページの規制資料を読み込みながら、そのデータをもとに複雑なピ벗テーブルとVBAマクロを組み上げていたまさにその時です。画面が突然フリーズし、「応答なし」の文字。Ctrl + Sを押す指のコンマ数秒の差で、2時間かけて構築した全てのデータとロジックが暗転とともに消え去りました。
@@ -22,8 +21,6 @@ theme: "Industrial Blueprint"
 </div>
 
 ---
-
-
 
 ![How to Summarize 150-Page Regulatory Compliance PDFs in 3 Minutes Using Claude 3.5 Sonnet AI Automation Guide](https://picsum.photos/seed/work-mvnfc3se-2-b/1000/550.jpg)
 

@@ -8,7 +8,6 @@ tags: ["IA", "Productividad", "Claude", "Oficina", "Automatización"]
 theme: "Tokyo Neon Violet"
 ---
 
-
 ## 1. El colapso con el informe regulatorio y la fórmula fallida
 
 Eran las cuatro de la tarde en nuestra oficina corporativa en el Paseo de la Castellana en Madrid. Tenía sobre la mesa un PDF de ciento cincuenta páginas con la nueva normativa de cumplimiento normativo europeo que debía cruzar con nuestros datos internos antes de la reunión ejecutiva del día siguiente. Para automatizar el análisis y la extracción de datos clave, decidí pedirle a una IA que me generara una fórmula de Excel con condiciones múltiples anidadas muy compleja. 
@@ -19,11 +18,9 @@ El resultado fue un desastre total: una cadena interminable de instrucciones don
 <strong>Atajo de Poder:</strong> Cuando te enfrentes a documentos legales kilométricos o fórmulas lógicas rotas, no intentes procesar el bloque entero de golpe. La clave está en delegar la estructuración lógica a Claude 3.5 Sonnet utilizando artefactos visuales.
 </div>
 
-
-
 ![How to Summarize 150-Page Regulatory Compliance PDFs in 3 Minutes Using Claude 3.5 Sonnet AI Automation Guide](https://picsum.photos/seed/work-mvov0h20-5-b/1000/550.jpg)
 
-## 2. Root Cause Breakdown
+## 2. Análisis de causas raíz de errores de fórmulas y flujo
 
 ¿Por qué fallan los intentos de procesar documentos extensos o generar fórmulas avanzadas en el entorno diario de oficina? Identifiqué tres causas raíz que frenan nuestra productividad:
 
@@ -31,7 +28,7 @@ El resultado fue un desastre total: una cadena interminable de instrucciones don
 - **Falta de estructuración modular:** Delegar tareas complejas como un bloque monolítico en lugar de dividir el problema en subtareas lógicas (extracción, validación, aplicación).
 - **Desconocimiento de los artefactos de IA:** No utilizar interfaces interactivas que permiten aislar el código o los resúmenes en paneles dedicados para copiar y probar sin romper el flujo de trabajo.
 
-## 3. Step-by-Step Resolution
+## 3. Solución práctica paso a paso para optimizar el flujo
 
 Para superar este cuello de botella y procesar cualquier PDF normativo masivo en menos de tres minutos, sigue este flujo optimizado paso a paso:
 
@@ -52,7 +49,7 @@ Si necesitas cruzar los resultados de la normativa con tus hojas de cálculo, p�
 ### Paso 3: Exportación mediante Artifacts
 Utiliza la función de **Artifacts** de Claude para aislar el resumen ejecutivo o las tablas de datos. Esto te permite exportar el contenido directamente a un archivo limpio o copiarlo a tus herramientas habituales sin formato basura.
 
-## 4. Expert Advice
+## 4. Consejos y advertencias de un experto en productividad
 
 <div style="border-left: 4px solid #8b5cf6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Advertencia de Seguridad:</strong> Nunca subas datos financieros sensibles de clientes o secretos comerciales identificables a versiones públicas de IA sin antes anonimizar la información o verificar las políticas de privacidad corporativas de tu empresa.
@@ -60,7 +57,7 @@ Utiliza la función de **Artifacts** de Claude para aislar el resumen ejecutivo 
 
 Trabajar con IA en entornos corporativos exige método. Siempre mantén una copia de seguridad local de tus archivos originales y valida las fórmulas generadas con un conjunto de datos de prueba pequeño antes de aplicarlas a toda la base de datos de producción.
 
-## 5. Frequently Asked Questions
+## 5. Preguntas Frecuentes (FAQ)
 
 Q: ¿Puedo usar esta técnica con documentos escaneados que son solo imágenes?
 

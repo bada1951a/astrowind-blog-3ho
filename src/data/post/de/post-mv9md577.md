@@ -8,6 +8,7 @@ tags: ["Excel", "Power Query", "Automatisierung", "Office-Tipps", "Reporting"]
 theme: "Acid Lime Hacker Space"
 ---
 
+## 1. Kritische Fehlersituation im Büroalltag
 
 Es ist exakt 16:45 Uhr an einem Donnerstag im Frankfurter Bankenviertel. In 45 Minuten beginnt das entscheidende Vorstandstreffen, und der Druck im Besprechungsraum ist spürbar. Auf meinem Bildschirm blinkt der Entwurf für den Monatsabschlussbericht – oder besser gesagt: ein unvollständiges, fehleranfhaftes Monster aus 14 verschiedenen Excel-Dateien, die die Regionalteams aus München, Berlin, Zürich und Wien gerade eben noch per E-Mail geschickt haben. Natürlich hat jede Niederlassung ein leicht verändertes Spaltenformat genutzt. Die Verkaufszahlen für Oktober passen hinten und vorne nicht zusammen, und ich sitze hier und kopiere seit einer Stunde manuell Zeilen von einer Tabelle in die andere, während meine Kaffeetasse schon längst leer ist. Ein einziger Tippfehler bei der Summenformel, und die Zahlen für das gesamte Quartal stimmen nicht. Das musste ein Ende haben.
 
@@ -58,7 +59,7 @@ Power Query ist extrem mächtig, verzeiht aber keine unsauberen Ordnerstrukturen
 * Sicherung: Bewahren Sie die Rohdaten immer in einem separaten Archiv-Ordner auf, bevor Sie die monatliche Abfrage starten.
 * Datenschutz: Da Finanzdaten im Frankfurter Finanzdistrikt streng vertraulich behandelt werden müssen, stellen Sie sicher, dass der Abfrage-Ordner nur für berechtigte Personen im Team zugänglich ist.
 
-## Häufig gestellte Fragen (FAQ)
+## 5. Häufig gestellte Fragen (FAQ) (FAQ)
 
 F: Was passiert, wenn eine Datei im Ordner beschädigt ist oder ein falsches Format hat?
 

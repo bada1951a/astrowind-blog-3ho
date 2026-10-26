@@ -8,6 +8,7 @@ tags: ["Google Sheets", "ChatGPT", "Data Cleaning", "Automasi Kantor"]
 theme: "Matte Black stealth"
 ---
 
+## 1. Situasi Kritis dan Hambatan Kerja Mendesak di Kantor
 
 Jam sudah menunjukkan pukul 21.30 di salah satu gedung perkantoran kawasan SCBD Jakarta. AC sentral kantor sudah mulai dingin menusuk tulang, sementara saya masih terjebak di depan monitor dengan lembar kerja Google Sheets berisi 50.000 baris data rekap tahunan. Tenggat waktu pengiriman laporan ke direksi adalah pukul 08.00 pagi esok hari. Masalahnya? Format nomor telepon campur aduk, alamat email berantakan, dan rumus REGEXEXTRACT yang saya tulis sejak jam 7 malam terus-menerus memunculkan error `#N/A`. Kepala pusing, kopi sudah habis tiga gelas, dan cara manual sama sekali tidak mungkin selesai dalam waktu semalam.
 

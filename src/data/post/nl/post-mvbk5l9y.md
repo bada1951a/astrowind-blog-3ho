@@ -8,6 +8,7 @@ tags: ["Google Sheets", "Workflow", "Automation", "Finance", "Productivity"]
 theme: "Dark Velvet Obsidian"
 ---
 
+## 1. Noodsituatie en knelpunt op de werkvloer
 
 Het is kwart over drie op een regenachtige dinsdagmiddag in het Zuidas zakendistrict in Amsterdam. Om vier uur start de cruciale kwartaalreview met de directie. Mijn scherm knippert rood: de inkoopcijfers in dollars, ponden en yen staan nog allemaal door elkaar in een handmatig gekopieerde rommelbójl. Mijn collega drukt me op het hart dat we per direct een betaalde Excel-invoegtoepassing van vijftig euro per maand moeten aanschaffen om de wisselkoersen live te trekken. Daar zit ik dan, met acute spreadsheetproblemen vlak voor de directiemeeting, terwijl mijn budget allang op is en de tijd wegtikt. Handmatig opzoeken op Yahoo Finance is geen optie meer; één verkeerde decimale komma en onze winstmarge implodeert op papier.
 

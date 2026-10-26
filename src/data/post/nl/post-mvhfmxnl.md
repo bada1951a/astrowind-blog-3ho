@@ -8,6 +8,7 @@ tags: ["Excel", "AI Tools", "Voorraadbeheer", "Productiviteit"]
 theme: "Cobalt Enterprise Lab"
 ---
 
+## 1. Noodsituatie en knelpunt op de werkvloer
 
 Het is kwart over drie op een regenachtige dinsdagmiddag in het Zuidas zakendistrict in Amsterdam. Over precies vijfenveertig minuten begint de kwartaalmeeting met de directie op de twintigste verdieping. Mijn scherm knippert rood: een enorme Excel-spreadsheet vol historische verkoopcijfers, seizoenspieken en inkoopdata ligt open. De CFO belt net binnen met een simpele vraag: "Hoeveel voorraad moeten we volgende maand bestellen om die nieuwe Europese orders op te vangen?" Normaal gesproken zou ik hier drie dagen aan kwijt zijn met handmatige berekeningen, losse formules en gokwerk. Maar dit keer pak ik het anders aan. Ik gooi AI direct aan het werk binnen mijn vertrouwde spreadsheet, en binnen vijf minuten rolt er een waterdichte voorspelling uit.
 

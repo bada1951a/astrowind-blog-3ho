@@ -8,6 +8,7 @@ tags: ["IA", "Excel", "Productivite", "Bureautique"]
 theme: "Matte Black stealth"
 ---
 
+## 1. Situation d'urgence critique au bureau
 
 Il est 16h45, ce mardi au 24e étage de la Tour CB21 à La Défense. La réunion de direction avec le comité financier commence à 17h00 tapantes, et j'ai sous les yeux une liasse de 45 factures fournisseurs reçues au format PDF scanné et en TIFF. Pas un seul fichier CSV ou Excel exploitable. Le contrôleur de gestion vient de m'envoyer un message laconique : "Intègre-moi ces lignes de frais dans le grand livre avant les slides". Tenter de tout retaper à la main ? Mission impossible, c'est le meilleur moyen d'injecter des erreurs de frappe monumentales dans le budget. Transcrire manuellement ce volume relève du cauchemar bureaucratique.
 

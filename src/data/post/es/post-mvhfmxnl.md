@@ -8,6 +8,7 @@ tags: ["Excel", "Inteligencia Artificial", "Productividad", "Automatizacion"]
 theme: "Deep Indigo System"
 ---
 
+## 1. Emergencia crítica en el trabajo y bloqueo de tareas
 
 Eran las 8:45 de la mañana en nuestra oficina del Paseo de la Castellana en Madrid. Tenía el café con leche templado en la mesa y el corazón a mil por hora. El director general acababa de entrar por la puerta pidiendo el reporte definitivo de inventario para el próximo trimestre antes de la reunión de las 9:00. El problema no era menor: el archivo principal de Excel que heredé del departamento financiero venía con un batiburrillo de macros antiguas, referencias circulares imposibles y celdas con errores de tipo #VALOR! justo en las pestañas de stock estacional. Había dedicado las últimas dos horas a borrar datos a mano y copiar fórmulas kilométricas de PROMEDIO y SI.ERROR que solo conseguían congelar el ordenador cada vez que aplicaba un filtro.
 
@@ -30,7 +31,7 @@ a:
 
 3. Cuellos de botella manuales: Copiar y pegar datos de ventas mes a mes para pasarlos a herramientas externas rompe los rangos dinámicos y genera referencias nulas en tablas dinámicas clave.
 
-## Guía paso a paso: Predice el inventario con IA directamente en tu hoja de cálculo
+## 3. Solución práctica paso a paso para optimizar el flujo: Predice el inventario con IA directamente en tu hoja de cálculo
 
 Para solucionar este caos de forma definitiva, vamos a estructurar el proceso en tres pasos sencillos aprovechando las capacidades nativas de análisis de datos y la asistencia de IA integrada en tu entorno de trabajo.
 
@@ -55,7 +56,7 @@ Si trabajas con versiones recientes de Microsoft 365, puedes combinar el anális
 * Haz clic en Crear. Excel generará automáticamente una nueva hoja con las fórmulas de pronóstico integradas (PRONÓSTICO.ETS) y gráficos de banda que se actualizan solos al modificar los datos de entrada. <div style="border-left: 4px solid #4338ca; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Consejo de seguridad:</strong> Antes de aplicar cualquier cambio masivo en hojas compartidas de la empresa, guarda una copia de respaldo con la fecha del día en una carpeta local aislada. </div>
 
-## Preguntas Frecuentes (FAQ)
+## 5. Preguntas Frecuentes (FAQ) (FAQ)
 
 ### ¿Puedo hacer esto si mi empresa utiliza versiones antiguas de Excel instaladas localmente?
 Si usas versiones anteriores a 2016 que no incluyen la función Hoja de pronóstico, puedes utilizar la función básica `PRONÓSTICO.LINEAL` combinada con los datos limpios de Power Query, o bien apoyarte en complementos externos de IA autorizados por tu departamento de sistemas.

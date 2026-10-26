@@ -8,6 +8,7 @@ tags: ["Google Sheets", "ChatGPT", "Productividad", "Automatización", "Excel"]
 theme: "Sunset Horizon Coral"
 ---
 
+## 1. Emergencia crítica en el trabajo y bloqueo de tareas
 
 Eran exactamente las 11:45 de la mañana en nuestra oficina del Paseo de la Castellana en Madrid. A las 12:00 teníamos la reunión mensual de seguimiento con el comité de dirección. Tenía abierta una hoja de cálculo en Google Sheets con el reporte de métricas del trimestre: más de cinco mil filas con correos electrónicos mezclados, números de teléfono mal formateados y códigos de cliente desestructurados. Mi fórmula de extracción con expresiones regulares (REGEXEXTRACT) se había roto por completo tras la última importación de datos. La celda solo devolvía un molino de errores `#VALOR!`. Sudor frío, el corazón a mil por hora y el director general preguntando por Slack si el enlace ya estaba actualizado.
 
@@ -80,7 +81,7 @@ A. Sustituye los nombres por "Cliente A" o usa identificadores genéricos.
 
 ---
 
-## Preguntas Frecuentes (FAQ)
+## 5. Preguntas Frecuentes (FAQ) (FAQ)
 
 ### ¿Qué hago si la fórmula de ChatGPT me devuelve un error en Google Sheets?
 Asegúrate de que el separador de argumentos de tu Google Sheets coincida con lo que da la I

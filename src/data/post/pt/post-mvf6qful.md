@@ -8,6 +8,7 @@ tags: ["Google Sheets", "Gemini", "Automação", "Produtividade"]
 theme: "Cyberpunk Terminal"
 ---
 
+## 1. Situação de emergência e gargalo crítico no escritório
 
 Eram exatas 17h45 em um escritório corporativo na Avenida Paulista, em plena correria do fechamento de relatórios de fim de mês. Meu chefe passou pela minha mesa cobrando a consolidação final da base de clientes para a reunião de diretoria da manhã seguinte. O problema? A equipe comercial enviou três planilhas diferentes. O resultado foi uma base com mais de 4.000 linhas repleta de e-mails duplicados, variações de nomes com letras maiúsculas e minúsculas, e CPFs desformatados. Tentar limpar tudo isso manualmente usando apenas os filtros nativos do Google Sheets levaria horas de puro estresse.
 

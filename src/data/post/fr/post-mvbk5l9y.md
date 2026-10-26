@@ -8,6 +8,7 @@ tags: ["Google Sheets", "Productivity", "Automation", "Finance"]
 theme: "High-Contrast Charcoal"
 ---
 
+## 1. Situation d'urgence critique au bureau
 
 Il est 13h45 au 24e étage d'une tour à La Défense. La direction financière exige pour le comité de direction de 14h00 un récapitulatif consolidé des ventes en USD, GBP et JPY. Sauf que votre tableau Google Sheets est totalement bloqué : les taux de change copiés-collés ce matin manquent cruellement de mise à jour, la formule magique du stagiaire renvoie une erreur #REF!, et le module complémentaire payant que vous testiez hier demande soudainement une licence pro à 49 euros par mois. Panique générale dans l'open space, le temps file et la réunion approche à grands pas.
 

@@ -8,6 +8,7 @@ tags: ["Excel", "ChatGPT", "Python", "Produtividade", "Automação"]
 theme: "Industrial Blueprint"
 ---
 
+## 1. Situação de emergência e gargalo crítico no escritório
 
 Eram 18h45 de uma quinta-feira de fechamento de mês em nosso escritório na Berrini, em São Paulo. O ar-condicionado central já tinha desligado, a equipe financeira contava os minutos para ir embora, e a minha planilha consolidada de 45 megabytes simplesmente congelou ao tentar recalcular a aba de comissões. O ponteiro do mouse virou aquela rodinha infinita de carregamento e, segundos depois, a fatídica mensagem: *O Microsoft Excel parou de funcionar*. Sem salvar os últimos trinta minutos de ajustes manuais nas fórmulas PROCV e SOMASES. 
 

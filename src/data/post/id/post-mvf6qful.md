@@ -8,6 +8,7 @@ tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]
 theme: "Steel Silver Metallic"
 ---
 
+## 1. Situasi Kritis dan Hambatan Kerja Mendesak di Kantor
 
 Jam sudah menunjukkan pukul 21.30 WIB di salah satu menara perkantoran kawasan bisnis SCBD Jakarta. AC sentral kantor sudah mati, menyisakan suara dengung lemari pendingin pantry dan keputusasaan saya menatap layar monitor. Besok pagi, laporan rekapitulasi data pelanggan tahunan harus diserahkan ke meja direksi. Masalahnya? Spreadsheet berisi sepuluh ribu baris data tersebut penuh dengan duplikat nama pelanggan, variasi penulisan email yang berbeda kapitalisasinya, hingga nomor telepon berantakan akibat digabung dari berbagai cabang. Fitur `Remove Duplicates` bawaan Google Sheets gagal total karena perbedaan spasi dan huruf besar-kecil (*case-sensitive*). Mata sudah perih, kopi sudah habis tiga cangkir, dan saya butuh solusi instan sebelum kepala pusing tujuh keliling.
 

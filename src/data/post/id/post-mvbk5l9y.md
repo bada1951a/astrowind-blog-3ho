@@ -8,6 +8,7 @@ tags: ["Google Sheets", "Otomatisasi", "Produktivitas", "Tips Kantor"]
 theme: "Retro Monokai"
 ---
 
+## 1. Situasi Kritis dan Hambatan Kerja Mendesak di Kantor
 
 Jam 11 malam di salah satu gedung perkantoran kawasan bisnis SCBD Jakarta, mata saya sudah berkunang-kunang menatap layar monitor. Deadline laporan rekap keuangan tahunan untuk kantor pusat tinggal beberapa jam lagi, tapi data transaksi dalam berbagai mata uang asing (USD, SGD, EUR, JPY) masih berantakan. Bos minta semua dikonversi ke Rupiah (IDR) menggunakan kurs penutupan hari ini secara akurat. Selama ini, tim saya kerja rodi menyalin data kurs satu per satu dari situs berita ekonomi secara manual ke Excel. Akibatnya? Salah ketik angka nol, rumus hancur, dan lembur panjang pun tak terhindarkan.
 

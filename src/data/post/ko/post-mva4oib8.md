@@ -8,6 +8,7 @@ tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]
 theme: "Sandstone Desert Minimal"
 ---
 
+## 1. 직장인 멘붕 오는 업무 병목 돌발 상황
 
 오후 5시 50분, 판교 테크노밸리의 한 IT 기업 사무실. 내일 오전 경영진 보고를 앞두고 마케팅팀에서 넘어온 고객 데이터 취합 파일을 열었다가 혈압이 급상승했습니다. 전화번호는 어떤 건 010-1234-5678, 어떤 건 01012345678, 또 어떤 건 국가번호(+82)까지 제멋대로 섞여 있고, 이메일 주소란에는 오타와 공백이 판을 치고 있었습니다. 
 
@@ -32,8 +33,6 @@ theme: "Sandstone Desert Minimal"
 * 구글 시트 함수와의 문법 충돌: 엑셀과 구글 시트의 미세한 함수 차이, 그리고 다중 조건 중첩(Nested Formula) 과정에서 발생하는 오타로 인해 '#N/A' 또는 '#VALUE!' 에러가 반복됩니다.
 
 ---
-
-
 
 ![AI Productivity & Workflow Automation](https://picsum.photos/seed/office988/1000/550)
 

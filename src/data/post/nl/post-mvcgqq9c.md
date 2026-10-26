@@ -8,6 +8,7 @@ tags: ["Excel", "ChatGPT", "Python", "Productiviteit", "Zuidas"]
 theme: "Dark Velvet Obsidian"
 ---
 
+## 1. Noodsituatie en knelpunt op de werkvloer
 
 Het is kwart over drie op een donderdagmiddag in een glazen vergaderruimte op de Zuidas in Amsterdam. Om vier uur start de cruciale kwartaalreview met de directie. Mijn scherm staat al tien minuten op het welbekende, frustrerende ronddraaiende cirkeltje. Mijn Excel-bestand van 45 megabyte, volgestouwd met complexe XLOOKUP-functies, geneste IF-statements en macro's die door drie verschillende voorgangers zijn geschreven, heeft besloten om definitief te bevriezen. Elke keer dat ik op een cel klik, crasht de hele applicatie. Het zweet breekt me uit. Terwijl mijn collega alvast de beamer start, weet ik dat handmatig door al die duizenden rijen ploeteren om de fout te vinden kansloos is. 
 

@@ -8,6 +8,7 @@ tags: ["Excel", "Intelligenza Artificiale", "Automazione", "Ufficio"]
 theme: "Crimson Emergency Field"
 ---
 
+## 1. Emergenza improvvisa e blocco delle attività in ufficio
 
 Erano le 17:45 in un ufficio direzionale a Milano, a pochi minuti dalla chiusura della contabilità mensile, quando il panico ha preso il sopravvento. Il nostro responsabile delle risorse umane doveva assolutamente validare il prospetto delle presenze e il calcolo degli straordinari per la chiusura dei cedolini, ma il file Excel era bloccato da una password che nessuno ricordava più. Peggio ancora, la formula per calcolare in automatico le ore notturne e i festivi dava errore perché la struttura del foglio era stata modificata per errore da un collega in vena di modifiche improvvisate. Bloccati da un file protetto e da formule di orario sballate, eravamo a un passo dal dover rifare tutto a mano per trenta dipendenti.
 
@@ -26,8 +27,6 @@ Prima di mettere le mani sulle formule e sbloccare la situazione, capiamo perch�
 a: Calcolare la soglia delle 40 ore settimanali, distinguendo tra straordinario diurno, notturno e festivo con formule manuali nidificate rende il file un labirinto illeggibile per chiunque non sia un mago di Excel.
 
 ---
-
-
 
 ![How to Calculate Working Hours and Overtime Automatically in Excel Using Simple AI Formulas AI Automation Guide](https://picsum.photos/seed/work-mvjyge92-6-b/1000/550.jpg)
 

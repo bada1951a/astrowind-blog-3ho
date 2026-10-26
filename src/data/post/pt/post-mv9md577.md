@@ -8,6 +8,7 @@ tags: ["Excel", "Power Query", "Automação", "Produtividade", "Escritório"]
 theme: "Cobalt Enterprise Lab"
 ---
 
+## 1. Situação de emergência e gargalo crítico no escritório
 
 Eram 18h30 de uma sexta-feira típica de fechamento de mês no nosso escritório na Faria Lima, em São Paulo. A caixa de entrada não parav
 

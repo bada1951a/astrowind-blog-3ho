@@ -8,6 +8,7 @@ tags: ["Excel", "Sztuczna Inteligencja", "Automatyzacja", "Zarządzanie Zapasami
 theme: "Rosewood Hardware Guide"
 ---
 
+## 1. Awaryjna sytuacja i paraliż pracy w biurze
 
 Godzina 16:45 w biurowcu w samym sercu Warszawy. Za piętnaście minut mam wysłać ostateczny raport kwartalny do zarządu, a mój główny arkusz Excela z planowaniem logistycznym po prostu zamarł. Formuły prognozujące popyt na kolejny kwartał sypią błędami #ARG!, a historyczne dane sprzedażowe za ostatnie trzy lata kompletnie nie chcą dopasować się do nowych sezonowych wahań rynku. Ręczne liczenie trendów dla ponad 500 indeksów towarowych w tak krótkim czasie to gwarancja katastrofy. Zamiast panicznie przeklejać liczby, postanowiłem wykorzystać wbudowane oraz zewnętrze narzędzia AI bezpośrednio w arkuszu, aby zautomatyzować to piekło w zaledwie kilka minut.
 

@@ -8,6 +8,7 @@ tags: ["Excel", "Power Query", "Automatización", "Oficina"]
 theme: "Rosewood Hardware Guide"
 ---
 
+## 1. Emergencia crítica en el trabajo y bloqueo de tareas
 
 Eran las 8:45 de la mañana en nuestra oficina del Paseo de la Castellana en Madrid. Faltaban exactamente quince minutos para la reunión mensual con el director financiero, y mi pantalla parecía una escena del crimen: celdas con errores de referencia, fórmulas BUSCARV rotas porque alguien cambió el nombre de una columna en el archivo de ventas de mayo, y tres pestañas distintas con datos que simplemente no cuadraban. Llevaba dos horas haciendo "copiar y pegar" como un autómata, rezando para que el total coincidiera. Sobra decir que el ambiente cortaba la respiración.
 
@@ -28,7 +29,7 @@ Antes de aplicar la solución, analicemos por qué caemos en este bucle de estr�
 
 3. Procesos manuales propensos al error humano: Hacer un pegado masivo de 5,000 filas a medianoche es la receta perfecta para arrastrar errores de un mes a otro sin darte cuenta. ---
 
-## Guía Paso a Paso: Automatiza tu consolidación con Power Query
+## 3. Solución práctica paso a paso para optimizar el flujo: Automatiza tu consolidación con Power Query
 
 Power Query viene integrado de serie en Excel (a partir de la versión 2016 y en Microsoft 365). No necesitas instalar complementos extraños ni aprender código VBA avanzado. Solo sigue estos pasos directamente desde tu interfaz en español:
 
@@ -76,7 +77,7 @@ Cuidado con las rutas locales absolutas (`C:\Users\TuNombre\Desktop\...`) si com
 
 ---
 
-## Preguntas Frecuentes (FAQ)
+## 5. Preguntas Frecuentes (FAQ) (FAQ)
 
 1. ¿Qué pasa si un archivo nuevo tiene una columna extra que los demás no tienen?
 Power Query es lo suficientemente inteligente como para integrarla. Creará una columna nueva en la tabla consolidada y pondrá valores vacíos (`null`) en las filas de los meses anteriores que no la tenían, sin romper ninguna fórmula.

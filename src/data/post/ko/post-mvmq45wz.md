@@ -8,7 +8,6 @@ tags: ["Google Sheets", "Web Scraping", "Automation", "Office Tips", "AI Tools"]
 theme: "Sandstone Desert Minimal"
 ---
 
-
 ## 1. 갑작스러운 팀 회의와 자동화 데모 위기
 
 판교 테크노밸리의 한 IT 기업 마케팅 실장 자리, 혹은 서울 여의도의 대기업 유통 기획팀 사무실. 평화롭던 오후 3시, 팀장님이 갑자기 슬랙(Slack)으로 공지를 날립니다. "내일 오전 본부장님 보고 때 '업무 자동화 도입 방안' 발표 다들 아시죠? 실무에 바로 쓸 수 있는 데모 화면 하나씩 준비해 주세요. 특히 매일 아침 수동으로 긁어오느라 고생하는 아마존 경쟁사 가격 크롤링 같은 거, 당장 보여줄 수 있으면 베스트입니다!"
@@ -18,8 +17,6 @@ theme: "Sandstone Desert Minimal"
 <div style="border-left: 4px solid #a16207; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>실무자 노트:</strong> 개발 지식이 전혀 없어도, 파이썬이나 복잡한 API 연동 없이 구글 시트의 기본 함수와 웹 크롤링 기능을 조합하면 10분 만에 강력한 경쟁사 모니터링 대시보드를 구축할 수 있습니다.
 </div>
-
-
 
 ![How to Scrape Amazon Competitor Pricing into Google Sheets Daily Without Writing Code AI Automation Guide](https://picsum.photos/seed/work-mvmq45wz-0-b/1000/550.jpg)
 
@@ -33,7 +30,7 @@ theme: "Sandstone Desert Minimal"
 
 셋째, IP 차단과 봇 감지 문제입니다. 매일 주기적으로 같은 사이트에 접속해 정보를 긁어오다 보면 아마존의 봇 방어 시스템에 걸려 IP가 차단되거나 빈 화면만 수집되는 불상사가 발생합니다. 
 
-## 3. Step-by-Step Resolution: 코딩 없이 아마존 가격 긁어오기
+## 3. 1분 만에 끝내는 단계별 실무 해결법: 코딩 없이 아마존 가격 긁어오기
 
 자, 이제 고민을 끝내고 실전으로 들어갑니다. 구글 시트만 열어두세요. 파이썬도, 외부 유료 프로그램도 필요 없습니다. 구글 시트의 내장 함수인 **IMPORTXML**과 **IMPORTDATA**의 한계를 극복하는 가장 스마트한 실무 팁을 안내합니다.
 
@@ -80,7 +77,7 @@ function refreshPrices() {
 
 이것으로 설정 끝입니다. 이제 매일 아침 출근하기 전, 구글 시트가 알아서 아마존에 접속해 최신 경쟁사 가격을 긁어와 시트를 최신 상태로 업데이트해 놓습니다.
 
-## 4. Expert Warning / Advice: 실무 적용 시 주의사항
+## 4. 현직 자동화 전문가의 핵심 주의사항 및 팁 Warning / Advice: 실무 적용 시 주의사항
 
 자동화를 도입할 때 반드시 명심해야 할 실무 보안 및 운영 팁입니다.
 
@@ -88,7 +85,7 @@ function refreshPrices() {
 - **백업 시트 운영:** 구글 시트 함수나 아마존 UI 변경으로 인해 일시적으로 가격 수집에 오류가 생길 수 있으니, 전일 데이터가 덮어씌워지지 않도록 **Google Apps Script**를 이용해 히스토리 로그 시트를 별도로 남기는 것을 추천합니다.
 - **데이터 검증:** 본부장님 보고 직전, 반드시 수동으로 한 번 더 시트를 새로고침하여 데이터가 정상 출력되는지 최종 확인하는 센스는 칼퇴의 기본입니다.
 
-## 5. Frequently Asked Questions
+## 5. 자주 묻는 질문 (FAQ)
 
 **Q: 아마존 외에 다른 이커머스 사이트(쿠팡, 무신사 등) 가격도 이 방법으로 수집할 수 있나요?**
 

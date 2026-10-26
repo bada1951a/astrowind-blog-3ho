@@ -8,7 +8,6 @@ tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]
 theme: "Industrial Blueprint"
 ---
 
-
 ## 1. L'urgence du bouclage à La Défense
 
 Il est 17h30 au 28ème étage d'une tour de La Défense. Le comité de direction exige une note de synthèse impérative sur la dernière directive européenne de conformité de 150 pages, et le tout doit être bouclé avant le départ des navettes de direction à 18h00. 
@@ -16,8 +15,6 @@ Il est 17h30 au 28ème étage d'une tour de La Défense. Le comité de direction
 Pendant ce temps, sur votre second écran, un autre dossier urgent vous rappelle à l'ordre : il vous reste exactement trente minutes pour préparer et expédier par e-mail des devis sur mesure accompagnés de pièces jointes spécifiques à 50 clients différents. Le vent souffle fort contre les vitres teintées, la boîte mail s'affole, et vos yeux se fatiguent déjà sur les paragraphes interminables du document réglementaire. C'est le genre de goulet d'étranglement bureaucratique où la panique gagne rapidement du terrain si l'on s'y prend de manière classique.
 
 Heureusement, inutile de lire chaque ligne en diagonale ou d'imprimer une ramette entière de papier. En combinant la puissance de **Claude 3.5 Sonnet** et une méthode de prompt engineering bien calibrée, il est possible d'extraire l'essentiel de ces 150 pages en moins de trois minutes, libérant ainsi le temps nécessaire pour finaliser vos envois commerciaux sans erreur.
-
-
 
 ![How to Summarize 150-Page Regulatory Compliance PDFs in 3 Minutes Using Claude 3.5 Sonnet AI Automation Guide](https://picsum.photos/seed/work-mvnfci0w-4-b/1000/550.jpg)
 

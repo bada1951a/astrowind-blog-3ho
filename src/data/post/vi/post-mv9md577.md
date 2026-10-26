@@ -8,6 +8,7 @@ tags: ["Excel", "Power Query", "Automation", "Office Tips", "Workflow"]
 theme: "Graphite Technical Paper"
 ---
 
+## 1. Tình huống sự cố khẩn cấp và tắc nghẽn công việc văn phòng
 
 Đồng hồ góc phải màn hình đã điểm 17:30 chiều thứ Sáu tại văn phòng quận 1, TP.HCM. Sếp vừa gửi một tin nhắn ngắn gọn trên nhóm chat công ty: "Em ơi, tổng hợp lại giúp anh số liệu doanh thu tháng này của 12 chi nhánh, định dạng lại bảng rồi gửi trước 18:00 để anh đưa vào họp ban giám đốc nhé." Nhìn vào màn hình lúc này là một "bãi chiến trường" gồm 12 file Excel riêng biệt do các quản lý khu vực gửi lên, mỗi file lại có một kiểu đặt tên cột khác nhau, định dạng ngày tháng lung tung và font chữ lệch chuẩn. Lại một buổi tối nữa phải ở lại công ty gặm bánh mì, căng mắt copy-paste từng dòng dữ liệu và cầu nguyện không gõ nhầm công thức SUM.
 

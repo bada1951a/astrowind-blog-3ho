@@ -8,6 +8,7 @@ tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]
 theme: "Steel Silver Metallic"
 ---
 
+## 1. Emergencia crítica en el trabajo y bloqueo de tareas
 
 Eran las 8:45 de la mañana en nuestra oficina del Paseo de la Castellana en Madrid. Faltaban exactamente quince minutos para cruzar al despacho de dirección y presentar el reporte trimestral de métricas de clientes. Al abrir el Google Sheets principal, el corazón se me encogió: la base de datos tenía más de cinco mil filas con registros duplicados por variaciones absurdas en los nombres y correos electrónicos. Fórmulas rotas por todos lados, el recuento total inflado un treinta por ciento y yo sudando frío frente a la pantalla pensando en cómo explicarle al director por qué teníamos tres veces al mismo cliente corporativo. Borrar a mano era una misión suicida y las funciones clásicas de eliminar duplicados no detectaban los errores tipográficos.
 
@@ -71,7 +72,7 @@ A., SL, etc.). Analiza los datos pegados a continuación, unifica los registros 
 
 ---
 
-## Preguntas Frecuentes (FAQ)
+## 5. Preguntas Frecuentes (FAQ) (FAQ)
 
 ¿Qué hago si la lista de clientes supera las diez mil filas y Gemini se corta?
 Divide tu base de datos en bloques lógicos de tres mil o cuatro mil filas (por ejemplo, dividiendo alfabéticamente por la inicial del cliente). Procesar lotes más pequeños garantiza que la IA no omita registros debido a límites de tokens en una sola respuesta.

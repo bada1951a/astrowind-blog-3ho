@@ -8,6 +8,7 @@ tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]
 theme: "Sunset Horizon Coral"
 ---
 
+## 1. Kritische Fehlersituation im Büroalltag
 
 Es war genau zwei Tage vor der wichtigen internen Revision in unserer Zentrale im Frankfurter Bankenviertel. Auf meinem Schreibtisch stapelten sich die Berichte, und der Druck der Geschäftsführung wuchs minütlich. Um die monatliche Zeiterfassung für die Abteilung schneller aufzubereiten, hatte ich ein vermeintlich cleveres Makro-Skript aus dem Netz kopiert und gestartet. Das Ergebnis? Ein echter Albtraum. Das Skript lief Amok, überschrieb ungefragt das originale Master-File im gemeinsamen Projektordner und löschte dabei die historischen Überstundennachweise der letzten sechs Monate. Während ich panisch im Backup-Verzeichnis suchte und der kalte Schweiß auf der Stirn stand, wurde mir klar: So kann es nicht weitergehen. Wir brauchten eine saubere, robuste und transparente Lösung für die Arbeitszeit- und Überstundenberechnung, die selbst einem strengen Compliance-Audit standhält – ohne fehleranfällige Makros, dafür mit smarter KI-Unterstützung direkt in Excel.
 
@@ -72,7 +73,7 @@ Um sicherzustellen, dass bei der nächsten Betriebsprüfung oder dem internen Au
 <strong>Profi-Tipp für den Alltag:</strong> Nutzen Sie die Funktion <strong>Daten > Datenüberprüfung</strong>, um Fehleingaben bei Start- und Endzeiten von vornherein auszuschließen. So verhindern Sie, dass Mitarbeiter versehentlich Zeiten außerhalb des gültigen 24-Stunden-Formats eingeben.
 </div>
 
-## Häufig gestellte Fragen (FAQ)
+## 5. Häufig gestellte Fragen (FAQ) (FAQ)
 
 Q1. Was mache ich, wenn eine Schicht über Mitternacht hinausgeht und Excel ein negatives Ergebnis anzeigt?
 

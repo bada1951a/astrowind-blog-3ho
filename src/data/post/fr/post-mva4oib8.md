@@ -8,6 +8,7 @@ tags: ["Google Sheets", "ChatGPT", "Productivite", "Bureautique"]
 theme: "Sunset Horizon Coral"
 ---
 
+## 1. Situation d'urgence critique au bureau
 
 Il est 14h45. La grande salle de réunion du 24ème étage à La Défense est comble, les directeurs s'installent, et mon fichier Google Sheets de synthèse budgétaire ressemble à un champ de bataille. Les numéros de téléphone sont collés avec les noms, les adresses e-mail sont truffées de caractères invisibles, et la formule REGEXEXTRACT que j'ai bricolée à la va-vite renvoie une erreur `#VALEUR!` sur toutes les lignes. Mon cœur s'emballe. La présentation commence dans un quart d'heure et le tableau est totalement inexploitable.
 

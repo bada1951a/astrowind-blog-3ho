@@ -8,6 +8,7 @@ tags: ["Google Sheets", "Apps Script", "Automatyzacja", "Excel i Biuro"]
 theme: "Nordic Clean Ice"
 ---
 
+## 1. Awaryjna sytuacja i paraliż pracy w biurze
 
 Była dokładnie 16:45 w czwartek, kiedy w naszym biurze w warszawskim centrum biznesowym zapadła cisza przed burzą. Jutro rano zarząd miał otrzymać kluczowy cotygodniowy raport ze sprzedaży i wskaźników KPI. Niestety, arkusz Google Sheets, który miał zasilać te dane, właśnie się zawiesił. Formuły importujące dane z zewnętrznych baz zaczęły sypać błędami typu #REF!, a ręczne przeklikiwanie widoków, eksportowanie do PDF i wysyłanie maili do pięciu dyrektorów miało zająć mi co najmniej dwie godziny monotonnej pracy. 
 

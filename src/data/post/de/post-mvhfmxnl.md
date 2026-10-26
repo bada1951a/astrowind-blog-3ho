@@ -8,6 +8,7 @@ tags: ["Excel", "KI Tools", "Bestandsplanung", "Automatisierung"]
 theme: "Tokyo Neon Violet"
 ---
 
+## 1. Kritische Fehlersituation im Büroalltag
 
 Es ist 18:45 Uhr an einem Dienstag im Frankfurter Finanzdistrikt. In genau 14 Stunden beginnt das entscheidende Vorstandstreffen, und auf meinem Schreibtisch stapeln sich die dringenden Monatsabschlussberichte. Plötzlich schickt mir der Supply-Chain-Leiter eine verklausulierte Excel-Tabelle mit den historischen Verkaufszahlen der letzten drei Jahre und der knappen Nachricht: "Wir brauchen bis morgen Früh eine realistische Prognose für den Lagerbestand im kommenden Quartal. Keine Schätzungen, harte Zahlen bitte!" Bisher bedeutete das für mich: Nachtschicht, stundenlanges Herumschlagen mit unvollständigen Pivot-Tabellen und das mühsame Erraten von saisonalen Trends in Excel, nur um am Ende wieder manuell an den Parametern zu drehen.
 
@@ -60,7 +61,7 @@ Wenn Sie ohne externe KI-Add-Ins arbeiten möchten, nutzen Sie das native Werkze
 <strong>Wichtiger Hinweis zum Datenschutz:</strong> Wenn Sie interne Unternehmensdaten in KI-Tools eingeben, stellen Sie sicher, dass Sie die DSGVO-konformen Enterprise-Versionen Ihrer Software (wie Microsoft 365 Copilot mit Unternehmensdatenschutz) verwenden. Speisen Sie niemals vertrauliche Bestandsdaten in öffentliche, kostenlose KI-Websites ein!
 </div>
 
-## Häufig gestellte Fragen (FAQ)
+## 5. Häufig gestellte Fragen (FAQ) (FAQ)
 
 ### Kann die KI auch unvollständige Lagerdaten ausgleichen?
 Ja, moderne KI-Algorithmen erkennen Muster und können fehlende Zwischenwerte (z. B. durch Feiertage oder Systemausfälle) plausibel interpolieren, bevor die eigentliche Vorhersage für das nächste Quartal berechnet wird.

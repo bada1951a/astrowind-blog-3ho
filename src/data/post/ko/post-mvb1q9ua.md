@@ -8,6 +8,7 @@ tags: ["Excel Automation", "AI Tools", "Productivity", "Office Tips"]
 theme: "Nordic Clean Ice"
 ---
 
+## 1. 직장인 멘붕 오는 업무 병목 돌발 상황
 
 시계 바늘은 이미 오후 6시 50분을 가리키고 있는데, 내 모니터 화면에는 대형 고객사 발송용 이메일 명단 5,000개가 제멋대로 엉클어져 있습니다. "min-su.kim@company.co.kr", "KIM_MINSU@company.com", "이민수 <minseok@company.co.kr>" 등 이름과 이메일 주소가 뒤섞여 있거나 대소문자가 제각각이고, 심지어 공백까지 난무하는 상태였습니다. 당장 1시간 뒤 임원 보고 회의를 앞두고 "수신인 이름과 이메일 주소를 깔끔하게 분리해서 시트로 보고해 주세요"라는 메일 한 통이 날아왔을 때의 그 아찔함, 직장인이라면 누구나 공감하실 겁니다.
 

@@ -8,6 +8,7 @@ tags: ["Google Sheets", "Währungsumrechnung", "Automatisierung", "Finanzen"]
 theme: "Steel Silver Metallic"
 ---
 
+## 1. Kritische Fehlersituation im Büroalltag
 
 Es war genau 14:15 Uhr an einem Dienstagnachmittag im Frankfurter Bankenviertel. In 45 Minuten sollte das Quartals-Boardmeeting beginnen, und mein Chef stand mit verschränkten Armen hinter meinem Schreibtisch. Auf dem Hauptmonitor: der finale Monatsabschluss. Das Problem? Unsere internationalen Töchter hatten ihre Umsätze in USD, GBP und CHF gemeldet, aber die Excel-Datei zeigte komplett veraltete Wechselkurse vom Vormonat. Noch schlimmer: Das frisch installierte Premium-Add-on für Währungsumrechnungen spuckte seit zwanzig Minuten nur noch den Fehler "Lizenz abgelaufen" aus. Fünfundvierzig Minuten bis zur Präsentation vor dem Vorstand, Hunderte von Zeilen manueller Daten und die Erkenntnis, dass teure Tools im kritischsten Moment versagen.
 
@@ -74,7 +75,7 @@ Ziehen Sie die Formel nach unten. Fertig ist Ihr vollautomatisiertes Dashboard.
 
 ---
 
-### Häufig gestellte Fragen (FAQ)
+## 5. Häufig gestellte Fragen (FAQ) (FAQ)
 
 Frage 1: Warum zeigt meine Zelle plötzlich `#N/A` an?
 Das passiert meistens am Wochenende oder an Feiertagen, wenn für bestimmte Devisenpaare keine Live-Daten übertragen werden. Nutzen Sie die oben beschriebene `=WENNFHlER()`-Funktion, um den letzten gültigen Kurs als Puffer zu behalten.

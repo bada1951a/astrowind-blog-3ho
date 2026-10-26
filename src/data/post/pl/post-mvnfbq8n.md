@@ -8,7 +8,6 @@ tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]
 theme: "Sunset Horizon Coral"
 ---
 
-
 ## 1. Zamknięcie miesiąca i nagły paraliż systemu
 
 Był dokładnie ostatni dzień miesiąca w naszym biurze w Warszawie. Na skrzynkę mailową o godzinie 16:45 wpadła nowelizacja unijnych przepisów compliance – plik PDF liczący dokładnie 150 stron gęstego, prawniczego żargonu, który musieliśmy przeanalizować i wdrożyć w strukturach firmy przed poniedziałkowym otwarciem rynków. Tradycyjnie, próba szybkiego przeklikania tego dokumentu albo wklejenia go do przestarzałych narzędzi kończyła się tym, że pasek ładowania wariował, komputer zaczynał głośno szumieć, a Excel lub czytnik PDF zamarzały na biało w najmniej odpowiednim momencie. 
@@ -18,8 +17,6 @@ Znacie to uczucie, gdy presja czasu rośnie, kolega z działu prawnego pyta o kl
 <div style="border-left: 4px solid #f97316; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Szybka wskazówka od eksperta:</strong> Zamiast panicznie czytać każdą stronę, podejdź do wielkich plików PDF jak do bazy danych, którą sztuczna inteligencja przeszuka w ułamku sekundy. Kluczem nie jest samo wrzucenie pliku, ale precyzyjne sformułowanie promptu systemowego.
 </div>
-
-
 
 ![How to Summarize 150-Page Regulatory Compliance PDFs in 3 Minutes Using Claude 3.5 Sonnet AI Automation Guide](https://picsum.photos/seed/work-mvnfddng-9-b/1000/550.jpg)
 

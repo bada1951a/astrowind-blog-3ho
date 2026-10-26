@@ -8,6 +8,7 @@ tags: ["Google Sheets", "AI Tools", "Financial Modeling", "Office Tips"]
 theme: "Acid Lime Hacker Space"
 ---
 
+## 1. Awaryjna sytuacja i paraliż pracy w biurze
 
 Godzina 16:45, warszawskie centrum biznesowe na Rondzie Daszyńskiego. Za piętnaście minut mam wysłać ostateczny kwartalny raport finansowy do zarządu, a kluczowy model w Google Sheets całkowicie się rozjechał. Wykresy pokazują ujemne marże zamiast zysków, formuły prognozujące przychody sypią błędami #ARG!, a szef właśnie napisał na Slacku: "Czy wszystko gotowe na jutrzejsze spotkanie?". Stres sięga zenitu, bo ręczne poprawianie setek komórek w tym stanie zajmie co najmniej dwie godziny.
 
@@ -79,8 +80,6 @@ a:</strong> Nigdy nie wklejaj poufnych danych płacowych, imiennych list zarobk�
 
 ### 1. Co zrobić, gdy polskie nazwy funkcji w Google Sheets gryzą się z angielskimi podpowiedziami AI?
 Warto włączyć w ustawieniach arkusza (Plik > Ustawienia arkusza spulchnionego > Zastosuj nazwy funkcji w języku angielskim) obsługę angielskich nazw. Dzięki temu prompty generowane przez międzynarodowe narzędzia AI będą działać od razu bezbłędnie, a arkusz sam przetłumaczy je na polski interfejs.
-
-
 
 ![How to Create Interactive Financial Modeling Charts in Google Sheets with AI Suggestions AI Automation Guide](https://picsum.photos/seed/work-mvhr38nx-9-b/1000/550.jpg)
 

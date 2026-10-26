@@ -8,6 +8,7 @@ tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]
 theme: "Retro Monokai"
 ---
 
+## 1. Emergenza improvvisa e blocco delle attività in ufficio
 
 Ore 14:15, quarto piano di un palazzo in zona Porta Nuova a Milano. Mancano esattamente quarantacinque minuti al fatidico incontro con il cliente per la revisione dei costi del trimestre, e sulla mia scrivania troneggia una pila di cinquanta fatture cartacee ricevute dai fornitori. Il capo mi ha appena mandato un messaggio su Teams: "Mi raccomando, per le 15:00 voglio il file Excel con la ripartizione esatta delle voci, niente margini di errore". Tradotto dal politichese aziendale: se non finisco in tempo, salta il mio pomeriggio e probabilmente pure la mia reputazione. 
 

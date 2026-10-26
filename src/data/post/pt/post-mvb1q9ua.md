@@ -8,6 +8,7 @@ tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]
 theme: "Solarized Amber Warm"
 ---
 
+## 1. Situação de emergência e gargalo crítico no escritório
 
 Eram 18h45 de uma sexta-feira chuvosa em um escritório corporativo na região da Avenida Paulista, em São Paulo. O fechamento do relatório mensal de vendas estava travado por um detalhe aparentemente simples, mas infernal: a base de dados de clientes extraída do sistema legado veio um verdadeiro caos. Colunas misturando nomes completos em letras minúsculas e maiúsculas, e-mails duplicados com caracteres inválidos como pontos extras, espaços vazios e domínios corrompidos (como `joao.silva@empresa. .com`). O diretor comercial já havia mandado mensagem no Teams perguntando se a apresentação de segunda-feira estaria pronta. Ficar até a madrugada limpando à mão 3.500 linhas usando fórmulas complexas de `LOCALIZ`, `EXT.TESTO` e `ESQUERDA` estava fora de cogitação. Foi nesse momento de desespero que recorri à IA integrada ao fluxo de trabalho para resolver o problema em menos de três minutos.
 
@@ -77,8 +78,6 @@ a:
 
 ### 1. Posso fazer isso sem ter a licença do Copilot no Excel?
 Sim. Você pode usar qualquer assistente de IA externo (como o ChatGPT ou Claude) para gerar a fórmula exata ou o script VBA/Power Query sob medida, colando apenas três ou quatro linhas de exemplo fictícias da sua base.
-
-
 
 ![AI Productivity & Workflow Automation](https://picsum.photos/seed/office502/1000/550)
 

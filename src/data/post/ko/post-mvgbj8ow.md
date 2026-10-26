@@ -8,6 +8,7 @@ tags: ["Google Sheets", "Apps Script", "Automation", "Office Tips", "PDF Report"
 theme: "Industrial Blueprint"
 ---
 
+## 1. 직장인 멘붕 오는 업무 병목 돌발 상황
 
 시계 바늘이 금요일 오후 5시 40분을 가리키고 있습니다. 판교의 한 IT 기업 사무실, 주간 실적 보고 마감을 불과 20분 앞둔 상황에서 제 모니터 앞은 전쟁터나 다름없었습니다. 팀장님께 제출할 주간 성과 보고서를 구글 시트로 작성해 놓고, 매주 금요일 퇴근 직전마다 수동으로 엑셀 파일을 PDF로 변환하고, 메일 창을 열어 첨부하고, 수신자 지정해서 보내는 반복 작업을 하다가 그만 중요한 지표 셀을 잘못 건드려 데이터가 엉망이 되어버렸습니다. 
 
@@ -28,8 +29,6 @@ theme: "Industrial Blueprint"
 * 타이밍 누락(Timing Omission): 주말 약속이나 연차 등으로 인해 발송 타이밍을 놓치거나 지연되어 사내 커뮤니케이션에 차질이 생깁니다.
 
 ---
-
-
 
 ![How to Write Custom Apps Script to Email Weekly PDF Reports from Google Sheets AI Automation Guide](https://picsum.photos/seed/work-mvgbj8ox-0-b/1000/550.jpg)
 

@@ -8,6 +8,7 @@ tags: ["Office Tips", "Excel Automation", "ChatGPT", "Workflow", "Data Cleaning"
 theme: "Mint Fresh Engineering"
 ---
 
+## 1. Kritische Fehlersituation im Büroalltag
 
 Es war kurz vor zehn Uhr morgens an einem grauen Dienstag im Frankfurter Bankenviertel, als der Vorstandbericht für das Quartal auf dem Tisch landen sollte. Unser Team hatte gerade die Aufgabe übernommen, die Berichte von zwölf verschiedenen Auslandsniederlassungen zusammenzuführen. Doch schon beim Öffnen der ersten Dateien traf uns der Schlag: Jede Niederlassung hatte ein komplett anderes Datenformat verwendet. In einigen Tabellen standen Straße, Hausnummer, PLZ und Ort in einer einzigen Zelle, während Telefonnummern mal mit Ländervorwahl, mal mit Bindestrichen oder komplett ohne Leerzeichen erfasst waren. Zu allem Überfluss waren die Schriften in den Excel-Tabellen unterschiedlich skaliert und die Datumsangaben reichten von US-Format bis hin zu kryptischen Textstrings, die Excel partout nicht als Datum erkennen wollte. Ein manuelles Auseinanderklamüsern von Tausenden Zeilen schien unmöglich und hätte uns Stunden gekostet.
 
@@ -15,7 +16,7 @@ An diesem Punkt half kein langes Jammern mehr. Statt mich in stupides Copy-Paste
 
 ![How to Auto-Split Address and Phone Number Columns in Excel with ChatGPT Assistance AI Automation Guide](https://picsum.photos/seed/work-mvlaw72m-3-b/1000/550.jpg)
 
-### Warum das Datenchaos jedes Mal aufs Neue entsteht
+## 2. Detaillierte Ursachenanalyse von Formel- und Prozessfehlern jedes Mal aufs Neue entsteht
 
 Bevor wir zu den konkreten Schritten kommen, lohnt sich ein kurzer Blick auf die Ursachen dieses allgegenwärtigen Büro-Dramas:
 
@@ -25,7 +26,7 @@ Zweitens unterschätzen viele Anwender die Tücken von verketteten Textfeldern. 
 
 Drittens führt der Import von CSV- oder Excel-Dateien aus unterschiedlichen Sprachversionen regelmäßig zu Kodierungsfehlern. Sonderzeichen wie Umlaute verwandeln sich in unleserliche Zeichensätze, und Telefonnummern springen oft in wissenschaftliche Notationen oder verlieren führende Nullen.
 
-### Schritt-für-Schritt-Lösung zur automatischen Datentrennung
+## 3. Schritt-für-Schritt-Anleitung zur Effizienzsteigerung zur automatischen Datentrennung
 
 Um diesen gordischen Knoten zu zerschneiden, nutzen wir eine Kombination aus ChatGPT als Formel-Generator und Excels integrierten Text-in-Spalten-Funktionen oder modernen Flash-Fill-Werkzeugen.
 
@@ -65,11 +66,11 @@ Da Sie 12 verschiedene Dateien zusammenführen müssen, ist manuelles Kopieren k
 
 3. Klicken Sie auf "Daten kombinieren" (Combine Data). Power Query wendet nun denselben Transformationsschritt auf alle Tabellen an, korrigiert automatisch unsaubere Datumsformate über die Spaltentyp-Änderung und führt die Daten in einer einzigen, sauberen Master-Tabelle zusammen.
 
-### Wichtige Hinweise für den Ernstfall
+## 4. Praxistipps und Warnungen vom Automatisierungs-Experten
 
 Achten Sie beim Zusammenführen internationaler Dateien immer darauf, dass die Textcodierung auf UTF-8 eingestellt ist, damit Umlaute und Sonderzeichen nicht verloren gehen. Machen Sie vor jeder Massenänderung über Power Query oder Makros immer eine Sicherheitskopie des Originalordners. Sollte ein Transformationsschritt fehlschlagen, können Sie so problemlos auf den Ursprungszustand zurückgreifen.
 
-### Häufig gestellte Fragen (FAQ)
+## 5. Häufig gestellte Fragen (FAQ) (FAQ)
 
 Q1. Was mache ich, wenn Excel die mit ChatGPT generierte Formel mit einem #WERT!-Fehler quittiert?
 

@@ -8,6 +8,7 @@ tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]
 theme: "Tokyo Neon Violet"
 ---
 
+## 1. Tình huống sự cố khẩn cấp và tắc nghẽn công việc văn phòng
 
 Đồng hồ góc phải màn hình đã điểm 17:15 chiều thứ Sáu tại văn phòng ở quận 1, TP.HCM. Sếp vừa gởi qua Zalo một file Excel chứa đúng 3.500 dòng dữ liệu khách hàng từ phòng kinh doanh chuyển sang để kịp làm báo cáo chiến dịch tuần tới. Nhìn vào cột "Họ và Tên kèm Email", tôi thực sự muốn ôm mặt khóc thét: chỗ thì viết hoa toàn bộ, chỗ thì viết thường, email thì dính chùm với tên kiểu `nguyenvanan@gmail.com - Nguyễn Văn An`, có ô lại thừa khoảng trắng vô căn cứ, thậm chí nhiều địa chỉ email bị sai định dạng cơ bản. Nếu ngồi dùng hàm thủ công như `LEFT`, `RIGHT`, `FIND` hay `SUBSTITUTE` chắc tôi phải cắm trại ở công ty qua đêm mất.
 
@@ -71,8 +72,6 @@ a: Excel sẽ tự động quét toàn bộ hàng nghìn dòng phía dưới và
 
 ### 1. Tính năng Flash Fill (`Ctrl + E`) không nhận diện đúng mẫu thì phải làm sao?
 Nếu dữ liệu quá phức tạp và AI hoặc Flash Fill đoán sai ở dòng thứ 3 hoặc thứ 4, bạn đừng vội xóa đi. Hãy gõ thủ công đúng kết quả ở 2 hoặc 3 dòng đầu tiên để "dạy" cho Excel hiểu quy luật, sau đó bấm lại `Ctrl + E`.
-
-
 
 ![AI Productivity & Workflow Automation](https://picsum.photos/seed/office794/1000/550)
 

@@ -8,7 +8,6 @@ tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]
 theme: "High-Contrast Charcoal"
 ---
 
-
 ## 1. De paniek op de Zuidas
 
 Het was half vijf op een regenachtige donderdagmiddag in ons kantoor aan de Gustav Mahlerlaan in het Amsterdamse zakendistrict. De zoveelste complexe update van de Europese regelgeving, een bikkelhard compliance-rapport van maar liefst 150 pagina's over de nieuwste financiële richtlijnen, was zojuist binnengekomen. Mijn senior partner liep mijn kantoor binnen met de mededeling dat het voltallige managementteam om zes uur een glasheldere samenvatting inclusief risico-analyse op tafel wilde hebben. Handmatig door al die juridische en technische lappen tekst ploegen betekende een nacht doorwerken, vooral toen bleek dat de ruwe tekstdata die we zojuist via een database-query hadden geëxporteerd vol zat met onzichtbare regeleinden en vervuilde opmaak waardoor elke poging tot snelle analyse direct spaak liep.
@@ -16,8 +15,6 @@ Het was half vijf op een regenachtige donderdagmiddag in ons kantoor aan de Gust
 <div style="border-left: 4px solid #e11d48; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Noodgeval op de werkvloer:</strong> Geëxporteerde tekstdata uit databases vertoont vaak vervelende opmaakfouten zoals verborgen witruimtes en spookachtige regeleinden (ghost line breaks). Hierdoor herkennen slimme tools en spreadsheetfuncties de input niet meer, wat leidt tot directe vastlopers tijdens cruciale deadlines.
 </div>
-
-
 
 ![How to Summarize 150-Page Regulatory Compliance PDFs in 3 Minutes Using Claude 3.5 Sonnet AI Automation Guide](https://picsum.photos/seed/work-mvnfd6t4-8-b/1000/550.jpg)
 
@@ -58,7 +55,7 @@ Geef een samenvatting van maximaal 500 woorden in het Nederlands, opgesplitst in
 Formateer het antwoord in duidelijke koppen en bullet points.
 ```
 
-## 4. Expertadvies voor de praktijk
+## 4. Belangrijke adviezen van automatiseringsspecialistenadvies voor de praktijk
 
 Bij het werken met gevoelige bedrijfsdocumenten en wetgeving via externe AI-tools is voorzichtigheid geboden. Houd rekening met de volgende richtlijnen:
 

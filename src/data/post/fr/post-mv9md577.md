@@ -8,6 +8,7 @@ tags: ["Excel", "Power Query", "Automatisation", "Bureautique", "Productivité"]
 theme: "Rosewood Hardware Guide"
 ---
 
+## 1. Situation d'urgence critique au bureau
 
 Il est 17h45 au bureau de La Défense, et c'est la panique générale. Le comité de direction a avancé la réunion stratégique à demain matin, et mon tableau Excel de consolidation des ventes régionales refuse obstinément de coopérer. J'ai 12 fichiers de vente différents éparpillés sur le serveur partagé, reçus des différentes filiales, tous avec des formats légèrement différents, des en-têtes déplacés et des erreurs de formules en cascade. Le copier-coller manuel que je traîne depuis des mois est en train de me exploser à la figure, et mes yeux commencent à picoter sérieusement.
 

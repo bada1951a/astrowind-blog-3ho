@@ -8,6 +8,7 @@ tags: ["Google Sheets", "Automazione", "Finance", "Produttività"]
 theme: "Bronze Artisan Workshop"
 ---
 
+## 1. Emergenza improvvisa e blocco delle attività in ufficio
 
 Erano le 14:45 e il mio ufficio a Milano sembrava una succursale della Borsa di Wall Street. Mancavano solo quindici minuti alla riunione di allineamento con il cliente svizzero, e il report finanziario trimestrale era un disastro totale. Le colonne con i tassi di cambio EUR-CHF e EUR-USD erano state aggiornate a mano l'ultima volta la settimana prima. Il capo mi è passato dietro le spalle, ha guardato lo schermo e ha detto: "Mi raccomando, i dati sui margini devono essere al centesimo, altrimenti saltano i contratti". Panico totale. Dieci minuti passati a cercare su Google i tassi spot, a fare copia-incolla disperati, a rischiare di invertire le valute in un momento di pura tachicardia da ufficio. Quella mattina ho giurato che non avrei mai più perso tempo prezioso dietro a un copia-incolla manuale.
 

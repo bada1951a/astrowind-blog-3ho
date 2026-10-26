@@ -8,18 +8,15 @@ tags: ["Google Sheets", "Workflow", "Automation", "Scraping"]
 theme: "Dark Velvet Obsidian"
 ---
 
-
 ## 1. Panik Malam Hari di SCBD: Ketika Makro Excel Hancur Seketika
 
 Jam menunjukkan pukul 21.45 di sebuah gedung perkantoran kawasan SCBD Jakarta. AC sentral kantor sudah mulai dimatikan, menyisakan suara dengung lemari pendingin pantry dan ketukan keyboard saya yang tersisa sendirian di lantai tersebut. Selama dua jam terakhir, saya mati-matian merapikan tabel pivot dan macro VBA yang rumit untuk merangkum data harga produk kompetitor di Amazon guna laporan rapat direksi esok pagi. 
 
 Tiba-tiba, layar laptop mendadak *freeze*. Muncul dialog box putih yang tidak merespons. Sebelum saya sempat menekan tombol *Save*, aplikasi tertutup sendiri secara paksa (*crash*). Dua jam kerja keras mengolah data mentah, merumuskan fungsi pencarian, dan mengatur tata letak laporan melayang begitu saja dalam hitungan detik. Frustrasi melanda karena saya harus mengulang semuanya dari awal secara manual esok paginya. Kejadian itu menjadi titik balik saya: saya bersumpah tidak akan lagi bergantung pada makro lokal yang ringkih untuk tugas pemantauan harga harian.
 
-
-
 ![How to Scrape Amazon Competitor Pricing into Google Sheets Daily Without Writing Code AI Automation Guide](https://picsum.photos/seed/work-mvmq65gw-10-b/1000/550.jpg)
 
-## 2. Root Cause Breakdown
+## 2. Analisis Mendalam Akar Masalah Formula dan Alur Kerja
 
 Mengapa tugas rutin seperti memantau harga kompetitor sering berujung pada bencana lembur dan stres di kantor? Berdasarkan pengalaman mendampingi berbagai tim operasional, ada tiga akar masalah utama:
 
@@ -33,7 +30,7 @@ Mengapa tugas rutin seperti memantau harga kompetitor sering berujung pada benca
 <strong>Catatan Profesional:</strong> Jangan buang energi Anda untuk menulis kode pemprogaman yang rumit jika solusi berbasis fungsi bawaan awan dapat melakukan pekerjaan yang sama secara lebih stabil dan otomatis setiap hari.
 </div>
 
-## 3. Step-by-Step Resolution
+## 3. Panduan Langkah demi Langkah Otomatisasi dan Solusi Cepat
 
 Berikut adalah cara elegan dan aman untuk menarik data harga kompetitor dari Amazon langsung ke Google Sheets secara otomatis setiap hari, tanpa perlu menulis satu baris kode pun. Kita akan menggunakan fungsi bawaan Google Sheets yang dikombinasikan dengan pengaya (*add-on*) tanpa repot.
 
@@ -75,7 +72,7 @@ Agar data selalu segar setiap pagi saat Anda tiba di kantor tanpa perlu membuka 
 
 4. Dengan pengaturan ini, Google Sheets akan menyegarkan data harga secara otomatis di latar belakang awan, bahkan saat komputer Anda dalam keadaan mati.
 
-## 4. Expert Advice
+## 4. Tips & Peringatan Penting Pakar Otomatisasi Kantor
 
 Sebelum Anda menerapkan alur kerja otomatis ini untuk kebutuhan laporan manajemen tingkat tinggi, perhatikan beberapa tips penting berikut agar data Anda tetap aman:
 
@@ -83,7 +80,7 @@ Sebelum Anda menerapkan alur kerja otomatis ini untuk kebutuhan laporan manajeme
 - **Gunakan Backup Kolom Statis:** Buat salinan nilai harga secara berkala ke kolom historis menggunakan fungsi *Copy and Paste as Values* untuk mencatat tren harga historis mingguan tanpa bergantung pada perubahan rumus web.
 - **Patuhi Ketentuan Layanan:** Pastikan pemantauan harga ini digunakan untuk analisis pasar internal yang wajar dan bukan untuk praktik bisnis yang merugikan pihak lain.
 
-## 5. Frequently Asked Questions
+## 5. Pertanyaan yang Sering Diajukan (FAQ)
 
 Q: Apakah metode ini memerlukan keahlian pemrogaman atau instalasi aplikasi tambahan yang rumit di komputer kantor?
 

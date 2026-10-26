@@ -8,6 +8,7 @@ tags: ["Google Sheets", "Productividad", "Automatización", "Finanzas"]
 theme: "Mint Fresh Engineering"
 ---
 
+## 1. Emergencia crítica en el trabajo y bloqueo de tareas
 
 Eran las 8:45 de la mañana en nuestra oficina del Paseo de la Castellana en Madrid. El director financiero esperaba el reporte consolidado de métricas trimestrales en diez minutos exactos, y los importes en dólares, libras y yenes aparecían con el terrorífico mensaje de error #N/
 
@@ -82,7 +83,7 @@ a:</strong> Si trabajas con volúmenes de datos masivos que hacen parpadear o ca
 
 ---
 
-### Preguntas Frecuentes (FAQ)
+## 5. Preguntas Frecuentes (FAQ) (FAQ)
 
 1. ¿Qué pasa si Google Finance muestra un error #N/A de repente?
 Suele ocurrir si el mercado está cerrado (fines de semana o festivos) o si escribes mal el código de la divisa. Para solucionarlo y mantener el reporte limpio, envuelve tu fórmula en un `SI.ERROR`:

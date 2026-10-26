@@ -8,6 +8,7 @@ tags: ["Excel", "ChatGPT", "Python", "Office Tips", "Automatisierung"]
 theme: "Deep Indigo System"
 ---
 
+## 1. Kritische Fehlersituation im Büroalltag
 
 Es ist 16:45 Uhr im Frankfurter Bankenviertel. Um 17:30 Uhr beginnt das entscheidende Meeting mit dem Vorstand. Auf meinem Bildschirm blinkt der bunte Windows-Kreis des Todes: Excel hat sich zum dritten Mal innerhalb einer halben Stunde aufgehängt. Die Datei für den monatlichen Konsolidierungsbericht ist mittlerweile über 80 Megabyte groß, voller verschachtelter SVERWEIS-Formeln, unzähliger bedingter Formatierungen und unsichtbarer Geister-Verknüpfungen. Jede Änderung dauert quälende zwanzig Sekunden. Ein klassischer Fall von digitalem Burnout der Tabellenkalkulation – und der Vorstand wartet.
 
@@ -59,7 +60,7 @@ Typischerweise entfernt das Skript überflüssige Formatierungsregeln, die sich 
 
 ---
 
-## Häufig gestellte Fragen (FAQ)
+## 5. Häufig gestellte Fragen (FAQ) (FAQ)
 
 1. Kann ich diesen Trick auch anwenden, wenn die Datei passwortgeschützt ist?
 Nein. Passwahlgeschützte Excel-Dateien sind verschlüsselt. Sie müssen den Schutz in Excel (oder über Spezial-Tools) aufheben, bevor Sie die ZIP-Methode anwenden können. Da Excel bei passwortgeschützten Dateien oft abstürzt, empfiehlt es sich, das Passwort vorab zu entfernen.

@@ -8,6 +8,7 @@ tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]
 theme: "Crimson Emergency Field"
 ---
 
+## 1. Tình huống sự cố khẩn cấp và tắc nghẽn công việc văn phòng
 
 Đồng hồ góc phải màn hình máy tính nhảy tưng tưng báo 17:15 chiều. Sếp vừa nhắn vào nhóm Zalo chung: "Em ơi, 18:00 gửi anh danh sách lead khách hàng chiến dịch tháng này để họp ban giám đốc nhé. Nhớ là dữ liệu phải sạch, không được trùng lặp sỉ lẻ đấy!". 
 
@@ -74,8 +75,6 @@ Khi sử dụng các công cụ AI như Gemini để xử lý dữ liệu bảng
 
 ### 1. Tôi có cần biết lập trình JavaScript để dùng cách này không?
 Hoàn toàn không. Bạn chỉ cần biết cách sao chép (copy) và dán (paste). Mọi công việc tư duy logic và viết mã phức tạp đã có Gemini lo liệu hoàn toàn dựa trên yêu cầu bằng tiếng Việt của bạn.
-
-
 
 ![How to Automate Duplicate Customer Removal in Google Sheets Using Gemini Prompts AI Automation Guide](https://picsum.photos/seed/work-mvf6t76x-11-b/1000/550.jpg)
 

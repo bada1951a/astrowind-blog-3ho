@@ -8,7 +8,6 @@ tags: ["Claude Sonnet", "IA in Ufficio", "Produttività", "PDF Normativi"]
 theme: "Graphite Technical Paper"
 ---
 
-
 ## 1. Il caos dei copy di marketing e la svolta con i PDF normativi
 
 Erano le 17:30 di un giovedì pomeriggio in un ufficio direzionale a Milano. Avevo appena passato l'intera mattinata a generare con l'intelligenza artificiale un lotto di cinquanta copy pubblicitari per la nuova campagna di lancio. Il problema? Erano completamente fuori asse rispetto al tono di voce istituzionale ed elegante che il nostro brand richiede sul mercato italiano. Zero empatia, troppi termini anglosassoni forzati e un'impostazione fredda che sembrava scritta da un robot in preda a una crisi di nervi. Ho dovuto cestinare tutto il lavoro e ripartire da zero, ricostruendo i prompt con una struttura completamente nuova. 
@@ -19,11 +18,9 @@ Quel blocco improvviso mi ha fatto riflettere su un'altra emergenza ricorrente c
 <strong>Nota operativa:</strong> Affrontare documenti complessi senza una strategia basata sui modelli linguistici avanzati significa sprecare ore preziose in attività a basso valore aggiunto. Claude 3.5 Sonnet, grazie alla sua eccezionale finestra di contesto e alle doti di analisi logica, ci permette di ribaltare questo processo.
 </div>
 
-
-
 ![How to Summarize 150-Page Regulatory Compliance PDFs in 3 Minutes Using Claude 3.5 Sonnet AI Automation Guide](https://picsum.photos/seed/work-mvov0mxk-6-b/1000/550.jpg)
 
-## 2. Root Cause Breakdown
+## 2. Analisi approfondita degli errori di formula e di processo
 
 Perché falliamo spesso quando cerchiamo di sintetizzare documenti di grandi dimensioni con l'IA? I colli di bottiglia risiedono solitamente in tre fattori tecnici e metodologici ben precisi:
 
@@ -31,7 +28,7 @@ Perché falliamo spesso quando cerchiamo di sintetizzare documenti di grandi dim
 - **Prompt generici senza perimetro:** Dire semplicemente "Riassumi questo documento" spinge il modello a produrre una sintesi banale, concentrandosi magari sulle sezioni meno rilevanti per il nostro business milanese.
 - **Mancanza di vincoli strutturali:** Non definire in anticipo il formato di output (es. tabella comparativa, bullet point per i rischi legali, scadenze tassative) costringe a continue revisioni manuali.
 
-## 3. Step-by-Step Resolution
+## 3. Guida pratica di risoluzione e ottimizzazione passo dopo passo
 
 Ecco la procedura testata sul campo per estrarre informazioni cruciali da un documento di 150 pagine in meno di tre minuti netti, utilizzando Claude 3.5 Sonnet.
 
@@ -65,7 +62,7 @@ Una volta generata la risposta strutturata, puoi interrogare ulteriormente il do
 - *"Vai alla sezione 4 del documento e dammi i dettagli specifici sui requisiti di trattamento dati."*
 - *"Crea una tabella riassuntiva dei costi stimati menzionati tra pagina 80 e pagina 110."*
 
-## 4. Expert Advice
+## 4. Avvertenze e raccomandazioni dell'esperto di automazione
 
 Quando si gestiscono documenti aziendali confidenziali o normativi sensibili, la sicurezza dei dati è la priorità assoluta. 
 
@@ -73,7 +70,7 @@ Quando si gestiscono documenti aziendali confidenziali o normativi sensibili, la
 <strong>Consiglio di sicurezza:</strong> Verifica sempre che il tuo piano di abbonamento aziendale garantisca che i dati caricati non vengano utilizzati per l'addestramento dei modelli pubblici. Per documenti coperti da NDA rigorosi, utilizza le API dedicate con policy di retention dei dati azzerata o strumenti interni approvati dal dipartimento IT.
 </div>
 
-## 5. Frequently Asked Questions
+## 5. Domande Frequenti (FAQ)
 
 Q: Claude 3.5 Sonnet legge davvero tutte le 150 pagine o si ferma a metà?
 

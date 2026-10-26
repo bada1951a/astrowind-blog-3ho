@@ -8,6 +8,7 @@ tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]
 theme: "Midnight Navy Royal"
 ---
 
+## 1. Emergencia crítica en el trabajo y bloqueo de tareas
 
 Eran las 17:50 de un viernes en nuestra oficina corporativa en el Paseo de la Castellana en Madrid. Estábamos a punto de cerrar el control de asistencia mensual para el departamento de operaciones cuando, al abrir la plantilla consolidada de horas extra, saltó el desastre: el otro centro de negocio en Barcelona había movido su archivo fuente de SharePoint y todas las celdas vinculadas se rompieron. Cada vez que intentaba abrir el documento, una ventana emergente de advertencia de seguridad bloqueaba la pantalla exigiendo actualizar enlaces externos rotos, congelando Excel por completo. El cierre de nóminas era el lunes a primera hora y yo estaba atrapado en un bucle interminable de errores de ruta y advertencias de macros.
 
@@ -71,7 +72,7 @@ a: Antes de enviar el informe definitivo a recursos humanos, prueba la fórmula 
 
 ---
 
-## Preguntas Frecuentes (FAQ)
+## 5. Preguntas Frecuentes (FAQ) (FAQ)
 
 Q1. ¿Qué hago si la fórmula devuelve un error de valor (#VALOR!) al restar las horas?
 
@@ -83,4 +84,4 @@ A2. La función `RESIDUO` es tu mejor aliada. Usar `=RESIDUO(Salida - Entrada, 1
 
 Q3. ¿Es seguro utilizar Power Query para conectar archivos de otros departamentos?
 
-A3. Sí, es mucho más seguro que los vínculos directos tradicionales. Power Query almacena la ruta de conexión de forma controlada y te permite actualizar los datos con un solo clic en la pestaña Datos sin disparar alertas de seguridad en cadena. 
+A3. Sí, es mucho más seguro que los vínculos directos tradicionales. Power Query almacena la ruta de conexión de forma controlada y te permite actualizar los datos con un solo clic en la pestaña Datos sin disparar alertas de seguridad en cadena.

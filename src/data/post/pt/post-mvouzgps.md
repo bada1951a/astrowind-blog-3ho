@@ -8,14 +8,11 @@ tags: ["IA", "Produtividade", "Automacao", "Escritorio"]
 theme: "Dark Velvet Obsidian"
 ---
 
-
 ## 1. O Desastre na Reunião de Diretoria
 
 Eram exatamente 14h45 quando o meu telefone começou a vibrar incessantemente na mesa do escritório, localizado na movimentada Avenida Paulista, em São Paulo. Faltavam apenas quinze minutos para a alinhamento mensal com a diretoria, e o pior cenário possível havia acontecido. Alguém com permissão de edição mexeu no filtro global de uma planilha compartilhada no Google Sheets e acabou corrompendo os dados de faturamento de todas as filiais. A soma total estava simplesmente quebrada, exibindo erros de referência cruzada bem no painel principal que seria apresentado aos diretores. 
 
 Enquanto o nervosismo tomava conta da equipe e o tempo corria, percebi que o problema real ia muito além daquela planilha: a minha mesa estava soterrada por um documento regulatório de cento e cinquenta páginas enviado pelo departamento jurídico, exigindo uma leitura crítica e um resumo executivo imediato para justificar as novas métricas de conformidade na mesma reunião. Ler manualmente aquele calhamaço em tão pouco tempo era fisicamente impossível. Foi nesse momento de aperto que precisei acionar o meu plano de emergência digital.
-
-
 
 ![How to Summarize 150-Page Regulatory Compliance PDFs in 3 Minutes Using Claude 3.5 Sonnet AI Automation Guide](https://picsum.photos/seed/work-mvov0tiu-7-b/1000/550.jpg)
 

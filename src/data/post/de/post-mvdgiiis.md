@@ -8,6 +8,7 @@ tags: ["Office-Tipps", "KI-Tools", "Excel", "Automatisierung", "Produktivität"]
 theme: "Deep Indigo System"
 ---
 
+## 1. Kritische Fehlersituation im Büroalltag
 
 Es ist Freitag, kurz vor 17:00 Uhr im Frankfurter Finanzdistrikt, und das Vorstandstreffen für die Quartalsbilanz wurde gerade um zwei Stunden vorverlegt. Auf meinem Schreibtisch türmen sich 40 handschriftlich korrigierte Papierinvoices und schlecht gescannte PDF-Belege von externen Dienstleistern. Mein Team starrt mich an, während der Controller im Sekundentakt nach den finalen Zahlen für den Monatsabschluss ruft. Die klassische Methode? Drei Stunden mühsames Abtippen in Excel, garantiert mit Zahlendrehern und Formatfehlern, die den Vorstand auf die Palme bringen. 
 
@@ -57,7 +58,7 @@ Da wir uns im sensiblen Finanzumfeld bewegen, gilt hier oberste Vorsicht:
 * Nutzen Sie für interne Unternehmensdaten idealerweise die DSGVO-konformen Enterprise-Versionen Ihrer Firmen-KI.
 * Machen Sie immer einen schnellen Plausibilitäts-Check (Stichprobe), bevor Sie die Zahlen an den Vorstand weiterleiten.
 
-## Häufig gestellte Fragen (FAQ)
+## 5. Häufig gestellte Fragen (FAQ) (FAQ)
 
 ### Funktioniert dieser Workflow auch bei handgeschriebenen Rechnungen?
 Bei sauberer Handschrift leisten moderne OCR-Engines erstaunliche Arbeit, aber bei unleserlichen Notizen stößt auch die beste KI an ihre Grenzen. Für gedruckte Rechnungen und Standard-PDFs liegt die Trefferquote jedoch bei nahezu 100%.

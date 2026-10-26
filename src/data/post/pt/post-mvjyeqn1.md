@@ -8,6 +8,7 @@ tags: ["Excel", "Produtividade", "Inteligência Artificial", "Automação"]
 theme: "Pastel Lavender Tech"
 ---
 
+## 1. Situação de emergência e gargalo crítico no escritório
 
 Eram exatas 18h45 de uma sexta-feira típica na Avenida Paulista, em São Paulo, e o fechamento da folha de pagamento da nossa equipe estava completamente travado. Por causa de um conflito violento de sincronização no drive compartilhado da nuvem, a planilha principal de controle de ponto tinha se clonado em dezenas de arquivos corrompidos: "Relatorio_Ponto_Final_Final_copia(1).xlsx", "Relatorio_Ponto_Final_copia(2).xlsx" e até uma misteriosa versão "copia(1)_copia(3).xlsx". O caos estava armado. As fórmulas de cálculo de horas extras de mais de duzentos colaboradores estavam quebradas, mesclando dados duplicados e horários cruzados de entrada e saída. Eu precisava consolidar tudo, extrair as horas normais, o adicional noturno e as horas extras antes que o sistema de RH fechasse o lote noturno, sem perder a sanidade no processo.
 

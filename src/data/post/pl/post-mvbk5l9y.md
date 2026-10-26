@@ -8,6 +8,7 @@ tags: ["Google Sheets", "Automatyzacja", "Biuro", "Excel Triki"]
 theme: "Teal Matrix Digital"
 ---
 
+## 1. Awaryjna sytuacja i paraliż pracy w biurze
 
 Godzina 16:45 w warszawskim centrum biznesowym. Za piętnaście minut ma wyjść kluczowy raport finansowy dla zarządu, a cały arkusz przeliczający koszty projektów z USD i EUR na PLN rozsypał się w pył. Płatna wtyczka do pobierania kursów walut, którą szefostwo wykupiło w zeszłym kwartale, właśnie zablokowała się z komunikatem o przekroczeniu limitu zapytań (API Rate Limit). W skrzynce mailowej rośnie liczba nieprzeczytanych wiadomości, a ręczne sprawdzanie kursów NBP w Google dla trzydziestu pozycji zajmie mi co najmniej godzinę. Serce bije szybciej, a stres w biurie osiąga apogeum.
 
@@ -94,8 +95,6 @@ a: Zanim wdrożysz nowe formuły w pliku produkcyjnym, wykonaj kopię zapasową 
 
 ### 1. Co zrobić, gdy funkcja GOOGLEFINANCE zwraca błąd #N/D?
 Błąd ten najczęściej oznacza, że podany symbol waluty jest niepoprawny lub rynek jest w danym momencie zamknięty (np. weekend). Upewnij się, że używasz standardowego formatu zapisu, na przykład `"CURRENCY:USDPLN"` lub rozdzielając je spacji/dwukropkiem zgodnie z lokalnymi ustawieniami językowymi arkusza (`"CURRENCY:" & A2 & "PLN"`).
-
-
 
 ![AI Productivity & Workflow Automation](https://picsum.photos/seed/office120/1000/550)
 

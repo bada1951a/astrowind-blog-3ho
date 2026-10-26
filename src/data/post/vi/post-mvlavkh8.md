@@ -8,6 +8,7 @@ tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]
 theme: "Dracula Purple Dev"
 ---
 
+## 1. Tình huống sự cố khẩn cấp và tắc nghẽn công việc văn phòng
 
 Sang nay tai phong lam việc o tang 12 toa nha van phong trung tam quan 1 TP.HCM, ca nhan toi vua trai qua mot phen hu via. Chi con dung hai tieng nua la den han chot gui bao cao du lieu khach hang cho sep tong, trong khi file Excel tong hop danh sach ca ngan dong lai dang nam hon doan. Nguoi phu trach cu da nghi viec tu tuan truoc va khong de lai bat ky huong dan nao. Thay vi ngoi do cho doi, toi thay co mot nut bam macro ghi chu la "Chuan_Hoa_Du_Lieu" o goc man hinh. Voi chut hy vong mong manh rang no se tu dong tach cot dia chi va so dien thoai giup minh, toi da click ngay vao do.
 

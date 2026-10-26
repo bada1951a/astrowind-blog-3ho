@@ -8,6 +8,7 @@ tags: ["Google Sheets", "Apps Script", "Automazione", "Produttività"]
 theme: "Deep Indigo System"
 ---
 
+## 1. Emergenza improvvisa e blocco delle attività in ufficio
 
 Erano le 17:30 di un giovedì caotico nel nostro ufficio a Milano, con la pioggia che batteva sui vetri di Corso Como e una scadenza imminente per il report di chiusura settimanale. Domani mattina alle 9:00 avevamo il sync cruciale con il cliente e, come al solito, mi ritrovavo intrappolato nella stessa identica routine: aprire il Google Sheets del monitoraggio KPI, filtrare manualmente i dati per area, esportare il foglio come PDF formattandolo alla buona, allegarlo a una nuova email su Gmail, scrivere il testo standard e premere "Invia" per cinque volte ad altrettanti manager. 
 

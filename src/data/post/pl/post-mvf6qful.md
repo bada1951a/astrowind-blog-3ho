@@ -8,6 +8,7 @@ tags: ["Google Sheets", "Gemini", "Automatyzacja", "Biuro"]
 theme: "Graphite Technical Paper"
 ---
 
+## 1. Awaryjna sytuacja i paraliż pracy w biurze
 
 Siedziałem w szklanej sali konferencyjnej w warszawskim centrum biznesowym, a na moim zegarku wybiła 16:45. Za piętnaście minut miałem wysłać ostateczny raport sprzedażowy do zarządu. Otwieram główny arkusz Google Sheets i nagle widzę czerwoną, pulsującą apokalipsę: formuła wyszukiwania duplikatów całkowicie się sypła, pokazując tysiące przemieszanych wierszy z powtarzającymi się adresami e-mail klientów i literówkami w nazwach firm („Jan Kowalski sp. z o.o.” kontra „Jan Kowalski Sp z o.o.”). Standardowa funkcja usuwania duplikatów w Google Sheets polegająca na dopasowaniu dokładnego tekstu była bezużyteczna, bo dane były brudne. Zbliżał się zawał serca. W tym artykule pokażę Ci, jak uratowałem ten raport za pomocą sztucznej inteligencji i jak Ty też możesz zautomatyzować ten proces bez pisania skomplikowanych skryptów Apps Script.
 
@@ -72,8 +73,6 @@ a: Bezpieczeństwo danych klientów (RODO)
 
 ### 1. Czy muszę płacić za Gemini, żeby to zadziałało?
 Nie. Do podstawowego oczyszczania danych i generowania prostych skryptów w zupełności wystarczy darmowa wersja Gemini lub panel boczny zintegrowany z Workspace (jeśli Twoja organizacja ma wykupioną odpowiednią licencję).
-
-
 
 ![How to Automate Duplicate Customer Removal in Google Sheets Using Gemini Prompts AI Automation Guide](https://picsum.photos/seed/work-mvf6sp61-9-b/1000/550.jpg)
 

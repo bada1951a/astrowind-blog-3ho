@@ -8,6 +8,7 @@ tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]
 theme: "Rosewood Hardware Guide"
 ---
 
+## 1. Awaryjna sytuacja i paraliż pracy w biurze
 
 Godzina 17:40 w biurze w samym sercu warszawskiego centrum biznesowego. Za dwadzieścia minut mam wysłać do zarządu zbiorczy raport wydatków kwartalnych, a na biurku leży stos papierowych faktur od dostawców. Trzy z nich są zgniecione, a jedna ma tak blady wydruk z termicznej kasy, że tekst prawie zanikł. Próba ręcznego wpisywania pozycji do Excela skończyła się katastrofą: pomyliłem NIP, rozjechały się sumy kontrolne, a formuły zaczęły krzyczeć błędami typu #ARG! i #ADR!. Kiedy ręce opadają, a czas ucieka, tradycyjne przepisywanie danych to prosta droga do nerwicy.
 

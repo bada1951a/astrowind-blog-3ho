@@ -8,6 +8,7 @@ tags: ["Google Sheets", "Apps Script", "Automação", "Produtividade"]
 theme: "Acid Lime Hacker Space"
 ---
 
+## 1. Situação de emergência e gargalo crítico no escritório
 
 Eram exatas 18h45 de uma sexta-feira chuvosa em São Paulo. O ar-condicionado do escritório já tinha desligado sozinho, a equipe de vendas tinha acabado de enviar a última leva de planilhas consolidadas e a minha caixa de entrada parecia um campo de guerra. O ritual de final de mês era sempre o mesmo: abrir cinco planilhas diferentes, formatar os dados de faturamento, exportar cada uma manualmente como PDF, anexar ao e-mail e disparar para a diretoria antes de segunda-feira cedo. Foi bem na hora em que o mouse travou na minha mão que eu decidi: chega de trabalho braçal. Se eu precisava enviar relatórios semanais sem perder meu fim de semana, o Google Sheets e um toque de código teriam que fazer o serviço pesado por mim.
 

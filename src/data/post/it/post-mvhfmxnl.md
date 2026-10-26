@@ -8,6 +8,7 @@ tags: ["Excel AI", "Automazione Ufficio", "Logistica", "Produttività"]
 theme: "Steel Silver Metallic"
 ---
 
+## 1. Emergenza improvvisa e blocco delle attività in ufficio
 
 Erano le 17:30 di un giovedì piovoso nel nostro ufficio a Milano, e la tensione si poteva tagliare con il coltello. Mancavano esattamente trenta minuti alla riunione strategica con il cliente del settore retail, e il mio foglio Excel per la previsione delle scorte del prossimo trimestre era un vero disastro. Le medie mobili tradizionali non tenevano conto della stagionalità improvvisa e delle promozioni impreviste, lasciando colonne di celle con errori di calcolo e dati storici incompleti. Stavo letteralmente sudando freddo, bloccato a cancellare e ricopiare numeri a mano, mentre il direttore vendite continuava a mandarmi messaggi su Teams chiedendo se i dati di magazzino fossero pronti per il cda. Se anche tu ti sei trovato almeno una volta a fissare un file Excel infinito la sera tardi, cercando di indovinare quante unità ordinare per evitare il "fuori stock" o il sovraccarico del magazzino, sai esattamente di cosa parlo. Per fortuna, ho smesso di perdere ore preziose con metodi antiquati e ho scoperto come sfruttare l'AI direttamente dentro i fogli di calcolo per generare previsioni affidabili in pochi minuti.
 

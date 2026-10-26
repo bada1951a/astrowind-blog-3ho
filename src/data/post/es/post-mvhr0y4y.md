@@ -8,6 +8,7 @@ tags: ["Google Sheets", "Inteligencia Artificial", "Finanzas", "Productividad"]
 theme: "Bronze Artisan Workshop"
 ---
 
+## 1. Emergencia crítica en el trabajo y bloqueo de tareas
 
 Eran las 8:45 de la mañana en nuestra oficina del Paseo de la Castellana en Madrid. Faltaban exactamente quince minutos para la reunión urgente con el comité de dirección para revisar el reporte de métricas del trimestre. En la pantalla, mi hoja de cálculo de Google Sheets parecía un campo de batall
 
@@ -65,7 +66,7 @@ Para que el modelo sea interactivo ante el comité de dirección:
 <strong>Consejo de seguridad:</strong> Cuando utilices herramientas de IA en la nube corporativa para analizar datos financieros sensibles, asegúrate de anonimizar los nombres de clientes o importes exactos si las políticas internas de cumplimiento de tu empresa lo exigen.
 </div>
 
-## Preguntas Frecuentes (FAQ)
+## 5. Preguntas Frecuentes (FAQ) (FAQ)
 
 ¿Qué hago si la IA me sugiere una fórmula que Google Sheets no reconoce?
 Asegúrate de cambiar la configuración regional de tu hoja de cálculo (Archivo > Configuración > Configuración regional). Muchas veces la IA redacta en formato anglosajón usando comas (,) para separar argumentos, mientras que tu Google Sheets en España puede requerir punto y coma (;).

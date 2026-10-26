@@ -8,6 +8,7 @@ tags: ["Google Sheets", "Apps Script", "Automatisering", "Productiviteit"]
 theme: "Forest Emerald Bio"
 ---
 
+## 1. Noodsituatie en knelpunt op de werkvloer
 
 Het is vrijdagmiddag 16:45 uur in een kantoor aan de Amsterdamse Zuidas. Over precies een kwartier begint de cruciale directiemeeting, en mijn manager vraagt append of ik het wekelijkse KPI-rapport nog even als PDF naar het voltallige managementteam kan sturen. Normaal gesproken betekent dit: handmatig tabbladen exporteren, opslaan op de server, een nieuwe e-mail openen, de juiste bijlage zoeken en op verzenden drukken. Maar ja hoor: het Excel-bestand gaf weer een opmaakfout en de helft van de grafieken verschoof. Zweet breekt me uit. Dit moet slimmer kunnen.
 

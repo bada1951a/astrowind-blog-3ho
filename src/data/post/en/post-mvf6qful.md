@@ -8,6 +8,7 @@ tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]
 theme: "Nordic Clean Ice"
 ---
 
+## 1. Critical Workplace Bottleneck Emergency
 
 It is 1:45 PM in our Silicon Valley office, exactly 15 minutes before the weekly executive sync. My Slack is pinging like crazy, and our VP of Sales drops a last-minute message into the channel: "Can someone pull the clean Q3 enterprise lead list? The current dashboard is showing double-counted accounts, and the CEO is going to ask about customer acquisition cost metrics in ten minutes." 
 
@@ -25,7 +26,7 @@ Here is how I bypassed the panic, utilized Gemini directly within our workflow, 
 
 ---
 
-### Root Cause Breakdown: Why Standard Duplicate Removal Fails
+## 2. Root Cause Breakdown of Formula and Workflow Errors Why Standard Duplicate Removal Fails
 
 Before jumping into the fix, let us look at why typical spreadsheet methods fail when handling enterprise customer lists:
 
@@ -37,7 +38,7 @@ Before jumping into the fix, let us look at why typical spreadsheet methods fail
 
 ---
 
-### Step-by-Step Resolution: Clean Your Data with Gemini
+## 3. Step-by-Step Practical Productivity Resolution Clean Your Data with Gemini
 
 To fix our executive sync emergency, I used a structured approach combining a quick standardization formula and a targeted Gemini prompt to generate custom Apps Script logic.
 
@@ -79,7 +80,7 @@ Write a clean, ready-to-run Google Apps Script function named removeSmartDuplica
 
 ---
 
-### Frequently Asked Questions (FAQ)
+## 5. Frequently Asked Questions (FAQ) (FAQ)
 
 Q: Can I use this method if my Google Sheet has over 50,000 rows?
 

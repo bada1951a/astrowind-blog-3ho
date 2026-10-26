@@ -8,6 +8,7 @@ tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]
 theme: "Graphite Technical Paper"
 ---
 
+## 1. Situasi Kritis dan Hambatan Kerja Mendesak di Kantor
 
 Jam 8 malam di kawasan bisnis SCBD Jakarta, kantor sudah mulai sepi, tetapi layar monitor saya masih menyala terang. Saya terjebak lembur menyelesaikan rekap data tahunan perusahaan yang berantakan. Bayangkan, ada lima ribu baris data kontak klien dari berbagai divisi, dan semuanya kacau balau: nama depan dan nama belakang tergabung dalam satu kolom (seperti "Muhammad Rizky Pratama"), huruf besar-kecil yang tidak beraturan, serta alamat email yang penuh dengan typo, spasi tersembunyi, hingga karakter aneh seperti titik ganda. Pimpinan sudah meminta laporan ini siap di meja kerjanya besok pagi jam 9 untuk *executive sync*, sementara saya masih pusing tujuh keliling mencoba merapikannya secara manual menggunakan fungsi `LEFT`, `RIGHT`, dan `FIND` yang terus-menerus menghasilkan error `#VALUE!`.
 

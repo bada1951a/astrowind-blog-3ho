@@ -8,6 +8,7 @@ tags: ["Googleスプレッドシート", "Gemini", "業務効率化", "データ
 theme: "Rosewood Hardware Guide"
 ---
 
+## 1. 職場で冷や汗をかいた業務停止トラブル
 
 「おい、これ顧客データが二重三重に混ざってるぞ……！」
 

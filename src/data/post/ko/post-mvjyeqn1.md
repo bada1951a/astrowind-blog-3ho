@@ -8,6 +8,7 @@ tags: ["Excel Automation", "AI Formulas", "Work Hours", "Office Productivity"]
 theme: "Cobalt Enterprise Lab"
 ---
 
+## 1. 직장인 멘붕 오는 업무 병목 돌발 상황
 
 판교 테크노밸리의 한 IT 기업, 금요일 오후 5시 30분. 칼퇴를 꿈꾸며 주말 계획을 세우고 있는데 인사팀에서 메신저 알림이 울립니다. "기획팀에서 올려주신 연장 근무 및 초과 수당 정산 시트가 저희 컴퓨터에서 전부 [#NAME?] 에러로 뜹니다. 파일 좀 다시 확인해 주세요!" 
 
@@ -82,7 +83,7 @@ AI가 반환해 준 수식은 대개 아래와 같은 구조를 가집니다. �
 
 ---
 
-### Frequently Asked Questions (FAQ)
+## 5. 자주 묻는 질문 (FAQ) (FAQ)
 
 Q1. 구버전 엑셀에서 XLOOKUP 대신 VLOOKUP을 쓰면 열 번호가 바뀔 때마다 에러가 나는데 해결 방법이 없나요?
 

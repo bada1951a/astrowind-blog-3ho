@@ -8,6 +8,7 @@ tags: ["Google Sheets", "ChatGPT", "Produtividade", "Automação"]
 theme: "Pure Titanium Clean"
 ---
 
+## 1. Situação de emergência e gargalo crítico no escritório
 
 Eram 17h45 de uma sexta-feira de fechamento de mês no escritório na Avenida Paulista, e a planilha de consolidação de vendas parecia um campo de guerra. O cliente mandou a base de dados toda despadronizad
 

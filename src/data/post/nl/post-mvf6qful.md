@@ -8,6 +8,7 @@ tags: ["Google Sheets", "Gemini AI", "Productiviteit", "Data Opschonen"]
 theme: "Deep Ocean Cobalt"
 ---
 
+## 1. Noodsituatie en knelpunt op de werkvloer
 
 Kwart over acht 's ochtends op de Zuidas in Amsterdam. Om negen uur start de cruciale kwartaalmeeting met de directie, en ik sta te zweten achter mijn laptop. Op mijn scherm staat een Google Sheet met meer dan tienduizend rijen aan klantgegevens, geëxporteerd uit drie verschillende CRM-systemen. Het resultaat? Een complete chaos van dubbele invoer: "J. de Vries", "Jan de Vries" en "J. de Vries (oud)" staan krisras door elkaar. Handmatig sorteren en filteren is onbegonnen werk in deze tijdslimiet, en de standaard functie "Duplicaten verwijderen" faalt omdat de spelling net afwijkt. Mijn hartslag tikt mee met de klok in de vergaderzaal.
 

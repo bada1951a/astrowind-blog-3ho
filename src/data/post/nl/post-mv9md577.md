@@ -8,6 +8,7 @@ tags: ["Excel", "Power Query", "Workflow", "Automation", "Office Tips"]
 theme: "Deep Indigo System"
 ---
 
+## 1. Noodsituatie en knelpunt op de werkvloer
 
 Het is kwart over vier op een donderdagmiddag in een kantoor aan de Amsterdamse Zuidas. Om vijf uur begint de cruciale directiemeeting waarin de maandelijkse verkoopcijfers gepresenteerd moeten worden. Mijn scherm staat vol met twaalf verschillende Excel-bestanden van onze regionale accountmanagers. De regioscripts matchen niet, de kolommen staan door elkaar, en ergens in tabblad 'Q3-Noord' is een celverwijzing volledig stukgelopen. Handmatig al deze data kopiëren, plakken en controleren is simpelweg geen optie meer. Mijn hartslag stijgt, want de tijd dringt.
 

@@ -8,7 +8,6 @@ tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]
 theme: "Warm Coffee Latte"
 ---
 
-
 ## 1. Su co tai ban giam doc tai tang 12 toa nha trung tam TP.HCM
 
 Chieu thu Sau tai mot toa nha van phong tren duong Le Duan, TP.HCM, khong khi cang thang bao trum ca phong ban. Chi con chua day hai tieng nua la den thoi han nop ban du thao nghien cuu quy dinh phap ly va luat tuan thu moi dai toi 150 trang cho lanh dao cap cao. Giua luc nuoc soi lua bong do, dong nguyen cua toi tai ban ben canh bong hoang mang keu len rang co da vo tinh quen mat mat khau bao ve cua trang tinh Excel chua toan bo so lieu tai chinh trong ban thiet ke. Toan bo cac o cong thuc va vung du lieu deu bi khoa chat, khong the nao chinh sua duoc bat ky mot chi tiet nao nua.
@@ -16,8 +15,6 @@ Chieu thu Sau tai mot toa nha van phong tren duong Le Duan, TP.HCM, khong khi ca
 <div style="border-left: 4px solid #78350f; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Tinh huống khẩn cấp:</strong> Khong chi dung lai o viec loay hoay go lai mat khau, ap lực thoi gian doc hieu chong tai lieu phap ly day 150 trang kem theo su co khoa du lieu khien ca nhom gan nhu kiet suc. Day chinh la luc chung ta can su tro giup cua cong cu AI thuc chien nhu Claude 3.5 Sonnet de xoay chuyen tinh the.
 </div>
-
-
 
 ![How to Summarize 150-Page Regulatory Compliance PDFs in 3 Minutes Using Claude 3.5 Sonnet AI Automation Guide](https://picsum.photos/seed/work-mvnfdqpb-11-b/1000/550.jpg)
 

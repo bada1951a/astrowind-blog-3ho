@@ -8,7 +8,6 @@ tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]
 theme: "Dracula Purple Dev"
 ---
 
-
 ## 1. Su co tai ban lam viec: Giua dem truoc buoi kiem toan noi bo
 
 Chieu thu Nam tuan truoc, tai toa nha van phong trung tam o Quan 1, TP.HCM, khong khi ngap tran su cang thang. Chi con dung 2 tieng nua la buoi kiem toan noi bo ve quy che tuan thu bat dau. Sep vua gui cho toi mot tap tai lieu PDF phap ly va quy dinh noi bo day dac chu, dai dung 150 trang, yeu cau tom tat ngay cac diem xung dot giua luat moi va quy trinh hien tai cua cong ty. 
@@ -18,8 +17,6 @@ Trong luc voi vang chay doan script tu dong hoa do tu viet de giai nen va sap xe
 <div style="border-left: 4px solid #bd93f9; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Meo thuc chien:</strong> Khi gap su co mat file goc phut chot, dung hoang so tim kiem thu cong. Hay lap tuc tap trung vao muc tieu cot loi: trich xuat nhanh thong tin tu ban sao luu cu nhat va dung AI xu ly noi dung thay vi ngoi doc lai tu dau.
 </div>
-
-
 
 ![How to Summarize 150-Page Regulatory Compliance PDFs in 3 Minutes Using Claude 3.5 Sonnet AI Automation Guide](https://picsum.photos/seed/work-mvov1inw-11-b/1000/550.jpg)
 

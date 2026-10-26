@@ -8,6 +8,7 @@ tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]
 theme: "Dark Velvet Obsidian"
 ---
 
+## 1. Situation d'urgence critique au bureau
 
 Il est 14h45, le comité de direction commence à 15h tapantes dans notre tour de La Défense, et c'est le drame absolu. Mon fichier Excel consolidé de 45 Mo vient de geler net. Le curseur tourne en rond, la roue de la mort Windows s'affiche, et la dernière sauvegarde manuelle remonte à une heure. La tension monte d'un cran dans l'open space : mes collègues me regardent, les slides de la réunion dépendent entièrement de ce maudit tableau croisé dynamique qui refuse de s'ouvrir. Excel ne répond plus, le gestionnaire des tâches annonce une utilisation CPU à 98 %, et le rapport financier trimestriel semble compromis.
 

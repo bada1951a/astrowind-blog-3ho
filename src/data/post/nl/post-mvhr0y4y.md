@@ -8,6 +8,7 @@ tags: ["Google Sheets", "AI Tools", "Financiële Modellen", "Productiviteit", "Z
 theme: "Steel Silver Metallic"
 ---
 
+## 1. Noodsituatie en knelpunt op de werkvloer
 
 Kwart over drie op een regenachtige dinsdagmiddag in de glazen torens van de Amsterdamse Zuidas. Om vier uur start de cruciale kwartaalreview met de raad van bestuur. Mijn laptop ligt open op de vergadertafel, en mijn hoofd is minstens zo oververhit als de processor. Het financiële model voor de komende drie jaar staat er weliswaar in, maar de grafieken zien eruit alsof een enthousiaste kleuter zich heeft uitgeleefd met een doos kleurpotloden. De CFO fronst nu al zijn wenkbrauwen bij het zien van statische, platte staven die niets vertellen over de gevoeligheidsanalyse waar ze zo om hogen vroegen. Handmatig scenario's doorrekenen en dynamische KPI-knoppen bouwen kost normaal gesproken uren, en die tijd heb ik simpelweg niet meer.
 

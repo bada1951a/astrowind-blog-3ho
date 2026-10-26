@@ -8,6 +8,7 @@ tags: ["Excel", "ChatGPT", "Python", "Automatyzacja", "Optymalizacja"]
 theme: "Matte Black stealth"
 ---
 
+## 1. Awaryjna sytuacja i paraliż pracy w biurze
 
 Godzina 16:50 w biurowcu przy rondzie Daszyńskiego w Warszawie. Za dziesięć minut ma wyjść kluczowy raport finansowy dla zarządu, a mój plik Excel o wadze 45 megabajtów właśnie zamroził cały system. Każda próba kliknięcia czegokolwiek kończy się białym ekranem i komunikatem „Program Microsoft Excel nie odpowiada”. Trzysta zagnieżdżonych formuł WYSZUKAJ.PIONOWO odwołujących się do zewnętrznych plików, tysiące wierszy formatowania warunkowego i ukryte makra VBA spisały się na stratę. Kiedy tradycyjne czyszczenie pamięci podręcznej i zapisywanie w trybie awaryjnym zawodzi, czas sięgnąć po nowoczesną broń.
 
@@ -94,8 +95,6 @@ A1:Z5000`. Excel nie musi wtedy przeszukiwać miliona pustych wierszy.
 
 ### 1. Czy muszę umieć programować w Pythonie, aby to zrobić?
 Absolutnie nie. ChatGPT napisze dla Ciebie kompletny kod od A do Z. Twoim zadaniem jest jedynie skopiowanie go, uruchomienie w darmowym programie (np. IDLE lub Jupyter) i odczytanie gotowego raportu.
-
-
 
 ![AI Productivity & Workflow Automation](https://picsum.photos/seed/office560/1000/550)
 

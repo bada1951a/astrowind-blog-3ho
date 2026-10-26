@@ -8,6 +8,7 @@ tags: ["Google Sheets", "Apps Script", "Automation", "Productivity"]
 theme: "Deep Ocean Cobalt"
 ---
 
+## 1. Critical Workplace Bottleneck Emergency
 
 My Slack was blowing up. It was 1:45 PM on a Thursday, exactly fifteen minutes before our weekly executive sync in the conference room. My VP dropped a message into our leadership channel: "Hey, can someone drop the updated Q3 pipeline summary PDF in here before we start? The old numbers from Tuesday won't cut it." Panic instantly set in. My Google Sheet had the live data, but manually formatting it, downloading it as a clean PDF without cutting off the columns, and attaching it to an email while my hands were shaking always felt like a recipe for a formatting disaster. I needed a way to make this happen instantly, and more importantly, never touch it manually again.
 
@@ -27,7 +28,7 @@ If you manage recurring team reports, you have likely run into these three class
 
 3. The Stale Cache Problem: Copy-pasting data into static slides or separate PDF editors breaks your single source of truth, leading to conflicting numbers across department decks.
 
-## Step-by-Step Resolution: Building Your Custom Apps Script
+## 3. Step-by-Step Practical Productivity Resolution Building Your Custom Apps Script
 
 Let's fix this once and for all. We are going to build a lightweight script that grabs a specific tab, formats it cleanly into a landscape PDF, and emails it to your stakeholder list.
 
@@ -95,7 +96,7 @@ Don't just run it manually—let's automate it on a schedule:
 <strong>Expert Tip:</strong> Always run the function manually once using the "Run" button in the script editor to verify that your Google account permissions are granted and that the email arrives cleanly in your inbox before relying on the automated weekly trigger.
 </div>
 
-## Frequently Asked Questions
+## 5. Frequently Asked Questions (FAQ)
 
 ### Can I include multiple tabs in a single PDF attachment?
 The standard export URL method targets one `gid` (sheet ID) at a time. If you need multiple tabs, you can write loops in Apps Script to generate multiple blobs and pass an array of attachments into the `GmailApp.sendEmail` options object.

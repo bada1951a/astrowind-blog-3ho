@@ -8,7 +8,6 @@ tags: ["Google Sheets", "Automacao", "Produtividade", "Web Scraping"]
 theme: "Dark Velvet Obsidian"
 ---
 
-
 ## 1. O Pânico do Master Sobrescrito Antes da Auditoria
 
 Eram exatas 17h45 em um escritório corporativo na Avenida Paulista em São Paulo. Faltavam menos de quinze horas para uma auditoria interna crítica de precificação, e o caos estava instalado. No desespero para atualizar a planilha de monitoramento dos concorrentes da Amazon para a diretoria, tentei rodar um script de automação legado que encontrei nos arquivos da equipe. O resultado foi um desastre absoluto: o script falhou na metade da execução e sobrescreveu por engano o arquivo mestre oficial da pasta compartilhada, apagando o histórico de meses de varredura de preços. 
@@ -19,11 +18,9 @@ Enquanto meu coração disparava e eu tentava achar freneticamente o backup na l
 <strong>Atencao ao Alerta de Produtividade:</strong> Codigos customizados sao faceis de quebrar quando a estrutura HTML de sites como a Amazon muda. Prefira sempre funcoes nativas de extracao de dados ou ferramentas dedicadas sem codigo.
 </div>
 
-
-
 ![How to Scrape Amazon Competitor Pricing into Google Sheets Daily Without Writing Code AI Automation Guide](https://picsum.photos/seed/work-mvmq5k9u-7-b/1000/550.jpg)
 
-## 2. Root Cause Breakdown
+## 2. Análise da causa raiz de falhas de fórmula e processos
 
 Analisando o incidente com calma apos recuperar o backup, identifiquei exatamente onde falhamos na nossa arquitetura de dados anterior:
 
@@ -33,7 +30,7 @@ Analisando o incidente com calma apos recuperar o backup, identifiquei exatament
 
 3. **Falta de Protecao de Celulas:** A pasta compartilhada permitia que rotinas automaticas e usuarios editassem o mesmo intervalo sem travas de seguranca ou validacao previa de dados.
 
-## 3. Step-by-Step Resolution
+## 3. Guia prático passo a passo para automação e produtividade
 
 Para resolver isso de vez e garantir que o rastreamento de precos ocorra diariamente de forma limpa e sem codigo, vamos utilizar a funcao nativa **IMPORTXML** combinada com uma estrategia segura de planilhas conectadas.
 
@@ -58,14 +55,14 @@ Para garantir que o Google Sheets atualize esses dados automaticamente todos os 
 
 3. Em "Recalculo", altere de "A cada alteracao" para **"A cada alteracao e a cada hora"** (ou "a cada minuto", dependendo do seu volume de SKUs). Isso fara o Google buscar os precos novos periodicamente de forma autonoma.
 
-## 4. Expert Advice
+## 4. Recomendações e alertas de especialistas em automação
 
 Para evitar que novos desastres acontecam durante fechamentos de relatorios ou auditorias, siga estas regras de ouro na sua rotina de escritorio:
 
 * **Separacao de Ambientes:** Mantenha sempre uma planilha de "Captura" (onde os robos e funcoes de web scraping operam) separada da planilha de "Apresentacao" (que alimenta os dashboards da diretoria). Use a funcao `IMPORTRANGE` para puxar os dados limpos da planilha de captura para a oficial.
 * **Historico Diario:** Crie uma macro simples de gravacao (ou use um gatilho de horario do Sheets) para copiar os valores do dia e colar como texto puro em uma aba de historico. Isso evita que mudancas no site da Amazon zerem seus relatorios retroativos.
 
-## 5. Frequently Asked Questions
+## 5. Perguntas Frecuentes (FAQ)
 
 Q: A funcao IMPORTXML da erro de vez em quando na Amazon. Como resolver?
 

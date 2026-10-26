@@ -8,6 +8,7 @@ tags: ["Excel", "Intelligence Artificielle", "Productivite", "Logistique"]
 theme: "Pastel Lavender Tech"
 ---
 
+## 1. Situation d'urgence critique au bureau
 
 Il est 16h45, la climatisation de la tour a La Defense ronronne doucement, et c'est la panique generale dans notre open space. Notre directeur financier vient de debarquer avec une exigence non negociable pour le comite de direction de demain matin : "Je veux une prevision fiable des stocks pour le trimestre prochain, avec l'impact de la saisonnalite, directement dans notre bon vieux tableau Excel." Le fichier fait 45 000 lignes, les formules de lissage exponentiel bricolees l'annee derniere par un ancien consultant affichent des #VALEUR! en cascade, et le responsable logistique est deja parti chercher un cafe de la derniere chance. C'est exactement dans ce genre de moment critique qu'on se maudit de ne pas avoir automatise plus tot.
 

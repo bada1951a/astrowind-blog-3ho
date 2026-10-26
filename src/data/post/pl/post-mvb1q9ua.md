@@ -8,6 +8,7 @@ tags: ["Excel", "Sztuczna Inteligencja", "Automatyzacja", "Biuro", "Warszawa"]
 theme: "Teal Matrix Digital"
 ---
 
+## 1. Awaryjna sytuacja i paraliż pracy w biurze
 
 Godzina 16:45, warszawskie centrum biznesowe przy Rondzie Daszyńskiego. Za piętnaście minut mam wysłać do zarządu kluczowy raport kwartalny dotyczący kampanii lead generation. Otwieram główny arkusz i... czarna rozpacz. Baza danych pobrana z systemu CRM to absolutna katastrof
 

@@ -8,6 +8,7 @@ tags: ["IA", "Excel", "Productividad", "Trucos Office"]
 theme: "Electric Cyan Speed"
 ---
 
+## 1. Emergencia crítica en el trabajo y bloqueo de tareas
 
 Eran las 17:45 en nuestra oficina en Madrid. El comité de dirección empezaba a las 18:00 y yo tenía sobre la mesa un taco de facturas en papel de los proveedores de la última feria, con el reporte urgente de métricas completamente bloqueado y fórmulas rotas en el Excel principal porque había tenido que teclear a mano decenas de importes desalineados. El café ya estaba frío, la impresora escaneaba con sombras y mis dedos no daban abasto para copiar NIFs, bases imponibles y totales sin equivocarme en los decimales. 
 
@@ -29,7 +30,7 @@ Antes de dar con este flujo de trabajo ágil, probé todas las opciones clásica
 
 3. El volcado manual bajo presión: Teclear a velocidad récord con la respiración del jefe en el cuello es la receta perfecta para cometer errores tipográficos. Luego llegan las fórmulas rotas (como los clásicos errores de tipo de dato texto en lugar de número) y el BuscarV deja de funcionar justo en medio de la presentación.
 
-## Guía paso a paso: De la factura en papel al Excel impecable
+## 3. Solución práctica paso a paso para optimizar el flujo: De la factura en papel al Excel impecable
 
 Vamos a dividir el proceso en dos fases muy sencillas: la extracción inteligente mediante OCR/IA y el pegado limpio en tu hoja de cálculo configurada correctamente.
 
@@ -77,7 +78,7 @@ a: Nunca modifiques el archivo Excel oficial de la directiva sin antes guardar u
 
 ---
 
-## Preguntas Frecuentes (FAQ)
+## 5. Preguntas Frecuentes (FAQ) (FAQ)
 
 ### ¿Qué hago si la IA interpreta los decimales con puntos en lugar de comas?
 Puedes añadir una instrucción adicional en el prompt de la IA diciendo: *"Reemplaza todos los puntos decimales por comas en las columnas de importes"*, o utilizar la herramienta Buscar y Reemplazar de Excel (Ctrl + B) para cambiar el punto por la coma de forma masiva en toda la selección antes de operar con los números.

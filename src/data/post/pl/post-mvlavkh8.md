@@ -8,6 +8,7 @@ tags: ["Excel", "ChatGPT", "Automatyzacja", "Biuro", "Warszawa"]
 theme: "Tokyo Neon Violet"
 ---
 
+## 1. Awaryjna sytuacja i paraliż pracy w biurze
 
 Siedziałem w naszym biurze na warszawskiej Woli przed wielkim monitorem, próbując ogarnąć bałagan, który spłynął z zagranicznych oddziałów. Na skrzynce mailowej czekało dokładnie dwanaście plików Excela. Każdy z nich został wygenerowany przez inny system lokalny. W jednym pliku pełny adres i numer telefonu sklejone były w jedną kolumnę w formacie ulica, miasto i telefon wtrącone w nawiasy. W innym pliku formaty daty były rozjechane, a czcionki skakały od Arial po Times New Roman. Do spotkania zarządu zostało niewiele czasu, a próba ręcznego poprawiania tego tysiąca wierszy groziła katastrofą. Trzeba było znaleźć sposób na automatyczne rozdzielenie adresu i numeru telefonu oraz ujednolicenie danych, zanim przełożeni zaczną pytać o raport.
 

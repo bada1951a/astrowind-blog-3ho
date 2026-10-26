@@ -8,6 +8,7 @@ tags: ["Excel", "AI Tools", "Automasi", "Produktivitas"]
 theme: "Modern Minimalist Slate"
 ---
 
+## 1. Situasi Kritis dan Hambatan Kerja Mendesak di Kantor
 
 Jantung saya hampir copot ketika jam menunjukkan pukul 19.30 WIB di kawasan SCBD Jakarta, tepat malam sebelum audit internal tahunan perusahaan dimulai. Sialnya, skrip otomatisasi makro yang baru saja saya jalankan secara tidak sengaja menimpa [master file] absensi utama di folder jaringan kantor, menghapus seluruh rekapitulasi jam kerja dan lembur tim beranggotakan lima puluh orang. Tanpa cadangan yang jelas dan dengan tenggat waktu audit besok pagi, kepanikan melanda karena saya harus menyusun ulang seluruh perhitungan jam kerja, jeda istirahat, serta tarif lembur secara manual dari data mentah mesin pencatat kehadiran yang berantakan.
 
@@ -82,4 +83,4 @@ A2.Bisa. Anda dapat meminta AI untuk menggabungkan rumus di atas dengan fungsi [
 
 Q3. Bagaimana cara mencegah file master kantor tertimpa secara tidak sengaja oleh skrip otomatisasi di masa mendatang?
 
-A3.Selalu simpan templat master laporan dalam format [Excel Template (.xltx)] atau atur atribut file menjadi [Read-Only] pada tingkat properti folder jaringan, sehingga setiap kali file dibuka, pengguna wajib menyimpannya sebagai dokumen baru dengan nama yang berbeda. 
+A3.Selalu simpan templat master laporan dalam format [Excel Template (.xltx)] atau atur atribut file menjadi [Read-Only] pada tingkat properti folder jaringan, sehingga setiap kali file dibuka, pengguna wajib menyimpannya sebagai dokumen baru dengan nama yang berbeda.

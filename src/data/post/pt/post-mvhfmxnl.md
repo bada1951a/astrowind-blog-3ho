@@ -8,6 +8,7 @@ tags: ["Excel", "Inteligencia Artificial", "Produtividade", "Logistica"]
 theme: "Electric Cyan Speed"
 ---
 
+## 1. Situação de emergência e gargalo crítico no escritório
 
 Eram 18h30 de uma sexta-feira caótica no nosso escritório na Berrini, em São Paulo. O ar-condicionado já tinha desligado, o chefe havia mandado uma mensagem no Teams cobrindo a tela do meu celular com a pergunta clássic
 

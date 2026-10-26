@@ -8,6 +8,7 @@ tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]
 theme: "Midnight Navy Royal"
 ---
 
+## 1. Tình huống sự cố khẩn cấp và tắc nghẽn công việc văn phòng
 
 Đồng hồ góc phải màn hình máy tính vừa điểm 17:15 chiều thứ Sáu tại văn phòng quận 1, TP.HCM. Sếp vừa ném lên bàn một xấp hóa đơn đỏ, vé xe, biên nhận giấy cao ngút ngàn và phán một câu xanh rờn: "Em nhập gấp đống này vào file Excel để báo cáo tài chính tuần, kịp gửi họp ban giám đốc lúc 8 giờ sáng thứ Hai nhé!". Nhìn đống giấy nhăn nheo, mờ nhòe chữ viết tay lẫn bản in cũ kỹ, tay tôi bủn rủn. Gõ phím thủ công kiểu này chắc chắn phải ôm laptop ngồi đến nửa đêm, chưa kể sai sót lệch số tiền một chữ số là ngày lương đi tong.
 
@@ -70,8 +71,6 @@ Khi làm việc với các tài liệu tài chính, hóa đơn có chứa thông
 
 ### 1. Công cụ OCR miễn phí có đọc được hóa đơn tiếng Việt có dấu không?
 Hoàn toàn được. Các công cụ hiện đại như Google Lens hay Google Docs OCR hỗ trợ nhận diện tiếng Việt rất tốt, miễn là hình ảnh chụp rõ nét, không bị nhòe mờ hoặc tối quá.
-
-
 
 ![AI Productivity & Workflow Automation](https://picsum.photos/seed/office313/1000/550)
 

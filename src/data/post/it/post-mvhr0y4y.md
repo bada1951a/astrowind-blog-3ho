@@ -8,6 +8,7 @@ tags: ["Google Sheets", "AI Tools", "Financial Modeling", "Office Tips"]
 theme: "Dracula Purple Dev"
 ---
 
+## 1. Emergenza improvvisa e blocco delle attività in ufficio
 
 Erano le 16:45 di un martedì pomeriggio nel nostro ufficio vicino a Piazza Gae Aulenti a Milano. Alle 17:00 avevamo la videoconferenza decisiva con il comitato direttivo del cliente per la revisione del budget annuale. Sul mio schermo, il foglio Google Sheets con il modello finanziario sembrava un campo di battagli
 

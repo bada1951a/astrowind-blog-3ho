@@ -8,6 +8,7 @@ tags: ["Excel AI", "Manajemen Stok", "Otomatisasi Kantor", "Produktivitas"]
 theme: "Acid Lime Hacker Space"
 ---
 
+## 1. Situasi Kritis dan Hambatan Kerja Mendesak di Kantor
 
 Jam sepuluh malam di kawasan bisnis SCBD Jakarta, saya masih terpaku di depan layar monitor kantor. AC sentral gedung sudah mati, menyisakan suara dengung CPU yang mulai panas. Di meja saya, secangkir kopi hitam sudah dingin tak tersentuh. 
 

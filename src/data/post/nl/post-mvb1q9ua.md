@@ -8,6 +8,7 @@ tags: ["AI Tools", "Workflow", "Excel", "Office Tips"]
 theme: "Midnight Navy Royal"
 ---
 
+## 1. Noodsituatie en knelpunt op de werkvloer
 
 Het is kwart voor negen op een regenachtige dinsdagochtend in het Zuidas zakendistrict in Amsterdam. Om negen uur staat de cruciale directiemeeting gepland waarin we de nieuwe internationale partnerlijst moeten presenteren. Mijn scherm knippert rood van de stress: een dataset van vierduizend rijen met 'schone' e-mailadressen blijkt een ramp te zijn. Voornamen zitten vast in e-mailadressen zoals *jan.jansen@bedrijf.nl*, hoofdletters ontbreken of staan op de verkeerde plek, en er sluimeren dubbele spaties en vreemde tekens door de hele kolom. Handmatig aanpassen is simpelweg onmogelijk binnen vijftien minuten, en de standaard Excel-functies zoals Tekst naar Kolommen lopen volledig vast op al die uitzonderingen.
 

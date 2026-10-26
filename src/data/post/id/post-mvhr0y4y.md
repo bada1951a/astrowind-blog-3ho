@@ -8,6 +8,7 @@ tags: ["Google Sheets", "Financial Modeling", "AI Tools", "Produktivitas Kantor"
 theme: "Deep Indigo System"
 ---
 
+## 1. Situasi Kritis dan Hambatan Kerja Mendesak di Kantor
 
 Jam menunjukkan pukul 21.30 WIB di kawasan bisnis SCBD Jakarta. AC sentral gedung kantor sudah mati sejak setengah jam lalu, sementara layar monitor saya menyala terang menampilkan rekap data tahunan yang berantakan total. Besok pagi, pukul 09.00 tepat, jajaran direksi akan meminta proyeksi arus kas dan grafik pemodelan finansial untuk rapat anggaran tahun depan. Masalahnya, rumus keuangan yang saya susun sejak sore mendadak *error* karena format sel dari divisi keuangan korporat tidak sinkron. Boro-boro interaktif, grafik bawaan Google Sheets malah terlihat kaku, jelek, dan membingungkan.
 

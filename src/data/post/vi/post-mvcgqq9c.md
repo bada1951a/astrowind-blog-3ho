@@ -8,6 +8,7 @@ tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]
 theme: "Sunset Horizon Coral"
 ---
 
+## 1. Tình huống sự cố khẩn cấp và tắc nghẽn công việc văn phòng
 
 Đồng hồ góc màn hình vừa điểm 17:15 chiều. Sếp vừa nhắn vào nhóm Zalo phòng: *"Em ơi, file báo cáo tổng hợp doanh thu tháng này của các chi nhánh miền Nam sao mà nặng thế, anh mở lên cứ xoay vòng tròn rồi văng luôn ra ngoài?"* Áp lực nén chặt lồng ngực khi chỉ còn chưa đầy 45 phút nữa là hết giờ làm, trong khi file Excel tổng hợp dung lượng đã phình to lên tới 85MB, mỗi lần gõ phím là màn hình đơ cứng 10 giây. Cố gắng copy số liệu sang file mới cũng vô vọng vì lỗi tham chiếu vòng (Circular Reference) và hàng đống hàm VLOOKUP tìm kiếm trên toàn bộ 100.000 dòng dữ liệu rác.
 

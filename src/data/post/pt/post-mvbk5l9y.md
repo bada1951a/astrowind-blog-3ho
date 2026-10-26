@@ -8,6 +8,7 @@ tags: ["Google Sheets", "Productivity", "Automation", "Finance"]
 theme: "Modern Minimalist Slate"
 ---
 
+## 1. Situação de emergência e gargalo crítico no escritório
 
 Eram 18h40 de uma sexta-feira chuvosa no escritório na Avenida Paulista, e o fechamento do relatório financeiro mensal estava travado. Minha tela exibia uma salada de números desatualizados: cotações do dólar e do euro copiadas à mão de sites de notícias, fórmulas quebradas porque o provedor gratuito de API mudou o endereço de acesso, e o diretor financeiro cobrando no Slack a versão final consolidada para a reunião de diretoria na segunda-feira cedo. A cada fechamento de mês, a mesma rotina desgastante de perder preciosas horas atualizando taxas de câmbio manualmente e torcendo para que nenhuma célula ficasse com o temido erro #VALOR!. Foi o limite. Decidi automatizar essa rotina de uma vez por todas usando apenas os recursos nativos do Google Sheets, sem gastar um centavo com plugins de terceiros ou assinaturas mensais caras.
 
@@ -87,8 +88,6 @@ Mesmo automatizando o processo, alguns cuidados evitam dores de cabeça com audi
 
 ### 1. A função GOOGLEFINANCE tem algum custo oculto ou limite de uso?
 Não. Ela é totalmente gratuita e integrada de forma nativa ao ecossistema do Google Workspace. O único limite é técnico: planilhas com milhares de chamadas simultâneas à API de finanças podem apresentar lentidão temporária, mas para painéis corporativos de médio porte o desempenho é instantâneo.
-
-
 
 ![AI Productivity & Workflow Automation](https://picsum.photos/seed/office974/1000/550)
 

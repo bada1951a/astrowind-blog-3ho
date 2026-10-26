@@ -8,6 +8,7 @@ tags: ["Excel", "KI", "Automatisierung", "Office-Tricks"]
 theme: "Deep Ocean Cobalt"
 ---
 
+## 1. Kritische Fehlersituation im Büroalltag
 
 Es ist kurz vor 17:00 Uhr an einem grauen Dienstag im Frankfurter Finanzdistrikt. Um 18:00 Uhr findet das entscheidende Vorstandstreffen statt, und ich sitze vor einer 5.000 Zeilen langen Excel-Tabelle mit den neuen Kundendaten. Das Problem? Die E-Mail-Adressen sind ein absolutes Desaster: Da stehen Vor- und Nachnamen kreuz und quer, Tippfehler wie "gmial.com" häufen sich, und die Spalte für die Vornamen ist komplett leer. Eine manuelle Bereinigung würde Stunden dauern, und die klassischen Excel-Formeln mit LINKS, RECHTS und FINDEN scheitern an den unregelmäßigen Datenformaten. Der Schweiß stand mir auf der Stirn – bis ich zu einer cleveren Kombination aus Excel-Funktionen und KI-Unterstützung gegriffen habe.
 
@@ -55,12 +56,10 @@ Sobald die KI die bereinigten Daten ausgespuckt hat, fügen Sie diese über Date
 
 ---
 
-## Häufig gestellte Fragen (FAQ)
+## 5. Häufig gestellte Fragen (FAQ) (FAQ)
 
 ### 1. Kann ich diesen Prozess komplett automatisieren, ohne jedes Mal die KI zu fragen?
 Ja. Wenn Sie die Bereinigungsregeln einmal sauber in einem Excel Makro (VBA) oder über Power Query definiert haben, läuft der Prozess für standardisierte E-Mail-Formate vollautomatisch. Die KI benötigen Sie vor allem bei stark variierenden, unstrukturierten Altdaten.
-
-
 
 ![AI Productivity & Workflow Automation](https://picsum.photos/seed/office210/1000/550)
 

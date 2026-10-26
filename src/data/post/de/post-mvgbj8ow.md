@@ -8,6 +8,7 @@ tags: ["Google Apps Script", "Google Sheets", "Automatisierung", "Office Tipps",
 theme: "Cobalt Enterprise Lab"
 ---
 
+## 1. Kritische Fehlersituation im Büroalltag
 
 Es war Freitag, Punkt 16:45 Uhr im Frankfurter Finanzdistrikt. In zwanzig Minuten sollte das monatliche Vorstandstreffen beginnen, und auf meinem Schreibtisch herrschte das pure Chaos. Die Zahlen für den Quartalsabschluss waren zwar in der Google Tabelle aktuell, aber ich musste sie noch manuell als PDF exportieren, den Dateinamen anpassen, das Outlook-Fenster öffnen und den Bericht an fünf verschiedene Bereichsleiter im zehnten Stock mailen. Natürlich ist genau in diesem Moment Excel beziehungsweise Google Sheets beim Export hängen geblieben, das Layout der PDF zerschoss sich, und die Panik stieg. Wieder einmal wertvolle Minuten vergeudet für rein mechanische Copy-Paste-Arbeit, während die echten Analysen liegen blieben.
 
@@ -97,7 +98,7 @@ Damit das Skript nun jeden Freitag vollautomatisch läuft, ohne dass Sie einen F
 
 ---
 
-## Häufig gestellte Fragen (FAQ)
+## 5. Häufig gestellte Fragen (FAQ) (FAQ)
 
 ### Kann ich mehrere Empfänger gleichzeitig in das Skript einbinden?
 Ja, absolut. Sie können die Variable `recipient` einfach als Array definieren oder durch Kommata trennen, zum Beispiel: `var recipient = "vorstand@firma. de, controlling@firma. de";`. Alternativ nutzen Sie die CC- oder BCC-Option in den erweiterten Parametern von `GmailApp.sendEmail`.

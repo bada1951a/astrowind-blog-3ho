@@ -8,6 +8,7 @@ tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]
 theme: "Bronze Artisan Workshop"
 ---
 
+## 1. Awaryjna sytuacja i paraliż pracy w biurze
 
 Wyobraź sobie to popołudnie w warszawskim centrum biznesowym na Rondzie Daszyńskiego. Godzina 16:45, a ty siedzisz przed monitorem, próbując na szybko ogarnąć arkusz z rozliczeniem czasu pracy całego zespołu przed jutrzejszym audytem. Miałeś wdrożyć automatyczny monitoring cen konkurencji za pomocą no-code'owego web scrapera, ale strona źródłowa zmieniła strukturę HTML, zasypując cię kaskadą błędów skraplania. W tle pika powiadomienie na Slacku od szefa z pytaniem o raport nadgodzin za zeszły miesiąc, a standardowy arkusz Excela znowu zwraca błąd wartości `#ARG!`, bo ktoś wpisał godziny w formacie tekstowym zamiast liczbowego. Znasz to uczucie, gdy ręczne poprawianie setek wierszy zaczyna przypominać syzyfową pracę?
 

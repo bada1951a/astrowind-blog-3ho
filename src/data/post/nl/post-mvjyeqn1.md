@@ -8,6 +8,7 @@ tags: ["Excel", "AI Tools", "Productiviteit", "Workflow"]
 theme: "Midnight Navy Royal"
 ---
 
+## 1. Noodsituatie en knelpunt op de werkvloer
 
 Het is vrijdagmiddag om vijf uur in het hart van het Zuidas zakendistrict in Amsterdam. Terwijl de regen tegen de glazen gevels van de toren tikt, sta ik klaar om de maandelijkse urenregistratie en overwerkvergoedingen voor het team goed te keuren. Maar dan slaat de paniek toe. Door een flinke synchronisatiefout in onze cloudopslag is het urenbestand door ieders gelijktijdige bewerkingen eindeloos opgesplitst in bestanden met namen als Uren_Project_definitief_kopie(1).xlsx,Uren_Project_definitief_kopie(2)_conflict.xlsx en een verdwaalde versie uit het vorig uur. De formules voor de urenberekening verwijzen naar ontbrekende tabbladen en de overuren knallen uit de bocht met foutmeldingen. Het weekend dreigt opnieuw te verdwijnen in een handmatige puzzel.
 

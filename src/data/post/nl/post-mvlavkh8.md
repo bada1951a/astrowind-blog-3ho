@@ -8,6 +8,7 @@ tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]
 theme: "Dark Velvet Obsidian"
 ---
 
+## 1. Noodsituatie en knelpunt op de werkvloer
 
 Het was vrijdagochtend even over negenen in een kantoor aan de Gustav Mahlerlaan op de Zuidas in Amsterdam. Mijn kwartaalrapportage voor een grote financiële dienstverlener moest binnen twintig minuten naar de directie. Om de analyse waterdicht te maken, had ik een grote dataset ontvangen waarin volledige adresgegevens en telefoonnummers abusievelijk in één enkele kolom stonden gepropt. Zoals het hoort in een moderne workflow, had ik gisteren snel een geavanceerde formule gebouwd met de nieuwste dynamische array-functies zoals XLOOKUP en FILTER. Maar toen ik het bestand deelde met de risico-afdeling, sloeg de paniek toe: hun wat oudere versie van Microsoft Excel trok het niet en toonde overal de fatale foutmelding #WAARDE! of #NAAM?. Hun systemen liepen vast op functies die voor hen simpelweg onbekend waren.
 
@@ -43,8 +44,7 @@ Test het bestand door het lokaal op te slaan en te openen in een compatibiliteit
 <div style="border-left: 4px solid #a855f7; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 Belangrijke waarschuwing: Zorg ervoor dat je bij het uploaden van datasets naar ChatGPT alle gevoelige klantgegevens, zoals echte persoonsnamen en telefoonnummers, anonimiseert of vervangt door dummy-data om te voldoen aan de AVG-richtlijnen en het bedrijfsbeleid.
 </div>
-
-Frequently Asked Questions
+## 5. Veelgestelde Vragen (FAQ)
 
 Q1. Wat kan ik doen als de formule van ChatGPT toch een foutmelding geeft in de oude Excel-versie?
 

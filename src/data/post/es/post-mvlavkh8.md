@@ -8,6 +8,7 @@ tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]
 theme: "Solarized Amber Warm"
 ---
 
+## 1. Emergencia crítica en el trabajo y bloqueo de tareas
 
 Ayer por la tarde, en plena oficina corporativa en Madrid, monte un grafico de monitorizacion automatizada de precios de la competencia usando un rastreador web sin codigo. Todo iba sobre ruedas hasta que la pagina cambio de estructura de repente, rompiendo el scraper y vomitando una autentica montanya de datos en una sola celda de Excel. Me encontre con quinientas filas donde la direccion postal, el codigo postal y el numero de telefono aparecian mezclados en un bloque ilegible. El comite directivo esperaba el informe de precios listo para la primera hora del dia siguiente, y hacerlo a mano celda por celda habria significado pasar toda la noche en vela pegado al teclado.
 
@@ -19,7 +20,7 @@ Intentar arreglar aquello con las funciones clasicas de texto de Excel fue una p
 Nota rapida de productivdad: Nunca pierdas mas de diez minutos intentando resolver una formula de texto compleja de manera manual. Si los datos no siguen un patron fijo, la inteligencia artificial puede escribir la formula exacta en segundos si le das un buen ejemplo.
 </div>
 
-### Por que se rompen las extracciones de datos en Excel
+## 2. Análisis de causas raíz de errores de fórmulas y flujo las extracciones de datos en Excel
 
 1. Falta de delimitadores estandarizados: Los datos extraidos de la web suelen venir sin separadores limpios como comas o puntos y comas, mezclando espacios simples entre palabras y numeros.
 
@@ -27,7 +28,7 @@ Nota rapida de productivdad: Nunca pierdas mas de diez minutos intentando resolv
 
 3. Direcciones con longitud irregular: Algunas lineas incluyen el piso y la puerta mientras que otras solo tienen la calle, impidiendo usar posiciones fijas de caracteres.
 
-### Guia paso a paso para resolverlo con ChatGPT y Excel
+## 3. Solución práctica paso a paso para optimizar el flujo para resolverlo con ChatGPT y Excel
 
 El truco no consiste en pedirle a la inteligencia artificial que te devuelva toda la tabla limpia, sino en pedirle que genere una formula dinamica o una funcion personalizada que tu puedas copiar y pegar en tu archivo.
 
@@ -47,7 +48,7 @@ Paso 4: Arrastra la formula hacia abajo en toda la columna para procesar cientos
 Consejo de seguridad corporativa: Si trabajas con datos sensibles de clientes o informacion confidencial de la empresa, anonimiza los datos de muestra antes de pegarlos en herramientas de inteligencia artificial externas.
 </div>
 
-### Preguntas frecuentes
+## 5. Preguntas Frecuentes (FAQ)
 
 Q1. ¿Puedo hacer esto mismo si mi Excel esta en ingles en lugar de espanol?
 

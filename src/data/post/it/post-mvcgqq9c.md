@@ -8,6 +8,7 @@ tags: ["Excel", "ChatGPT", "Python", "Produttività", "Ufficio"]
 theme: "Rosewood Hardware Guide"
 ---
 
+## 1. Emergenza improvvisa e blocco delle attività in ufficio
 
 Erano le 14:45 e la riunione col cliente chiave al 26esimo piano qui in centro a Milano era fissata per le 15:30. Sul mio schermo, il file Excel di budget consolidato da 45 megabyte aveva appena deciso di piantarsi definitivamente, lasciando la classica rotellina di caricamento girevole su uno sfondo bianco latte. Nessun messaggio di errore, solo il silenzio tombale di un'applicazione morta con dentro tre mesi di dati sui ricavi. Aprire il Task Manager e killare il processo è stato un riflesso condizionato, ma sapevo che l'autosave mi avrebbe riportato a un quarto d'ora prima, lasciando irrisolti i problemi di lentezza e i calcoli fantasma che facevano inchiodare il foglio ogni volta che modificavo una cella. <div style="border-left: 4px solid #be123c; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Situazione di emergenz

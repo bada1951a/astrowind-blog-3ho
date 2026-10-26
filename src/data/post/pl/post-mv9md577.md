@@ -8,6 +8,7 @@ tags: ["Excel", "Power Query", "Automatyzacja", "Biuro"]
 theme: "Graphite Technical Paper"
 ---
 
+## 1. Awaryjna sytuacja i paraliż pracy w biurze
 
 Była dokładnie 16:45, a za piętnaście minut miałem wysłać gotowy raport miesięczny na spotkanie zarządu w naszym biurze przy Rondzie Daszyńskiego w Warszawie. Na moim monitorze świecił się wielki, czerwony komunikat o błędzie #ARG! w arkuszu podsumowującym. Okazało się, że regionalni kierownicy sprzedaży przesłali pliki Excela z zupełnie inną strukturą kolumn: ktoś zmienił „Nazwa Klienta” na „Klient”, ktoś inny dodał pusty wiersz na górze, a stary makro-skrypt VBA odmawiajacy posłuszeństwa kompletnie się zawiesił. Ręczne poprawianie kilkunastu arkuszy w tak krótkim czasie graniczyło z cudem, a pot oblewał mi czoło.
 

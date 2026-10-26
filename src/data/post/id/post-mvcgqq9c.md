@@ -8,6 +8,7 @@ tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]
 theme: "Pure Titanium Clean"
 ---
 
+## 1. Situasi Kritis dan Hambatan Kerja Mendesak di Kantor
 
 Jam 11 malam di kawasan bisnis SCBD Jakarta, layar laptop saya mendadak membeku dengan tulisan "Microsoft Excel is not responding" yang menyebalkan. Tenggat waktu pengumpulan rekap data tahunan ke direksi tinggal 8 jam lagi, dan file berukuran 45 MB ini menolak untuk dibuka, apalagi disimpan. Setiap kali saya mencoba menghapus baris data atau mengubah rumus VLOOKUP, kipas laptop berputar kencang lalu aplikasi langsung *force close*. 
 
@@ -80,4 +81,4 @@ Ya, Anda memerlukan Python dan pustaka pendukung seperti `pandas` dan `openpyxl`
 Tergantung instruksi pada prompt Anda. Jika Anda hanya meminta skrip untuk membersihkan baris kosong dan *formatting* yang rusak, rumus kalkulasi utama Anda akan tetap aman. Pastikan membaca baris kode Python sebelum mengeksekusinya.
 
 3. Mengapa tidak menggunakan fitur "Inspect Workbook" bawaan Excel saja?
-Fitur bawaan Excel sangat bagus untuk masalah ringan. Namun, jika file sudah berada di tahap "Not Responding" dan tidak bisa dibuka sama sekali, Excel akan selalu *crash* sebelum Anda sempat mengakses menu inspeksi tersebut. Pendekatan luar sistem via Python adalah jalan pintas satu-satunya. 
+Fitur bawaan Excel sangat bagus untuk masalah ringan. Namun, jika file sudah berada di tahap "Not Responding" dan tidak bisa dibuka sama sekali, Excel akan selalu *crash* sebelum Anda sempat mengakses menu inspeksi tersebut. Pendekatan luar sistem via Python adalah jalan pintas satu-satunya.

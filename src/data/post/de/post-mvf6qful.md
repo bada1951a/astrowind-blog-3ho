@@ -8,6 +8,7 @@ tags: ["Google Sheets", "Gemini AI", "Office Automatisierung", "Datenbereinigung
 theme: "High-Contrast Charcoal"
 ---
 
+## 1. Kritische Fehlersituation im Büroalltag
 
 Es ist Donnerstag, 17:45 Uhr im Frankfurter Bankenviertel. Um 18:30 Uhr startet das Vorstandstreffen, und auf meinem Schreibtisch liegt die dringende Aufgabe, die konsolidierten Kundendaten für den Monatsabschluss zu finalisieren. Der Vorstand will exakt wissen, wie viele unique Enterprise-Kunden wir aktuell betreuen. Doch als ich die Excel-Exportdatei unseres Sales-Teams in Google Sheets hochlade, trifft mich der Schlag: Über 4.500 Zeilen voller Kundendatensätze, bei denen durch unterschiedliche Schreibweisen, Tippfehler und Namenszusätze ("GmbH", "GmbH & Co. KG", "AG") exakt dieselben Firmen mehrfach auftauchen. Die Standardfunktion "Dubletten entfernen" versagt komplett, weil "Deutsche Bank AG" und "Deutsche Bank" als zwei verschiedene Unternehmen gewertet werden. Der Puls steigt, die Zeit läuft ab.
 
@@ -52,7 +53,7 @@ Kopieren Sie das von Gemini generierte CSV-Ergebnis. Gehen Sie in Google Sheets 
 <strong>Pro-Tipp für den Datenschutz:</strong> Wenn Sie mit vertraulichen Finanzdaten oder echten Kundennamen arbeiten, ersetzen Sie kritische Namen vor dem Prompten durch Platzhalter wie "Kunde_A", "Kunde_B" oder nutzen Sie die Enterprise-Versionen mit garantierten Datenschutz-Richtlinien.
 </div>
 
-## Häufig gestellte Fragen (FAQ)
+## 5. Häufig gestellte Fragen (FAQ) (FAQ)
 
 1. Was mache ich, wenn Gemini bei sehr großen Tabellen (> 5.000 Zeilen) das Token-Limit erreicht?
 Teilen Sie Ihre Daten in handliche Häppchen von je 1.000 bis 1.500 Zeilen auf. Arbeiten Sie sich Block für Block durch die Tabelle und fügen Sie die bereinigten Ergebnisse am Ende in einem Master-Sheet zusammen.

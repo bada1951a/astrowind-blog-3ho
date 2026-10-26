@@ -8,6 +8,7 @@ tags: ["Office Tips", "Workflow", "Automation", "Excel"]
 theme: "Cobalt Enterprise Lab"
 ---
 
+## 1. Situasi Kritis dan Hambatan Kerja Mendesak di Kantor
 
 Jam sudah menunjukkan pukul 21.30 WIB di salah satu gedung pencakar langit kawasan bisnis SCBD Jakarta. Di tengah sunyinya lantai kantor, saya masih terpaku di depan layar monitor dengan mata lelah, mencoba merapikan puluhan file Excel laporan penjualan dari berbagai cabang yang dikirimkan lewat email. Tanggal 5 setiap bulannya selalu menjadi mimpi buruk: menyalin data satu per satu, merapikan format kolom yang berantakan, menghapus duplikat, lalu membuat pivot table manual untuk meeting direksi besok pagi. Tiba-tiba, sebuah rumus VLOOKUP mendadak *error* karena ada nama kolom cabang yang diubah oleh staf regional tanpa konfirmasi. Lembur sampai tengah malam gara-gara data tidak sinkron lagi-lagi terjadi.
 

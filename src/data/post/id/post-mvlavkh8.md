@@ -8,6 +8,7 @@ tags: ["Excel", "ChatGPT", "Otomatisasi Kantor", "Tips Produktivitas"]
 theme: "Dracula Purple Dev"
 ---
 
+## 1. Situasi Kritis dan Hambatan Kerja Mendesak di Kantor
 
 Beberapa waktu lalu di salah satu gedung perkantoran kawasan bisnis SCBD Jakarta, saya mengalami momen paling mendebarkan dalam karier sebagai staf operasional. Pukul dua siang, bos besar meminta draf proposal kerja sama yang memuat ribuan data klien dikirimkan dalam waktu 30 menit ke meja beliau. Masalahnya, data mentah yang diberikan oleh tim sales tercampur aduk antara nama jalan, kota, kode pos, dan nomor telepon dalam satu kolom Excel yang sama. Ketika saya mencoba meminta bantuan ChatGPT dengan memasukkan prompt sederhana, jawaban yang diberikan justru bertele-tele dan berputar-putar menggunakan teori rumus teks tingkat lanjut yang kaku dan tidak sesuai dengan struktur data lokal kita. Panik melanda karena setiap menit berharga, sementara rumus yang dicontohkan AI terus menerus menghasilkan error pesan #VALUE! di layar laptop saya.
 
@@ -54,8 +55,7 @@ Tip Pro Produktivitas: Shortcut pintasan keyboard Ctrl + E (Flash Fill) adalah p
 </div>
 
 Peringatan dari praktisi: Pastikan untuk selalu memeriksa ulang (double check) hasil akhir pemisahan data di bagian bawah baris dokumen Anda. Terkadang, nomor HP yang tidak memiliki awalan standar atau alamat yang sangat pendek bisa lolos dari pembacaan pola otomatis, sehingga memerlukan penyesuaian manual secara cepat.
-
-Frequently Asked Questions (FAQ)
+## 5. Pertanyaan yang Sering Diajukan (FAQ) (FAQ)
 
 Q1. Apakah cara ini bisa digunakan untuk versi Microsoft Excel yang lama?
 

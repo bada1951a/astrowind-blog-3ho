@@ -8,6 +8,7 @@ tags: ["Excel", "Intelligenza Artificiale", "Automazione", "Produttività"]
 theme: "Steel Silver Metallic"
 ---
 
+## 1. Emergenza improvvisa e blocco delle attività in ufficio
 
 Erano le 14:45 e il mio ufficio a Milano sembrava una pentola a pressione. Mancavano esattamente quindici minuti alla riunione cruciale con i partner commerciali, e io avevo davanti un file Excel con quattromila righe di contatti esportati male dal vecchio CRM. Indirizzi email scritti in maiuscolo e minuscolo senza criterio, spazi vuoti ovunque, e soprattutto un'unica colonna in cui nome e cognome erano incollati insieme come "MARIO ROSSI <mario.rossi@azienda. it>". Provare a sistemare tutto a mano con le funzioni stringa o con i vecchi filtri significava fare tardi, fare brutta figura e rovinarmi il pomeriggio. 
 
@@ -74,4 +75,4 @@ Sì, il motore euristico riconosce il pattern a prescindere dal maiuscolo/minusc
 In quel caso, l'approccio migliore tramite IA è chiedere di separare i token basandosi sulla presenza del simbolo `@`, isolando la parola precedente come dominio o parte del contatto e la stringa con la chiocciola come email.
 
 Questa procedura rallenta il file Excel se ho decine di migliaia di righe?
-Il Riempimento Flash e le formule generate via IA sono leggeri. Tuttavia, se superi le 50.000 righe, ti consigliamo di convertire i risultati finali in valori fissi (*Copia > Incolla Speciale > Valori*) per evitare che Excel ricalcoli la tabella a ogni modifica. 
+Il Riempimento Flash e le formule generate via IA sono leggeri. Tuttavia, se superi le 50.000 righe, ti consigliamo di convertire i risultati finali in valori fissi (*Copia > Incolla Speciale > Valori*) per evitare che Excel ricalcoli la tabella a ogni modifica.

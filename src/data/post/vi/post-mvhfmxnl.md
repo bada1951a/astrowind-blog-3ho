@@ -8,6 +8,7 @@ tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]
 theme: "Deep Indigo System"
 ---
 
+## 1. Tình huống sự cố khẩn cấp và tắc nghẽn công việc văn phòng
 
 Dong ho goc phai man hinh vua diem 17:15, chi con 45 phut nua la den gio tan ca chieu thu Sau tai van phong quan 1, TP.HCM. Sep tong vua nhan tin vao nhom Zalo yeu cau nop gap bang du doan ton kho cho quy toi truoc khi buoi hop giao banthu Hai bat dau. Nhin vao file Excel chua 5.000 dong du lieu ban hang tu dau nam den nay, dau oc toi trong rong. Neu ngoi loay hoay dung ham FORECAST hay xu ly thu cong tung ma san pham nhu moi khi, chac chan toi phai o lai cong ty den toi mi mieu va bo lo buoi hen an toi da hua voi gia dinh. 
 

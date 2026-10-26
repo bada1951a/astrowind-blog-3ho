@@ -8,6 +8,7 @@ tags: ["Excel", "Power Query", "Automazione", "Ufficio", "Produttività"]
 theme: "Midnight Navy Royal"
 ---
 
+## 1. Emergenza improvvisa e blocco delle attività in ufficio
 
 Ore 17:45 in un ufficio vicino a Corso Como a Milano. Mancano esattamente quindici minuti alla riunione di allineamento con i responsabili commerciali e la schermata del mio PC è un vero campo di battaglia. Sullo schermo ci sono diciotto file Excel diversi, inviati dai vari reparti regionali, tutti con formati leggermente differenti: date scritte nel formato europeo in uno e americano nell'altro, codici prodotto con spazi superflui e totali che non tornano per via di qualche formattazione di testo nascosta. Il capo mi scrive su Teams: "Ci sei per i dati aggiornati?". Il panico sale, le dita tremano sulla tastiera mentre cerco disperatamente di incollare l'ennesima riga di dati prima che il sistema si blocchi. Bastava una virgola fuori posto per sballare l'intero bilancio mensile.
 
@@ -81,4 +82,4 @@ A: Power Query e abbastanza flessibile, ma per evitare errori di mappatura e con
 
 Q: Ho bisogno di conoscere linguaggi di programmazione come VBA o Python per usare Power Query?
 
-A: Assolutamente no. Power Query funziona interamente tramite un'interfaccia visiva a pulsanti (point-and-click). Il linguaggio sottostante (M) viene generato automaticamente in background senza che tu debba scriverne una sola riga. 
+A: Assolutamente no. Power Query funziona interamente tramite un'interfaccia visiva a pulsanti (point-and-click). Il linguaggio sottostante (M) viene generato automaticamente in background senza che tu debba scriverne una sola riga.

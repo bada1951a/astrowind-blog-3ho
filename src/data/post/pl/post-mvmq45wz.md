@@ -8,7 +8,6 @@ tags: ["Google Sheets", "Automatyzacja", "Amazon", "E-commerce", "No-Code"]
 theme: "Warm Coffee Latte"
 ---
 
-
 ## 1. Kryzys w warszawskim biurze i dylemat z danymi
 
 Siedziałem przy moim biurku w biurowcu niedaleko Ronda Daszyńskiego, popijając drugą dziś latte, gdy kierownik działu sprzedaży rzucił na mój stół pilne zadanie. Do jutrzejszego porannego spotkania zarządu potrzebowaliśmy codziennego monitoringu cen pięćdziesięciu kluczowych produktów naszej konkurencji z serwisu Amazon. Brzmi jak standardowe zadanie analityczne, prawda? Tyle że w tym momencie uderzył mnie mur polityki bezpieczeństwa naszej korporacji. 
@@ -18,8 +17,6 @@ Zgodnie z rygorystycznymi unijnymi procedurami RODO oraz wewnętrznymi regulamin
 <div style="border-left: 4px solid #78350f; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Wskazówka eksperta:</strong> Automatyzacja bez kodu (no-code) oparta na wbudowanych funkcjach chmurowych to najbezpieczniejszy sposób na ominięcie restrykcyjnych blokad działu IT, ponieważ nie wymaga instalowania podejrzanych wtyczek ani przekazywania kluczy dostępowych do zewnętrznych serwerów.
 </div>
-
-
 
 ![How to Scrape Amazon Competitor Pricing into Google Sheets Daily Without Writing Code AI Automation Guide](https://picsum.photos/seed/work-mvmq5xvo-9-b/1000/550.jpg)
 

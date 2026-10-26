@@ -8,6 +8,7 @@ tags: ["Google Sheets", "Gemini AI", "Automazione", "Produttività Ufficio"]
 theme: "Industrial Blueprint"
 ---
 
+## 1. Emergenza improvvisa e blocco delle attività in ufficio
 
 Erano le 16:45 di un martedì pomeriggio nel nostro ufficio in zona Porta Nuova a Milano. Mancavano esattamente quindici minuti alla riunione di allineamento con il cliente principale e il file Google Sheets con la lista dei lead commerciali era un vero campo di battaglia. "Ragazzi, abbiamo tre righe diverse per lo stesso cliente con email scritte in minuscolo, maiuscolo e con spazi di troppo," ha esclamato il collega di reparto, indicando lo schermo con la frustrazione dipinta sul volto. Usare la funzione nativa "Rimuovi duplicati" non serviva a nulla, perché le stringhe erano leggermente disallineate e il sistema le considerava unique. Correggere manualmente 4.500 righe prima delle 17:00? Follia pura. Questa è la classica situazione in cui il lavoro d'ufficio si trasforma in un incubo di copia-incolla. Se anche tu ti sei trovato a perdere ore preziose cercando di pulire database sporchi prima di una scadenza critica, questa guida fa al caso tuo.
 

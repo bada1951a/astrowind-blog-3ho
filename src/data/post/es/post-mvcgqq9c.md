@@ -8,6 +8,7 @@ tags: ["Excel", "ChatGPT", "Python", "Productividad", "Automatización"]
 theme: "Deep Indigo System"
 ---
 
+## 1. Emergencia crítica en el trabajo y bloqueo de tareas
 
 Eran las 8:45 de la mañana en nuestra oficina del Paseo de la Castellana en Madrid. El comité de dirección empezaba a las 9:00 y mi archivo de Excel con el reporte urgente de métricas trimestrales decidió colgarse por tercera vez consecutiva. La barra de carga se quedaba congelada al 28% y el ventilador de mi portátil sonaba como un motor de avión a reacción. Cada clic provocaba la temida pantalla en blanco de "Microsoft Excel no responde", y las fórmulas de búsqueda y referencias circulares rotas amenazaban con dejarme sin datos justo enfrente de los socios.
 
@@ -83,7 +84,7 @@ Ejecuta este script en tu entorno local de Python o directamente en la interfaz 
 
 ---
 
-### Preguntas Frecuentes (FAQ)
+## 5. Preguntas Frecuentes (FAQ) (FAQ)
 
 ¿Necesito saber programar en Python para usar este truco?
 Para nada. Solo necesitas copiar el archivo, pedirle el script a ChatGPT y ejecutarlo usando herramientas como Google Colab (que funciona directamente en el navegador sin instalar nada) o ejecutando el código que la IA te proporciona paso a paso.

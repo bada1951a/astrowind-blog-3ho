@@ -8,6 +8,7 @@ tags: ["Google Sheets", "ChatGPT", "Regex", "Datenbereinigung", "Office Tips"]
 theme: "Nordic Clean Ice"
 ---
 
+## 1. Kritische Fehlersituation im Büroalltag
 
 Es ist Donnerstag, 16:45 Uhr im Frankfurter Finanzdistrikt. In genau 45 Minuten beginnt das entscheidende Quartals-Board-Meeting, und mein Hauptbildschirm zeigt ein absolutes Datendesaster in Google Sheets. Die Finanzdaten aus drei verschiedenen Legacy-Systemen wurden exportiert, aber die Spalten sind völlig verunreinigt: IBANs kleben an Namen, Postleitzahlen hängen mitten in Straßennamen, und die Regex-Formel, die das eigentlich bereinigen sollte, wirft seit zwanzig Minuten nur den berüchtigten `#WERT!`-Fehler aus. Der Adspiegel steigt, der Vorstand wartet, und manuelles Tippen bei über 5.000 Zeilen ist schlicht unmöglich.
 
@@ -61,12 +62,10 @@ Bitten Sie ChatGPT in diesem Fall sofort um ein Update mit Fehlerbehandlung:
 
 ---
 
-## Häufig gestellte Fragen (FAQ)
+## 5. Häufig gestellte Fragen (FAQ) (FAQ)
 
 ### 1. Warum zeigt Google Sheets nach dem Einfügen der ChatGPT-Formel einen Syntaxfehler an?
 Das liegt meist an unterschiedlichen Spracheinstellungen. Deutsche Google-Sheets-Versionen erwarten deutsche Funktionsnamen (z. B. `=WENN()` statt `=IF()`) und das Semikolon als Trenner. Sage ChatGPT im Prompt explizit: *“Schreibe die Formel für ein deutsches Google Sheets mit Semikolon.”*
-
-
 
 ![AI Productivity & Workflow Automation](https://picsum.photos/seed/office207/1000/550)
 

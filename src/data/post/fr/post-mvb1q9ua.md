@@ -8,6 +8,7 @@ tags: ["Excel", "IA", "Productivite", "Bureautique", "Astuces"]
 theme: "Pure Titanium Clean"
 ---
 
+## 1. Situation d'urgence critique au bureau
 
 Il est 13h45, le comité de direction commence à 14h00 précises au 24ème étage de notre tour à La Défense, et c'est la panique générale. Devant mon écran, un fichier Excel monstrueux contenant 4 500 lignes de prospects m'attend. Le problème ? Les adresses emails sont truffées de fautes de frappe (des doubles points, des extensions en ".con" au lieu de ".com"), et les noms sont collés dans une seule et même colonne au format "NOM Prénom" ou pire, "prenom.nom@entreprise.fr". Impossible de faire un publipostage propre pour le grand lancement de la rentrée. Mes mains suent sur le clavier, et mes formules `=GAUCHE()` et `=TROUVE()` habituelles s'emmêlent les pinceaux face aux majuscules aléatoires et aux accents français. C'est le moment exact où j'ai arrêté de m'acharner à la main pour laisser l'IA faire le sale boulot.
 

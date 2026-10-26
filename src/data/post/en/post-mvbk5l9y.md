@@ -8,6 +8,7 @@ tags: ["Google Sheets", "Productivity", "Automation", "Finance", "No-Code"]
 theme: "Graphite Technical Paper"
 ---
 
+## 1. Critical Workplace Bottleneck Emergency
 
 My Slack was blowing up. It was 3:42 PM in our Manhattan office, and our weekly executive sync started in exactly 18 minutes. Our VP of Finance just dropped a message into the channel: "Can we get the international ARR broken down in local currencies using current market rates, not last month's static numbers?" My heart skipped a beat. Opening up our master financial model, I saw an archaic, manual mess of copy-pasted Yahoo Finance tabs, broken VLOOKUP formulas, and a warning that our free trial for a third-party currency plugin had expired overnight, locking our sheets. 
 
@@ -21,7 +22,7 @@ Paying 50 dollars a month for a basic exchange rate extension was out of the que
 
 ---
 
-### Root Cause Breakdown: Why Traditional Sheet-Based Currency Converters Fail
+## 2. Root Cause Breakdown of Formula and Workflow Errors Why Traditional Sheet-Based Currency Converters Fail
 
 Before diving into the fix, let us diagnose why most DIY attempts at currency conversion break down under pressure:
 
@@ -33,7 +34,7 @@ Before diving into the fix, let us diagnose why most DIY attempts at currency co
 
 ---
 
-### Step-by-Step Resolution: Building the Automated Dashboard
+## 3. Step-by-Step Practical Productivity Resolution Building the Automated Dashboard
 
 Let us build a lightning-fast, resilient currency converter dashboard from scratch. 
 
@@ -83,7 +84,7 @@ Where `B2` contains the specific date of the transaction. Google Sheets will fet
 
 ---
 
-### Expert Warning: Managing API Limits and Volatility
+## 4. Professional Automation Expert Precautions & Tips: Managing API Limits and Volatility
 
 While native Google Sheets functions are powerful, keep these operational guardrails in mind:
 - Rate Limits: If you have thousands of individual rows querying `GOOGLEFINANCE` simultaneously, Google Sheets may temporarily return `#N/A` due to rate-limiting. Always aggregate your data into summary tables first, and convert totals rather than querying every single line item individually.
@@ -91,7 +92,7 @@ While native Google Sheets functions are powerful, keep these operational guardr
 
 ---
 
-### Frequently Asked Questions (FAQ)
+## 5. Frequently Asked Questions (FAQ) (FAQ)
 
 Q: Can I use this method to track cryptocurrencies like Bitcoin or Ethereum alongside fiat currencies?
 

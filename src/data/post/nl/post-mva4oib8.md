@@ -8,6 +8,7 @@ tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]
 theme: "Forest Emerald Bio"
 ---
 
+## 1. Noodsituatie en knelpunt op de werkvloer
 
 Het is kwart over drie op een drukke middag in een glazen kantoorpand op de Zuidas in Amsterdam. Over precies vijfenveertig minuten start de kwartaalmeeting met de directie. Mijn laptop staat open, de beamer is al getest, maar de spreadsheet met de belangrijkste omzetdata van afgelopen maand is één grote puinhoop. Klantnamen staan door elkaar met BTW-nummers in dezelfde cel, e-mailadressen zijn half afgekapt, en mijn handmatige pogingen om dit met REGEXEXTRACT op te lossen resulteren alleen maar in `#WAARDE!` en `#FOUT!`. Zweten geblazen, want de tijd tikt door en handmatig alles omzetten is simpelweg geen optie meer.
 
@@ -75,8 +76,6 @@ Hoewel AI een enorme tijdsbesparing oplevert, moet je slim omgaan met bedrijfsda
 
 ### 1. Waarom werkt een regex die ik van ChatGPT krijg niet direct in Google Sheets?
 Google Sheets maakt gebruik van de RE2-regex-engine, die strengere regels hanteert dan bijvoorbeeld Python of JavaScript (PCRE). Soms gebruikt ChatGPT syntax die niet compatibel is. Zeg in dat geval tegen ChatGPT: *"Zorg dat de regex compatibel is met Google Sheets RE2."*
-
-
 
 ![AI Productivity & Workflow Automation](https://picsum.photos/seed/office572/1000/550)
 

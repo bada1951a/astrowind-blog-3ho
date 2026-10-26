@@ -8,6 +8,7 @@ tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]
 theme: "Graphite Technical Paper"
 ---
 
+## 1. Tình huống sự cố khẩn cấp và tắc nghẽn công việc văn phòng
 
 Đồng hồ trên tường văn phòng ở Quận 1 vừa điểm 17:15 chiều. Sếp lớn vừa nhắn vào nhóm Zalo chung yêu cầu chèn ngay một bộ biểu đồ tài chính tương tác (interactive financial model) vào slide báo cáo chiến lược cho cuộc họp hội đồng quản trị sáng mai. Màn hình Google Sheets trước mặt tôi đang chứa hàng nghìn dòng dữ liệu doanh thu, chi phí và biên lợi nhuận thô từ các chi nhánh Hà Nội và TP.HCM, hoàn toàn chưa được cấu trúc. Cố gắng vẽ tay từng biểu đồ cột hay biểu đồ đường truyền thống lúc này chỉ tổ làm mất thời gian, chưa kể định dạng xấu và không có tính năng tương tác để sếp kéo xem theo tháng hoặc theo quý.
 
@@ -79,8 +80,6 @@ a:</strong> Hãy đặt tên các dải ô (Named Ranges) trong Google Sheets tr
 
 ### 1. Tôi có thể dùng Google Sheets miễn phí để làm biểu đồ tài chính tương tác không?
 Hoàn toàn được. Các tính năng như Slicer, Combo Chart và bảng điều khiển cơ bản đều có sẵn hoàn toàn miễn phí trên Google Sheets mà không cần mua tài khoản Google Workspace trả phí.
-
-
 
 ![How to Create Interactive Financial Modeling Charts in Google Sheets with AI Suggestions AI Automation Guide](https://picsum.photos/seed/work-mvhr3rlm-11-b/1000/550.jpg)
 

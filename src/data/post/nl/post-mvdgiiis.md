@@ -8,6 +8,7 @@ tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]
 theme: "Mint Fresh Engineering"
 ---
 
+## 1. Noodsituatie en knelpunt op de werkvloer
 
 Het is kwart voor negen 's ochtends in een kantoor aan de Amsterdamse Zuidas. Over precies vijftien minuten begint de cruciale budgetmeeting met de directie. Mijn bureau ligt bezaaid met gekreukelde papieren facturen en bonnetjes van leveranciers die ineens allemaal verwerkt moeten worden in één strakke prognose-spreadsheet. Mijn voorganger vertrok vorig jaar en liet dit papieren archief achter, en handmatig overtypen van tientallen regels met BTW-tarieven, factuurnummers en bedragen zou me minstens twee uur kosten. Mijn scherm knippert leeg, de koffie is op, en de paniek stijgt.
 

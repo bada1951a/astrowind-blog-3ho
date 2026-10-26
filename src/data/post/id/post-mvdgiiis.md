@@ -8,6 +8,7 @@ tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]
 theme: "Forest Emerald Bio"
 ---
 
+## 1. Situasi Kritis dan Hambatan Kerja Mendesak di Kantor
 
 Jam sudah menunjukkan pukul 21.15 WIB di salah satu sudut gedung pencakar langit kawasan bisnis SCBD Jakarta. AC sentral kantor sudah mati sejak setengah jam lalu, sementara di meja saya berserakan puluhan lembar *invoice* fisik dari berbagai vendor. Besok pagi, bos meminta rekapitulasi data tahunan yang lengkap dengan rincian PPN dan nomor faktur. Bayangan harus mengetik manual satu per satu angka dari kertas buram ke Excel membuat kepala cenat-cenut. Mencoba pakai fitur *Import Data from Picture* di Excel bawaan sering kali gagal total karena format *invoice* vendor berbeda-beda dan banyak stempel miring yang bikin teksnya hancur.
 

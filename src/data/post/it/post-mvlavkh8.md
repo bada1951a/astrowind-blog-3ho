@@ -8,6 +8,7 @@ tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]
 theme: "Solarized Amber Warm"
 ---
 
+## 1. Emergenza improvvisa e blocco delle attività in ufficio
 
 Erano le nove di sera in un ufficio silenzioso vicino a Porta Nuova a Milano. Fuori la nebbia autunnale copriva i grattacieli, mentre dentro fissavo lo schermo con un nodo allo stomaco. Dopo due ore passate a ripulire un enorme file anagrafico per il report trimestrale, avevo finalmente completato una complessa tabella pivot e diverse macro VBA per suddividere un elenco di clienti che univa indirizzi e numeri di telefono nella stessa colonna. Mancava solo un ultimo controllo. Nel momento esatto in cui ho spostato il cursore verso l'alto per cliccare sul pulsante di salvataggio, Excel si è bloccato all'improvviso, mostrando la temuta schermata bianca. Nessun recupero automatico, due ore di lavoro andate in frantumi a causa di un crash di sistema, e la scadenza per la direzione fissata per la mattina seguente alle nove.
 

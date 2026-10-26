@@ -8,6 +8,7 @@ tags: ["Google Apps Script", "Automation", "Google Sheets", "Office Tips"]
 theme: "Mint Fresh Engineering"
 ---
 
+## 1. Tình huống sự cố khẩn cấp và tắc nghẽn công việc văn phòng
 
 Đồng hồ góc phải màn hình máy tính vừa điểm 17:30 chiều thứ Sáu tại văn phòng quận 1, TP.HCM. Sếp tổng vừa nhắn vào nhóm Zalo chung: "Mọi người gửi gấp bảng số liệu kinh doanh tuần này vào email để anh kiểm tra trước bữa tối nhé". Trong khi các đồng nghiệp khác bắt đầu thở dài, mở từng sheet, loay hoay chọn vùng in, xuất file PDF thủ công rồi đính kèm vào Outlook/Gmail, tôi nhấp chuột nhẹ nhàng vào một nút bấm tùy chỉnh sẵn trên thanh công cụ và thong thả nhấp ngụm cà phê. Chỉ 5 giây sau, một thông báo xanh hiện lên: "Đã gửi báo cáo tuần thành công đến hộp thư của sếp!". 
 
@@ -126,8 +127,6 @@ Bạn không muốn phải bấm chạy code thủ công mỗi tuần? Hãy đ�
 
 ### 1. Tôi có thể gửi email báo cáo này đồng thời cho nhiều người nhận không?
 Hoàn toàn được. Bạn có thể thay đổi biến `emailRecipient` bằng một mảng danh sách email cách nhau bởi dấu phẩy, ví dụ: `"sếp1@company.com, sếp2@company.com, ketoan@company.com"`.
-
-
 
 ![How to Write Custom Apps Script to Email Weekly PDF Reports from Google Sheets AI Automation Guide](https://picsum.photos/seed/work-mvgbm3er-11-b/1000/550.jpg)
 

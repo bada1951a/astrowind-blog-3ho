@@ -8,6 +8,7 @@ tags: ["Excel", "IA", "Productivite", "RH", "Automation"]
 theme: "Dracula Purple Dev"
 ---
 
+## 1. Situation d'urgence critique au bureau
 
 L'ambiance était électrique ce mardi après-midi au 24e étage d'une tour de La Défense. En passant près de l'open-space, j'ai vu trois de nos nouveaux collaborateurs, les yeux rivés sur un écran, complètement submergés par un tableau Excel interminable. Leurs sourcils froncés en disaient long : ils étaient penchés depuis plus de trois heures sur le calcul manuel des heures supplémentaires et des cumuls horaires du mois pour l'ensemble du département. Entre les formats d'heures corrompus, les pauses déjeuners mal déduites et les arrondis qui ne collaient jamais, ils s'apprêtaient à passer toute leur fin d'après-midi à corriger des cellules une par une. Un véritable gâchis de temps pour une tâche qui devrait prendre dix secondes.
 

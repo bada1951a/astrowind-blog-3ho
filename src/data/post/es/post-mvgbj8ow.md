@@ -8,6 +8,7 @@ tags: ["Google Sheets", "Apps Script", "Automatización", "Productividad"]
 theme: "Dark Velvet Obsidian"
 ---
 
+## 1. Emergencia crítica en el trabajo y bloqueo de tareas
 
 Eran las 8:45 de la mañana en nuestra oficina de Madrid. El comité de dirección empezaba a las 9:00 y mi bandeja de entrada seguía vacía. El reporte semanal de métricas de conversión, ese que el director comercial exige religiosamente cada lunes sin falta, se había quedado atascado en un bucle de fórmulas rotas tras la última actualización del equipo de operaciones. Minutos antes de entrar a la sala de juntas, sudando frío, tuve que reconstruir a mano un pupurrí de datos dispersos, exportar el PDF a la fuerza y adjuntarlo manualmente con el corazón a mil por hora. Juré que no me volvería a pasar. Si dependía de mi memoria y de mis clics manuales, tarde o temprano volvería a fallar frente a los socios. Así fue como decidí automatizar el proceso de punta a punta usando Google Apps Script para que el sistema genere y envíe el PDF exacto a la hora precisa, sin mi intervención.
 
@@ -110,7 +111,7 @@ function enviarReporteSemanalPDF() {
 * Control de versiones: Antes de modificar hojas principales con scripts activos, haz una copia de respaldo (Archivo > Hacer una copia). Una coma mal puesta en el código puede alterar temporalmente las llamadas de funciones.
 * Nombres de pestañas exactos: Si cambias el nombre de la pestaña `"ReporteEjecutivo"` en tu Google Sheets, recuerda actualizarlo también en la primera línea del script o el sistema arrojará un error de referencia nula. ---
 
-### Preguntas frecuentes (FAQ)
+## 5. Preguntas Frecuentes (FAQ) (FAQ)
 
 ¿Por qué el correo llega sin el archivo adjunto o da error de permisos?
 Generalmente ocurre porque la primera vez que ejecutas el script no completaste el flujo de autorización de Google. Ve al editor, ejecuta la función manualmente una vez haciendo clic en el botón de "Ejecutar" y acepta los permisos de seguridad en la ventana emergente.
@@ -119,4 +120,4 @@ Generalmente ocurre porque la primera vez que ejecutas el script no completaste 
 Sí. Solo debes modificar la variable del destinatario separando los correos con comas dentro de un string, por ejemplo: `var destinatario = "socio1@empresa. com, socio2@empresa. com";`.
 
 ¿Cómo puedo ajustar el PDF para que salga en formato vertical en lugar de horizontal?
-En el objeto de configuración del script, cambia el parámetro `portrait: "false"` por `portrait: "true"`. Asimismo, puedes cambiar `size: "letter"` por `size: "A4"` según los estándares de impresión de tu oficina. 
+En el objeto de configuración del script, cambia el parámetro `portrait: "false"` por `portrait: "true"`. Asimismo, puedes cambiar `size: "letter"` por `size: "A4"` según los estándares de impresión de tu oficina.

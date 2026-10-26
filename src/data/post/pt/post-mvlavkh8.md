@@ -8,6 +8,7 @@ tags: ["Excel", "ChatGPT", "Produtividade", "Automacao"]
 theme: "Teal Matrix Digital"
 ---
 
+## 1. Situação de emergência e gargalo crítico no escritório
 
 Eram exatamente quatro para as cinco da tarde em um escritório corporativo na Avenida Paulista em São Paulo, e o clima estava tenso. Precisávamos enviar urgentemente um memorando com a base de dados de clientes consolidada para a diretoria, mas meu colega de equipe estava travado. Ele havia herdado um arquivo de planilha onde a coluna de endereço e telefone estava completamente mesclada em uma única célula por linha, e para piorar, o arquivo estava com uma proteção antiga de planilha com senha que ninguém na sala lembrava. Como a senha estava perdida, o recurso nativo de "Texto para Colunas" do Excel simplesmente exibia um aviso de erro informando que as células continham fórmulas protegidas ou estavam bloqueadas.
 

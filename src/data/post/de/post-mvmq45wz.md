@@ -37,7 +37,7 @@ Nutzen Sie einen etablierten Web-Scraper-Dienst wie *Browse AI* oder *Apify*, de
 
 1. Erstellen Sie einen kostenlosen Account bei einem Cloud-Scraping-Anbieter.
 
-2. Wählen Sie die Vorlage für das **Amazon Product Scraper** Tool aus.
+2. Wählen Sie die Vorlage für das **Amazon Product Scraper**Tool aus.
 
 3. Fügen Sie die URLs der gewünschten Konkurrenzprodukte in das Eingabefeld ein.
 
@@ -46,7 +46,7 @@ Anstatt die Daten täglich manuell als CSV herunterzuladen, verknüpfen wir den 
 
 1. Öffnen Sie Ihre Google Sheets Zieltabelle im Browser.
 
-2. Gehen Sie im Scraper-Dashboard auf den Reiter **Integrations** und wählen Sie **Google Sheets** aus.
+2. Gehen Sie im Scraper-Dashboard auf den Reiter**Integrations**und wählen Sie**Google Sheets**aus.
 
 3. Melden Sie sich mit Ihrem Google-Konto an und erlauben Sie den Zugriff.
 
@@ -55,9 +55,9 @@ Anstatt die Daten täglich manuell als CSV herunterzuladen, verknüpfen wir den 
 ### Schritt 3: Den täglichen Zeitplan (Cron-Job) aktivieren
 Damit die Daten jeden Morgen pünktlich vor Arbeitsbeginn frisch auf Ihrem Tisch liegen, richten wir eine automatische Ausführung ein.
 
-1. Klicken Sie im Scraper auf **Schedule Task**.
+1. Klicken Sie im Scraper auf**Schedule Task**.
 
-2. Stellen Sie das Intervall auf **Daily** (Ttäglich) und wählen Sie eine Uhrzeit, beispielsweise um 06:00 Uhr morgens (vor dem ersten Kaffeetrinken im Büro).
+2. Stellen Sie das Intervall auf**Daily** (Ttäglich) und wählen Sie eine Uhrzeit, beispielsweise um 06:00 Uhr morgens (vor dem ersten Kaffeetrinken im Büro).
 
 3. Speichern Sie die Einstellungen. Ab sofort zieht das System die Daten im Hintergrund.
 
@@ -76,14 +76,14 @@ Damit Ihr tägliches Preis-Monitoring reibungslos funktioniert und Sie keine bö
 
 ## 5. Häufig gestellte Fragen (FAQ)
 
-Q: Was passiert, wenn Amazon die Produktstruktur ändert und der Scraper keine Preise mehr findet?
+**Q:** Was passiert, wenn Amazon die Produktstruktur ändert und der Scraper keine Preise mehr findet?
 
-A: Die meisten modernen No-Code-Scraper nutzen KI-gestützte Erkennung, um sich an kleinere Layout-Änderungen anzupassen. Sollte dennoch ein Fehler auftreten, erhalten Sie in der Regel eine E-Mail-Benachrichtigung und können das Template im Dashboard mit wenigen Klicks aktualisieren.
+**A:** Die meisten modernen No-Code-Scraper nutzen KI-gestützte Erkennung, um sich an kleinere Layout-Änderungen anzupassen. Sollte dennoch ein Fehler auftreten, erhalten Sie in der Regel eine E-Mail-Benachrichtigung und können das Template im Dashboard mit wenigen Klicks aktualisieren.
 
-Q: Ist diese Art von Preis-Tracking rechtlich zulässig?
+**Q:** Ist diese Art von Preis-Tracking rechtlich zulässig?
 
-A: Ja, das Abgreifen öffentlich zugänglicher Preisinformationen zu Markt- und Wettbewerbsanalysen (Web-Scraping public data) ist im geschäftlichen Rahmen üblich und rechtlich zulässig, solange keine personenbezogenen Daten oder passwortgeschützten Bereiche betroffen sind.
+**A:** Ja, das Abgreifen öffentlich zugänglicher Preisinformationen zu Markt- und Wettbewerbsanalysen (Web-Scraping public data) ist im geschäftlichen Rahmen üblich und rechtlich zulässig, solange keine personenbezogenen Daten oder passwortgeschützten Bereiche betroffen sind.
 
-Q: Kann ich die Daten auch in ein Microsoft Excel Sheet statt in Google Sheets senden?
+**Q:** Kann ich die Daten auch in ein Microsoft Excel Sheet statt in Google Sheets senden?
 
-A: Absolut. Die meisten Cloud-Scraper bieten neben Google Sheets auch direkte Integrationen für Microsoft OneDrive (Excel) oder Webhooks an, über die Sie die Daten via Power Automate in Ihre lokalen Systeme spiegeln können.
+**A:** Absolut. Die meisten Cloud-Scraper bieten neben Google Sheets auch direkte Integrationen für Microsoft OneDrive (Excel) oder Webhooks an, über die Sie die Daten via Power Automate in Ihre lokalen Systeme spiegeln können.

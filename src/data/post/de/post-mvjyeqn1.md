@@ -73,16 +73,16 @@ Um sicherzustellen, dass bei der nächsten Betriebsprüfung oder dem internen Au
 <strong>Profi-Tipp für den Alltag:</strong> Nutzen Sie die Funktion <strong>Daten > Datenüberprüfung</strong>, um Fehleingaben bei Start- und Endzeiten von vornherein auszuschließen. So verhindern Sie, dass Mitarbeiter versehentlich Zeiten außerhalb des gültigen 24-Stunden-Formats eingeben.
 </div>
 
-## 5. Häufig gestellte Fragen (FAQ) (FAQ)
+## 5. Häufig gestellte Fragen (FAQ)
 
-Q1. Was mache ich, wenn eine Schicht über Mitternacht hinausgeht und Excel ein negatives Ergebnis anzeigt?
+**Q1.** Was mache ich, wenn eine Schicht über Mitternacht hinausgeht und Excel ein negatives Ergebnis anzeigt?
 
-A1. Wenn eine Arbeitszeit über Mitternacht geht (z. B. Start um 22:00 Uhr, Ende um 06:00 Uhr am nächsten Tag), erkennt Excel das ohne Datum nicht richtig. Ändern Sie Ihre Formel einfach ab, indem Sie den Datumswechsel mit einbeziehen: `=((C2<B2)+C2-B2)*24`. Damit rechnet Excel automatisch den Tageswechsel korrekt hinzu.
+**A1.** Wenn eine Arbeitszeit über Mitternacht geht (z. B. Start um 22:00 Uhr, Ende um 06:00 Uhr am nächsten Tag), erkennt Excel das ohne Datum nicht richtig. Ändern Sie Ihre Formel einfach ab, indem Sie den Datumswechsel mit einbeziehen: `=((C2<B2)+C2-B2)*24`. Damit rechnet Excel automatisch den Tageswechsel korrekt hinzu.
 
-Q2. Kann ich diesen Workflow direkt in Microsoft Copilot für Excel integrieren?
+**Q2.** Kann ich diesen Workflow direkt in Microsoft Copilot für Excel integrieren?
 
-A2.Ja, absolut. Wenn Sie Microsoft 365 Copilot nutzen, können Sie die Tabelle direkt im Copilot-Chat markieren und eingeben: "Füge eine Spalte für Überstunden hinzu, die alle Stunden über 8 Stunden pro Tag separat ausweist und an die HR-Abteilung meldet." Der Copilot generiert die Spalte und wendet die Formel eigenständig an.
+**A2.**Ja, absolut. Wenn Sie Microsoft 365 Copilot nutzen, können Sie die Tabelle direkt im Copilot-Chat markieren und eingeben: "Füge eine Spalte für Überstunden hinzu, die alle Stunden über 8 Stunden pro Tag separat ausweist und an die HR-Abteilung meldet." Der Copilot generiert die Spalte und wendet die Formel eigenständig an.
 
-Q3. Wie schütze ich das Excel-Masterfile vor erneutem Überschreiben durch Automatisierungen?
+**Q3.** Wie schütze ich das Excel-Masterfile vor erneutem Überschreiben durch Automatisierungen?
 
-A3.Vergeben Sie im Dateimanager immer Schreibschutz-Attribute für die Masterdatei oder nutzen Sie in Excel den PfadDatei > Informationen > Arbeitsmappe schützen, um ein Passwort für Änderungen zu hinterlegen. Automatisierte Skripte sollten niemals direkt auf das Master-File schreiben, sondern immer eine datierte Arbeitskopie in einem separaten Export-Ordner erstellen.
+**A3.**Vergeben Sie im Dateimanager immer Schreibschutz-Attribute für die Masterdatei oder nutzen Sie in Excel den PfadDatei > Informationen > Arbeitsmappe schützen, um ein Passwort für Änderungen zu hinterlegen. Automatisierte Skripte sollten niemals direkt auf das Master-File schreiben, sondern immer eine datierte Arbeitskopie in einem separaten Export-Ordner erstellen.

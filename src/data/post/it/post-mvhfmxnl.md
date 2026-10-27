@@ -19,7 +19,7 @@ Erano le 17:30 di un giovedì piovoso nel nostro ufficio a Milano, e la tensione
 <strong>Sintomo:</strong> Impossibilità di calcolare trend di magazzino stagionali con le normali formule di Excel.<br>
 <strong>Soluzione Rapid
 
-a:</strong> Integrazione di prompt AI strutturati per l'analisi predittiva dei dati storici di vendita. </div>
+**a:**</strong> Integrazione di prompt AI strutturati per l'analisi predittiva dei dati storici di vendita. </div>
 
 ## Perchè i Metodi Tradizionali di Previsione Falliscono
 

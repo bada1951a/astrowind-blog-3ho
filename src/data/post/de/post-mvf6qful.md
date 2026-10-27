@@ -53,7 +53,7 @@ Kopieren Sie das von Gemini generierte CSV-Ergebnis. Gehen Sie in Google Sheets 
 <strong>Pro-Tipp für den Datenschutz:</strong> Wenn Sie mit vertraulichen Finanzdaten oder echten Kundennamen arbeiten, ersetzen Sie kritische Namen vor dem Prompten durch Platzhalter wie "Kunde_A", "Kunde_B" oder nutzen Sie die Enterprise-Versionen mit garantierten Datenschutz-Richtlinien.
 </div>
 
-## 5. Häufig gestellte Fragen (FAQ) (FAQ)
+## 5. Häufig gestellte Fragen (FAQ)
 
 1. Was mache ich, wenn Gemini bei sehr großen Tabellen (> 5.000 Zeilen) das Token-Limit erreicht?
 Teilen Sie Ihre Daten in handliche Häppchen von je 1.000 bis 1.500 Zeilen auf. Arbeiten Sie sich Block für Block durch die Tabelle und fügen Sie die bereinigten Ergebnisse am Ende in einem Master-Sheet zusammen.

@@ -24,11 +24,11 @@ Mis compañeros empezaron a sudar frío pensando en scripts de Python, APIs comp
 <strong>Diagnóstico técnico:</strong> El cuello de botella no es la falta de datos, sino la fricción entre la estructura dinámica de las páginas web y las limitaciones de las hojas de cálculo estáticas.
 </div>
 
-1. **Bloqueos anti-scraping de Amazon:** Las páginas de comercio electrónico cambian sus selectores HTML constantemente y bloquean peticiones masivas mediante IPs repetitivas, haciendo que las macros caseras fallen al tercer día.
+1. **Bloqueos anti-scraping de Amazon:**Las páginas de comercio electrónico cambian sus selectores HTML constantemente y bloquean peticiones masivas mediante IPs repetitivas, haciendo que las macros caseras fallen al tercer día.
 
-2. **Limitaciones de las funciones nativas:** Usar funciones básicas como **IMPORTXML** en Google Sheets suele devolver errores de tipo `#N/A` o `#REF!` debido a la protección contra bots que implementan los grandes marketplaces.
+2.**Limitaciones de las funciones nativas:**Usar funciones básicas como**IMPORTXML**en Google Sheets suele devolver errores de tipo `#N/A` o `#REF!` debido a la protección contra bots que implementan los grandes marketplaces.
 
-3. **Falta de persistencia temporal:** Incluso cuando logras extraer un precio puntual, Google Sheets no guarda un registro histórico diario por defecto, lo que impide generar gráficos de evolución sin bases de datos externas.
+3.**Falta de persistencia temporal:** Incluso cuando logras extraer un precio puntual, Google Sheets no guarda un registro histórico diario por defecto, lo que impide generar gráficos de evolución sin bases de datos externas.
 
 ## 3. Solución práctica paso a paso para optimizar el flujo
 
@@ -40,7 +40,7 @@ Abre una hoja de cálculo nueva en Google Workspace y prepara las columnas bási
 ```text
 Columna
 
-A: Producto
+**A:** Producto
 Columna B: ASIN / Código de Amazon
 Columna C: URL de la página
 Columna D: Precio Actual
@@ -58,9 +58,9 @@ En lugar de arriesgarte con fórmulas masivas, utiliza una consulta XPath espec�
 
 ### Paso 3: Automatizar la ejecución diaria sin programadores
 Para que el archivo se actualice solo cada mañana a las 8:00 antes de que llegue el director:
-1. Ve al menú superior de Google Sheets y haz clic en **Extensiones > Apps Script** (tranquilo, no escribiremos código, solo usaremos una función predefinida de refresco).
+1. Ve al menú superior de Google Sheets y haz clic en **Extensiones > Apps Script**(tranquilo, no escribiremos código, solo usaremos una función predefinida de refresco).
 
-2. O mejor aún, utiliza la automatización integrada de Google configurando una regla de actualización de datos importados en **Datos > Actualización de datos > Conexiones**.
+2. O mejor aún, utiliza la automatización integrada de Google configurando una regla de actualización de datos importados en**Datos > Actualización de datos > Conexiones**.
 
 3. Configura el activador temporal nativo para que guarde una copia del valor del precio en otra pestaña a modo de registro histórico (*Appended Rows*).
 
@@ -74,14 +74,14 @@ Asegúrate de mantener siempre una copia de seguridad estática de los datos de 
 
 ## 5. Preguntas Frecuentes (FAQ)
 
-Q: ¿Qué hago si la fórmula IMPORTXML me devuelve continuamente el error #N/A?
+**Q:** ¿Qué hago si la fórmula IMPORTXML me devuelve continuamente el error #N/A?
 
-A: Significa que Amazon ha detectado la petición como tráfico automatizado. La solución rápida sin código es utilizar un complemento de navegador de scraping visual en la nube o cambiar temporalmente la URL por un enlace acortado del producto.
+**A:** Significa que Amazon ha detectado la petición como tráfico automatizado. La solución rápida sin código es utilizar un complemento de navegador de scraping visual en la nube o cambiar temporalmente la URL por un enlace acortado del producto.
 
-Q: ¿Puedo recibir una alerta en mi correo si el precio de la competencia baja un 10%?
+**Q:** ¿Puedo recibir una alerta en mi correo si el precio de la competencia baja un 10%?
 
-A: Sí. Puedes combinar tu Google Sheet resultante con herramientas nativas de alertas de Google o reglas condicionales conectadas directamente a notificaciones por correo electrónico sin necesidad de servidores externos.
+**A:** Sí. Puedes combinar tu Google Sheet resultante con herramientas nativas de alertas de Google o reglas condicionales conectadas directamente a notificaciones por correo electrónico sin necesidad de servidores externos.
 
-Q: ¿Es legal realizar este monitoreo diario de precios públicos?
+**Q:** ¿Es legal realizar este monitoreo diario de precios públicos?
 
-A: Sí, extraer información pública de precios minoristas para análisis de mercado interno y benchmarking competitivo es una práctica estándar en el sector retail, siempre y cuando no satures los servidores con ataques de denegación de servicio ni utilices los datos para prácticas de competencia desleal.
+**A:** Sí, extraer información pública de precios minoristas para análisis de mercado interno y benchmarking competitivo es una práctica estándar en el sector retail, siempre y cuando no satures los servidores con ataques de denegación de servicio ni utilices los datos para prácticas de competencia desleal.

@@ -12,7 +12,7 @@ theme: "Cobalt Enterprise Lab"
 
 Eram 18h30 de uma sexta-feira típica de fechamento de mês no nosso escritório na Faria Lima, em São Paulo. A caixa de entrada não parav
 
-a: planilhas de vendas de cinco filiais diferentes chegavam com formatações completamente caóticas. Colunas trocadas, nomes de produtos abreviados de formas distintas e arquivos salvos em formatos variados. O diretor comercial já havia mandado a mensagem clássica no Teams: "Pessoal, preciso da consolidação geral na mesa da diretoria até as 9h de segunda-feira". 
+**a:** planilhas de vendas de cinco filiais diferentes chegavam com formatações completamente caóticas. Colunas trocadas, nomes de produtos abreviados de formas distintas e arquivos salvos em formatos variados. O diretor comercial já havia mandado a mensagem clássica no Teams: "Pessoal, preciso da consolidação geral na mesa da diretoria até as 9h de segunda-feira". 
 
 Foi nesse exato momento de desespero, com o dedo já dormente de tanto usar Ctrl+C e Ctrl+V, que decidi parar de enxugar gelo. Se você também passa horas preciosas do seu mês juntando dados manualmente, este guia prático é para você. Vamos transformar essa rotina estressante em um processo totalmente automatizado usando uma ferramenta que já está instalada no seu Excel: o Power Query.
 
@@ -30,7 +30,7 @@ Antes de irmos direto à solução, vale a pena entender os três vilões silenc
 
 1. A Ilusão da Planilha Padronizad
 
-a: Cada gerente regional preenche o relatório do seu jeito. Um usa "Qtd", o outro "Quantidade", e o terceiro apenas "Qt". O Excel padrão sofre para juntar isso sem fórmulas complexas.
+**a:** Cada gerente regional preenche o relatório do seu jeito. Um usa "Qtd", o outro "Quantidade", e o terceiro apenas "Qt". O Excel padrão sofre para juntar isso sem fórmulas complexas.
 
 2. O Risco do Fator Humano: Copiar dados de dez abas diferentes e colar em uma planilha-mãe é um convite aberto a erros de deslocamento de linhas que passam despercebidos até a apresentação para a diretoria.
 
@@ -77,7 +77,7 @@ Quando tudo estiver limpo e organizado:
 
 ### Avisos de Especialist
 
-a: Cuidados Essenciais
+**a:** Cuidados Essenciais
 
 <div style="border-left: 4px solid #1e40af; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Atenção à Segurança de Dados:</strong> O Power Query memoriza o caminho exato dos arquivos no seu computador ou rede. Se você alterar o nome da pasta de destino ou mover os arquivos originais para outro diretório, a conexão pode quebrar ("Erro de Fonte de Dados"). Mantenha uma estrutura de pastas padronizada e imutável.

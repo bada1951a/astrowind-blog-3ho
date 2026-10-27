@@ -68,7 +68,7 @@ Sauvegardez toujours une copie brute de votre fichier d'origine (onglet "Brut_Ba
 
 ---
 
-### Foire Aux Questions (FAQ)
+## 5. Foire Aux Questions (FAQ)
 
 1. Comment l'IA gère-t-elle les prénoms composés comme "Jean-Pierre" ou "Marie-Claire" ?
 Les LLM modernes comprennent très bien la structure des prénoms français. Si vous leur demandez d'isoler le prénom à partir d'une adresse type `jean.pierre.dupont@entreprise.fr`, l'IA générera une formule ou un script qui préserve le tiret tout en mettant la bonne majuscule ("Jean-Pierre").
@@ -76,5 +76,6 @@ Les LLM modernes comprennent très bien la structure des prénoms français. Si 
 2. Que faire si mon tableau contient plus de 50 000 lignes ?
 Excel risque de ralentir considérablement si vous utilisez des centaines de lignes de formules complexes. Dans ce cas, demandez à l'IA de vous écrire un court script VBA (Macro) ou un script Python que vous pourrez exécuter directement dans l'éditeur de code d'Excel pour traiter le tout en moins de deux secondes.
 
-3. Puis-je automatiser cette tâche chaque semaine ?
-Absolument. Si vos sources de données proviennent du même CRM avec la même structure chaotique, enregistrez les étapes de nettoyage dans Power Query (via l'onglet *Données*). Une fois configuré, un simple clic sur "Actualiser" nettoiera vos nouveaux fichiers automatiquement, sans réutiliser l'IA à chaque fois.
+**Q.** Puis-je automatiser cette tâche chaque semaine ?
+
+**A.** Absolument. Si vos sources de données proviennent du même CRM avec la même structure chaotique, enregistrez les étapes de nettoyage dans Power Query (via l'onglet *Données*). Une fois configuré, un simple clic sur "Actualiser" nettoiera vos nouveaux fichiers automatiquement, sans réutiliser l'IA à chaque fois.

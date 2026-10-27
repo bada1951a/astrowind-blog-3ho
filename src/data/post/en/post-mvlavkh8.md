@@ -87,14 +87,14 @@ PRO-TIP: Always create an isolated local backup copy of your master file before 
 
 ## 5. Frequently Asked Questions (FAQ)
 
-Q1. What if my address strings do not have a consistent separator like a dash before the phone number?
+**Q1.** What if my address strings do not have a consistent separator like a dash before the phone number?
 
-A1. Ask ChatGPT to write a custom formula or a quick VBA macro tailored to regular expressions that identify standard 10-digit phone number patterns regardless of preceding punctuation.
+**A1.** Ask ChatGPT to write a custom formula or a quick VBA macro tailored to regular expressions that identify standard 10-digit phone number patterns regardless of preceding punctuation.
 
-Q2. Why is the Edit Links option still greyed out in my Excel ribbon?
+**Q2.** Why is the Edit Links option still greyed out in my Excel ribbon?
 
-A2. This usually happens if your workbook is currently in Protected View or Sheet Protection is enabled. Click "Enable Editing" at the top of the window, or go to Review > Unprotect Sheet before managing links.
+**A2.** This usually happens if your workbook is currently in Protected View or Sheet Protection is enabled. Click "Enable Editing" at the top of the window, or go to Review > Unprotect Sheet before managing links.
 
-Q3. Can I automate this entire process so I do not have to write formulas manually every week?
+**Q3.** Can I automate this entire process so I do not have to write formulas manually every week?
 
-A3. Yes. You can record a simple Excel Macro or use Power Query to automatically filter out external path dependencies and apply transformation steps upon every file refresh.
+**A3.** Yes. You can record a simple Excel Macro or use Power Query to automatically filter out external path dependencies and apply transformation steps upon every file refresh.

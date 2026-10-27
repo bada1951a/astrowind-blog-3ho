@@ -24,11 +24,11 @@ Um Zeit zu sparen, wollte ich mir von einer herkömmlichen KI-Abfrage eine kompl
 
 Warum scheitern die meisten Büroangestellten und Analysten daran, große regulatorische PDFs effizient mit KI zu verarbeiten? Hier sind die drei Hauptursachen:
 
-1. **Fehlendes Kontextfenster und Informationsfragmentierung:** Das Dokument wird in zu kleine Stücke gehackt, wodurch Querverweise zwischen Kapitel 2 und Kapitel 12 verloren gehen.
+1. **Fehlendes Kontextfenster und Informationsfragmentierung:**Das Dokument wird in zu kleine Stücke gehackt, wodurch Querverweise zwischen Kapitel 2 und Kapitel 12 verloren gehen.
 
-2. **Unpräzise Prompts ohne Rollenzuweisung:** Die KI weiß nicht, ob sie für einen Rechtsanwalt, einen Wirtschaftsprüfer oder einen genervten Sachbearbeiter schreibt.
+2.**Unpräzise Prompts ohne Rollenzuweisung:**Die KI weiß nicht, ob sie für einen Rechtsanwalt, einen Wirtschaftsprüfer oder einen genervten Sachbearbeiter schreibt.
 
-3. **Mangelnde Strukturierung der Ausgabe:** Statt klarer Handlungsempfehlungen liefert das Tool oft nur oberflächliche Zusammenfassungen, die für offizielle Berichte unbrauchbar sind.
+3.**Mangelnde Strukturierung der Ausgabe:** Statt klarer Handlungsempfehlungen liefert das Tool oft nur oberflächliche Zusammenfassungen, die für offizielle Berichte unbrauchbar sind.
 
 ## 3. Schritt-für-Schritt-Anleitung zur Effizienzsteigerung
 
@@ -67,14 +67,14 @@ Als Automatisierungs-Experte rate ich Ihnen im Umgang mit sensiblen Unternehmens
 
 ## 5. Häufig gestellte Fragen (FAQ)
 
-Q: Kann Claude 3.5 Sonnet wirklich 150 Seiten auf einmal lesen?
+**Q:** Kann Claude 3.5 Sonnet wirklich 150 Seiten auf einmal lesen?
 
-A: Ja, das Modell verfügt über ein extrem großes Kontextfenster, das selbst umfangreiche Jahresberichte oder regulatorische Richtlinien problemlos in einem Durchgang verarbeitet.
+**A:** Ja, das Modell verfügt über ein extrem großes Kontextfenster, das selbst umfangreiche Jahresberichte oder regulatorische Richtlinien problemlos in einem Durchgang verarbeitet.
 
-Q: Was mache ich, wenn das PDF passwortgeschützt ist?
+**Q:** Was mache ich, wenn das PDF passwortgeschützt ist?
 
-A: Gesetzlich oder technisch geschützte PDFs müssen vor dem Upload mit einem offiziellen Entsorgungstool oder PDF-Editor von ihrem Passwortschutz befreit werden, da die KI sonst keinen Zugriff erhält.
+**A:** Gesetzlich oder technisch geschützte PDFs müssen vor dem Upload mit einem offiziellen Entsorgungstool oder PDF-Editor von ihrem Passwortschutz befreit werden, da die KI sonst keinen Zugriff erhält.
 
-Q: Wie verhindere ich, dass die KI Daten erfindet (Halluzinationen)?
+**Q:** Wie verhindere ich, dass die KI Daten erfindet (Halluzinationen)?
 
-A: Ergänzen Sie Ihren Prompt immer mit dem Satz: "Falls eine Information nicht im Dokument steht, antworte explizit, dass sie im Text nicht enthalten ist." Das reduziert Spekulationen auf nahezu null.
+**A:** Ergänzen Sie Ihren Prompt immer mit dem Satz: "Falls eine Information nicht im Dokument steht, antworte explizit, dass sie im Text nicht enthalten ist." Das reduziert Spekulationen auf nahezu null.

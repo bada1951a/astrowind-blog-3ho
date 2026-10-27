@@ -20,11 +20,11 @@ El verdadero problema no era solo la extensión, sino la pesadilla técnica con 
 
 ¿Por qué fallan los resúmenes tradicionales en herramientas de IA cuando tratamos con documentos normativos masivos? Tras varios intentos fallidos con herramientas convencionales, identifiqué tres causas raíz técnicas que arruinan este tipo de flujos de trabajo en entornos corporativos:
 
-1. **Límites de tokens y compresión ciega:** Las herramientas estándar intentan procesar las 150 páginas de golpe, saturando la ventana de contexto. Como resultado, la IA omite secciones enteras de anexos legales o genera un resumen tan superficial que resulta inútil para la dirección.
+1. **Límites de tokens y compresión ciega:**Las herramientas estándar intentan procesar las 150 páginas de golpe, saturando la ventana de contexto. Como resultado, la IA omite secciones enteras de anexos legales o genera un resumen tan superficial que resulta inútil para la dirección.
 
-2. **Caracteres fantasma y codificación corrupta:** Al extraer texto de PDFs escaneados o bases de datos corporativas, se arrastran caracteres de control ocultos, retornos de carro incompatibles y espacios dobles invisibles que confunden al modelo e impiden una lectura estructurada.
+2.**Caracteres fantasma y codificación corrupta:**Al extraer texto de PDFs escaneados o bases de datos corporativas, se arrastran caracteres de control ocultos, retornos de carro incompatibles y espacios dobles invisibles que confunden al modelo e impiden una lectura estructurada.
 
-3. **Falta de contexto estructurado:** Sin un prompt de rol específico y una jerarquía de extracción clara, la IA trata una normativa legal igual que una novela, ignorando plazos, sanciones y obligaciones de cumplimiento que es exactamente lo que busca el negocio.
+3.**Falta de contexto estructurado:** Sin un prompt de rol específico y una jerarquía de extracción clara, la IA trata una normativa legal igual que una novela, ignorando plazos, sanciones y obligaciones de cumplimiento que es exactamente lo que busca el negocio.
 
 <div style="border-left: 4px solid #a855f7; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Consejo Pro:</strong> Claude 3.5 Sonnet destaca sobre otros modelos gracias a su ventana de contexto extendida y su capacidad superior para analizar documentos densos respetando la estructura legal original, siempre que le demos las instrucciones de limpieza adecuadas.
@@ -74,20 +74,20 @@ Ignora el contenido introductorio y céntrate exclusivamente en apartados vincul
 
 Cuando manejes documentación confidencial o regulatoria de clientes en el entorno corporativo, ten en cuenta estas precauciones fundamentales:
 
-- **Privacidad de datos:** Asegúrate de utilizar planes empresariales o configuraciones donde las interacciones con la IA no se utilicen para entrenar modelos públicos. Revisa siempre las políticas de privacidad de tu departamento de IT.
-- **Verificación cruzada:** Aunque Claude 3.5 Sonnet tiene un margen de error mínimo, utiliza siempre la función de búsqueda dentro del chat (Ctrl+F o Cmd+F) para contrastar los artículos y normativas clave citados en el resumen con el documento original.
-- **Respaldos locales:** Guarda siempre el prompt utilizado y el desglose de resultados en una carpeta compartida segura de tu equipo para auditorías internas futuras.
+- **Privacidad de datos:**Asegúrate de utilizar planes empresariales o configuraciones donde las interacciones con la IA no se utilicen para entrenar modelos públicos. Revisa siempre las políticas de privacidad de tu departamento de IT.
+-**Verificación cruzada:**Aunque Claude 3.5 Sonnet tiene un margen de error mínimo, utiliza siempre la función de búsqueda dentro del chat (Ctrl+F o Cmd+F) para contrastar los artículos y normativas clave citados en el resumen con el documento original.
+-**Respaldos locales:** Guarda siempre el prompt utilizado y el desglose de resultados en una carpeta compartida segura de tu equipo para auditorías internas futuras.
 
 ## 5. Preguntas Frecuentes (FAQ)
 
-Q: ¿Qué pasa si el PDF de la normativa está escaneado como imagen y Claude no puede leerlo directamente?
+**Q:** ¿Qué pasa si el PDF de la normativa está escaneado como imagen y Claude no puede leerlo directamente?
 
-A: Si el documento es una imagen escaneada sin capa de texto seleccionable, debes pasar el PDF previamente por una herramienta de Reconocimiento Óptico de Caracteres (OCR) como Adobe Acrobat Pro o herramientas internas aprobadas por tu departamento de sistemas antes de subirlo.
+**A:** Si el documento es una imagen escaneada sin capa de texto seleccionable, debes pasar el PDF previamente por una herramienta de Reconocimiento Óptico de Caracteres (OCR) como Adobe Acrobat Pro o herramientas internas aprobadas por tu departamento de sistemas antes de subirlo.
 
-Q: ¿Puedo usar este mismo método con otros modelos como GPT-4o?
+**Q:** ¿Puedo usar este mismo método con otros modelos como GPT-4o?
 
-A: Sí, el prompt funciona de manera similar, pero Claude 3.5 Sonnet destaca notablemente en la retención de detalles complejos y en la estructura de datos tabulares largos sin sufrir alucinaciones en documentos legales densos.
+**A:** Sí, el prompt funciona de manera similar, pero Claude 3.5 Sonnet destaca notablemente en la retención de detalles complejos y en la estructura de datos tabulares largos sin sufrir alucinaciones en documentos legales densos.
 
-Q: ¿Existe algún límite estricto en el tamaño del PDF que puedo subir?
+**Q:** ¿Existe algún límite estricto en el tamaño del PDF que puedo subir?
 
-A: Claude 3.5 Sonnet acepta archivos de hasta varios cientos de megabytes y documentos que superan las 200 páginas. Si tu documento supera ese límite, te recomendamos dividirlo por capítulos clave utilizando herramientas de gestión de PDFs antes de realizar la consulta.
+**A:** Claude 3.5 Sonnet acepta archivos de hasta varios cientos de megabytes y documentos que superan las 200 páginas. Si tu documento supera ese límite, te recomendamos dividirlo por capítulos clave utilizando herramientas de gestión de PDFs antes de realizar la consulta.

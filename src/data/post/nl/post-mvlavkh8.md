@@ -46,14 +46,14 @@ Belangrijke waarschuwing: Zorg ervoor dat je bij het uploaden van datasets naar 
 </div>
 ## 5. Veelgestelde Vragen (FAQ)
 
-Q1. Wat kan ik doen als de formule van ChatGPT toch een foutmelding geeft in de oude Excel-versie?
+**Q1.** Wat kan ik doen als de formule van ChatGPT toch een foutmelding geeft in de oude Excel-versie?
 
-A1. Vraag ChatGPT specifiek om de formule aan te passen voor jouw taalinstelling van Excel. Nederlandse versies van Excel vereisen namelijk puntkomma's (;) in plaats van komma's (,) als argumentenscheiding, en Nederlandse functienamen zoals LINKS() in plaats van LEFT().
+**A1.** Vraag ChatGPT specifiek om de formule aan te passen voor jouw taalinstelling van Excel. Nederlandse versies van Excel vereisen namelijk puntkomma's (;) in plaats van komma's (,) als argumentenscheiding, en Nederlandse functienamen zoals LINKS() in plaats van LEFT().
 
-Q2. Kan ik ChatGPT ook gebruiken om een VBA-macro te schrijven voor dit probleem?
+**Q2.** Kan ik ChatGPT ook gebruiken om een VBA-macro te schrijven voor dit probleem?
 
-A2. Zeker weten. Als je een bestand hebt met tienduizenden rijen, kun je ChatGPT vragen om een eenvoudige VBA-macro te schrijven die de opsplitsing in één keer uitvoert via een knop in je lint. Let er wel op dat je collega's dan het bestand opslaan als een macro-ingeschakeld werkblad (.xlsm).
+**A2.** Zeker weten. Als je een bestand hebt met tienduizenden rijen, kun je ChatGPT vragen om een eenvoudige VBA-macro te schrijven die de opsplitsing in één keer uitvoert via een knop in je lint. Let er wel op dat je collega's dan het bestand opslaan als een macro-ingeschakeld werkblad (.xlsm).
 
-Q3. Is het veiliger om Flash Fill te gebruiken in plaats van AI-formules?
+**Q3.** Is het veiliger om Flash Fill te gebruiken in plaats van AI-formules?
 
-A3. Flash Fill is fantastisch voor eenmalige, handmatige acties en werkt volledig binnen Excel zonder internetverbinding of data-sharing. AI-formules zijn echter handiger als je deze logica wilt automatiseren in een terugkerend maandelijks rapport.
+**A3.** Flash Fill is fantastisch voor eenmalige, handmatige acties en werkt volledig binnen Excel zonder internetverbinding of data-sharing. AI-formules zijn echter handiger als je deze logica wilt automatiseren in een terugkerend maandelijks rapport.

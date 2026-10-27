@@ -49,9 +49,9 @@ Manfaatkan panel AI internal Google Sheets untuk mendapatkan rekomendasi grafik 
 Agar grafik Anda tidak sekadar statis tapi bisa diubah-ubah variabelnya sesuai kebutuhan rapat:
 1. Buat sel kontrol interaktif, misalnya di sel F2, buat menu dropdown untuk memilih skenario (Skenario
 
-A: Normal, Skenario B: Ekspansi). Carany
+**A:** Normal, Skenario B: Ekspansi). Carany
 
-a: klik kanan sel F2 > pilih Data validation > pilih jenis aturan Dropdown (from a range) atau masukkan item kustom.
+**a:** klik kanan sel F2 > pilih Data validation > pilih jenis aturan Dropdown (from a range) atau masukkan item kustom.
 
 2. Gunakan rumus logika sederhana seperti `IFS` atau `CHOOSE` pada tabel utama Anda agar data angka berubah secara dinamis mengikuti pilihan di sel F2.
 

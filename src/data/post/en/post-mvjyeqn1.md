@@ -34,7 +34,7 @@ Before jumping into the fix, let us look at why this frustrating issue happens s
 
 ---
 
-## 3. Step-by-Step Practical Productivity Resolution Fixing and Automating Working Hours
+## 3. Step-by-Step Practical Resolution Practical Productivity Resolution Fixing and Automating Working Hours
 
 Instead of manual trial-and-error, here is how you can leverage a quick AI formula setup or a clean native workflow to fix the issue permanently and calculate your working hours and overtime seamlessly.
 
@@ -44,13 +44,13 @@ If you use Copilot or ChatGPT alongside your spreadsheet, stop trying to remembe
 ```text
 I have a column of working hours in Excel stored as text strings with hidden characters, and SUM results in zero. Give me a clean, robust Excel formula using VALUE or SUBSTITUTE to convert range
 
-A2:A100 into actual numbers, and calculate total overtime over 40 hours.
+**A2:**A100 into actual numbers, and calculate total overtime over 40 hours.
 ```
 
 #### Step 2: Apply the Battle-Tested Formula
 The AI will typically hand you a bulletproof array or helper column formula. To fix text numbers instantly without touching the original column, create a adjacent helper column (e.g., Column B) and paste this clean formul
 
-a:
+**a:**
 
 ```excel
 =VALUE(CLEAN(TRIM(A2)))
@@ -61,7 +61,7 @@ Drag that formula down your dataset. This strips out hidden web spaces, standard
 #### Step 3: Automate Overtime Calculations
 Once your working hours are properly converted to numbers, calculating standard hours and overtime is effortless. Assuming your converted hours are in Column B, use this straightforward logical formul
 
-a:
+**a:**
 
 ```excel
 =IF(B2>40, 40, B2)
@@ -75,7 +75,7 @@ And for your overtime calculation in the adjacent column:
 
 Wrap your final range in a standard `SUM` formul
 
-a: `=SUM(C2:C100)` and watch your totals calculate instantly instead of returning 0.
+**a:** `=SUM(C2:C100)` and watch your totals calculate instantly instead of returning 0.
 
 ---
 
@@ -91,14 +91,14 @@ Always maintain a raw data backup sheet before running global Find & Replace or 
 
 ## 5. Frequently Asked Questions (FAQ)
 
-Q1. Why doesn't changing the cell format from Text to Number fix my SUM formula immediately?
+**Q1.** Why doesn't changing the cell format from Text to Number fix my SUM formula immediately?
 
-A1.Excel only evaluates formatting changes for newly typed data. Existing cells locked in text mode retain their string property until you explicitly force a recalculation, edit the cell individually, or pass them through a conversion function like `VALUE`.
+**A1.**Excel only evaluates formatting changes for newly typed data. Existing cells locked in text mode retain their string property until you explicitly force a recalculation, edit the cell individually, or pass them through a conversion function like `VALUE`.
 
-Q2. Can I fix this entire column at once without creating a helper column?
+**Q2.** Can I fix this entire column at once without creating a helper column?
 
-A2.Yes. Type `1` into any empty cell, copy that cell (`Ctrl+C` or `Cmd+C`), highlight your corrupted text-number range, right-click, selectPaste Special, and chooseMultiply. This forces Excel to convert the entire range into numbers in one swift move, after which you can delete the spare `1`.
+**A2.**Yes. Type `1` into any empty cell, copy that cell (`Ctrl+C` or `Cmd+C`), highlight your corrupted text-number range, right-click, selectPaste Special, and chooseMultiply. This forces Excel to convert the entire range into numbers in one swift move, after which you can delete the spare `1`.
 
-Q3. How do I prevent time-tracking software exports from turning numbers into text in the first place?
+**Q3.** How do I prevent time-tracking software exports from turning numbers into text in the first place?
 
-A3.Instead of double-clicking the CSV file to open it directly in Excel, open a blank workbook first, go to theDatatab, selectFrom Text/CSV, and step through the Power Query import wizard to properly define column data types before loading them into your sheet.
+**A3.**Instead of double-clicking the CSV file to open it directly in Excel, open a blank workbook first, go to theDatatab, selectFrom Text/CSV, and step through the Power Query import wizard to properly define column data types before loading them into your sheet.

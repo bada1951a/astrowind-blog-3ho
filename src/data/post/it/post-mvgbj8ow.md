@@ -19,7 +19,7 @@ Il tutto mentre il mio caffè si raffreddava sulla scrivania e ricevevo notifich
 <div style="border-left: 4px solid #4338ca; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Il focus del sistem
 
-a:</strong> Oggi ti mostrerò esattamente come ho configurato una pipeline di automazione nativa in Google Sheets che converte un determinato intervallo di fogli in un report PDF pulito e lo spedisce automaticamente via email ogni venerdì sera, senza che tu debba muovere un dito.
+**a:**</strong> Oggi ti mostrerò esattamente come ho configurato una pipeline di automazione nativa in Google Sheets che converte un determinato intervallo di fogli in un report PDF pulito e lo spedisce automaticamente via email ogni venerdì sera, senza che tu debba muovere un dito.
 </div>
 
 ## Perché l'invio manuale dei report fallisce (e le 3 cause radice)
@@ -102,7 +102,7 @@ function inviaReportSettimanalePDF() {
 ### Passo 3: Impostare la schedulazione automatica (Trigger)
 Ora che lo script è pronto, dobbiamo fare in modo che si attivi da solo ogni settiman
 
-a:
+**a:**
 1. Nell'editor di Apps Script, clicca sull'icona a forma di orologio (Attivatori) nella barra laterale sinistra.
 
 2. Clicca sul pulsante in basso a destra Aggiungi attivatore.
@@ -113,22 +113,23 @@ a:
 
 5. Scegli la frequenz
 
-a: Timer settimanale, indicando il giorno (es. Venerdì) e la fascia oraria desiderata (es. dalle 17:00 alle 18:00).
+**a:** Timer settimanale, indicando il giorno (es. Venerdì) e la fascia oraria desiderata (es. dalle 17:00 alle 18:00).
 
 6. Clicca su Salva e autorizza l'accesso al tuo account Google quando richiesto.
 
 <div style="border-left: 4px solid #4338ca; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Consiglio di sicurezz
 
-a:</strong> La prima volta che esegui lo script, Google ti avviserà che l'app non è verificata. Clicca su "Avanzate" e poi su "Vai a Untitled project (non sicuro)" — è perfettamente sicuro poiché il codice gira interamente sul tuo account personale ed è stato scritto da te.
+**a:**</strong> La prima volta che esegui lo script, Google ti avviserà che l'app non è verificata. Clicca su "Avanzate" e poi su "Vai a Untitled project (non sicuro)" — è perfettamente sicuro poiché il codice gira interamente sul tuo account personale ed è stato scritto da te.
 </div>
 
 ---
 
 ## Domande Frequenti (FAQ)
 
-1. Posso inviare il PDF a più destinatari contemporaneamente?
-Certamente. Puoi inserire più indirizzi email separati da una virgola nella variabile `destinatario`, ad esempio: `"manager1@azienda. it, manager2@azienda. it"`. In alternativa, puoi creare un piccolo intervallo nel foglio Google (es. la cella A1 di un foglio di configurazione) da cui lo script legge dinamicamente la lista delle email.
+**Q.** Posso inviare il PDF a più destinatari contemporaneamente?
+
+**A.** Certamente. Puoi inserire più indirizzi email separati da una virgola nella variabile `destinatario`, ad esempio: `"manager1@azienda. it, manager2@azienda. it"`. In alternativa, puoi creare un piccolo intervallo nel foglio Google (es. la cella A1 di un foglio di configurazione) da cui lo script legge dinamicamente la lista delle email.
 
 2. Cosa succede se il mio foglio di calcolo ha formule pesanti che impiegano tempo a calcolare?
 Google Sheets calcola le formule in tempo reale prima dell'esecuzione dello script, ma se hai molte importazioni di dati esterne (tramite IMPORTXML o IMPORTRANGE), potresti riscontrare ritardi. Ti consiglio di aggiungere una riga di pausa all'inizio della funzione usando `Utilities.sleep(3000);` per dare il tempo al foglio di aggiornare tutti i valori prima di generare il PDF.

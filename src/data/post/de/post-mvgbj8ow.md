@@ -98,7 +98,7 @@ Damit das Skript nun jeden Freitag vollautomatisch läuft, ohne dass Sie einen F
 
 ---
 
-## 5. Häufig gestellte Fragen (FAQ) (FAQ)
+## 5. Häufig gestellte Fragen (FAQ)
 
 ### Kann ich mehrere Empfänger gleichzeitig in das Skript einbinden?
 Ja, absolut. Sie können die Variable `recipient` einfach als Array definieren oder durch Kommata trennen, zum Beispiel: `var recipient = "vorstand@firma. de, controlling@firma. de";`. Alternativ nutzen Sie die CC- oder BCC-Option in den erweiterten Parametern von `GmailApp.sendEmail`.

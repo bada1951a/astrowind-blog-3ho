@@ -54,7 +54,7 @@ Copiez-collez ce type de prompt directement dans l'outil d'IA de votre tableur :
 <strong>Prompt d'IA recommande pour Excel :</strong><br>
 "Agis en tant que responsable Supply Chain senior. Analyse les donnees de la plage
 
-A1:D1200. Genere une colonne de prevision pour les 3 prochains mois en tenant compte d'une tendance de croissance estimee a 5% et d'une saisonnalite similaire a l'annee passee. Cree la formule de calcul directement dans la cellule E2 sous forme de fonction previsible (PREVISION.ETS) et explique-la-moi en une phrase."
+**A1:**D1200. Genere une colonne de prevision pour les 3 prochains mois en tenant compte d'une tendance de croissance estimee a 5% et d'une saisonnalite similaire a l'annee passee. Cree la formule de calcul directement dans la cellule E2 sous forme de fonction previsible (PREVISION.ETS) et explique-la-moi en une phrase."
 </div>
 
 ### Etape 3 : Integrer et tester la formule generee
@@ -72,13 +72,14 @@ Avant d'envoyer vos fichiers de stocks et de marges commerciales a une IA connec
 
 ---
 
-## Foire Aux Questions (FAQ)
+## 5. Foire Aux Questions (FAQ)
 
 1. Puis-je utiliser cette methode si je n'ai que 3 mois d'historique de ventes ?
 Techniquement oui, mais les algorithmes de prevision de type lissage exponentiel necessitent idealement au moins 12 mois de donnees pour identifier correctement la saisonnalite. Si vous manquez d'historique, demandez a l'IA d'integrer une moyenne sectorielle generaliste en complement.
 
-2. Que faire si la formule renvoie une erreur de type # N/A ?
-Cela provient generalement d'un decalage dans les plages de dates ou de formats de date non reconnus par Excel (par exemple du texte au lieu de valeurs de date numeriques). Utilisez la fonction `CNUM()` pour convertir vos dates avant d'appliquer le modele.
+**Q.** Que faire si la formule renvoie une erreur de type # N/A ?
+
+**A.** Cela provient generalement d'un decalage dans les plages de dates ou de formats de date non reconnus par Excel (par exemple du texte au lieu de valeurs de date numeriques). Utilisez la fonction `CNUM()` pour convertir vos dates avant d'appliquer le modele.
 
 3. Est-ce que cela fonctionne sur les anciennes versions d'Excel de bureau ?
 Les fonctions avancees comme `PREVISION.ETS` necessitent Excel 2016 ou une version plus recente d'Office 365. Pour les versions anterieures, l'IA vous aidera a concevoir une formule de moyenne ponderee alternative plus classique mais fonctionnelle.

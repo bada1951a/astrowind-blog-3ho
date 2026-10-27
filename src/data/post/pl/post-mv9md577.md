@@ -19,7 +19,7 @@ To nie był pierwszy raz, kiedy tradycyjne metody zawiodły przy comiesięcznym 
 <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Cel tego poradnik
 
-a:</strong> Pokażę Ci, jak raz skonfigurować automatyczne zapytanie w Excelu, które co miesiąc w kilka sekund pobierze, wyczyści i połączy pliki sprzedaży z całego folderu – bez dotykania kodu VBA i bez płaczu przed deadlinem.
+**a:**</strong> Pokażę Ci, jak raz skonfigurować automatyczne zapytanie w Excelu, które co miesiąc w kilka sekund pobierze, wyczyści i połączy pliki sprzedaży z całego folderu – bez dotykania kodu VBA i bez płaczu przed deadlinem.
 </div>
 
 ---
@@ -32,11 +32,11 @@ Zanim przejdziemy do naprawy, spójrzmy prawdzie w oczy. Oto trzy główne powod
 
 2. Kruchość makr VB
 
-A: Ktoś zmieni nazwę arkusza w pliku źródłowym, a Twój skrypt makra wypluwa błąd w linii 42 i nie wiesz, dlaczego.
+**A:** Ktoś zmieni nazwę arkusza w pliku źródłowym, a Twój skrypt makra wypluwa błąd w linii 42 i nie wiesz, dlaczego.
 
 3. Brak śladu audytowego (Data Lineage): Kiedy zarząd pyt
 
-a: *„Skąd wzięła się ta kwota w marcu?”*, zaczyna się paniczne szukanie po mailach i starych wersjach plików.
+**a:** *„Skąd wzięła się ta kwota w marcu?”*, zaczyna się paniczne szukanie po mailach i starych wersjach plików.
 
 ---
 
@@ -59,7 +59,7 @@ Utwórz na dysku jeden dedykowany folder na dany miesiąc, na przykład `C:\Rapo
 #### Krok 3: Przekształcenie i oczyszczenie danych (Edytor Power Query)
 Zamiast klikać „Połącz”, kliknij Przekształć dane. Otworzy się osobne okno Edytora Power Query. To tutaj dzieje się magi
 
-a:
+**a:**
 * Zobaczysz listę plików znajdujących się w folderzie. Kliknij dwukrotnie na ikonę podwójnej strzałki w nagłówku kolumny Content.
 * Power Query automatycznie podglądnie strukturę plików. Wybierz arkusz lub tabelę, z której chcesz pobrać dane.
 * Usuń zbędne wiersze i nagłówki: Jeśli pliki mają na górze puste wiersze lub stopki, użyj opcji Usuń wiersze na karcie Narzędzia główne.
@@ -80,7 +80,7 @@ Excel utworzy nową zakładkę z w pełni skonsolidowaną tabelą sprzedaży.
 * Spójność nazw kolumn: Choć Power Query świetnie radzi sobie z przekształceniami, upewnij się, że kluczowe kolumny (np. „Data”, „Wartość”) są tak samo nazwane w plikach źródłowych. Unikniesz w ten sposób powstawania pustych kolumn.
 * Kopia zapasow
 
-a: Zanim wdrożysz automatyzację na produkcyjnych danych zarządu, przetestuj zapytanie na kopii zeszłorocznych plików.
+**a:** Zanim wdrożysz automatyzację na produkcyjnych danych zarządu, przetestuj zapytanie na kopii zeszłorocznych plików.
 
 ---
 

@@ -12,7 +12,7 @@ theme: "Dark Velvet Obsidian"
 
 Była dokładnie 16:45, a za piętnaście trzydziestu dyrektorów z warszawskiego centrum biznesowego miało otrzymać kwartalny raport sprzedażowy. Nagle w kluczowej kolumnie Google Sheets pojawił się błąd `#ARG!`, a dane z systemów CRM zaciągnęły się jako chaotyczna zupa tekstow
 
-a: numery NIP, adresy e-mail i numery zamówień były sklejone w jeden ciąg znaków, oddzielone losowymi spacjami i ukośnikami. Próba napisania z głowy zagnieżdżonej formuły `REGEXREPLACE` połączonej z `SPLIT` i `ARRAYFORMULA` sprawiała, że arkusz całkowicie zamakał, a czas uciekał nieubłaganie.
+**a:** numery NIP, adresy e-mail i numery zamówień były sklejone w jeden ciąg znaków, oddzielone losowymi spacjami i ukośnikami. Próba napisania z głowy zagnieżdżonej formuły `REGEXREPLACE` połączonej z `SPLIT` i `ARRAYFORMULA` sprawiała, że arkusz całkowicie zamakał, a czas uciekał nieubłaganie.
 
 W takich momentach człowiek czuje, jak zimny pot oblewa plecy, a perspektywna zarwania wieczoru staje się bolesną rzeczywistością. Zamiast jednak panicznie przekopywać fora internetowe w poszukiwaniu gotowych formuł, które i tak nie pasują do struktury moich kolumn, otworzyłem ChatGPT. W ciągu niecałych dwóch minut miałem szytą na miarę formułę regex, która uratowała sytuację. Poniżej pokazuję dokładnie krok po kroku, jak opanowałem ten proces, żebyś i Ty mógł wyjść z każdej arkuszowej opresji z tarczą.
 
@@ -50,7 +50,7 @@ ChatGPT zwróci Ci gotową formułę. W moim przypadku była to formuła w stylu
 Przejdź do Google Sheets, kliknij w odpowiednią komórkę, wklej formułę i naciśnij Enter. Jeśli chcesz, aby formuła automatycznie rozpychała się na całą kolumnę bez przeciągania, poproś ChatGPT o owinięcie jej w `MAP` lub `BYROW`, na przykład:
 `=MAP(
 
-A2:A100; LAMBDA(x; JEŻELI(x=""; ""; REGEXEXTRACT(x; "NIP:\s*(\d{10})"))))`
+**A2:**A100; LAMBDA(x; JEŻELI(x=""; ""; REGEXEXTRACT(x; "NIP:\s*(\d{10})"))))`
 
 ### Krok 3: Weryfikacja i obsługa błędów
 Jeśli dane wejściowe mają różne formaty (np. raz jest napisane "NIP:", a raz "Nr NIP"), poproś AI o rozbudowanie wzorca regex o alternatywy:
@@ -66,7 +66,7 @@ Przed wklejeniem danych do jakiegokolwiek narzędzia AI musisz pamiętać o kluc
 * Anonimizacja danych: Nigdy nie przesyłaj do publicznych modeli AI prawdziwych danych osobowych (PII) klientów, poufnych zarobków czy kluczowych danych finansowych spółki. Zastąp je fikcyjnymi ciągami (np. `Jan Kowalski`, `NIP 0000000000`).
 * Wersjonowanie arkusz
 
-a: Zanim uruchomisz masowe formuły czyszczące oparte na AI, zrób kopię zapasową arkusza (Plik > Wersje > Nazwij bieżącą wersję). Uchroni Cię to przed przypadkowym nadpisaniem ważnych danych.
+**a:** Zanim uruchomisz masowe formuły czyszczące oparte na AI, zrób kopię zapasową arkusza (Plik > Wersje > Nazwij bieżącą wersję). Uchroni Cię to przed przypadkowym nadpisaniem ważnych danych.
 
 ---
 

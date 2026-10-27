@@ -20,7 +20,7 @@ theme: "Tokyo Neon Violet"
 
 Trước khi tìm ra giải pháp tự động hóa thực chiến, tôi đã đúc rút được 3 nguyên nhân chính khiến dữ liệu đầu vào luôn biến thành thảm họ
 
-a:
+**a:**
 
 1. Dữ liệu nhập thủ công từ nhiều nguồn: Người bán hàng, nhân viên telesales hay form đăng ký sự kiện mỗi người nhập một kiểu, không có quy chuẩn viết hoa/viết thường hay định dạng ký tự.
 
@@ -56,7 +56,7 @@ Nếu bạn sử dụng các phiên bản Excel tích hợp AI hoặc các công
 
 4. Kỳ diệu xảy r
 
-a: Excel sẽ tự động quét toàn bộ hàng nghìn dòng phía dưới và điền sạch sẽ các email còn lại theo đúng mẫu bạn vừa làm. Làm tương tự với cột "Tên Riêng".
+**a:** Excel sẽ tự động quét toàn bộ hàng nghìn dòng phía dưới và điền sạch sẽ các email còn lại theo đúng mẫu bạn vừa làm. Làm tương tự với cột "Tên Riêng".
 
 ---
 

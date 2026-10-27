@@ -21,7 +21,7 @@ A solução definitiva que adotou-se na nossa rotina envolve combinar a capacida
 <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Diagnóstico de Engenhari
 
-a:</strong> O peso excessivo e os travamentos do Excel raramente são causados apenas pelo volume de dados. Na maioria das vezes, o problema reside em estruturas invisíveis corrompidas, excesso de estilos de células duplicados ou referências circulares ocultas.
+**a:**</strong> O peso excessivo e os travamentos do Excel raramente são causados apenas pelo volume de dados. Na maioria das vezes, o problema reside em estruturas invisíveis corrompidas, excesso de estilos de células duplicados ou referências circulares ocultas.
 </div>
 
 ---
@@ -73,5 +73,6 @@ Zero conhecimento prévio em programação é necessário. O papel do usuário a
 2. Essa limpeza apaga minhas fórmulas ou formatações importantes?
 Não. Os scripts focam em limpar o "lixo" estrutural que fica invisível (estilos duplicados acumulados ao longo de anos de cópia e cola e metadados corrompidos). Suas fórmulas de negócio, formatações condicionais válidas e dados permanecem intactos.
 
-3. Posso usar o Google Colab para processar arquivos da empresa?
-Sim, o Google Colab roda na nuvem e é seguro para a grande maioria dos fluxos corporativos rotineiros. No entanto, se a sua empresa possui políticas rígidas de compliance contra ferramentas de nuvem externas, você pode rodar o mesmo código localmente instalando o Python e o pacote `openpyxl` via prompt de comando (`pip install openpyxl`).
+**Q.** Posso usar o Google Colab para processar arquivos da empresa?
+
+**A.** Sim, o Google Colab roda na nuvem e é seguro para a grande maioria dos fluxos corporativos rotineiros. No entanto, se a sua empresa possui políticas rígidas de compliance contra ferramentas de nuvem externas, você pode rodar o mesmo código localmente instalando o Python e o pacote `openpyxl` via prompt de comando (`pip install openpyxl`).

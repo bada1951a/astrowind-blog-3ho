@@ -66,13 +66,15 @@ Même si l'IA fait des miracles, la prudence reste de mise dans un contexte prof
 
 ---
 
-## Questions Fréquemment Posées (FAQ)
+## 5. Foire Aux Questions (FAQ)
 
 1. Que faire si la formule générée par ChatGPT renvoie une erreur #REF! ou #VALEUR! ?
 Le plus souvent, c'est un problème de décalage de plage ou de séparateur d'arguments. En français, Google Sheets utilise le point-virgule (`;`) pour séparer les arguments, tandis que ChatGPT oublie parfois cette règle et met une virgule (`,`). Remplacez simplement les virgules par des points-virgules dans la formule.
 
-2. Puis-je utiliser cette méthode pour fusionner plusieurs colonnes de texte mal rangées ?
-Absolument. Il suffit de demander à ChatGPT de combiner les cellules `A2`, `B2` et `C2` en éliminant les espaces superflus et en mettant la première lettre en majuscule en utilisant des fonctions comme `TEXTJOIN` combinées à des expressions adaptées.
+**Q.** Puis-je utiliser cette méthode pour fusionner plusieurs colonnes de texte mal rangées ?
 
-3. Faut-il une version payante de ChatGPT pour faire cela ?
-Non, la version gratuite (GPT-4o mini ou équivalent) gère parfaitement la syntaxe des formules Google Sheets et les expressions régulières complexes. L'important est surtout la précision de votre prompt initial.
+**A.** Absolument. Il suffit de demander à ChatGPT de combiner les cellules `A2`, `B2` et `C2` en éliminant les espaces superflus et en mettant la première lettre en majuscule en utilisant des fonctions comme `TEXTJOIN` combinées à des expressions adaptées.
+
+**Q.** Faut-il une version payante de ChatGPT pour faire cela ?
+
+**A.** Non, la version gratuite (GPT-4o mini ou équivalent) gère parfaitement la syntaxe des formules Google Sheets et les expressions régulières complexes. L'important est surtout la précision de votre prompt initial.

@@ -42,7 +42,7 @@ Ikuti alur kerja 3 langkah mudah ini untuk menyelamatkan presentasi Anda besok p
 Pastikan data historis Anda tersusun rapi dalam bentuk tabel standar di Excel. 
 - Kolom
 
-A: Tanggal atau Periode (contoh: Bulan/Tahun)
+**A:** Tanggal atau Periode (contoh: Bulan/Tahun)
 - Kolom B: Kode Produk atau SKU
 - Kolom C: Jumlah Unit Terjual
 
@@ -74,20 +74,20 @@ Tempel hasil analisis naratif dari AI tersebut di samping lembar kerja Excel And
 - Selalu Cadangkan File: Buat salinan (duplikat) file Excel Anda sebelum menjalankan fungsi pembersihan data otomatis atau makro tingkat lanjut.
 - Validasi Logik
 
-a: AI sangat bagus untuk memperkirakan pola, tetapi akal sehat manusia tetap dibutuhkan untuk memperhitungkan faktor eksternal mendadak, seperti perubahan regulasi impor atau kebijakan pajak baru.
+**a:** AI sangat bagus untuk memperkirakan pola, tetapi akal sehat manusia tetap dibutuhkan untuk memperhitungkan faktor eksternal mendadak, seperti perubahan regulasi impor atau kebijakan pajak baru.
 
 ---
 
 ### Tanya Jawab Populer (FAQ)
 
-Q: Apakah saya memerlukan langganan Microsoft 365 berbayar untuk melakukan ini?
+**Q:** Apakah saya memerlukan langganan Microsoft 365 berbayar untuk melakukan ini?
 
-A: Fitur dasar seperti *Forecast Sheet* sudah tersedia di versi Microsoft Excel modern (Excel 2016 ke atas). Untuk integrasi AI generatif yang lebih dalam, Anda bisa menggunakan Copilot atau menyalin data ke alat AI eksternal secara gratis.
+**A:** Fitur dasar seperti *Forecast Sheet* sudah tersedia di versi Microsoft Excel modern (Excel 2016 ke atas). Untuk integrasi AI generatif yang lebih dalam, Anda bisa menggunakan Copilot atau menyalin data ke alat AI eksternal secara gratis.
 
-Q: Bagaimana jika data penjualan saya tidak lengkap atau ada bulan yang kosong?
+**Q:** Bagaimana jika data penjualan saya tidak lengkap atau ada bulan yang kosong?
 
-A: Anda harus mengisi kekosongan tersebut terlebih dahulu. Jangan biarkan sel kosong bernilai nol jika memang tidak ada transaksi, karena hal itu akan mendistorsi hasil prediksi algoritma AI. Gunakan metode interpolasi sederhana atau isi dengan rata-rata bulan terdekat.
+**A:** Anda harus mengisi kekosongan tersebut terlebih dahulu. Jangan biarkan sel kosong bernilai nol jika memang tidak ada transaksi, karena hal itu akan mendistorsi hasil prediksi algoritma AI. Gunakan metode interpolasi sederhana atau isi dengan rata-rata bulan terdekat.
 
-Q: Apakah metode ini bisa langsung dipakai untuk ribuan SKU produk sekaligus?
+**Q:** Apakah metode ini bisa langsung dipakai untuk ribuan SKU produk sekaligus?
 
-A: Disarankan untuk mengelompokkan produk berdasarkan kategori atau volume penjualan terbesar (Analisis ABC) terlebih dahulu. Memproses ribuan SKU secara bersamaan tanpa pengelompokan akan membuat hasil prediksi kurang tajam dan sulit dianalisis.
+**A:** Disarankan untuk mengelompokkan produk berdasarkan kategori atau volume penjualan terbesar (Analisis ABC) terlebih dahulu. Memproses ribuan SKU secara bersamaan tanpa pengelompokan akan membuat hasil prediksi kurang tajam dan sulit dianalisis.

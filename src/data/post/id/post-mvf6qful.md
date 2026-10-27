@@ -16,7 +16,7 @@ Jam sudah menunjukkan pukul 21.30 WIB di salah satu menara perkantoran kawasan b
 <strong>Tiket Dukungan Teknis Internal (ID-8821)</strong><br>
 <strong>Gejal
 
-a:</strong> Data pelanggan dobel dengan variasi ketikan (contoh: "PT Maju Jaya" vs "pt maju jaya "), rumus `=UNIQUE()` gagal merapikannya karena inkonsistensi teks.<br>
+**a:**</strong> Data pelanggan dobel dengan variasi ketikan (contoh: "PT Maju Jaya" vs "pt maju jaya "), rumus `=UNIQUE()` gagal merapikannya karena inkonsistensi teks.<br>
 <strong>Status:</strong> Darurat menjelang deadline pagi.
 </div>
 
@@ -40,7 +40,7 @@ Karena rumus Excel mentok dan waktu menipis, saya memutuskan memanfaatkan Gemini
 <strong>Langkah 1: Siapkan Prompt yang Presisi untuk Gemini</strong><br>
 Buka Gemini, lalu masukkan prompt berikut untuk meminta kode pembersihan dat
 
-a:<br><br>
+**a:**<br><br>
 <em>"Tolong buatkan fungsi Google Apps Script untuk Google Sheets yang otomatis mendeteksi dan menghapus baris duplikat berdasarkan kolom Nama Pelanggan dan Email. Script harus membersihkan spasi berlebih (TRIM), menyamakan huruf kecil (LOWER) sebelum pengecekan duplikat, dan menyisakan data terakhir yang dimasukkan."</em>
 </div>
 
@@ -64,14 +64,14 @@ Sebelum memasukkan data mentah ke AI publik, pastikan Anda telah menghapus atau 
 
 ### Tanya Jawab Populer (FAQ)
 
-Q: Apakah cara ini aman untuk file Google Sheets dengan ukuran ribuan baris?
+**Q:** Apakah cara ini aman untuk file Google Sheets dengan ukuran ribuan baris?
 
-A: Sangat aman. Google Apps Script berjalan di server cloud Google, sehingga tidak akan membuat laptop lemot atau aplikasi *crash* seperti saat menggunakan makro di komputer lokal.
+**A:** Sangat aman. Google Apps Script berjalan di server cloud Google, sehingga tidak akan membuat laptop lemot atau aplikasi *crash* seperti saat menggunakan makro di komputer lokal.
 
-Q: Bagaimana jika format nama pelanggan menggunakan bahasa asing atau karakter khusus?
+**Q:** Bagaimana jika format nama pelanggan menggunakan bahasa asing atau karakter khusus?
 
-A: Gemini sangat handal mengenali berbagai variasi karakter unicode. Anda bisa menambahkan instruksi khusus di dalam prompt untuk mengabaikan tanda baca tertentu jika diperlukan.
+**A:** Gemini sangat handal mengenali berbagai variasi karakter unicode. Anda bisa menambahkan instruksi khusus di dalam prompt untuk mengabaikan tanda baca tertentu jika diperlukan.
 
-Q: Apakah saya harus berlangganan versi berbayar Gemini untuk melakukan trik ini?
+**Q:** Apakah saya harus berlangganan versi berbayar Gemini untuk melakukan trik ini?
 
-A: Tidak perlu. Versi gratis Gemini sudah lebih dari cukup untuk menghasilkan kode Apps Script yang akurat dan memandu proses pembersihan data harian Anda di kantor.
+**A:** Tidak perlu. Versi gratis Gemini sudah lebih dari cukup untuk menghasilkan kode Apps Script yang akurat dan memandu proses pembersihan data harian Anda di kantor.

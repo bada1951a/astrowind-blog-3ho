@@ -12,7 +12,7 @@ theme: "Pure Titanium Clean"
 
 Eram 17h45 de uma sexta-feira de fechamento de mês no escritório na Avenida Paulista, e a planilha de consolidação de vendas parecia um campo de guerra. O cliente mandou a base de dados toda despadronizad
 
-a: CNPJs sem pontuação misturados com códigos alfanuméricos, datas em formatos totalmente errados e valores financeiros com o ponto e a vírgula invertidos. Tentativa e erro com funções `REGEXEXTRACT` e `SUBSTITUTE` aninhadas só geravam erros de sintaxe #VALOR!, e o relógio correndo contra a entrega para a diretoria. Se você já passou por isso, sabe que perder horas tentando adivinhar a sintaxe de uma expressão regular ou de uma fórmula gigante no Google Sheets é o tipo de tarefa que suga toda a energia da sua semana. ![AI Productivity & Workflow Automation](https://picsum.photos/seed/office499/1000/550)
+**a:** CNPJs sem pontuação misturados com códigos alfanuméricos, datas em formatos totalmente errados e valores financeiros com o ponto e a vírgula invertidos. Tentativa e erro com funções `REGEXEXTRACT` e `SUBSTITUTE` aninhadas só geravam erros de sintaxe #VALOR!, e o relógio correndo contra a entrega para a diretoria. Se você já passou por isso, sabe que perder horas tentando adivinhar a sintaxe de uma expressão regular ou de uma fórmula gigante no Google Sheets é o tipo de tarefa que suga toda a energia da sua semana. ![AI Productivity & Workflow Automation](https://picsum.photos/seed/office499/1000/550)
 
 Neste guia prático, vou te mostrar o passo a passo exato de como usar o ChatGPT como seu assistente pessoal de fórmulas para limpar dados em segundos, sem precisar decorar manuais complexos.
 
@@ -55,7 +55,7 @@ Copie a fórmula fornecida pela IA (geralmente algo combinando `REGEXEXTRACT` co
 
 ### Alerta do Especialist
 
-a: Cuidados com Privacidade e Dados Sensíveis
+**a:** Cuidados com Privacidade e Dados Sensíveis
 
 Trabalhar com ferramentas de IA exige atenção redobrada à segurança da informação corporativa. - Nunca envie dados confidenciais reais: Se estiver limpando uma base de clientes da empresa, salários ou CPFs verdadeiros, substitua os valores por dados fictícios (ex: `Cliente A`, `CPF 000.000.000-00`) antes de enviar para o ChatGPT.
 - Faça backup local: Antes de rodar scripts complexos ou substituir colunas inteiras com fórmulas geradas por IA, duplique a aba da sua planilha (`Clicar com botão direito na aba > Duplicar`). Prevenir a perda de dados em meio à correria salva seu emprego e sua sanidade.
@@ -64,8 +64,9 @@ Trabalhar com ferramentas de IA exige atenção redobrada à segurança da infor
 
 ### Perguntas Frequentes (FAQ)
 
-1. O ChatGPT costuma errar a sintaxe do Google Sheets em comparação ao Excel?
-Sim, às vezes a IA confunde funções exclusivas do Excel (como `PROCX` ou sintaxes de separador de argumentos) com o Google Sheets. Se isso acontecer, basta responder no chat: *"Ajuste essa fórmula estritamente para o padrão do Google Sheets, usando vírgula como separador de argumentos e funções compatíveis"*.
+**Q.** O ChatGPT costuma errar a sintaxe do Google Sheets em comparação ao Excel?
+
+**A.** Sim, às vezes a IA confunde funções exclusivas do Excel (como `PROCX` ou sintaxes de separador de argumentos) com o Google Sheets. Se isso acontecer, basta responder no chat: *"Ajuste essa fórmula estritamente para o padrão do Google Sheets, usando vírgula como separador de argumentos e funções compatíveis"*.
 
 2. Posso usar essa técnica para criar macros ou Apps Script também?
 Com certeza. Se a limpeza de dados exigir loops complexos que travam as fórmulas da planilha, peça ao ChatGPT: *"Escreva uma função personalizada em Google Apps Script para automatizar essa limpeza"*. Ele vai gerar o código que você pode colar em `Extensões > Apps Script`.

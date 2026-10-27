@@ -15,7 +15,7 @@ Godzina 17:40 w biurze w samym sercu warszawskiego centrum biznesowego. Za dwadz
 <div style="border-left: 4px solid #be123c; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Awaryjny sygnał z biur
 
-a:</strong> Nigdy więcej ręcznego wklepywania danych z papieru! Ten przewodnik pokaże Ci, jak w 3 krokach zamienić bezużyteczny skan w gotową tabelę Excela bez wydawania ani grosza na drogie oprogramowanie komercyjne.
+**a:**</strong> Nigdy więcej ręcznego wklepywania danych z papieru! Ten przewodnik pokaże Ci, jak w 3 krokach zamienić bezużyteczny skan w gotową tabelę Excela bez wydawania ani grosza na drogie oprogramowanie komercyjne.
 </div>
 
 ![AI Productivity & Workflow Automation](https://picsum.photos/seed/office167/1000/550)
@@ -55,7 +55,7 @@ Gdy AI wygeneruje gotową tabelę:
 <div style="border-left: 4px solid #be123c; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Wskazówka ekspert
 
-a:</strong> Aby uniknąć błędów w podsumowaniach, upewnij się, że kolumny z cenami mają w Excelu ustawiony format liczbowy lub walutowy, a nie tekstowy. Zwróć uwagę na zielone trójkąty w rogu komórek – jeśli się pojawią, kliknij je i wybierz "Konwertuj na liczbę".
+**a:**</strong> Aby uniknąć błędów w podsumowaniach, upewnij się, że kolumny z cenami mają w Excelu ustawiony format liczbowy lub walutowy, a nie tekstowy. Zwróć uwagę na zielone trójkąty w rogu komórek – jeśli się pojawią, kliknij je i wybierz "Konwertuj na liczbę".
 </div>
 
 ---

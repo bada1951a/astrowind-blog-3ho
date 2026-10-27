@@ -24,14 +24,14 @@ Perché ci troviamo in questa situazione critica nonostante la pianificazione? A
 
 * **Sotto-strumentazione dei flussi documentali:** Molti professionisti tentano ancora di usare la ricerca testuale basilare (Ctrl + F) su PDF scansionati o complessi, perdendo ore senza cogliere il contesto complessivo del testo normativo.
 * **Limiti dei vecchi chatbot testuali:** L'utilizzo di modelli linguistici obsoleti o non ottimizzati per documenti di grandi dimensioni genera spesso riassunti superficiali, allucinazioni o blocchi dovuti al limite di caratteri in input (token limit).
-* **Mancanza di prompt ingegnerizzati per il business:** Scrivere un generico "Riassumimi questo documento" a un'intelligenza artificiale restituisce un blocco di testo inutile, privo delle specifiche metriche economiche o legali necessarie per redigere un preventivo commerciale mirato.
+* **Mancanza di prompt ingegnerizzati per il business:**Scrivere un generico "Riassumimi questo documento" a un'intelligenza artificiale restituisce un blocco di testo inutile, privo delle specifiche metriche economiche o legali necessarie per redigere un preventivo commerciale mirato.
 
 ## 3. Guida pratica di risoluzione e ottimizzazione passo dopo passo
 
-Ecco il metodo esatto, testato sul campo negli uffici milanesi, per estrarre informazioni cruciali da un documento di 150 pagine in meno di tre minuti utilizzando **Claude 3.5 Sonnet** e preparare i dati per i tuoi clienti.
+Ecco il metodo esatto, testato sul campo negli uffici milanesi, per estrarre informazioni cruciali da un documento di 150 pagine in meno di tre minuti utilizzando**Claude 3.5 Sonnet**e preparare i dati per i tuoi clienti.
 
 ### Passo 1: Caricamento e preparazione del file PDF
-Apri il tuo browser, accedi alla piattaforma di Anthropic e trascina il tuo file PDF pesante direttamente nella chat di **Claude 3.5 Sonnet**. Grazie alla sua ampia finestra di contesto, il modello legge l'intero documento in pochi secondi senza troncare le informazioni.
+Apri il tuo browser, accedi alla piattaforma di Anthropic e trascina il tuo file PDF pesante direttamente nella chat di**Claude 3.5 Sonnet**. Grazie alla sua ampia finestra di contesto, il modello legge l'intero documento in pochi secondi senza troncare le informazioni.
 
 ### Passo 2: Inserimento del Prompt Strategico per il Business
 Non chiedere un riassunto generico. Incolla questo prompt strutturato nel campo di testo per ottenere subito i dati operativi che ti servono per i preventivi:
@@ -47,7 +47,7 @@ Sii estremamente conciso e rigoroso.
 ```
 
 ### Passo 3: Esportazione rapida e verifica dei dati
-Claude genererà la risposta strutturata in meno di 45 secondi. Clicca sul pulsante **Copy** in alto a destra nel blocco di codice della risposta e incollalo nel tuo file Excel di gestione clienti o nel modello di stesura email. Ora hai tutti gli elementi precisi per completare l'invio dei 50 preventivi prima della scadenza.
+Claude genererà la risposta strutturata in meno di 45 secondi. Clicca sul pulsante**Copy** in alto a destra nel blocco di codice della risposta e incollalo nel tuo file Excel di gestione clienti o nel modello di stesura email. Ora hai tutti gli elementi precisi per completare l'invio dei 50 preventivi prima della scadenza.
 
 ## 4. Avvertenze e raccomandazioni dell'esperto di automazione
 
@@ -59,14 +59,14 @@ Quando utilizzi strumenti di intelligenza artificiale per documenti aziendali se
 
 ## 5. Domande Frequenti (FAQ)
 
-Q: Posso usare questa procedura anche con PDF scansionati formati solo da immagini?
+**Q:** Posso usare questa procedura anche con PDF scansionati formati solo da immagini?
 
-A: Sì, Claude 3.5 Sonnet possiede eccellenti capacità di riconoscimento ottico dei caratteri (OCR). Tuttavia, per documenti molto sfocati, è consigliabile convertirli preventivamente in un PDF ricercabile tramite software dedicati per garantire il 100% di precisione.
+**A:** Sì, Claude 3.5 Sonnet possiede eccellenti capacità di riconoscimento ottico dei caratteri (OCR). Tuttavia, per documenti molto sfocati, è consigliabile convertirli preventivamente in un PDF ricercabile tramite software dedicati per garantire il 100% di precisione.
 
-Q: Qual è la dimensione massima del file PDF che posso caricare senza errori?
+**Q:** Qual è la dimensione massima del file PDF che posso caricare senza errori?
 
-A: Claude gestisce agevolmente file fino a decine di megabytes e centinaia di pagine. Se il file dovesse superare i limiti di sistema, puoi dividerlo in sezioni logiche (es. capitoli 1-5 e capitoli 6-10) utilizzando strumenti gratuiti online.
+**A:** Claude gestisce agevolmente file fino a decine di megabytes e centinaia di pagine. Se il file dovesse superare i limiti di sistema, puoi dividerlo in sezioni logiche (es. capitoli 1-5 e capitoli 6-10) utilizzando strumenti gratuiti online.
 
-Q: I dati sensibili dei miei clienti sono al sicuro durante l'analisi?
+**Q:** I dati sensibili dei miei clienti sono al sicuro durante l'analisi?
 
-A: Se utilizzi piani aziendali o API dedicate di Anthropic, i dati non vengono memorizzati né utilizzati per scopi di training. Verifica comunque le policy interne di conformità IT della tua azienda prima di procedere con dati altamente confidenziali.
+**A:** Se utilizzi piani aziendali o API dedicate di Anthropic, i dati non vengono memorizzati né utilizzati per scopi di training. Verifica comunque le policy interne di conformità IT della tua azienda prima di procedere con dati altamente confidenziali.

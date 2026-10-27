@@ -42,7 +42,7 @@ Kita tidak butuh aplikasi tambahan yang mahal. Cukup gunakan Google Sheets dan s
 ### Langkah 2: Masukkan Kode Skrip Otomatis
 Salin kode praktis di bawah ini ke dalam editor Apps Script And
 
-a:
+**a:**
 
 ```javascript
 function kirimLaporanMingguan() {
@@ -64,7 +64,7 @@ function kirimLaporanMingguan() {
     fitw: "true",
     sheetranges: "
 
-A1:G20", // sesuaikan range data Anda
+**A1:**G20", // sesuaikan range data Anda
     gid: sheetId
   };
 
@@ -94,7 +94,7 @@ A1:G20", // sesuaikan range data Anda
 ### Langkah 3: Atur Jadwal Otomatis (Trigger)
 Supaya Anda tidak perlu klik tombol apa pun setiap mingguny
 
-a:
+**a:**
 1. Di halaman Apps Script, klik ikon Jam (Pemicu / Triggers) di menu sebelah kiri.
 
 2. Klik tombol Tambah Pemicu di pojok kanan bawah.
@@ -120,4 +120,4 @@ Anda bisa mengubah variabel `emailPenerima` menjadi bentuk array atau memisahkan
 3. Kenapa file PDF yang terkirim kadang terpotong halamannya?
 Hal ini biasanya karena pengaturan `sheetranges` atau ukuran kolom terlalu lebar. Anda bisa menyesuaikan parameter `sheetranges: "
 
-A1:G20"` di dalam kode agar pas dengan area cetak dokumen Anda.
+**A1:**G20"` di dalam kode agar pas dengan area cetak dokumen Anda.

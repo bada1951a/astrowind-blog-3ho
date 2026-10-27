@@ -69,13 +69,15 @@ Avant de balancer la base de données de vos clients grands comptes dans une IA,
 
 ---
 
-### Foire aux questions (FAQ)
+## 5. Foire Aux Questions (FAQ)
 
-1. Est-ce que Gemini peut supprimer directement les lignes dans mon Google Sheets à ma place ?
-Si vous utilisez Gemini directement intégré dans l'écosystème Google Workspace (via le panneau latéral payant), il peut interagir plus facilement, mais la méthode la plus robuste et gratuite reste de lui demander de rédiger un script Apps Script que vous exécutez en un clic dans les extensions.
+**Q.** Est-ce que Gemini peut supprimer directement les lignes dans mon Google Sheets à ma place ?
 
-2. Comment l'IA gère-t-elle les homonymes parfaits mais qui sont des personnes différentes ?
-C'est pour cela qu'il ne faut jamais automatiser à l'aveugle. Demandez toujours à Gemini de lister les "doublons probables" dans une colonne de revue pour valider visuellement avant la suppression définitive.
+**A.** Si vous utilisez Gemini directement intégré dans l'écosystème Google Workspace (via le panneau latéral payant), il peut interagir plus facilement, mais la méthode la plus robuste et gratuite reste de lui demander de rédiger un script Apps Script que vous exécutez en un clic dans les extensions.
+
+**Q.** Comment l'IA gère-t-elle les homonymes parfaits mais qui sont des personnes différentes ?
+
+**A.** C'est pour cela qu'il ne faut jamais automatiser à l'aveugle. Demandez toujours à Gemini de lister les "doublons probables" dans une colonne de revue pour valider visuellement avant la suppression définitive.
 
 3. Cette méthode fonctionne-t-elle avec des fichiers Excel traditionnels ?
 Le principe reste le même, mais la synergie est optimale avec Google Sheets grâce à la passerelle naturelle avec l'écosystème Google et les scripts JavaScript intégrés. Pour Excel, vous passerez par l'assistant Copilot ou l'import direct des données nettoyées par Gemini.

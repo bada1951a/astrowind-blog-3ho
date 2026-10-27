@@ -19,7 +19,7 @@ Foi bem ali, com o cheiro do café frio na xícara e o Slack apitando sem parar,
 <div style="border-left: 4px solid #78350f; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>O Alerta do Especialist
 
-a:</strong> O maior erro no fechamento mensal é tentar criar designs complexos do zero sob pressão. Deixe que a inteligência artificial analise a estrutura dos seus dados financeiros primeiro para sugerir o tipo de visualização ideal.
+**a:**</strong> O maior erro no fechamento mensal é tentar criar designs complexos do zero sob pressão. Deixe que a inteligência artificial analise a estrutura dos seus dados financeiros primeiro para sugerir o tipo de visualização ideal.
 </div>
 
 ## Por que seus relatórios financeiros tradicionais falham na hora da pressão?
@@ -28,7 +28,7 @@ Antes de aplicar a automação, vale a pena entender por que criar gráficos fin
 
 1. Estrutura de dados despadronizad
 
-a: Linhas misturando centros de custo, datas no formato incorreto e colunas sem cabeçalhos claros impedem que qualquer motor de IA compreenda o contexto financeiro.
+**a:** Linhas misturando centros de custo, datas no formato incorreto e colunas sem cabeçalhos claros impedem que qualquer motor de IA compreenda o contexto financeiro.
 
 2. Falta de interatividade: Gráficos estáticos comuns não permitem que a diretoria filtre cenários de receita versus despesa com um simples clique durante a reunião executiva.
 
@@ -42,7 +42,7 @@ Vamos direto ao método prático para montar um painel financeiro dinâmico no G
 Certifique-se de que sua tabela siga um padrão limpo. Por exemplo:
 - Coluna
 
-A: Data (formato DD/MM/AAAA)
+**A:** Data (formato DD/MM/AAAA)
 - Coluna B: Centro de Custo
 - Coluna C: Categoria (Receita, Despesa Fixa, Despesa Variável)
 - Coluna D: Valor (utilize números puros, ex: 1500.00, sem símbolos monetários manuais que travam as fórmulas).
@@ -65,8 +65,9 @@ A IA geralmente sugere gráficos de rosca para distribuição de despesas ou gr�
 
 ## Perguntas Frequentes (FAQ)
 
-1. Posso usar as sugestões de IA do Google Planilhas com dados financeiros confidenciais da empresa?
-Sim, desde que a sua conta corporativa do Google Workspace siga as diretrizes de privacidade e conformidade de dados estabelecidas pelo departamento de TI da sua empresa. Os dados inseridos no painel Explorar não são utilizados para treinar modelos públicos de IA de forma aberta.
+**Q.** Posso usar as sugestões de IA do Google Planilhas com dados financeiros confidenciais da empresa?
+
+**A.** Sim, desde que a sua conta corporativa do Google Workspace siga as diretrizes de privacidade e conformidade de dados estabelecidas pelo departamento de TI da sua empresa. Os dados inseridos no painel Explorar não são utilizados para treinar modelos públicos de IA de forma aberta.
 
 2. O que fazer se a IA sugerir um gráfico incorreto para o meu fluxo de caixa?
 A IA se baseia em padrões estatísticos dos seus cabeçalhos. Se o gráfico sugerido não fizer sentido, renomeie os cabeçalhos das colunas para termos mais explícitos (como "Receita Líquida" em vez de apenas "Total") e clique em atualizar no painel de sugestões.
@@ -74,6 +75,6 @@ A IA se baseia em padrões estatísticos dos seus cabeçalhos. Se o gráfico sug
 3. Como garantir que os gráficos se atualizem sozinhos quando novos dados forem inseridos no mês seguinte?
 Em vez de selecionar um intervalo fechado (ex:
 
-A1:D50), selecione a coluna inteira (ex:
+**A1:**D50), selecione a coluna inteira (ex:
 
-A:D) ao criar o gráfico ou utilize intervalos nomeados dinâmicos. Dessa forma, assim que o time financeiro colar os dados novos, o painel interativo refletirá as mudanças automaticamente.
+**A:**D) ao criar o gráfico ou utilize intervalos nomeados dinâmicos. Dessa forma, assim que o time financeiro colar os dados novos, o painel interativo refletirá as mudanças automaticamente.

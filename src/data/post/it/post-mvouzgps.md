@@ -24,9 +24,9 @@ Quel blocco improvviso mi ha fatto riflettere su un'altra emergenza ricorrente c
 
 Perché falliamo spesso quando cerchiamo di sintetizzare documenti di grandi dimensioni con l'IA? I colli di bottiglia risiedono solitamente in tre fattori tecnici e metodologici ben precisi:
 
-- **Caricamento di file non ottimizzati:** Spesso si caricano PDF scansionati male, con immagini di testo al posto di caratteri vettoriali, costringendo l'IA a interpretare OCR imprecisi che generano allucinazioni e omissioni critiche.
-- **Prompt generici senza perimetro:** Dire semplicemente "Riassumi questo documento" spinge il modello a produrre una sintesi banale, concentrandosi magari sulle sezioni meno rilevanti per il nostro business milanese.
-- **Mancanza di vincoli strutturali:** Non definire in anticipo il formato di output (es. tabella comparativa, bullet point per i rischi legali, scadenze tassative) costringe a continue revisioni manuali.
+- **Caricamento di file non ottimizzati:**Spesso si caricano PDF scansionati male, con immagini di testo al posto di caratteri vettoriali, costringendo l'IA a interpretare OCR imprecisi che generano allucinazioni e omissioni critiche.
+-**Prompt generici senza perimetro:**Dire semplicemente "Riassumi questo documento" spinge il modello a produrre una sintesi banale, concentrandosi magari sulle sezioni meno rilevanti per il nostro business milanese.
+-**Mancanza di vincoli strutturali:** Non definire in anticipo il formato di output (es. tabella comparativa, bullet point per i rischi legali, scadenze tassative) costringe a continue revisioni manuali.
 
 ## 3. Guida pratica di risoluzione e ottimizzazione passo dopo passo
 
@@ -72,14 +72,14 @@ Quando si gestiscono documenti aziendali confidenziali o normativi sensibili, la
 
 ## 5. Domande Frequenti (FAQ)
 
-Q: Claude 3.5 Sonnet legge davvero tutte le 150 pagine o si ferma a metà?
+**Q:** Claude 3.5 Sonnet legge davvero tutte le 150 pagine o si ferma a metà?
 
-A: Grazie alla sua ampia finestra di contesto, Claude elabora l'intero documento in un'unica soluzione, senza saltare capitoli intermedi, a patto che il file non superi i limiti di token della singola conversazione (raramente superati da un PDF di 150 pagine di solo testo).
+**A:** Grazie alla sua ampia finestra di contesto, Claude elabora l'intero documento in un'unica soluzione, senza saltare capitoli intermedi, a patto che il file non superi i limiti di token della singola conversazione (raramente superati da un PDF di 150 pagine di solo testo).
 
-Q: Posso caricare PDF in lingua inglese e chiedere il report in italiano?
+**Q:** Posso caricare PDF in lingua inglese e chiedere il report in italiano?
 
-A: Assolutamente sì. Uno dei maggiori vantaggi operativi è la capacità di traduzione e sintesi simultanea: puoi dare in pasto normative europee in lingua inglese e ricevere un'analisi esecutiva in perfetto italiano professionale.
+**A:** Assolutamente sì. Uno dei maggiori vantaggi operativi è la capacità di traduzione e sintesi simultanea: puoi dare in pasto normative europee in lingua inglese e ricevere un'analisi esecutiva in perfetto italiano professionale.
 
-Q: Cosa faccio se il PDF è protetto da password o ha restrizioni di copia?
+**Q:** Cosa faccio se il PDF è protetto da password o ha restrizioni di copia?
 
-A: Prima di caricarlo su Claude, devi sbloccare il PDF utilizzando strumenti di gestione documenti autorizzati all'interno della tua azienda per rimuovere le restrizioni di stampa e selezione testo.
+**A:** Prima di caricarlo su Claude, devi sbloccare il PDF utilizzando strumenti di gestione documenti autorizzati all'interno della tua azienda per rimuovere le restrizioni di stampa e selezione testo.

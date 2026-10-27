@@ -23,7 +23,7 @@ Si te suena familiar esta pesadilla de última hora, sabes perfectamente que el 
 
 Antes de aplicar la solución, hay que entender por qué el método artesanal destruye la productividad en la oficin
 
-a:
+**a:**
 
 1. Estacionalidad oculta y datos dispersos: Las hojas de cálculo tradicionales calculan medias aritméticas simples (PROMEDIO), ignorando picos de consumo estacionales típicos del mercado europeo, como las campañas de rebajas o el parón de agosto.
 
@@ -56,7 +56,7 @@ Si trabajas con versiones recientes de Microsoft 365, puedes combinar el anális
 * Haz clic en Crear. Excel generará automáticamente una nueva hoja con las fórmulas de pronóstico integradas (PRONÓSTICO.ETS) y gráficos de banda que se actualizan solos al modificar los datos de entrada. <div style="border-left: 4px solid #4338ca; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Consejo de seguridad:</strong> Antes de aplicar cualquier cambio masivo en hojas compartidas de la empresa, guarda una copia de respaldo con la fecha del día en una carpeta local aislada. </div>
 
-## 5. Preguntas Frecuentes (FAQ) (FAQ)
+## 5. Preguntas Frecuentes (FAQ)
 
 ### ¿Puedo hacer esto si mi empresa utiliza versiones antiguas de Excel instaladas localmente?
 Si usas versiones anteriores a 2016 que no incluyen la función Hoja de pronóstico, puedes utilizar la función básica `PRONÓSTICO.LINEAL` combinada con los datos limpios de Power Query, o bien apoyarte en complementos externos de IA autorizados por tu departamento de sistemas.

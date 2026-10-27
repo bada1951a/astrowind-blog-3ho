@@ -77,13 +77,15 @@ Le mois prochain, il vous suffira de glisser le nouveau rapport mensuel dans le 
 
 ---
 
-## Foire Aux Questions (FAQ)
+## 5. Foire Aux Questions (FAQ)
 
-1. Dois-je recréer la requête Power Query tous les mois ?
-Absolument pas. C'est tout l'intérêt de la démarche. La requête est enregistrée dans votre fichier Excel. Le mois prochain, vous ajoutez simplement le nouveau fichier dans le dossier source et vous actualisez. Power Query va chercher, nettoyer et ajouter les nouvelles lignes tout seul.
+**Q.** Dois-je recréer la requête Power Query tous les mois ?
+
+**A.** Absolument pas. C'est tout l'intérêt de la démarche. La requête est enregistrée dans votre fichier Excel. Le mois prochain, vous ajoutez simplement le nouveau fichier dans le dossier source et vous actualisez. Power Query va chercher, nettoyer et ajouter les nouvelles lignes tout seul.
 
 2. Que se passe-t-il si un fichier contient des formats de date différents ?
 Power Query intègre des outils de détection intelligente. Si une colonne contient un mélange de formats de date (texte, JJ/MM/AAAA, MM/JJ/AAAA), vous pouvez utiliser l'étape "Remplacer les erreurs" ou forcer le type de données "Date" dès l'éditeur pour normaliser l'ensemble instantanément.
 
-3. Mes collègues n'ont pas Power Query sur leur version d'Excel, est-ce un problème ?
-Non, à condition qu'ils utilisent une version moderne d'Excel (Excel 2016 et versions ultérieures, ou Microsoft 365). Power Query est désormais directement intégré sous l'onglet "Données". Seuls les utilisateurs de versions très anciennes (comme Excel 2010 ou 2013) doivent télécharger un add-in gratuit Microsoft.
+**Q.** Mes collègues n'ont pas Power Query sur leur version d'Excel, est-ce un problème ?
+
+**A.** Non, à condition qu'ils utilisent une version moderne d'Excel (Excel 2016 et versions ultérieures, ou Microsoft 365). Power Query est désormais directement intégré sous l'onglet "Données". Seuls les utilisateurs de versions très anciennes (comme Excel 2010 ou 2013) doivent télécharger un add-in gratuit Microsoft.

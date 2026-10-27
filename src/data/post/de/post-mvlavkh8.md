@@ -70,16 +70,16 @@ Da Sie 12 verschiedene Dateien zusammenführen müssen, ist manuelles Kopieren k
 
 Achten Sie beim Zusammenführen internationaler Dateien immer darauf, dass die Textcodierung auf UTF-8 eingestellt ist, damit Umlaute und Sonderzeichen nicht verloren gehen. Machen Sie vor jeder Massenänderung über Power Query oder Makros immer eine Sicherheitskopie des Originalordners. Sollte ein Transformationsschritt fehlschlagen, können Sie so problemlos auf den Ursprungszustand zurückgreifen.
 
-## 5. Häufig gestellte Fragen (FAQ) (FAQ)
+## 5. Häufig gestellte Fragen (FAQ)
 
-Q1. Was mache ich, wenn Excel die mit ChatGPT generierte Formel mit einem #WERT!-Fehler quittiert?
+**Q1.** Was mache ich, wenn Excel die mit ChatGPT generierte Formel mit einem #WERT!-Fehler quittiert?
 
-A1. Das liegt meist daran, dass das Trennzeichen (z. B. ein Komma oder ein Punkt) in der jeweiligen Zelle fehlt oder das verwendete Excel-Format eine englische Funktionsbezeichnung statt der deutschen verlangt. Prüfen Sie, ob Sie TEXTSPLIT oder TEXTTEILEN verwenden, je nachdem, welche Spracheinstellung Ihr Excel hat.
+**A1.** Das liegt meist daran, dass das Trennzeichen (z. B. ein Komma oder ein Punkt) in der jeweiligen Zelle fehlt oder das verwendete Excel-Format eine englische Funktionsbezeichnung statt der deutschen verlangt. Prüfen Sie, ob Sie TEXTSPLIT oder TEXTTEILEN verwenden, je nachdem, welche Spracheinstellung Ihr Excel hat.
 
-Q2. Kann ChatGPT die 12 Excel-Dateien direkt bearbeiten, ohne dass ich Formeln kopieren muss?
+**Q2.** Kann ChatGPT die 12 Excel-Dateien direkt bearbeiten, ohne dass ich Formeln kopieren muss?
 
-A2. Wenn Sie die kostenpflichtige Version mit erweiterten Datenanalyse-Funktionen nutzen, können Sie kleine CSV-Dateien direkt hochladen und von ChatGPT ein Python-Skript generieren lassen, das die Dateien auf Ihrem Rechner bereinigt. Für sensible Unternehmensdaten im Finanzsektor empfiehlt sich jedoch das manuelle Einfügen von Formeln oder die Nutzung von lokalen Power-Query-Routinen.
+**A2.** Wenn Sie die kostenpflichtige Version mit erweiterten Datenanalyse-Funktionen nutzen, können Sie kleine CSV-Dateien direkt hochladen und von ChatGPT ein Python-Skript generieren lassen, das die Dateien auf Ihrem Rechner bereinigt. Für sensible Unternehmensdaten im Finanzsektor empfiehlt sich jedoch das manuelle Einfügen von Formeln oder die Nutzung von lokalen Power-Query-Routinen.
 
-Q3. Wie verhindere ich, dass Excel beim Import von Telefonnummern die führende Null verschluckt?
+**Q3.** Wie verhindere ich, dass Excel beim Import von Telefonnummern die führende Null verschluckt?
 
-A3. Formatieren Sie die Zielspalte in Excel vor dem Einfügen oder Importieren unbedingt als "Text" (nicht als Standard oder Zahl). Andernfalls interpretiert Excel die führende Null in internationalen Vorwahlen als mathematisches Format und löscht sie automatisch heraus.
+**A3.** Formatieren Sie die Zielspalte in Excel vor dem Einfügen oder Importieren unbedingt als "Text" (nicht als Standard oder Zahl). Andernfalls interpretiert Excel die führende Null in internationalen Vorwahlen als mathematisches Format und löscht sie automatisch heraus.

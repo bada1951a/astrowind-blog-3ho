@@ -28,7 +28,7 @@ Warum scheitern so viele Wissensarbeiter im Finanz- und Industriesektor beim Ein
 
 * **Das Kontextfenster-Missverständnis:** Viele glauben, man könne eine 150-seitige PDF einfach per Drag-and-Drop in jede beliebige KI werfen und erhoffen, dass die Zusammenfassung fehlerfrei ist. Oft greifen hierbei jedoch Token-Limits oder die KI verliert bei langen Texten den Fokus auf wichtige Details im Mittelteil.
 * **Die Compliance-Sperre:** Aus Angst vor Datenschutzverstößen verbieten viele Unternehmen den Einsatz von Cloud-KIs komplett. Das führt zu veraltetem manuellem Arbeiten, weil Mitarbeiter den Unterschied zwischen ungesichertem Training und Enterprise-Schnittstellen mit deaktiviertem Model Training nicht kennen.
-* **Fehlende Strukturierung (Prompt-Vorbereitung):** Ohne eine klare Anweisung (Prompt) liefert die KI generische Zusammenfassungen statt messerscharfer, für den Vorstand aufbereiteter Kennzahlen und Risikobewertungen.
+* **Fehlende Strukturierung (Prompt-Vorbereitung):**Ohne eine klare Anweisung (Prompt) liefert die KI generische Zusammenfassungen statt messerscharfer, für den Vorstand aufbereiteter Kennzahlen und Risikobewertungen.
 
 ## 3. Schritt-für-Schritt-Anleitung zur Effizienzsteigerung
 
@@ -39,7 +39,7 @@ Bevor das Dokument auch nur in die Nähe einer Cloud-KI kommt, bereinigen wir es
 
 1. Suchen Sie nach Kundennamen, Kontonummern oder spezifischen Firmeninterna.
 
-2. Ersetzen Sie diese über die Funktion **Bearbeiten > Suchen & Ersetzen** durch neutrale Platzhalter wie `[Kunde_A]` oder `[Institut_X]`.
+2. Ersetzen Sie diese über die Funktion**Bearbeiten > Suchen & Ersetzen**durch neutrale Platzhalter wie `[Kunde_A]` oder `[Institut_X]`.
 
 3. Speichern Sie das Dokument als `Compliance_Anonymisiert.pdf` ab.
 
@@ -61,7 +61,7 @@ Formatiere das Ergebnis in einem klaren, prägnanten Executive Summary auf Deuts
 ### Schritt 3: Upload und Generierung
 1. Ziehen Sie die bereinigte PDF per Drag-and-Drop in das Claude-Chatfenster.
 
-2. Fügen Sie den obigen Prompt ein und drücken Sie auf **Enter**.
+2. Fügen Sie den obigen Prompt ein und drücken Sie auf**Enter**.
 
 3. Nach exakt ca. 180 Sekunden liefert Ihnen Claude eine strukturierte, fehlerfreie Analyse, die Sie direkt in Word exportieren können (**Datei > Exportieren > Word-Dokument**).
 
@@ -78,14 +78,14 @@ Als Automatisierungs-Experte gebe ich Ihnen diese drei goldenen Regeln mit auf d
 
 ## 5. Häufig gestellte Fragen (FAQ)
 
-Q: Kann ich diesen Workflow auch mit anderen KI-Modellen wie ChatGPT oder Gemini durchführen?
+**Q:** Kann ich diesen Workflow auch mit anderen KI-Modellen wie ChatGPT oder Gemini durchführen?
 
-A: Grundsätzlich ja, aber Claude 3.5 Sonnet hat sich bei der Analyse von langen, komplexen Textstrukturen und juristischen Dokumenten als besonders präzise und zuverlässig erwiesen. Achten Sie bei allen Tools auf die Enterprise-Datenschutzoptionen.
+**A:** Grundsätzlich ja, aber Claude 3.5 Sonnet hat sich bei der Analyse von langen, komplexen Textstrukturen und juristischen Dokumenten als besonders präzise und zuverlässig erwiesen. Achten Sie bei allen Tools auf die Enterprise-Datenschutzoptionen.
 
-Q: Was tun, wenn das PDF-Dokument ein geschütztes, nicht kopierbares Format hat?
+**Q:** Was tun, wenn das PDF-Dokument ein geschütztes, nicht kopierbares Format hat?
 
-A: In diesem Fall müssen Sie das Dokument vor der Pseudonymisierung einmal durch eine lokale Texterkennung (OCR) laufen lassen. Nutzen Sie dazu die integrierten Funktionen Ihrer lokalen Scanner-Software oder zertifizierte PDF-Tools.
+**A:** In diesem Fall müssen Sie das Dokument vor der Pseudonymisierung einmal durch eine lokale Texterkennung (OCR) laufen lassen. Nutzen Sie dazu die integrierten Funktionen Ihrer lokalen Scanner-Software oder zertifizierte PDF-Tools.
 
-Q: Ist die Nutzung von Claude in deutschen Finanzinstituten rechtlich unbedenklich?
+**Q:** Ist die Nutzung von Claude in deutschen Finanzinstituten rechtlich unbedenklich?
 
-A: Solange Sie die Enterprise-Version nutzen, bei der vertraglich geregelt ist, dass keine Kundendaten zum Modelltraining verwendet werden, und Sie vorher alle personenbezogenen Daten (DSGVO-konform) pseudonymisiert haben, steht dem effizienten Einsatz nichts im Wege. Klären Sie im Zweifel dennoch immer kurz den internen CISO-Leitfaden ab.
+**A:** Solange Sie die Enterprise-Version nutzen, bei der vertraglich geregelt ist, dass keine Kundendaten zum Modelltraining verwendet werden, und Sie vorher alle personenbezogenen Daten (DSGVO-konform) pseudonymisiert haben, steht dem effizienten Einsatz nichts im Wege. Klären Sie im Zweifel dennoch immer kurz den internen CISO-Leitfaden ab.

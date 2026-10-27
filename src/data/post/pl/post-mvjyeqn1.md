@@ -34,13 +34,13 @@ Przed przejściem do rozwiązania, spójrzmy prawdzie w oczy – oto trzy głów
 
 Zamiast zgadywać składnię funkcji `JEŻELI` i `SUM
 
-A.WARUNKÓW`, zaprzęgniemy do pracy asystenta AI (np. ChatGPT lub Copilota), aby napisał dla nas precyzyjne formuły.
+**A.**WARUNKÓW`, zaprzęgniemy do pracy asystenta AI (np. ChatGPT lub Copilota), aby napisał dla nas precyzyjne formuły.
 
 ### Krok 1: Przygotowanie czystej struktury danych w Excelu
 Zanim poprosisz AI o pomoc, upewnij się, że twoja tabela ma jasny układ kolumn. Otwórz [Excela] i stwórz następujące nagłówki w pierwszym wierszu:
 - Kolumna
 
-A: [Pracownik]
+**A:** [Pracownik]
 - Kolumna B: [Data]
 - Kolumna C: [Wejście]
 - Kolumna D: [Wyjście]
@@ -66,7 +66,7 @@ AI wypluje dla ciebie gotowe formuły. Dla kolumny F (Czas pracy) otrzymasz zazw
 
 *(Uwag
 
-a: Dzielimy przez 1440, ponieważ w systemie dat Excela jedna doba to 1, a doba ma 1440 minut).*
+**a:** Dzielimy przez 1440, ponieważ w systemie dat Excela jedna doba to 1, a doba ma 1440 minut).*
 
 ### Krok 3: Wklejenie i przetestowanie formuły w arkuszu
 1. Zaznacz komórkę `F2` w swoim arkuszu.
@@ -83,14 +83,14 @@ a: Dzielimy przez 1440, ponieważ w systemie dat Excela jedna doba to 1, a doba 
 
 ## Często Zadawane Pytania (FAQ)
 
-Q1. Co zrobić, gdy Excel zamiast wyniku pokazuje serię płotków (#####)?
+**Q1.** Co zrobić, gdy Excel zamiast wyniku pokazuje serię płotków (#####)?
 
-A1.Oznacza to, że kolumna jest zbyt wąska, aby pomieścić wynik, albo wynik działania na czasie dał wartość ujemną (np. pracownik wyszedł wcześniej, niż wskazał wejście). Rozszerz kolumnę lub sprawdź poprawność wpisanych godzin.
+**A1.**Oznacza to, że kolumna jest zbyt wąska, aby pomieścić wynik, albo wynik działania na czasie dał wartość ujemną (np. pracownik wyszedł wcześniej, niż wskazał wejście). Rozszerz kolumnę lub sprawdź poprawność wpisanych godzin.
 
-Q2. Jak zmusić Excela do poprawnego liczenia nadgodzin nocnych przechodzących przez północ?
+**Q2.** Jak zmusić Excela do poprawnego liczenia nadgodzin nocnych przechodzących przez północ?
 
-A2.Poproś AI o zmodyfikowanie formuły z użyciem funkcji `MOD`. Przykładowy prompt: "Napisz formułę Excela uwzględniającą zmianę nocną, gdzie wyjście następuje następnego dnia". Formuła zazwyczaj przyjmuje postać `=MOD(D2-C2; 1)`.
+**A2.**Poproś AI o zmodyfikowanie formuły z użyciem funkcji `MOD`. Przykładowy prompt: "Napisz formułę Excela uwzględniającą zmianę nocną, gdzie wyjście następuje następnego dnia". Formuła zazwyczaj przyjmuje postać `=MOD(D2-C2; 1)`.
 
-Q3. Czy mogę zautomatyzować ten proces całkowicie, bez ręcznego wklejania formuł co miesiąc?
+**Q3.** Czy mogę zautomatyzować ten proces całkowicie, bez ręcznego wklejania formuł co miesiąc?
 
-A3.Tak. Najlepszym rozwiązaniem jest użycie wbudowanego w Excela narzędzia [Power Query] (znajdziesz je w zakładce [Dane] > [Pobierz dane]). Pozwala ono zapisać reguły czyszczenia danych i obliczeń raz, a potem po prostu klikać [Odśwież] przy każdym nowym raporcie miesięcznym.
+**A3.**Tak. Najlepszym rozwiązaniem jest użycie wbudowanego w Excela narzędzia [Power Query] (znajdziesz je w zakładce [Dane] > [Pobierz dane]). Pozwala ono zapisać reguły czyszczenia danych i obliczeń raz, a potem po prostu klikać [Odśwież] przy każdym nowym raporcie miesięcznym.

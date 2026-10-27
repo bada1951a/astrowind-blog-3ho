@@ -54,14 +54,14 @@ Ważna wskazówka eksperta: Zanim zaczniesz masowo przetwarzać dane wrażliwe l
 
 Oto najczęściej zadawane pytania, które mogą pojawić się podczas wdrażania tej metody w Twoim biurze:
 
-Q1. Co zrobić, gdy numery telefonów mają zupełnie inne prefiksy międzynarodowe i spacji w różnych miejscach?
+**Q1.** Co zrobić, gdy numery telefonów mają zupełnie inne prefiksy międzynarodowe i spacji w różnych miejscach?
 
-A1. Najlepszym rozwiązaniem jest poproszenie ChatGPT o napisanie krótkiego makra VBA lub skryptu w języku Python, który przeskanuje kolumnę i oczyści ciąg znaków ze wszystkich niedozwolonych znaków oprócz cyfr i plusa.
+**A1.** Najlepszym rozwiązaniem jest poproszenie ChatGPT o napisanie krótkiego makra VBA lub skryptu w języku Python, który przeskanuje kolumnę i oczyści ciąg znaków ze wszystkich niedozwolonych znaków oprócz cyfr i plusa.
 
-Q2. Czy ta metoda zadziała na starszych wersjach programu Excel sprzed pakietu Microsoft 365?
+**Q2.** Czy ta metoda zadziała na starszych wersjach programu Excel sprzed pakietu Microsoft 365?
 
-A2. Tak, ale zamiast zaawansowanych funkcji dynamicznych będziesz musiał polegać na tradycyjnych kombinacjach funkcji LEWY, PRAWY, ZNAJDŹ oraz FRAG.TEKST, które również bez problemu wygeneruje dla Ciebie sztuczna inteligencja.
+**A2.** Tak, ale zamiast zaawansowanych funkcji dynamicznych będziesz musiał polegać na tradycyjnych kombinacjach funkcji LEWY, PRAWY, ZNAJDŹ oraz FRAG.TEKST, które również bez problemu wygeneruje dla Ciebie sztuczna inteligencja.
 
-Q3. Jak uniknąć błędów kodowania znaków przy scalaniu plików z różnych krajów?
+**Q3.** Jak uniknąć błędów kodowania znaków przy scalaniu plików z różnych krajów?
 
-A3. Najlepiej otwierać każdy plik tekstowy lub CSV przez kreator importu danych w Excelu i ręcznie wskazywać kodowanie UTF-8, co całkowicie eliminuje problem krzaków zamiast polskich lub zagranicznych liter.
+**A3.** Najlepiej otwierać każdy plik tekstowy lub CSV przez kreator importu danych w Excelu i ręcznie wskazywać kodowanie UTF-8, co całkowicie eliminuje problem krzaków zamiast polskich lub zagranicznych liter.

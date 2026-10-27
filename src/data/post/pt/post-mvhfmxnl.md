@@ -12,7 +12,7 @@ theme: "Electric Cyan Speed"
 
 Eram 18h30 de uma sexta-feira caótica no nosso escritório na Berrini, em São Paulo. O ar-condicionado já tinha desligado, o chefe havia mandado uma mensagem no Teams cobrindo a tela do meu celular com a pergunta clássic
 
-a: "Consegue fechar a projeção de estoque do próximo trimestre até segunda de manhã?". Na minha tela, uma planilha do Excel com 15.000 linhas de histórico de vendas dos últimos dois anos parecia zombar de mim. As fórmulas tradicionais de média móvel estavam dando resultados absurdos por causa da sazonalidade, e eu estava prestes a passar o fim de semana inteiro fazendo contas no braço, copiando e colando dados em ferramentas externas que a nossa TI nem aprova. Foi aí que decidi parar de inventar a roda e usar os recursos nativos de IA e análise preditiva que já estavam escondidos dentro do próprio Excel, prontos para salvar meu fim de semana. ![How to Use AI to Predict Next Quarter Inventory Needs Directly in Excel Spreadsheets AI Automation Guide](https://picsum.photos/seed/work-mvhforaa-7-b/1000/550.jpg)
+**a:** "Consegue fechar a projeção de estoque do próximo trimestre até segunda de manhã?". Na minha tela, uma planilha do Excel com 15.000 linhas de histórico de vendas dos últimos dois anos parecia zombar de mim. As fórmulas tradicionais de média móvel estavam dando resultados absurdos por causa da sazonalidade, e eu estava prestes a passar o fim de semana inteiro fazendo contas no braço, copiando e colando dados em ferramentas externas que a nossa TI nem aprova. Foi aí que decidi parar de inventar a roda e usar os recursos nativos de IA e análise preditiva que já estavam escondidos dentro do próprio Excel, prontos para salvar meu fim de semana. ![How to Use AI to Predict Next Quarter Inventory Needs Directly in Excel Spreadsheets AI Automation Guide](https://picsum.photos/seed/work-mvhforaa-7-b/1000/550.jpg)
 
 Se você também já perdeu horas tentando adivinhar quanto comprar de mercadoria para o próximo trimestre enquanto o prazo do fechamento aperta, este guia rápido vai te mostrar o caminho das pedras em dois passos simples.
 
@@ -28,13 +28,13 @@ Antes de irmos para a solução, vale a pena entender por que o método tradicio
 
 1. Sazonalidade ignorad
 
-a: Médias simples tratam o mês de dezembro da mesma forma que março, gerando rupturas ou excesso de produtos parados.
+**a:** Médias simples tratam o mês de dezembro da mesma forma que março, gerando rupturas ou excesso de produtos parados.
 
 2. Dados ruidosos: Picos de vendas causados por promoções pontuais distorcem a tendência real se a inteligência não for capaz de suavizar as exceções.
 
 3. Falta de limites de confianç
 
-a: Fórmulas comuns dizem apenas um número seco, sem mostrar a margem de erro superior e inferior para evitar falta de insumos.
+**a:** Fórmulas comuns dizem apenas um número seco, sem mostrar a margem de erro superior e inferior para evitar falta de insumos.
 
 ---
 
@@ -44,7 +44,7 @@ Esqueça softwares caros. Vamos usar o que você já tem instalado no computador
 Para a IA entender o seu histórico, sua tabela precisa de apenas duas colunas limpas:
 * Coluna
 
-A: Data (ex: formato mensal 01/01/2024, 01/02/2024...)
+**A:** Data (ex: formato mensal 01/01/2024, 01/02/2024...)
 * Coluna B: Quantidade vendida ou consumida no período.
 * *Dica de Ouro:* Selecione todos os dados dessas duas colunas antes de avançar.
 
@@ -65,7 +65,7 @@ A: Data (ex: formato mensal 01/01/2024, 01/02/2024...)
 * Faça Backup: Nunca rode macros ou ferramentas em cima do arquivo oficial sem antes salvar uma cópia com sufixo "_backup".
 * Validação Human
 
-a: A IA aponta tendências matemáticas com base no passado. Se houver um fator externo novo no horizonte (como a entrada de um concorrente agressivo ou mudança tributária), ajuste o resultado final em 10-15% para baixo ou para cima conforme o seu julgamento de mercado.
+**a:** A IA aponta tendências matemáticas com base no passado. Se houver um fator externo novo no horizonte (como a entrada de um concorrente agressivo ou mudança tributária), ajuste o resultado final em 10-15% para baixo ou para cima conforme o seu julgamento de mercado.
 
 ---
 
@@ -74,8 +74,9 @@ a: A IA aponta tendências matemáticas com base no passado. Se houver um fator 
 1. Preciso ter a versão mais cara do Microsoft 365 para usar isso?
 Não. A ferramenta de Folha de Previsão está disponível nativamente desde o Excel 2016 e em praticamente todas as versões corporativas atuais do Microsoft 365.
 
-2. Meus dados estão em dias da semana, e não em meses. A IA funciona?
-Sim. O algoritmo detecta automaticamente se o intervalo é diário, semanal ou mensal, desde que as datas estejam ordenadas cronologicamente de forma correta e sem células em branco no meio do intervalo.
+**Q.** Meus dados estão em dias da semana, e não em meses. A IA funciona?
+
+**A.** Sim. O algoritmo detecta automaticamente se o intervalo é diário, semanal ou mensal, desde que as datas estejam ordenadas cronologicamente de forma correta e sem células em branco no meio do intervalo.
 
 3. Posso usar isso para prever estoque de 50 produtos diferentes ao mesmo tempo?
 A ferramenta padrão cria um gráfico por vez. Para grandes inventários com centenas de SKUs, o ideal é estruturar sua tabela com colunas separadas por produto ou utilizar suplementos de automação via Power Query para rodar o modelo em lote.

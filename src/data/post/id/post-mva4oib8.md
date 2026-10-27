@@ -40,7 +40,7 @@ Jangan meminta ChatGPT membuat rumus secara abstrak. Berikan contoh data mentah 
 
 * Contoh Data Mentah di Kolom
 
-A2: `Bpk. Budi Santoso (0812-9988-7766) - b.santoso@email.com`
+**A2:** `Bpk. Budi Santoso (0812-9988-7766) - b.santoso@email.com`
 * Hasil yang Diinginkan: Ekstrak hanya nomor HP atau email saja secara otomatis.
 
 #### Langkah 2: Gunakan Prompt Spesifik untuk Regex & Formula
@@ -60,23 +60,23 @@ Atau jika Anda ingin membersihkan seluruh kolom, cukup arahkan kursor ke menu Fo
 <div style="border-left: 4px solid #ffffff; padding: 12px 16px; margin: 20px 0; background-color: rgba(255,255,255,0.05); border-radius: 4px; color: #111827;">
 <strong style="color: #ffffff;">⚠️ Peringatan Penting Keamanan Dat
 
-a:</strong> Jangan pernah memasukkan data sensitif perusahaan, data pribadi nasabah, atau informasi finansial rahasia ke dalam prompt AI publik. Gunakan data tiruan (*dummy data*) dengan struktur yang sama persis saat meminta bantuan ChatGPT.
+**a:**</strong> Jangan pernah memasukkan data sensitif perusahaan, data pribadi nasabah, atau informasi finansial rahasia ke dalam prompt AI publik. Gunakan data tiruan (*dummy data*) dengan struktur yang sama persis saat meminta bantuan ChatGPT.
 </div>
 
 ---
 
 ### FA
 
-Q: Pertanyaan yang Sering Diajukan Profesional Kantor
+**Q:** Pertanyaan yang Sering Diajukan Profesional Kantor
 
-Q: Apakah rumus hasil buatan ChatGPT langsung bisa dipakai di Google Sheets versi bahasa Indonesia?
+**Q:** Apakah rumus hasil buatan ChatGPT langsung bisa dipakai di Google Sheets versi bahasa Indonesia?
 
-A: Tergantung pengaturan bahasa pada akun Google Sheets Anda. Jika Google Sheets Anda menggunakan bahasa Indonesia, nama fungsi terkadang perlu disesuaikan (misalnya pemisah argumen menggunakan titik koma `;` alih-alih koma `,`). Anda cukup menambahkan catatan pada prompt: *"Berikan rumus dengan pemisah titik koma (;)"*.
+**A:** Tergantung pengaturan bahasa pada akun Google Sheets Anda. Jika Google Sheets Anda menggunakan bahasa Indonesia, nama fungsi terkadang perlu disesuaikan (misalnya pemisah argumen menggunakan titik koma `;` alih-alih koma `,`). Anda cukup menambahkan catatan pada prompt: *"Berikan rumus dengan pemisah titik koma (;)"*.
 
-Q: Bagaimana jika data saya sangat banyak hingga Google Sheets terasa lambat saat rumus ditarik ke bawah?
+**Q:** Bagaimana jika data saya sangat banyak hingga Google Sheets terasa lambat saat rumus ditarik ke bawah?
 
-A: Rumus `REGEX` yang terlalu kompleks pada puluhan ribu baris memang bisa membuat lembar kerja berat (*lag*). Solusinya, gunakan fitur Data > Hapus duplikat atau gunakan ChatGPT untuk membuatkan skrip Google Apps Script sederhana yang memproses data lewat *backend* secara sekaligus.
+**A:** Rumus `REGEX` yang terlalu kompleks pada puluhan ribu baris memang bisa membuat lembar kerja berat (*lag*). Solusinya, gunakan fitur Data > Hapus duplikat atau gunakan ChatGPT untuk membuatkan skrip Google Apps Script sederhana yang memproses data lewat *backend* secara sekaligus.
 
-Q: Apakah saya harus paham bahasa pemrograman untuk menggunakan trik ini?
+**Q:** Apakah saya harus paham bahasa pemrograman untuk menggunakan trik ini?
 
-A: Sama sekali tidak. Kunci utamanya adalah kemampuan mendeskripsikan masalah Anda dengan bahasa yang jelas kepada ChatGPT, layaknya Anda memberi instruksi kepada asisten junior di kantor.
+**A:** Sama sekali tidak. Kunci utamanya adalah kemampuan mendeskripsikan masalah Anda dengan bahasa yang jelas kepada ChatGPT, layaknya Anda memberi instruksi kepada asisten junior di kantor.

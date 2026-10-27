@@ -57,14 +57,14 @@ Tip Pro Produktivitas: Shortcut pintasan keyboard Ctrl + E (Flash Fill) adalah p
 Peringatan dari praktisi: Pastikan untuk selalu memeriksa ulang (double check) hasil akhir pemisahan data di bagian bawah baris dokumen Anda. Terkadang, nomor HP yang tidak memiliki awalan standar atau alamat yang sangat pendek bisa lolos dari pembacaan pola otomatis, sehingga memerlukan penyesuaian manual secara cepat.
 ## 5. Pertanyaan yang Sering Diajukan (FAQ) (FAQ)
 
-Q1. Apakah cara ini bisa digunakan untuk versi Microsoft Excel yang lama?
+**Q1.** Apakah cara ini bisa digunakan untuk versi Microsoft Excel yang lama?
 
-A1. Fungsi seperti TEXTBEFORE dan TEXTAFTER hanya tersedia di Excel 365 atau Excel versi web terbaru. Jika Anda menggunakan versi lama seperti Excel 2016 atau 2019, sangat disarankan menggunakan fitur Flash Fill (Ctrl + E) atau meminta ChatGPT membuatkan rumus kombinasi MID, FIND, dan LEN.
+**A1.** Fungsi seperti TEXTBEFORE dan TEXTAFTER hanya tersedia di Excel 365 atau Excel versi web terbaru. Jika Anda menggunakan versi lama seperti Excel 2016 atau 2019, sangat disarankan menggunakan fitur Flash Fill (Ctrl + E) atau meminta ChatGPT membuatkan rumus kombinasi MID, FIND, dan LEN.
 
-Q2. Bagaimana jika nomor HP klien diawali dengan kode negara seperti +62 alih-alih angka 0?
+**Q2.** Bagaimana jika nomor HP klien diawali dengan kode negara seperti +62 alih-alih angka 0?
 
-A2. Anda tinggal mengganti kata kunci pencarian di dalam prompt ChatGPT atau rumus Excel dari angka " 08" menjadi "+62" agar sistem mendeteksi pola nomor telepon internasional dengan akurat.
+**A2.** Anda tinggal mengganti kata kunci pencarian di dalam prompt ChatGPT atau rumus Excel dari angka " 08" menjadi "+62" agar sistem mendeteksi pola nomor telepon internasional dengan akurat.
 
-Q3. Apakah aman memasukkan data klien asli ke dalam ChatGPT?
+**Q3.** Apakah aman memasukkan data klien asli ke dalam ChatGPT?
 
-A3. Untuk data perusahaan yang bersifat sangat rahasia atau memuat informasi pribadi sensitif (PII), sebaiknya samarkan atau ganti terlebih dahulu angka dan nama jalannya dengan data dummy sebelum Anda memasukkannya ke dalam kolom percobaan AI.
+**A3.** Untuk data perusahaan yang bersifat sangat rahasia atau memuat informasi pribadi sensitif (PII), sebaiknya samarkan atau ganti terlebih dahulu angka dan nama jalannya dengan data dummy sebelum Anda memasukkannya ke dalam kolom percobaan AI.

@@ -89,7 +89,7 @@ function wyslijRaportPDF() {
 
 1. Dopasuj nazwę arkusz
 
-a: W linijce `var sheet = spreadsheet.getSheetByName("RaportTygodniowy");` wpisz dokładnie taką nazwę, jaką ma Twoja zakładka z raportem w Google Sheets.
+**a:** W linijce `var sheet = spreadsheet.getSheetByName("RaportTygodniowy");` wpisz dokładnie taką nazwę, jaką ma Twoja zakładka z raportem w Google Sheets.
 
 2. Wpisz adres odbiorcy: Zmień `"zarzad@twojadomena. pl"` na docelowy adres e-mail (lub listę adresów rozdzielonych przecinkami).
 
@@ -116,7 +116,7 @@ Nie chcesz przecież klikać "Uruchom" co tydzień ręcznie. Zautomatyzujmy to:
 <div style="border-left: 4px solid #0284c7; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Ważna wskazówka ekspertow
 
-a:</strong> Pamiętaj, aby przed wysyłką upewnić się, że Twoje formuły odświeżają się poprawnie. Jeśli korzystasz z zewnętrznych zapytań (np. IMPORTDATA czy IMPORTXML), mogą one potrzebować chwili na załadowanie danych przed uruchomieniem skryptu PDF.
+**a:**</strong> Pamiętaj, aby przed wysyłką upewnić się, że Twoje formuły odświeżają się poprawnie. Jeśli korzystasz z zewnętrznych zapytań (np. IMPORTDATA czy IMPORTXML), mogą one potrzebować chwili na załadowanie danych przed uruchomieniem skryptu PDF.
 </div>
 
 ---

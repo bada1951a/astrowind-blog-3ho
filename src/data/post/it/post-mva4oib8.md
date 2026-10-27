@@ -19,7 +19,7 @@ La colonna con i codici cliente e i numeri di telefono è completamente illeggib
 <div style="border-left: 4px solid #06b6d4; padding: 12px 16px; margin: 20px 0; background-color: rgba(6,182,212,0.05); border-radius: 4px; color: #111827;">
 <strong>Situazione critic
 
-a:</strong> Cercare di scrivere una formula di pulizia dati o un'espressione regolare (Regex) complessa a mano, sotto pressione e tra le lacrime, porta solo a errori di sintassi e a sprecare minuti preziosi.
+**a:**</strong> Cercare di scrivere una formula di pulizia dati o un'espressione regolare (Regex) complessa a mano, sotto pressione e tra le lacrime, porta solo a errori di sintassi e a sprecare minuti preziosi.
 </div>
 
 ## Perché ci incastriamo sempre con le Regex e le formule complesse?
@@ -36,7 +36,7 @@ Quando lavoriamo con volumi enormi di dati disordinati in Google Sheets, ci scon
 
 ## Soluzione Rapid
 
-a: Guida in 2 Fasi per Svoltare il Lavoro
+**a:** Guida in 2 Fasi per Svoltare il Lavoro
 
 Invece di perdere tempo prezioso a tentativi, usiamo ChatGPT come il nostro data engineer personale per estrarre la formula esatta in pochi secondi.
 

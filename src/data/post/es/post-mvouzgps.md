@@ -24,9 +24,9 @@ El resultado fue un desastre total: una cadena interminable de instrucciones don
 
 ¿Por qué fallan los intentos de procesar documentos extensos o generar fórmulas avanzadas en el entorno diario de oficina? Identifiqué tres causas raíz que frenan nuestra productividad:
 
-- **Saturación del contexto inicial:** Intentar pegar un documento de ciento cincuenta páginas o pedir una fórmula con diez condiciones lógicas en un solo mensaje satura la capacidad de atención inmediata del modelo, provocando alucinaciones y errores de sintaxis básicos.
-- **Falta de estructuración modular:** Delegar tareas complejas como un bloque monolítico en lugar de dividir el problema en subtareas lógicas (extracción, validación, aplicación).
-- **Desconocimiento de los artefactos de IA:** No utilizar interfaces interactivas que permiten aislar el código o los resúmenes en paneles dedicados para copiar y probar sin romper el flujo de trabajo.
+- **Saturación del contexto inicial:**Intentar pegar un documento de ciento cincuenta páginas o pedir una fórmula con diez condiciones lógicas en un solo mensaje satura la capacidad de atención inmediata del modelo, provocando alucinaciones y errores de sintaxis básicos.
+-**Falta de estructuración modular:**Delegar tareas complejas como un bloque monolítico en lugar de dividir el problema en subtareas lógicas (extracción, validación, aplicación).
+-**Desconocimiento de los artefactos de IA:**No utilizar interfaces interactivas que permiten aislar el código o los resúmenes en paneles dedicados para copiar y probar sin romper el flujo de trabajo.
 
 ## 3. Solución práctica paso a paso para optimizar el flujo
 
@@ -47,7 +47,7 @@ Si necesitas cruzar los resultados de la normativa con tus hojas de cálculo, p�
 ```
 
 ### Paso 3: Exportación mediante Artifacts
-Utiliza la función de **Artifacts** de Claude para aislar el resumen ejecutivo o las tablas de datos. Esto te permite exportar el contenido directamente a un archivo limpio o copiarlo a tus herramientas habituales sin formato basura.
+Utiliza la función de**Artifacts** de Claude para aislar el resumen ejecutivo o las tablas de datos. Esto te permite exportar el contenido directamente a un archivo limpio o copiarlo a tus herramientas habituales sin formato basura.
 
 ## 4. Consejos y advertencias de un experto en productividad
 
@@ -59,14 +59,14 @@ Trabajar con IA en entornos corporativos exige método. Siempre mantén una copi
 
 ## 5. Preguntas Frecuentes (FAQ)
 
-Q: ¿Puedo usar esta técnica con documentos escaneados que son solo imágenes?
+**Q:** ¿Puedo usar esta técnica con documentos escaneados que son solo imágenes?
 
-A: Sí, Claude 3.5 Sonnet cuenta con capacidades avanzadas de reconocimiento óptico de caracteres (OCR), por lo que puede leer PDFs escaneados con alta precisión, aunque el proceso puede tomar unos segundos adicionales.
+**A:** Sí, Claude 3.5 Sonnet cuenta con capacidades avanzadas de reconocimiento óptico de caracteres (OCR), por lo que puede leer PDFs escaneados con alta precisión, aunque el proceso puede tomar unos segundos adicionales.
 
-Q: ¿Qué hago si la fórmula generada sigue dando error de sintaxis en Excel?
+**Q:** ¿Qué hago si la fórmula generada sigue dando error de sintaxis en Excel?
 
-A: Pídele específicamente al asistente que desglose la fórmula en columnas auxiliares intermedias. Reducir la complejidad de la función anidada elimina los errores de paréntesis y facilita la auditoría visual de los datos.
+**A:** Pídele específicamente al asistente que desglose la fórmula en columnas auxiliares intermedias. Reducir la complejidad de la función anidada elimina los errores de paréntesis y facilita la auditoría visual de los datos.
 
-Q: ¿Hay un límite estricto en el tamaño del PDF que puedo subir?
+**Q:** ¿Hay un límite estricto en el tamaño del PDF que puedo subir?
 
-A: El límite actual de subida por archivo en Claude permite documentos muy extensos de cientos de páginas, pero si el archivo supera los límites de tokens de la sesión, es recomendable dividir el documento por capítulos temáticos.
+**A:** El límite actual de subida por archivo en Claude permite documentos muy extensos de cientos de páginas, pero si el archivo supera los límites de tokens de la sesión, es recomendable dividir el documento por capítulos temáticos.

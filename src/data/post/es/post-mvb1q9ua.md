@@ -12,7 +12,7 @@ theme: "Mint Fresh Engineering"
 
 Eran las 8:45 de la mañana en nuestra oficina del Paseo de la Castellana en Madrid. Faltaban exactamente quince minutos para que el comité directivo revisara el reporte urgente de métricas comerciales del trimestre. Abrí el archivo de Excel y el caos me golpeó de inmediato: una base de datos con más de cinco mil correos electrónicos mal formateados, nombres mezclados con apellidos en la misma celda, espacios invisibles y caracteres extraños que hacían que las fórmulas de búsqueda devolvieran un fatídico `#VALOR!`. Sudor frío, el café en la mesa empezando a enfriarse y la mirada del director general a punto de caer sobre mi pantalla. Intenté solucionarlo a las carreras con funciones anidadas de `EXTRAE`, `HALLAR` y `REEMPLAZAR`. Fue una pérdida de tiempo total. Las fórmulas se rompían con cada celda que tenía un formato ligeramente distinto. Copiar y pegar a mano ni se dig
 
-a: imposible terminar antes de Navidad.
+**a:** imposible terminar antes de Navidad.
 
 ![AI Productivity & Workflow Automation](https://picsum.photos/seed/office356/1000/550)
 
@@ -26,7 +26,7 @@ Por suerte, rescaté la situación utilizando un truco rápido con IA integrada 
 
 Antes de pasar a la solución, veamos por qué este problema nos amarga la vida tan seguido en la oficin
 
-a:
+**a:**
 
 1. Datos de múltiples fuentes: Los comerciales pegan leads de LinkedIn, formularios web y tarjetas de visita sin ningún filtro. El resultado es un cementerio de formatos: mayúsculas, minúsculas, correos con espacios al inicio y nombres al revés (Apellido, Nombre).
 
@@ -76,7 +76,7 @@ Cuando trabajes con información corporativa sensible o datos de clientes (RGPD 
 
 ---
 
-## 5. Preguntas Frecuentes (FAQ) (FAQ)
+## 5. Preguntas Frecuentes (FAQ)
 
 ### ¿Qué hago si el Relleno Flash (Ctrl + E) no detecta el patrón del nombre?
 A veces, cuando los datos son muy heterogéneos, el atajo se confunde. Ayúdale escribiendo manualmente los dos primeros ejemplos correctos en celdas consecutivas antes de presionar Ctrl + E de nuevo para forzar el reconocimiento del patrón.

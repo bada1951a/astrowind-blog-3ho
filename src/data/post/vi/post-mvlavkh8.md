@@ -50,14 +50,14 @@ De dam bảo an toan thong tin va nang cao hieu suat lam viec trong nhung lan sa
 
 Duoi day la phan giai dap nhung cau hoi thuong gap tu nhung nguoi lam viec van phong khi xu ly tinh huong nay:
 
-Q1. Toi dang dung phien ban Excel cu 2016 thi co dung duoc ham tach chuoi ma ChatGPT cung cap khong?
+**Q1.** Toi dang dung phien ban Excel cu 2016 thi co dung duoc ham tach chuoi ma ChatGPT cung cap khong?
 
-A1. Cac ham moi nhu TEXTAFTER hay TEXTBEFORE chi co tu phien ban Excel 365 hoac Excel Web. Tuy nhien, ban chi can noi voi ChatGPT rang "Toi dang dung Excel 2016", lap tuc AI se cung cấp giai phap thay the bang cach ket hợp cac ham co dien nhu MID, FIND, va LEN rat hieu qua.
+**A1.** Cac ham moi nhu TEXTAFTER hay TEXTBEFORE chi co tu phien ban Excel 365 hoac Excel Web. Tuy nhien, ban chi can noi voi ChatGPT rang "Toi dang dung Excel 2016", lap tuc AI se cung cấp giai phap thay the bang cach ket hợp cac ham co dien nhu MID, FIND, va LEN rat hieu qua.
 
-Q2. Khi bam nut Debug cua loi VBA, toi co nen tu sua cac dong code mau do khong?
+**Q2.** Khi bam nut Debug cua loi VBA, toi co nen tu sua cac dong code mau do khong?
 
-A2. Neu ban khong co nen tang ve lap trinh VBA, tot nhat khong nen tu sua vi se de gay ra loi he thong nang hon. Hay copy nguyen doan code loi do, dan vao ChatGPT va yeu cau AI tim loi giup hoac chuyen doi no thanh ham Excel thuan tuy.
+**A2.** Neu ban khong co nen tang ve lap trinh VBA, tot nhat khong nen tu sua vi se de gay ra loi he thong nang hon. Hay copy nguyen doan code loi do, dan vao ChatGPT va yeu cau AI tim loi giup hoac chuyen doi no thanh ham Excel thuan tuy.
 
-Q3. So dien thoai trong file cua toi co cai bat dau bang dau +84, co cai co so 0, ChatGPT co xu ly dong thoi duoc khong?
+**Q3.** So dien thoai trong file cua toi co cai bat dau bang dau +84, co cai co so 0, ChatGPT co xu ly dong thoi duoc khong?
 
-A3. Hoan toan duoc. Ban chi can dua cho ChatGPT 3 dong du lieu mau co dinh dang khac nhau nhat, AI se thiet ke cho ban mot bieu thuc chinh quy hoac mot ham ket hop de chuan hoa tat ca cac so dien thoai ve cung mot dinh dang thong nhat truoc khi tach cot.
+**A3.** Hoan toan duoc. Ban chi can dua cho ChatGPT 3 dong du lieu mau co dinh dang khac nhau nhat, AI se thiet ke cho ban mot bieu thuc chinh quy hoac mot ham ket hop de chuan hoa tat ca cac so dien thoai ve cung mot dinh dang thong nhat truoc khi tach cot.

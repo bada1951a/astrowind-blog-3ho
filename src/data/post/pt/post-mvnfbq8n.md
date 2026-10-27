@@ -63,14 +63,14 @@ Sempre faça uma validação cruzada rápida dos números e prazos críticos cit
 
 ## 5. Perguntas Frecuentes (FAQ)
 
-Q: O Claude 3.5 Sonnet consegue ler arquivos PDF escaneados que são imagens?
+**Q:** O Claude 3.5 Sonnet consegue ler arquivos PDF escaneados que são imagens?
 
-A: Sim, ele possui excelente capacidade de OCR (reconhecimento óptico de caracteres) nativa. No entanto, arquivos com textos digitalizados e limpos geram resultados mais rápidos e precisos.
+**A:** Sim, ele possui excelente capacidade de OCR (reconhecimento óptico de caracteres) nativa. No entanto, arquivos com textos digitalizados e limpos geram resultados mais rápidos e precisos.
 
-Q: Existe limite de tamanho de arquivo para upload no chat?
+**Q:** Existe limite de tamanho de arquivo para upload no chat?
 
-A: Atualmente, o limite padrão suporta tranquilamente PDFs extensos de centenas de páginas. Caso o arquivo seja extremamente pesado, você pode dividi-lo por capítulos, embora o Sonnet processe volumes grandes com facilidade.
+**A:** Atualmente, o limite padrão suporta tranquilamente PDFs extensos de centenas de páginas. Caso o arquivo seja extremamente pesado, você pode dividi-lo por capítulos, embora o Sonnet processe volumes grandes com facilidade.
 
-Q: Posso pedir para o Claude reescrever o resumo no formato de uma apresentação de slides?
+**Q:** Posso pedir para o Claude reescrever o resumo no formato de uma apresentação de slides?
 
-A: Com certeza. Basta ajustar o comando final para: "Com base na análise anterior, estruture as informações em tópicos prontos para slides de PowerPoint para uma reunião executiva de 10 minutos".
+**A:** Com certeza. Basta ajustar o comando final para: "Com base na análise anterior, estruture as informações em tópicos prontos para slides de PowerPoint para uma reunião executiva de 10 minutos".

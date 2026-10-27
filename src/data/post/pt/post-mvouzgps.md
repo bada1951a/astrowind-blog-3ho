@@ -22,7 +22,7 @@ Por que nós, profissionais de escritório, ainda perdemos horas preciosas com t
 
 * **Excesso de volume textual:** Documentos regulatórios e relatórios de compliance são redigidos com um juridiquês denso, propositalmente detalhado, que esconde as informações cruciais sob camadas de preâmbulos.
 * **Falta de diretrizes para inteligência artificial:** Muitas pessoas tentam usar ferramentas de IA de forma genérica, digitando apenas "resuma este PDF", o que resulta em respostas superficiais e inúteis para o ambiente corporativo.
-* **Processos manuais desconectados:** Confiar apenas na leitura humana de ponta a ponta para prazos apertados gera exaustão mental, erros de interpretação e atrasos catastróficos em entregas para executivos.
+* **Processos manuais desconectados:**Confiar apenas na leitura humana de ponta a ponta para prazos apertados gera exaustão mental, erros de interpretação e atrasos catastróficos em entregas para executivos.
 
 <div style="border-left: 4px solid #a855f7; padding: 12px 16px; margin: 20px 0; background-color: rgba(168,85,247,0.05); border-radius: 4px; color: #111827;">
 <strong>Dica do Especialista:</strong> Nunca envie arquivos brutos confidenciais sem antes verificar as políticas de privacidade da ferramenta de IA ou anonimizar dados sensíveis de clientes e parceiros corporativos.
@@ -30,7 +30,7 @@ Por que nós, profissionais de escritório, ainda perdemos horas preciosas com t
 
 ## 3. Resolução Passo a Passo com Claude 3.5 Sonnet
 
-Para resolver o problema do relatório de cento e cinquenta páginas em tempo recorde, utilizei o **Claude 3.5 Sonnet**, atualmente a ferramenta mais avançada para análise de documentos longos devido à sua imensa janela de contexto e precisão textual. Siga este roteiro prático para aplicar no seu dia a dia:
+Para resolver o problema do relatório de cento e cinquenta páginas em tempo recorde, utilizei o**Claude 3.5 Sonnet**, atualmente a ferramenta mais avançada para análise de documentos longos devido à sua imensa janela de contexto e precisão textual. Siga este roteiro prático para aplicar no seu dia a dia:
 
 ### Passo 1: Preparação e Upload do Arquivo
 Acesse a interface oficial do Claude e clique no ícone de clipe de papel para anexar o seu arquivo PDF volumoso. Certifique-se de que o documento não esteja protegido por senhas impeditivas de leitura digital.
@@ -59,14 +59,14 @@ Além disso, mantenha o hábito de salvar os prompts mais eficientes em um bloco
 
 ## 5. Perguntas Frequentes (FAQ)
 
-Q: O Claude 3.5 Sonnet lê PDFs digitalizados que são apenas imagens?
+**Q:** O Claude 3.5 Sonnet lê PDFs digitalizados que são apenas imagens?
 
-A: Sim, ele possui capacidade de OCR integrada, mas documentos com textos selecionáveis geram análises muito mais rápidas e precisas sem erros de interpretação tipográfica.
+**A:** Sim, ele possui capacidade de OCR integrada, mas documentos com textos selecionáveis geram análises muito mais rápidas e precisas sem erros de interpretação tipográfica.
 
-Q: Meus dados corporativos ficam salvos e são usados para treinar a inteligência artificial?
+**Q:** Meus dados corporativos ficam salvos e são usados para treinar a inteligência artificial?
 
-A: Depende do plano contratado. Em contas corporativas e na API, as políticas de privacidade garantem que os dados enviados não sejam utilizados para o treinamento de novos modelos públicos. Verifique sempre as configurações da sua conta.
+**A:** Depende do plano contratado. Em contas corporativas e na API, as políticas de privacidade garantem que os dados enviados não sejam utilizados para o treinamento de novos modelos públicos. Verifique sempre as configurações da sua conta.
 
-Q: Posso usar essa mesma técnica em planilhas do Excel ou Google Sheets?
+**Q:** Posso usar essa mesma técnica em planilhas do Excel ou Google Sheets?
 
-A: Embora o Claude seja excelente para textos longos em PDF, para planilhas corrompidas ou análise de dados numéricos massivos, o ideal é combinar o uso com scripts em Python ou ferramentas específicas de tratamento de dados.
+**A:** Embora o Claude seja excelente para textos longos em PDF, para planilhas corrompidas ou análise de dados numéricos massivos, o ideal é combinar o uso com scripts em Python ou ferramentas específicas de tratamento de dados.

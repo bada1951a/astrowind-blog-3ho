@@ -73,11 +73,11 @@ Khi su dung AI de xu ly du lieu noi bo cua cong ty, ban tuyet doi phai ghi nho c
 
 ### Cac cau hoi thuong gap (FAQ)
 
-Q1: Neu cong ty toi chua mua ban quyen Microsoft Copilot thi co cach nao dung AI trong Excel khong?
+**Q1:** Neu cong ty toi chua mua ban quyen Microsoft Copilot thi co cach nao dung AI trong Excel khong?
 Co. Ban co the su dung cac Add-in AI uy tin tren Office Add-ins Store (nhu ChatGPT for Excel) hoac xuat du lieu ra file CSV, sau do dung giao diện web cua AI de phan tich, sau do dung ham VLOOKUP hoac XLOOKUP de nap lai vao Excel. Tuy nhien, cach nay se nhieu buoc hon mot chut so voi viec tich hop truc tiep.
 
-Q2: Lam sao de ngan AI dua ra nhung con so du doan qua phi thuc te hoac bi ao tuong (AI hallucination)?
+**Q2:** Lam sao de ngan AI dua ra nhung con so du doan qua phi thuc te hoac bi ao tuong (AI hallucination)?
 Bí quyet nam o viec cung cấp bo khung rang buoc trong cau lenh prompt. Thay vi chi noi "du doan ton kho", ban hay yeu cau: "Hay du doan dua tren muc tang truong thuc te tu 5% den 15%, tuyet doi khong vuot qua nguon ngan sach ton kho toi da la 500 trieu VND". Su rang buoc nay giup AI bam sat vao thuc te kinh doanh.
 
-Q3: Cach xu ly loi gi khi AI tra ve ket qua dinh dang sai hoac bi loi font tieng Viet trong Excel?
+**Q3:** Cach xu ly loi gi khi AI tra ve ket qua dinh dang sai hoac bi loi font tieng Viet trong Excel?
 Loi font thuong xay ra do ma hoa ky tu giua file Excel va cong cu AI khong tuong thich (Unicode vs VNVC). Ban hay chuyen toan bo dinh dang cot du lieu sang kieu Text hoac General truoc khi chay lenh, hoac yeu cau AI xuat ket qua duoi dang ma so/ky tu chuan khong dau neu can thiet de de xu ly.

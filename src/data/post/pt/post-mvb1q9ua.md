@@ -40,26 +40,26 @@ Abra sua planilha no Excel e garanta que os dados brutos estejam estruturados co
 ### Passo 2: O Prompt Inteligente para Extração e Limpeza
 Em vez de quebrar a cabeça com fórmulas aninhadas, peça para a IA gerar a coluna condicional exata ou use o recurso de Coluna por Exemplo turbinado por I
 
-A. Se estiver usando um assistente de IA externo para gerar fórmulas personalizadas, utilize este modelo de prompt validado em ambiente corporativo brasileiro:
+**A.** Se estiver usando um assistente de IA externo para gerar fórmulas personalizadas, utilize este modelo de prompt validado em ambiente corporativo brasileiro:
 
 > "Atue como um especialista avançado em Excel. Tenho uma coluna na célula A2 com nomes completos e e-mails despadronizados (ex: 'AN
 
-A.PAULA@CLIENTE..COM'). Crie uma fórmula única ou instrução para extrair apenas o primeiro nome com a primeira letra maiúscula na coluna B, e limpe o e-mail removendo pontos duplos e espaços na coluna C."
+**A.**PAULA@CLIENTE..COM'). Crie uma fórmula única ou instrução para extrair apenas o primeiro nome com a primeira letra maiúscula na coluna B, e limpe o e-mail removendo pontos duplos e espaços na coluna C."
 
 ### Passo 3: Aplicação Prática das Fórmulas Otimizadas
 Se a IA sugerir uma fórmula moderna baseada em matrizes dinâmicas (disponíveis nas versões recentes do Excel), o resultado costuma ser este:
 
 Para extrair o primeiro nome de forma limp
 
-a:
+**a:**
 `=ESQUERDA(A2; LOCALIZ(" "; A2&" ") - 1)`
 *(Dic
 
-a: Para garantir a capitalização correta, envolva a fórmula com `PRI.MAIÚSCULA`)*
+**a:** Para garantir a capitalização correta, envolva a fórmula com `PRI.MAIÚSCULA`)*
 
 Para normalizar o e-mail corrompido, a IA geralmente sugere substituir os erros em cadei
 
-a:
+**a:**
 `=SUBSTITUIR(SUBSTITUIR(ARRUMAR(MINÚSCULA(A2)); ".."; "."); "@@"; "@")`
 
 ---

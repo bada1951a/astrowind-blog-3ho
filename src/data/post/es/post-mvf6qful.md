@@ -20,15 +20,15 @@ Ese fue el punto de quiebre donde decidí dejar de sufrir con hojas de cálculo 
 <strong>Ticket de Soporte Técnico #MS-2026-04</strong><br>
 <strong>Síntom
 
-a:</strong> Duplicados masivos en base de datos de clientes con variaciones tipográficas (ej. "Empresa S.
+**a:**</strong> Duplicados masivos en base de datos de clientes con variaciones tipográficas (ej. "Empresa S.
 
-A.", "Empresa SA", "empresa s.
+**A.**", "Empresa SA", "empresa s.
 
-a.").<br>
+**a.**").<br>
 <strong>Impacto:</strong> Métricas de conversión infladas y riesgo de fallo en presentación ejecutiva. <br>
 <strong>Solución rápid
 
-a:</strong> Automatización mediante prompt estructurado en Gemini para Google Workspace.
+**a:**</strong> Automatización mediante prompt estructurado en Gemini para Google Workspace.
 </div>
 
 ## Diagnóstico: Por qué fallan los métodos tradicionales
@@ -39,7 +39,7 @@ Antes de aplicar la solución definitiva, analicemos por qué las herramientas n
 
 2. Variaciones en razones sociales: Los nombres de empresas se registran de mil formas diferentes ("Telefónica España", "Telefonica", "Telefónica S.
 
-A."), lo que confunde a las fórmulas lógicas estándar como BUSCARV o COINCIDIR.
+**A.**"), lo que confunde a las fórmulas lógicas estándar como BUSCARV o COINCIDIR.
 
 3. Falta de contexto relacional: Las fórmulas complejas de Apps Script requieren tiempo de programación que no tienes cuando el comité directivo está esperando en la sala de juntas.
 
@@ -57,7 +57,7 @@ Abre el panel lateral de Gemini en Google Workspace o copia los datos en la inte
 
 > "Actúa como un analista de datos experto en Google Sheets. Tengo una lista de clientes con nombres duplicados debido a errores tipográficos, mayúsculas y variaciones en sufijos legales (como S.
 
-A., SL, etc.). Analiza los datos pegados a continuación, unifica los registros que correspondan a la misma entidad real basándote en el correo electrónico o similitud de nombre, y devuélveme una tabla limpia en formato CSV con tres columnas: ID Único, Nombre Normalizado y Correo Principal. No incluyas texto adicional, solo los datos listos para copiar."
+**A.**, SL, etc.). Analiza los datos pegados a continuación, unifica los registros que correspondan a la misma entidad real basándote en el correo electrónico o similitud de nombre, y devuélveme una tabla limpia en formato CSV con tres columnas: ID Único, Nombre Normalizado y Correo Principal. No incluyas texto adicional, solo los datos listos para copiar."
 
 ### Paso 3: Importación y validación rápida
 1. Copia la tabla limpia que te devolvió Gemini.
@@ -72,7 +72,7 @@ A., SL, etc.). Analiza los datos pegados a continuación, unifica los registros 
 
 ---
 
-## 5. Preguntas Frecuentes (FAQ) (FAQ)
+## 5. Preguntas Frecuentes (FAQ)
 
 ¿Qué hago si la lista de clientes supera las diez mil filas y Gemini se corta?
 Divide tu base de datos en bloques lógicos de tres mil o cuatro mil filas (por ejemplo, dividiendo alfabéticamente por la inicial del cliente). Procesar lotes más pequeños garantiza que la IA no omita registros debido a límites de tokens en una sola respuesta.

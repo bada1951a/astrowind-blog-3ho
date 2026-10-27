@@ -18,8 +18,6 @@ Desesperados com o prazo intransigente para a apresentação executiva da manhã
 
 O risco institucional era monumental: a ausência daquele relatório consolidado de preços e diretrizes regulatórias implicaria o cancelamento da reunião com o comitê executivo internacional, além de expor a vulnerabilidade dos processos internos de automação da filial brasileira. Sem uma intervenção técnica estruturada capaz de contornar a falha de extração e reestruturar os dados corrompidos em tempo hábil, toda a credibilidade do departamento de operações estaria em jogo diante dos diretores globais.
 
-
-
 ![How to Summarize 150-Page Regulatory Compliance PDFs in 3 Minutes Using Claude 3.5 Sonnet AI Automation Guide](https://picsum.photos/seed/work-mvpkyk97-7-b/1000/550.jpg)
 
 ## 2. Análise da causa raiz de falhas de fórmula e processos
@@ -42,11 +40,11 @@ Para sanar o gargalo operacional de forma definitiva e estabelecer um fluxo robu
 
 Este procedimento isola os dados corrompidos antes que eles alcancem as células da planilha, utilizando o motor ETL integrado.
 
-1. Abra o arquivo de planilha afetado e navegue até a guia superior **Dados **na faixa de opções.
+1. Abra o arquivo de planilha afetado e navegue até a guia superior **Dados**na faixa de opções.
 2. Clique no botão **Obter Dados**>**De Arquivo**>**De Pasta ou De Texto/CSV**, selecionando o arquivo de log bruto gerado pelo extrator com falha.
 3. Na janela do Editor do Power Query que será aberta automaticamente, localize a coluna corrompida com erros de tipo.
-4. Clique com o botão direito no cabeçalho da coluna problemática e selecione **Substituir Erros...**, inserindo um valor padrão nulo (`null`) ou texto em branco.
-5. Vá até a guia **Página Inicial **no Power Query, clique em **Fechar e Carregar **e escolha **Apenas Criar Conexão **para evitar o estouro de memória nas células visíveis.
+4. Clique com o botão direito no cabeçalho da coluna problemática e selecione**Substituir Erros...**, inserindo um valor padrão nulo (`null`) ou texto em branco.
+5. Vá até a guia**Página Inicial **no Power Query, clique em**Fechar e Carregar **e escolha**Apenas Criar Conexão **para evitar o estouro de memória nas células visíveis.
 
 ### Método 2: Injeção de Tratamento de Erros Robusto com Fórmulas Matriciais
 
@@ -88,7 +86,7 @@ End Sub
 ```
 
 1. Pressione `Alt` + `F11` para abrir o editor do Visual Basic for Applications.
-2. No menu superior, clique em **Inserir**>**Módulo **e cole o código acima na janela em branco.
+2. No menu superior, clique em**Inserir**>**Módulo**e cole o código acima na janela em branco.
 3. Feche o editor, retorne à planilha e pressione `Alt` + `F8`, selecione `PurgarErrosECache` e clique em **Executar**.
 
 ## 4. Recomendações e alertas de especialistas em automação

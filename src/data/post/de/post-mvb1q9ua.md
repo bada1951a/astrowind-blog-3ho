@@ -56,7 +56,7 @@ Sobald die KI die bereinigten Daten ausgespuckt hat, fügen Sie diese über Date
 
 ---
 
-## 5. Häufig gestellte Fragen (FAQ) (FAQ)
+## 5. Häufig gestellte Fragen (FAQ)
 
 ### 1. Kann ich diesen Prozess komplett automatisieren, ohne jedes Mal die KI zu fragen?
 Ja. Wenn Sie die Bereinigungsregeln einmal sauber in einem Excel Makro (VBA) oder über Power Query definiert haben, läuft der Prozess für standardisierte E-Mail-Formate vollautomatisch. Die KI benötigen Sie vor allem bei stark variierenden, unstrukturierten Altdaten.

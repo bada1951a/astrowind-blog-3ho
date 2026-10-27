@@ -33,7 +33,7 @@ Anstatt stundenlang in Foren nach passenden Formelschnipseln zu suchen, nutzen w
 ### Schritt 1: Den perfekten Prompt für ChatGPT formulieren
 Gebe ChatGPT nicht nur das Ziel, sondern füttere es mit einem konkreten Beispiel. Ein guter Prompt für Regex- und Datenbereinigungsformeln folgt diesem Schem
 
-a:
+**a:**
 
 > "Du bist ein Experte für Google Sheets und reguläre Ausdrücke. Ich habe eine Zelle A2 mit folgendem Inhalt: 'Müller, Hans (Kunde-Nr: 98765-DE)'. Ich brauche eine einzige Google Sheets Formel mit `=REGEXEXTRACT()` oder ähnlichen Funktionen, um nur die Kundennummer (die Zahlen nach 'Kunde-Nr: ') in eine neue Zelle zu extrahieren. Antworte nur mit der Formel und einer kurzen Erklärung."
 
@@ -62,7 +62,7 @@ Bitten Sie ChatGPT in diesem Fall sofort um ein Update mit Fehlerbehandlung:
 
 ---
 
-## 5. Häufig gestellte Fragen (FAQ) (FAQ)
+## 5. Häufig gestellte Fragen (FAQ)
 
 ### 1. Warum zeigt Google Sheets nach dem Einfügen der ChatGPT-Formel einen Syntaxfehler an?
 Das liegt meist an unterschiedlichen Spracheinstellungen. Deutsche Google-Sheets-Versionen erwarten deutsche Funktionsnamen (z. B. `=WENN()` statt `=IF()`) und das Semikolon als Trenner. Sage ChatGPT im Prompt explizit: *“Schreibe die Formel für ein deutsches Google Sheets mit Semikolon.”*

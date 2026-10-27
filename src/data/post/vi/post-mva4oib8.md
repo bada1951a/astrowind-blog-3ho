@@ -61,7 +61,7 @@ Ngay lập tức, bạn sẽ nhận được một phiên bản công thức nâ
 
 ### Cảnh báo chuyên gi
 
-a: Những lưu ý sống còn về bảo mật dữ liệu
+**a:** Những lưu ý sống còn về bảo mật dữ liệu
 
 Trước khi hào hứng copy toàn bộ dữ liệu công ty đưa lên các công cụ AI, hãy ghi nhớ những quy tắc an toàn sau:
 

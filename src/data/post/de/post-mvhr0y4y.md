@@ -72,7 +72,7 @@ Bevor Sie unüberlegt unternehmenskritische Kennzahlen in Cloud-Tools hochladen 
 
 ---
 
-## 5. Häufig gestellte Fragen (FAQ) (FAQ)
+## 5. Häufig gestellte Fragen (FAQ)
 
 ### 1. Kann die KI in Google Sheets eigenständig Zukunftsprognosen berechnen?
 Ja, über die Funktion "Erkunden" oder durch den Einsatz von intelligenten Diagrammtypen wie Trendlinien mit polynomialer oder exponentieller Regression können Sie einfache Zukunftsprognosen direkt einblenden lassen. Für komplexe Finanzsimulationen empfiehlt sich jedoch die Kombination mit spezifischen Formeln wie `TREND` oder `WACHSTUM`.
@@ -82,7 +82,7 @@ Ja, über die Funktion "Erkunden" oder durch den Einsatz von intelligenten Diagr
 ### 2. Was mache ich, wenn sich die Datenquelle monatlich ändert?
 Verwenden Sie niemals feste Zellbereiche wie `
 
-A1:G100`. Nutzen Sie stattdessen dynamische Bereiche oder stellen Sie sicher, dass Ihre Rohdaten als offizielle Google Sheets-Tabelle formatiert sind. Slicer und KI-Diagramme passen sich dann automatisch an neue Zeilen an.
+**A1:**G100`. Nutzen Sie stattdessen dynamische Bereiche oder stellen Sie sicher, dass Ihre Rohdaten als offizielle Google Sheets-Tabelle formatiert sind. Slicer und KI-Diagramme passen sich dann automatisch an neue Zeilen an.
 
 ### 3. Funktionieren die Slicer auch offline?
 Google Sheets ist primär für die Cloud ausgelegt. Wenn Sie im Meeting eine schlechte WLAN-Verbindung haben, aktivieren Sie unbedingt vorab die Offline-Bearbeitung in den Google Drive-Einstellungen, damit Ihre interaktiven Filter reibungslos funktionieren.

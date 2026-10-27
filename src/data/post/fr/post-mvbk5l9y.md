@@ -40,7 +40,7 @@ Ouvrez une nouvelle feuille Google Sheets et suivez cette procédure pour bâtir
 Dans votre feuille, créez un espace dédié aux taux de change en haut ou dans un onglet "Paramètres" :
 - Cellule
 
-A1 : `Devise Source` | Cellule B1 : `Devise Cible` | Cellule C1 : `Taux`
+**A1 :** `Devise Source` | Cellule B1 : `Devise Cible` | Cellule C1 : `Taux`
 - Dans la ligne 2, mettez par exemple `USD` en A2 et `EUR` en B2.
 
 ### Étape 2 : Utiliser la fonction magique GOOGLEFINANCE
@@ -54,7 +54,7 @@ Cette fonction interroge en temps réel les marchés financiers mondiaux. Si vou
 Supposons que dans votre tableau de suivi des ventes, le montant en USD se trouve dans la cellule D5. Pour obtenir la conversion instantanée en EUR, appliquez simplement cette formule dans la cellule E5 :
 `=D5 * VLOOKUP("USDEUR",
 
-A:C, 3, FALSE)`
+**A:**C, 3, FALSE)`
 
 Glissez cette formule vers le bas de votre colonne : votre tableau est désormais entièrement dynamique. Aucune intervention manuelle n'est requise lors de l'ouverture du fichier.
 
@@ -69,7 +69,7 @@ Glissez cette formule vers le bas de votre colonne : votre tableau est désormai
 - Gestion des droits : Protégez l'onglet des paramètres des taux pour éviter qu'un collégue distrait n'écrase les formules par mégarde. Allez dans `Données > Feuilles et plages protégées`.
 - Confidentialité : Contrairement à certains scripts externes ou extensions obscures, la fonction native `GOOGLEFINANCE` s'exécute de manière sécurisée dans l'écosystème Google, respectant la confidentialité de vos volumes d'affaires.
 
-## Foire aux questions (FAQ)
+## 5. Foire Aux Questions (FAQ)
 
 1. Que faire si la formule GOOGLEFINANCE renvoie l'erreur #N/A ?
 Vérifiez l'orthographe des codes de devises. Google Sheets exige le format standard à six lettres combinées sans espace, par exemple "EURUSD" ou "GBPEUR". Assurez-vous également que votre feuille est bien configurée avec la bonne zone géographique dans `Fichier > Paramètres de la feuille de calcul`.
@@ -77,5 +77,6 @@ Vérifiez l'orthographe des codes de devises. Google Sheets exige le format stan
 2. Les taux se mettent-ils à jour en temps réel toute la journée ?
 Les données financières de Google proviennent d'une variété de sources boursières et peuvent comporter un léger différé de 15 à 20 minutes selon les bourses. Pour un usage comptable interne ou des rapports de gestion, ce niveau de précision est largement suffisant et conforme aux standards du marché.
 
-3. Puis-je utiliser cette méthode pour convertir plus de 50 devises en même temps ?
-Oui, tout à fait. Il vous suffit de lister vos paires de devises sous forme de matrice. Cependant, évitez d'imbriquer des centaines de requêtes GOOGLEFINANCE dans des cellules isolées pour ne pas ralentir le temps de chargement de la page. Privilégiez un tableau de référence centralisé comme décrit dans notre tutoriel.
+**Q.** Puis-je utiliser cette méthode pour convertir plus de 50 devises en même temps ?
+
+**A.** Oui, tout à fait. Il vous suffit de lister vos paires de devises sous forme de matrice. Cependant, évitez d'imbriquer des centaines de requêtes GOOGLEFINANCE dans des cellules isolées pour ne pas ralentir le temps de chargement de la page. Privilégiez un tableau de référence centralisé comme décrit dans notre tutoriel.

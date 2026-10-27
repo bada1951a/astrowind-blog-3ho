@@ -15,7 +15,7 @@ Erano le 14:45 e il mio ufficio a Milano sembrava una pentola a pressione. Manca
 <div style="border-left: 4px solid #64748b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Ticket di Emergenza Ufficio #404:</strong> Dati anagrafici corrotti in Excel prima della call con la direzione. Obiettivo: estrarre nomi di battesimo puliti e normalizzare le email in 3 minuti netti senza script complessi in VB
 
-A.
+**A.**
 </div>
 
 ![AI Productivity & Workflow Automation](https://picsum.photos/seed/office429/1000/550)
@@ -28,7 +28,7 @@ Ogni volta che ci troviamo a gestire database sporchi, commettiamo l'errore di a
 
 2. Le formule annidate diventano ileggibili: Combinare `STRING
 
-A.ESTRAI`, `TROVA`, `MAIUSC.INIZ` per estrarre il nome crea una formula chilometrica che restituisce errore `#VALORE!` alla minima eccezione (come un nome composto o un secondo nome puntato).
+**A.**ESTRAI`, `TROVA`, `MAIUSC.INIZ` per estrarre il nome crea una formula chilometrica che restituisce errore `#VALORE!` alla minima eccezione (come un nome composto o un secondo nome puntato).
 
 3. Il copia-incolla manuale è un suicidio operativo: Su liste superiori a 500 righe, l'errore umano è garantito al 100% e la stanchezza visiva prende il sopravvento.
 
@@ -36,7 +36,7 @@ A.ESTRAI`, `TROVA`, `MAIUSC.INIZ` per estrarre il nome crea una formula chilomet
 
 Invece di perdere la testa tra le funzioni avanzate, ho risolto combinando le capacità di analisi intelligente dei dati di Excel con un prompt mirato per l'I
 
-A. Ecco come procedere passo dopo passo dal tuo PC.
+**A.** Ecco come procedere passo dopo passo dal tuo PC.
 
 ### Passo 1: Preparare i dati grezzi in Power Query
 Prima di dare in pasto i dati all'IA, assicuriamoci che Excel non crei conflitti di codifica (specialmente con i caratteri accentati italiani come à, è, o ù).
@@ -54,7 +54,7 @@ Se non hai un assistente IA integrato direttamente nel tuo abbonamento Microsoft
 
 4. Magi
 
-a: Excel analizzerà lo schema e completerà l'intera colonna estraendo solo i nomi di battesimo in un millisecondo. Ripeti l'operazione per la colonna delle email estraendo solo la stringa pulita tra le parentesi o rimuovendo i caratteri sporchi.
+**a:** Excel analizzerà lo schema e completerà l'intera colonna estraendo solo i nomi di battesimo in un millisecondo. Ripeti l'operazione per la colonna delle email estraendo solo la stringa pulita tra le parentesi o rimuovendo i caratteri sporchi.
 
 ### Passo 3: Ottimizzare con un Prompt IA mirato (se usi Copilot o ChatGPT)
 Se usi una versione di Excel con Copilot o preferisci ripulire il testo tramite un assistente esterno prima di reincollarlo, usa questo prompt testato sul campo:

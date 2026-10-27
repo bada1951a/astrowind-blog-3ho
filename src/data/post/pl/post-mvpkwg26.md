@@ -22,8 +22,6 @@ Stawką w tej grze była nie tylko reputacja zespołu przed zarządem, ale równ
 <strong>Wskazówka krytyczna:</strong> Nigdy nie polegaj na statycznych zakresach komórek (np. `Arkusz1!A1:A100`) w raportach cyklicznych. Zawsze stosuj tabele dynamiczne lub dynamiczne zakresy oparte na formule `ODSUNIĘCIE` (ang. `OFFSET`), aby wykresy aktualizowały się automatycznie w momencie napływu nowych wierszy danych.
 </div>
 
-
-
 ![How to Summarize 150-Page Regulatory Compliance PDFs in 3 Minutes Using Claude 3.5 Sonnet AI Automation Guide](https://picsum.photos/seed/work-mvpkz5zq-9-b/1000/550.jpg)
 
 ## 2. Szczegółowa analiza przyczyn błędów formuł i procesów
@@ -41,13 +39,13 @@ Systemowe podejście do problemu wymagało porzucenia doraźnego gaszenia pożar
 Aby trwale rozwiązać problem sztywnych zakresów wykresów oraz opanować masową analizę regulacyjną w 3 minuty, zastosuj poniższą procedurę podzieloną na trzy niezależne, uzupełniające się metody.
 
 ### Metoda 1: Automatyzacja zakresów wykresów za pomocą tabel dynamicznych i menedżera nazw (GUI)
-1. Otwórz swój arkusz kalkulacyjny, zaznacz całą tabelę z danymi regulacyjnymi i przejdź do karty **Wstawianie**, a następnie kliknij przycisk **Tabela**(lub użyj skrótu klawiszowego `Ctrl + T`). Upewnij się, że opcja **Mój nagłówek ma nagłówki **jest zaznaczona.
-2. Przejdź do karty **Formuły **na wstążce menu i wybierz opcję**Menedżer nazw**.
-3. Kliknij **Nowy**, w polu **Nazwa **wpisz `DynamiczneDane`, a w polu **Odwołuje się do **wklej formułę opartą na funkcji `PRzesunięcie` (lub `OFFSET`), która automatycznie dostosowuje rozmiar zakresu do liczby wypełnionych wierszy:
+1. Otwórz swój arkusz kalkulacyjny, zaznacz całą tabelę z danymi regulacyjnymi i przejdź do karty **Wstawianie**, a następnie kliknij przycisk**Tabela**(lub użyj skrótu klawiszowego `Ctrl + T`). Upewnij się, że opcja**Mój nagłówek ma nagłówki **jest zaznaczona.
+2. Przejdź do karty**Formuły **na wstążce menu i wybierz opcję**Menedżer nazw**.
+3. Kliknij**Nowy**, w polu**Nazwa **wpisz `DynamiczneDane`, a w polu**Odwołuje się do **wklej formułę opartą na funkcji `PRzesunięcie` (lub `OFFSET`), która automatycznie dostosowuje rozmiar zakresu do liczby wypełnionych wierszy:
 ```excel
 =ODSUNIĘCIE(Tabela1[#Nagłówki]; 1; 0; WERSJE(Tabela1)-1; LICZBA.WARTOŚCI(Tabela1[#Nagłówki]))
 ```
-4. Kliknij prawym przyciskiem myszy na swój uszkodzony wykres, wybierz opcję**Zaznacz dane**, a w polu **Zakres danych wykresu **wprowadź nazwę swojego zakresu dynamicznego poprzedzoną nazwą arkusza, np. `='Arkusz1'!DynamiczneDane`. Od tej pory każdy nowy wiersz danych w tabeli automatycznie rozszerzy wykres.
+4. Kliknij prawym przyciskiem myszy na swój uszkodzony wykres, wybierz opcję**Zaznacz dane**, a w polu**Zakres danych wykresu **wprowadź nazwę swojego zakresu dynamicznego poprzedzoną nazwą arkusza, np. `='Arkusz1'!DynamiczneDane`. Od tej pory każdy nowy wiersz danych w tabeli automatycznie rozszerzy wykres.
 
 ### Metoda 2: Błyskawiczna ekstrakcja 150-stronicowego PDF-a przy użyciu Claude 3.5 Sonnet
 1. Otwórz panel roboczy Claude 3.5 Sonnet i przeciągnij 150-stronicowy plik PDF z regulacjami bezpośrednio w pole czatu.
@@ -59,12 +57,12 @@ Jesteś ekspertem ds. zgodności regulacyjnej i automatyzacji biurowej w Warszaw
 3. Gotowy skrypt w języku Python (z użyciem biblioteki pandas) do automatycznego parsowania kluczowych tabel z tego PDF-a do pliku CSV.
 Zignoruj wstępy, przypisy dolne i klauzule poufności. Skup się wyłącznie na liczbach, terminach wdrożenia i sankcjach.
 ```
-3. Skopiuj wygenerowaną tabelę KPI i wklej ją bezpośrednio do arkusza kalkulacyjnego za pomocą opcji **Wklej specjalnie -> Tekst sformatowany**, a wygenerowany kod Pythona uruchom w swoim środowisku analitycznym, aby zautomatyzować przyszłe pobieranie danych.
+3. Skopiuj wygenerowaną tabelę KPI i wklej ją bezpośrednio do arkusza kalkulacyjnego za pomocą opcji**Wklej specjalnie -> Tekst sformatowany**, a wygenerowany kod Pythona uruchom w swoim środowisku analitycznym, aby zautomatyzować przyszłe pobieranie danych.
 
 ### Metoda 3: Automatyzacja tła za pomocą Power Query (Dane > Pobierz dane)
-1. Przejdź do karty **Dane **w menu głównym, kliknij **Pobierz dane**->**Z pliku**->**Z pliku PDF**.
+1. Przejdź do karty**Dane **w menu głównym, kliknij**Pobierz dane**->**Z pliku**->**Z pliku PDF**.
 2. Wskaż swój zaktualizowany dokument regulacyjny lub folder roboczy, z którego system ma cyklicznie zasysać najnowsze tabele danych.
-3. W oknie edytora Power Query zaznacz odpowiednie tabele, kliknij **Zamknij i załaduj**, aby dane trafiły bezpośrednio do dedykowanego arkusza roboczego, całkowicie eliminując ręczne kopiowanie i błędy typu `#REF!`.
+3. W oknie edytora Power Query zaznacz odpowiednie tabele, kliknij**Zamknij i załaduj**, aby dane trafiły bezpośrednio do dedykowanego arkusza roboczego, całkowicie eliminując ręczne kopiowanie i błędy typu `#REF!`.
 
 ## 4. Wskazówki i ostrzeżenia eksperta ds. automatyzacji
 

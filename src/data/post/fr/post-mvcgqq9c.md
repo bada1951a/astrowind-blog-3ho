@@ -72,7 +72,7 @@ Pour éviter que ce scénario catastrophe ne se reproduise la semaine prochaine,
 
 ---
 
-### Questions Fréquemment Posées (FAQ)
+## 5. Foire Aux Questions (FAQ)
 
 Est-ce que cette méthode avec ChatGPT présente un risque pour la confidentialité de mes données d'entreprise ?
 Oui, si vos données financières ou stratégiques sont hautement confidentielles, ne uploadez jamais le fichier brut directement dans une interface publique de ChatGPT. Préférez copier uniquement la structure XML ou demandez à ChatGPT de rédiger le code Python en lui fournissant uniquement les *noms des feuilles* et les *messages d'erreur*, sans les chiffres sensibles.

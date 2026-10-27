@@ -64,7 +64,7 @@ for sheet_name in wb.sheetnames:
     ws = wb[sheet_name]
     print(f"Optimizando hoj
 
-a: {sheet_name}")
+**a:** {sheet_name}")
     # Resetear el max_row y max_column real basado en celdas con contenido real
     ws.reset_dimensions()
 
@@ -84,7 +84,7 @@ Ejecuta este script en tu entorno local de Python o directamente en la interfaz 
 
 ---
 
-## 5. Preguntas Frecuentes (FAQ) (FAQ)
+## 5. Preguntas Frecuentes (FAQ)
 
 ¿Necesito saber programar en Python para usar este truco?
 Para nada. Solo necesitas copiar el archivo, pedirle el script a ChatGPT y ejecutarlo usando herramientas como Google Colab (que funciona directamente en el navegador sin instalar nada) o ejecutando el código que la IA te proporciona paso a paso.

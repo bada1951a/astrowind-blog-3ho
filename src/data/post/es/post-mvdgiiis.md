@@ -44,7 +44,7 @@ En lugar de usar software antiguo de oficina, aprovecha cualquier modelo de leng
 
 3. Utiliza este prompt exacto para obtener una tabla perfect
 
-a:
+**a:**
 
 > "Actúa como un experto contable y procesador de datos. Extrae la información de las facturas adjuntas y preséntala estrictamente en formato de tabla Markdown. Las columnas deben ser: Fecha, Proveedor, NIF, Base Imponible, IVA y Total. Asegúrate de que los importes numéricos utilicen el punto como separador de miles y la coma como separador de decimales, sin símbolos de moneda para que Excel los reconozca como números puros."
 
@@ -71,14 +71,14 @@ Antes de automatizar todo a la ligera con herramientas en la nube, ten muy en cu
 * Datos sensibles (RGPD): Si las facturas contienen datos personales muy sensibles o información comercial extremadamente confidencial de clientes particulares, anonimiza los nombres o utiliza herramientas internas de la empresa aprobadas por el departamento de IT.
 * Revisión humana obligatori
 
-a: La IA es rapidísima, pero puede alucinar o confundir un dígito borroso (un 3 por un 8). Dedica siempre 30 segundos a contrastar el total de la tabla generada con el documento original antes de proyectar el informe en la pantalla de la sala de reuniones.
+**a:** La IA es rapidísima, pero puede alucinar o confundir un dígito borroso (un 3 por un 8). Dedica siempre 30 segundos a contrastar el total de la tabla generada con el documento original antes de proyectar el informe en la pantalla de la sala de reuniones.
 * Copia de seguridad previ
 
-a: Nunca modifiques el archivo Excel oficial de la directiva sin antes guardar una copia de respaldo en tu escritorio con la fecha y hora actuales.
+**a:** Nunca modifiques el archivo Excel oficial de la directiva sin antes guardar una copia de respaldo en tu escritorio con la fecha y hora actuales.
 
 ---
 
-## 5. Preguntas Frecuentes (FAQ) (FAQ)
+## 5. Preguntas Frecuentes (FAQ)
 
 ### ¿Qué hago si la IA interpreta los decimales con puntos en lugar de comas?
 Puedes añadir una instrucción adicional en el prompt de la IA diciendo: *"Reemplaza todos los puntos decimales por comas en las columnas de importes"*, o utilizar la herramienta Buscar y Reemplazar de Excel (Ctrl + B) para cambiar el punto por la coma de forma masiva en toda la selección antes de operar con los números.
@@ -89,4 +89,4 @@ Sí, perfectamente. La mayoría de modelos de IA actuales admiten documentos PDF
 ### ¿Funciona este método con tickets de caja arrugados o fotos borrosas?
 Los tickets térmicos antiguos o arrugados bajan la precisión del OCR. Si la foto es de baja calidad, es recomendable pasarla primero por un filtro de mejora en la galería de tu móvil para aumentar el contraste y la nitidez antes de adjuntarla a la I
 
-A.
+**A.**

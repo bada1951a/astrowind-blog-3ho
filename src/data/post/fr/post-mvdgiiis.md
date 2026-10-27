@@ -28,7 +28,7 @@ Avant de foncer tête baissée, comprenons pourquoi ce type de tâche s'éternis
 
 1. Le piège du PDF image (non textuel) : Un scan de facture n'est qu'une photo. Si vous tentez un simple copier-coller dans Excel, vous récupérez un bloc de texte illisible, sans colonnes, collé en vrac dans la cellule
 
-A1.
+**A1.**
 
 2. Les outils OCR basiques aveugles : Les logiciels de reconnaissance de caractères traditionnels s'emmêlent les pinceaux dès qu'il s'agit de tableaux complexes avec des lignes de TVA croisées, des remises en pied de page ou des polices de caractères fantaisistes.
 
@@ -50,7 +50,7 @@ Ouvrez votre assistant IA préféré (ChatGPT version gratuite, Claude ou Micros
 
 Copiez-collez ce prompt exact dans l'interface de l'I
 
-A :
+**A :**
 
 > "Agis en tant qu'expert comptable et analyste de données. Analyse cette facture scannée. Extrais les données sous forme de tableau Markdown strict avec les colonnes suivantes : Date, Fournisseur, Libellé, Quantité, Prix unitaire HT, TVA, Total TTC. Ne rajoute aucun commentaire superflu, donne-moi uniquement le tableau prêt à être copié."
 
@@ -70,13 +70,16 @@ Une fois que l'IA vous renvoie le tableau en format Markdown (avec les barres ve
 
 ---
 
-### Foire aux questions (FAQ)
+## 5. Foire Aux Questions (FAQ)
 
-Q : Que faire si l'IA oublie des lignes de produits sur une facture de trois pages ?
-R : Divisez le travail. Plutôt de traiter tout d'un coup, envoyez les pages une par une ou précisez explicitement dans votre prompt : "Attention, cette facture comporte 15 lignes de produits, assure-toi de lister exhaustivement chaque article sans en omettre aucun."
+**Q :** Que faire si l'IA oublie des lignes de produits sur une facture de trois pages ?
 
-Q : Mes prix affichent des symboles monétaires (EUR, €) et Excel refuse de faire les additions (somme = 0). Comment régler ça ?
-R : C'est un classique. Le texte extrait contient des caractères non numériques. Dans une colonne adjacente, utilisez la formule de nettoyage rapide : `=SUBSTITUE(SUBSTITUE(A2; "€"; ""); " "; "") * 1` pour forcer Excel à transformer ce texte en véritable format nombre.
+**A.** Divisez le travail. Plutôt de traiter tout d'un coup, envoyez les pages une par une ou précisez explicitement dans votre prompt : "Attention, cette facture comporte 15 lignes de produits, assure-toi de lister exhaustivement chaque article sans en omettre aucun."
 
-Q : Est-ce que cette méthode fonctionne avec des factures manuscrites ?
-R : Partiellement, mais le taux d'erreur augmente fortement selon la lisibilité de l'écriture cursive. Pour des factures papier imprimées ou des reçus de caisse thermiques, le taux de réussite atteint 99%. Pour du manuscrit, prévoyez une vérification visuelle systématique des montants totaux.
+**Q :** Mes prix affichent des symboles monétaires (EUR, €) et Excel refuse de faire les additions (somme = 0). Comment régler ça ?
+
+**A.** C'est un classique. Le texte extrait contient des caractères non numériques. Dans une colonne adjacente, utilisez la formule de nettoyage rapide : `=SUBSTITUE(SUBSTITUE(A2; "€"; ""); " "; "") * 1` pour forcer Excel à transformer ce texte en véritable format nombre.
+
+**Q :** Est-ce que cette méthode fonctionne avec des factures manuscrites ?
+
+**A.** Partiellement, mais le taux d'erreur augmente fortement selon la lisibilité de l'écriture cursive. Pour des factures papier imprimées ou des reçus de caisse thermiques, le taux de réussite atteint 99%. Pour du manuscrit, prévoyez une vérification visuelle systématique des montants totaux.

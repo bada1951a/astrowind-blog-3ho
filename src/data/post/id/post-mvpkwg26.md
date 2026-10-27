@@ -20,8 +20,6 @@ Di sinilah pentingnya memanfaatkan perangkat kecerdasan buatan tingkat lanjut se
 <strong>Catatan Pakar SCBD:</strong> Dalam situasi krisis dokumen regulasi, kecepatan ekstraksi informasi adalah kunci utama. Mengandalkan metode manual pada dokumen di atas 100 halaman adalah bentuk pemborosan sumber daya yang dapat dihindari dengan otomatisasi cerdas.
 </div>
 
-
-
 ![How to Summarize 150-Page Regulatory Compliance PDFs in 3 Minutes Using Claude 3.5 Sonnet AI Automation Guide](https://picsum.photos/seed/work-mvpkzitd-10-b/1000/550.jpg)
 
 ## 2. Analisis Mendalam Akar Masalah Formula dan Alur Kerja
@@ -64,12 +62,12 @@ Selain itu, perhatikan aspek keamanan data dan kerahasiaan perusahaan. Hindari m
 
 **Q1.**Apakah Claude 3.5 Sonnet dapat memproses dokumen PDF yang berisi banyak grafik dan tabel pindai tanpa teks yang dapat dipilih?
 
-A1. Ya, Claude 3.5 Sonnet dilengkapi dengan kemampuan pengenalan visual tingkat lanjut yang mampu membaca teks di dalam gambar maupun tabel pindaian pada dokumen PDF. Namun, untuk hasil yang paling akurat dan meminimalkan kesalahan baca pada angka-angka penting, disarankan menggunakan file PDF berbasis teks digital asli jika memungkinkan.
+**A1.** Ya, Claude 3.5 Sonnet dilengkapi dengan kemampuan pengenalan visual tingkat lanjut yang mampu membaca teks di dalam gambar maupun tabel pindaian pada dokumen PDF. Namun, untuk hasil yang paling akurat dan meminimalkan kesalahan baca pada angka-angka penting, disarankan menggunakan file PDF berbasis teks digital asli jika memungkinkan.
 
 **Q2.**Bagaimana cara memastikan bahwa ringkasan yang dihasilkan oleh AI tidak menghilangkan klausul hukum yang penting bagi perusahaan?
 
-A2. Kunci utamanya adalah memberikan perintah pengarahan yang spesifik dengan meminta AI menyertakan nomor halaman atau bab referensi untuk setiap poin ringkasan yang dibuat. Dengan adanya rujukan halaman tersebut, tim Anda dapat dengan mudah membuka bagian spesifik pada dokumen asli untuk memvalidasi kebenarannya sebelum dilaporkan kepada manajemen.
+**A2.** Kunci utamanya adalah memberikan perintah pengarahan yang spesifik dengan meminta AI menyertakan nomor halaman atau bab referensi untuk setiap poin ringkasan yang dibuat. Dengan adanya rujukan halaman tersebut, tim Anda dapat dengan mudah membuka bagian spesifik pada dokumen asli untuk memvalidasi kebenarannya sebelum dilaporkan kepada manajemen.
 
 **Q3.** Apakah metode ini aman digunakan untuk dokumen regulasi internal perusahaan yang bersifat rahasia dan belum dipublikasikan secara umum?
 
-A3. Penggunaan alat kecerdasan buatan berbasis cloud publik untuk dokumen sangat rahasia memerlukan kehati-hati tingkat tinggi serta persetujuan dari divisi keamanan informasi perusahaan Anda. Pastikan perusahaan menggunakan langganan enterprise yang memiliki jaminan perlindungan data privasi agar dokumen penting tidak digunakan untuk melatih model publik.
+**A3.** Penggunaan alat kecerdasan buatan berbasis cloud publik untuk dokumen sangat rahasia memerlukan kehati-hati tingkat tinggi serta persetujuan dari divisi keamanan informasi perusahaan Anda. Pastikan perusahaan menggunakan langganan enterprise yang memiliki jaminan perlindungan data privasi agar dokumen penting tidak digunakan untuk melatih model publik.

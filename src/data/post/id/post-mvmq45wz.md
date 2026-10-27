@@ -38,7 +38,7 @@ Berikut adalah cara elegan dan aman untuk menarik data harga kompetitor dari Ama
 Buka Google Drive Anda, buat dokumen baru di Google Sheets, dan beri nama "Monitor Harga Kompetitor Amazon". Pada baris pertama, buat kolom dengan format berikut:
 - Kolom
 
-A: `Nama Produk`
+**A:** `Nama Produk`
 - Kolom B: `ASIN / SKU`
 - Kolom C: `Link Produk`
 - Kolom D: `Harga Saat Ini`
@@ -66,9 +66,9 @@ Rumus ini secara otomatis akan menarik angka nominal harga utama dari halaman pr
 Agar data selalu segar setiap pagi saat Anda tiba di kantor tanpa perlu membuka file secara manual:
 1. Buka menu **File > Setelan spreadsheet**.
 
-2. Pilih tab **Perhitungan**.
+2. Pilih tab**Perhitungan**.
 
-3. Pada bagian "Hitung ulang", ubah pengaturannya menjadi **"Atiap perubahan dan setiap jam"** atau **"Setiap perubahan dan setiap menit"**.
+3. Pada bagian "Hitung ulang", ubah pengaturannya menjadi**"Atiap perubahan dan setiap jam"**atau**"Setiap perubahan dan setiap menit"**.
 
 4. Dengan pengaturan ini, Google Sheets akan menyegarkan data harga secara otomatis di latar belakang awan, bahkan saat komputer Anda dalam keadaan mati.
 
@@ -76,20 +76,20 @@ Agar data selalu segar setiap pagi saat Anda tiba di kantor tanpa perlu membuka 
 
 Sebelum Anda menerapkan alur kerja otomatis ini untuk kebutuhan laporan manajemen tingkat tinggi, perhatikan beberapa tips penting berikut agar data Anda tetap aman:
 
-- **Hindari Frekuensi Berlebihan:** Jangan mengatur penyegaran data terlalu sering (misalnya setiap detik), karena server Amazon dapat mendeteksi aktivitas tersebut sebagai *bot* dan memblokir alamat IP sementara. Cukup atur pembaruan sekali atau dua kali sehari.
+-**Hindari Frekuensi Berlebihan:** Jangan mengatur penyegaran data terlalu sering (misalnya setiap detik), karena server Amazon dapat mendeteksi aktivitas tersebut sebagai *bot* dan memblokir alamat IP sementara. Cukup atur pembaruan sekali atau dua kali sehari.
 - **Gunakan Backup Kolom Statis:** Buat salinan nilai harga secara berkala ke kolom historis menggunakan fungsi *Copy and Paste as Values* untuk mencatat tren harga historis mingguan tanpa bergantung pada perubahan rumus web.
 - **Patuhi Ketentuan Layanan:** Pastikan pemantauan harga ini digunakan untuk analisis pasar internal yang wajar dan bukan untuk praktik bisnis yang merugikan pihak lain.
 
 ## 5. Pertanyaan yang Sering Diajukan (FAQ)
 
-Q: Apakah metode ini memerlukan keahlian pemrogaman atau instalasi aplikasi tambahan yang rumit di komputer kantor?
+**Q:** Apakah metode ini memerlukan keahlian pemrogaman atau instalasi aplikasi tambahan yang rumit di komputer kantor?
 
-A: Sama sekali tidak. Anda hanya memerlukan akun Google dan Google Sheets yang dapat diakses langsung melalui peramban web standar kantor tanpa perlu menginstal perangkat lunak tambahan.
+**A:** Sama sekali tidak. Anda hanya memerlukan akun Google dan Google Sheets yang dapat diakses langsung melalui peramban web standar kantor tanpa perlu menginstal perangkat lunak tambahan.
 
-Q: Bagaimana jika struktur halaman Amazon berubah dan rumus harga tiba-tiba menjadi *Error* atau bertuliskan *N/A*?
+**Q:** Bagaimana jika struktur halaman Amazon berubah dan rumus harga tiba-tiba menjadi *Error* atau bertuliskan *N/A*?
 
-A: Perubahan tata letak halaman web adalah hal yang lumrah. Anda cukup memeriksa ulang elemen HTML halaman Amazon tersebut menggunakan fitur *Inspect Element* di peramban, lalu menyesuaikan jalur *XPath* di dalam rumus `IMPORTXML` Anda dengan jalur kelas yang baru.
+**A:** Perubahan tata letak halaman web adalah hal yang lumrah. Anda cukup memeriksa ulang elemen HTML halaman Amazon tersebut menggunakan fitur *Inspect Element* di peramban, lalu menyesuaikan jalur *XPath* di dalam rumus `IMPORTXML` Anda dengan jalur kelas yang baru.
 
-Q: Apakah data harga ini bisa otomatis dikirim ke laporan ringkasan atau email setiap pagi?
+**Q:** Apakah data harga ini bisa otomatis dikirim ke laporan ringkasan atau email setiap pagi?
 
-A: Ya, Anda dapat menggabungkan Google Sheets ini dengan fitur otomatisasi bawaan seperti Google Apps Script sederhana atau aturan pemberitahuan email otomatis di bawah menu **Alat > Notifikasi** untuk memantau perubahan harga yang signifikan.
+**A:** Ya, Anda dapat menggabungkan Google Sheets ini dengan fitur otomatisasi bawaan seperti Google Apps Script sederhana atau aturan pemberitahuan email otomatis di bawah menu **Alat > Notifikasi** untuk memantau perubahan harga yang signifikan.

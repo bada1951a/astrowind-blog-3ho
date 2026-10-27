@@ -20,9 +20,9 @@ Suasana langsung menegang karena data tersebut harus disinkronkan dengan dokumen
 
 Mengapa tugas membaca dokumen regulasi tebal sering kali menjadi momok yang melumpuhkan produktivitas kantor? Berdasarkan pengalaman mendampingi berbagai tim korporat di Jakarta, ada tiga akar penyebab utamanya:
 
-1. **Volume Teks yang Masif:** Dokumen regulasi, pajak, atau hukum biasanya dipenuhi dengan bahasa birokratis yang bertele-tele, membuat pembaca cepat lelah secara kognitif.
+1. **Volume Teks yang Masif:**Dokumen regulasi, pajak, atau hukum biasanya dipenuhi dengan bahasa birokratis yang bertele-tele, membuat pembaca cepat lelah secara kognitif.
 
-2. **Keterbatasan Waktu Tenggat:** Manajemen puncak atau *board of directors* sering meminta *executive summary* dalam hitungan menit, bukan hari, padahal dokumen baru saja diterima.
+2.**Keterbatasan Waktu Tenggat:** Manajemen puncak atau *board of directors* sering meminta *executive summary* dalam hitungan menit, bukan hari, padahal dokumen baru saja diterima.
 
 3. **Kesalahan Kontekstual Manual:** Saat membaca cepat secara manual, poin-poin krusial terkait denda, tenggat waktu pelaporan, atau perubahan persentase pajak sering terlewat karena tertutup narasi hukum yang panjang.
 
@@ -57,14 +57,14 @@ Sebelum Anda memasukkan dokumen penting perusahaan ke dalam perangkat AI publik,
 
 ## 5. Pertanyaan yang Sering Diajukan (FAQ)
 
-Q: Apakah Claude 3.5 Sonnet bisa membaca file PDF berbahasa hukum yang sangat kaku?
+**Q:** Apakah Claude 3.5 Sonnet bisa membaca file PDF berbahasa hukum yang sangat kaku?
 
-A: Ya, Claude memiliki kemampuan pemahaman bahasa alami yang sangat tinggi, termasuk dalam menerjemahkan istilah hukum yang rumit menjadi ringkasan yang mudah dipahami oleh staf non-legal.
+**A:** Ya, Claude memiliki kemampuan pemahaman bahasa alami yang sangat tinggi, termasuk dalam menerjemahkan istilah hukum yang rumit menjadi ringkasan yang mudah dipahami oleh staf non-legal.
 
-Q: Berapa lama waktu yang dibutuhkan untuk memproses dokumen 150 halaman?
+**Q:** Berapa lama waktu yang dibutuhkan untuk memproses dokumen 150 halaman?
 
-A: Biasanya proses unggah dan pembacaan awal hanya memakan waktu sekitar 30 hingga 60 detik, tergantung pada kecepatan koneksi internet kantor Anda.
+**A:** Biasanya proses unggah dan pembacaan awal hanya memakan waktu sekitar 30 hingga 60 detik, tergantung pada kecepatan koneksi internet kantor Anda.
 
-Q: Apakah hasil ringkasan ini aman dibagikan langsung kepada jajaran direksi?
+**Q:** Apakah hasil ringkasan ini aman dibagikan langsung kepada jajaran direksi?
 
-A: Sangat aman, asalkan Anda sudah membaca sekilas untuk memastikan tidak ada konteks penting yang terlewat oleh sistem AI sebelum dipresentasikan.
+**A:** Sangat aman, asalkan Anda sudah membaca sekilas untuk memastikan tidak ada konteks penting yang terlewat oleh sistem AI sebelum dipresentasikan.

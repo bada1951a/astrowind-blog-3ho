@@ -60,7 +60,7 @@ Typischerweise entfernt das Skript überflüssige Formatierungsregeln, die sich 
 
 ---
 
-## 5. Häufig gestellte Fragen (FAQ) (FAQ)
+## 5. Häufig gestellte Fragen (FAQ)
 
 1. Kann ich diesen Trick auch anwenden, wenn die Datei passwortgeschützt ist?
 Nein. Passwahlgeschützte Excel-Dateien sind verschlüsselt. Sie müssen den Schutz in Excel (oder über Spezial-Tools) aufheben, bevor Sie die ZIP-Methode anwenden können. Da Excel bei passwortgeschützten Dateien oft abstürzt, empfiehlt es sich, das Passwort vorab zu entfernen.

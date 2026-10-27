@@ -26,7 +26,7 @@ Cơn ác mộng thủ công này chắc chắn quá quen thuộc với bất k�
 
 Trước khi nhảy vào cách sửa, chúng ta hãy điểm qua 3 lý do chính khiến việc gom số liệu hàng tháng của bạn luôn biến thành thảm họ
 
-a:
+**a:**
 
 1. Dữ liệu đầu vào phân mảnh và không đồng nhất: Mỗi chi nhánh gửi lên một file Excel với cấu trúc tùy ý (chi nhánh A dùng cột "Ma_SP", chi nhánh B lại dùng "Mã sản phẩm", chi nhánh C gộp chung Mã và Tên vào một cột).
 

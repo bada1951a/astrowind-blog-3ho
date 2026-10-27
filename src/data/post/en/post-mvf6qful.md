@@ -38,7 +38,7 @@ Before jumping into the fix, let us look at why typical spreadsheet methods fail
 
 ---
 
-## 3. Step-by-Step Practical Productivity Resolution Clean Your Data with Gemini
+## 3. Step-by-Step Practical Resolution Practical Productivity Resolution Clean Your Data with Gemini
 
 To fix our executive sync emergency, I used a structured approach combining a quick standardization formula and a targeted Gemini prompt to generate custom Apps Script logic.
 
@@ -47,7 +47,7 @@ Before asking AI to filter duplicates, sanitize your source columns to give the 
 - Go to your data range in Google Sheets.
 - In a helper column next to your email column, type the lowercase trimming formul
 
-a:
+**a:**
   `=LOWER(TRIM(B2))`
 - Drag this down to clean all email addresses instantly. This eliminates the invisible spaces and capitalization errors that trick standard filters.
 
@@ -80,16 +80,16 @@ Write a clean, ready-to-run Google Apps Script function named removeSmartDuplica
 
 ---
 
-## 5. Frequently Asked Questions (FAQ) (FAQ)
+## 5. Frequently Asked Questions (FAQ)
 
-Q: Can I use this method if my Google Sheet has over 50,000 rows?
+**Q:** Can I use this method if my Google Sheet has over 50,000 rows?
 
-A: Standard built-in Google Sheets formulas might lag with massive datasets, but Google Apps Script generated via Gemini handles large arrays efficiently by reading data into memory (`getValues()`), processing the rows, and writing them back in a single batch.
+**A:** Standard built-in Google Sheets formulas might lag with massive datasets, but Google Apps Script generated via Gemini handles large arrays efficiently by reading data into memory (`getValues()`), processing the rows, and writing them back in a single batch.
 
-Q: What if Gemini's generated script throws a permission error when I click run?
+**Q:** What if Gemini's generated script throws a permission error when I click run?
 
-A: This is normal for custom Google Apps Script projects. Google will show a "Google hasn't verified this app" warning screen. Click Advanced, then click Go to Untitled project (unsafe) to grant the necessary sheet-editing permissions to your personal workspace account.
+**A:** This is normal for custom Google Apps Script projects. Google will show a "Google hasn't verified this app" warning screen. Click Advanced, then click Go to Untitled project (unsafe) to grant the necessary sheet-editing permissions to your personal workspace account.
 
-Q: Does this replace a dedicated CRM tool like Salesforce or HubSpot?
+**Q:** Does this replace a dedicated CRM tool like Salesforce or HubSpot?
 
-A: Not permanently. This workflow is designed as an emergency bridge for quick ad-hoc executive reports, one-off webinar data cleanups, or ad-hoc marketing campaigns where exporting to Sheets is faster than rebuilding CRM duplicate rules.
+**A:** Not permanently. This workflow is designed as an emergency bridge for quick ad-hoc executive reports, one-off webinar data cleanups, or ad-hoc marketing campaigns where exporting to Sheets is faster than rebuilding CRM duplicate rules.

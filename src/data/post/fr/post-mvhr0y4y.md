@@ -26,7 +26,7 @@ Ce genre de situation ne relève pas de la fatalité, mais de trois causes techn
 
 2. L'absence de contrôles interactifs : Utiliser des plages de cellules fixes (comme "
 
-A1:G12") au lieu de plages dynamiques avec des menus déroulants ou des curseurs bloque toute mise à jour en direct pendant la réunion.
+**A1:**G12") au lieu de plages dynamiques avec des menus déroulants ou des curseurs bloque toute mise à jour en direct pendant la réunion.
 
 3. Le piège de la mise en forme manuelle : Passer trop de temps à ajuster les couleurs, les légendes et les échelles logarithmiques à la main au lieu de laisser l'IA suggérer la typologie de graphique optimale (cascade, aires empilées ou graphiques combinés).
 
@@ -40,7 +40,7 @@ Avant d'invoquer l'IA, vos données brutes doivent être prêtes. Rassemblez vos
 - Évitez les cellules fusionnées dans la zone de données.
 - Utilisez des plages nommées si nécessaire, ou sélectionnez simplement votre plage (par exemple, "Données_Budget!
 
-A1:E12").
+**A1:**E12").
 
 ### Étape 2 : Activer l'assistant IA et générer les suggestions
 Ouvrez votre panneau latéral Google Sheets et utilisez l'intelligence artificielle intégrée pour concevoir la structure visuelle.

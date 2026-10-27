@@ -67,6 +67,6 @@ Als je gebruikmaakt van ChatGPT met de Python-omgeving, kun je het `.xlsx`-besta
 3. Waarom zijn XLOOKUP-functies soms alsnog traag in grote bestanden?
 Hoewel XLOOKUP veel vriendelijker is dan VLOOKUP, kan het alsnog trager worden als je zoekt in niet-gesorteerde volledige kolommen (zoals `
 
-A:A` in plaats van een specifiek bereik zoals `
+**A:**A` in plaats van een specifiek bereik zoals `
 
-A1:A5000`). Door het bereik strak af te bakenen, bespaar je duizenden onnodige berekeningen per seconde.
+**A1:**A5000`). Door het bereik strak af te bakenen, bespaar je duizenden onnodige berekeningen per seconde.

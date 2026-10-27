@@ -18,8 +18,6 @@ I tentativi rudimentali e frettolosi di formattazione manuale non fanno altro ch
 
 La posta in gioco è altissima: un errore di conformità non gestito o un ritardo nella presentazione dei dati normativi chiave può compromettere la reputazione dell'azienda, comportare sanzioni amministrative pesanti e vanificare mesi di lavoro strategico coordinato con i consulenti legali esterni. In un contesto aziendale competitivo come quello milanese, dove la puntualità e la precisione formale sono requisiti imprescindibili per mantenere la leadership di mercato, presentarsi con un rapporto incompleto o errato rappresenta un rischio professionale inaccettabile che richiede una soluzione tecnologica immediata e risolutiva.
 
-
-
 ![How to Summarize 150-Page Regulatory Compliance PDFs in 3 Minutes Using Claude 3.5 Sonnet AI Automation Guide](https://picsum.photos/seed/work-mvpky8xx-6-b/1000/550.jpg)
 
 ## 2. Analisi approfondita degli errori di formula e di processo
@@ -52,8 +50,8 @@ Agisci come un esperto di conformità normativa e analista di dati aziendali. An
 ### Metodo 2: Conversione pulita dei dati tramite Power Query e formati intermedi
 1. Una volta ottenuto il riassunto strutturato in formato Markdown o tabella dalla chat dell'IA, fare clic sul pulsante di copia rapida integrato nell'interfaccia del blocco di codice generato.
 2. Aprire un file di testo pulito (come Blocco Note o TextEdit), incollare il contenuto e salvarlo con estensione `.csv` avendo cura di selezionare la codifica `UTF-8` per preservare i caratteri accentati italiani.
-3. All'interno del foglio di calcolo aziendale, navigare nella scheda superiore **Dati **e fare clic su **Da testo/CSV **nel gruppo **Recupera e trasforma dati**.
-4. Selezionare il file CSV appena salvato, verificare nell'anteprima di Power Query che le colonne siano delimitate correttamente e fare clic su **Carica **per importare i dati puliti senza alcun errore di formattazione o celle corrotte.
+3. All'interno del foglio di calcolo aziendale, navigare nella scheda superiore **Dati**e fare clic su **Da testo/CSV**nel gruppo **Recupera e trasforma dati**.
+4. Selezionare il file CSV appena salvato, verificare nell'anteprima di Power Query che le colonne siano delimitate correttamente e fare clic su**Carica **per importare i dati puliti senza alcun errore di formattazione o celle corrotte.
 
 ### Metodo 3: Automazione tramite script Python di supporto per grandi volumi ricorrenti
 Per gli utenti che affrontano questa esigenza con cadenza regolare, è possibile impostare uno script di automazione locale che dialoghi direttamente con le API per elaborare i documenti in background.

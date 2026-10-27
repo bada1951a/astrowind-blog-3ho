@@ -40,7 +40,7 @@ May mắn là Google Sheets có sẵn một thứ vũ khí cực kỳ mạnh m�
 Mở file Google Sheets báo cáo của bạn lên. Tạo một tab mới hoặc một khu vực riêng đặt tên là `Tham_So_Ty_Gia`. Lập sẵn các cột:
 - Cột
 
-A: Mã tiền tệ (Ví dụ: USD, EUR, JPY, SGD)
+**A:** Mã tiền tệ (Ví dụ: USD, EUR, JPY, SGD)
 - Cột B: Tên loại tiền
 - Cột C: Tỷ giá quy đổi tự động
 
@@ -62,7 +62,7 @@ Ví dụ, bạn muốn đổi 5000 USD ở cột Doanh Thu (Ô B5) sang VND, cô
 
 `=B5 * VLOOKUP("USD", Tham_So_Ty_Gia!
 
-A2:C10, 3, FALSE)`
+**A2:**C10, 3, FALSE)`
 
 Cách làm này giúp bạn chỉ cần update tỷ giá ở một nơi duy nhất, toàn bộ hàng trăm dòng báo cáo bên dưới sẽ tự động nhảy số theo chuẩn xác từng giây.
 

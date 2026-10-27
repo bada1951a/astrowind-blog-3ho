@@ -61,14 +61,14 @@ Consiglio di sicurezza: Quando lavori su file aziendali sensibili contenenti dat
 
 Domande Frequenti (FAQ)
 
-Q1. Cosa faccio se alcune righe non contengono il numero di telefono e la formula restituisce un errore?
+**Q1.** Cosa faccio se alcune righe non contengono il numero di telefono e la formula restituisce un errore?
 
-A1. Puoi racchiudere la formula all'interno della funzione SE.ERRORE di Excel, impostando un valore vuoto o la dicitura "Dato mancante" nel caso in cui il separatore cercato non venga trovato nella riga specifica.
+**A1.** Puoi racchiudere la formula all'interno della funzione SE.ERRORE di Excel, impostando un valore vuoto o la dicitura "Dato mancante" nel caso in cui il separatore cercato non venga trovato nella riga specifica.
 
-Q2. Posso usare questo metodo anche se non ho l'ultima versione di Microsoft 365?
+**Q2.** Posso usare questo metodo anche se non ho l'ultima versione di Microsoft 365?
 
-A2. Assolutamente sì. Chiedi esplicitamente a ChatGPT di utilizzare funzioni compatibili con le versioni precedenti di Excel, come STRINGA.ESTRAI e TROVA, evitando le funzioni dinamiche avanzate.
+**A2.** Assolutamente sì. Chiedi esplicitamente a ChatGPT di utilizzare funzioni compatibili con le versioni precedenti di Excel, come STRINGA.ESTRAI e TROVA, evitando le funzioni dinamiche avanzate.
 
-Q3. È sicuro utilizzare ChatGPT per scrivere script o formule per il lavoro d'ufficio?
+**Q3.** È sicuro utilizzare ChatGPT per scrivere script o formule per il lavoro d'ufficio?
 
-A3. Sì, purché si tratti di formule standard o brevi macro. È sempre buona norma testare il codice su una copia di backup del file e non sull'originale, specialmente quando si lavora in tarda serata sotto pressione.
+**A3.** Sì, purché si tratti di formule standard o brevi macro. È sempre buona norma testare il codice su una copia di backup del file e non sull'originale, specialmente quando si lavora in tarda serata sotto pressione.

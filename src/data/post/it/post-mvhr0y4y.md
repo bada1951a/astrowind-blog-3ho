@@ -12,12 +12,12 @@ theme: "Dracula Purple Dev"
 
 Erano le 16:45 di un martedì pomeriggio nel nostro ufficio vicino a Piazza Gae Aulenti a Milano. Alle 17:00 avevamo la videoconferenza decisiva con il comitato direttivo del cliente per la revisione del budget annuale. Sul mio schermo, il foglio Google Sheets con il modello finanziario sembrava un campo di battagli
 
-a: righe di proiezioni di cassa che non tornavano, tassi di crescita calcolati a mano con formule chilometriche e, ciliegina sulla torta, il grafico a barre principali che mostrava una proiezione piatta e incomprensibile. Il direttore finanziario mi aveva appena scritto su Slack: "Voglio vedere scenari dinamici, non le solite slide statiche". Mancavano quindici minuti. Copiare e incollare dati da Excel continuava a sballare i formati, e ogni volta che modificavo un'ipotesi sui ricavi, dovevo ricalcolare tutto a mano rischiando di fare una brutta figura davanti a tutti.
+**a:** righe di proiezioni di cassa che non tornavano, tassi di crescita calcolati a mano con formule chilometriche e, ciliegina sulla torta, il grafico a barre principali che mostrava una proiezione piatta e incomprensibile. Il direttore finanziario mi aveva appena scritto su Slack: "Voglio vedere scenari dinamici, non le solite slide statiche". Mancavano quindici minuti. Copiare e incollare dati da Excel continuava a sballare i formati, e ogni volta che modificavo un'ipotesi sui ricavi, dovevo ricalcolare tutto a mano rischiando di fare una brutta figura davanti a tutti.
 
 <div style="border-left: 4px solid #bd93f9; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>L'emergenza in ufficio:</strong> Quando la scadenza si avvicina e i dati finanziari sono disordinati, il panico non aiuta. Smetti di ricalcolare le celle una per un
 
-a: Google Sheets e l'intelligenza artificiale possono generare grafici interattivi e suggerimenti strutturati in meno di tre minuti.
+**a:** Google Sheets e l'intelligenza artificiale possono generare grafici interattivi e suggerimenti strutturati in meno di tre minuti.
 </div>
 
 ![How to Create Interactive Financial Modeling Charts in Google Sheets with AI Suggestions AI Automation Guide](https://picsum.photos/seed/work-mvhr2g4q-6-b/1000/550.jpg)
@@ -49,7 +49,7 @@ Per rendere il modello interattivo durante la presentazione al cliente, devi per
 
 3. Usa la funzione `CERC
 
-A.ORIZ` o `INDICE/CONFRONTA` collegando i tuoi flussi di cassa futuri alla cella B1. Ad esempio: `=SE(B1="Ottimistico"; C2*1.15; SE(B1="Pessimistico"; C2*0.85; C2))`.
+**A.**ORIZ` o `INDICE/CONFRONTA` collegando i tuoi flussi di cassa futuri alla cella B1. Ad esempio: `=SE(B1="Ottimistico"; C2*1.15; SE(B1="Pessimistico"; C2*0.85; C2))`.
 
 ### Passaggio 3: Generare il grafico finanziario interattivo assistito
 Adesso colleghiamo il grafico dinamico:
@@ -61,12 +61,12 @@ Adesso colleghiamo il grafico dinamico:
 
 4. Assicurati di attivare le etichette dati (Etichette dati) per mostrare i valori esatti sopra ogni barr
 
-a: il cliente adora vedere subito i numeri chiave senza dover indovinare leggendo l'asse verticale.
+**a:** il cliente adora vedere subito i numeri chiave senza dover indovinare leggendo l'asse verticale.
 
 <div style="border-left: 4px solid #bd93f9; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Consiglio Pro - Scorciatoia rapid
 
-a:</strong> Ricorda che puoi attivare il pannello di assistenza AI in qualsiasi momento premendo la combinazione di tasti rapida per la ricerca nei menu o usando i componenti aggiuntivi ufficiali per il Workspace per generare riassunti testuali del budget da affiancare al grafico.
+**a:**</strong> Ricorda che puoi attivare il pannello di assistenza AI in qualsiasi momento premendo la combinazione di tasti rapida per la ricerca nei menu o usando i componenti aggiuntivi ufficiali per il Workspace per generare riassunti testuali del budget da affiancare al grafico.
 </div>
 
 ## Consigli dell'esperto: Sicurezza e buone pratiche
@@ -80,14 +80,14 @@ Prima di condividere il link del foglio Google Sheets con il cliente esterno, ti
 ### Posso usare formule avanzate se non conosco la programmazione?
 Certamente. Non serve conoscere la programmazione o lo scripting avanzato. Le funzioni logiche di base come `SE`, `CERC
 
-A.VERT` o i nuovi suggerimenti testuali basati su AI direttamente dentro il foglio ti permettono di ottenere risultati professionali scrivendo semplicemente ciò che desideri in linguaggio naturale.
+**A.**VERT` o i nuovi suggerimenti testuali basati su AI direttamente dentro il foglio ti permettono di ottenere risultati professionali scrivendo semplicemente ciò che desideri in linguaggio naturale.
 
 ### Come faccio a evitare che il grafico si deformi se aggiungo nuovi mesi?
 Il trucco migliore è utilizzare intervalli dinamici basati sulla funzione `SCARTO` (OFFSET) oppure semplicemente selezionare l'intera colonna (es.
 
-A:Z) anziché un intervallo chiuso (es.
+**A:**Z) anziché un intervallo chiuso (es.
 
-A1:A12). In questo modo, man mano che inserisci i dati dei mesi futuri, il grafico si aggiornerà in tempo reale.
+**A1:**A12). In questo modo, man mano che inserisci i dati dei mesi futuri, il grafico si aggiornerà in tempo reale.
 
 ### Cosa faccio se il cliente mi chiede un'analisi di sensibilità improvvisa?
 Grazie al menu a tendina degli scenari che hai configurato al Passaggio 2, ti basterà un solo clic sulla cella di controllo per passare dallo scenario "Base" a quello "Ottimistico", aggiornando all'istante sia i numeri della tabella che l'andamento visivo del grafico senza sudare freddo.

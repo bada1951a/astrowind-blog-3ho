@@ -15,7 +15,7 @@ Godzina 16:45 w biurowcu w samym sercu Warszawy. Za piętnaście minut mam wysł
 <div style="border-left: 4px solid #be123c; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Szybka wskazówk
 
-a:</strong> Zamiast pisać skomplikowane makra VBA od zera, nowoczesny Excel pozwala na współpracę z asystentami AI i zaawansowanymi funkcjami statystycznymi, które potrafią wyczyścić dane i wygenerować predykcję jednym kliknięciem.
+**a:**</strong> Zamiast pisać skomplikowane makra VBA od zera, nowoczesny Excel pozwala na współpracę z asystentami AI i zaawansowanymi funkcjami statystycznymi, które potrafią wyczyścić dane i wygenerować predykcję jednym kliknięciem.
 </div>
 
 ![How to Use AI to Predict Next Quarter Inventory Needs Directly in Excel Spreadsheets AI Automation Guide](https://picsum.photos/seed/work-mvhfp93k-9-b/1000/550.jpg)
@@ -71,7 +71,7 @@ i podaj zalecaną wielkość zamówienia uzupełniającego w nowej kolumnie.
 <div style="border-left: 4px solid #be123c; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Ważna uwaga ekspert
 
-a:</strong> Zawsze wykonaj kopię zapasową pliku przed uruchomieniem masowych operacji AI lub makr transformujących strukturę dużych arkuszy. Oszczędzisz sobie nerwów w przypadku awarii zasilania lub błędnej interpretacji promptu.
+**a:**</strong> Zawsze wykonaj kopię zapasową pliku przed uruchomieniem masowych operacji AI lub makr transformujących strukturę dużych arkuszy. Oszczędzisz sobie nerwów w przypadku awarii zasilania lub błędnej interpretacji promptu.
 </div>
 
 ## Najczęściej zadawane pytania (FAQ)

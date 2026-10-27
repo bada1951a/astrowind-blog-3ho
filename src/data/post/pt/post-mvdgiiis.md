@@ -48,7 +48,7 @@ Em vez de usar softwares legados ultrapassados, abra uma ferramenta de IA genera
 
 2. Clique no botão "Copiar tabela" (Copy table) no canto superior direito do bloco de código gerado pela I
 
-A.
+**A.**
 
 3. Abra a sua planilha do Excel, clique na célula de destino (ex: `A1`) e pressione `Ctrl + V`.
 
@@ -64,7 +64,7 @@ A.
 
 Trabalhar com dados financeiros e notas fiscais exige atenção rigorosa à privacidade e à conformidade corporativ
 
-a:
+**a:**
 
 * Privacidade de Dados (LGPD): Evite enviar notas fiscais de clientes finais ou dados altamente confidenciais para versões públicas de IAs sem antes verificar a política de privacidade da plataforma ou utilizar ambientes corporativos homologados pelo setor de TI da sua empresa. * A Regra de Ouro da Validação: Nunca envie um relatório financeiro gerado por IA para a diretoria sem fazer a conferência rápida dos totais. Utilize a fórmula `=SOMA()` na coluna de valores totais do Excel para bater o resultado final com o rodapé da nota fiscal original.
 

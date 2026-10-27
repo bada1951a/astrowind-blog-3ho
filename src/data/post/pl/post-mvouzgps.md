@@ -67,14 +67,14 @@ Pracując z poufnymi dokumentami prawnymi i korporacyjnymi w narzędziach AI, za
 
 ## 5. Najczęściej zadawane pytania (FAQ)
 
-Q: Czy Claude 3.5 Sonnet radzi sobie z dokumentami w języku polskim?
+**Q:** Czy Claude 3.5 Sonnet radzi sobie z dokumentami w języku polskim?
 
-A: Tak, model doskonale rozumie polską terminologię prawniczą, urzędową oraz biznesową, a także bez problemu przetwarza dokumenty zapisane w tym języku.
+**A:** Tak, model doskonale rozumie polską terminologię prawniczą, urzędową oraz biznesową, a także bez problemu przetwarza dokumenty zapisane w tym języku.
 
-Q: Co zrobić, gdy plik PDF jest skanem i zawiera teksty nieczytelne dla OCR?
+**Q:** Co zrobić, gdy plik PDF jest skanem i zawiera teksty nieczytelne dla OCR?
 
-A: Zanim wgrasz plik do Claude, upewnij się, że przeszedł on przez proces rozpoznawania tekstu (OCR) w programie takim jak Adobe Acrobat. Claude potrzebuje warstwy tekstowej, aby poprawnie odczytać dokument.
+**A:** Zanim wgrasz plik do Claude, upewnij się, że przeszedł on przez proces rozpoznawania tekstu (OCR) w programie takim jak Adobe Acrobat. Claude potrzebuje warstwy tekstowej, aby poprawnie odczytać dokument.
 
-Q: Czy mogę wgrać kilka plików naraz zamiast jednego 150-stronicowego molocha?
+**Q:** Czy mogę wgrać kilka plików naraz zamiast jednego 150-stronicowego molocha?
 
-A: Tak, Claude pozwala na wgrywanie wielu dokumentów jednocześnie. Możesz podzielić duży raport na mniejsze części lub wgrać regulację razem z wewnętrznym kodeksem etyki firmy, aby model porównał oba dokumenty.
+**A:** Tak, Claude pozwala na wgrywanie wielu dokumentów jednocześnie. Możesz podzielić duży raport na mniejsze części lub wgrać regulację razem z wewnętrznym kodeksem etyki firmy, aby model porównał oba dokumenty.

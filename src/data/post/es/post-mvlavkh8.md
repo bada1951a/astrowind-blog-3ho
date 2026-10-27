@@ -50,14 +50,14 @@ Consejo de seguridad corporativa: Si trabajas con datos sensibles de clientes o 
 
 ## 5. Preguntas Frecuentes (FAQ)
 
-Q1. ¿Puedo hacer esto mismo si mi Excel esta en ingles en lugar de espanol?
+**Q1.** ¿Puedo hacer esto mismo si mi Excel esta en ingles en lugar de espanol?
 
-A1. Si, solo debes indicarle explicitamente a ChatGPT que te devuelva las formulas usando los nombres de funciones en ingles, como LEFT, RIGHT, MID o FIND, para que coincidan con tu configuracion regional.
+**A1.** Si, solo debes indicarle explicitamente a ChatGPT que te devuelva las formulas usando los nombres de funciones en ingles, como LEFT, RIGHT, MID o FIND, para que coincidan con tu configuracion regional.
 
-Q2. ¿Que hago si la formula me devuelve un error de tipo #VALOR o #NOMBRE?
+**Q2.** ¿Que hago si la formula me devuelve un error de tipo #VALOR o #NOMBRE?
 
-A2. Generalmente ocurre porque alguna version antigua de Excel no soporta funciones modernas como TEXTBEFORE o TEXTAFTER. Pidele a ChatGPT que te cree una solucion alternativa usando combinaciones de EXTRAE, HALLAR y LARGO.
+**A2.** Generalmente ocurre porque alguna version antigua de Excel no soporta funciones modernas como TEXTBEFORE o TEXTAFTER. Pidele a ChatGPT que te cree una solucion alternativa usando combinaciones de EXTRAE, HALLAR y LARGO.
 
-Q3. ¿Es seguro usar ChatGPT para limpiar bases de datos grandes de la empresa?
+**Q3.** ¿Es seguro usar ChatGPT para limpiar bases de datos grandes de la empresa?
 
-A3. Para datos publicos o informacion anonimizada de precios de la competencia no hay problema. Para datos personales protegidos por normativa de privacidad, utiliza versiones empresariales que garanticen que tus datos no se usan para entrenar modelos publicos.
+**A3.** Para datos publicos o informacion anonimizada de precios de la competencia no hay problema. Para datos personales protegidos por normativa de privacidad, utiliza versiones empresariales que garanticen que tus datos no se usan para entrenar modelos publicos.

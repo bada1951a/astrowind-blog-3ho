@@ -61,11 +61,11 @@ Em seguida, na coluna [E], aplique a lógica para extrair apenas asHoras Extras 
 
 Se você tiver regras complexas de banco de horas, abra o painel do seu assistente de IA corporativo e utilize o seguinte comando direto (Prompt) para gerar a fórmula exat
 
-a:
+**a:**
 
 > "Atue como especialista em Excel corporativo. Tenho uma tabela onde a coluna D contém o total de horas trabalhadas no formato [h]:mm. Escreva uma fórmula em Excel que calcule o valor excedente a 8 horas diárias, aplicando o multiplicador de 50% para dias úteis e 100% para finais de semana cuja data está na coluna
 
-A."
+**A.**"
 
 Cole o resultado gerado diretamente na célula de pagamento e arraste para toda a tabela. <div style="border-left: 4px solid #7c3aed; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Alerta de Boas Práticas:</strong> Sempre salve uma cópia local de segurança (Backup) na sua máquina antes de executar scripts de mesclagem em massa ou macros de IA em pastas compartilhadas na rede.
@@ -73,14 +73,14 @@ Cole o resultado gerado diretamente na célula de pagamento e arraste para toda 
 
 ## Perguntas Frequentes (FAQ)
 
-Q1. Por que o resultado da minha soma de horas exibe valores negativos ou errados no Excel?
+**Q1.** Por que o resultado da minha soma de horas exibe valores negativos ou errados no Excel?
 
-A1.O Excel não exibe horas negativas por padrão e pode reiniciar a contagem após 24 horas. Certifique-se de formatar a célula personalizada como `[h]:mm:ss` para que o acumulador de horas funcione corretamente sem resetar.
+**A1.**O Excel não exibe horas negativas por padrão e pode reiniciar a contagem após 24 horas. Certifique-se de formatar a célula personalizada como `[h]:mm:ss` para que o acumulador de horas funcione corretamente sem resetar.
 
-Q2. Como evitar que o arquivo volte a se dividir em cópias na nuvem?
+**Q2.** Como evitar que o arquivo volte a se dividir em cópias na nuvem?
 
-A2.Estabeleça um fluxo onde apenas um colaborador por vez edita a planilha principal, ou migre a estrutura de controle para uma lista compartilhada online onde o bloqueio de edição simultânea previne a criação de versões conflitantes.
+**A2.**Estabeleça um fluxo onde apenas um colaborador por vez edita a planilha principal, ou migre a estrutura de controle para uma lista compartilhada online onde o bloqueio de edição simultânea previne a criação de versões conflitantes.
 
-Q3. Posso usar essa mesma lógica para calcular adicional noturno?
+**Q3.** Posso usar essa mesma lógica para calcular adicional noturno?
 
-A3. Sim. Você pode criar colunas auxiliares que verificam se o horário de saída ultrapassou as 22:00 e aplicar a proporção da hora noturna reduzida (52 minutos e 30 segundos) através de uma função lógica simples com SE e HORARIO.
+**A3.** Sim. Você pode criar colunas auxiliares que verificam se o horário de saída ultrapassou as 22:00 e aplicar a proporção da hora noturna reduzida (52 minutos e 30 segundos) através de uma função lógica simples com SE e HORARIO.

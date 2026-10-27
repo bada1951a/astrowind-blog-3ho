@@ -69,14 +69,14 @@ Unggah file PDF atau kumpulan foto *invoice* Anda ke dalam chat, lalu gunakan *p
 
 ## Tanya Jawab Sering Diajukan (FAQ)
 
-Q: Apakah cara ini aman untuk data keuangan perusahaan yang bersifat rahasia?
+**Q:** Apakah cara ini aman untuk data keuangan perusahaan yang bersifat rahasia?
 
-A: Untuk data internal standar aman, namun jika perusahaan Anda sangat ketat mengenai regulasi *Data Privacy*, gunakan mode privasi pada alat AI atau gunakan perangkat lunak enterprise berlisensi resmi milik kantor.
+**A:** Untuk data internal standar aman, namun jika perusahaan Anda sangat ketat mengenai regulasi *Data Privacy*, gunakan mode privasi pada alat AI atau gunakan perangkat lunak enterprise berlisensi resmi milik kantor.
 
-Q: Bagaimana jika *invoice*-nya adalah nota kecil tulis tangan (manual)?
+**Q:** Bagaimana jika *invoice*-nya adalah nota kecil tulis tangan (manual)?
 
-A: AI modern saat ini sudah cukup canggih membaca tulisan tangan manusia, namun akurasinya tidak 100%. Untuk nota tulis tangan yang jelek, Anda mungkin perlu sedikit koreksi manual setelah data masuk ke Excel.
+**A:** AI modern saat ini sudah cukup canggih membaca tulisan tangan manusia, namun akurasinya tidak 100%. Untuk nota tulis tangan yang jelek, Anda mungkin perlu sedikit koreksi manual setelah data masuk ke Excel.
 
-Q: Apakah saya perlu berlangganan akun AI versi berbayar untuk melakukan ini?
+**Q:** Apakah saya perlu berlangganan akun AI versi berbayar untuk melakukan ini?
 
-A: Sama sekali tidak perlu. Versi gratis dari perkakas AI populer saat ini sudah lebih dari cukup untuk membaca puluhan halaman *invoice* dalam sekali unggah.
+**A:** Sama sekali tidak perlu. Versi gratis dari perkakas AI populer saat ini sudah lebih dari cukup untuk membaca puluhan halaman *invoice* dalam sekali unggah.

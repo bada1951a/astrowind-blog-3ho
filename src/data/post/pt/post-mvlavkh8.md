@@ -67,14 +67,14 @@ Com os dados separados corretamente em colunas limpas, copie os valores gerados,
 
 ## Perguntas Frequentes (FAQ)
 
-Q1. O que fazer se o Preenchimento Relâmpago (Ctrl + E) não reconhecer o padrão do meu endereço?
+**Q1.** O que fazer se o Preenchimento Relâmpago (Ctrl + E) não reconhecer o padrão do meu endereço?
 
-A1. O Preenchimento Relâmpago aprende com exemplos. Se ele errar na segunda ou terceira linha, digite manualmente o resultado correto na terceira linha e pressione Ctrl + E novamente para forçá-lo a entender a regra lógica. Se persistir, use o ChatGPT para criar uma fórmula dedicada.
+**A1.** O Preenchimento Relâmpago aprende com exemplos. Se ele errar na segunda ou terceira linha, digite manualmente o resultado correto na terceira linha e pressione Ctrl + E novamente para forçá-lo a entender a regra lógica. Se persistir, use o ChatGPT para criar uma fórmula dedicada.
 
-Q2. Posso usar o suplemento do ChatGPT diretamente dentro do Excel corporativo?
+**Q2.** Posso usar o suplemento do ChatGPT diretamente dentro do Excel corporativo?
 
-A2. Depende das políticas de segurança da sua empresa. Muitas empresas na Avenida Paulista bloqueiam suplementos externos de IA por questões de conformidade (Compliance). Nesses casos, o método mais seguro é usar o ChatGPT pelo navegador em uma aba separada e apenas colar os resultados ou fórmulas na sua planilha.
+**A2.** Depende das políticas de segurança da sua empresa. Muitas empresas na Avenida Paulista bloqueiam suplementos externos de IA por questões de conformidade (Compliance). Nesses casos, o método mais seguro é usar o ChatGPT pelo navegador em uma aba separada e apenas colar os resultados ou fórmulas na sua planilha.
 
-Q3. Como proceder se a planilha estiver totalmente corrompida além de protegida por senha?
+**Q3.** Como proceder se a planilha estiver totalmente corrompida além de protegida por senha?
 
-A3. Se o arquivo nem sequer abrir, tente abri-lo no Excel Online via navegador ou use a opção de "Abrir e Reparar" localizada na janela de abertura de arquivos do aplicativo de desktop na guia Arquivo > Abrir > Procurar.
+**A3.** Se o arquivo nem sequer abrir, tente abri-lo no Excel Online via navegador ou use a opção de "Abrir e Reparar" localizada na janela de abertura de arquivos do aplicativo de desktop na guia Arquivo > Abrir > Procurar.

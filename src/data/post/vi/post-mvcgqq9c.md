@@ -28,7 +28,7 @@ Trước khi nhờ AI can thiệp, chúng ta cần hiểu tại sao file Excel b
 
 2. Hàm Volatile và tham chiếu toàn cột: Sử dụng các hàm tính toán lại liên tục mỗi khi có thay đổi như OFFSET, INDIRECT, hoặc tham chiếu trực tiếp cả cột (
 
-A:A) trong hàng nghìn dòng dữ liệu.
+**A:**A) trong hàng nghìn dòng dữ liệu.
 
 3. Hidden Shapes & Objects: Các hộp thoại, hình vẽ, hoặc nút bấm bị lỗi hiển thị nằm ẩn (0 kích thước) chồng đè lên nhau qua nhiều năm tháng sử dụng file template cũ.
 
@@ -75,4 +75,4 @@ Bạn có thể yêu cầu ChatGPT viết riêng cho bạn một đoạn mã Pyt
 3. Làm thế nào để ngăn chặn file Excel bị nặng lại trong tương lai?
 Hãy tập thói quen dán dữ liệu dạng Paste as Values (Chỉ dán giá trị) thay vì Paste toàn bộ định dạng từ các nguồn lạ, đồng thời hạn chế sử dụng hàm mảng động quá lớn trên toàn bộ cột (
 
-A:A) nếu không thực sự cần thiết.
+**A:**A) nếu không thực sự cần thiết.

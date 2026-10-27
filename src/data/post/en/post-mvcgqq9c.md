@@ -36,7 +36,7 @@ Before jumping into the fix, let us diagnose why large Excel models suddenly tur
 
 ---
 
-## 3. Step-by-Step Practical Productivity Resolution Debugging with ChatGPT Python Analysis
+## 3. Step-by-Step Practical Resolution Practical Productivity Resolution Debugging with ChatGPT Python Analysis
 
 Instead of digging through menus manually, we will let ChatGPT analyze the structural anatomy of your workbook using Python. 
 
@@ -79,7 +79,7 @@ Once ChatGPT runs the code, it will output a clear diagnostic breakdown. It will
 
 ---
 
-## 5. Frequently Asked Questions (FAQ) (FAQ)
+## 5. Frequently Asked Questions (FAQ)
 
 #### 1. What if my company blocks file uploads to ChatGPT?
 If your internal IT policy restricts file uploads, you can still use ChatGPT locally. Ask ChatGPT to write a standalone Python script for you to run inside your local Jupyter Notebook or command line (`pip install openpyxl pandas`). This way, your data never leaves your secure machine.

@@ -26,11 +26,11 @@ Mengapa situasi seperti ini sering melumpuhkan produktivitas kantor? Berikut ada
 
 * **Ketergantungan pada Skrip Kustom yang Rapuh:** Macro VBA atau skrip otomatisasi lama sering kali dibuat spesifik untuk struktur file lama. Ketika versi atau format data berubah sedikit saja, skrip tersebut langsung mengalami *runtime error*.
 * **Beban Kognitif Dokumen Tebal:** Membaca dokumen regulasi setebal 100 hingga 150 halaman secara manual memakan waktu berjam-jam, membuat staf rentan melewatkan poin-poin krusial atau pasal sanksi yang tersembunyi.
-* **Minimnya Dokumentasi Serah Terima:** Budaya kerja yang kurang mengarsipkan instruksi kerja membuat karyawan pengganti harus menebak-nebak fungsi tombol otomatisasi yang dibuat pendahulunya.
+* **Minimnya Dokumentasi Serah Terima:**Budaya kerja yang kurang mengarsipkan instruksi kerja membuat karyawan pengganti harus menebak-nebak fungsi tombol otomatisasi yang dibuat pendahulunya.
 
 ## 3. Panduan Langkah demi Langkah Otomatisasi dan Solusi Cepat
 
-Alih-alih stres memperbaiki kode VBA yang rusak, saya memutuskan untuk melompati proses manual dan langsung memanfaatkan **Claude 3.5 Sonnet** untuk membedah file PDF peraturan tersebut. Berikut adalah langkah-langkah praktis yang saya gunakan dan bisa Anda ikuti:
+Alih-alih stres memperbaiki kode VBA yang rusak, saya memutuskan untuk melompati proses manual dan langsung memanfaatkan**Claude 3.5 Sonnet** untuk membedah file PDF peraturan tersebut. Berikut adalah langkah-langkah praktis yang saya gunakan dan bisa Anda ikuti:
 
 ### Langkah 1: Unggah Dokumen ke Claude 3.5 Sonnet
 Buka peramban web Anda, akses antarmuka Claude, dan pastikan Anda menggunakan model Claude 3.5 Sonnet yang memiliki kapabilitas analisis dokumen panjang dan penalaran tingkat tinggi. Seret dan letakkan (drag and drop) file PDF regulasi 150 halaman tersebut ke kolom chat.
@@ -69,14 +69,14 @@ Sebelum Anda mengandalkan AI sepenuhnya untuk dokumen perusahaan yang bersifat s
 
 ## 5. Pertanyaan yang Sering Diajukan (FAQ)
 
-Q: Apakah Claude 3.5 Sonnet mampu membaca file PDF berbahasa hukum yang sangat kaku dan panjang?
+**Q:** Apakah Claude 3.5 Sonnet mampu membaca file PDF berbahasa hukum yang sangat kaku dan panjang?
 
-A: Ya, jendela konteks yang besar dan kemampuan pemahaman bahasa alami Claude 3.5 Sonnet sangat andal dalam mengurai kalimat hukum yang rumit menjadi poin-poin yang mudah dipahami.
+**A:** Ya, jendela konteks yang besar dan kemampuan pemahaman bahasa alami Claude 3.5 Sonnet sangat andal dalam mengurai kalimat hukum yang rumit menjadi poin-poin yang mudah dipahami.
 
-Q: Bagaimana jika file PDF yang saya miliki berupa hasil scan gambar (bukan teks digital)?
+**Q:** Bagaimana jika file PDF yang saya miliki berupa hasil scan gambar (bukan teks digital)?
 
-A: Claude 3.5 Sonnet memiliki kemampuan OCR (Optical Character Recognition) bawaan yang baik. Namun, pastikan hasil scan cukup jelas agar tidak terjadi salah baca karakter angka atau pasal.
+**A:** Claude 3.5 Sonnet memiliki kemampuan OCR (Optical Character Recognition) bawaan yang baik. Namun, pastikan hasil scan cukup jelas agar tidak terjadi salah baca karakter angka atau pasal.
 
-Q: Apakah aman mengunggah dokumen peraturan eksternal perusahaan ke dalam platform AI?
+**Q:** Apakah aman mengunggah dokumen peraturan eksternal perusahaan ke dalam platform AI?
 
-A: Dokumen regulasi pemerintah atau peraturan eksternal yang sifatnya sudah dipublikasikan untuk umum umumnya aman untuk dianalisis menggunakan AI publik. Namun, selalu patuhi kebijakan kepatuhan data internal perusahaan Anda.
+**A:** Dokumen regulasi pemerintah atau peraturan eksternal yang sifatnya sudah dipublikasikan untuk umum umumnya aman untuk dianalisis menggunakan AI publik. Namun, selalu patuhi kebijakan kepatuhan data internal perusahaan Anda.

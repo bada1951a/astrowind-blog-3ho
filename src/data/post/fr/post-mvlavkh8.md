@@ -44,14 +44,14 @@ AVERTISSEMENT SÉCURITÉ : Veillez à anonymiser ou masquer les données personn
 
 FAQ
 
-Q1. Puis-je utiliser cette méthode si mes données mélangent des formats fixes et des formats aléatoires ?
+**Q1.** Puis-je utiliser cette méthode si mes données mélangent des formats fixes et des formats aléatoires ?
 
-A1. Oui, mais dans ce cas, il est préférable d'utiliser l'outil Power Query accessible via l'onglet Données > Obtenir des données, qui permet d'ajouter des colonnes conditionnelles basées sur des motifs textuels plutôt que des formules rigides.
+**A1.** Oui, mais dans ce cas, il est préférable d'utiliser l'outil Power Query accessible via l'onglet Données > Obtenir des données, qui permet d'ajouter des colonnes conditionnelles basées sur des motifs textuels plutôt que des formules rigides.
 
-Q2. Comment faire si ChatGPT me donne une formule en anglais alors que mon Excel est en français ?
+**Q2.** Comment faire si ChatGPT me donne une formule en anglais alors que mon Excel est en français ?
 
-A2. Précisez toujours dans votre prompt initial : "Attention, mon Excel utilise la version française, donne-moi les noms de fonctions en français (ex: NBCAR au lieu de LEN)".
+**A2.** Précisez toujours dans votre prompt initial : "Attention, mon Excel utilise la version française, donne-moi les noms de fonctions en français (ex: NBCAR au lieu de LEN)".
 
-Q3. Que faire si la formule renvoie une erreur #VALEUR ! ?
+**Q3.** Que faire si la formule renvoie une erreur #VALEUR ! ?
 
-A3. Cela signifie généralement qu'un caractère recherché (comme le signe + du téléphone ou une virgule) est absent sur certaines lignes. Demandez à l'IA d'intégrer une gestion d'erreur avec la fonction SI.ERREUR dans sa formule.
+**A3.** Cela signifie généralement qu'un caractère recherché (comme le signe + du téléphone ou une virgule) est absent sur certaines lignes. Demandez à l'IA d'intégrer une gestion d'erreur avec la fonction SI.ERREUR dans sa formule.

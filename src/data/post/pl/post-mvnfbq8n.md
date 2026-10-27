@@ -24,9 +24,9 @@ Znacie to uczucie, gdy presja czasu rośnie, kolega z działu prawnego pyta o kl
 
 Zanim przejdziemy do rozwiązania, warto zrozumieć, dlaczego próba samodzielnego przetwarzania tak ogromnych dokumentów regulacyjnych kończy się porażką:
 
-- **Przeciążenie pamięci podręcznej:** Standardowe czytniki PDF i pakiety biurowe nie radzą sobie z płynnym parsowaniem dziesiątek tysięcy słów osadzonych w skomplikowanych tabelach i przypisach.
-- **Szum informacyjny:** Prawnicze dokumenty zawierają mnóstwo standardowych klauzul, definicji wstępnych i powtórzeń, które skutecznie odciągają uwagę od realnych zmian w procedurach.
-- **Brak syntezy danych:** Przeszukiwanie tekstu za pomocą prostej kombinacji klawiszy Ctrl+F znajduje pojedyncze słowa kluczowe, ale nie potrafi połączyć ich w logiczny ciąg przyczynowo-skutkowy dla całego działu biznesowego.
+- **Przeciążenie pamięci podręcznej:**Standardowe czytniki PDF i pakiety biurowe nie radzą sobie z płynnym parsowaniem dziesiątek tysięcy słów osadzonych w skomplikowanych tabelach i przypisach.
+-**Szum informacyjny:**Prawnicze dokumenty zawierają mnóstwo standardowych klauzul, definicji wstępnych i powtórzeń, które skutecznie odciągają uwagę od realnych zmian w procedurach.
+-**Brak syntezy danych:** Przeszukiwanie tekstu za pomocą prostej kombinacji klawiszy Ctrl+F znajduje pojedyncze słowa kluczowe, ale nie potrafi połączyć ich w logiczny ciąg przyczynowo-skutkowy dla całego działu biznesowego.
 
 ## 3. Instrukcja krok po kroku: Jak okiełznać 150 stron w 3 minuty
 
@@ -65,14 +65,14 @@ Warto również pamiętać o zasadzie ograniczonego zaufania – kluczowe wniosk
 
 ## 5. Często zadawane pytania
 
-Q: Czy Claude 3.5 Sonnet poradzi sobie z dokumentem napisanym trudnym językiem prawniczym?
+**Q:** Czy Claude 3.5 Sonnet poradzi sobie z dokumentem napisanym trudnym językiem prawniczym?
 
-A: Tak, model ten charakteryzuje się wyjątkowo wysoką zdolnością rozumienia kontekstu i terminologii specjalistycznej, dzięki czemu potrafi przetłumaczyć skomplikowany żargon prawniczy na zrozumiałe dla menedżerów punkty działania.
+**A:** Tak, model ten charakteryzuje się wyjątkowo wysoką zdolnością rozumienia kontekstu i terminologii specjalistycznej, dzięki czemu potrafi przetłumaczyć skomplikowany żargon prawniczy na zrozumiałe dla menedżerów punkty działania.
 
-Q: Co zrobić, jeśli plik PDF przekracza limity objętościowe narzędzia?
+**Q:** Co zrobić, jeśli plik PDF przekracza limity objętościowe narzędzia?
 
-A: W przypadku skrajnie wielkich dokumentów (powyżej kilkuset stron) najlepiej podzielić plik na mniejsze części za pomocą darmowych narzędzi do dzielenia PDF-ów lub wgrać wyłącznie kluczowe rozdziały dotyczące interesujących nas regulacji.
+**A:** W przypadku skrajnie wielkich dokumentów (powyżej kilkuset stron) najlepiej podzielić plik na mniejsze części za pomocą darmowych narzędzi do dzielenia PDF-ów lub wgrać wyłącznie kluczowe rozdziały dotyczące interesujących nas regulacji.
 
-Q: Czy muszę znać programowanie, żeby korzystać z takich promptów?
+**Q:** Czy muszę znać programowanie, żeby korzystać z takich promptów?
 
-A: Absolutnie nie. Wystarczy znajomość podstawowego języka polskiego i umiejętność jasnego formułowania swoich oczekiwań biznesowych w formie prostych instrukcji tekstowych.
+**A:** Absolutnie nie. Wystarczy znajomość podstawowego języka polskiego i umiejętność jasnego formułowania swoich oczekiwań biznesowych w formie prostych instrukcji tekstowych.

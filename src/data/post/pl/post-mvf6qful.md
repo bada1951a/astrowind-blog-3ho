@@ -21,7 +21,7 @@ Kiedy w bazie danych gromadzimy leady z różnych źródeł (formularze na stron
 <br>1. Różnice w wielkości liter i zbędne spacje („Warszawa ” zamiast „Warszawa”).
 <br>2. Literówki i warianty nazw firm (np. „Orlen S.
 
-A.” vs „Polski Koncern Naftowy ORLEN”).
+**A.**” vs „Polski Koncern Naftowy ORLEN”).
 <br>3. Zduplikowane wpisy z różnych kolumn, których zwykły filtr Google Sheets nie potrafi inteligentnie połączyć.
 </div>
 
@@ -41,7 +41,7 @@ Otwórz Gemini i wklej swoje dane wraz z konkretnym poleceniem (promptem). Unika
 
 > Sprawdzony prompt do skopiowani
 
-a:
+**a:**
 > „Mam poniższy zestaw danych klientów z Google Sheets. Zawiera on duplikaty spowodowane literówkami, różnicami w wielkości liter oraz dodatkowymi spacjami w kolumnach z nazwami firm i e-mailami. Napisz mi zaawansowaną formułę Google Sheets (lub krótki skrypt Apps Script), która pozwoli mi zidentyfikować i usunąć te duplikaty, traktując adres e-mail jako klucz główny, a nazwy firm normalizując. Oto moje dane: [Wklej dane]”
 
 ### Krok 3: Wdrożenie rozwiązania w Google Sheets
@@ -60,7 +60,7 @@ Problem rozwiązany w niecałe 3 minuty. Raport poszedł do zarządu na czas, a 
 
 ## Ostrzeżenie ekspert
 
-a: Bezpieczeństwo danych klientów (RODO)
+**a:** Bezpieczeństwo danych klientów (RODO)
 
 <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Ważna uwaga dotycząca prywatności:</strong>

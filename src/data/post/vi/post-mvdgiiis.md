@@ -54,7 +54,7 @@ Dữ liệu thô: [Dán đoạn văn bản quét OCR vào đây]
 <div style="border-left: 4px solid #1d4ed8; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Mẹo nhỏ từ chuyên gi
 
-a:</strong> Nếu hóa đơn của bạn có quá nhiều dòng chi tiết, hãy yêu cầu AI xử lý từng phần (batching) để tránh việc AI bị quá tải và bỏ sót dữ liệu ở cuối bảng.
+**a:**</strong> Nếu hóa đơn của bạn có quá nhiều dòng chi tiết, hãy yêu cầu AI xử lý từng phần (batching) để tránh việc AI bị quá tải và bỏ sót dữ liệu ở cuối bảng.
 </div>
 
 ---

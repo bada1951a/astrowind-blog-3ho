@@ -45,7 +45,7 @@ Antes de remover as duplicadas, precisamos nivelar os dados. Abra sua planilha n
 Digite este comando (prompt) no chat do Gemini:
 > "Preciso de uma fórmula do Google Sheets para a célula B2 que remova todos os espaços em branco extras, transforme o texto em letras minúsculas e remova possíveis pontos inválidos no domínio do e-mail da célula
 
-A2."
+**A2.**"
 
 O Gemini vai te devolver algo como:
 `=LOWER(TRIM(SUBSTITUTE(A2; " "; "")))`
@@ -62,7 +62,7 @@ Com a base limpa, crie uma tabela dinâmica rápida para garantir que nenhum dad
 
 ### Aviso do Especialist
 
-a: Cuidados com Dados Sensíveis
+**a:** Cuidados com Dados Sensíveis
 
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.05); border-radius: 4px; color: #111827;">
 <strong>ALERTA DE SEGURANÇA DE DADOS (LGPD):</strong><br>
@@ -76,8 +76,9 @@ Nunca envie dados reais de clientes (como CPFs completos, nomes reais e telefone
 1. O Gemini substitui totalmente a função nativa "Remover Duplicadas" do Google Sheets?
 Não exatamente. A função nativa é excelente para duplicatas exatas e rápidas. O Gemini entra em cena quando os dados estão sujos, mal formatados ou exigem regras complexas de limpeza que o filtro padrão não consegue identificar.
 
-2. Posso usar essa mesma automação no Microsoft Excel?
-Sim! O conceito do prompt é idêntico. Basta pedir para o Gemini adaptar o código gerado para o ambiente VBA do Excel em vez de Google Apps Script.
+**Q.** Posso usar essa mesma automação no Microsoft Excel?
+
+**A.** Sim! O conceito do prompt é idêntico. Basta pedir para o Gemini adaptar o código gerado para o ambiente VBA do Excel em vez de Google Apps Script.
 
 3. Preciso saber programar em JavaScript para usar o Apps Script gerado pelo Gemini?
 Nenhum conhecimento prévio de programação é necessário. O papel do Gemini é justamente traduzir a sua necessidade de negócio em um código pronto para copiar, colar e executar.

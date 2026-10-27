@@ -26,29 +26,29 @@ Voordat we tot de juiste oplossing kwamen, liep ik tegen drie hardnekkige muren 
 
 * **De dynamische HTML-structuur van Amazon:** Amazon verandert continu de CSS-klassen van hun webpagina's. Simpele formules zoals `IMPORTXML` breken hierdoor binnen de kortste keren af met een vervelende `#N/A` foutmelding.
 * **Geheime blokkades en anti-botfilters:** Als je te vaak achter elkaar dezelfde pagina bevraagt, herkent Amazon je IP-adres als bot en krijg je een captcha-pagina voorgeschoteld in plaats van prijzen.
-* **Het ontbreken van programmeerkennis:** Veel handleidingen vereisen geavanceerde webscraping scripts in Python of Node.js. Als marketeer wil je gewoon dat je data elke ochtend klaarstaat in Google Sheets, zonder git repositories of serverbeheer.
+* **Het ontbreken van programmeerkennis:**Veel handleidingen vereisen geavanceerde webscraping scripts in Python of Node.js. Als marketeer wil je gewoon dat je data elke ochtend klaarstaat in Google Sheets, zonder git repositories of serverbeheer.
 
 ## 3. Stap-voor-Stap Handleiding Zonder Code
 
 Gelukkig is er een slimmere manier om dit op te lossen met behulp van toegankelijke no-code extensies en slimme functies. Volg dit stappenplan om je eigen geautomatiseerde prijsmonitor op te zetten.
 
 ### Stap 1: Installeer de Juiste Google Sheets Invoegtoepassing
-Open een lege spreadsheet in Google Sheets. Ga in het bovenste menu naar **Extensies > Add-ons > Add-ons downloaden**. Zoek in de Google Workspace Marketplace naar een betrouwbare webscraping tool zoals *Scraper* of *Data Miner*. Installeer de extensie en verleen de benodigde rechten om te koppelen met je document.
+Open een lege spreadsheet in Google Sheets. Ga in het bovenste menu naar**Extensies > Add-ons > Add-ons downloaden**. Zoek in de Google Workspace Marketplace naar een betrouwbare webscraping tool zoals *Scraper* of *Data Miner*. Installeer de extensie en verleen de benodigde rechten om te koppelen met je document.
 
 ### Stap 2: Bouw Je URLs en Doelvelden Op
 Maak een nette tabel aan in je sheet met de volgende kolommen:
 * **Kolom
 
-A:** Productnaam
+**A:**** Productnaam
 * **Kolom B:** De volledige URL van de Amazon productpagina
-* **Kolom C:** De formule of celverwijzing voor de actuele prijs
+* **Kolom C:**De formule of celverwijzing voor de actuele prijs
 
 ### Stap 3: Stel de Dagelijkse Trigger in
 In plaats van handmatig te vernieuwen, configureer je de tool om op de achtergrond te draaien.
 
-1. Klik op het menu van je geïnstalleerde scraping tool via **Extensies**.
+1. Klik op het menu van je geïnstalleerde scraping tool via**Extensies**.
 
-2. Kies voor de optie om een automatische planning of **Trigger** in te stellen.
+2. Kies voor de optie om een automatische planning of**Trigger** in te stellen.
 
 3. Selecteer de frequentie: *Dagelijks* om bijvoorbeeld elke ochtend om 08:00 uur de nieuwe prijzen op te halen.
 
@@ -61,19 +61,19 @@ In plaats van handmatig te vernieuwen, configureer je de tool om op de achtergro
 Wanneer je begint met het geautomatiseerd binnenhalen van externe webdata, zijn er een paar praktische vuistregels om rekening mee te houden:
 
 * **Beperk de frequentie:** Vraag data niet elk uur op. Een dagelijkse update is meer dan voldoende voor concurrentieanalyse en voorkomt dat Amazon je tijdelijk blokkeert.
-* **Houd een back-up bij:** Maak wekelijks een statische export van je prijzentabel (via **Bestand > Downloaden > Microsoft Excel** of CSV) zodat je historische prijsontwrichtingen niet kwijtraakt als een scraping-tool plotseling van API verandert.
+* **Houd een back-up bij:**Maak wekelijks een statische export van je prijzentabel (via**Bestand > Downloaden > Microsoft Excel** of CSV) zodat je historische prijsontwrichtingen niet kwijtraakt als een scraping-tool plotseling van API verandert.
 * **Combineer met AI-prompts:** Zodra je prijzen netjes binnenkomen in Google Sheets, kun je ze via eenvoudige formules koppelen aan je AI-workflow om automatisch notificaties te sturen via Slack zodra een concurrent meer dan vijf procent in prijs daalt.
 
 ## 5. Veelgestelde Vragen
 
-Q: Kan Google Sheets uit zichzelf Amazon prijzen ophalen zonder extra tools?
+**Q:** Kan Google Sheets uit zichzelf Amazon prijzen ophalen zonder extra tools?
 
-A: Nee, de standaardfuncties zoals `IMPORTHTML` of `IMPORTXML` werken vrijwel nooit op Amazon vanwege strenge JavaScript-beveiligingen en anti-botmaatregelen. Je hebt altijd een lichte no-code extensie of cloud-scraper nodig.
+**A:** Nee, de standaardfuncties zoals `IMPORTHTML` of `IMPORTXML` werken vrijwel nooit op Amazon vanwege strenge JavaScript-beveiligingen en anti-botmaatregelen. Je hebt altijd een lichte no-code extensie of cloud-scraper nodig.
 
-Q: Wat moet ik doen als ik opeens alleen maar foutmeldingen zie in mijn sheet?
+**Q:** Wat moet ik doen als ik opeens alleen maar foutmeldingen zie in mijn sheet?
 
-A: Grote webshops zoals Amazon passen regelmatig hun pagina-indeling aan. Open de URL handmatig in je browser, inspecteer het prijselement opnieuw en pas de XPath-selectie of de CSS-selector aan in je scraping-instellingen.
+**A:** Grote webshops zoals Amazon passen regelmatig hun pagina-indeling aan. Open de URL handmatig in je browser, inspecteer het prijselement opnieuw en pas de XPath-selectie of de CSS-selector aan in je scraping-instellingen.
 
-Q: Is het legaal om openbare prijzen van concurrenten te scrapen?
+**Q:** Is het legaal om openbare prijzen van concurrenten te scrapen?
 
-A: Over het algemeen is het verzamelen van openlijk toegankelijke prijzen voor interne marktanalyse toegestaan, zolang je geen persoonlijke gegevens oogst of de servers van de website overbelast met te veel verzoeken per seconde. Raadpleeg bij twijfel altijd je interne juridische afdeling.
+**A:** Over het algemeen is het verzamelen van openlijk toegankelijke prijzen voor interne marktanalyse toegestaan, zolang je geen persoonlijke gegevens oogst of de servers van de website overbelast met te veel verzoeken per seconde. Raadpleeg bij twijfel altijd je interne juridische afdeling.

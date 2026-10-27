@@ -19,7 +19,7 @@ Se questa scena ti suona fin troppo familiare, significa che anche tu hai vissut
 <div style="border-left: 4px solid #1d4ed8; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Il punto di svolt
 
-a:</strong> Smetti di sprecare ore preziose ogni fine mese facendo copia-incolla tra fogli di calcolo. Esistono strumenti nativi in Excel progettati esattamente per eliminare questo lavoro ripetitivo una volta per tutte.
+**a:**</strong> Smetti di sprecare ore preziose ogni fine mese facendo copia-incolla tra fogli di calcolo. Esistono strumenti nativi in Excel progettati esattamente per eliminare questo lavoro ripetitivo una volta per tutte.
 </div>
 
 ---
@@ -38,7 +38,7 @@ Prima di passare alla soluzione, guardiamo in faccia il problema. Perche fare il
 
 ### La Soluzione Definitiv
 
-a: Automazione con Excel Power Query
+**a:** Automazione con Excel Power Query
 
 Power Query è il superpotero nascosto di Excel che quasi nessuno sfrutta a fondo. Ti permette di "registrare" una volta sola tutte le operazioni di pulizia e unione dei dati, applicandole automaticamente ogni volta che ricevi i file aggiornati.
 
@@ -72,14 +72,14 @@ Una volta puliti e aggregati i dati, vai su Home nell'editor di Power Query e cl
 
 ### Domande Frequenti (FAQ)
 
-Q: Power Query funziona anche se i file Excel hanno nomi diversi ogni mese?
+**Q:** Power Query funziona anche se i file Excel hanno nomi diversi ogni mese?
 
-A: Sì, purché i file si trovino nella stessa cartella monitorata e abbiano una struttura interna simile (stesse intestazioni di colonna). Power Query leggerà tutti i file presenti nella cartella indipendentemente dal loro nome.
+**A:** Sì, purché i file si trovino nella stessa cartella monitorata e abbiano una struttura interna simile (stesse intestazioni di colonna). Power Query leggerà tutti i file presenti nella cartella indipendentemente dal loro nome.
 
-Q: Cosa succede se un collega inserisce una colonna in più nel suo file Excel?
+**Q:** Cosa succede se un collega inserisce una colonna in più nel suo file Excel?
 
-A: Power Query e abbastanza flessibile, ma per evitare errori di mappatura e consigliabile definire uno standard di input condiviso con il team o gestire l'aggiunta di colonne escludendo quelle non necessarie direttamente nell'editor.
+**A:** Power Query e abbastanza flessibile, ma per evitare errori di mappatura e consigliabile definire uno standard di input condiviso con il team o gestire l'aggiunta di colonne escludendo quelle non necessarie direttamente nell'editor.
 
-Q: Ho bisogno di conoscere linguaggi di programmazione come VBA o Python per usare Power Query?
+**Q:** Ho bisogno di conoscere linguaggi di programmazione come VBA o Python per usare Power Query?
 
-A: Assolutamente no. Power Query funziona interamente tramite un'interfaccia visiva a pulsanti (point-and-click). Il linguaggio sottostante (M) viene generato automaticamente in background senza che tu debba scriverne una sola riga.
+**A:** Assolutamente no. Power Query funziona interamente tramite un'interfaccia visiva a pulsanti (point-and-click). Il linguaggio sottostante (M) viene generato automaticamente in background senza che tu debba scriverne una sola riga.

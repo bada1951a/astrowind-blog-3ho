@@ -24,7 +24,7 @@ Zanim przejdziemy do naprawy, spójrzmy prawdzie w oczy. Istnieją trzy główne
 
 1. Sztywne odwołania do komórek: Używanie bezwzględnych adresów typu
 
-A1:Z100 zamiast elastycznych zakresów nazwalnych, które psują się przy każdej dodanej kolumnie.
+**A1:**Z100 zamiast elastycznych zakresów nazwalnych, które psują się przy każdej dodanej kolumnie.
 
 2. Brak separacji danych surowych od warstwy prezentacji: Mieszanie surowych danych księgowych z obliczeniami wykresów w jednym arkuszu roboczym.
 
@@ -71,7 +71,7 @@ Standardowe wykresy kolumnowe są nudne i mało czytelne dla zarządu. Użyjemy 
 <div style="border-left: 4px solid #84cc16; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Ważna uwag
 
-a:</strong> Nigdy nie wklejaj poufnych danych płacowych, imiennych list zarobków ani surowych danych bankowych do publicznych, darmowych narzędzi AI. Korzystaj wyłącznie z korporacyjnych wersji narzędzi (np. Google Workspace z aktywowaną ochroną danych Enterprise) lub anonimizuj wrażliwe kolumny (zastępując nazwy firm np. Klient A, Klient B) przed wysłaniem zapytania do modelu.
+**a:**</strong> Nigdy nie wklejaj poufnych danych płacowych, imiennych list zarobków ani surowych danych bankowych do publicznych, darmowych narzędzi AI. Korzystaj wyłącznie z korporacyjnych wersji narzędzi (np. Google Workspace z aktywowaną ochroną danych Enterprise) lub anonimizuj wrażliwe kolumny (zastępując nazwy firm np. Klient A, Klient B) przed wysłaniem zapytania do modelu.
 </div>
 
 ---

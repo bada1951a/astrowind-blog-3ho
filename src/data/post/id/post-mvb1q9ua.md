@@ -28,7 +28,7 @@ Sebelum masuk ke solusi otomatisasi, mari kita bedah tiga penyebab utama mengapa
 
 3. Typo Domain dan Format Email Gand
 
-a: Kesalahan ketik umum seperti `@gmal.com` atau spasi ekstra di tengah alamat email membuat sistem pengiriman *newsletter* atau undangan meeting mental (*bounce*).
+**a:** Kesalahan ketik umum seperti `@gmal.com` atau spasi ekstra di tengah alamat email membuat sistem pengiriman *newsletter* atau undangan meeting mental (*bounce*).
 
 ---
 
@@ -77,11 +77,11 @@ Untuk memastikan tidak ada lagi email yang *error* sebelum dikirim ke bos atau k
 
 ## Pertanyaan yang Sering Diajukan (FAQ)
 
-Q1: Apa bedanya menggunakan Flash Fill (Ctrl + E) dibanding rumus Excel biasa?
+**Q1:** Apa bedanya menggunakan Flash Fill (Ctrl + E) dibanding rumus Excel biasa?
 Flash Fill menggunakan pola pembelajaran mesin lokal untuk menebak teks tanpa memerlukan logika rumus matematika yang rumit. Sangat cepat untuk ekstraksi nama, namun tidak dinamis (jika data asli berubah, data hasil Flash Fill tidak otomatis ikut berubah kecuali Anda mengulang prosesnya).
 
-Q2: Mengapa rumus TRIM saja tidak cukup untuk membersihkan email yang berantakan?
+**Q2:** Mengapa rumus TRIM saja tidak cukup untuk membersihkan email yang berantakan?
 Fungsi `TRIM` hanya berfungsi menghapus spasi berlebih di awal, di akhir, atau spasi ganda di antara kata. Namun, data email seringkali mengandung karakter tersembunyi dari sistem web (seperti *non-breaking spaces*). Oleh karena itu, Anda wajib menggabungkannya dengan fungsi `=CLEAN(TRIM(A2))`.
 
-Q3: Apakah cara ini bisa digunakan jika data klien mencapai puluhan ribu baris?
+**Q3:** Apakah cara ini bisa digunakan jika data klien mencapai puluhan ribu baris?
 Ya, terutama jika Anda menggunakan kombinasi Power Query. Power Query dirancang khusus untuk memproses ratusan ribu hingga jutaan baris data dalam hitungan detik tanpa membuat aplikasi Excel Anda *not responding* atau *crash*.

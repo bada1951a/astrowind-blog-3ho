@@ -15,7 +15,7 @@ Eram exatas 18h45 de uma sexta-feira chuvosa em São Paulo. O ar-condicionado do
 <div style="border-left: 4px solid #84cc16; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Missão do Di
 
-a:</strong> Criar um script automatizado que pega a aba de fechamento da sua planilha, converte em um PDF limpo e formata o disparo por e-mail automaticamente toda semana. Sem plugins pagos, sem dor de cabeça. </div>
+**a:**</strong> Criar um script automatizado que pega a aba de fechamento da sua planilha, converte em um PDF limpo e formata o disparo por e-mail automaticamente toda semana. Sem plugins pagos, sem dor de cabeça. </div>
 
 ![How to Write Custom Apps Script to Email Weekly PDF Reports from Google Sheets AI Automation Guide](https://picsum.photos/seed/work-mvgbl3dg-7-b/1000/550.jpg)
 
@@ -105,7 +105,7 @@ function enviarRelatorioSemanal() {
 
 ### Alertas de Especialist
 
-a: O que evitar
+**a:** O que evitar
 
 <div style="border-left: 4px solid #84cc16; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Atenção à Privacidade e Cotas:</strong> O Google Apps Script possui limites diários de envio de e-mails (geralmente 100 para contas gratuitas do Gmail e até 1.500 para contas corporativas Google Workspace). Garanta que a aba referenciada no script (`Resumo_Executivo`) tenha seu intervalo de impressão bem definido para evitar PDFs com páginas em branco cortadas incorretamente.
@@ -115,8 +115,9 @@ a: O que evitar
 
 ### Perguntas Frequentes (FAQ)
 
-1. O script vai rodar se o meu computador estiver desligado?  
-Sim! Como o Google Apps Script roda diretamente nos servidores em nuvem do Google, a automação será disparada no dia e horário programados, mesmo que você esteja com o notebook fechado aproveitando o fim de semana.
+**Q.** O script vai rodar se o meu computador estiver desligado?
+
+**A.** Sim! Como o Google Apps Script roda diretamente nos servidores em nuvem do Google, a automação será disparada no dia e horário programados, mesmo que você esteja com o notebook fechado aproveitando o fim de semana.
 
 2. Posso enviar o PDF para mais de uma pessoa ao mesmo tempo?  
 Com certeza. Na variável `destinatario` dentro do código, você pode separar os e-mails por vírgula (ex: `"chefe@empresa. com.br, socio@empresa. com.br"`) ou adaptar o script para puxar uma lista direto de um intervalo de células da planilha.

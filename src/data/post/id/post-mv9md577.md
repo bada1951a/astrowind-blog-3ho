@@ -14,7 +14,7 @@ Jam sudah menunjukkan pukul 21.30 WIB di salah satu gedung pencakar langit kawas
 
 Situasi seperti ini pasti sudah sangat akrab bagi Anda para praktisi kantor, manajer operasional, atau staf keuangan. Mengandalkan *copy-paste* manual untuk menggabungkan laporan penjualan bulanan dari puluhan folder adalah resep utama untuk kelelahan mental dan *human error*. Untungnya, ada satu fitur bawaan Excel yang menjadi penyelamat karir say
 
-a: Power Query.
+**a:** Power Query.
 
 ![AI Productivity & Workflow Automation](https://picsum.photos/seed/office227/1000/550)
 
@@ -82,11 +82,11 @@ Buat satu folder khusus di komputer kantor Anda, misalnya bernama `Data_Penjuala
 
 ### Pertanyaan yang Sering Diajukan (FAQ)
 
-Q1: Apakah Power Query memerlukan instalasi tambahan di Excel kantor?
+**Q1:** Apakah Power Query memerlukan instalasi tambahan di Excel kantor?
 Tidak. Power Query sudah terintegrasi secara *native* di dalam Microsoft Excel versi 2016 ke atas, Microsoft 365, serta Excel for Windows dan Mac versi modern. Anda bisa langsung menggunakannya dari menu Data.
 
-Q2: Bagaimana jika ada file cabang dengan nama kolom yang sedikit berbeda, apakah akan error?
+**Q2:** Bagaimana jika ada file cabang dengan nama kolom yang sedikit berbeda, apakah akan error?
 Power Query memiliki fitur *Transform* yang memungkinkan Anda melakukan *Rename* kolom secara otomatis atau menggunakan fitur *Conditional Column* untuk menyamakan variasi nama kolom dari berbagai cabang sebelum digabungkan.
 
-Q3: Apakah metode ini aman digunakan untuk data finansial perusahaan yang sensitif?
+**Q3:** Apakah metode ini aman digunakan untuk data finansial perusahaan yang sensitif?
 Sangat aman. Karena seluruh proses ekstraksi dan transformasi berjalan secara lokal di dalam aplikasi Excel komputer Anda tanpa memerlukan koneksi ke server pihak ketiga atau *cloud* publik yang tidak dikenal.

@@ -34,7 +34,7 @@ Before we jump into the fix, let us diagnose why our standard approach keeps fai
 
 ---
 
-## 3. Step-by-Step Practical Productivity Resolution Automating Sales Data with Power Query
+## 3. Step-by-Step Practical Resolution Practical Productivity Resolution Automating Sales Data with Power Query
 
 Let us build a bulletproof automated folder consolidation pipeline. Follow these exact steps to turn a 2-hour manual chore into a single-click refresh.
 
@@ -73,13 +73,13 @@ Your master sheet will now populate with the cleanly aggregated sales data. Next
 
 ---
 
-## 5. Frequently Asked Questions (FAQ) (FAQ)
+## 5. Frequently Asked Questions (FAQ)
 
-Q1: What happens if someone adds a file with completely different column names?
+**Q1:** What happens if someone adds a file with completely different column names?
 Power Query looks for matching table structures or sheet names. If a file has completely foreign headers, it may drop those columns or throw a schema error. Keep regional templates standardized.
 
-Q2: Can I use this method if my regional files are in different currencies?
+**Q2:** Can I use this method if my regional files are in different currencies?
 Yes! You can add a custom conditional column inside the Power Query Editor to multiply specific regional revenue columns by an exchange rate before merging them into your final master table.
 
-Q3: Does this work with legacy .xls files or only modern formats?
+**Q3:** Does this work with legacy .xls files or only modern formats?
 Power Query handles .xlsx, .csv, and .txt files natively and with ease. If you are still receiving legacy .xls files, we strongly recommend having your team save them as standard .xlsx formats before dropping them into the pipeline folder.

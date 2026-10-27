@@ -61,7 +61,7 @@ Wenn Sie ohne externe KI-Add-Ins arbeiten möchten, nutzen Sie das native Werkze
 <strong>Wichtiger Hinweis zum Datenschutz:</strong> Wenn Sie interne Unternehmensdaten in KI-Tools eingeben, stellen Sie sicher, dass Sie die DSGVO-konformen Enterprise-Versionen Ihrer Software (wie Microsoft 365 Copilot mit Unternehmensdatenschutz) verwenden. Speisen Sie niemals vertrauliche Bestandsdaten in öffentliche, kostenlose KI-Websites ein!
 </div>
 
-## 5. Häufig gestellte Fragen (FAQ) (FAQ)
+## 5. Häufig gestellte Fragen (FAQ)
 
 ### Kann die KI auch unvollständige Lagerdaten ausgleichen?
 Ja, moderne KI-Algorithmen erkennen Muster und können fehlende Zwischenwerte (z. B. durch Feiertage oder Systemausfälle) plausibel interpolieren, bevor die eigentliche Vorhersage für das nächste Quartal berechnet wird.

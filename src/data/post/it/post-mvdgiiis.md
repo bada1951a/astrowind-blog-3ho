@@ -26,7 +26,7 @@ Prima di trovare il metodo definitivo che mi ha salvato la riunione, ho sbattuto
 
 1. La formattazione tabellare compless
 
-a: Le fatture non seguono uno standard rigido. Descrizioni lunghe su più righe, codici articolo spezzati e prezzi allineati male fanno impazzire i vecchi software di riconoscimento ottico dei caratteri.
+**a:** Le fatture non seguono uno standard rigido. Descrizioni lunghe su più righe, codici articolo spezzati e prezzi allineati male fanno impazzire i vecchi software di riconoscimento ottico dei caratteri.
 
 2. Qualità delle scansioni scadenti: Foto fatte con lo smartphone in fretta o vecchi fax digitalizzati producono un rumore visivo che confonde le lettere con i numeri (per esempio, scambiare la lettera 'O' con lo zero '0' o la 'I' con l'uno '1').
 
@@ -56,7 +56,7 @@ Le colonne richieste devono essere esattamente queste:
 
 Ecco il testo grezzo della fattur
 
-a:
+**a:**
 [INCOLLA QUI IL TESTO ESTRATTO DALL'OCR]
 ```
 
@@ -64,7 +64,7 @@ a:
 L'intelligenza artificiale restituirà una tabella Markdown pulita e ordinata in pochi secondi. A questo punto:
 1. Seleziona la tabella generata dall'I
 
-A.
+**A.**
 
 2. Premi `Ctrl + C` per copiarla.
 
@@ -81,7 +81,7 @@ A.
 ### Posso usare questo metodo per fatture con dati sensibili o GDPR?
 Se tratti dati aziendali riservati o fatture con dati personali di clienti, evita di usare versioni gratuite di IA con opzioni di training dei dati attive. Assicurati di disattivare la condivisione della cronologia nelle impostazioni della privacy dell'account IA o utilizza strumenti aziendali interni protetti da ND
 
-A.
+**A.**
 
 ### Cosa faccio se l'IA sbaglia i calcoli tra quantità e prezzo unitario?
 L'IA è eccezionale nel fare il parsing del testo, ma occasionalmente può fare errori di arrotondamento. Aggiungi sempre una colonna di controllo in Excel inserendo la formula base `Quantità * Prezzo Unitario` per verificare che il totale di riga corrisponda perfettamente a quello estratto.

@@ -1,5 +1,5 @@
 ---
-title: "Mengatasi Excel 'Not Responding' dengan Analisis Kode Python ChatGPT"
+title: "Mengatasi Excel'Not Responding' dengan Analisis Kode Python ChatGPT"
 description: "Panduan praktis SCBD Jakarta: perbaiki file Excel besar yang sering crash dan lambat menggunakan bantuan analisis Python dari ChatGPT tanpa rumus rumit."
 publishDate: 2026-10-17T21:00:00.000Z
 image: "https://picsum.photos/seed/tech133/900/600"
@@ -53,7 +53,7 @@ Skrip ini akan dengan cepat memindai isi file di balik layar tanpa perlu membuka
 #### Langkah 3: Bersihkan dan Simpan Ulang File
 Setelah ChatGPT menunjukkan letak masalahnya (misalnya adanya *conditional formatting* di Sheet 3 atau jutaan baris kosong), minta kembali solusi pembersihanny
 
-a:
+**a:**
 
 > "Berdasarkan hasil pemindaian tadi, berikan saya kode Python untuk menghapus baris kosong yang tidak terpakai, menghapus semua aturan *conditional formatting* yang berlebih, lalu menyimpan file tersebut menjadi format baru bernama `rekap_tahunan_clean.xlsx`."
 

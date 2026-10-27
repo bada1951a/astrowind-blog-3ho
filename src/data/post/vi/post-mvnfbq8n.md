@@ -94,14 +94,14 @@ Khi ap dung cac giai phap tu dong hoa va AI vao cong viec hang ngay tai van phon
 
 ## 5. Cau hoi thuong gap (FAQ)
 
-Q: Claude 3.5 Sonnet co doc duoc truc tiep file PDF tieng Viet co dau khong?
+**Q:** Claude 3.5 Sonnet co doc duoc truc tiep file PDF tieng Viet co dau khong?
 
-A: Co, Claude 3.5 Sonnet hoat dong rat tot voi cac van ban tieng Viet, giup nhan dien va tom tat chinh xac noi dung phap ly ma khong bi loi font chu.
+**A:** Co, Claude 3.5 Sonnet hoat dong rat tot voi cac van ban tieng Viet, giup nhan dien va tom tat chinh xac noi dung phap ly ma khong bi loi font chu.
 
-Q: Doan ma VBA mo khoa sheet Excel co lam mat du lieu trong bang tinh cua toi khong?
+**Q:** Doan ma VBA mo khoa sheet Excel co lam mat du lieu trong bang tinh cua toi khong?
 
-A: Khong, doan ma nay chi co chuc nang go bo trang thai bao ve (protect) cua trang tinh chu khong xoa hay chinh sua bat ky gia tri o du lieu nao san co.
+**A:** Khong, doan ma nay chi co chuc nang go bo trang thai bao ve (protect) cua trang tinh chu khong xoa hay chinh sua bat ky gia tri o du lieu nao san co.
 
-Q: Toi co the su dung phien ban mien phi cua Claude de xu ly tai lieu 150 trang nay khong?
+**Q:** Toi co the su dung phien ban mien phi cua Claude de xu ly tai lieu 150 trang nay khong?
 
-A: Phien ban mien phi co gioi han ve kich thuoc va so luong tai lieu tai len trong mot khung thoi gian nhat dinh. Doi voi cac tai lieu phap ly lon va doi hoi toc do xu ly cao, ban nen su dung cac goi nang cap de dat hieu suat toi ưu.
+**A:** Phien ban mien phi co gioi han ve kich thuoc va so luong tai lieu tai len trong mot khung thoi gian nhat dinh. Doi voi cac tai lieu phap ly lon va doi hoi toc do xu ly cao, ban nen su dung cac goi nang cap de dat hieu suat toi ưu.

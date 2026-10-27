@@ -75,7 +75,7 @@ Ziehen Sie die Formel nach unten. Fertig ist Ihr vollautomatisiertes Dashboard.
 
 ---
 
-## 5. Häufig gestellte Fragen (FAQ) (FAQ)
+## 5. Häufig gestellte Fragen (FAQ)
 
 Frage 1: Warum zeigt meine Zelle plötzlich `#N/A` an?
 Das passiert meistens am Wochenende oder an Feiertagen, wenn für bestimmte Devisenpaare keine Live-Daten übertragen werden. Nutzen Sie die oben beschriebene `=WENNFHlER()`-Funktion, um den letzten gültigen Kurs als Puffer zu behalten.

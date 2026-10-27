@@ -12,12 +12,12 @@ theme: "Bronze Artisan Workshop"
 
 Eran las 8:45 de la mañana en nuestra oficina del Paseo de la Castellana en Madrid. Faltaban exactamente quince minutos para la reunión urgente con el comité de dirección para revisar el reporte de métricas del trimestre. En la pantalla, mi hoja de cálculo de Google Sheets parecía un campo de batall
 
-a: fórmulas de flujo de caja cruzadas que devolvían errores #¡VALOR!, gráficos estáticos que no reflejaban los últimos ajustes de presupuesto y los directores esperando ver un modelo financiero interactivo donde pudieran simular escenarios de ingresos en tiempo real. El sudor frío empezó a recorrer mi frente mientras intentaba arreglar celdas rotas a mano, sabiendo que copiar y pegar datos antiguos iba a dejar en evidencia la falta de agilidad de nuestro equipo.
+**a:** fórmulas de flujo de caja cruzadas que devolvían errores #¡VALOR!, gráficos estáticos que no reflejaban los últimos ajustes de presupuesto y los directores esperando ver un modelo financiero interactivo donde pudieran simular escenarios de ingresos en tiempo real. El sudor frío empezó a recorrer mi frente mientras intentaba arreglar celdas rotas a mano, sabiendo que copiar y pegar datos antiguos iba a dejar en evidencia la falta de agilidad de nuestro equipo.
 
 <div style="border-left: 4px solid #b45309; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>El dilema del analist
 
-a:</strong> Presentar un reporte financiero estático en pleno siglo XXI ya no impresiona a nadie. Los directivos exigen interactividad instantánea para responder preguntas sobre la marcha ("¿Qué pasa si recortamos un 10% el gasto en marketing?"). Si tus gráficos no se mueven con los datos, estás perdido.
+**a:**</strong> Presentar un reporte financiero estático en pleno siglo XXI ya no impresiona a nadie. Los directivos exigen interactividad instantánea para responder preguntas sobre la marcha ("¿Qué pasa si recortamos un 10% el gasto en marketing?"). Si tus gráficos no se mueven con los datos, estás perdido.
 </div>
 
 ![How to Create Interactive Financial Modeling Charts in Google Sheets with AI Suggestions AI Automation Guide](https://picsum.photos/seed/work-mvhr270x-5-b/1000/550.jpg)
@@ -30,7 +30,7 @@ Tras aquel susto matutino, me senté a analizar qué había fallado en mi flujo 
 
 2. Falta de visualización dinámic
 
-a: Depender de gráficos circulares o de columnas tradicionales que no permiten filtrar escenarios o cambiar variables mediante controles deslizantes o menús desplegables.
+**a:** Depender de gráficos circulares o de columnas tradicionales que no permiten filtrar escenarios o cambiar variables mediante controles deslizantes o menús desplegables.
 
 3. Resistencia a usar IA como asistente de fórmulas: Perder valiosas horas buscando en foros de ayuda la sintaxis exacta de funciones financieras complejas en lugar de delegar la generación inicial del código y las sugerencias visuales en la inteligencia artificial integrada. ## Guia paso a paso: Modelos financieros interactivos con IA en Google Sheets
 
@@ -39,7 +39,7 @@ Para solucionar esto de una vez por todas, implementé un sistema basado en las 
 ### Paso 1: Estructurar los datos base y limpiar la matriz
 Antes de tocar cualquier gráfico, asegúrate de que tu tabla financiera esté normalizada. * Crea una pestaña llamada "Datos_Base" con columnas limpias: Fecha, Categoría, Ingresos_Proyectados, Gastos_Reales y EBITD
 
-A.
+**A.**
 * Evita mezclar celdas combinadas en las zonas de cálculo. Deja las celdas combinadas únicamente para los títulos estéticos de la cabecera. ### Paso 2: Invocar a la IA para generar fórmulas complejas de escenarios
 En lugar de escribir funciones SI y BUSCARV anidadas que suelen fallar, utiliza el panel lateral de IA en Google Sheets o pídele un prompt estructurado. Por ejemplo, introduce este comando en tu asistente:
 
@@ -66,7 +66,7 @@ Para que el modelo sea interactivo ante el comité de dirección:
 <strong>Consejo de seguridad:</strong> Cuando utilices herramientas de IA en la nube corporativa para analizar datos financieros sensibles, asegúrate de anonimizar los nombres de clientes o importes exactos si las políticas internas de cumplimiento de tu empresa lo exigen.
 </div>
 
-## 5. Preguntas Frecuentes (FAQ) (FAQ)
+## 5. Preguntas Frecuentes (FAQ)
 
 ¿Qué hago si la IA me sugiere una fórmula que Google Sheets no reconoce?
 Asegúrate de cambiar la configuración regional de tu hoja de cálculo (Archivo > Configuración > Configuración regional). Muchas veces la IA redacta en formato anglosajón usando comas (,) para separar argumentos, mientras que tu Google Sheets en España puede requerir punto y coma (;).

@@ -12,7 +12,7 @@ theme: "Teal Matrix Digital"
 
 Godzina 16:45, warszawskie centrum biznesowe przy Rondzie Daszyńskiego. Za piętnaście minut mam wysłać do zarządu kluczowy raport kwartalny dotyczący kampanii lead generation. Otwieram główny arkusz i... czarna rozpacz. Baza danych pobrana z systemu CRM to absolutna katastrof
 
-a: kolumna z e-mailami wygląda jak wyciągnięta z generatora losowych ciągów znaków (znaki specjalne, podwójne spacji, literówki typu `@gmial.com`), a imiona klientów są sklejone z nazwiskami w formacie `jan.kowalski@firma. pl`. Formuły `LEWY` i `ZNALEŹDI` wypluwają błędy `#ARG!`, bo część adresów zaczyna się od imienia, część od inicjałów, a inne to po prostu nazwy działów. Krew w żyłach tężeje – ręczne poprawianie 1500 wierszy zajmie mi co najmniej trzy godziny.
+**a:** kolumna z e-mailami wygląda jak wyciągnięta z generatora losowych ciągów znaków (znaki specjalne, podwójne spacji, literówki typu `@gmial.com`), a imiona klientów są sklejone z nazwiskami w formacie `jan.kowalski@firma. pl`. Formuły `LEWY` i `ZNALEŹDI` wypluwają błędy `#ARG!`, bo część adresów zaczyna się od imienia, część od inicjałów, a inne to po prostu nazwy działów. Krew w żyłach tężeje – ręczne poprawianie 1500 wierszy zajmie mi co najmniej trzy godziny.
 
 Zamiast tracić nerwy na pisanie skomplikowanych makr VBA, postanowiłem podejść do tematu nowoczesnymi narzędziami AI zintegrowanymi z arkuszami kalkulacyjnymi. Poniżej pokazuję, jak ten koszmar technologiczny rozwiązać w niespełna pięć minut.
 
@@ -52,10 +52,10 @@ Jeśli korzystasz z narzędzia AI połączonego z arkuszem (lub kopiujesz dane d
 <div style="border-left: 4px solid #14b8a6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Gotowy prompt do skopiowani
 
-a:</strong><br>
+**a:**</strong><br>
 "Mam poniżej listę surowych adresów e-mail oraz nazwisk z bazy CRM. Twoim zadaniem jest zwrot danych w czystej tabeli składającej się z dwóch kolumn: 'Czysty Email' oraz 'Wyciągnięte Imię (odmienione w mianowniku)'. Popraw oczywiste literówki w domenach (np. @gmial.com na @gmail.com). Jeśli nie możesz ustalić imienia na podstawie adresu, wpisz 'Klient'. Oto dane: [Wklej swój zakres
 
-A2:A100]"
+**A2:**A100]"
 </div>
 
 #### Krok 3: Wklejenie wyników i walidacja przez Power Query

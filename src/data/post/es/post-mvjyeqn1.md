@@ -15,7 +15,7 @@ Eran las 17:50 de un viernes en nuestra oficina corporativa en el Paseo de la Ca
 <div style="border-left: 4px solid #1d4ed8; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Registro de Incidencia Nocturn
 
-a:</strong> Error critico de referencias externas rotas en Excel combinado con la necesidad urgente de recalcular turnos rotativos, pausas de comida y recargos nocturnos sin depender de archivos enlazados obsoletos.
+**a:**</strong> Error critico de referencias externas rotas en Excel combinado con la necesidad urgente de recalcular turnos rotativos, pausas de comida y recargos nocturnos sin depender de archivos enlazados obsoletos.
 </div>
 
 ![How to Calculate Working Hours and Overtime Automatically in Excel Using Simple AI Formulas AI Automation Guide](https://picsum.photos/seed/work-mvjyg5hf-5-b/1000/550.jpg)
@@ -45,7 +45,7 @@ En lugar de usar fórmulas de enlace directo (`='[FicheroExterno.xlsx]Hoja1'!A1`
 ### Paso 2: Generar la formula de horas extra mediante un prompt de IA
 En lugar de escribir manualmente fórmulas complejas que fallen al cruzar las 00:00 horas, utiliza un asistente de IA con este prompt exacto optimizado para entornos de oficin
 
-a:
+**a:**
 
 > "Actúa como un experto avanzado en Excel. Necesito una fórmula para la celda [D2] que calcule las horas extra trabajadas. La hora de entrada está en [B2] y la hora de salida en [C2]. La jornada ordinaria es de 8 horas. Si la salida es posterior a las 18:00 o cruza la medianoche, calcula la diferencia restando una hora de descanso si el total supera las 6 horas. Devuelve únicamente la fórmula lista para copiar en formato decimal."
 
@@ -65,23 +65,23 @@ La IA te devolverá una fórmula robusta utilizando funciones modernas como `SI`
 
 - Privacidad de datos: Nunca pegues nombres reales, números de seguridad social o datos salariales sensibles en herramientas de IA públicas. Utiliza siempre códigos de empleado anónimos (ej. *Empleado_01*) al depurar fórmulas con I
 
-A.
+**A.**
 - Validación cruzad
 
-a: Antes de enviar el informe definitivo a recursos humanos, prueba la fórmula con un caso extremo (un turno que empiece a las 22:00 y termine a las 06:00 del día siguiente).
+**a:** Antes de enviar el informe definitivo a recursos humanos, prueba la fórmula con un caso extremo (un turno que empiece a las 22:00 y termine a las 06:00 del día siguiente).
 
 ---
 
-## 5. Preguntas Frecuentes (FAQ) (FAQ)
+## 5. Preguntas Frecuentes (FAQ)
 
-Q1. ¿Qué hago si la fórmula devuelve un error de valor (#VALOR!) al restar las horas?
+**Q1.** ¿Qué hago si la fórmula devuelve un error de valor (#VALOR!) al restar las horas?
 
-A1.Asegúrate de que tanto la celda de entrada como la de salida tengan formato de hora aplicado correctamente en Excel (clic derecho > Formato de celdas > Hora) y que no contengan espacios en blanco ocultos importados de sistemas externos.
+**A1.**Asegúrate de que tanto la celda de entrada como la de salida tengan formato de hora aplicado correctamente en Excel (clic derecho > Formato de celdas > Hora) y que no contengan espacios en blanco ocultos importados de sistemas externos.
 
-Q2. ¿Cómo manejo los turnos nocturnos que superan la medianoche sin romper el cálculo?
+**Q2.** ¿Cómo manejo los turnos nocturnos que superan la medianoche sin romper el cálculo?
 
-A2. La función `RESIDUO` es tu mejor aliada. Usar `=RESIDUO(Salida - Entrada, 1) * 24` calcula automáticamente la duración correcta incluso si el turno pasa de las 23:00 a las 07:00 del día siguiente.
+**A2.** La función `RESIDUO` es tu mejor aliada. Usar `=RESIDUO(Salida - Entrada, 1) * 24` calcula automáticamente la duración correcta incluso si el turno pasa de las 23:00 a las 07:00 del día siguiente.
 
-Q3. ¿Es seguro utilizar Power Query para conectar archivos de otros departamentos?
+**Q3.** ¿Es seguro utilizar Power Query para conectar archivos de otros departamentos?
 
-A3. Sí, es mucho más seguro que los vínculos directos tradicionales. Power Query almacena la ruta de conexión de forma controlada y te permite actualizar los datos con un solo clic en la pestaña Datos sin disparar alertas de seguridad en cadena.
+**A3.** Sí, es mucho más seguro que los vínculos directos tradicionales. Power Query almacena la ruta de conexión de forma controlada y te permite actualizar los datos con un solo clic en la pestaña Datos sin disparar alertas de seguridad en cadena.

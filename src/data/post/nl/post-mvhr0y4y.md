@@ -59,7 +59,7 @@ Nu je data interactief reageert op de scenario-selector, gaan we de visualisatie
 <div style="border-left: 4px solid #64748b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Pro-Tip van de Specialist:</strong> Zorg ervoor dat je celverwijzingen in je grafiekbereik absoluut zijn (met dollarteken, bijvoorbeeld
 
-A1:D10). Als directieleden straks live scenario's doorlopen, verspringt het bereik van je grafiek tenminste niet als er rijen worden toegevoegd of verborgen.
+**A1:**D10). Als directieleden straks live scenario's doorlopen, verspringt het bereik van je grafiek tenminste niet als er rijen worden toegevoegd of verborgen.
 </div>
 
 ## Expert Waarschuwing & Preventie

@@ -37,11 +37,9 @@ Per risolvere definitivamente il problema senza scrivere una sola riga di codice
 Crea un nuovo foglio di calcolo pulito e organizza le colonne principali in questo modo:
 - Colonna
 
-A: **Nome Prodotto**
-- Colonna B: **ASIN** (il codice univoco del prodotto Amazon)
-- Colonna C: **URL Amazon**
-- Colonna D: **Prezzo Attuale** (dove inseriremo la funzione di estrazione)
-- Colonna E: **Ultimo Aggiornamento**
+**A:** **Nome Prodotto**- Colonna B:**ASIN**(il codice univoco del prodotto Amazon)
+- Colonna C:**URL Amazon**- Colonna D:**Prezzo Attuale**(dove inseriremo la funzione di estrazione)
+- Colonna E:**Ultimo Aggiornamento**
 
 ### Passo 2: Utilizzare la funzione ImportXML o estensioni No-Code certificate
 Poiché Amazon protegge aggressivamente le sue pagine con blocchi anti-bot, l'uso di semplici formule come `IMPORTXML` a volte restituisce errori se non gestito correttamente. La soluzione più stabile per uffici strutturati prevede l'utilizzo di estensioni gratuite o freemium per Google Sheets dedicate al web scraping (come *Scraper*, *ImportFromWeb* o estensioni simili certificate nel Workspace Marketplace).
@@ -59,11 +57,11 @@ Configura l'add-on o la formula di estrazione richiamando il selettore del prezz
 
 ### Passo 3: Automatizzare l'aggiornamento giornaliero
 Per fare in modo che il foglio si aggiorni ogni mattina alle 8:00 prima dell'arrivo dei dirigenti, senza che nessuno debba toccare nulla:
-1. Vai su **Estensioni** > **Apps Script** (tranquillo, non scriveremo codice da zero, useremo un trigger temporale).
+1. Vai su **Estensioni**>**Apps Script** (tranquillo, non scriveremo codice da zero, useremo un trigger temporale).
 
 2. Configura un trigger basato sul tempo: seleziona *Timer basato su giorni* e imposta l'orario di esecuzione tra le 07:00 e le 08:00.
 
-3. Proteggi il foglio andando su **Dati** > **Intervalli protetti**: blocca le colonne delle formule in modo che nessuno possa modificarle o cancellarle accidentalmente durante le riunioni.
+3. Proteggi il foglio andando su **Dati**>**Intervalli protetti**: blocca le colonne delle formule in modo che nessuno possa modificarle o cancellarle accidentalmente durante le riunioni.
 
 ## 4. Avvertenze e raccomandazioni dell'esperto di automazione
 
@@ -77,14 +75,14 @@ Per fare in modo che il foglio si aggiorni ogni mattina alle 8:00 prima dell'arr
 
 ## 5. Domande Frequenti (FAQ)
 
-Q: Google Sheets mi restituisce l'errore "#ERRORE" o "N/D" sulla cella del prezzo di Amazon. Come posso risolvere?
+**Q:** Google Sheets mi restituisce l'errore "#ERRORE" o "N/D" sulla cella del prezzo di Amazon. Come posso risolvere?
 
-A: Amazon aggiorna frequentemente la struttura delle sue pagine HTML per ostacolare il tracciamento automatizzato. Se la formula smette di funzionare, significa che il selettore del prezzo è cambiato. Verifica l'estensione no-code utilizzata o aggiorna il percorso XPath tramite l'interfaccia dell'add-on.
+**A:** Amazon aggiorna frequentemente la struttura delle sue pagine HTML per ostacolare il tracciamento automatizzato. Se la formula smette di funzionare, significa che il selettore del prezzo è cambiato. Verifica l'estensione no-code utilizzata o aggiorna il percorso XPath tramite l'interfaccia dell'add-on.
 
-Q: Posso tracciare anche la disponibilità (es. "Disponibile" o "Esaurito") oltre al prezzo?
+**Q:** Posso tracciare anche la disponibilità (es. "Disponibile" o "Esaurito") oltre al prezzo?
 
-A: Assolutamente sì. Ti basta aggiungere una colonna dedicata nel foglio di Google Sheets e impostare un secondo selettore nell'estensione di scraping puntando all'elemento testuale della disponibilità sulla pagina del prodotto.
+**A:** Assolutamente sì. Ti basta aggiungere una colonna dedicata nel foglio di Google Sheets e impostare un secondo selettore nell'estensione di scraping puntando all'elemento testuale della disponibilità sulla pagina del prodotto.
 
-Q: C'è il rischio che il mio account Google venga bloccato da Amazon per queste richieste automatizzate?
+**Q:** C'è il rischio che il mio account Google venga bloccato da Amazon per queste richieste automatizzate?
 
-A: No, se utilizzi strumenti di scraping basati su cloud che ruotano gli IP o estensioni certificate per Google Workspace, le richieste non partono direttamente dal tuo account personale ma dai server autorizzati, salvaguardando la tua operatività quotidiana.
+**A:** No, se utilizzi strumenti di scraping basati su cloud che ruotano gli IP o estensioni certificate per Google Workspace, le richieste non partono direttamente dal tuo account personale ma dai server autorizzati, salvaguardando la tua operatività quotidiana.

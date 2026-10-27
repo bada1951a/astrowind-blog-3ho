@@ -27,7 +27,7 @@ Se lavori nel mondo corporate o in una PMI internazionale, conosci benissimo que
 <div style="border-left: 4px solid #b45309; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Nota di Officin
 
-a:</strong> Non serve spendere un centesimo in estrazioni dati o software complessi. Google Sheets ha già tutto il motore di cui hai bisogno integrato nativamente. Dobbiamo solo metterlo in moto nel modo giusto.
+**a:**</strong> Non serve spendere un centesimo in estrazioni dati o software complessi. Google Sheets ha già tutto il motore di cui hai bisogno integrato nativamente. Dobbiamo solo metterlo in moto nel modo giusto.
 </div>
 
 ## Come costruire il tuo convertitore automatico in 3 passi
@@ -41,10 +41,10 @@ Supponiamo di voler convertire in dollari americani (USD) o franchi svizzeri (CH
 
 * Nella cella C2 inserisci la formul
 
-a: `=GOOGLEFINANCE("CURRENCY:EURUSD")`
+**a:** `=GOOGLEFINANCE("CURRENCY:EURUSD")`
 * Nella cella C3 inserisci la formul
 
-a: `=GOOGLEFINANCE("CURRENCY:EURCHF")`
+**a:** `=GOOGLEFINANCE("CURRENCY:EURCHF")`
 
 In questo modo, ogni volta che apri il file, Google aggiornerà automaticamente i dati di mercato senza che tu debba toccare un tasto.
 
@@ -53,13 +53,13 @@ Ora che hai i tassi fissi nella tua tabellina di riferimento (diciamo nell'inter
 
 Immagina di avere l'importo in Euro nella colonna `D` e la valuta di destinazione nella colonna `E`. Nella cella della conversione (`F2`), scrivi una formula pulita basata su `CERC
 
-A.VERT` (o `VLOOKUP` se usi la versione in inglese):
+**A.**VERT` (o `VLOOKUP` se usi la versione in inglese):
 
 `=D2 * CERC
 
-A.VERT(E2;
+**A.**VERT(E2;
 
-A2:C10; 3; FALSO)`
+**A2:**C10; 3; FALSO)`
 
 Questa formula prende l'importo in euro, va a pescare il tasso di cambio aggiornato in tempo reale in base alla sigla inserita nella colonna della valuta, e ti restituisce l'importo convertito all'istante.
 

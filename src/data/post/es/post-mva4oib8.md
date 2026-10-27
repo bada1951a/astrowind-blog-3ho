@@ -28,7 +28,7 @@ Fue entonces cuando tiré de mi truco definitivo: dejar que ChatGPT redacte la f
 
 Antes de ver la solución paso a paso, analicemos por qué sufrimos tanto con estas tareas cotidianas en la oficin
 
-a:
+**a:**
 
 1. Inconsistencia en el origen de los datos: Los formularios web, los archivos CSV exportados desde el CRM y los copias-pegas de la web traen basuras invisibles (saltos de línea, espacios de non-breaking, caracteres UTF-8 corruptos) que rompen las funciones nativas.
 
@@ -57,7 +57,7 @@ Pega la fórmula proporcionada por ChatGPT en la celda superior de tu columna de
 
 ## Comparativ
 
-a: El calvario manual vs. El atajo con ChatGPT
+**a:** El calvario manual vs. El atajo con ChatGPT
 
 | Situación | Método Tradicional (Manual / Foros) | Método Automatizado con ChatGPT |
 | :--- | :--- | :--- |
@@ -73,7 +73,7 @@ a: El calvario manual vs. El atajo con ChatGPT
 <div style="border-left: 4px solid #f97316; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Precaución de seguridad:</strong> Si trabajas con datos protegidos por el RGPD (nombres reales, DNI, datos bancarios de clientes europeos), anonimiza la información antes de pegarla en herramientas externas de I
 
-A. Sustituye los nombres por "Cliente A" o usa identificadores genéricos.
+**A.** Sustituye los nombres por "Cliente A" o usa identificadores genéricos.
 </div>
 
 - Bloquea los valores estáticos: Una vez que la fórmula de ChatGPT te devuelva los datos limpios, selecciónalos todos, haz clic en *Copiar* y luego ve a *Pegado especial > Pegar solo valores*. Esto evita que la hoja recalcule constantemente y ganes velocidad de procesamiento.
@@ -81,12 +81,12 @@ A. Sustituye los nombres por "Cliente A" o usa identificadores genéricos.
 
 ---
 
-## 5. Preguntas Frecuentes (FAQ) (FAQ)
+## 5. Preguntas Frecuentes (FAQ)
 
 ### ¿Qué hago si la fórmula de ChatGPT me devuelve un error en Google Sheets?
 Asegúrate de que el separador de argumentos de tu Google Sheets coincida con lo que da la I
 
-A. En entornos configurados en español, las fórmulas suelen usar punto y coma (`;`) en lugar de comas (`,`). Pídele explícitamente a ChatGPT: *"Dame la fórmula usando punto y coma como separador para Google Sheets en español"*.
+**A.** En entornos configurados en español, las fórmulas suelen usar punto y coma (`;`) en lugar de comas (`,`). Pídele explícitamente a ChatGPT: *"Dame la fórmula usando punto y coma como separador para Google Sheets en español"*.
 
 ### ¿Las expresiones regulares de Google Sheets son iguales a las de Excel?
 No del todo. Google Sheets utiliza la librería de expresiones regulares RE2, que tiene pequeñas diferencias de sintaxis en comparación con las macros de VBA o las nuevas funciones nativas de Excel. Por eso es vital especificarle siempre a ChatGPT que la fórmula es estrictamente para Google Sheets.

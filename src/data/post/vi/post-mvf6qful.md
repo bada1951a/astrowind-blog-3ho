@@ -40,7 +40,7 @@ Hãy copy đoạn prompt dưới đây và dán vào Gemini (hoặc ChatGPT) đ�
 Tôi đang làm việc trên Google Sheets tại văn phòng và cần xử lý một bảng dữ liệu khách hàng. 
 Trang tính hiện tại có tên là "Sheet1" với các cột lần lượt là:
 
-A: Họ tên, B: Số điện thoại, C: Email, D: Ngày đăng ký.
+**A:** Họ tên, B: Số điện thoại, C: Email, D: Ngày đăng ký.
 Hãy viết giúp tôi một đoạn mã Google Apps Script hoàn chỉnh thực hiện các việc sau:
 1. Tự động làm sạch dữ liệu: Xóa khoảng trắng thừa ở đầu và cuối chuỗi (trim), chuyển email về chữ thường (lowercase).
 
@@ -60,7 +60,7 @@ Chưa đầy 5 giây, một Sheet mới mang tên Cleaned_Data xuất hiện nga
 <div style="border-left: 4px solid #ef4444; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Mẹo thực chiến từ chuyên gi
 
-a:</strong> Luôn tạo một bản sao (Make a copy) của file Google Sheets gốc trước khi chạy bất kỳ đoạn mã Apps Script nào do AI viết để phòng tránh trường hợp mất dữ liệu do lỗi logic trong code.
+**a:**</strong> Luôn tạo một bản sao (Make a copy) của file Google Sheets gốc trước khi chạy bất kỳ đoạn mã Apps Script nào do AI viết để phòng tránh trường hợp mất dữ liệu do lỗi logic trong code.
 </div>
 
 ## Những lưu ý quan trọng về bảo mật dữ liệu doanh nghiệp

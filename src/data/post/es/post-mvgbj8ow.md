@@ -24,7 +24,7 @@ Eran las 8:45 de la mañana en nuestra oficina de Madrid. El comité de direcci�
 
 Antes de saltar al código, analicemos por qué este proceso suele volverse un dolor de cabeza en el día a dí
 
-a:
+**a:**
 
 1. Dependencia del factor humano: Si dependes de recordar abrir la hoja de cálculo cada lunes, un día festivo, una baja médica o un simple despiste romperá la cadena de comunicación con los directivos.
 
@@ -36,7 +36,7 @@ a:
 
 Vamos directo al grano con una solución limpia, funcional y libre de rodeos técnicos innecesarios. Sigue esta ruta exact
 
-a:
+**a:**
 
 #### Paso 1: Configurar el contenedor del script
 Abre tu documento en Google Sheets. En el menú superior, navega a Extensiones > Apps Script. Se abrirá el editor de código integrado. Borra cualquier línea que aparezca por defecto.
@@ -111,7 +111,7 @@ function enviarReporteSemanalPDF() {
 * Control de versiones: Antes de modificar hojas principales con scripts activos, haz una copia de respaldo (Archivo > Hacer una copia). Una coma mal puesta en el código puede alterar temporalmente las llamadas de funciones.
 * Nombres de pestañas exactos: Si cambias el nombre de la pestaña `"ReporteEjecutivo"` en tu Google Sheets, recuerda actualizarlo también en la primera línea del script o el sistema arrojará un error de referencia nula. ---
 
-## 5. Preguntas Frecuentes (FAQ) (FAQ)
+## 5. Preguntas Frecuentes (FAQ)
 
 ¿Por qué el correo llega sin el archivo adjunto o da error de permisos?
 Generalmente ocurre porque la primera vez que ejecutas el script no completaste el flujo de autorización de Google. Ve al editor, ejecuta la función manualmente una vez haciendo clic en el botón de "Ejecutar" y acepta los permisos de seguridad en la ventana emergente.

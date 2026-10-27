@@ -48,7 +48,7 @@ Abre un libro de Excel nuevo que será tu Reporte Maestro.
 ### Paso 3: Combina y Transforma los datos
 Se abrirá una ventana de vista previa. No le des directamente a combinar; haz clic en Transformar datos para abrir el Editor de Power Query. Aquí es donde ocurre la magi
 
-a:
+**a:**
 * Verás una columna llamada `Content` con los archivos. Haz clic en el botón de combinar archivos (los dos iconos de flechas hacia abajo en la cabecera de la columna).
 * Power Query te pedirá que elijas una muestra (selecciona la Hoja1 o la tabla principal). Pulsa Aceptar.
 * Automáticamente se creará un paso aplicado que une todo el contenido de la carpeta en una sola tabla gigante.
@@ -77,14 +77,16 @@ Cuidado con las rutas locales absolutas (`C:\Users\TuNombre\Desktop\...`) si com
 
 ---
 
-## 5. Preguntas Frecuentes (FAQ) (FAQ)
+## 5. Preguntas Frecuentes (FAQ)
 
-1. ¿Qué pasa si un archivo nuevo tiene una columna extra que los demás no tienen?
-Power Query es lo suficientemente inteligente como para integrarla. Creará una columna nueva en la tabla consolidada y pondrá valores vacíos (`null`) en las filas de los meses anteriores que no la tenían, sin romper ninguna fórmula.
+**Q.** ¿Qué pasa si un archivo nuevo tiene una columna extra que los demás no tienen?
 
-2. ¿Funciona si los archivos de Excel tienen contraseñas o están protegidos?
-Por motivos de seguridad, Power Query no puede extraer datos de archivos protegidos con contraseña de apertura de forma automática. Los archivos en la carpeta de origen deben ser accesibles libremente por el sistema.
+**A.** Power Query es lo suficientemente inteligente como para integrarla. Creará una columna nueva en la tabla consolidada y pondrá valores vacíos (`null`) en las filas de los meses anteriores que no la tenían, sin romper ninguna fórmula.
 
-3. ¿Puedo usar Power Query para consolidar archivos CSV en lugar de Excel?
+**Q.** ¿Funciona si los archivos de Excel tienen contraseñas o están protegidos?
 
-¡Por supuesto! El proceso es prácticamente idéntico. En lugar de seleccionar "De una carpeta" y filtrar archivos Excel, puedes usar la opción de combinar archivos CSV desde una carpeta y el editor aplicará la misma lógica de transformación.
+**A.** Por motivos de seguridad, Power Query no puede extraer datos de archivos protegidos con contraseña de apertura de forma automática. Los archivos en la carpeta de origen deben ser accesibles libremente por el sistema.
+
+**Q.** ¿Puedo usar Power Query para consolidar archivos CSV en lugar de Excel?
+
+**A.** ¡Por supuesto! El proceso es prácticamente idéntico. En lugar de seleccionar "De una carpeta" y filtrar archivos Excel, puedes usar la opción de combinar archivos CSV desde una carpeta y el editor aplicará la misma lógica de transformación.

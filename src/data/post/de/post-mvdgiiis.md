@@ -58,7 +58,7 @@ Da wir uns im sensiblen Finanzumfeld bewegen, gilt hier oberste Vorsicht:
 * Nutzen Sie für interne Unternehmensdaten idealerweise die DSGVO-konformen Enterprise-Versionen Ihrer Firmen-KI.
 * Machen Sie immer einen schnellen Plausibilitäts-Check (Stichprobe), bevor Sie die Zahlen an den Vorstand weiterleiten.
 
-## 5. Häufig gestellte Fragen (FAQ) (FAQ)
+## 5. Häufig gestellte Fragen (FAQ)
 
 ### Funktioniert dieser Workflow auch bei handgeschriebenen Rechnungen?
 Bei sauberer Handschrift leisten moderne OCR-Engines erstaunliche Arbeit, aber bei unleserlichen Notizen stößt auch die beste KI an ihre Grenzen. Für gedruckte Rechnungen und Standard-PDFs liegt die Trefferquote jedoch bei nahezu 100%.

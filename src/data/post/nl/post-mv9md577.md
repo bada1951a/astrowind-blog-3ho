@@ -26,9 +26,9 @@ Voordat we naar de oplossing kijken, moeten we begrijpen waarom die traditionele
 
 1. Inconsistente bestandsstructuren: Elke vestiging of manager levert bestanden aan met net iets andere kolomnamen (bijv. 'Klantnaam' versus 'Client', of 'Omzet' in plaats van 'Totale Verkoop').
 
-2. Kopieer- en plakfouten: Bij het samenvoegen van duizenden rijen verslapt de concentratie, wat leidt tot dubbele rijen of ontbrekende data.
+2. Kopieer- en plakfouten: Bij het samenvoegen van duizenden rijen verslapt de concentratie, wat leidt tot dubbele rijen of ontbrekende dat
 
-3. Geen herbruikbaarheid: Volgende maand begint de hele nachtmerrie weer van voren af aan omdat er geen dynamische koppeling is.
+**A.** 3. Geen herbruikbaarheid: Volgende maand begint de hele nachtmerrie weer van voren af aan omdat er geen dynamische koppeling is.
 
 Gelukkig heeft Excel een ingebouwde superkracht die exact voor dit soort situaties is ontworpen: Power Query. Je hoeft geen programmeur te zijn om dit in te stellen; het vraagt enkel een slimme eenmalige inrichting.
 

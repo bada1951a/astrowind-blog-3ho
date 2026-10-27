@@ -40,7 +40,7 @@ Ouvrez une nouvelle feuille Google Sheets et suivez cette procédure pour bâtir
 Dans votre feuille, créez un espace dédié aux taux de change en haut ou dans un onglet "Paramètres" :
 - Cellule
 
-**A1 :** `Devise Source` | Cellule B1 : `Devise Cible` | Cellule C1 : `Taux`
+**A1.** `Devise Source` | Cellule B1 : `Devise Cible` | Cellule C1 : `Taux`
 - Dans la ligne 2, mettez par exemple `USD` en A2 et `EUR` en B2.
 
 ### Étape 2 : Utiliser la fonction magique GOOGLEFINANCE
@@ -54,7 +54,7 @@ Cette fonction interroge en temps réel les marchés financiers mondiaux. Si vou
 Supposons que dans votre tableau de suivi des ventes, le montant en USD se trouve dans la cellule D5. Pour obtenir la conversion instantanée en EUR, appliquez simplement cette formule dans la cellule E5 :
 `=D5 * VLOOKUP("USDEUR",
 
-**A:**C, 3, FALSE)`
+**A.** C, 3, FALSE)`
 
 Glissez cette formule vers le bas de votre colonne : votre tableau est désormais entièrement dynamique. Aucune intervention manuelle n'est requise lors de l'ouverture du fichier.
 

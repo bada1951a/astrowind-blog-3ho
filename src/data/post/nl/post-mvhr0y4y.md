@@ -54,12 +54,14 @@ Directieleden willen live 'wat-als'-vragen kunnen stellen. In plaats van drie ap
 Nu je data interactief reageert op de scenario-selector, gaan we de visualisatie koppelen.
 - Selecteer je dynamische uitvoercellen.
 - Klik in het menu op Invoegen > Grafiek.
-- In het grafiekeditor-venster aan de rechterkant zie je direct het tabblad Suggesties. De ingebouwde AI analyseert welk type grafiek (een watervalgrafiek voor kostenopbouw of een gecombineerde kolom-lijngrafiek voor marge-ontwikkeling) het beste past bij jouw financiële data. - Klik op de voorgestelde grafiek om deze direct toe te voegen.
+- In het grafiekeditor-venster aan de rechterkant zie je direct het tabblad Suggesties. De ingebouwde AI analyseert welk type grafiek (een watervalgrafiek voor kostenopbouw of een gecombineerde kolom-lijngrafiek voor marge-ontwikkeling) het beste past bij jouw financiële dat
+
+**A.** - Klik op de voorgestelde grafiek om deze direct toe te voegen.
 
 <div style="border-left: 4px solid #64748b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Pro-Tip van de Specialist:</strong> Zorg ervoor dat je celverwijzingen in je grafiekbereik absoluut zijn (met dollarteken, bijvoorbeeld
 
-**A1:**D10). Als directieleden straks live scenario's doorlopen, verspringt het bereik van je grafiek tenminste niet als er rijen worden toegevoegd of verborgen.
+**A1.** D10). Als directieleden straks live scenario's doorlopen, verspringt het bereik van je grafiek tenminste niet als er rijen worden toegevoegd of verborgen.
 </div>
 
 ## Expert Waarschuwing & Preventie

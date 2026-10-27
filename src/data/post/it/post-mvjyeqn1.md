@@ -24,7 +24,7 @@ Prima di mettere le mani sulle formule e sbloccare la situazione, capiamo perch�
 * Protezione dei fogli con password dimenticate: Bloccare le celle con le formule è una buona pratica per evitare modifiche accidentali, ma la perdita della password rende impossibile aggiornare i parametri contrattuali annuali.
 * Logica degli straordinari troppo compless
 
-**a:** Calcolare la soglia delle 40 ore settimanali, distinguendo tra straordinario diurno, notturno e festivo con formule manuali nidificate rende il file un labirinto illeggibile per chiunque non sia un mago di Excel.
+**A.** Calcolare la soglia delle 40 ore settimanali, distinguendo tra straordinario diurno, notturno e festivo con formule manuali nidificate rende il file un labirinto illeggibile per chiunque non sia un mago di Excel.
 
 ---
 
@@ -37,9 +37,7 @@ Per uscire dall'emergenza senza perdere ore in tentativi manuali, ho sfruttato u
 ### Passo 1: Correggere e formattare le celle orarie
 Assicurati che tutte le colonne di entrata e uscita siano impostate sul formato corretto. Seleziona l'intervallo delle ore, vai su Homee nel riquadro Numeri selezionaOra oppure usa una formattazione personalizzat
 
-**a:**
-
-```excel
+**A.** ```excel
 [h]:mm
 ```
 Questo formato evita che i totali superiori alle 24 ore vengano azzerati automaticamente da Excel.
@@ -52,9 +50,7 @@ Copia e incolla questo prompt nel tuo assistente IA di fiducia quando devi crear
 
 L'IA ti restituirà una struttura pulita simile a quest
 
-**a:**
-
-```excel
+**A.** ```excel
 =SE((C2-B2)*24>6; (C2-B2)*24-1; (C2-B2)*24)
 ```
 E per la colonna degli straordinari giornalieri:
@@ -67,14 +63,13 @@ E per la colonna degli straordinari giornalieri:
 ### Passo 3: Gestire i blocchi di protezione senza stress
 Se il tuo file è protetto da una password dimenticata e devi urgentemente sbloccare le celle per correggere la struttur
 
-**a:**
-1. Chiudi il file Excel.
+**A.** 1. Chiudi il file Excel.
 
 2. Cambia l'estensione del file da `.xlsx` a `.zip`.
 
-3. Estrai l'archivio ZIP in una cartella temporanea.
+3. Estrai l'archivio ZIP in una cartella temporane
 
-4. Entra nella cartella `xl` -> `worksheets` e trova il file XML del foglio bloccato (es. `sheet1.xml`).
+**A.** 4. Entra nella cartella `xl` -> `worksheets` e trova il file XML del foglio bloccato (es. `sheet1.xml`).
 
 5. Apri il file con un editor di testo (come Blocco Note), cerca la stringa `<sheetProtection.../>` e cancellala del tutto. Salva il file.
 
@@ -88,7 +83,9 @@ Se il tuo file è protetto da una password dimenticata e devi urgentemente sbloc
 <strong>AVVISO DI SICUREZZA DATI:</strong> Quando utilizzi strumenti di intelligenza artificiale per correggere file aziendali, assicurati di rimuovere sempre i dati sensibili, i nomi dei dipendenti e i codici fiscali. Condividi con l'IA solo strutture di esempio e numeri fittizi per tutelare la privacy secondo le normative vigenti.
 </div>
 
-* Usa Power Query per i dati ricorrenti:Se ogni fine mese importi file CSV o tracciati presenze dai tornelli, automatizza l'importazione tramiteDati>Ottieni dati>Da file, evitando il copia-incolla manuale che genera errori di battitura. * Crea un foglio di backup bloccato ma accessibile: Conserva sempre una copia master pulita dei file di calcolo presenze in una cartella condivisa protetta da permessi di rete aziendali, così da non dipendere mai da password locali dimenticate dai singoli.
+* Usa Power Query per i dati ricorrenti:Se ogni fine mese importi file CSV o tracciati presenze dai tornelli, automatizza l'importazione tramiteDati>Ottieni dati>Da file, evitando il copia-incolla manuale che genera errori di battitur
+
+**A.** * Crea un foglio di backup bloccato ma accessibile: Conserva sempre una copia master pulita dei file di calcolo presenze in una cartella condivisa protetta da permessi di rete aziendali, così da non dipendere mai da password locali dimenticate dai singoli.
 
 ---
 
@@ -96,12 +93,12 @@ Se il tuo file è protetto da una password dimenticata e devi urgentemente sbloc
 
 **Q1.** Come posso evitare che Excel trasformi le ore negative in una serie di cancelletti (#####)?
 
-**A1.**Per impostazione predefinita, Excel non supporta i risultati orari negativi. Per risolverlo, vai suFile>Opzioni>Avanzate, scorri fino alla sezione "Nel calcolo di questa cartella di lavoro" e seleziona la spunta suUsa sistema di data 1904.
+**A1.** Per impostazione predefinita, Excel non supporta i risultati orari negativi. Per risolverlo, vai suFile>Opzioni>Avanzate, scorri fino alla sezione "Nel calcolo di questa cartella di lavoro" e seleziona la spunta suUsa sistema di data 1904.
 
 **Q2.** Posso usare l'IA direttamente dentro Excel per calcolare gli straordinari senza copiare le formule?
 
-**A2.**Sì, se utilizzi Microsoft 365 con Copilot integrato, puoi richiamare il pannello laterale e digitare direttamente il comando in linguaggio naturale per generare e inserire le colonne di calcolo direttamente nella tabella attiva.
+**A2.** Sì, se utilizzi Microsoft 365 con Copilot integrato, puoi richiamare il pannello laterale e digitare direttamente il comando in linguaggio naturale per generare e inserire le colonne di calcolo direttamente nella tabella attiv
 
-**Q3.** Perché la mia formula di moltiplicazione delle ore per la tariffa oraria restituisce un numero sballato (es. 0,33 invece di 25 euro)?
+**A.Q3.** Perché la mia formula di moltiplicazione delle ore per la tariffa oraria restituisce un numero sballato (es. 0,33 invece di 25 euro)?
 
 **A3.** Perché Excel memorizza l'ora come frazione del giorno (ad esempio, 6 ore equivalgono a 0,25). Per calcolare la paga corretta, devi moltiplicare il totale delle ore per 24 prima di moltiplicarlo per la tariffa oraria (es. `=D2*24*TariffaOraria`).

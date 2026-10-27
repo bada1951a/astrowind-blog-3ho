@@ -10,7 +10,9 @@ theme: "Steel Silver Metallic"
 
 ## 1. Emergenza improvvisa e blocco delle attività in ufficio
 
-Erano le 8:45 di un martedì mattina frenetico negli uffici direzionali di Milano, a due passi da Porta Nuova. Mancavano quindici minuti alla riunione di allineamento trimestrale con i country manager quando il CFO mi ha scritto su Slack con un'urgenza glaciale: i totali del fatturato previsionale sul foglio condiviso in tempo reale erano completamente sballati, mostrando cifre negative e incongruenze spaventose. 
+Erano le 8:45 di un martedì mattina frenetico negli uffici direzionali di Milano, a due passi da Porta Nuov
+
+**A.** Mancavano quindici minuti alla riunione di allineamento trimestrale con i country manager quando il CFO mi ha scritto su Slack con un'urgenza glaciale: i totali del fatturato previsionale sul foglio condiviso in tempo reale erano completamente sballati, mostrando cifre negative e incongruenze spaventose. 
 
 Il panico in sala riunioni è durato il tempo di un espresso: qualcuno, nel tentativo di filtrare rapidamente i dati dei concorrenti per analizzare le variazioni di prezzo su Amazon, aveva applicato un filtro personalizzato direttamente sulla vista principale senza duplicare il foglio, alterando le formule globali dell'intero dipartimento vendite. Quel piccolo errore umano, figlio della stanchezza e della frenesia del copia-incolla manuale da decine di tab del browser, ci è quasi costato una figuraccia davanti al board europeo. È stato in quel momento esatto che ho giurato che avrei trovato un modo per automatizzare il monitoraggio dei listini Amazon su Google Sheets, eliminando per sempre il fattore umano e la corvè del data entry manuale.
 
@@ -21,9 +23,15 @@ Il panico in sala riunioni è durato il tempo di un espresso: qualcuno, nel tent
 Analizzando l'incidente e i flussi di lavoro quotidiani del nostro team, abbiamo individuato tre cause radicali che rendono il monitoraggio manuale dei prezzi dei competitor un'attività ad alto rischio aziendale:
 
 <div style="border-left: 4px solid #64748b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Diagnosi del problema:</strong>
+<strong>Diagnosi del problem
+
+**A.** </strong>
 <ol style="margin: 0; padding-left: 20px;">
-  <li><strong>Dipendenza dal copia-incolla:</strong> Aprire ogni mattina venti schede di Amazon per trascrivere prezzi e disponibilità espone il team a errori di distrazione e perdite di tempo quantificabili in oltre cinque ore settimanali per risorsa.</li>
+  <li><strong>Dipendenza dal copia-incoll
+
+**A.** </strong> Aprire ogni mattina venti schede di Amazon per trascrivere prezzi e disponibilità espone il team a errori di distrazione e perdite di tempo quantificabili in oltre cinque ore settimanali per risors
+
+**A.** </li>
   <li><strong>Uso improprio dei fogli condivisi:</strong> Applicare filtri o ordinamenti globali su Google Sheets senza utilizzare le "Viste filtro" (Filter views) compromette la visualizzazione dei colleghi e rompe i collegamenti delle formule di aggregazione.</li>
   <li><strong>Volatilità dei selettori web (XPath):</strong> Gli script fatti in casa o i vecchi scraper fragili smettono di funzionare non appena Amazon aggiorna anche un solo pixel del suo codice HTML, lasciando il team senza dati nel momento cruciale del pricing.</li>
 </ol>
@@ -37,7 +45,7 @@ Per risolvere definitivamente il problema senza scrivere una sola riga di codice
 Crea un nuovo foglio di calcolo pulito e organizza le colonne principali in questo modo:
 - Colonna
 
-**A:** **Nome Prodotto**- Colonna B:**ASIN**(il codice univoco del prodotto Amazon)
+**A.Nome Prodotto**- Colonna B:**ASIN**(il codice univoco del prodotto Amazon)
 - Colonna C:**URL Amazon**- Colonna D:**Prezzo Attuale**(dove inseriremo la funzione di estrazione)
 - Colonna E:**Ultimo Aggiornamento**
 
@@ -56,8 +64,9 @@ Configura l'add-on o la formula di estrazione richiamando il selettore del prezz
 ```
 
 ### Passo 3: Automatizzare l'aggiornamento giornaliero
-Per fare in modo che il foglio si aggiorni ogni mattina alle 8:00 prima dell'arrivo dei dirigenti, senza che nessuno debba toccare nulla:
-1. Vai su **Estensioni**>**Apps Script** (tranquillo, non scriveremo codice da zero, useremo un trigger temporale).
+Per fare in modo che il foglio si aggiorni ogni mattina alle 8:00 prima dell'arrivo dei dirigenti, senza che nessuno debba toccare null
+
+**A.** 1. Vai su **Estensioni**>**Apps Script** (tranquillo, non scriveremo codice da zero, useremo un trigger temporale).
 
 2. Configura un trigger basato sul tempo: seleziona *Timer basato su giorni* e imposta l'orario di esecuzione tra le 07:00 e le 08:00.
 
@@ -75,14 +84,16 @@ Per fare in modo che il foglio si aggiorni ogni mattina alle 8:00 prima dell'arr
 
 ## 5. Domande Frequenti (FAQ)
 
-**Q:** Google Sheets mi restituisce l'errore "#ERRORE" o "N/D" sulla cella del prezzo di Amazon. Come posso risolvere?
+**Q.** Google Sheets mi restituisce l'errore "#ERRORE" o "N/D" sulla cella del prezzo di Amazon. Come posso risolvere?
 
-**A:** Amazon aggiorna frequentemente la struttura delle sue pagine HTML per ostacolare il tracciamento automatizzato. Se la formula smette di funzionare, significa che il selettore del prezzo è cambiato. Verifica l'estensione no-code utilizzata o aggiorna il percorso XPath tramite l'interfaccia dell'add-on.
+**A.** Amazon aggiorna frequentemente la struttura delle sue pagine HTML per ostacolare il tracciamento automatizzato. Se la formula smette di funzionare, significa che il selettore del prezzo è cambiato. Verifica l'estensione no-code utilizzata o aggiorna il percorso XPath tramite l'interfaccia dell'add-on.
 
-**Q:** Posso tracciare anche la disponibilità (es. "Disponibile" o "Esaurito") oltre al prezzo?
+**Q.** Posso tracciare anche la disponibilità (es. "Disponibile" o "Esaurito") oltre al prezzo?
 
-**A:** Assolutamente sì. Ti basta aggiungere una colonna dedicata nel foglio di Google Sheets e impostare un secondo selettore nell'estensione di scraping puntando all'elemento testuale della disponibilità sulla pagina del prodotto.
+**A.** Assolutamente sì. Ti basta aggiungere una colonna dedicata nel foglio di Google Sheets e impostare un secondo selettore nell'estensione di scraping puntando all'elemento testuale della disponibilità sulla pagina del prodotto.
 
-**Q:** C'è il rischio che il mio account Google venga bloccato da Amazon per queste richieste automatizzate?
+**Q.** C'è il rischio che il mio account Google venga bloccato da Amazon per queste richieste automatizzate?
 
-**A:** No, se utilizzi strumenti di scraping basati su cloud che ruotano gli IP o estensioni certificate per Google Workspace, le richieste non partono direttamente dal tuo account personale ma dai server autorizzati, salvaguardando la tua operatività quotidiana.
+**A.** No, se utilizzi strumenti di scraping basati su cloud che ruotano gli IP o estensioni certificate per Google Workspace, le richieste non partono direttamente dal tuo account personale ma dai server autorizzati, salvaguardando la tua operatività quotidian
+
+**A.**

@@ -73,7 +73,7 @@ Gebruik een directe, no-nonsense prompt die specifiek vraagt om output in tabell
 <div style="border-left: 4px solid #059669; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Let op bij gevoelige bedrijfsdat
 
-**a:**</strong> Upload nooit privacygevoelige persoonsgegevens, salarissen of uiterst vertrouwelijke concurrentiegevoelige contracten naar openbare gratis AI-tools zonder de privacy-instellingen te controleren. Voor standaard leveranciersfacturen met KvK-nummers en openbare zakelijke adressen is het geen probleem, maar anonimiseer waar nodig.
+**A.** </strong> Upload nooit privacygevoelige persoonsgegevens, salarissen of uiterst vertrouwelijke concurrentiegevoelige contracten naar openbare gratis AI-tools zonder de privacy-instellingen te controleren. Voor standaard leveranciersfacturen met KvK-nummers en openbare zakelijke adressen is het geen probleem, maar anonimiseer waar nodig.
 </div>
 
 ---

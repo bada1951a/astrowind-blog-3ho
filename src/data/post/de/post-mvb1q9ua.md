@@ -20,7 +20,11 @@ Es ist kurz vor 17:00 Uhr an einem grauen Dienstag im Frankfurter Finanzdistrikt
 
 Bevor wir die Lösung anwenden, müssen wir verstehen, warum Standard-Workflows hier an ihre Grenzen stoßen:
 
-1. Inkonsistente Namensstrukturen: Manchmal ist die E-Mail aufgebaut als `vorname.nachname@firma. de`, ein anderes Mal nur als `v.nachname@firma. de` oder es sind reine Vorname-Nachname-Kombinationen ohne System in einer Zelle.
+1. Inkonsistente Namensstrukturen: Manchmal ist die E-Mail aufgebaut als `vorname.nachname@firm
+
+**A.** de`, ein anderes Mal nur als `v.nachname@firm
+
+**A.** de` oder es sind reine Vorname-Nachname-Kombinationen ohne System in einer Zelle.
 
 2. Versteckte Syntaxfehler: Leerzeichen am Anfang oder Ende, doppelte Punkte und falsche Domain-Endungen (`.de.de` oder `gmial.com`) lassen sich mit einfachen SVERWEIS- oder Textformeln kaum automatisiert abfangen.
 
@@ -59,11 +63,15 @@ Sobald die KI die bereinigten Daten ausgespuckt hat, fügen Sie diese über Date
 ## 5. Häufig gestellte Fragen (FAQ)
 
 ### 1. Kann ich diesen Prozess komplett automatisieren, ohne jedes Mal die KI zu fragen?
-Ja. Wenn Sie die Bereinigungsregeln einmal sauber in einem Excel Makro (VBA) oder über Power Query definiert haben, läuft der Prozess für standardisierte E-Mail-Formate vollautomatisch. Die KI benötigen Sie vor allem bei stark variierenden, unstrukturierten Altdaten.
+J
+
+**A.** Wenn Sie die Bereinigungsregeln einmal sauber in einem Excel Makro (VBA) oder über Power Query definiert haben, läuft der Prozess für standardisierte E-Mail-Formate vollautomatisch. Die KI benötigen Sie vor allem bei stark variierenden, unstrukturierten Altdaten.
 
 ![AI Productivity & Workflow Automation](https://picsum.photos/seed/office210/1000/550)
 
-### 2. Was mache ich, wenn in der E-Mail-Adresse gar kein Name enthalten ist (z.B. info@firma. de)?
+### 2. Was mache ich, wenn in der E-Mail-Adresse gar kein Name enthalten ist (z.B. info@firm
+
+**A.** de)?
 Die KI kann so instruiert werden, dass sie bei generischen Postfächern wie "info@", "kontakt@" oder "support@" einen Platzhalter wie "Geschäftskontakt" in die Vornamensspalte einträgt, damit Ihre Serienbriefe oder Reports nicht fehlschlagen.
 
 ### 3. Funktioniert dieser Ansatz auch bei großen Dateien mit über 50.000 Zeilen?

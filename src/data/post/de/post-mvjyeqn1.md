@@ -81,8 +81,8 @@ Um sicherzustellen, dass bei der nächsten Betriebsprüfung oder dem internen Au
 
 **Q2.** Kann ich diesen Workflow direkt in Microsoft Copilot für Excel integrieren?
 
-**A2.**Ja, absolut. Wenn Sie Microsoft 365 Copilot nutzen, können Sie die Tabelle direkt im Copilot-Chat markieren und eingeben: "Füge eine Spalte für Überstunden hinzu, die alle Stunden über 8 Stunden pro Tag separat ausweist und an die HR-Abteilung meldet." Der Copilot generiert die Spalte und wendet die Formel eigenständig an.
+**A2.** Ja, absolut. Wenn Sie Microsoft 365 Copilot nutzen, können Sie die Tabelle direkt im Copilot-Chat markieren und eingeben: "Füge eine Spalte für Überstunden hinzu, die alle Stunden über 8 Stunden pro Tag separat ausweist und an die HR-Abteilung meldet." Der Copilot generiert die Spalte und wendet die Formel eigenständig an.
 
 **Q3.** Wie schütze ich das Excel-Masterfile vor erneutem Überschreiben durch Automatisierungen?
 
-**A3.**Vergeben Sie im Dateimanager immer Schreibschutz-Attribute für die Masterdatei oder nutzen Sie in Excel den PfadDatei > Informationen > Arbeitsmappe schützen, um ein Passwort für Änderungen zu hinterlegen. Automatisierte Skripte sollten niemals direkt auf das Master-File schreiben, sondern immer eine datierte Arbeitskopie in einem separaten Export-Ordner erstellen.
+**A3.** Vergeben Sie im Dateimanager immer Schreibschutz-Attribute für die Masterdatei oder nutzen Sie in Excel den PfadDatei > Informationen > Arbeitsmappe schützen, um ein Passwort für Änderungen zu hinterlegen. Automatisierte Skripte sollten niemals direkt auf das Master-File schreiben, sondern immer eine datierte Arbeitskopie in einem separaten Export-Ordner erstellen.

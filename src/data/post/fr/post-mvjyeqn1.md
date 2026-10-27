@@ -43,9 +43,7 @@ Au lieu de fouiller dans les forums ou de tâtonner avec des si imbriqués à n'
 
 Copiez-collez ce prompt précis dans votre outil I
 
-**A :**
-
-```text
+**A.** ```text
 Agis en expert Excel avancé. Je gère un tableau de pointage à Paris. 
 Dans ma feuille Excel, la colonne B contient l'heure d'arrivée, la colonne C l'heure de départ, et la colonne D le temps de pause en heures décimales (ex: 1 pour 1h). 
 Écris-moi une formule Excel unique pour la colonne E qui calcule le nombre d'heures effectives travaillées dans la journée, sachant qu'un temps partiel ou complet s'applique, et une formule en colonne F qui isole les heures supplémentaires si le total hebdomadaire dépasse 35 heures.
@@ -86,7 +84,7 @@ Gérer des données de pointage implique des exigences strictes en matière de c
 
 **Q1.** Pourquoi mes heures affichent-elles des valeurs négatives sous forme de dièses (#####) ?
 
-**A1.**C'est un grand classique d'Excel : cela se produit lorsqu'une heure de départ est inférieure à l'heure d'arrivée, ou lorsque le format du système de calcul de date 1904 n'est pas activé. Pour corriger cela, allez dansFichier > Options > Avancé, faites défiler jusqu'à la section "Lors du calcul de ce classeur" et cochezUtiliser le système de date 1904.
+**A1.** C'est un grand classique d'Excel : cela se produit lorsqu'une heure de départ est inférieure à l'heure d'arrivée, ou lorsque le format du système de calcul de date 1904 n'est pas activé. Pour corriger cela, allez dansFichier > Options > Avancé, faites défiler jusqu'à la section "Lors du calcul de ce classeur" et cochezUtiliser le système de date 1904.
 
 **Q2.** Comment puis-je m'assurer que l'IA ne génère pas une formule obsolète ?
 
@@ -94,4 +92,4 @@ Gérer des données de pointage implique des exigences strictes en matière de c
 
 **Q3.** Est-il possible d'automatiser l'importation de ces données depuis notre pointeur d'accès ?
 
-**A3.**Absolument. Vous pouvez utiliser l'ongletDonnées > Obtenir des données > À partir d'un fichier pour lier directement un fichier CSV exporté par votre système de badgeage. Ainsi, chaque mise à jour du fichier source actualisera vos calculs d'heures supplémentaires de manière instantanée.
+**A3.** Absolument. Vous pouvez utiliser l'ongletDonnées > Obtenir des données > À partir d'un fichier pour lier directement un fichier CSV exporté par votre système de badgeage. Ainsi, chaque mise à jour du fichier source actualisera vos calculs d'heures supplémentaires de manière instantanée.

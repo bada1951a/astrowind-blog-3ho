@@ -10,7 +10,9 @@ theme: "Teal Matrix Digital"
 
 ## 1. Situação de emergência e gargalo crítico no escritório
 
-Eram exatamente quatro para as cinco da tarde em um escritório corporativo na Avenida Paulista em São Paulo, e o clima estava tenso. Precisávamos enviar urgentemente um memorando com a base de dados de clientes consolidada para a diretoria, mas meu colega de equipe estava travado. Ele havia herdado um arquivo de planilha onde a coluna de endereço e telefone estava completamente mesclada em uma única célula por linha, e para piorar, o arquivo estava com uma proteção antiga de planilha com senha que ninguém na sala lembrava. Como a senha estava perdida, o recurso nativo de "Texto para Colunas" do Excel simplesmente exibia um aviso de erro informando que as células continham fórmulas protegidas ou estavam bloqueadas.
+Eram exatamente quatro para as cinco da tarde em um escritório corporativo na Avenida Paulista em São Paulo, e o clima estava tenso. Precisávamos enviar urgentemente um memorando com a base de dados de clientes consolidada para a diretoria, mas meu colega de equipe estava travado. Ele havia herdado um arquivo de planilha onde a coluna de endereço e telefone estava completamente mesclada em uma única célula por linha, e para piorar, o arquivo estava com uma proteção antiga de planilha com senha que ninguém na sala lembrav
+
+**A.** Como a senha estava perdida, o recurso nativo de "Texto para Colunas" do Excel simplesmente exibia um aviso de erro informando que as células continham fórmulas protegidas ou estavam bloqueadas.
 
 O relógio correndo contra nós, o chefe cobrando atualizações no chat corporativo e o medo de ter que redigitar manualmente mais de quinhentas linhas de endereços longos com bairros, CEPs e números de telefone misturados. Foi nesse momento de desespero que decidi usar uma abordagem diferente: parar de tentar quebrar a senha do Excel e usar o ChatGPT para gerar uma rotina inteligente de extração de dados que funcionasse em uma nova planilha limpa, contornando o problema de vez.
 
@@ -24,13 +26,15 @@ Aviso Importante: Nunca insira dados confidenciais de clientes ou informações 
 
 Problemas como esse acontecem com frequência em ambientes corporativos devido a três grandes gargalos operacionais:
 
-1. Dados Consolidados de Forma Incorreta: Sistemas legados de atendimento muitas vezes exportam relatórios em formato de texto bruto, jogando rua, número, cidade e telefone na mesma coluna sem delimitadores padronizados como ponto e vírgula ou tabulação.
+1. Dados Consolidados de Forma Incorret
+
+**A.** Sistemas legados de atendimento muitas vezes exportam relatórios em formato de texto bruto, jogando rua, número, cidade e telefone na mesma coluna sem delimitadores padronizados como ponto e vírgula ou tabulação.
 
 2. Senhas e Restrições Esquecidas: É comum que equipes protejam planilhas para evitar edições acidentais, mas a documentação da senha se perde com a rotatividade de funcionários, deixando a equipe atual sem autonomia para ajustes estruturais básicos.
 
-3. Desconhecimento de Ferramentas de IA Aplicadas: Muitos profissionais ainda tentam resolver problemas complexos de formatação linha por linha manualmente ou gastam horas buscando fórmulas de texto aninhadas no Excel (como LOCALIZ, EXT.TEXTO e ARRUMAR) que quebram facilmente quando o padrão do texto muda.
+3. Desconhecimento de Ferramentas de IA Aplicadas: Muitos profissionais ainda tentam resolver problemas complexos de formatação linha por linha manualmente ou gastam horas buscando fórmulas de texto aninhadas no Excel (como LOCALIZ, EXT.TEXTO e ARRUMAR) que quebram facilmente quando o padrão do texto mud
 
-## O Passo a Passo Prático para Resolver o Problema com o ChatGPT
+**A.** ## O Passo a Passo Prático para Resolver o Problema com o ChatGPT
 
 Para resolver a situação sem precisar da senha da planilha antiga, a solução mais rápida foi copiar a coluna bagunçada, jogar no ChatGPT com o comando correto e pedir uma fórmula ou script para separar o endereço do telefone instantaneamente. Aqui está o procedimento exato que você pode aplicar agora mesmo no seu computador.
 
@@ -39,7 +43,11 @@ Para resolver a situação sem precisar da senha da planilha antiga, a solução
 Abra o ChatGPT e forneça uma amostra dos dados bagunçados junto com o objetivo claro. Evite textos vagos. Use um prompt estruturado diretamente no navegador.
 
 ```text
-Atue como um especialista em Excel. Tenho uma coluna no Excel onde o endereço e o telefone estão misturados na mesma célula. Exemplo de linha: "Avenida Paulista, 1000, Sao Paulo - SP, (11) 98765-4321". Crie uma formula ou funcao em Excel para separar o endereco completo na Coluna B e o numero de telefone na Coluna C.
+Atue como um especialista em Excel. Tenho uma coluna no Excel onde o endereço e o telefone estão misturados na mesma célul
+
+**A.** Exemplo de linh
+
+**A.** "Avenida Paulista, 1000, Sao Paulo - SP, (11) 98765-4321". Crie uma formula ou funcao em Excel para separar o endereco completo na Coluna B e o numero de telefone na Coluna C.
 ```
 
 ### Passo 2: Aplicar a Solução na Nova Planilha
@@ -62,19 +70,24 @@ Com os dados separados corretamente em colunas limpas, copie os valores gerados,
 ## Dicas de Ouro para Evitar Novos Bloqueios
 
 - Sempre mantenha uma cópia de segurança (backup) dos relatórios brutos antes de aplicar senhas ou restrições de edição em planilhas compartilhadas.
-- Se precisar proteger uma planilha para a equipe, anote a senha em um gerenciador de senhas corporativo seguro em vez de confiar na memória.
-- Utilize macros e scripts gerados por IA apenas em ambientes controlados e verifique sempre o código antes de executá-lo em macros do Excel para garantir a segurança da sua estação de trabalho.
+- Se precisar proteger uma planilha para a equipe, anote a senha em um gerenciador de senhas corporativo seguro em vez de confiar na memóri
+
+**A.** - Utilize macros e scripts gerados por IA apenas em ambientes controlados e verifique sempre o código antes de executá-lo em macros do Excel para garantir a segurança da sua estação de trabalho.
 
 ## Perguntas Frequentes (FAQ)
 
 **Q1.** O que fazer se o Preenchimento Relâmpago (Ctrl + E) não reconhecer o padrão do meu endereço?
 
-**A1.** O Preenchimento Relâmpago aprende com exemplos. Se ele errar na segunda ou terceira linha, digite manualmente o resultado correto na terceira linha e pressione Ctrl + E novamente para forçá-lo a entender a regra lógica. Se persistir, use o ChatGPT para criar uma fórmula dedicada.
+**A1.** O Preenchimento Relâmpago aprende com exemplos. Se ele errar na segunda ou terceira linha, digite manualmente o resultado correto na terceira linha e pressione Ctrl + E novamente para forçá-lo a entender a regra lógic
 
-**Q2.** Posso usar o suplemento do ChatGPT diretamente dentro do Excel corporativo?
+**A.** Se persistir, use o ChatGPT para criar uma fórmula dedicad
 
-**A2.** Depende das políticas de segurança da sua empresa. Muitas empresas na Avenida Paulista bloqueiam suplementos externos de IA por questões de conformidade (Compliance). Nesses casos, o método mais seguro é usar o ChatGPT pelo navegador em uma aba separada e apenas colar os resultados ou fórmulas na sua planilha.
+**A.Q2.** Posso usar o suplemento do ChatGPT diretamente dentro do Excel corporativo?
 
-**Q3.** Como proceder se a planilha estiver totalmente corrompida além de protegida por senha?
+**A2.** Depende das políticas de segurança da sua empres
+
+**A.** Muitas empresas na Avenida Paulista bloqueiam suplementos externos de IA por questões de conformidade (Compliance). Nesses casos, o método mais seguro é usar o ChatGPT pelo navegador em uma aba separada e apenas colar os resultados ou fórmulas na sua planilh
+
+**A.Q3.** Como proceder se a planilha estiver totalmente corrompida além de protegida por senha?
 
 **A3.** Se o arquivo nem sequer abrir, tente abri-lo no Excel Online via navegador ou use a opção de "Abrir e Reparar" localizada na janela de abertura de arquivos do aplicativo de desktop na guia Arquivo > Abrir > Procurar.

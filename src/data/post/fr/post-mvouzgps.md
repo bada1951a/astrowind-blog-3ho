@@ -24,6 +24,8 @@ Résultat immédiat : une boîte de dialogue grise s'est ouverte avec l'effrayan
 
 ## 2. Analyse des causes principales de l'erreur
 
+## 2. Analyse des causes principales de l'erreur
+
 Pourquoi ce type de blocage arrive-t-il si souvent dans nos grands bureaux parisiens ? Trois raisons principales expliquent ce goulet d'étranglement :
 
 * **La dépendance aux macros orphelines :** Les départements reposent souvent sur des scripts VBA artisanaux non documentés, créés par des collaborateurs partis sans transition. Au moindre changement de structure de fichier, c'est le crash en cascade.
@@ -62,18 +64,20 @@ Pour garantir une utilisation professionnelle et sécurisée, gardez ces règles
 
 * **Confidentialité des données :** Si vous traitez des données financières hautement confidentielles ou des secrets industriels non publics, assurez-vous d'utiliser une version d'entreprise (Enterprise / Team) dont les clauses garantissent que vos documents ne servent pas à réentraîner les modèles publics.
 * **Vérification croisée :** Demandez toujours à l'IA de vous citer les numéros de page exacts pour chaque obligation critique qu'elle mentionne, afin de pouvoir vérifier rapidement la source originale dans le PDF.
-* **Oubliez le VBA :** Plutôt que de chercher à réparer de vieilles macros Excel qui plantent au moindre changement, apprenez à automatiser vos petites tâches de mise en forme via des scripts Python basiques ou des fonctionnalités d'IA intégrées.
+* **Oubliez le VB
+
+**A.Plutôt que de chercher à réparer de vieilles macros Excel qui plantent au moindre changement, apprenez à automatiser vos petites tâches de mise en forme via des scripts Python basiques ou des fonctionnalités d'IA intégrées.
 
 ## 5. Foire Aux Questions (FAQ)
 
-**Q:** Que faire si mon fichier PDF de conformité fait plus de 200 Mo et est refusé par l'interface ?
+**Q.** Que faire si mon fichier PDF de conformité fait plus de 200 Mo et est refusé par l'interface ?
 
-**A:** Utilisez un outil gratuit de découpage de PDF pour scinder le document en deux parties distinctes (par exemple, parties 1-75 et 76-150), puis soumettez-les séquentiellement à Claude en lui demandant de fusionner les analyses.
+**A.** Utilisez un outil gratuit de découpage de PDF pour scinder le document en deux parties distinctes (par exemple, parties 1-75 et 76-150), puis soumettez-les séquentiellement à Claude en lui demandant de fusionner les analyses.
 
-**Q:** Claude 3.5 Sonnet peut-il directement extraire et corriger le code VBA qui a planté au début ?
+**Q.** Claude 3.5 Sonnet peut-il directement extraire et corriger le code VBA qui a planté au début ?
 
-**A:** Oui, tout à fait. Vous pouvez copier le code source du message d'erreur VBA et le coller dans Claude avec le message suivant : "Explique-moi cette erreur d'exécution et réécris le code en version propre ou propose une alternative moderne".
+**A.** Oui, tout à fait. Vous pouvez copier le code source du message d'erreur VBA et le coller dans Claude avec le message suivant : "Explique-moi cette erreur d'exécution et réécris le code en version propre ou propose une alternative moderne".
 
-**Q:** Est-il possible d'exporter le résumé généré directement vers un format présentable pour le CODIR ?
+**Q.** Est-il possible d'exporter le résumé généré directement vers un format présentable pour le CODIR ?
 
-**A:** Absolument. Demandez simplement à Claude à la fin de votre prompt : "Formate la réponse ci-dessus sous forme de tableau Markdown propre ou de puces prêtes à être copiées dans une diapositive de présentation."
+**A.** Absolument. Demandez simplement à Claude à la fin de votre prompt : "Formate la réponse ci-dessus sous forme de tableau Markdown propre ou de puces prêtes à être copiées dans une diapositive de présentation."

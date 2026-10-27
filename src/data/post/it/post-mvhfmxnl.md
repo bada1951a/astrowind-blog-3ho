@@ -10,7 +10,9 @@ theme: "Steel Silver Metallic"
 
 ## 1. Emergenza improvvisa e blocco delle attività in ufficio
 
-Erano le 17:30 di un giovedì piovoso nel nostro ufficio a Milano, e la tensione si poteva tagliare con il coltello. Mancavano esattamente trenta minuti alla riunione strategica con il cliente del settore retail, e il mio foglio Excel per la previsione delle scorte del prossimo trimestre era un vero disastro. Le medie mobili tradizionali non tenevano conto della stagionalità improvvisa e delle promozioni impreviste, lasciando colonne di celle con errori di calcolo e dati storici incompleti. Stavo letteralmente sudando freddo, bloccato a cancellare e ricopiare numeri a mano, mentre il direttore vendite continuava a mandarmi messaggi su Teams chiedendo se i dati di magazzino fossero pronti per il cda. Se anche tu ti sei trovato almeno una volta a fissare un file Excel infinito la sera tardi, cercando di indovinare quante unità ordinare per evitare il "fuori stock" o il sovraccarico del magazzino, sai esattamente di cosa parlo. Per fortuna, ho smesso di perdere ore preziose con metodi antiquati e ho scoperto come sfruttare l'AI direttamente dentro i fogli di calcolo per generare previsioni affidabili in pochi minuti.
+Erano le 17:30 di un giovedì piovoso nel nostro ufficio a Milano, e la tensione si poteva tagliare con il coltello. Mancavano esattamente trenta minuti alla riunione strategica con il cliente del settore retail, e il mio foglio Excel per la previsione delle scorte del prossimo trimestre era un vero disastro. Le medie mobili tradizionali non tenevano conto della stagionalità improvvisa e delle promozioni impreviste, lasciando colonne di celle con errori di calcolo e dati storici incompleti. Stavo letteralmente sudando freddo, bloccato a cancellare e ricopiare numeri a mano, mentre il direttore vendite continuava a mandarmi messaggi su Teams chiedendo se i dati di magazzino fossero pronti per il cd
+
+**A.** Se anche tu ti sei trovato almeno una volta a fissare un file Excel infinito la sera tardi, cercando di indovinare quante unità ordinare per evitare il "fuori stock" o il sovraccarico del magazzino, sai esattamente di cosa parlo. Per fortuna, ho smesso di perdere ore preziose con metodi antiquati e ho scoperto come sfruttare l'AI direttamente dentro i fogli di calcolo per generare previsioni affidabili in pochi minuti.
 
 ![How to Use AI to Predict Next Quarter Inventory Needs Directly in Excel Spreadsheets AI Automation Guide](https://picsum.photos/seed/work-mvhfoi6j-6-b/1000/550.jpg)
 
@@ -19,7 +21,9 @@ Erano le 17:30 di un giovedì piovoso nel nostro ufficio a Milano, e la tensione
 <strong>Sintomo:</strong> Impossibilità di calcolare trend di magazzino stagionali con le normali formule di Excel.<br>
 <strong>Soluzione Rapid
 
-**a:**</strong> Integrazione di prompt AI strutturati per l'analisi predittiva dei dati storici di vendita. </div>
+**A.** </strong> Integrazione di prompt AI strutturati per l'analisi predittiva dei dati storici di vendit
+
+**A.** </div>
 
 ## Perchè i Metodi Tradizionali di Previsione Falliscono
 
@@ -36,7 +40,9 @@ Prima di passare alla soluzione automatizzata, analizziamo perché il vecchio mo
 Ecco il flusso di lavoro rapido e testato sul campo per ribaltare la situazione, pulire i dati e ottenere previsioni accurate per il prossimo trimestre senza uscire da Excel.
 
 ### Step 1: Preparazione e Pulizia dei Dati con Power Query
-Prima di dare in pasto i dati all'AI, dobbiamo assicurarci che la tabella sia pulita. - Apri Excel e vai su Dati > Ottieni dati > Da file > Da cartella di lavoro.
+Prima di dare in pasto i dati all'AI, dobbiamo assicurarci che la tabella sia pulit
+
+**A.** - Apri Excel e vai su Dati > Ottieni dati > Da file > Da cartella di lavoro.
 - Seleziona il tuo file con lo storico delle vendite degli ultimi 24 mesi.
 - Usa Dati > Power Query per rimuovere le righe vuote, normalizzare i codici SKU e formattare la colonna della data in formato standard (AAAA-MM-GG). Questo evita che l'intelligenza artificiale interpreti male i dati temporali.
 

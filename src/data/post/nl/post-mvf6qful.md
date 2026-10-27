@@ -35,7 +35,9 @@ In plaats van urenlang hannesen met complexe macro's of handmatig knippen en pla
 Volg deze concrete stappen om dit direct toe te passen in jouw Google Workspace:
 
 ### Stap 1: Bereid je data voor
-Zorg dat je kolommen heldere koppen hebben (bijvoorbeeld: `Klantnaam`, `E-mail`, `Bedrijf`, `Omzet`). Selecteer het bereik met vervuilde data. ### Stap 2: Activeer Gemini in Google Workspace
+Zorg dat je kolommen heldere koppen hebben (bijvoorbeeld: `Klantnaam`, `E-mail`, `Bedrijf`, `Omzet`). Selecteer het bereik met vervuilde dat
+
+**A.** ### Stap 2: Activeer Gemini in Google Workspace
 Open je zijbalk in Google Sheets via het Gemini-icoon rechtsboven, of gebruik een gekoppeld tabblad waarin je de volgende gerichte prompt invoert.
 
 ### Stap 3: Gebruik de juiste ontdubbelings-prompt

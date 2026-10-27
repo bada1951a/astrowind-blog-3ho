@@ -28,7 +28,9 @@ Understanding the root mechanical failures prevents future office firefighting:
 
 1. Hardcoded External References: When another department links formulas to a file path on their local machine or a restricted SharePoint folder, moving or renaming that file instantly turns every formula reference into a broken link trigger.
 
-2. Inconsistent Delimiters in Raw Data: Automated CRM or database exports often pack street names, postal codes, and phone numbers into a single cell separated by random commas, spaces, or missing punctuation, breaking standard parsing tools.
+2. Inconsistent Delimiters in Raw Dat
+
+**A.** Automated CRM or database exports often pack street names, postal codes, and phone numbers into a single cell separated by random commas, spaces, or missing punctuation, breaking standard parsing tools.
 
 3. Security Policy Interruption: Corporate security compliance configurations aggressively flag and lock external workbook connections, preventing automated batch updates until manual link breaking or path reassignment is completed.
 

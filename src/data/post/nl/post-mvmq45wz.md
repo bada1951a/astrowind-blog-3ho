@@ -39,7 +39,7 @@ Open een lege spreadsheet in Google Sheets. Ga in het bovenste menu naar**Extens
 Maak een nette tabel aan in je sheet met de volgende kolommen:
 * **Kolom
 
-**A:**** Productnaam
+**A.** Productnaam
 * **Kolom B:** De volledige URL van de Amazon productpagina
 * **Kolom C:**De formule of celverwijzing voor de actuele prijs
 
@@ -62,18 +62,18 @@ Wanneer je begint met het geautomatiseerd binnenhalen van externe webdata, zijn 
 
 * **Beperk de frequentie:** Vraag data niet elk uur op. Een dagelijkse update is meer dan voldoende voor concurrentieanalyse en voorkomt dat Amazon je tijdelijk blokkeert.
 * **Houd een back-up bij:**Maak wekelijks een statische export van je prijzentabel (via**Bestand > Downloaden > Microsoft Excel** of CSV) zodat je historische prijsontwrichtingen niet kwijtraakt als een scraping-tool plotseling van API verandert.
-* **Combineer met AI-prompts:** Zodra je prijzen netjes binnenkomen in Google Sheets, kun je ze via eenvoudige formules koppelen aan je AI-workflow om automatisch notificaties te sturen via Slack zodra een concurrent meer dan vijf procent in prijs daalt.
+* **Combineer met AI-prompts:**Zodra je prijzen netjes binnenkomen in Google Sheets, kun je ze via eenvoudige formules koppelen aan je AI-workflow om automatisch notificaties te sturen via Slack zodra een concurrent meer dan vijf procent in prijs daalt.
 
 ## 5. Veelgestelde Vragen
 
-**Q:** Kan Google Sheets uit zichzelf Amazon prijzen ophalen zonder extra tools?
+**Q.** Kan Google Sheets uit zichzelf Amazon prijzen ophalen zonder extra tools?
 
-**A:** Nee, de standaardfuncties zoals `IMPORTHTML` of `IMPORTXML` werken vrijwel nooit op Amazon vanwege strenge JavaScript-beveiligingen en anti-botmaatregelen. Je hebt altijd een lichte no-code extensie of cloud-scraper nodig.
+**A.** Nee, de standaardfuncties zoals `IMPORTHTML` of `IMPORTXML` werken vrijwel nooit op Amazon vanwege strenge JavaScript-beveiligingen en anti-botmaatregelen. Je hebt altijd een lichte no-code extensie of cloud-scraper nodig.
 
-**Q:** Wat moet ik doen als ik opeens alleen maar foutmeldingen zie in mijn sheet?
+**Q.** Wat moet ik doen als ik opeens alleen maar foutmeldingen zie in mijn sheet?
 
-**A:** Grote webshops zoals Amazon passen regelmatig hun pagina-indeling aan. Open de URL handmatig in je browser, inspecteer het prijselement opnieuw en pas de XPath-selectie of de CSS-selector aan in je scraping-instellingen.
+**A.** Grote webshops zoals Amazon passen regelmatig hun pagina-indeling aan. Open de URL handmatig in je browser, inspecteer het prijselement opnieuw en pas de XPath-selectie of de CSS-selector aan in je scraping-instellingen.
 
-**Q:** Is het legaal om openbare prijzen van concurrenten te scrapen?
+**Q.** Is het legaal om openbare prijzen van concurrenten te scrapen?
 
-**A:** Over het algemeen is het verzamelen van openlijk toegankelijke prijzen voor interne marktanalyse toegestaan, zolang je geen persoonlijke gegevens oogst of de servers van de website overbelast met te veel verzoeken per seconde. Raadpleeg bij twijfel altijd je interne juridische afdeling.
+**A.** Over het algemeen is het verzamelen van openlijk toegankelijke prijzen voor interne marktanalyse toegestaan, zolang je geen persoonlijke gegevens oogst of de servers van de website overbelast met te veel verzoeken per seconde. Raadpleeg bij twijfel altijd je interne juridische afdeling.

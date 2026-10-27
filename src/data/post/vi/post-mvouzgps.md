@@ -12,7 +12,9 @@ theme: "Dracula Purple Dev"
 
 Chieu thu Nam tuan truoc, tai toa nha van phong trung tam o Quan 1, TP.HCM, khong khi ngap tran su cang thang. Chi con dung 2 tieng nua la buoi kiem toan noi bo ve quy che tuan thu bat dau. Sep vua gui cho toi mot tap tai lieu PDF phap ly va quy dinh noi bo day dac chu, dai dung 150 trang, yeu cau tom tat ngay cac diem xung dot giua luat moi va quy trinh hien tai cua cong ty. 
 
-Trong luc voi vang chay doan script tu dong hoa do tu viet de giai nen va sap xep thu muc, toi da vo tinh dat nham tham so va... buom! Tap lenh quai quy do da ghi de (overwrite) len toan bo thu muc chua file goc master quan trong nhat. Tat ca cac phien ban lam viec, du lieu thuc te va file goc bien mat trong chop mat. Vua hoang mang tim kiem cac ban sao luu (backup) tren may chu, vua phai doi mat voi han chót kiem toan sat nut, toi nhan ra minh khong the doc het 150 trang giay thu cong hay ngoi cho script chay lai tu dau. Do la luc toi bat buoc phai dung den **Claude 3.5 Sonnet**de cuu lay ca tuan lam viec va hoan thanh nhiem vu trong von ven 3 phut.
+Trong luc voi vang chay doan script tu dong hoa do tu viet de giai nen va sap xep thu muc, toi da vo tinh dat nham tham so v
+
+**A.** .. buom! Tap lenh quai quy do da ghi de (overwrite) len toan bo thu muc chua file goc master quan trong nhat. Tat ca cac phien ban lam viec, du lieu thuc te va file goc bien mat trong chop mat. Vua hoang mang tim kiem cac ban sao luu (backup) tren may chu, vua phai doi mat voi han chót kiem toan sat nut, toi nhan ra minh khong the doc het 150 trang giay thu cong hay ngoi cho script chay lai tu dau. Do la luc toi bat buoc phai dung den **Claude 3.5 Sonnet**de cuu lay ca tuan lam viec va hoan thanh nhiem vu trong von ven 3 phut.
 
 <div style="border-left: 4px solid #bd93f9; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Meo thuc chien:</strong> Khi gap su co mat file goc phut chot, dung hoang so tim kiem thu cong. Hay lap tuc tap trung vao muc tieu cot loi: trich xuat nhanh thong tin tu ban sao luu cu nhat va dung AI xu ly noi dung thay vi ngoi doc lai tu dau.
@@ -64,18 +66,18 @@ Hay chuyen doi muc 2 thanh dinh dang bang Markdown (Table) de toi co the copy th
 </div>
 
 -**Luon co thu muc sao luu rieng (Backup Folder):**Rut kinh nghiem xu xuong tu su co ghi de script truoc do, hay luon tao mot thu muc `_backup_manual` rieng biet truoc khi chay bat ky doan lenh tu dong hoa nao.
--**Kiem tra cheo thuc te:** AI rat thong minh nhung van co the bo sot cac chi tiet nho ve luat chuyen nganh dac thu tai Viet Nam. Hay dung ket qua tom tat cua Claude nhu mot ban nhap cao cap de tiet kiem 90% thoi gian, sau do dung mat nguoi de ra soat lai cac dieu khoan cot loi.
+-**Kiem tra cheo thuc te:**AI rat thong minh nhung van co the bo sot cac chi tiet nho ve luat chuyen nganh dac thu tai Viet Nam. Hay dung ket qua tom tat cua Claude nhu mot ban nhap cao cap de tiet kiem 90% thoi gian, sau do dung mat nguoi de ra soat lai cac dieu khoan cot loi.
 
 ## 5. Cac cau hoi thuong gap (FAQ)
 
-**Q:** Claude 3.5 Sonnet co doc duoc file PDF tieng Viet co dau bi loi font cu khong?
+**Q.** Claude 3.5 Sonnet co doc duoc file PDF tieng Viet co dau bi loi font cu khong?
 
-**A:** Co, nhung hieu suat tot nhat la khi file PDF duoc xuat truc tiếp tu cac phan mem nhu Word, Excel hoac Adobe Acrobat. Doi voi file scan cu, ban nen dung cong cu OCR truoc khi tai len.
+**A.** Co, nhung hieu suat tot nhat la khi file PDF duoc xuat truc tiếp tu cac phan mem nhu Word, Excel hoac Adobe Acrobat. Doi voi file scan cu, ban nen dung cong cu OCR truoc khi tai len.
 
-**Q:** Toi co the dung phuong phap nay cho cac hop dong thuong mai dai hang tram trang khong?
+**Q.** Toi co the dung phuong phap nay cho cac hop dong thuong mai dai hang tram trang khong?
 
-**A:** Hoan toan duoc. Ban chi can thay doi vai tro (role) trong prompt thanh chuyen gia phap ly hop dong (Contract Legal Expert) de AI tap trung vao cac dieu khoan bo thuyet, phat vi pham va cham dut hop dong.
+**A.** Hoan toan duoc. Ban chi can thay doi vai tro (role) trong prompt thanh chuyen gia phap ly hop dong (Contract Legal Expert) de AI tap trung vao cac dieu khoan bo thuyet, phat vi pham va cham dut hop dong.
 
-**Q:** Neu file PDF qua nang vuot qua gioi han tai len thi phai xu ly nhu the nao?
+**Q.** Neu file PDF qua nang vuot qua gioi han tai len thi phai xu ly nhu the nao?
 
-**A:** Ban co the su dung cac cong cu tach file PDF mien phi de chia tap tai lieu thanh 2 hoac 3 phan nho, sau do tai len lan luot va yeu cau Claude tong hop lai trong mot khung hoi thoai (chat session).
+**A.** Ban co the su dung cac cong cu tach file PDF mien phi de chia tap tai lieu thanh 2 hoac 3 phan nho, sau do tai len lan luot va yeu cau Claude tong hop lai trong mot khung hoi thoai (chat session).

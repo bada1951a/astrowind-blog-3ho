@@ -10,7 +10,9 @@ theme: "Bronze Artisan Workshop"
 
 ## 1. Awaryjna sytuacja i paraliż pracy w biurze
 
-Wyobraź sobie to popołudnie w warszawskim centrum biznesowym na Rondzie Daszyńskiego. Godzina 16:45, a ty siedzisz przed monitorem, próbując na szybko ogarnąć arkusz z rozliczeniem czasu pracy całego zespołu przed jutrzejszym audytem. Miałeś wdrożyć automatyczny monitoring cen konkurencji za pomocą no-code'owego web scrapera, ale strona źródłowa zmieniła strukturę HTML, zasypując cię kaskadą błędów skraplania. W tle pika powiadomienie na Slacku od szefa z pytaniem o raport nadgodzin za zeszły miesiąc, a standardowy arkusz Excela znowu zwraca błąd wartości `#ARG!`, bo ktoś wpisał godziny w formacie tekstowym zamiast liczbowego. Znasz to uczucie, gdy ręczne poprawianie setek wierszy zaczyna przypominać syzyfową pracę?
+Wyobraź sobie to popołudnie w warszawskim centrum biznesowym na Rondzie Daszyńskiego. Godzina 16:45, a ty siedzisz przed monitorem, próbując na szybko ogarnąć arkusz z rozliczeniem czasu pracy całego zespołu przed jutrzejszym audytem. Miałeś wdrożyć automatyczny monitoring cen konkurencji za pomocą no-code'owego web scrapera, ale strona źródłowa zmieniła strukturę HTML, zasypując cię kaskadą błędów skraplani
+
+**A.** W tle pika powiadomienie na Slacku od szefa z pytaniem o raport nadgodzin za zeszły miesiąc, a standardowy arkusz Excela znowu zwraca błąd wartości `#ARG!`, bo ktoś wpisał godziny w formacie tekstowym zamiast liczbowego. Znasz to uczucie, gdy ręczne poprawianie setek wierszy zaczyna przypominać syzyfową pracę?
 
 <div style="border-left: 4px solid #b45309; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>[Stanowisko Eksperta]</strong> Ręczne obliczanie godzin pracy w Excelu to jeden z najbardziej czasochłonnych i podatnych na błędy procesów biurowych. Zamiast tracić godziny na szukanie błędów w zagnieżdżonych formułach IF, możesz zaparzyć kawę i użyć sztucznej inteligencji, która wygeneruje idealne formuły w kilka sekund.
@@ -34,13 +36,13 @@ Przed przejściem do rozwiązania, spójrzmy prawdzie w oczy – oto trzy głów
 
 Zamiast zgadywać składnię funkcji `JEŻELI` i `SUM
 
-**A.**WARUNKÓW`, zaprzęgniemy do pracy asystenta AI (np. ChatGPT lub Copilota), aby napisał dla nas precyzyjne formuły.
+**A.** WARUNKÓW`, zaprzęgniemy do pracy asystenta AI (np. ChatGPT lub Copilota), aby napisał dla nas precyzyjne formuły.
 
 ### Krok 1: Przygotowanie czystej struktury danych w Excelu
 Zanim poprosisz AI o pomoc, upewnij się, że twoja tabela ma jasny układ kolumn. Otwórz [Excela] i stwórz następujące nagłówki w pierwszym wierszu:
 - Kolumna
 
-**A:** [Pracownik]
+**A.** [Pracownik]
 - Kolumna B: [Data]
 - Kolumna C: [Wejście]
 - Kolumna D: [Wyjście]
@@ -66,7 +68,7 @@ AI wypluje dla ciebie gotowe formuły. Dla kolumny F (Czas pracy) otrzymasz zazw
 
 *(Uwag
 
-**a:** Dzielimy przez 1440, ponieważ w systemie dat Excela jedna doba to 1, a doba ma 1440 minut).*
+**A.** Dzielimy przez 1440, ponieważ w systemie dat Excela jedna doba to 1, a doba ma 1440 minut).*
 
 ### Krok 3: Wklejenie i przetestowanie formuły w arkuszu
 1. Zaznacz komórkę `F2` w swoim arkuszu.
@@ -85,12 +87,12 @@ AI wypluje dla ciebie gotowe formuły. Dla kolumny F (Czas pracy) otrzymasz zazw
 
 **Q1.** Co zrobić, gdy Excel zamiast wyniku pokazuje serię płotków (#####)?
 
-**A1.**Oznacza to, że kolumna jest zbyt wąska, aby pomieścić wynik, albo wynik działania na czasie dał wartość ujemną (np. pracownik wyszedł wcześniej, niż wskazał wejście). Rozszerz kolumnę lub sprawdź poprawność wpisanych godzin.
+**A1.** Oznacza to, że kolumna jest zbyt wąska, aby pomieścić wynik, albo wynik działania na czasie dał wartość ujemną (np. pracownik wyszedł wcześniej, niż wskazał wejście). Rozszerz kolumnę lub sprawdź poprawność wpisanych godzin.
 
 **Q2.** Jak zmusić Excela do poprawnego liczenia nadgodzin nocnych przechodzących przez północ?
 
-**A2.**Poproś AI o zmodyfikowanie formuły z użyciem funkcji `MOD`. Przykładowy prompt: "Napisz formułę Excela uwzględniającą zmianę nocną, gdzie wyjście następuje następnego dnia". Formuła zazwyczaj przyjmuje postać `=MOD(D2-C2; 1)`.
+**A2.** Poproś AI o zmodyfikowanie formuły z użyciem funkcji `MOD`. Przykładowy prompt: "Napisz formułę Excela uwzględniającą zmianę nocną, gdzie wyjście następuje następnego dnia". Formuła zazwyczaj przyjmuje postać `=MOD(D2-C2; 1)`.
 
 **Q3.** Czy mogę zautomatyzować ten proces całkowicie, bez ręcznego wklejania formuł co miesiąc?
 
-**A3.**Tak. Najlepszym rozwiązaniem jest użycie wbudowanego w Excela narzędzia [Power Query] (znajdziesz je w zakładce [Dane] > [Pobierz dane]). Pozwala ono zapisać reguły czyszczenia danych i obliczeń raz, a potem po prostu klikać [Odśwież] przy każdym nowym raporcie miesięcznym.
+**A3.** Tak. Najlepszym rozwiązaniem jest użycie wbudowanego w Excela narzędzia [Power Query] (znajdziesz je w zakładce [Dane] > [Pobierz dane]). Pozwala ono zapisać reguły czyszczenia danych i obliczeń raz, a potem po prostu klikać [Odśwież] przy każdym nowym raporcie miesięcznym.

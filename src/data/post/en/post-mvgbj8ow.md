@@ -28,7 +28,7 @@ If you manage recurring team reports, you have likely run into these three class
 
 3. The Stale Cache Problem: Copy-pasting data into static slides or separate PDF editors breaks your single source of truth, leading to conflicting numbers across department decks.
 
-## 3. Step-by-Step Practical Resolution Practical Productivity Resolution Building Your Custom Apps Script
+## 3. Step-by-Step Practical Resolution Practical Resolution Practical Productivity Resolution Building Your Custom Apps Script
 
 Let's fix this once and for all. We are going to build a lightweight script that grabs a specific tab, formats it cleanly into a landscape PDF, and emails it to your stakeholder list.
 

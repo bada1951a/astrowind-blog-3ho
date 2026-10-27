@@ -37,9 +37,9 @@ Hier ist der erprobte 3-Schritte-Workflow, mit dem Sie das 150-seitige PDF in we
 ### Schritt 1: Lokale Pseudonymisierung der sensiblen Daten
 Bevor das Dokument auch nur in die Nähe einer Cloud-KI kommt, bereinigen wir es lokal. Öffnen Sie die PDF in Ihrem Standard-PDF-Editor (oder nutzen Sie ein lokales Skript).
 
-1. Suchen Sie nach Kundennamen, Kontonummern oder spezifischen Firmeninterna.
+1. Suchen Sie nach Kundennamen, Kontonummern oder spezifischen Firmenintern
 
-2. Ersetzen Sie diese über die Funktion**Bearbeiten > Suchen & Ersetzen**durch neutrale Platzhalter wie `[Kunde_A]` oder `[Institut_X]`.
+**A.** 2. Ersetzen Sie diese über die Funktion**Bearbeiten > Suchen & Ersetzen**durch neutrale Platzhalter wie `[Kunde_A]` oder `[Institut_X]`.
 
 3. Speichern Sie das Dokument als `Compliance_Anonymisiert.pdf` ab.
 
@@ -63,7 +63,9 @@ Formatiere das Ergebnis in einem klaren, prägnanten Executive Summary auf Deuts
 
 2. Fügen Sie den obigen Prompt ein und drücken Sie auf**Enter**.
 
-3. Nach exakt ca. 180 Sekunden liefert Ihnen Claude eine strukturierte, fehlerfreie Analyse, die Sie direkt in Word exportieren können (**Datei > Exportieren > Word-Dokument**).
+3. Nach exakt c
+
+**A.** 180 Sekunden liefert Ihnen Claude eine strukturierte, fehlerfreie Analyse, die Sie direkt in Word exportieren können (**Datei > Exportieren > Word-Dokument**).
 
 <div style="border-left: 4px solid #059669; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Wichtiger Hinweis:</strong> Nutzen Sie für geschäftliche Dokumente ausschließlich Enterprise-Zugänge mit aktivierten Datenschutz-Einstellungen (Zero Data Retention), um die DSGVO-Konformität zu wahren.
@@ -74,18 +76,18 @@ Formatiere das Ergebnis in einem klaren, prägnanten Executive Summary auf Deuts
 Als Automatisierungs-Experte gebe ich Ihnen diese drei goldenen Regeln mit auf den Weg:
 * **Niemals Rohdaten hochladen:** Verlassen Sie sich nie blind darauf, dass eine KI personenbezogene Daten ignoriert. Machen Sie es sich zur Gewohnheit, sensible Begriffe vorab lokal zu maskieren.
 * **Quellenverifizierung nutzen:** Claude 3.5 Sonnet ist extrem stark darin, Seitenzahlen zu nennen. Überprüfen Sie kritische Paragraphen immer kurz im Originaldokument, bevor Sie diese in offizielle Reports übernehmen.
-* **Prompt-Bibliothek aufbauen:** Speichern Sie den oben genannten Prompt in Ihren Office-Notizen, um bei der nächsten regulatorischen Welle sofort einsatzbereit zu sein.
+* **Prompt-Bibliothek aufbauen:**Speichern Sie den oben genannten Prompt in Ihren Office-Notizen, um bei der nächsten regulatorischen Welle sofort einsatzbereit zu sein.
 
 ## 5. Häufig gestellte Fragen (FAQ)
 
-**Q:** Kann ich diesen Workflow auch mit anderen KI-Modellen wie ChatGPT oder Gemini durchführen?
+**Q.** Kann ich diesen Workflow auch mit anderen KI-Modellen wie ChatGPT oder Gemini durchführen?
 
-**A:** Grundsätzlich ja, aber Claude 3.5 Sonnet hat sich bei der Analyse von langen, komplexen Textstrukturen und juristischen Dokumenten als besonders präzise und zuverlässig erwiesen. Achten Sie bei allen Tools auf die Enterprise-Datenschutzoptionen.
+**A.** Grundsätzlich ja, aber Claude 3.5 Sonnet hat sich bei der Analyse von langen, komplexen Textstrukturen und juristischen Dokumenten als besonders präzise und zuverlässig erwiesen. Achten Sie bei allen Tools auf die Enterprise-Datenschutzoptionen.
 
-**Q:** Was tun, wenn das PDF-Dokument ein geschütztes, nicht kopierbares Format hat?
+**Q.** Was tun, wenn das PDF-Dokument ein geschütztes, nicht kopierbares Format hat?
 
-**A:** In diesem Fall müssen Sie das Dokument vor der Pseudonymisierung einmal durch eine lokale Texterkennung (OCR) laufen lassen. Nutzen Sie dazu die integrierten Funktionen Ihrer lokalen Scanner-Software oder zertifizierte PDF-Tools.
+**A.** In diesem Fall müssen Sie das Dokument vor der Pseudonymisierung einmal durch eine lokale Texterkennung (OCR) laufen lassen. Nutzen Sie dazu die integrierten Funktionen Ihrer lokalen Scanner-Software oder zertifizierte PDF-Tools.
 
-**Q:** Ist die Nutzung von Claude in deutschen Finanzinstituten rechtlich unbedenklich?
+**Q.** Ist die Nutzung von Claude in deutschen Finanzinstituten rechtlich unbedenklich?
 
-**A:** Solange Sie die Enterprise-Version nutzen, bei der vertraglich geregelt ist, dass keine Kundendaten zum Modelltraining verwendet werden, und Sie vorher alle personenbezogenen Daten (DSGVO-konform) pseudonymisiert haben, steht dem effizienten Einsatz nichts im Wege. Klären Sie im Zweifel dennoch immer kurz den internen CISO-Leitfaden ab.
+**A.** Solange Sie die Enterprise-Version nutzen, bei der vertraglich geregelt ist, dass keine Kundendaten zum Modelltraining verwendet werden, und Sie vorher alle personenbezogenen Daten (DSGVO-konform) pseudonymisiert haben, steht dem effizienten Einsatz nichts im Wege. Klären Sie im Zweifel dennoch immer kurz den internen CISO-Leitfaden ab.

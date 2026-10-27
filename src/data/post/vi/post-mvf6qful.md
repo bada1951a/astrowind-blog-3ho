@@ -22,11 +22,13 @@ Tôi mở file Google Sheets chứa gần 5.000 dòng dữ liệu vừa được
 
 Trước khi tìm cách giải quyết bằng AI, chúng ta cần hiểu tại sao file Google Sheets của văn phòng lại biến thành một bãi chiến trường như vậy:
 
-1. Định dạng số điện thoại và email không đồng nhất: Người dùng nhập từ điện thoại di động thường bật chế độ tự động viết hoa chữ cái đầu tiên của email, hoặc thêm dấu cách vô tình ở cuối dòng. Số điện thoại lúc thì có dấu chấm (090.123.4567), lúc có dấu cách, lúc thêm mã vùng quốc gia.
+1. Định dạng số điện thoại và email không đồng nhất: Người dùng nhập từ điện thoại di động thường bật chế độ tự động viết hoa chữ cái đầu tiên của email, hoặc thêm dấu cách vô tình ở cuối dòng. Số điện thoại lúc thì có dấu chấm (090.123.4567), lúc có dấu cách, lúc thêm mã vùng quốc gi
 
-2. Sai sót từ khâu nhập liệu thủ công (Human Error): Đội ngũ sales khi nhập tay danh sách khách hàng từ các cuộc gọi hotline thường gõ nhầm một vài ký tự hoặc viết tắt tên công ty, khiến hệ thống nhận diện đây là hai khách hàng hoàn toàn khác nhau.
+**A.** 2. Sai sót từ khâu nhập liệu thủ công (Human Error): Đội ngũ sales khi nhập tay danh sách khách hàng từ các cuộc gọi hotline thường gõ nhầm một vài ký tự hoặc viết tắt tên công ty, khiến hệ thống nhận diện đây là hai khách hàng hoàn toàn khác nhau.
 
-3. Đổ dữ liệu (Merge Data) từ nhiều nguồn: Khi kết hợp file từ Facebook Ads, Google Ads và Landing Page tự thiết kế, các trường thông tin (Column headers) không khớp nhau, dẫn đến việc trùng lặp khách hàng nhưng nằm ở các cột dịch chuyển lệch pha. ## Giải pháp thực chiến: Dùng Google Sheets kết hợp Gemini Prompt để xử lý triệt để
+3. Đổ dữ liệu (Merge Data) từ nhiều nguồn: Khi kết hợp file từ Facebook Ads, Google Ads và Landing Page tự thiết kế, các trường thông tin (Column headers) không khớp nhau, dẫn đến việc trùng lặp khách hàng nhưng nằm ở các cột dịch chuyển lệch ph
+
+**A.** ## Giải pháp thực chiến: Dùng Google Sheets kết hợp Gemini Prompt để xử lý triệt để
 
 Thay vì viết những hàm Regex phức tạp hay ngồi dò từng dòng bằng mắt, tôi tận dụng Gemini để tạo ra một đoạn mã Google Apps Script tự động làm sạch và gom nhóm dữ liệu chính xác trong tích tắc.
 
@@ -40,7 +42,7 @@ Hãy copy đoạn prompt dưới đây và dán vào Gemini (hoặc ChatGPT) đ�
 Tôi đang làm việc trên Google Sheets tại văn phòng và cần xử lý một bảng dữ liệu khách hàng. 
 Trang tính hiện tại có tên là "Sheet1" với các cột lần lượt là:
 
-**A:** Họ tên, B: Số điện thoại, C: Email, D: Ngày đăng ký.
+**A.** Họ tên, B: Số điện thoại, C: Email, D: Ngày đăng ký.
 Hãy viết giúp tôi một đoạn mã Google Apps Script hoàn chỉnh thực hiện các việc sau:
 1. Tự động làm sạch dữ liệu: Xóa khoảng trắng thừa ở đầu và cuối chuỗi (trim), chuyển email về chữ thường (lowercase).
 
@@ -60,7 +62,7 @@ Chưa đầy 5 giây, một Sheet mới mang tên Cleaned_Data xuất hiện nga
 <div style="border-left: 4px solid #ef4444; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Mẹo thực chiến từ chuyên gi
 
-**a:**</strong> Luôn tạo một bản sao (Make a copy) của file Google Sheets gốc trước khi chạy bất kỳ đoạn mã Apps Script nào do AI viết để phòng tránh trường hợp mất dữ liệu do lỗi logic trong code.
+**A.** </strong> Luôn tạo một bản sao (Make a copy) của file Google Sheets gốc trước khi chạy bất kỳ đoạn mã Apps Script nào do AI viết để phòng tránh trường hợp mất dữ liệu do lỗi logic trong code.
 </div>
 
 ## Những lưu ý quan trọng về bảo mật dữ liệu doanh nghiệp

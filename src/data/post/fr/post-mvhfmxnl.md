@@ -54,7 +54,7 @@ Copiez-collez ce type de prompt directement dans l'outil d'IA de votre tableur :
 <strong>Prompt d'IA recommande pour Excel :</strong><br>
 "Agis en tant que responsable Supply Chain senior. Analyse les donnees de la plage
 
-**A1:**D1200. Genere une colonne de prevision pour les 3 prochains mois en tenant compte d'une tendance de croissance estimee a 5% et d'une saisonnalite similaire a l'annee passee. Cree la formule de calcul directement dans la cellule E2 sous forme de fonction previsible (PREVISION.ETS) et explique-la-moi en une phrase."
+**A1.** D1200. Genere une colonne de prevision pour les 3 prochains mois en tenant compte d'une tendance de croissance estimee a 5% et d'une saisonnalite similaire a l'annee passee. Cree la formule de calcul directement dans la cellule E2 sous forme de fonction previsible (PREVISION.ETS) et explique-la-moi en une phrase."
 </div>
 
 ### Etape 3 : Integrer et tester la formule generee

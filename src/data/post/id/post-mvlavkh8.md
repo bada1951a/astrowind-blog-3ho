@@ -10,9 +10,13 @@ theme: "Dracula Purple Dev"
 
 ## 1. Situasi Kritis dan Hambatan Kerja Mendesak di Kantor
 
-Beberapa waktu lalu di salah satu gedung perkantoran kawasan bisnis SCBD Jakarta, saya mengalami momen paling mendebarkan dalam karier sebagai staf operasional. Pukul dua siang, bos besar meminta draf proposal kerja sama yang memuat ribuan data klien dikirimkan dalam waktu 30 menit ke meja beliau. Masalahnya, data mentah yang diberikan oleh tim sales tercampur aduk antara nama jalan, kota, kode pos, dan nomor telepon dalam satu kolom Excel yang sama. Ketika saya mencoba meminta bantuan ChatGPT dengan memasukkan prompt sederhana, jawaban yang diberikan justru bertele-tele dan berputar-putar menggunakan teori rumus teks tingkat lanjut yang kaku dan tidak sesuai dengan struktur data lokal kita. Panik melanda karena setiap menit berharga, sementara rumus yang dicontohkan AI terus menerus menghasilkan error pesan #VALUE! di layar laptop saya.
+Beberapa waktu lalu di salah satu gedung perkantoran kawasan bisnis SCBD Jakarta, saya mengalami momen paling mendebarkan dalam karier sebagai staf operasional. Pukul dua siang, bos besar meminta draf proposal kerja sama yang memuat ribuan data klien dikirimkan dalam waktu 30 menit ke meja beliau. Masalahnya, data mentah yang diberikan oleh tim sales tercampur aduk antara nama jalan, kota, kode pos, dan nomor telepon dalam satu kolom Excel yang sam
 
-Kejadian menegangkan tersebut terjadi bukan tanpa alasan. Setelah saya evaluasi kepala dingin, ada beberapa akar masalah utama mengapa proses pembersihan data teks berantakan di Excel sering bikin frustrasi:
+**A.** Ketika saya mencoba meminta bantuan ChatGPT dengan memasukkan prompt sederhana, jawaban yang diberikan justru bertele-tele dan berputar-putar menggunakan teori rumus teks tingkat lanjut yang kaku dan tidak sesuai dengan struktur data lokal kit
+
+**A.** Panik melanda karena setiap menit berharga, sementara rumus yang dicontohkan AI terus menerus menghasilkan error pesan #VALUE! di layar laptop say
+
+**A.** Kejadian menegangkan tersebut terjadi bukan tanpa alasan. Setelah saya evaluasi kepala dingin, ada beberapa akar masalah utama mengapa proses pembersihan data teks berantakan di Excel sering bikin frustrasi:
 
 ![How to Auto-Split Address and Phone Number Columns in Excel with ChatGPT Assistance AI Automation Guide](https://picsum.photos/seed/work-mvlaxfrg-10-b/1000/550.jpg)
 
@@ -32,13 +36,15 @@ Langkah 1: Gunakan Prompt ChatGPT yang Spesifik untuk Pola Data Lokal
 Jangan tanyakan hal umum ke AI. Berikan contoh baris data Anda dan instruksikan dengan bahasa yang tegas. Buka ChatGPT dan gunakan format prompt seperti di bawah ini:
 
 ```text
-Tolong buatkan rumus formula Excel (bukan script VBA) untuk memisahkan teks di kolom A yang berisi alamat lengkap dan nomor HP di bagian akhir. Contoh data: "Jl. Jend. Sudirman Kav. 52-53, Jakarta Selatan 081234567890". Berikan rumus terpisah untuk kolom Alamat dan kolom Nomor HP.
+Tolong buatkan rumus formula Excel (bukan script VBA) untuk memisahkan teks di kolom A yang berisi alamat lengkap dan nomor HP di bagian akhir. Contoh dat
+
+**A.** "Jl. Jend. Sudirman Kav. 52-53, Jakarta Selatan 081234567890". Berikan rumus terpisah untuk kolom Alamat dan kolom Nomor HP.
 ```
 
 Langkah 2: Terapkan Rumus Ekstraksi Cerdas di Excel
-Biasanya, AI yang terlatih dengan prompt spesifik akan memberikan rumus berbasis fungsi teks modern. Jika Anda menggunakan versi Excel terbaru, Anda bisa memanfaatkan kombinasi rumus pencarian teks dari kanan. Letakkan rumus ini di sel tujuan Anda:
+Biasanya, AI yang terlatih dengan prompt spesifik akan memberikan rumus berbasis fungsi teks modern. Jika Anda menggunakan versi Excel terbaru, Anda bisa memanfaatkan kombinasi rumus pencarian teks dari kanan. Letakkan rumus ini di sel tujuan And
 
-```excel
+**A.** ```excel
 =TEXTBEFORE(A2, " 08")
 ```
 Rumus di atas berfungsi untuk mengambil seluruh teks alamat yang berada persis sebelum awalan nomor HP umum di Indonesia yaitu angka 08. Untuk kolom nomor HP, gunakan rumus pelengkap:
@@ -54,7 +60,9 @@ Jika formula di atas masih mendeteksi sel kosong karena variasi spasi, manfaatka
 Tip Pro Produktivitas: Shortcut pintasan keyboard Ctrl + E (Flash Fill) adalah penyelamat utama saat deadline mepet karena tidak memerlukan logika rumus yang rumit.
 </div>
 
-Peringatan dari praktisi: Pastikan untuk selalu memeriksa ulang (double check) hasil akhir pemisahan data di bagian bawah baris dokumen Anda. Terkadang, nomor HP yang tidak memiliki awalan standar atau alamat yang sangat pendek bisa lolos dari pembacaan pola otomatis, sehingga memerlukan penyesuaian manual secara cepat.
+Peringatan dari praktisi: Pastikan untuk selalu memeriksa ulang (double check) hasil akhir pemisahan data di bagian bawah baris dokumen And
+
+**A.** Terkadang, nomor HP yang tidak memiliki awalan standar atau alamat yang sangat pendek bisa lolos dari pembacaan pola otomatis, sehingga memerlukan penyesuaian manual secara cepat.
 ## 5. Pertanyaan yang Sering Diajukan (FAQ) (FAQ)
 
 **Q1.** Apakah cara ini bisa digunakan untuk versi Microsoft Excel yang lama?

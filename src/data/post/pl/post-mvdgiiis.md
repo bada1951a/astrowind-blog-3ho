@@ -15,7 +15,7 @@ Godzina 17:40 w biurze w samym sercu warszawskiego centrum biznesowego. Za dwadz
 <div style="border-left: 4px solid #be123c; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Awaryjny sygnał z biur
 
-**a:**</strong> Nigdy więcej ręcznego wklepywania danych z papieru! Ten przewodnik pokaże Ci, jak w 3 krokach zamienić bezużyteczny skan w gotową tabelę Excela bez wydawania ani grosza na drogie oprogramowanie komercyjne.
+**A.** </strong> Nigdy więcej ręcznego wklepywania danych z papieru! Ten przewodnik pokaże Ci, jak w 3 krokach zamienić bezużyteczny skan w gotową tabelę Excela bez wydawania ani grosza na drogie oprogramowanie komercyjne.
 </div>
 
 ![AI Productivity & Workflow Automation](https://picsum.photos/seed/office167/1000/550)
@@ -28,7 +28,9 @@ Zanim przejdziemy do skutecznego rozwiązania, warto zrozumieć, dlaczego zwykł
 
 2. Niestandardowe układy tabel: Każdy dostawca ma inny wzór faktury. Automatyczne wykrywanie kolumn gubi się, gdy opis towaru przechodzi do następnej linii, a cena jednostkowa ląduje w kolumnie z ilością.
 
-3. Brak kontekstu walutowego i podatkowego: Zwykłe programy do odczytu tekstu widzą ciąg cyfr, ale nie rozróżniają kwoty netto, stawki VAT (np. 23%) oraz kwoty brutto, co powoduje totalny chaos w formułach arkusza. ---
+3. Brak kontekstu walutowego i podatkowego: Zwykłe programy do odczytu tekstu widzą ciąg cyfr, ale nie rozróżniają kwoty netto, stawki VAT (np. 23%) oraz kwoty brutto, co powoduje totalny chaos w formułach arkusz
+
+**A.** ---
 
 ## Krok po kroku: Jak przejść od skanu do czystego Excela
 
@@ -55,7 +57,7 @@ Gdy AI wygeneruje gotową tabelę:
 <div style="border-left: 4px solid #be123c; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Wskazówka ekspert
 
-**a:**</strong> Aby uniknąć błędów w podsumowaniach, upewnij się, że kolumny z cenami mają w Excelu ustawiony format liczbowy lub walutowy, a nie tekstowy. Zwróć uwagę na zielone trójkąty w rogu komórek – jeśli się pojawią, kliknij je i wybierz "Konwertuj na liczbę".
+**A.** </strong> Aby uniknąć błędów w podsumowaniach, upewnij się, że kolumny z cenami mają w Excelu ustawiony format liczbowy lub walutowy, a nie tekstowy. Zwróć uwagę na zielone trójkąty w rogu komórek – jeśli się pojawią, kliknij je i wybierz "Konwertuj na liczbę".
 </div>
 
 ---
@@ -66,7 +68,9 @@ Gdy AI wygeneruje gotową tabelę:
 Jeśli pracujesz na dokumentach zawierających poufne dane klientów lub tajemnice przedsiębiorstwa, unikaj wrzucania ich do publicznych modeli AI w wersjach darmowych, które mogą uczyć się na Twoich danych. Korzystaj z narzędzi korporacyjnych zapewniających poufność lub lokalnych rozwiązań OCR wbudowanych w pakiety biurkowe (np. funkcje danych z obrazu w Excelu).
 
 ### Co zrobić, gdy AI przekręci nazwy specyficznych produktów lub specyficznych kodów kreskowych?
-Modele AI świetnie radzą sobie z językiem naturalnym, ale specyficzne kody magazynowe bywają trudne. Najlepszym sposobem jest dodanie do promptu słownika branżowego lub krótka korekta bezpośrednio po wklejeniu danych do Excela przy użyciu funkcji Filtra. ### Czy Excel ma wbudowane narzędzie do odczytu danych ze zdjęć?
+Modele AI świetnie radzą sobie z językiem naturalnym, ale specyficzne kody magazynowe bywają trudne. Najlepszym sposobem jest dodanie do promptu słownika branżowego lub krótka korekta bezpośrednio po wklejeniu danych do Excela przy użyciu funkcji Filtr
+
+**A.** ### Czy Excel ma wbudowane narzędzie do odczytu danych ze zdjęć?
 Tak! W nowszych wersjach programu Excel (dla systemu Windows i Mac w ramach subskrypcji) w zakładce Dane znajdziesz opcję Z obrazu (Data from Picture). Narzędzie to automatycznie konwertuje zdjęcia tabel na żywe arkusze bez potrzeby korzystania z zewnętrznych stron internetowych.
 
 ---

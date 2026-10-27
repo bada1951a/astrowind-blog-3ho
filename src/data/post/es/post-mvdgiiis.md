@@ -16,7 +16,9 @@ Si te suena esta pesadilla de última hora, sabes exactamente de lo que hablo. D
 
 ![AI Productivity & Workflow Automation](https://picsum.photos/seed/office875/1000/550)
 
-Por suerte, descubrí un método rápido combinando herramientas de reconocimiento óptico de caracteres (OCR) gratuitas y un prompt de IA bien afinado que resuelve este caos en menos de tres minutos. Te cuento cómo lo hago ahora para salir del apuro sin perder la cordura. <div style="border-left: 4px solid #06b6d4; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
+Por suerte, descubrí un método rápido combinando herramientas de reconocimiento óptico de caracteres (OCR) gratuitas y un prompt de IA bien afinado que resuelve este caos en menos de tres minutos. Te cuento cómo lo hago ahora para salir del apuro sin perder la cordur
+
+**A.** <div style="border-left: 4px solid #06b6d4; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Solución rápida en 1 minuto:</strong> No pierdas tiempo tipeando. Saca una foto nítida con el móvil o escanea en PDF, sube el archivo a una IA conversacional con capacidad de visión, y pídele que escupa los datos directamente en formato Markdown estructurado para copiar y pegar en Excel.
 </div>
 
@@ -24,11 +26,13 @@ Por suerte, descubrí un método rápido combinando herramientas de reconocimien
 
 Antes de dar con este flujo de trabajo ágil, probé todas las opciones clásicas que solo conseguían retrasarme más:
 
-1. El escaneo plano directo a PDF sin OCR activo: El documento resultante es solo una imagen comprimida. Al intentar seleccionar el texto con el ratón, Excel lo pega como un bloque ilegible o una sola celda gigante imposible de filtrar.
+1. El escaneo plano directo a PDF sin OCR activo: El documento resultante es solo una imagen comprimid
 
-2. Las herramientas de conversión online dudosas: Muchas webs gratuitas prometen pasar PDF a Excel, pero desconfiguran las columnas de los conceptos, mezclan las celdas de IVA con las retenciones y, para colmo, exigen un registro de pago o ponen en riesgo la confidencialidad de los datos fiscales de la empresa.
+**A.** Al intentar seleccionar el texto con el ratón, Excel lo pega como un bloque ilegible o una sola celda gigante imposible de filtrar.
 
-3. El volcado manual bajo presión: Teclear a velocidad récord con la respiración del jefe en el cuello es la receta perfecta para cometer errores tipográficos. Luego llegan las fórmulas rotas (como los clásicos errores de tipo de dato texto en lugar de número) y el BuscarV deja de funcionar justo en medio de la presentación.
+2. Las herramientas de conversión online dudosas: Muchas webs gratuitas prometen pasar PDF a Excel, pero desconfiguran las columnas de los conceptos, mezclan las celdas de IVA con las retenciones y, para colmo, exigen un registro de pago o ponen en riesgo la confidencialidad de los datos fiscales de la empres
+
+**A.** 3. El volcado manual bajo presión: Teclear a velocidad récord con la respiración del jefe en el cuello es la receta perfecta para cometer errores tipográficos. Luego llegan las fórmulas rotas (como los clásicos errores de tipo de dato texto en lugar de número) y el BuscarV deja de funcionar justo en medio de la presentación.
 
 ## 3. Solución práctica paso a paso para optimizar el flujo: De la factura en papel al Excel impecable
 
@@ -44,11 +48,11 @@ En lugar de usar software antiguo de oficina, aprovecha cualquier modelo de leng
 
 3. Utiliza este prompt exacto para obtener una tabla perfect
 
-**a:**
+**A.** > "Actúa como un experto contable y procesador de datos. Extrae la información de las facturas adjuntas y preséntala estrictamente en formato de tabla Markdown. Las columnas deben ser: Fecha, Proveedor, NIF, Base Imponible, IVA y Total. Asegúrate de que los importes numéricos utilicen el punto como separador de miles y la coma como separador de decimales, sin símbolos de moneda para que Excel los reconozca como números puros."
 
-> "Actúa como un experto contable y procesador de datos. Extrae la información de las facturas adjuntas y preséntala estrictamente en formato de tabla Markdown. Las columnas deben ser: Fecha, Proveedor, NIF, Base Imponible, IVA y Total. Asegúrate de que los importes numéricos utilicen el punto como separador de miles y la coma como separador de decimales, sin símbolos de moneda para que Excel los reconozca como números puros."
+4. Copia la tabla generada por la IA directamente desde la pantall
 
-4. Copia la tabla generada por la IA directamente desde la pantalla. ### Paso 2: Pegado y validación en Excel
+**A.** ### Paso 2: Pegado y validación en Excel
 
 Abre tu archivo de Excel en el equipo y sigue esta ruta para evitar que las celdas den problemas con los formatos regionales:
 
@@ -71,10 +75,10 @@ Antes de automatizar todo a la ligera con herramientas en la nube, ten muy en cu
 * Datos sensibles (RGPD): Si las facturas contienen datos personales muy sensibles o información comercial extremadamente confidencial de clientes particulares, anonimiza los nombres o utiliza herramientas internas de la empresa aprobadas por el departamento de IT.
 * Revisión humana obligatori
 
-**a:** La IA es rapidísima, pero puede alucinar o confundir un dígito borroso (un 3 por un 8). Dedica siempre 30 segundos a contrastar el total de la tabla generada con el documento original antes de proyectar el informe en la pantalla de la sala de reuniones.
+**A.** La IA es rapidísima, pero puede alucinar o confundir un dígito borroso (un 3 por un 8). Dedica siempre 30 segundos a contrastar el total de la tabla generada con el documento original antes de proyectar el informe en la pantalla de la sala de reuniones.
 * Copia de seguridad previ
 
-**a:** Nunca modifiques el archivo Excel oficial de la directiva sin antes guardar una copia de respaldo en tu escritorio con la fecha y hora actuales.
+**A.** Nunca modifiques el archivo Excel oficial de la directiva sin antes guardar una copia de respaldo en tu escritorio con la fecha y hora actuales.
 
 ---
 
@@ -84,7 +88,9 @@ Antes de automatizar todo a la ligera con herramientas en la nube, ten muy en cu
 Puedes añadir una instrucción adicional en el prompt de la IA diciendo: *"Reemplaza todos los puntos decimales por comas en las columnas de importes"*, o utilizar la herramienta Buscar y Reemplazar de Excel (Ctrl + B) para cambiar el punto por la coma de forma masiva en toda la selección antes de operar con los números.
 
 ### ¿Puedo procesar varias facturas escaneadas en un solo archivo PDF?
-Sí, perfectamente. La mayoría de modelos de IA actuales admiten documentos PDF multipágina. Sube el documento entero y pídeles que consoliden toda la información de proveedores en una única tabla cronológica para ahorrar aún más tiempo.
+Sí, perfectamente. La mayoría de modelos de IA actuales admiten documentos PDF multipágin
+
+**A.** Sube el documento entero y pídeles que consoliden toda la información de proveedores en una única tabla cronológica para ahorrar aún más tiempo.
 
 ### ¿Funciona este método con tickets de caja arrugados o fotos borrosas?
 Los tickets térmicos antiguos o arrugados bajan la precisión del OCR. Si la foto es de baja calidad, es recomendable pasarla primero por un filtro de mejora en la galería de tu móvil para aumentar el contraste y la nitidez antes de adjuntarla a la I

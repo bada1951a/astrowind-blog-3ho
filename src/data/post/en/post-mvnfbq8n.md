@@ -30,7 +30,7 @@ Why do these corporate workflow bottlenecks happen so often? Here are the three 
 
 3.**Lack of Handover Documentation:**Previous team members frequently depart without leaving maintainable code or clear user guides, forcing current staff to guess button functions and macros.
 
-## 3. Step-by-Step Practical Resolution Practical Productivity Resolution
+## 3. Step-by-Step Practical Resolution Practical Resolution Practical Productivity Resolution
 
 Instead of debugging cryptic Visual Basic code, let's pivot to a modern, AI-driven document analysis workflow using**Claude 3.5 Sonnet**. Follow these exact steps to extract actionable insights from massive compliance files in under 3 minutes.
 
@@ -69,14 +69,14 @@ When handling sensitive financial and regulatory documents with cloud-based AI m
 
 ## 5. Frequently Asked Questions (FAQ)
 
-**Q:** Can Claude 3.5 Sonnet handle scanned PDFs that contain image-only pages?
+**Q.** Can Claude 3.5 Sonnet handle scanned PDFs that contain image-only pages?
 
-**A:** While Claude has strong vision capabilities, scanned documents without an underlying text layer should be run through an OCR tool first to ensure 100% accuracy in text extraction.
+**A.** While Claude has strong vision capabilities, scanned documents without an underlying text layer should be run through an OCR tool first to ensure 100% accuracy in text extraction.
 
-**Q:** Is my company data safe when uploading confidential compliance PDFs?
+**Q.** Is my company data safe when uploading confidential compliance PDFs?
 
-**A:** Yes, provided you use enterprise-grade accounts where data privacy controls prevent inputs from being saved or used for future model training sessions.
+**A.** Yes, provided you use enterprise-grade accounts where data privacy controls prevent inputs from being saved or used for future model training sessions.
 
-**Q:** What should I do if the PDF exceeds Claude's standard file size limits?
+**Q.** What should I do if the PDF exceeds Claude's standard file size limits?
 
-**A:** You can use a standard PDF splitting utility to break the 150-page document into manageable 50-page sections, or use compressed PDF tools to reduce file weight before uploading.
+**A.** You can use a standard PDF splitting utility to break the 150-page document into manageable 50-page sections, or use compressed PDF tools to reduce file weight before uploading.

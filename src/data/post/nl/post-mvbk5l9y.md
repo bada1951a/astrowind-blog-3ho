@@ -22,11 +22,11 @@ Laten we deze spreadsheet-chaos eens voor eens en voor al oplossen.
 
 ### Waarom je formules falen: De 3 root causes
 
-Voordat we de juiste formule erin schieten, moeten we begrijpen waarom het tot nu toe mislukte of waarom je vastloopt op rommelige data.
+Voordat we de juiste formule erin schieten, moeten we begrijpen waarom het tot nu toe mislukte of waarom je vastloopt op rommelige dat
 
-1. Vastzitten aan statische handmatige dat
+**A.** 1. Vastzitten aan statische handmatige dat
 
-**a:** Je tikt koersen handmatig over van een nieuwswebsite. Zodra de markt sluit of schommelt, klopt je hele financiële model niet meer.
+**A.** Je tikt koersen handmatig over van een nieuwswebsite. Zodra de markt sluit of schommelt, klopt je hele financiële model niet meer.
 
 2. Onbetrouwbare of trage web-scrapers: Je gebruikt complexe HTML-importfuncties zoals IMPORTHTML of IMPORTXML die om de haverklap stukgaan omdat websites hun structuur aanpassen.
 
@@ -42,7 +42,7 @@ Geen ingewikkelde programmering of dure plugins. We gebruiken puur de standaardk
 Maak een nette, overzichtelijke tabel aan met de volgende kolommen:
 - Kolom
 
-**A:** Omschrijving / Kostenpost
+**A.** Omschrijving / Kostenpost
 - Kolom B: Bedrag in vreemde valuta
 - Kolom C: Valutasymbool (bijv. USD, GBP, JPY)
 - Kolom D: Doelvaluta (bijv. EUR)

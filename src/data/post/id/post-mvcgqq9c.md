@@ -12,11 +12,15 @@ theme: "Pure Titanium Clean"
 
 Jam 11 malam di kawasan bisnis SCBD Jakarta, layar laptop saya mendadak membeku dengan tulisan "Microsoft Excel is not responding" yang menyebalkan. Tenggat waktu pengumpulan rekap data tahunan ke direksi tinggal 8 jam lagi, dan file berukuran 45 MB ini menolak untuk dibuka, apalagi disimpan. Setiap kali saya mencoba menghapus baris data atau mengubah rumus VLOOKUP, kipas laptop berputar kencang lalu aplikasi langsung *force close*. 
 
-Masa-masa panik seperti ini rasanya ingin banting keyboard saja. Padahal, saya sudah mencoba berbagai cara konvensional mulai dari mematikan *automatic calculation*, membersihkan *conditional formatting* yang menumpuk, hingga memindahkan data ke file baru, tapi hasilnya tetap nihil. File tersebut sudah terlanjur korup atau mengalami *bloat* akibat jutaan rumus yang saling bertautan dan referensi eksternal yang mati.
+Masa-masa panik seperti ini rasanya ingin banting keyboard saj
+
+**A.** Padahal, saya sudah mencoba berbagai cara konvensional mulai dari mematikan *automatic calculation*, membersihkan *conditional formatting* yang menumpuk, hingga memindahkan data ke file baru, tapi hasilnya tetap nihil. File tersebut sudah terlanjur korup atau mengalami *bloat* akibat jutaan rumus yang saling bertautan dan referensi eksternal yang mati.
 
 ![AI Productivity & Workflow Automation](https://picsum.photos/seed/office633/1000/550)
 
-Di sinilah titik baliknya. Daripada terus menerus menebak letak kerusakan sel atau macro VBA yang macet, saya memutuskan menggunakan pendekatan modern: meminta ChatGPT menganalisis struktur file menggunakan bantuan skrip Python. 
+Di sinilah titik balikny
+
+**A.** Daripada terus menerus menebak letak kerusakan sel atau macro VBA yang macet, saya memutuskan menggunakan pendekatan modern: meminta ChatGPT menganalisis struktur file menggunakan bantuan skrip Python. 
 
 <div style="border-left: 4px solid #334155; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Catatan Kilat:</strong> Anda tidak perlu menjadi programmer handal untuk melakukan ini. Cukup biarkan ChatGPT yang menuliskan kode Python-nya, lalu jalankan di komputer Anda untuk membedah dan membersihkan file Excel yang rusak.
@@ -41,7 +45,9 @@ Sebelum langsung ke solusi teknis, mari kita bedah tiga akar masalah utama yang 
 Ikuti alur kerja praktis ini untuk menyelamatkan file Excel Anda dalam hitungan menit tanpa kehilangan data penting.
 
 #### Langkah 1: Minta Bantuan ChatGPT Membuat Skrip Pemeriksa
-Buka ChatGPT dan berikan prompt spesifik untuk mendiagnosis masalah file Excel Anda. Salin dan tempel *prompt* di bawah ini:
+Buka ChatGPT dan berikan prompt spesifik untuk mendiagnosis masalah file Excel And
+
+**A.** Salin dan tempel *prompt* di bawah ini:
 
 > "Bertindaklah sebagai Data Engineer yang ahli dalam otomatisasi Python dan Pandas. Berikan saya kode Python pendek menggunakan pustaka `pandas` dan `openpyxl` untuk membaca file Excel bernama `rekap_tahunan.xlsx`. Kode tersebut harus mencetak daftar nama sheet, jumlah baris dan kolom yang aktif, serta mendeteksi sel mana yang berisi rumus atau teks yang berpotensi menyebabkan file membengkak."
 
@@ -53,9 +59,7 @@ Skrip ini akan dengan cepat memindai isi file di balik layar tanpa perlu membuka
 #### Langkah 3: Bersihkan dan Simpan Ulang File
 Setelah ChatGPT menunjukkan letak masalahnya (misalnya adanya *conditional formatting* di Sheet 3 atau jutaan baris kosong), minta kembali solusi pembersihanny
 
-**a:**
-
-> "Berdasarkan hasil pemindaian tadi, berikan saya kode Python untuk menghapus baris kosong yang tidak terpakai, menghapus semua aturan *conditional formatting* yang berlebih, lalu menyimpan file tersebut menjadi format baru bernama `rekap_tahunan_clean.xlsx`."
+**A.** > "Berdasarkan hasil pemindaian tadi, berikan saya kode Python untuk menghapus baris kosong yang tidak terpakai, menghapus semua aturan *conditional formatting* yang berlebih, lalu menyimpan file tersebut menjadi format baru bernama `rekap_tahunan_clean.xlsx`."
 
 Jalankan kembali skrip tersebut. Dalam beberapa detik, file baru yang bersih, ringan, dan bebas dari *crash* akan siap digunakan kembali.
 
@@ -78,7 +82,11 @@ Jalankan kembali skrip tersebut. Dalam beberapa detik, file baru yang bersih, ri
 Ya, Anda memerlukan Python dan pustaka pendukung seperti `pandas` dan `openpyxl`. Jika kebijakan IT kantor melarang instalasi software baru, Anda bisa menggunakan Google Colab di browser tanpa perlu menginstal apa pun di komputer lokal.
 
 2. Apakah rumus-rumus penting di Excel saya akan hilang jika dibersihkan dengan skrip Python?
-Tergantung instruksi pada prompt Anda. Jika Anda hanya meminta skrip untuk membersihkan baris kosong dan *formatting* yang rusak, rumus kalkulasi utama Anda akan tetap aman. Pastikan membaca baris kode Python sebelum mengeksekusinya.
+Tergantung instruksi pada prompt And
 
-3. Mengapa tidak menggunakan fitur "Inspect Workbook" bawaan Excel saja?
-Fitur bawaan Excel sangat bagus untuk masalah ringan. Namun, jika file sudah berada di tahap "Not Responding" dan tidak bisa dibuka sama sekali, Excel akan selalu *crash* sebelum Anda sempat mengakses menu inspeksi tersebut. Pendekatan luar sistem via Python adalah jalan pintas satu-satunya.
+**A.** Jika Anda hanya meminta skrip untuk membersihkan baris kosong dan *formatting* yang rusak, rumus kalkulasi utama Anda akan tetap aman. Pastikan membaca baris kode Python sebelum mengeksekusiny
+
+**A.** 3. Mengapa tidak menggunakan fitur "Inspect Workbook" bawaan Excel saja?
+Fitur bawaan Excel sangat bagus untuk masalah ringan. Namun, jika file sudah berada di tahap "Not Responding" dan tidak bisa dibuka sama sekali, Excel akan selalu *crash* sebelum Anda sempat mengakses menu inspeksi tersebut. Pendekatan luar sistem via Python adalah jalan pintas satu-satuny
+
+**A.**

@@ -10,10 +10,16 @@ theme: "Pastel Lavender Tech"
 
 ## 1. Situação de emergência e gargalo crítico no escritório
 
-Eram exatas 18h45 de uma sexta-feira típica na Avenida Paulista, em São Paulo, e o fechamento da folha de pagamento da nossa equipe estava completamente travado. Por causa de um conflito violento de sincronização no drive compartilhado da nuvem, a planilha principal de controle de ponto tinha se clonado em dezenas de arquivos corrompidos: "Relatorio_Ponto_Final_Final_copia(1).xlsx", "Relatorio_Ponto_Final_copia(2).xlsx" e até uma misteriosa versão "copia(1)_copia(3).xlsx". O caos estava armado. As fórmulas de cálculo de horas extras de mais de duzentos colaboradores estavam quebradas, mesclando dados duplicados e horários cruzados de entrada e saída. Eu precisava consolidar tudo, extrair as horas normais, o adicional noturno e as horas extras antes que o sistema de RH fechasse o lote noturno, sem perder a sanidade no processo.
+Eram exatas 18h45 de uma sexta-feira típica na Avenida Paulista, em São Paulo, e o fechamento da folha de pagamento da nossa equipe estava completamente travado. Por causa de um conflito violento de sincronização no drive compartilhado da nuvem, a planilha principal de controle de ponto tinha se clonado em dezenas de arquivos corrompidos: "Relatorio_Ponto_Final_Final_copia(1).xlsx", "Relatorio_Ponto_Final_copia(2).xlsx" e até uma misteriosa versão "copia(1)_copia(3).xlsx". O caos estava armado. As fórmulas de cálculo de horas extras de mais de duzentos colaboradores estavam quebradas, mesclando dados duplicados e horários cruzados de entrada e saíd
+
+**A.** Eu precisava consolidar tudo, extrair as horas normais, o adicional noturno e as horas extras antes que o sistema de RH fechasse o lote noturno, sem perder a sanidade no processo.
 
 <div style="border-left: 4px solid #7c3aed; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Resumo Prático para Falsos Urgentes:</strong> Se você está lidando com arquivos clonados na nuvem e fórmulas de ponto quebradas, não tente consertar manualmente célula por célula. Use uma rotina rápida de Power Query para mesclar os dados limpos e aplique fórmulas baseadas em IA para estruturar a lógica de tempo de forma definitiva. </div>
+<strong>Resumo Prático para Falsos Urgentes:</strong> Se você está lidando com arquivos clonados na nuvem e fórmulas de ponto quebradas, não tente consertar manualmente célula por célul
+
+**A.** Use uma rotina rápida de Power Query para mesclar os dados limpos e aplique fórmulas baseadas em IA para estruturar a lógica de tempo de forma definitiv
+
+**A.** </div>
 
 ![How to Calculate Working Hours and Overtime Automatically in Excel Using Simple AI Formulas AI Automation Guide](https://picsum.photos/seed/work-mvjygoag-7-b/1000/550.jpg)
 
@@ -35,13 +41,15 @@ Para resolver o problema do arquivo corrompido e calcular as horas de forma auto
 
 Em vez de abrir cada arquivo "copia" manualmente, use a ferramenta nativa do Excel para puxar apenas os dados válidos:
 
-1. Vá na guia Dados>Obter Dados>Do Arquivo>Da Pasta.
+1. Vá na guia Dados>Obter Dados>Do Arquivo>Da Past
 
-2. Aponte para a pasta onde os arquivos de ponto estão salvos. O Power Query listará todas as cópias.
+**A.** 2. Aponte para a pasta onde os arquivos de ponto estão salvos. O Power Query listará todas as cópias.
 
 3. Clique em Transformar Dados, filtre a coluna [Name] para remover versões antigas e mantenha apenas a planilha mais recente e oficial.
 
-4. Clique em Fechar e Carregar para consolidar tudo em uma única tabela mestre limpa. ### Passo 2: A Fórmula Inteligente de Horas e Horas Extras
+4. Clique em Fechar e Carregar para consolidar tudo em uma única tabela mestre limp
+
+**A.** ### Passo 2: A Fórmula Inteligente de Horas e Horas Extras
 
 Com os horários de entrada na coluna [B] e saída na coluna [C], vamos utilizar uma estrutura lógica limpa para calcular o total de horas trabalhadas e separar o excedente da jornada padrão de 8 horas diárias (08:00).
 
@@ -61,13 +69,13 @@ Em seguida, na coluna [E], aplique a lógica para extrair apenas asHoras Extras 
 
 Se você tiver regras complexas de banco de horas, abra o painel do seu assistente de IA corporativo e utilize o seguinte comando direto (Prompt) para gerar a fórmula exat
 
-**a:**
+**A.** > "Atue como especialista em Excel corporativo. Tenho uma tabela onde a coluna D contém o total de horas trabalhadas no formato [h]:mm. Escreva uma fórmula em Excel que calcule o valor excedente a 8 horas diárias, aplicando o multiplicador de 50% para dias úteis e 100% para finais de semana cuja data está na coluna
 
-> "Atue como especialista em Excel corporativo. Tenho uma tabela onde a coluna D contém o total de horas trabalhadas no formato [h]:mm. Escreva uma fórmula em Excel que calcule o valor excedente a 8 horas diárias, aplicando o multiplicador de 50% para dias úteis e 100% para finais de semana cuja data está na coluna
+**A.** "
 
-**A.**"
+Cole o resultado gerado diretamente na célula de pagamento e arraste para toda a tabel
 
-Cole o resultado gerado diretamente na célula de pagamento e arraste para toda a tabela. <div style="border-left: 4px solid #7c3aed; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
+**A.** <div style="border-left: 4px solid #7c3aed; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Alerta de Boas Práticas:</strong> Sempre salve uma cópia local de segurança (Backup) na sua máquina antes de executar scripts de mesclagem em massa ou macros de IA em pastas compartilhadas na rede.
 </div>
 
@@ -75,11 +83,11 @@ Cole o resultado gerado diretamente na célula de pagamento e arraste para toda 
 
 **Q1.** Por que o resultado da minha soma de horas exibe valores negativos ou errados no Excel?
 
-**A1.**O Excel não exibe horas negativas por padrão e pode reiniciar a contagem após 24 horas. Certifique-se de formatar a célula personalizada como `[h]:mm:ss` para que o acumulador de horas funcione corretamente sem resetar.
+**A1.** O Excel não exibe horas negativas por padrão e pode reiniciar a contagem após 24 horas. Certifique-se de formatar a célula personalizada como `[h]:mm:ss` para que o acumulador de horas funcione corretamente sem resetar.
 
 **Q2.** Como evitar que o arquivo volte a se dividir em cópias na nuvem?
 
-**A2.**Estabeleça um fluxo onde apenas um colaborador por vez edita a planilha principal, ou migre a estrutura de controle para uma lista compartilhada online onde o bloqueio de edição simultânea previne a criação de versões conflitantes.
+**A2.** Estabeleça um fluxo onde apenas um colaborador por vez edita a planilha principal, ou migre a estrutura de controle para uma lista compartilhada online onde o bloqueio de edição simultânea previne a criação de versões conflitantes.
 
 **Q3.** Posso usar essa mesma lógica para calcular adicional noturno?
 

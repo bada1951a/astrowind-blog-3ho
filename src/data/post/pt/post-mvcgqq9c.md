@@ -21,7 +21,7 @@ A solução definitiva que adotou-se na nossa rotina envolve combinar a capacida
 <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Diagnóstico de Engenhari
 
-**a:**</strong> O peso excessivo e os travamentos do Excel raramente são causados apenas pelo volume de dados. Na maioria das vezes, o problema reside em estruturas invisíveis corrompidas, excesso de estilos de células duplicados ou referências circulares ocultas.
+**A.** </strong> O peso excessivo e os travamentos do Excel raramente são causados apenas pelo volume de dados. Na maioria das vezes, o problema reside em estruturas invisíveis corrompidas, excesso de estilos de células duplicados ou referências circulares ocultas.
 </div>
 
 ---
@@ -32,9 +32,9 @@ Antes de aplicar a automação, vale entender os três principais vilões que de
 
 1. Inchaço de Estilos (Styles Bloat): Cada vez que você copia e cola células de outros arquivos, o Excel importa a formatação junto. Planilhas antigas acumulam milhares de estilos de fontes e cores lixeira que pesam no motor de renderização.
 
-2. Fórmulas Voláteis em Excesso: Funções como `HOJE()`, `AGORA()`, `INDIRETO()` e `DESLOC()` forçam o Excel a recalcular a planilha inteira a cada mínima alteração feita em qualquer célula.
+2. Fórmulas Voláteis em Excesso: Funções como `HOJE()`, `AGORA()`, `INDIRETO()` e `DESLOC()` forçam o Excel a recalcular a planilha inteira a cada mínima alteração feita em qualquer célul
 
-3. Lixo de Intervalo (Used Range Corrupto): O Excel acha que seus dados vão até a linha 1.048.576 porque alguém acidentalmente apertou formatação na linha um milhão, gerando um processamento fantasma absurdo.
+**A.** 3. Lixo de Intervalo (Used Range Corrupto): O Excel acha que seus dados vão até a linha 1.048.576 porque alguém acidentalmente apertou formatação na linha um milhão, gerando um processamento fantasma absurdo.
 
 ---
 
@@ -63,7 +63,9 @@ Copie o código fornecido, cole no seu ambiente Python (ou Google Colab), faça 
 
 * Sigilo e LGPD: Se a sua planilha contém dados sensíveis de clientes ou salários da diretoria, nunca envie arquivos brutos diretamente para versões públicas de inteligência artificial. Nesses casos, substitua os valores numéricos por dados fictícios (mas mantendo a estrutura de fórmulas e abas) antes de pedir análises de código ao ChatGPT.
 * Sempre faça backup: Antes de rodar qualquer script de modificação de arquivos, faça uma cópia de segurança da planilha original na pasta de arquivos recentes.
-* Menu Arquivo > Opções: No dia a dia, lembre-se de configurar o cálculo do Excel para "Automático, exceto tabelas de dados" para evitar recálculos desnecessários enquanto você edita. ---
+* Menu Arquivo > Opções: No dia a dia, lembre-se de configurar o cálculo do Excel para "Automático, exceto tabelas de dados" para evitar recálculos desnecessários enquanto você edit
+
+**A.** ---
 
 ### Perguntas Frequentes (FAQ)
 

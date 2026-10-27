@@ -120,14 +120,14 @@ Pour que ce script s'exécute tout seul sans intervention humaine :
 
 ## 5. Foire Aux Questions (FAQ)
 
-**Q1 :** Puis-je envoyer le rapport PDF à plusieurs destinataires en même temps ?
+**Q1.** Puis-je envoyer le rapport PDF à plusieurs destinataires en même temps ?
 
 **A.** Tout à fait. Il vous suffit de remplacer la variable `destinataire` par une chaîne de caractères séparée par des virgules, par exemple : `"manager@entreprise.com, directeur@entreprise.com"`.
 
-**Q2 :** Comment modifier l'orientation du PDF (passer du format Portrait au Paysage) ?
+**Q2.** Comment modifier l'orientation du PDF (passer du format Portrait au Paysage) ?
 
 **A.** Dans l'objet `optionsExport` du script, modifiez la ligne `portrait: "false"` par `portrait: "true"` si vous préférez un format portrait vertical classique.
 
-**Q3 :** Que faire si le script m'affiche une erreur d'autorisation lors du premier test ?
+**Q3.** Que faire si le script m'affiche une erreur d'autorisation lors du premier test ?
 
 **A.** C'est un comportement standard de sécurité Google. Cliquez sur "Paramètres avancés", puis sur "Accéder au projet (non sécurisé)" pour autoriser le script à interagir avec votre Google Sheets et votre Gmail.

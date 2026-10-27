@@ -39,7 +39,9 @@ Stap 2: Pas de gegenereerde formule toe via Tekst naar Kolommen of Flash Fill
 Soms is een formule niet eens nodig en werkt een ingebouwde Excel-functie nog sneller en stabieler over alle versies heen. Ga in het lint naar Gegevens en kies voor Tekst naar Kolommen, of gebruik de magische sneltoets Flash Fill. Als je toch kiest voor de formule-methode, kopieer je de door ChatGPT geleverde formule en plak je deze in je werkblad.
 
 Stap 3: Valideer en deel het veilige bestand
-Test het bestand door het lokaal op te slaan en te openen in een compatibiliteitsmodus of stuur het direct door naar je collega. Omdat we nu basisfuncties hebben gebruikt in plaats van geavanceerde dynamische arrays, opent het bestand foutloos op ieders scherm.
+Test het bestand door het lokaal op te slaan en te openen in een compatibiliteitsmodus of stuur het direct door naar je colleg
+
+**A.** Omdat we nu basisfuncties hebben gebruikt in plaats van geavanceerde dynamische arrays, opent het bestand foutloos op ieders scherm.
 
 <div style="border-left: 4px solid #a855f7; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 Belangrijke waarschuwing: Zorg ervoor dat je bij het uploaden van datasets naar ChatGPT alle gevoelige klantgegevens, zoals echte persoonsnamen en telefoonnummers, anonimiseert of vervangt door dummy-data om te voldoen aan de AVG-richtlijnen en het bedrijfsbeleid.

@@ -60,7 +60,7 @@ def sanitize_pdf_text(input_pdf_path, output_txt_path):
         
     with open(output_txt_path, 'w', encoding='utf-8') as f:
 
-**Q.**write(full_text)
+**Q.** write(full_text)
     print(f"Bereinigung abgeschlossen. Datei gespeichert unter: {output_txt_path}")
 
 # Ausführung des Skripts
@@ -97,6 +97,6 @@ Bei der Implementierung von KI-gestützten Dokumentenanalysen in sensiblen Gesch
 
 Ein weiterer Stolperstein ist die unzureichende Validierung der KI-Ergebnisse. Auch ein hochentwickeltes Modell wie Claude 3.5 Sonnet kann bei extrem verschachtelten juristischen Texten Nuancen übersehen oder Paragraphen falsch gewichten. Automatisierung ersetzt niemals die finale menschliche Fachkompetenz, sondern dient als Turbo für die Vorarbeit. Etablieren Sie daher immer das Prinzip des "Human-in-the-Loop": Die KI liefert das strukturierte Fundament und die Zusammenfassung in drei Minuten, aber der erfahrene Compliance Officer prüft die kritischen Paragraphen im Originaldokument Gegen. Bewahren Sie Versionen Ihrer Skripte und Prompts in einem zentralen Repository auf, um die Analyse bei aktualisierten Regulatorik-Versionen jederzeit reproduzieren zu können.
 
-## 5. Häufig gestellte Fragen (FAQ)**Q1. Wie stelle ich sicher, dass beim Hochladen der 150-seitigen PDF keine vertraulichen Kundendaten an Claude überragen werden?**A1. Um absolute Datensicherheit zu gewährleisten, sollten Sie niemals unmaskierte Rohdaten in eine öffentliche KI-Oberfläche laden. Nutzen Sie stattdessen unser beschriebenes lokales Python-Skript mit Regex-Filtern, um sensible Muster wie IBANs, Namen und Adressen bereits vor dem Upload zu neutralisieren. Alternativ empfiehlt sich die Nutzung der offiziellen Unternehmens-API von Anthropic über eine gesicherte VPC (Virtual Private Cloud), bei welcher der vertragliche Ausschluss des Modelltrainings vertraglich fixiert ist.**Q2. Was tun, wenn Claude 3.5 Sonnet bei extrem langen Dokumenten wichtige Details am Ende des Textes überliest?**A2. Bei sehr umfangreichen Dokumenten kann es trotz großer Kontextfenster zu einem Verlust von Details in der Dokumentmitte kommen, dem sogenannten "Lost in the Middle"-Phänomen. Um dem entgegenzuwirken, nutzen Sie am besten die Projektfunktion von Claude und laden das Dokument als strukturierte Wissensbasis hoch, anstatt den Text in einen einzigen Chat-Prompt zu kopieren. Ergänzen Sie Ihre Anfrage zudem mit gezielten Retrieval-Anweisungen, die das Modell auffordern, explizit nach bestimmten Kapiteln oder Paragrafen zu suchen.**Q3. Kann dieser automatisierte Workflow auch auf gescannte PDFs ohne echten Textlayer angewendet werden?**
+## 5. Häufig gestellte Fragen (FAQ)
 
 **A3.** Reine Bild-PDFs oder alte Scans können von Standard-Text-Parsern nicht direkt ausgelesen werden, da die Buchstaben als Rastergrafik vorliegen. In diesem Fall müssen Sie dem lokalen Python-Skript eine OCR-Bibliothek (Optical Character Recognition) wie Tesseract oder PyTesseract vorgeschaltet. Das Skript wandelt die Bildseiten zunächst in maschinenlesbaren Text um, bevor die eigentliche Anonymisierung und der Upload in die KI-Pipeline erfolgen.

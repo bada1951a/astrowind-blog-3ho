@@ -63,12 +63,12 @@ Power Query ist extrem mächtig, verzeiht aber keine unsauberen Ordnerstrukturen
 
 **Q.** Was passiert, wenn eine Datei im Ordner beschädigt ist oder ein falsches Format hat?
 
-**A:** Power Query bricht den Import in der Regel ab und zeigt einen Fehler in der betroffenen Zeile an. Sie können im Editor genau nachvollziehen, welche Datei das Problem verursacht hat, diese korrigieren und die Abfrage einfach aktualisieren.
+**A.** Power Query bricht den Import in der Regel ab und zeigt einen Fehler in der betroffenen Zeile an. Sie können im Editor genau nachvollziehen, welche Datei das Problem verursacht hat, diese korrigieren und die Abfrage einfach aktualisieren.
 
 **Q.** Kann ich Power Query auch nutzen, wenn die Verkaufsdaten auf verschiedenen SharePoint-Seiten liegen?
 
-**A:** Ja, absolut. Statt "Aus Ordner" wählen Sie einfach "Aus SharePoint-Ordner" und geben die URL Ihres Firmen-SharePoints ein. Die Logik der Datenbereinigung bleibt exakt dieselbe.
+**A.** Ja, absolut. Statt "Aus Ordner" wählen Sie einfach "Aus SharePoint-Ordner" und geben die URL Ihres Firmen-SharePoints ein. Die Logik der Datenbereinigung bleibt exakt dieselbe.
 
 **Q.** Muss ich diese Schritte jeden Monat von Neuem einrichten?
 
-**A:** Nein, das ist der größte Vorteil. Die gesamte Logik – also das Zusammenführen, Umbenennen und Filtern – wird in der Datei gespeichert. Sie müssen nach dem einmaligen Einrichten im nächsten Monat wirklich nur noch den Button Alle aktualisieren drücken.
+**A.** Nein, das ist der größte Vorteil. Die gesamte Logik – also das Zusammenführen, Umbenennen und Filtern – wird in der Datei gespeichert. Sie müssen nach dem einmaligen Einrichten im nächsten Monat wirklich nur noch den Button Alle aktualisieren drücken.

@@ -25,9 +25,9 @@ ASTUCE TERMINAL : Ne perdez plus une seule minute à coder des macros VBA comple
 </div>
 
 Étape 1 : Préparer et formuler le prompt exact pour l'IA
-Au lieu de demander à ChatGPT de trier les données à notre place, nous allons lui demander de rédiger la formule Excel parfaite. Copiez-collez ce prompt dans votre interface IA :
+Au lieu de demander à ChatGPT de trier les données à notre place, nous allons lui demander de rédiger la formule Excel parfaite. Copiez-collez ce prompt dans votre interface I
 
-```text
+**A.** ```text
 Agis en expert absolu d'Excel. J'ai une colonne A contenant des adresses postales françaises suivies d'un numéro de téléphone au format international (par exemple : '15 rue de la Paix 75001 Paris +33123456789'). Fournis-moi deux formules Excel distinctes : une pour extraire uniquement l'adresse dans la colonne B, et une autre pour extraire uniquement le numéro de téléphone dans la colonne C. Pas de bavardage, donne-moi directement les formules adaptées aux versions récentes d'Excel.
 ```
 

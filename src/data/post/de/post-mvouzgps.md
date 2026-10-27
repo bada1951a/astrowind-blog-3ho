@@ -63,18 +63,18 @@ Claude liefert Ihnen innerhalb von Sekunden eine saubere, markdown-basierte Stru
 Als Automatisierungs-Experte rate ich Ihnen im Umgang mit sensiblen Unternehmensdaten zu folgenden Vorsichtsmaßnahmen:
 
 * **Datenschutz beachten:** Prüfen Sie die Datenschutzrichtlinien Ihres Firmenkontos. Nutzen Sie für vertrauliche Mandantendaten niemals kostenlose Standard-Accounts, sondern Unternehmensversionen mit deaktiviertem Modelltraining.
-* **Quellen-Check:** Nutzen Sie die Zitat- oder Seitennummerierungsfunktion von Claude, um wichtige Passagen im Original-PDF schnell gegenzuprüfen.
+* **Quellen-Check:**Nutzen Sie die Zitat- oder Seitennummerierungsfunktion von Claude, um wichtige Passagen im Original-PDF schnell gegenzuprüfen.
 
 ## 5. Häufig gestellte Fragen (FAQ)
 
-**Q:** Kann Claude 3.5 Sonnet wirklich 150 Seiten auf einmal lesen?
+**Q.** Kann Claude 3.5 Sonnet wirklich 150 Seiten auf einmal lesen?
 
-**A:** Ja, das Modell verfügt über ein extrem großes Kontextfenster, das selbst umfangreiche Jahresberichte oder regulatorische Richtlinien problemlos in einem Durchgang verarbeitet.
+**A.** Ja, das Modell verfügt über ein extrem großes Kontextfenster, das selbst umfangreiche Jahresberichte oder regulatorische Richtlinien problemlos in einem Durchgang verarbeitet.
 
-**Q:** Was mache ich, wenn das PDF passwortgeschützt ist?
+**Q.** Was mache ich, wenn das PDF passwortgeschützt ist?
 
-**A:** Gesetzlich oder technisch geschützte PDFs müssen vor dem Upload mit einem offiziellen Entsorgungstool oder PDF-Editor von ihrem Passwortschutz befreit werden, da die KI sonst keinen Zugriff erhält.
+**A.** Gesetzlich oder technisch geschützte PDFs müssen vor dem Upload mit einem offiziellen Entsorgungstool oder PDF-Editor von ihrem Passwortschutz befreit werden, da die KI sonst keinen Zugriff erhält.
 
-**Q:** Wie verhindere ich, dass die KI Daten erfindet (Halluzinationen)?
+**Q.** Wie verhindere ich, dass die KI Daten erfindet (Halluzinationen)?
 
-**A:** Ergänzen Sie Ihren Prompt immer mit dem Satz: "Falls eine Information nicht im Dokument steht, antworte explizit, dass sie im Text nicht enthalten ist." Das reduziert Spekulationen auf nahezu null.
+**A.** Ergänzen Sie Ihren Prompt immer mit dem Satz: "Falls eine Information nicht im Dokument steht, antworte explizit, dass sie im Text nicht enthalten ist." Das reduziert Spekulationen auf nahezu null.

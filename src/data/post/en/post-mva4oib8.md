@@ -36,7 +36,7 @@ Before fixing the problem, it helps to understand why standard spreadsheet data 
 
 ---
 
-## 3. Step-by-Step Practical Resolution Practical Productivity Resolution Generating Regex and Data Cleaning Formulas
+## 3. Step-by-Step Practical Resolution Practical Resolution Practical Productivity Resolution Generating Regex and Data Cleaning Formulas
 
 To bypass manual trial and error, use this structured 3-step prompting method to generate flawless Google Sheets formulas instantly.
 
@@ -75,15 +75,17 @@ Once you confirm the formula successfully extracts the value in row 2, double-cl
 
 ## 5. Frequently Asked Questions (FAQ)
 
-**Q1:** What should I do if the formula returns a #VALUE! error in Google Sheets?
+**Q1.** What should I do if the formula returns a #VALUE! error in Google Sheets?
 
-**A:** A #VALUE! error in a regex formula usually means the pattern did not find an exact match in the target cell. Check for hidden trailing spaces, or ask ChatGPT to rewrite the regex pattern with more flexible wildcards (like `.*` or `\s*`).
+**A.** A #VALUE! error in a regex formula usually means the pattern did not find an exact match in the target cell. Check for hidden trailing spaces, or ask ChatGPT to rewrite the regex pattern with more flexible wildcards (like `.*` or `\s*`).
 
-**Q2:** Can ChatGPT write Google Apps Script for automated data cleaning instead of formulas?
+**Q2.** Can ChatGPT write Google Apps Script for automated data cleaning instead of formulas?
 <div>
 
-**A:** Yes! If your spreadsheet lags because you have tens of thousands of rows running heavy regex formulas, prompt ChatGPT to write a custom Google Apps Script function instead. You can paste the script directly into Extensions > Apps Script and run it as a custom formula. </div>
+**A.** Yes! If your spreadsheet lags because you have tens of thousands of rows running heavy regex formulas, prompt ChatGPT to write a custom Google Apps Script function instead. You can paste the script directly into Extensions > Apps Script and run it as a custom formul
 
-**Q3:** Does Google Sheets use the same regex syntax as Python or Excel?
+**A.** </div>
 
-**A:** Google Sheets utilizes RE2 regular expression syntax. When prompting ChatGPT, always specify "Google Sheets RE2 syntax" so it avoids unsupported flags or advanced lookbehind assertions that will trigger syntax errors in your spreadsheet.
+**Q3.** Does Google Sheets use the same regex syntax as Python or Excel?
+
+**A.** Google Sheets utilizes RE2 regular expression syntax. When prompting ChatGPT, always specify "Google Sheets RE2 syntax" so it avoids unsupported flags or advanced lookbehind assertions that will trigger syntax errors in your spreadsheet.

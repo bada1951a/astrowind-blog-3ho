@@ -75,7 +75,9 @@ function wyslijRaportPDF() {
   var blob = UrlFetchApp.fetch(url + payload.join('&'), urlOpts).getBlob().setName("Raport_Zarzadu_" + Utilities.formatDate(new Date(), "CET", "yyyy-MM-dd") + ".pdf");
   
   // Konfiguracja wiadomości e-mail
-  var emailOdbiorcy = "zarzad@twojadomena. pl";
+  var emailOdbiorcy = "zarzad@twojadomen
+
+**A.** pl";
   var temat = "Automatyczny Raport Tygodniowy - Google Sheets";
   var tresc = "Dzień dobry,\n\nW załączniku przesyłam aktualny cotygodniowy raport KPI wygenerowany automatycznie.\n\nPozdrowienia,\nZespół Analityczny";
   
@@ -89,9 +91,11 @@ function wyslijRaportPDF() {
 
 1. Dopasuj nazwę arkusz
 
-**a:** W linijce `var sheet = spreadsheet.getSheetByName("RaportTygodniowy");` wpisz dokładnie taką nazwę, jaką ma Twoja zakładka z raportem w Google Sheets.
+**A.** W linijce `var sheet = spreadsheet.getSheetByName("RaportTygodniowy");` wpisz dokładnie taką nazwę, jaką ma Twoja zakładka z raportem w Google Sheets.
 
-2. Wpisz adres odbiorcy: Zmień `"zarzad@twojadomena. pl"` na docelowy adres e-mail (lub listę adresów rozdzielonych przecinkami).
+2. Wpisz adres odbiorcy: Zmień `"zarzad@twojadomen
+
+**A.** pl"` na docelowy adres e-mail (lub listę adresów rozdzielonych przecinkami).
 
 3. Autoryzuj skrypt: Kliknij ikonę dysku (Zapisz), a następnie przycisk Uruchom (Run). Google poprosi Cię o uprawnienia do wysyłania maili i odczytu arkusza – przejdź przez standardowy proces autoryzacji (kliknij "Zaawansowane" -> "Przejdź do Bez tytułu (niebezpieczne)").
 
@@ -116,7 +120,7 @@ Nie chcesz przecież klikać "Uruchom" co tydzień ręcznie. Zautomatyzujmy to:
 <div style="border-left: 4px solid #0284c7; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Ważna wskazówka ekspertow
 
-**a:**</strong> Pamiętaj, aby przed wysyłką upewnić się, że Twoje formuły odświeżają się poprawnie. Jeśli korzystasz z zewnętrznych zapytań (np. IMPORTDATA czy IMPORTXML), mogą one potrzebować chwili na załadowanie danych przed uruchomieniem skryptu PDF.
+**A.** </strong> Pamiętaj, aby przed wysyłką upewnić się, że Twoje formuły odświeżają się poprawnie. Jeśli korzystasz z zewnętrznych zapytań (np. IMPORTDATA czy IMPORTXML), mogą one potrzebować chwili na załadowanie danych przed uruchomieniem skryptu PDF.
 </div>
 
 ---
@@ -130,4 +134,8 @@ Tak! Google Apps Script działa w chmurze Google, a nie w Twojej przeglądarce. 
 Parametry w kodzie takie jak `fitw: 'true'` (dopasuj do szerokości) oraz `portrait: 'false'` (układ poziomy) pomagają utrzymać porządek. Najlepiej przetestować kilka kombinacji, zmieniając układ strony w sekcji `exportOptions`.
 
 3. Czy mogę wysyłać ten raport do kilku osób jednocześnie?
-Oczywiście. W zmiennej `var emailOdbiorcy` możesz podać kilka adresów e-mail oddzielając je przecinkami, na przykład: `"dyrektor1@firma. pl, dyrektor2@firma. pl"`.
+Oczywiście. W zmiennej `var emailOdbiorcy` możesz podać kilka adresów e-mail oddzielając je przecinkami, na przykład: `"dyrektor1@firm
+
+**A.** pl, dyrektor2@firm
+
+**A.** pl"`.

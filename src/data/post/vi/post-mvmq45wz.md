@@ -10,7 +10,9 @@ theme: "Deep Ocean Cobalt"
 
 ## 1. Buổi họp bất ngờ và áp lực tự động hóa tại văn phòng
 
-Sáng nay, khi bước chân vào văn phòng ngay trung tâm Quận 1, TP.HCM, sếp lớn bất ngờ gọi tôi vào phòng họp chung và yêu cầu trình bày ngay một giải pháp thực tế về "Ứng dụng tự động hóa vào công việc hàng ngày" trong cuộc họp toàn đội ngũ sắp diễn ra sau một tiếng nữa. Không có thời gian chuẩn bị trước, tôi nhìn lại bảng báo cáo giá đối thủ trên Amazon mà nhóm vẫn đang phải copy và paste thủ công mỗi sáng. Chắc chắn sếp không muốn nghe lý thuyết suông hay những thuật ngữ lập trình phức tạp; họ cần nhìn thấy một bản demo trực quan, chạy ngay lập tức và giải quyết dứt điểm nỗi đau thao tác lặp đi lặp lại.
+Sáng nay, khi bước chân vào văn phòng ngay trung tâm Quận 1, TP.HCM, sếp lớn bất ngờ gọi tôi vào phòng họp chung và yêu cầu trình bày ngay một giải pháp thực tế về "Ứng dụng tự động hóa vào công việc hàng ngày" trong cuộc họp toàn đội ngũ sắp diễn ra sau một tiếng nữ
+
+**A.** Không có thời gian chuẩn bị trước, tôi nhìn lại bảng báo cáo giá đối thủ trên Amazon mà nhóm vẫn đang phải copy và paste thủ công mỗi sáng. Chắc chắn sếp không muốn nghe lý thuyết suông hay những thuật ngữ lập trình phức tạp; họ cần nhìn thấy một bản demo trực quan, chạy ngay lập tức và giải quyết dứt điểm nỗi đau thao tác lặp đi lặp lại.
 
 ![How to Scrape Amazon Competitor Pricing into Google Sheets Daily Without Writing Code AI Automation Guide](https://picsum.photos/seed/work-mvmq6cj0-11-b/1000/550.jpg)
 
@@ -64,18 +66,18 @@ Khi áp dụng phương pháp tự động hóa này cho các báo cáo kinh doa
 
 -**Tôn trọng chính sách nền tảng:**Amazon thường xuyên thay đổi cấu trúc mã nguồn HTML của trang web. Nếu bảng tính báo lỗi `#N/A`, rất có thể cấu trúc thẻ HTML chứa giá đã thay đổi, bạn chỉ cần cập nhật lại đường dẫn XPath trong hàm.
 -**Luôn có bản lưu dự phòng (Backup):**Hãy thiết lập một dòng thời gian lịch sử giá bằng cách copy dán giá trị (Paste as values) vào một bảng lưu trữ định kỳ hàng tuần để phân tích xu hướng dài hạn.
--**Bảo mật thông tin:** Không đưa thông tin tài khoản cá nhân hoặc dữ liệu nội bộ quá nhạy cảm lên các công cụ cào dữ liệu công cộng miễn phí.
+-**Bảo mật thông tin:**Không đưa thông tin tài khoản cá nhân hoặc dữ liệu nội bộ quá nhạy cảm lên các công cụ cào dữ liệu công cộng miễn phí.
 
 ## 5. Các câu hỏi thường gặp (FAQ)
 
-**Q:** Hàm IMPORTXML trên Google Sheets báo lỗi N/A khi trích xuất giá Amazon thì phải xử lý thế nào?
+**Q.** Hàm IMPORTXML trên Google Sheets báo lỗi N/A khi trích xuất giá Amazon thì phải xử lý thế nào?
 
-**A:** Amazon có cơ chế chặn các yêu cầu tự động từ hàm IMPORTXML truyền thống. Trong trường hợp này, cách nhanh nhất là sử dụng các add-on chuyên dụng trích xuất web trên Chrome hoặc sử dụng công cụ AI tích hợp sẵn trong Google Workspace để lấy dữ liệu sạch.
+**A.** Amazon có cơ chế chặn các yêu cầu tự động từ hàm IMPORTXML truyền thống. Trong trường hợp này, cách nhanh nhất là sử dụng các add-on chuyên dụng trích xuất web trên Chrome hoặc sử dụng công cụ AI tích hợp sẵn trong Google Workspace để lấy dữ liệu sạch.
 
-**Q:** Làm sao để cài đặt lịch chạy tự động cập nhật giá mà máy tính không cần mở?
+**Q.** Làm sao để cài đặt lịch chạy tự động cập nhật giá mà máy tính không cần mở?
 
-**A:** Khi bạn đã thiết lập trình kích hoạt (Triggers) trong phần Apps Script của Google Sheets, toàn bộ quá trình xử lý diễn ra trên máy chủ đám mây của Google. Do đó, ngay cả khi máy tính của bạn tắt nguồn, dữ liệu vẫn được cập nhật đúng giờ hẹn vào mỗi sáng.
+**A.** Khi bạn đã thiết lập trình kích hoạt (Triggers) trong phần Apps Script của Google Sheets, toàn bộ quá trình xử lý diễn ra trên máy chủ đám mây của Google. Do đó, ngay cả khi máy tính của bạn tắt nguồn, dữ liệu vẫn được cập nhật đúng giờ hẹn vào mỗi sáng.
 
-**Q:** Phương pháp này có giới hạn số lượng sản phẩm theo dõi không?
+**Q.** Phương pháp này có giới hạn số lượng sản phẩm theo dõi không?
 
-**A:** Nếu dùng hàm native của Google Sheets, việc gọi quá nhiều URL cùng lúc có thể khiến trang bị chậm hoặc quá tải. Bạn nên giới hạn khoảng 30 đến 50 sản phẩm quan trọng nhất trong một bảng tính để đảm bảo tốc độ phản hồi mượt mà nhất cho các buổi báo cáo nhanh.
+**A.** Nếu dùng hàm native của Google Sheets, việc gọi quá nhiều URL cùng lúc có thể khiến trang bị chậm hoặc quá tải. Bạn nên giới hạn khoảng 30 đến 50 sản phẩm quan trọng nhất trong một bảng tính để đảm bảo tốc độ phản hồi mượt mà nhất cho các buổi báo cáo nhanh.

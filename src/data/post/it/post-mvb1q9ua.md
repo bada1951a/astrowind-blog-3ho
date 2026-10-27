@@ -10,13 +10,14 @@ theme: "Steel Silver Metallic"
 
 ## 1. Emergenza improvvisa e blocco delle attività in ufficio
 
-Erano le 14:45 e il mio ufficio a Milano sembrava una pentola a pressione. Mancavano esattamente quindici minuti alla riunione cruciale con i partner commerciali, e io avevo davanti un file Excel con quattromila righe di contatti esportati male dal vecchio CRM. Indirizzi email scritti in maiuscolo e minuscolo senza criterio, spazi vuoti ovunque, e soprattutto un'unica colonna in cui nome e cognome erano incollati insieme come "MARIO ROSSI <mario.rossi@azienda. it>". Provare a sistemare tutto a mano con le funzioni stringa o con i vecchi filtri significava fare tardi, fare brutta figura e rovinarmi il pomeriggio. 
+Erano le 14:45 e il mio ufficio a Milano sembrava una pentola a pressione. Mancavano esattamente quindici minuti alla riunione cruciale con i partner commerciali, e io avevo davanti un file Excel con quattromila righe di contatti esportati male dal vecchio CRM. Indirizzi email scritti in maiuscolo e minuscolo senza criterio, spazi vuoti ovunque, e soprattutto un'unica colonna in cui nome e cognome erano incollati insieme come "MARIO ROSSI <mario.rossi@aziend
+
+**A.** it>". Provare a sistemare tutto a mano con le funzioni stringa o con i vecchi filtri significava fare tardi, fare brutta figura e rovinarmi il pomeriggio. 
 
 <div style="border-left: 4px solid #64748b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Ticket di Emergenza Ufficio #404:</strong> Dati anagrafici corrotti in Excel prima della call con la direzione. Obiettivo: estrarre nomi di battesimo puliti e normalizzare le email in 3 minuti netti senza script complessi in VB
 
-**A.**
-</div>
+**A.** </div>
 
 ![AI Productivity & Workflow Automation](https://picsum.photos/seed/office429/1000/550)
 
@@ -28,7 +29,7 @@ Ogni volta che ci troviamo a gestire database sporchi, commettiamo l'errore di a
 
 2. Le formule annidate diventano ileggibili: Combinare `STRING
 
-**A.**ESTRAI`, `TROVA`, `MAIUSC.INIZ` per estrarre il nome crea una formula chilometrica che restituisce errore `#VALORE!` alla minima eccezione (come un nome composto o un secondo nome puntato).
+**A.** ESTRAI`, `TROVA`, `MAIUSC.INIZ` per estrarre il nome crea una formula chilometrica che restituisce errore `#VALORE!` alla minima eccezione (come un nome composto o un secondo nome puntato).
 
 3. Il copia-incolla manuale è un suicidio operativo: Su liste superiori a 500 righe, l'errore umano è garantito al 100% e la stanchezza visiva prende il sopravvento.
 
@@ -54,7 +55,7 @@ Se non hai un assistente IA integrato direttamente nel tuo abbonamento Microsoft
 
 4. Magi
 
-**a:** Excel analizzerà lo schema e completerà l'intera colonna estraendo solo i nomi di battesimo in un millisecondo. Ripeti l'operazione per la colonna delle email estraendo solo la stringa pulita tra le parentesi o rimuovendo i caratteri sporchi.
+**A.** Excel analizzerà lo schema e completerà l'intera colonna estraendo solo i nomi di battesimo in un millisecondo. Ripeti l'operazione per la colonna delle email estraendo solo la stringa pulita tra le parentesi o rimuovendo i caratteri sporchi.
 
 ### Passo 3: Ottimizzare con un Prompt IA mirato (se usi Copilot o ChatGPT)
 Se usi una versione di Excel con Copilot o preferisci ripulire il testo tramite un assistente esterno prima di reincollarlo, usa questo prompt testato sul campo:
@@ -71,8 +72,12 @@ Se usi una versione di Excel con Copilot o preferisci ripulire il testo tramite 
 ## Domande Frequenti (FAQ)
 
 Posso usare il Riempimento Flash (Ctrl + E) anche se i nomi hanno formati misti (es. TUTTO MAIUSCOLO o minuscolo)?
-Sì, il motore euristico riconosce il pattern a prescindere dal maiuscolo/minuscolo, ma ti conviene applicare prima una funzione `=MAIUSC.INIZ()` se vuoi uniformare la grafica finale della tabella. Cosa faccio se alcune email non hanno le parentesi angolari ma sono semplicemente attaccate al nome?
+Sì, il motore euristico riconosce il pattern a prescindere dal maiuscolo/minuscolo, ma ti conviene applicare prima una funzione `=MAIUSC.INIZ()` se vuoi uniformare la grafica finale della tabell
+
+**A.** Cosa faccio se alcune email non hanno le parentesi angolari ma sono semplicemente attaccate al nome?
 In quel caso, l'approccio migliore tramite IA è chiedere di separare i token basandosi sulla presenza del simbolo `@`, isolando la parola precedente come dominio o parte del contatto e la stringa con la chiocciola come email.
 
 Questa procedura rallenta il file Excel se ho decine di migliaia di righe?
-Il Riempimento Flash e le formule generate via IA sono leggeri. Tuttavia, se superi le 50.000 righe, ti consigliamo di convertire i risultati finali in valori fissi (*Copia > Incolla Speciale > Valori*) per evitare che Excel ricalcoli la tabella a ogni modifica.
+Il Riempimento Flash e le formule generate via IA sono leggeri. Tuttavia, se superi le 50.000 righe, ti consigliamo di convertire i risultati finali in valori fissi (*Copia > Incolla Speciale > Valori*) per evitare che Excel ricalcoli la tabella a ogni modific
+
+**A.**

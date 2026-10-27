@@ -10,7 +10,9 @@ theme: "Dracula Purple Dev"
 
 ## 1. Tình huống sự cố khẩn cấp và tắc nghẽn công việc văn phòng
 
-Sang nay tai phong lam việc o tang 12 toa nha van phong trung tam quan 1 TP.HCM, ca nhan toi vua trai qua mot phen hu via. Chi con dung hai tieng nua la den han chot gui bao cao du lieu khach hang cho sep tong, trong khi file Excel tong hop danh sach ca ngan dong lai dang nam hon doan. Nguoi phu trach cu da nghi viec tu tuan truoc va khong de lai bat ky huong dan nao. Thay vi ngoi do cho doi, toi thay co mot nut bam macro ghi chu la "Chuan_Hoa_Du_Lieu" o goc man hinh. Voi chut hy vong mong manh rang no se tu dong tach cot dia chi va so dien thoai giup minh, toi da click ngay vao do.
+Sang nay tai phong lam việc o tang 12 toa nha van phong trung tam quan 1 TP.HCM, ca nhan toi vua trai qua mot phen hu vi
+
+**A.** Chi con dung hai tieng nua la den han chot gui bao cao du lieu khach hang cho sep tong, trong khi file Excel tong hop danh sach ca ngan dong lai dang nam hon doan. Nguoi phu trach cu da nghi viec tu tuan truoc va khong de lai bat ky huong dan nao. Thay vi ngoi do cho doi, toi thay co mot nut bam macro ghi chu la "Chuan_Hoa_Du_Lieu" o goc man hinh. Voi chut hy vong mong manh rang no se tu dong tach cot dia chi va so dien thoai giup minh, toi da click ngay vao do.
 
 Ngay lap tuc, mot man hinh xam xi hien len voi dong thong bao loi mau vang choe: Run-time error '1004': Application-defined or object-defined error. Nhan nut Debug, toi hoa mat vi nhung dong ma VBA phuc tap duoc viet tu nhieu nam truoc da bi loi thoi va khong the tuong thich voi phien bản Excel 365 hien tai dang dung. Toan bo du lieu bi treo dung lai, khong the undo va nut lenh thi vo tac dung.
 
@@ -46,15 +48,19 @@ Buoc thu ba, ap dung cong thuc vao bang tinh. Vi du trong Excel 365, ban co the 
 Luu y thuc chien: Truoc khi dan cong thuc vao toan bo danh sach hang ngan dong, hay thu nghiem truoc tren 5 dong dau tien de dam bao rang cac so dien thoai co do dai khac nhau (10 hoac 11 so) deu duoc trich xuat chinh xac ma khong bi sot chu so dau tien so 0.
 </div>
 
-De dam bảo an toan thong tin va nang cao hieu suat lam viec trong nhung lan sau, ban can ghi nho mot so loi khuyen tu chuyen gia. Tuyet đối khong chay cac doan ma macro khong ro nguon goc tu nhung file do dong nghiep cu de lai ma khong qua kiem tra. Neu bat buoc phai dung VBA, hay nho ChatGPT doc hieu va giai thich tung dong ma truoc khi an chay lenh. Ngoai ra, nen uu tien su dung Power Query trong menu Du lieu cua Excel vi no truc quan, de sua loi hon la viet code VBA phuc tap.
+De dam bảo an toan thong tin va nang cao hieu suat lam viec trong nhung lan sau, ban can ghi nho mot so loi khuyen tu chuyen gi
+
+**A.** Tuyet đối khong chay cac doan ma macro khong ro nguon goc tu nhung file do dong nghiep cu de lai ma khong qua kiem tr
+
+**A.** Neu bat buoc phai dung VBA, hay nho ChatGPT doc hieu va giai thich tung dong ma truoc khi an chay lenh. Ngoai ra, nen uu tien su dung Power Query trong menu Du lieu cua Excel vi no truc quan, de sua loi hon la viet code VBA phuc tap.
 
 Duoi day la phan giai dap nhung cau hoi thuong gap tu nhung nguoi lam viec van phong khi xu ly tinh huong nay:
 
 **Q1.** Toi dang dung phien ban Excel cu 2016 thi co dung duoc ham tach chuoi ma ChatGPT cung cap khong?
 
-**A1.** Cac ham moi nhu TEXTAFTER hay TEXTBEFORE chi co tu phien ban Excel 365 hoac Excel Web. Tuy nhien, ban chi can noi voi ChatGPT rang "Toi dang dung Excel 2016", lap tuc AI se cung cấp giai phap thay the bang cach ket hợp cac ham co dien nhu MID, FIND, va LEN rat hieu qua.
+**A1.** Cac ham moi nhu TEXTAFTER hay TEXTBEFORE chi co tu phien ban Excel 365 hoac Excel Web. Tuy nhien, ban chi can noi voi ChatGPT rang "Toi dang dung Excel 2016", lap tuc AI se cung cấp giai phap thay the bang cach ket hợp cac ham co dien nhu MID, FIND, va LEN rat hieu qu
 
-**Q2.** Khi bam nut Debug cua loi VBA, toi co nen tu sua cac dong code mau do khong?
+**A.Q2.** Khi bam nut Debug cua loi VBA, toi co nen tu sua cac dong code mau do khong?
 
 **A2.** Neu ban khong co nen tang ve lap trinh VBA, tot nhat khong nen tu sua vi se de gay ra loi he thong nang hon. Hay copy nguyen doan code loi do, dan vao ChatGPT va yeu cau AI tim loi giup hoac chuyen doi no thanh ham Excel thuan tuy.
 

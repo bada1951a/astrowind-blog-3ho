@@ -35,7 +35,7 @@ Enfin, les différences subtiles de version entre les suites bureautiques locale
 Pour éliminer définitivement ce type de blocage et automatiser le traitement des documents réglementaires complexes, suivez cette procédure méthodique en trois étapes distinctes.
 
 1. **Préparation et nettoyage des paramètres dans l'interface du tableur**- Ouvrez votre tableur et accédez à l'onglet**Fichier**>**Options**>**Formules**.
-   - Assurez-vous que l'option**Calcul automatique **est activée pour éviter les désynchronisations de cellules, mais décochez temporairement le calcul multithread si vous diagnostiquez des boucles de référence circulaire.
+   - Assurez-vous que l'option**Calcul automatique**est activée pour éviter les désynchronisations de cellules, mais décochez temporairement le calcul multithread si vous diagnostiquez des boucles de référence circulaire.
    - Utilisez l'outil de recherche et de remplacement (`Ctrl` + `H`) pour normaliser tous les séparateurs d'arguments (remplacez les virgules superflues par des points-virgules selon votre paramétrage linguistique local).
 
 2.**Refactorisation de la logique conditionnelle via Claude 3.5 Sonnet**- Plutôt que de demander un monolithe illisible, fournissez à l'IA un prompt contextuel strict en lui demandant de décomposer la logique en colonnes intermédiaires ou d'utiliser des fonctions modernes plus robustes comme `SI.CONDITIONS` ou `RECHERCHEX`.
@@ -61,11 +61,11 @@ Pour garantir une productivité durable, instaurez des habitudes de maintenance 
 
 ## 5. Foire Aux Questions (FAQ)
 
-**Q1.**Pourquoi Claude 3.5 Sonnet est-il particulièrement performant pour résumer des PDF réglementaires de 150 pages en quelques minutes ?
+**Q1.** Pourquoi Claude 3.5 Sonnet est-il particulièrement performant pour résumer des PDF réglementaires de 150 pages en quelques minutes ?
 
 **A1.** Claude 3.5 Sonnet dispose d'une fenêtre de contexte exceptionnellement large et d'une capacité de traitement sémantique avancée qui lui permettent d'ingérer l'intégralité d'un document technique sans perte d'information. Contrairement aux modèles généralistes qui tronquent les documents volumineux, il analyse la structure hiérarchique du texte, identifie les obligations de conformité majeures et synthétise les points critiques sous forme de tableaux ou de puces exploitables quasi instantanément.
 
-**Q2.**Comment éviter que mes formules complexes ne génèrent à nouveau des erreurs de syntaxe lors de modifications ultérieures ?
+**Q2.** Comment éviter que mes formules complexes ne génèrent à nouveau des erreurs de syntaxe lors de modifications ultérieures ?
 
 **A2.** La meilleure pratique consiste à abandonner les imbrications massives de fonctions `SI` au profit de fonctions logiques modernes telles que `SI.CONDITIONS` ou de découper la logique métier sur plusieurs colonnes de calcul intermédiaires. Cette approche modulaire facilite grandement la lecture, simplifie le diagnostic des erreurs et permet aux assistants IA de générer des blocs de code syntaxiquement irréprochables.
 

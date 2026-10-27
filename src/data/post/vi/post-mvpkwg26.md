@@ -26,17 +26,18 @@ Nguyên nhân cốt lõi dẫn đến sự cố sập luồng tự động hóa 
 
 Về mặt kỹ thuật xử lý bảng tính, các công thức dò tìm và tham chiếu động như `VLOOKUP` hoặc `XLOOKUP` bị lỗi do cấu trúc mảng nguồn bị thay đổi đột ngột trong quá trình ghi đè dữ liệu thủ công. Khi Zapier cố gắng đẩy dữ liệu bù đắp (backfill) hàng loạt, các ô tính toán tự động trong Google Sheets hoặc Microsoft Excel phải đồng thời thực hiện hàng nghìn hàm tính toán lại (`volatile functions`), dẫn đến tình trạng cạn kiệt bộ nhớ RAM ảo của trình duyệt và gây ra hiện tượng đóng băng ứng dụng hoàn toàn.
 
-Sự thiếu đồng bộ giữa các phiên bản phần mềm văn phòng cũng là một tác nhân ẩn giấu. Việc một số nhân viên sử dụng các Add-in bên thứ ba không rõ nguồn gốc để xử lý tệp PDF quy định 150 trang đã làm xung đột các Thư viện liên kết động (`DLL files`), vô hiệu hóa các macro VBA tự động hóa nội bộ. Để giải quyết triệt để vấn đề này, chúng ta không thể tiếp tục dựa vào các phương pháp thủ công chắp vá, mà cần phải xây dựng lại toàn bộ đường ống dữ liệu thông qua việc tận dụng khả năng đọc hiểu ngữ cảnh siêu lớn của Claude 3.5 Sonnet kết hợp với các script Python tự động hóa chuẩn hóa.
+Sự thiếu đồng bộ giữa các phiên bản phần mềm văn phòng cũng là một tác nhân ẩn giấu. Việc một số nhân viên sử dụng các Add-in bên thứ ba không rõ nguồn gốc để xử lý tệp PDF quy định 150 trang đã làm xung đột các Thư viện liên kết động (`DLL files`), vô hiệu hóa các macro VBA tự động hóa nội bộ. Để giải quyết triệt để vấn đề này, chúng ta không thể tiếp tục dựa vào các phương pháp thủ công chắp vá, mà cần phải xây dựng lại toàn bộ đường ống dữ liệu thông qua việc tận dụng khả năng đọc hiểu ngữ cảnh siêu lớn của Claude 3.5 Sonnet kết hợp với các script Python tự động hóa chuẩn hó
 
-## 3. Các bước khắc phục và tối ưu hóa quy trình thực tế
+**A.** ## 3. Các bước khắc phục và tối ưu hóa quy trình thực tế
 
 Để khôi phục hoàn toàn luồng công việc và xử lý các tài liệu quy định phức tạp, chúng ta sẽ thực hiện theo 3 phương pháp thực chiến dưới đây:
 
 ### Phương pháp 1: Khôi phục cấu hình Webhook và thiết lập lại bộ lọc Zapier qua giao diện GUI
-1. Truy cập vào bảng điều khiển quản trị Zapier, chọn mục **Zaps**và lọc các luồng đang ở trạng thái **Error**.
-2. Nhấp vào nút**Edit **trên luồng bị lỗi, tại bước kích hoạt**Webhooks by Zapier**, kiểm tra lại trường**Payload URL**để đảm bảo không có ký tự trắng thừa.
-3. Chuyển đến phần**Test trigger**, nhấn**Load Newest**để làm mới bộ đệm dữ liệu mẫu và xác minh rằng các trường dữ liệu khách hàng được ánh xạ (`mapping`) chính xác vào các biến tương ứng.
-4. Bật lại công tắc kích hoạt và chuyển trạng thái luồng từ**Paused**sang **Live**.
+1. Truy cập vào bảng điều khiển quản trị Zapier, chọn mục **Zaps**và lọc các luồng đang ở trạng thái**Error**.
+2. Nhấp vào nút**Edit**trên luồng bị lỗi, tại bước kích hoạt**Webhooks by Zapier**, kiểm tra lại trường**Payload URL**để đảm bảo không có ký tự trắng thừ
+
+**A.** 3. Chuyển đến phần**Test trigger**, nhấn**Load Newest**để làm mới bộ đệm dữ liệu mẫu và xác minh rằng các trường dữ liệu khách hàng được ánh xạ (`mapping`) chính xác vào các biến tương ứng.
+4. Bật lại công tắc kích hoạt và chuyển trạng thái luồng từ**Paused**sang**Live**.
 
 ### Phương pháp 2: Xử lý tệp quy định PDF 150 trang và trích xuất dữ liệu bằng Python script kết hợp Claude API
 Sử dụng đoạn mã Python chuẩn hóa dưới đây để tự động hóa việc chia nhỏ tệp PDF lớn và gửi nội dung vào Claude 3.5 Sonnet để tóm tắt các điều khoản tuân thủ cốt lõi chỉ trong vòng chưa đầy 3 phút:
@@ -95,11 +96,11 @@ Khi vận hành các hệ thống tự động hóa và ứng dụng trí tuệ 
 
 ## 5. Các câu hỏi thường gặp (FAQ)
 
-**Q1.**Làm thế nào để đảm bảo Claude 3.5 Sonnet không bị quá tải ngữ cảnh khi xử lý các tệp PDF quy định vượt quá giới hạn token cho phép?
+**Q1.** Làm thế nào để đảm bảo Claude 3.5 Sonnet không bị quá tải ngữ cảnh khi xử lý các tệp PDF quy định vượt quá giới hạn token cho phép?
 
 **A1.** Claude 3.5 Sonnet sở hữu cửa sổ ngữ cảnh lên đến 200.000 token, tương đương khoảng 150.000 từ hoặc một tài liệu PDF dày khoảng 300 trang văn bản thuần túy. Tuy nhiên, để đạt hiệu suất phân tích tối ưu và tránh tình trạng phản hồi bị cắt cụt, bạn nên sử dụng mã nguồn Python để chia nhỏ tài liệu thành các chương mục chính trước khi gọi API, hoặc đặt các câu hỏi định hướng cụ thể theo từng phần điều khoản thay vì yêu cầu tóm tắt toàn bộ tài liệu trong một câu lệnh duy nhất.
 
-**Q2.**Tại sao các liên kết Webhook và tự động hóa Zapier thường xuyên gặp sự cố timeout vào giờ cao điểm làm việc?
+**Q2.** Tại sao các liên kết Webhook và tự động hóa Zapier thường xuyên gặp sự cố timeout vào giờ cao điểm làm việc?
 
 **A2.** Nguyên nhân chính là do lưu lượng truy cập mạng nội bộ và số lượng yêu cầu đồng thời gửi đến máy chủ đích vượt quá hạn mức băng thông cho phép của gói dịch vụ hiện tại. Khi máy chủ mất quá nhiều thời gian để phản hồi các truy vấn cơ sở dữ liệu lớn, kết nối Webhook sẽ tự động ngắt theo cơ chế bảo mật mặc định. Giải pháp là cấu hình thêm cơ chế thử lại tự động (`Auto-retry with exponential backoff`) và nâng cấp hạ tầng máy chủ tiếp nhận webhook lên cấu hình chịu tải cao hơn.
 

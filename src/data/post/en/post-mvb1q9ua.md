@@ -28,7 +28,7 @@ Every time we encounter a messy lead list or dirty client roster, most of us def
 
 3. Hidden Characters and Spaces: Non-breaking spaces, trailing tabs, and invisible Unicode characters imported from web forms corrupt formula matching and database imports, causing silent lookup failures later.
 
-## 3. Step-by-Step Practical Resolution Practical Productivity Resolution Clean Data in Under 3 Minutes
+## 3. Step-by-Step Practical Resolution Practical Resolution Practical Productivity Resolution Clean Data in Under 3 Minutes
 
 Instead of spending the next hour writing fragile nested formulas, we are going to use an AI-assisted workflow to clean the entire dataset and extract first names flawlessly.
 
@@ -42,7 +42,7 @@ Open your preferred AI assistant or integrated workspace tool. Paste your data a
 <strong>AI Prompt Template:</strong><br><br>
 "Act as a data cleaning expert. I will provide a messy list of emails and names. Please return a clean, two-column tab-separated output where Column 1 is the Cleaned First Name (properly capitalized, no special characters or initials) and Column 2 is the Cleaned Standardized Email (lowercase, no trailing spaces). Handle edge cases like underscores or hyphens intelligently. Here is the dat
 
-**a:** [PASTE DATA HERE]"
+**A.** [PASTE DATA HERE]"
 </div>
 
 ### Step 3: Paste Back and Validate in Excel

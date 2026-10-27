@@ -76,21 +76,23 @@ End Sub
 ## 4. Belangrijke adviezen van automatiseringsspecialisten
 
 <div style="border-left: 4px solid #a6e22e; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Belangrijke waarschuwing:</strong> Let altijd goed op de privacy van gevoelige bedrijfsdata. Upload nooit privacygevoelige persoonsgegevens (zoals salarisadministratie of BSN-nummers) naar publieke AI-tools. Zorg dat je enterprise-instellingen gebruikt die data-confidentialiteit garanderen.
+<strong>Belangrijke waarschuwing:</strong> Let altijd goed op de privacy van gevoelige bedrijfsdat
+
+**A.** Upload nooit privacygevoelige persoonsgegevens (zoals salarisadministratie of BSN-nummers) naar publieke AI-tools. Zorg dat je enterprise-instellingen gebruikt die data-confidentialiteit garanderen.
 </div>
 
 Een slimme workflow draait niet alleen om snelheid, maar ook om nauwkeurigheid. Vraag Claude altijd om paginagereferenties bij de samenvatting, zodat je de feiten snel kunt controleren in het oorspronkelijke document voordat je de directie informeert.
 
 ## 5. Veelgestelde Vragen (FAQ)
 
-**Q:** Kan Claude 3.5 Sonnet echt bestanden van 150 pagina's in één keer verwerken?
+**Q.** Kan Claude 3.5 Sonnet echt bestanden van 150 pagina's in één keer verwerken?
 
-**A:** Ja, dankzij de geavanceerde contextwindow van Claude kun je grote PDF-bestanden direct uploaden en analyseren zonder dat het model informatie verliest.
+**A.** Ja, dankzij de geavanceerde contextwindow van Claude kun je grote PDF-bestanden direct uploaden en analyseren zonder dat het model informatie verliest.
 
-**Q:** Is het veilig om vertrouwelijke bedrijfsdocumenten naar Claude te sturen?
+**Q.** Is het veilig om vertrouwelijke bedrijfsdocumenten naar Claude te sturen?
 
-**A:** Wanneer je gebruikmaakt van betaalde bedrijfsabonnementen (zoals Claude Team of Enterprise), worden je gegevens niet gebruikt voor het trainen van het model en blijft je data beveiligd.
+**A.** Wanneer je gebruikmaakt van betaalde bedrijfsabonnementen (zoals Claude Team of Enterprise), worden je gegevens niet gebruikt voor het trainen van het model en blijft je data beveiligd.
 
-**Q:** Wat moet ik doen als de VBA-macro voor het ontgrendelen van Excel niet werkt?
+**Q.** Wat moet ik doen als de VBA-macro voor het ontgrendelen van Excel niet werkt?
 
-**A:** Zorg ervoor dat je het bestand opslaat als een macro-ingeschakeld werkblad (.xlsm) en dat de macro-beveiligingsinstellingen in Excel het uitvoeren van VBA-code toestaan.
+**A.** Zorg ervoor dat je het bestand opslaat als een macro-ingeschakeld werkblad (.xlsm) en dat de macro-beveiligingsinstellingen in Excel het uitvoeren van VBA-code toestaan.

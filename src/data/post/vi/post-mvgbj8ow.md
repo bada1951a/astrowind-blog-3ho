@@ -121,7 +121,9 @@ Bạn không muốn phải bấm chạy code thủ công mỗi tuần? Hãy đ�
 ## Những lưu ý thực tế khi triển khai
 
 * Tên Sheet chính xác: Biến `sheetName` trong code phải khớp hoàn toàn với tên tab hiển thị dưới góc trái bảng Google Sheets của bạn (Ví dụ: `BaoCaoTuan` hoặc `Sheet1`). Tránh để khoảng trắng thừa gây lỗi tìm kiếm.
-* Quyền riêng tư dữ liệu: Đoạn mã sử dụng OAuth Token nội bộ của tài khoản bạn để trích xuất file PDF, đảm bảo an toàn tuyệt đối và không bị rò rỉ dữ liệu ra bên ngoài ứng dụng của bên thứ ba. * Kiểm tra định dạng trang in: Nếu bảng tính của bạn quá dài, hãy thử chuyển thông số `portrait` thành `true` hoặc chỉnh sửa lại độ rộng các cột trên Google Sheets trước khi chạy script để file PDF xuất ra đạt thẩm mỹ cao nhất.
+* Quyền riêng tư dữ liệu: Đoạn mã sử dụng OAuth Token nội bộ của tài khoản bạn để trích xuất file PDF, đảm bảo an toàn tuyệt đối và không bị rò rỉ dữ liệu ra bên ngoài ứng dụng của bên thứ b
+
+**A.** * Kiểm tra định dạng trang in: Nếu bảng tính của bạn quá dài, hãy thử chuyển thông số `portrait` thành `true` hoặc chỉnh sửa lại độ rộng các cột trên Google Sheets trước khi chạy script để file PDF xuất ra đạt thẩm mỹ cao nhất.
 
 ## Câu hỏi thường gặp (FAQ)
 

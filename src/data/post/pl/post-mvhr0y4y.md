@@ -14,7 +14,7 @@ Godzina 16:45, warszawskie centrum biznesowe na Rondzie Daszyńskiego. Za piętn
 
 Ten scenariusz to koszmar każdego analityk
 
-**A.** Ręczne budowanie wykresów finansowych, które mają być czytelne dla zarządu, a jednocześnie elastyczne pod kątem zmieniających się założeń rynkowych, często kończy się katastrofą.
+A. Ręczne budowanie wykresów finansowych, które mają być czytelne dla zarządu, a jednocześnie elastyczne pod kątem zmieniających się założeń rynkowych, często kończy się katastrofą.
 
 <div style="border-left: 4px solid #84cc16; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Szybki ratunek:</strong> Zamiast panikować i przepisywać dane, wykorzystaj wbudowane wsparcie AI oraz inteligentne zakresy nazwane w arkuszach Google. Poniżej pokazuję, jak przekształcić statyczny, awaryjny arkusz w dynamiczny model sterowany suwakami i podpowiedziami sztucznej inteligencji.
@@ -26,7 +26,7 @@ Zanim przejdziemy do naprawy, spójrzmy prawdzie w oczy. Istnieją trzy główne
 
 1. Sztywne odwołania do komórek: Używanie bezwzględnych adresów typu
 
-**A1.** Z100 zamiast elastycznych zakresów nazwalnych, które psują się przy każdej dodanej kolumnie.
+A1. Z100 zamiast elastycznych zakresów nazwalnych, które psują się przy każdej dodanej kolumnie.
 
 2. Brak separacji danych surowych od warstwy prezentacji: Mieszanie surowych danych księgowych z obliczeniami wykresów w jednym arkuszu roboczym.
 
@@ -41,14 +41,14 @@ Wykorzystamy kombinację wbudowanych funkcji Google Sheets oraz asystenta AI (np
 ### Krok 1: Oczyszczenie struktury i naprawa formuł za pomocą promptu AI
 Jeśli Twoje formuły wyrzucają błędy, nie szukaj literówki w każdej komórce z osobn
 
-**A.** Zaznacz cały blok danych finansowych, skopiuj go i poproś asystenta AI o audyt kodu.
+A. Zaznacz cały blok danych finansowych, skopiuj go i poproś asystenta AI o audyt kodu.
 
 * Wklej ten prompt do okna czatu AI:
   "Przeanalizuj poniższy zestaw danych finansowych z Google Sheets. Wskaż, które formuły powodują błędy typu #ARG! lub #ADR!, i podaj mi gotowe, poprawione formuły w formacie zgodnym z polską wersją językową arkuszy (np. ŚREDNIA, JEŻELI)."
 
 Gdy otrzymasz poprawione formuły, wklej je do arkusz
 
-**A.** Upewnij się, że używasz średników (;) jako separatorów argumentów, co jest standardem w polskiej lokalizacji Google Sheets.
+A. Upewnij się, że używasz średników (;) jako separatorów argumentów, co jest standardem w polskiej lokalizacji Google Sheets.
 
 ### Krok 2: Dodanie interaktywnych elementów sterujących (Suwaki i Listy)
 Zamiast tworzyć dziesiątki osobnych wykresów dla różnych scenariuszy (optymistyczny, realistyczny, pesymistyczny), stwórz jeden wykres reagujący na zmienną.
@@ -77,7 +77,7 @@ Standardowe wykresy kolumnowe są nudne i mało czytelne dla zarządu. Użyjemy 
 <div style="border-left: 4px solid #84cc16; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Ważna uwag
 
-**A.** </strong> Nigdy nie wklejaj poufnych danych płacowych, imiennych list zarobków ani surowych danych bankowych do publicznych, darmowych narzędzi AI. Korzystaj wyłącznie z korporacyjnych wersji narzędzi (np. Google Workspace z aktywowaną ochroną danych Enterprise) lub anonimizuj wrażliwe kolumny (zastępując nazwy firm np. Klient A, Klient B) przed wysłaniem zapytania do modelu.
+A. </strong> Nigdy nie wklejaj poufnych danych płacowych, imiennych list zarobków ani surowych danych bankowych do publicznych, darmowych narzędzi AI. Korzystaj wyłącznie z korporacyjnych wersji narzędzi (np. Google Workspace z aktywowaną ochroną danych Enterprise) lub anonimizuj wrażliwe kolumny (zastępując nazwy firm np. Klient A, Klient B) przed wysłaniem zapytania do modelu.
 </div>
 
 ---

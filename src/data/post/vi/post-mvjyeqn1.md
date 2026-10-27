@@ -51,7 +51,7 @@ Bây giờ dữ liệu đã sạch sẽ trong một bảng thống nhất (Ví d
 Copy câu lệnh (Prompt) này dán vào AI:
 > "Tôi có bảng chấm công trên Excel. Cột B là giờ vào (định dạng giờ hh:mm), Cột C là giờ r
 
-**A.** Quy định giờ làm tiêu chuẩn từ 08:00 đến 17:00 (nghỉ trưa 1 tiếng từ 12:00 đến 13:00). Hãy viết cho tôi một công thức Excel duy nhất để tính số giờ làm thực tế, và một công thức tính số giờ tăng ca (tính từ sau 17:00, làm tròn theo block 30 phút). Không dùng macro phức tạp, chỉ dùng hàm cơ bản."
+A. Quy định giờ làm tiêu chuẩn từ 08:00 đến 17:00 (nghỉ trưa 1 tiếng từ 12:00 đến 13:00). Hãy viết cho tôi một công thức Excel duy nhất để tính số giờ làm thực tế, và một công thức tính số giờ tăng ca (tính từ sau 17:00, làm tròn theo block 30 phút). Không dùng macro phức tạp, chỉ dùng hàm cơ bản."
 
 AI sẽ trả về cho bạn bộ công thức gọn gàng. Bạn chỉ việc dán vào Excel của mình. Dưới đây là ví dụ công thức tính giờ làm chuẩn sau khi đã tối ưu:
 
@@ -70,7 +70,7 @@ Và công thức tính giờ tăng ca tự động làm tròn:
 Sau khi AI giúp bạn hoàn thiện cột tính toán, hãy chuyển toàn bộ giá trị công thức thành giá trị cứng (Values) để tránh việc file bị chạy nặng nề hoặc lỗi phát sinh vào phút chót:
 1. Bôi đen vùng dữ liệu giờ làm và tăng c
 
-**A.** 2. Nhấn `Ctrl + C`, sau đó nhấn chuột phải chọn [Dán giá trị (Paste as Values)].
+A. 2. Nhấn `Ctrl + C`, sau đó nhấn chuột phải chọn [Dán giá trị (Paste as Values)].
 
 3. Lưu file lại dưới định dạng chuẩn, dọn sạch hoàn toàn các đường dẫn file rác cũ trong [Edit Links].
 
@@ -86,16 +86,16 @@ Sau khi AI giúp bạn hoàn thiện cột tính toán, hãy chuyển toàn bộ
 
 ## Các câu hỏi thường gặp (FAQ)
 
-**Q1.** Tại sao khi mở file Excel cũ, bảng thông báo bảo mật External Links cứ lặp lại liên tục dù tôi đã bấm Ignore?
+Q1. Tại sao khi mở file Excel cũ, bảng thông báo bảo mật External Links cứ lặp lại liên tục dù tôi đã bấm Ignore?
 
-**A1.** Đó là vì trong file có chứa các Defined Names (Tên vùng dữ liệu) ẩn hoặc các công thức dạng Link rác trỏ tới file ngoài đã bị xó
+A1. Đó là vì trong file có chứa các Defined Names (Tên vùng dữ liệu) ẩn hoặc các công thức dạng Link rác trỏ tới file ngoài đã bị xó
 
-**A.** Để xử lý dứt điểm, bạn vào tab [Formulas] > [Name Manager], tìm và xóa toàn bộ các tên có chứa đường dẫn lạ dạng `[FileName.xlsx]Sheet1!Range`.
+A. Để xử lý dứt điểm, bạn vào tab [Formulas] > [Name Manager], tìm và xóa toàn bộ các tên có chứa đường dẫn lạ dạng `[FileName.xlsx]Sheet1!Range`.
 
-**Q2.** Tôi có thể dùng Power Query để tự động hóa việc tính lương hàng tháng luôn được không?
+Q2. Tôi có thể dùng Power Query để tự động hóa việc tính lương hàng tháng luôn được không?
 
-**A2.** Hoàn toàn được. Power Query cực kỳ mạnh mẽ trong việc hợp nhất dữ liệu nhiều phòng ban. Bạn chỉ cần thiết lập quy trình lọc dữ liệu một lần duy nhất, các tháng sau chỉ cần bấm [Refresh] là toàn bộ dữ liệu chấm công và giờ tăng ca sẽ tự động cập nhật.
+A2. Hoàn toàn được. Power Query cực kỳ mạnh mẽ trong việc hợp nhất dữ liệu nhiều phòng ban. Bạn chỉ cần thiết lập quy trình lọc dữ liệu một lần duy nhất, các tháng sau chỉ cần bấm [Refresh] là toàn bộ dữ liệu chấm công và giờ tăng ca sẽ tự động cập nhật.
 
-**Q3.** Làm thế nào để phân biệt rõ ràng giờ làm việc hành chính và giờ tăng ca ban đêm khi dùng AI viết hàm?
+Q3. Làm thế nào để phân biệt rõ ràng giờ làm việc hành chính và giờ tăng ca ban đêm khi dùng AI viết hàm?
 
-**A3.** Khi yêu cầu AI, bạn cần cung cấp rõ mốc thời gian cụ thể (Ví dụ: Tăng ca ban đêm tính từ 22:00 đến 06:00 sáng hôm sau kèm hệ số lương). AI sẽ tự động phân tách điều kiện `IF` hoặc hàm `IFS` để bóc tách chính xác từng khung giờ cho bạn mà không sợ nhầm lẫn.
+A3. Khi yêu cầu AI, bạn cần cung cấp rõ mốc thời gian cụ thể (Ví dụ: Tăng ca ban đêm tính từ 22:00 đến 06:00 sáng hôm sau kèm hệ số lương). AI sẽ tự động phân tách điều kiện `IF` hoặc hàm `IFS` để bóc tách chính xác từng khung giờ cho bạn mà không sợ nhầm lẫn.

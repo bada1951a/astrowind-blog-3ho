@@ -21,7 +21,7 @@ A solução definitiva que adotou-se na nossa rotina envolve combinar a capacida
 <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Diagnóstico de Engenhari
 
-**A.** </strong> O peso excessivo e os travamentos do Excel raramente são causados apenas pelo volume de dados. Na maioria das vezes, o problema reside em estruturas invisíveis corrompidas, excesso de estilos de células duplicados ou referências circulares ocultas.
+A. </strong> O peso excessivo e os travamentos do Excel raramente são causados apenas pelo volume de dados. Na maioria das vezes, o problema reside em estruturas invisíveis corrompidas, excesso de estilos de células duplicados ou referências circulares ocultas.
 </div>
 
 ---
@@ -34,7 +34,7 @@ Antes de aplicar a automação, vale entender os três principais vilões que de
 
 2. Fórmulas Voláteis em Excesso: Funções como `HOJE()`, `AGORA()`, `INDIRETO()` e `DESLOC()` forçam o Excel a recalcular a planilha inteira a cada mínima alteração feita em qualquer célul
 
-**A.** 3. Lixo de Intervalo (Used Range Corrupto): O Excel acha que seus dados vão até a linha 1.048.576 porque alguém acidentalmente apertou formatação na linha um milhão, gerando um processamento fantasma absurdo.
+A. 3. Lixo de Intervalo (Used Range Corrupto): O Excel acha que seus dados vão até a linha 1.048.576 porque alguém acidentalmente apertou formatação na linha um milhão, gerando um processamento fantasma absurdo.
 
 ---
 
@@ -65,7 +65,7 @@ Copie o código fornecido, cole no seu ambiente Python (ou Google Colab), faça 
 * Sempre faça backup: Antes de rodar qualquer script de modificação de arquivos, faça uma cópia de segurança da planilha original na pasta de arquivos recentes.
 * Menu Arquivo > Opções: No dia a dia, lembre-se de configurar o cálculo do Excel para "Automático, exceto tabelas de dados" para evitar recálculos desnecessários enquanto você edit
 
-**A.** ---
+A. ---
 
 ### Perguntas Frequentes (FAQ)
 
@@ -75,6 +75,6 @@ Zero conhecimento prévio em programação é necessário. O papel do usuário a
 2. Essa limpeza apaga minhas fórmulas ou formatações importantes?
 Não. Os scripts focam em limpar o "lixo" estrutural que fica invisível (estilos duplicados acumulados ao longo de anos de cópia e cola e metadados corrompidos). Suas fórmulas de negócio, formatações condicionais válidas e dados permanecem intactos.
 
-**Q.** Posso usar o Google Colab para processar arquivos da empresa?
+Q. Posso usar o Google Colab para processar arquivos da empresa?
 
-**A.** Sim, o Google Colab roda na nuvem e é seguro para a grande maioria dos fluxos corporativos rotineiros. No entanto, se a sua empresa possui políticas rígidas de compliance contra ferramentas de nuvem externas, você pode rodar o mesmo código localmente instalando o Python e o pacote `openpyxl` via prompt de comando (`pip install openpyxl`).
+A. Sim, o Google Colab roda na nuvem e é seguro para a grande maioria dos fluxos corporativos rotineiros. No entanto, se a sua empresa possui políticas rígidas de compliance contra ferramentas de nuvem externas, você pode rodar o mesmo código localmente instalando o Python e o pacote `openpyxl` via prompt de comando (`pip install openpyxl`).

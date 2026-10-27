@@ -12,7 +12,7 @@ theme: "Warm Coffee Latte"
 
 Eram exatas 17h45 em um escritório corporativo na região da Avenida Paulista, em São Paulo. O ar-condicionado já tinha desligado, a sala de reuniões estava reservada para a diretoria em 15 minutos, e o meu relatório de fechamento de mês simplesmente parecia um emaranhado de números sem vid
 
-**A.** A diretora financeira odiava planilhas estáticas e tabelas complexas que exigiam horas de explicação. Eu precisava transformar projeções de fluxo de caixa em gráficos interativos e atraentes na hora, mas toda tentativa manual de formatar o painel deixava o visual poluído ou quebrava as fórmulas de soma condicional. 
+A. A diretora financeira odiava planilhas estáticas e tabelas complexas que exigiam horas de explicação. Eu precisava transformar projeções de fluxo de caixa em gráficos interativos e atraentes na hora, mas toda tentativa manual de formatar o painel deixava o visual poluído ou quebrava as fórmulas de soma condicional. 
 
 Foi bem ali, com o cheiro do café frio na xícara e o Slack apitando sem parar, que decidi parar de lutar contra a interface tradicional e usar o assistente de IA embutido no Google Planilhas para salvar a minha noite.
 
@@ -21,7 +21,7 @@ Foi bem ali, com o cheiro do café frio na xícara e o Slack apitando sem parar,
 <div style="border-left: 4px solid #78350f; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>O Alerta do Especialist
 
-**A.** </strong> O maior erro no fechamento mensal é tentar criar designs complexos do zero sob pressão. Deixe que a inteligência artificial analise a estrutura dos seus dados financeiros primeiro para sugerir o tipo de visualização ideal.
+A. </strong> O maior erro no fechamento mensal é tentar criar designs complexos do zero sob pressão. Deixe que a inteligência artificial analise a estrutura dos seus dados financeiros primeiro para sugerir o tipo de visualização ideal.
 </div>
 
 ## Por que seus relatórios financeiros tradicionais falham na hora da pressão?
@@ -30,13 +30,13 @@ Antes de aplicar a automação, vale a pena entender por que criar gráficos fin
 
 1. Estrutura de dados despadronizad
 
-**A.** Linhas misturando centros de custo, datas no formato incorreto e colunas sem cabeçalhos claros impedem que qualquer motor de IA compreenda o contexto financeiro.
+A. Linhas misturando centros de custo, datas no formato incorreto e colunas sem cabeçalhos claros impedem que qualquer motor de IA compreenda o contexto financeiro.
 
 2. Falta de interatividade: Gráficos estáticos comuns não permitem que a diretoria filtre cenários de receita versus despesa com um simples clique durante a reunião executiv
 
-**A.** 3. Excesso de ruído visual: Tentar colocar dezenas de métricas em um único gráfico padrão do Excel ou do Planilhas gera poluição visual, fazendo com que a informação mais importante se perc
+A. 3. Excesso de ruído visual: Tentar colocar dezenas de métricas em um único gráfico padrão do Excel ou do Planilhas gera poluição visual, fazendo com que a informação mais importante se perc
 
-**A.** ---
+A. ---
 
 ## Passo a Passo: Criando Gráficos Interativos com Sugestões de IA
 
@@ -46,7 +46,7 @@ Vamos direto ao método prático para montar um painel financeiro dinâmico no G
 Certifique-se de que sua tabela siga um padrão limpo. Por exemplo:
 - Coluna
 
-**A.** Data (formato DD/MM/AAAA)
+A. Data (formato DD/MM/AAAA)
 - Coluna B: Centro de Custo
 - Coluna C: Categoria (Receita, Despesa Fixa, Despesa Variável)
 - Coluna D: Valor (utilize números puros, ex: 1500.00, sem símbolos monetários manuais que travam as fórmulas).
@@ -63,7 +63,7 @@ A IA geralmente sugere gráficos de rosca para distribuição de despesas ou gr�
 - Para adicionar interatividade real, vá em Inserir > Segmentação de dados (Slicer).
 - Conecte a segmentação de dados à sua coluna de "Centro de Custo" ou "Mês". Assim, quando a diretoria clicar em um departamento específico durante a apresentação, o gráfico inteiro se atualizará instantaneamente na tel
 
-**A.** <div style="border-left: 4px solid #78350f; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
+A. <div style="border-left: 4px solid #78350f; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Dica de Ouro:</strong> Utilize formatação condicional baseada em regras simples (por exemplo, valores acima da média em tons suaves de café/marrom) para guiar o olhar do leitor diretamente para as faturas que estouraram o orçamento.
 </div>
 
@@ -71,18 +71,18 @@ A IA geralmente sugere gráficos de rosca para distribuição de despesas ou gr�
 
 ## Perguntas Frequentes (FAQ)
 
-**Q.** Posso usar as sugestões de IA do Google Planilhas com dados financeiros confidenciais da empresa?
+Q. Posso usar as sugestões de IA do Google Planilhas com dados financeiros confidenciais da empresa?
 
-**A.** Sim, desde que a sua conta corporativa do Google Workspace siga as diretrizes de privacidade e conformidade de dados estabelecidas pelo departamento de TI da sua empres
+A. Sim, desde que a sua conta corporativa do Google Workspace siga as diretrizes de privacidade e conformidade de dados estabelecidas pelo departamento de TI da sua empres
 
-**A.** Os dados inseridos no painel Explorar não são utilizados para treinar modelos públicos de IA de forma abert
+A. Os dados inseridos no painel Explorar não são utilizados para treinar modelos públicos de IA de forma abert
 
-**A.** 2. O que fazer se a IA sugerir um gráfico incorreto para o meu fluxo de caixa?
+A. 2. O que fazer se a IA sugerir um gráfico incorreto para o meu fluxo de caixa?
 A IA se baseia em padrões estatísticos dos seus cabeçalhos. Se o gráfico sugerido não fizer sentido, renomeie os cabeçalhos das colunas para termos mais explícitos (como "Receita Líquida" em vez de apenas "Total") e clique em atualizar no painel de sugestões.
 
 3. Como garantir que os gráficos se atualizem sozinhos quando novos dados forem inseridos no mês seguinte?
 Em vez de selecionar um intervalo fechado (ex:
 
-**A1.** D50), selecione a coluna inteira (ex:
+A1. D50), selecione a coluna inteira (ex:
 
-**A.** D) ao criar o gráfico ou utilize intervalos nomeados dinâmicos. Dessa forma, assim que o time financeiro colar os dados novos, o painel interativo refletirá as mudanças automaticamente.
+A. D) ao criar o gráfico ou utilize intervalos nomeados dinâmicos. Dessa forma, assim que o time financeiro colar os dados novos, o painel interativo refletirá as mudanças automaticamente.

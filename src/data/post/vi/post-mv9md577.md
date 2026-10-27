@@ -14,7 +14,7 @@ theme: "Graphite Technical Paper"
 
 Cơn ác mộng thủ công này chắc chắn quá quen thuộc với bất kỳ ai làm nghề tổng hợp số liệu tại các đô thị lớn như Hà Nội hay TP.HCM, nơi áp lực thời gian và tiến độ luôn đè nặng trước mỗi dịp chốt sổ cuối tháng. Nhưng đừng tiếp tục lãng phí tuổi trẻ vào những việc lặp đi lặp lại như vậy nữ
 
-**A.** Hôm nay, tôi sẽ hướng dẫn bạn cách dùng Power Query trong Excel - một "vũ khí bí mật" có sẵn nhưng ít ai tận dụng hết - để tự động hóa toàn bộ quy trình gom nhóm, làm sạch và tổng hợp dữ liệu doanh thu chỉ với một cú nhấp chuột Refresh.
+A. Hôm nay, tôi sẽ hướng dẫn bạn cách dùng Power Query trong Excel - một "vũ khí bí mật" có sẵn nhưng ít ai tận dụng hết - để tự động hóa toàn bộ quy trình gom nhóm, làm sạch và tổng hợp dữ liệu doanh thu chỉ với một cú nhấp chuột Refresh.
 
 ![AI Productivity & Workflow Automation](https://picsum.photos/seed/office300/1000/550)
 
@@ -28,13 +28,13 @@ Cơn ác mộng thủ công này chắc chắn quá quen thuộc với bất k�
 
 Trước khi nhảy vào cách sửa, chúng ta hãy điểm qua 3 lý do chính khiến việc gom số liệu hàng tháng của bạn luôn biến thành thảm họ
 
-**A.** 1. Dữ liệu đầu vào phân mảnh và không đồng nhất: Mỗi chi nhánh gửi lên một file Excel với cấu trúc tùy ý (chi nhánh A dùng cột "Ma_SP", chi nhánh B lại dùng "Mã sản phẩm", chi nhánh C gộp chung Mã và Tên vào một cột).
+A. 1. Dữ liệu đầu vào phân mảnh và không đồng nhất: Mỗi chi nhánh gửi lên một file Excel với cấu trúc tùy ý (chi nhánh A dùng cột "Ma_SP", chi nhánh B lại dùng "Mã sản phẩm", chi nhánh C gộp chung Mã và Tên vào một cột).
 
 2. Sai sót do thao tác thủ công (Human Error): Khi copy hàng nghìn dòng dữ liệu từ nhiều file vào một file tổng, việc lệch dòng, sót dữ liệu hay lỗi định dạng ngày tháng (MM/DD/YYYY thành DD/MM/YYYY) rất dễ xảy ra, dẫn đến sai lệch kết quả tài chính.
 
 3. Quy trình "Làm lại từ đầu" mỗi tháng: Tháng này bạn mất 3 tiếng để xử lý xong, thì sang tháng sau, với 12 file mới tương tự, bạn lại phải lặp lại nguyên vẹn từng bước copy-paste đó một cách vô nghĩ
 
-**A.** ---
+A. ---
 
 ### Hướng dẫn từng bước: Thiết lập quy trình tự động hóa với Power Query
 

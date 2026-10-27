@@ -29,9 +29,9 @@ Antes de aplicar a solução definitiva com o Gemini, vale entender por que o pr
 
 1. Inconsistência de Digitação: O cliente "João Silva" cadastrado como "joao.silva@empres
 
-**A.** com" e "JOAO SILVA" com o e-mail "joao.silva@empres
+A. com" e "JOAO SILVA" com o e-mail "joao.silva@empres
 
-**A.** com.br" não é reconhecido como duplicata exata pela ferramenta padrão.
+A. com.br" não é reconhecido como duplicata exata pela ferramenta padrão.
 
 2. Erros de Formatação de Dados: Espaços extras no final das células (caracteres invisíveis) que burlam qualquer fórmula de busca ou validação comum.
 
@@ -49,7 +49,7 @@ Antes de remover as duplicadas, precisamos nivelar os dados. Abra sua planilha n
 Digite este comando (prompt) no chat do Gemini:
 > "Preciso de uma fórmula do Google Sheets para a célula B2 que remova todos os espaços em branco extras, transforme o texto em letras minúsculas e remova possíveis pontos inválidos no domínio do e-mail da célula
 
-**A2.** "
+A2. "
 
 O Gemini vai te devolver algo como:
 `=LOWER(TRIM(SUBSTITUTE(A2; " "; "")))`
@@ -63,20 +63,20 @@ Vá no menu superior do Google Sheets e clique em Extensões > Apps Script. Apag
 
 Cole o script gerado, salve e clique em Executar. Em segundos, sua base estará limpa e enxut
 
-**A.** #### Passo 3: Validação Final e Relatório de Impacto
+A. #### Passo 3: Validação Final e Relatório de Impacto
 Com a base limpa, crie uma tabela dinâmica rápida para garantir que nenhum dado crítico foi perdido durante a varredura automátic
 
-**A.** ---
+A. ---
 
 ### Aviso do Especialist
 
-**A.** Cuidados com Dados Sensíveis
+A. Cuidados com Dados Sensíveis
 
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.05); border-radius: 4px; color: #111827;">
 <strong>ALERTA DE SEGURANÇA DE DADOS (LGPD):</strong><br>
 Nunca envie dados reais de clientes (como CPFs completos, nomes reais e telefones) diretamente para versões públicas de ferramentas de IA sem anonimização prévi
 
-**A.** Substitua dados sensíveis por códigos fictícios (ex: Cliente_001) antes de gerar scripts ou fórmulas complexas.
+A. Substitua dados sensíveis por códigos fictícios (ex: Cliente_001) antes de gerar scripts ou fórmulas complexas.
 </div>
 
 ---
@@ -86,9 +86,9 @@ Nunca envie dados reais de clientes (como CPFs completos, nomes reais e telefone
 1. O Gemini substitui totalmente a função nativa "Remover Duplicadas" do Google Sheets?
 Não exatamente. A função nativa é excelente para duplicatas exatas e rápidas. O Gemini entra em cena quando os dados estão sujos, mal formatados ou exigem regras complexas de limpeza que o filtro padrão não consegue identificar.
 
-**Q.** Posso usar essa mesma automação no Microsoft Excel?
+Q. Posso usar essa mesma automação no Microsoft Excel?
 
-**A.** Sim! O conceito do prompt é idêntico. Basta pedir para o Gemini adaptar o código gerado para o ambiente VBA do Excel em vez de Google Apps Script.
+A. Sim! O conceito do prompt é idêntico. Basta pedir para o Gemini adaptar o código gerado para o ambiente VBA do Excel em vez de Google Apps Script.
 
 3. Preciso saber programar em JavaScript para usar o Apps Script gerado pelo Gemini?
 Nenhum conhecimento prévio de programação é necessário. O papel do Gemini é justamente traduzir a sua necessidade de negócio em um código pronto para copiar, colar e executar.

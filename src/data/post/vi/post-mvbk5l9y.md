@@ -12,7 +12,7 @@ theme: "Retro Monokai"
 
 Đồng hồ góc phải màn hình máy tính nhảy tanh tách về mốc 17:15 chiều. Sếp vừa tạt qua bàn vứt một câu xanh rờn: "Em ơi, cập nhật lại toàn bộ báo cáo doanh thu quý bằng tỷ giá nóng hôm nay nhé, hội đồng quản trị chuẩn bị xem đấy!". Nhìn vào file Google Sheets gồm hàng chục dòng quy đổi từ USD, EUR, JPY sang VND mà sếp gửi, tay tôi bắt đầu lạnh toát. Mọi lần, cứ đến hạn nộp báo cáo số liệu trước giờ tan ca là cả phòng lại hì hục lên Google tra từng ngoại tệ rồi gõ thủ công vào bảng tính. Đã thế, sếp lại vừa gí thêm yêu cầu: tuyệt đối không mua mấy cái plugin trả phí đắt đỏ vì chính sách bảo mật công ty cấm tuyệt đối việc cấp quyền tài khoản bên thứ b
 
-**A.** Quay cuồng trong đống hỗn độn đó, tôi tự nhủ phải tìm ra cách dứt điểm cảnh tra cứu thủ công này ngay trong tối nay. Và đây là giải pháp bảng tỷ giá tự động trên Google Sheets mà tôi đã đúc rút được, chạy mượt mà, chính xác và quan trọng nhất là hoàn toàn miễn phí.
+A. Quay cuồng trong đống hỗn độn đó, tôi tự nhủ phải tìm ra cách dứt điểm cảnh tra cứu thủ công này ngay trong tối nay. Và đây là giải pháp bảng tỷ giá tự động trên Google Sheets mà tôi đã đúc rút được, chạy mượt mà, chính xác và quan trọng nhất là hoàn toàn miễn phí.
 
 ![AI Productivity & Workflow Automation](https://picsum.photos/seed/office266/1000/550)
 
@@ -42,7 +42,7 @@ May mắn là Google Sheets có sẵn một thứ vũ khí cực kỳ mạnh m�
 Mở file Google Sheets báo cáo của bạn lên. Tạo một tab mới hoặc một khu vực riêng đặt tên là `Tham_So_Ty_Gia`. Lập sẵn các cột:
 - Cột
 
-**A.** Mã tiền tệ (Ví dụ: USD, EUR, JPY, SGD)
+A. Mã tiền tệ (Ví dụ: USD, EUR, JPY, SGD)
 - Cột B: Tên loại tiền
 - Cột C: Tỷ giá quy đổi tự động
 
@@ -64,7 +64,7 @@ Ví dụ, bạn muốn đổi 5000 USD ở cột Doanh Thu (Ô B5) sang VND, cô
 
 `=B5 * VLOOKUP("USD", Tham_So_Ty_Gia!
 
-**A2.** C10, 3, FALSE)`
+A2. C10, 3, FALSE)`
 
 Cách làm này giúp bạn chỉ cần update tỷ giá ở một nơi duy nhất, toàn bộ hàng trăm dòng báo cáo bên dưới sẽ tự động nhảy số theo chuẩn xác từng giây.
 

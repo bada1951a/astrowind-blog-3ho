@@ -50,13 +50,13 @@ Dữ liệu thô: [Dán đoạn văn bản quét OCR vào đây]
 ### Bước 3: Đưa dữ liệu vào Excel và kiểm tra nhanh
 * Copy bảng kết quả vừa được AI tạo r
 
-**A.** * Mở file Excel của bạn, chọn ô trống đầu tiên (ví dụ ô A1) và nhấn `Ctrl + V` để dán. Dữ liệu sẽ tự động phân tách vào các cột rất ngăn nắp.
+A. * Mở file Excel của bạn, chọn ô trống đầu tiên (ví dụ ô A1) và nhấn `Ctrl + V` để dán. Dữ liệu sẽ tự động phân tách vào các cột rất ngăn nắp.
 * Sử dụng bộ lọc (Filter) trong Excel hoặc dùng tính năng Dữ liệu > Flash Fill để chuẩn hóa lại các định dạng ngày tháng hoặc số tiền nếu cần.
 
 <div style="border-left: 4px solid #1d4ed8; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Mẹo nhỏ từ chuyên gi
 
-**A.** </strong> Nếu hóa đơn của bạn có quá nhiều dòng chi tiết, hãy yêu cầu AI xử lý từng phần (batching) để tránh việc AI bị quá tải và bỏ sót dữ liệu ở cuối bảng.
+A. </strong> Nếu hóa đơn của bạn có quá nhiều dòng chi tiết, hãy yêu cầu AI xử lý từng phần (batching) để tránh việc AI bị quá tải và bỏ sót dữ liệu ở cuối bảng.
 </div>
 
 ---

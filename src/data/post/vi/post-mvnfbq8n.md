@@ -12,7 +12,7 @@ theme: "Warm Coffee Latte"
 
 Chieu thu Sau tai mot toa nha van phong tren duong Le Duan, TP.HCM, khong khi cang thang bao trum ca phong ban. Chi con chua day hai tieng nua la den thoi han nop ban du thao nghien cuu quy dinh phap ly va luat tuan thu moi dai toi 150 trang cho lanh dao cap cao. Giua luc nuoc soi lua bong do, dong nguyen cua toi tai ban ben canh bong hoang mang keu len rang co da vo tinh quen mat mat khau bao ve cua trang tinh Excel chua toan bo so lieu tai chinh trong ban thiet ke. Toan bo cac o cong thuc va vung du lieu deu bi khoa chat, khong the nao chinh sua duoc bat ky mot chi tiet nao nu
 
-**A.** <div style="border-left: 4px solid #78350f; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
+A. <div style="border-left: 4px solid #78350f; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Tinh huống khẩn cấp:</strong> Khong chi dung lai o viec loay hoay go lai mat khau, ap lực thoi gian doc hieu chong tai lieu phap ly day 150 trang kem theo su co khoa du lieu khien ca nhom gan nhu kiet suc. Day chinh la luc chung ta can su tro giup cua cong cu AI thuc chien nhu Claude 3.5 Sonnet de xoay chuyen tinh the.
 </div>
 
@@ -23,9 +23,9 @@ Chieu thu Sau tai mot toa nha van phong tren duong Le Duan, TP.HCM, khong khi ca
 Truoc khi tim den giai phap tu dong hoa, chung ta can hieu ro vi sao nhung tinh trang nay lai thuong xuyen xay ra trong moi truong van phong hien dai:
 
 * **Qua tai thong tin va thieu cong cu ho tro:** Viec doc thu cong hang tram trang tai lieu phap ly thuong dan den viec bo sot cac dieu khoan cot loi, gay cham tre trong qua trinh tong hop so lieu cho ban thao.
-* **Quan ly mat khau kem hieu qu
+* Quan ly mat khau kem hieu qu
 
-**A. Dat mat khau phuc tap cho cac bang tinh Excel quan trong nhung lai khong co co so du phong hoac luu tru an toan, dan den viec mat quyen truy cap vao nhung thoi diem quyet dinh.
+A. Dat mat khau phuc tap cho cac bang tinh Excel quan trong nhung lai khong co co so du phong hoac luu tru an toan, dan den viec mat quyen truy cap vao nhung thoi diem quyet dinh.
 * **Phu thuoc vao quy trinh thu cong:** Nhan vien thuong ton qua nhieu thoi gian cho viec doc, chieu, va kiem tra loi thay vi tan dung cac mo hinh ngon ngu lon de xu ly luong du lieu lon trong thoi gian ngan.
 
 ## 3. Huong dan tung buoc giai quyet va toi uu hoa quy trinh
@@ -56,7 +56,7 @@ Trong truong hop file Excel bi khoa mat khau ma khong the mo duoc bang cach thon
 
 * Nhan **Alt + F11** trong Excel de mo giao dien VB
 
-**A.** * Chon **Insert > Module** va dan doan ma xoa mat khau tam thoi cho sheet hien tai:
+**A. * Chon **Insert > Module va dan doan ma xoa mat khau tam thoi cho sheet hien tai:
 
 ```vba
 Sub UnprotectSheet()
@@ -81,12 +81,12 @@ Sub UnprotectSheet()
 End Sub
 ```
 
-* Nhan **F5** de chay doan ma va hoan tat viec mo khoa vung du lieu dang bi chan.
+* Nhan F5 de chay doan ma va hoan tat viec mo khoa vung du lieu dang bi chan.
 
 <div style="border-left: 4px solid #78350f; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Lưu ý quan trọng từ chuyên gi
 
-**A.** </strong> Luôn sao lưu (backup) một bản file gốc trước khi tiến hành chạy bất kỳ đoạn mã VBA nào trên hệ thống bảng tính của công ty để tránh rủi ro mất dữ liệu không mong muốn.
+A. </strong> Luôn sao lưu (backup) một bản file gốc trước khi tiến hành chạy bất kỳ đoạn mã VBA nào trên hệ thống bảng tính của công ty để tránh rủi ro mất dữ liệu không mong muốn.
 </div>
 
 ## 4. Loi khuyen va canh bao tu chuyen gia
@@ -95,18 +95,18 @@ Khi ap dung cac giai phap tu dong hoa va AI vao cong viec hang ngay tai van phon
 
 * **Bao mat du lieu nhay cảm:** Khong tai len cac tai lieu chua thong tin mat cua khach hang hoac du lieu tai chinh noi bo qua cac kenh AI cong khai neu chua co su cho phep tu bo phan phap ly hoac bao mat thong tin (IT Security).
 * **Kiem tra cheo thong tin:** Du Claude 3.5 Sonnet co toc do xu ly cuc ky an tuong, ban van nen doi chieu lai cac dieu khoan phap ly quan trong voi van ban goc de dam bảo tinh chinh xac tuyet doi truoc khi trinh lanh dao.
-* **Xay dung thu vien prompt chuan:**Luu tru lai cac cau lenh hieu qua nhat vao mot file ghi chu chung de ca phong ban co the tai su dung trong cac du an tiep theo.
+* Xay dung thu vien prompt chuan:Luu tru lai cac cau lenh hieu qua nhat vao mot file ghi chu chung de ca phong ban co the tai su dung trong cac du an tiep theo.
 
 ## 5. Cau hoi thuong gap (FAQ)
 
-**Q.** Claude 3.5 Sonnet co doc duoc truc tiep file PDF tieng Viet co dau khong?
+Q. Claude 3.5 Sonnet co doc duoc truc tiep file PDF tieng Viet co dau khong?
 
-**A.** Co, Claude 3.5 Sonnet hoat dong rat tot voi cac van ban tieng Viet, giup nhan dien va tom tat chinh xac noi dung phap ly ma khong bi loi font chu.
+A. Co, Claude 3.5 Sonnet hoat dong rat tot voi cac van ban tieng Viet, giup nhan dien va tom tat chinh xac noi dung phap ly ma khong bi loi font chu.
 
-**Q.** Doan ma VBA mo khoa sheet Excel co lam mat du lieu trong bang tinh cua toi khong?
+Q. Doan ma VBA mo khoa sheet Excel co lam mat du lieu trong bang tinh cua toi khong?
 
-**A.** Khong, doan ma nay chi co chuc nang go bo trang thai bao ve (protect) cua trang tinh chu khong xoa hay chinh sua bat ky gia tri o du lieu nao san co.
+A. Khong, doan ma nay chi co chuc nang go bo trang thai bao ve (protect) cua trang tinh chu khong xoa hay chinh sua bat ky gia tri o du lieu nao san co.
 
-**Q.** Toi co the su dung phien ban mien phi cua Claude de xu ly tai lieu 150 trang nay khong?
+Q. Toi co the su dung phien ban mien phi cua Claude de xu ly tai lieu 150 trang nay khong?
 
-**A.** Phien ban mien phi co gioi han ve kich thuoc va so luong tai lieu tai len trong mot khung thoi gian nhat dinh. Doi voi cac tai lieu phap ly lon va doi hoi toc do xu ly cao, ban nen su dung cac goi nang cap de dat hieu suat toi ưu.
+A. Phien ban mien phi co gioi han ve kich thuoc va so luong tai lieu tai len trong mot khung thoi gian nhat dinh. Doi voi cac tai lieu phap ly lon va doi hoi toc do xu ly cao, ban nen su dung cac goi nang cap de dat hieu suat toi ưu.

@@ -191,14 +191,14 @@ function sanitizeMarkdownFormatting(content, langCode) {
   cleaned = cleaned.replace(/^(## 1\.[^\n]+)\n+(\s*1\.\s+[^\n]+)\n+/m, '$1\n\n');
 
   // =========================================================================
-  // 🛡️ [GUKOSORA 1] Gukuraho ** zose ziri mu mirongo y'imitwe (H1~H6)
+  // 🛡️ [핵심 보정 1] 헤딩(#) 줄 내부의 모든 ** 제거 (제목 깨짐 원천 차단)
   // =========================================================================
   cleaned = cleaned.replace(/^(#{1,6}\s+[^\n]+)$/gm, (match) => {
     return match.replace(/\*\*/g, '');
   });
 
   // =========================================================================
-  // 🛡️ [GUKOSORA 2] Gukuraho imyanya y'ubusa muri ** ituma markdown ipfa
+  // 🛡️ [핵심 보정 2] 볼드(**) 기호 안쪽 공백 압축 (별표 노출 버그 복구)
   // =========================================================================
   cleaned = cleaned.replace(/\*\*\s+([^*]+?)\s+\*\*/g, '**$1**');
   cleaned = cleaned.replace(/\*\*\s+([^*]+?)\*\*/g, '**$1**');
@@ -209,10 +209,23 @@ function sanitizeMarkdownFormatting(content, langCode) {
                     .replace(/con la energi\s*\n\s*a:/gi, 'con la energía:')
                     .replace(/preventiv\s*\n\s*a:/gi, 'preventiva:');
 
-  // 7) Q&A 줄바꿈 및 볼드 보호: Q와 A는 무조건 빈 줄 2개로 분리
-  cleaned = cleaned.replace(/([^\n])\s*(\*\*?[QA][0-9]*\s*[:.]\*\*?)/gi, '$1\n\n$2');
-  cleaned = cleaned.replace(/([^\n])\s+([QA][0-9]*\s*[:.])/g, '$1\n\n$2');
-  cleaned = cleaned.replace(/([.!?])\s*(\*\*?[QA][0-9]*\s*[:.]\*\*?)/gi, '$1\n\n$2');
+  // =========================================================================
+  // 🛡️ [Q&A 전면 재정비] FAQ 볼드 파싱 풀림 및 접두사 규격화
+  // =========================================================================
+  // Q/A 주변에 붙어있는 별표를 먼저 떼어내어 평문으로 초기화
+  cleaned = cleaned.replace(/\*{1,4}\s*([QA][0-9]*)\s*[:.]\s*\*{1,4}/gi, '$1.');
+  cleaned = cleaned.replace(/([QA][0-9]*)\s*[:.]/gi, (match, p1) => `${p1.toUpperCase()}.`);
+
+  // Q/A 앞머리 빈 줄 2개 보장
+  cleaned = cleaned.replace(/([^\n])\s*\n*\s*(Q[0-9]*\.)/gi, '$1\n\n$2');
+  cleaned = cleaned.replace(/([^\n])\s*\n*\s*(A[0-9]*\.)/gi, '$1\n\n$2');
+
+  // 올바른 볼드로 단 1회 감싸기 (**Q1.**, **A1.**)
+  cleaned = cleaned.replace(/^(Q[0-9]*\.)\s*(.*)$/gm, '**$1** $2');
+  cleaned = cleaned.replace(/^(A[0-9]*\.)\s*(.*)$/gm, '**$1** $2');
+
+  // 빈 별표 찌꺼기 제거
+  cleaned = cleaned.replace(/\*\*\s*\*\*/g, '');
 
   // 8) 물음표 뒤 띄어쓰기 및 과도한 개행 압축
   cleaned = cleaned.replace(/\?([A-Za-z\u00C0-\u024F\u1EA0-\u1EF9가-힣])/g, '? $1');

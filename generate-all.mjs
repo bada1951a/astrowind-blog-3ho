@@ -387,7 +387,7 @@ theme: "${selectedTheme.name}"
       }
 
       // 본문 중간 이미지 배치 (2번 섹션 직전)
-      const safeAlt = currentTopic.replace(/[\[\]()"']/g, '').trim();
+      const safeAlt = currentTopic.replace(/[^\p{L}\p{N}\s.,:-]/gu, '').trim();
       const middleImageMarkdown = `\n\n![${safeAlt} AI Automation Guide](${bodyUrl})\n\n`;
 
       if (body.includes('## 2.')) {

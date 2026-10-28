@@ -2,8 +2,8 @@ name: Auto Multi-Language Blog Publishing Pipeline (Unit 3)
 
 on:
   schedule:
-    # 매일 한국 시각 오전 02:43 (UTC 17:43)
-    - cron: '43 17 * * *'
+    # 매일 한국 시각 오후 07:20 (UTC 10:20)
+    - cron: '20 10 * * *'
   workflow_dispatch: # 수동 즉시 실행 지원
 
 permissions:

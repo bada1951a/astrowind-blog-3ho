@@ -1,0 +1,14 @@
+import fs from 'node:fs';
+if (!process.env.OPENAI_API_KEY) throw new Error('OPENAI_API_KEY is missing in GitHub Actions');
+const prompt = "Create a Korean informational article for the topic \"구글 스프레드시트 IMPORTRANGE 권한 오류 해결 방법\" specifically about workflow automation troubleshooting with precise spreadsheet instructions. The article must have exactly 5 numbered topic-specific H2 headings (## 1. through ## 5.). Section 5 contains exactly three FAQ pairs as separate paragraphs starting with **Q1.** ... **A1.**, **Q2.** ... **A2.**, **Q3.** ... **A3.**. Aim for 2400-2600 Korean characters excluding spaces. Include actionable, technically cautious instructions. No fabricated experiences or expertise. Start with valid YAML frontmatter including title, description, publishDate: 2026-10-28, image: https://picsum.photos/seed/review/1200/675.jpg, category: \"automation\", tags as an array of three native-language tags, and theme: \"Modern Minimalist Slate\". Output Markdown only without outer code fences.";
+const response = await fetch('https://api.openai.com/v1/responses', {method:'POST',headers:{Authorization:'Bearer '+process.env.OPENAI_API_KEY,'Content-Type':'application/json'},body:JSON.stringify({model:'gpt-6-luna',input:prompt,max_output_tokens:6500})});
+const json=await response.json();
+if(!response.ok)throw new Error('HTTP '+response.status+' '+JSON.stringify(json.error||{}).slice(0,300));
+const article=(json.output||[]).flatMap(o=>o.content||[]).filter(x=>x.type==='output_text').map(x=>x.text).join('\n');
+if(!article.trim())throw new Error('Empty model output: '+json.status);
+fs.mkdirSync('tmp-quality-review',{recursive:true});
+fs.writeFileSync('tmp-quality-review/sample-ko.md',article);
+const body=article.replace(/^---[\s\S]*?---\s*/,'');
+const result={model:'gpt-6-luna',responseStatus:json.status,characters:[...body.replace(/\s/g,'')].length,h2Count:(body.match(/^##\s+/gm)||[]).length,questionExamples:body.split('\n').filter(x=>/Q[1-3]\./.test(x)).map(x=>x.slice(0,70)),faqAnswers:(body.match(/A[1-3]\./g)||[]).length,tokens:json.usage?.total_tokens,published:false};
+console.log(JSON.stringify(result));
+if(result.h2Count!==5) throw new Error('Five H2 headings required; sample saved for inspection');

@@ -1,0 +1,29 @@
+name: One-Time 3ho Luna Editorial Sample (No Publish)
+on:
+  push:
+    branches:
+      - review/gpt6-luna-3ho-no-publish
+    paths:
+      - .one-time-3ho-luna-sample-trigger
+permissions:
+  contents: read
+jobs:
+  sample:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Generate exactly one Korean editorial sample
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: node scripts/one-time-luna-editorial-sample.mjs
+      - name: Preserve quality sample
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: editorial-sample-3ho
+          path: tmp-quality-review/sample-ko.md
+          if-no-files-found: ignore
+          retention-days: 1

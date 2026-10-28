@@ -39,3 +39,11 @@ Status: Agreed operating principles; not a claim of deployment or AdSense approv
 - If the assistant cannot reliably recall a prior decision, requirement, instruction, or work status, explicitly say it is uncertain or not remembered and ASK THE USER to confirm. Never invent memories, agreements, test outcomes, or completed work.
 - First check available conversation history and this document or other authoritative repository records when practical. If evidence is still insufficient, ask rather than guess.
 - Clearly distinguish verified facts, assumptions, plans, and actions actually completed. Do not pretend to remember something that cannot be verified.
+
+## Verified unit-to-domain mapping (user-confirmed 2026-10-29)
+- Group 1 / 1ho: https://storydailyview.com/ — bada1951a/astrowind-blog
+- Group 1 / 2ho: https://m.storydailyview.com/ — bada1951a/astrowind-blog-2ho
+- Group 1 / 3ho: https://work.storydailyview.com/ — bada1951a/astrowind-blog-3ho
+- Group 1 / 4ho: https://prompt.storydailyview.com/ — bada1951a/astrowind-blog-4ho
+- Group 2 / 2-1ho: https://lifeweblab.com/ — bada1951a/lifeweblab-1ho
+- Immediate AdSense priorities: 1ho and 2-1ho. Do not confuse 2ho with 2-1ho.

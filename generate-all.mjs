@@ -473,15 +473,15 @@ theme: "${selectedTheme.name}"
 
     let text = normalizeGeneratedResponse(await fetchWithRetry(prompt));
     let validationErrors = validateGeneratedPost(text, lang.code);
-    if (validationErrors.length > 0) {
-      console.warn(`⚠️ ${lang.code} 검수 실패(${validationErrors.join(', ')}). 해당 언어만 1회 보정 요청합니다.`);
-      const repairPrompt = `You are repairing one previously generated ${lang.name} article for the same topic: "${currentTopic}".\n\nThe article failed these exact checks: ${validationErrors.join(', ')}.\nReturn the complete corrected Markdown article, including its original frontmatter. Preserve its topic, useful explanations, factual meaning, and existing wording wherever possible. Correct only the listed validation failures. If H2 sections are missing, use these exact localized headings: ${[i18n.s1, i18n.s2, i18n.s3, i18n.s4, i18n.s5].map((heading) => '## ' + heading).join(' | ')}. Reorganize only existing relevant material; do not add filler, unsupported facts, fake first-person experiences, or customer anecdotes. Keep the article in ${lang.name}, preserve the required FAQ markers, and return raw Markdown only.\n\nOriginal article:\n${text}`;
+    for (let correctionAttempt = 1; validationErrors.length > 0 && correctionAttempt <= 2; correctionAttempt++) {
+      console.warn(`⚠️ ${lang.code} 검수 실패(${validationErrors.join(', ')}). 해당 언어 보정 ${correctionAttempt}/2 요청합니다.`);
+      const repairPrompt = `You are repairing one previously generated ${lang.name} article for the same topic: "${currentTopic}".\\n\\nThe article failed these exact checks: ${validationErrors.join(', ')}. Return the complete corrected Markdown article, including its original frontmatter. Preserve its topic, useful explanations, factual meaning, and existing wording wherever possible. Correct only the listed validation failures. If H2 sections are missing, use these exact localized headings: ${[i18n.s1, i18n.s2, i18n.s3, i18n.s4, i18n.s5].map((heading) => '## ' + heading).join(' | ')}. Reorganize only existing relevant material; do not add filler, unsupported facts, fake first-person experiences, or customer anecdotes. Keep the article in ${lang.name}, preserve the required FAQ markers, and return raw Markdown only.\\n\\nOriginal article:\\n${text}`;
       text = normalizeGeneratedResponse(await fetchWithRetry(repairPrompt));
       validationErrors = validateGeneratedPost(text, lang.code);
     }
 
     if (validationErrors.length > 0) {
-      throw new Error('발행 전 검수 실패(보정 1회 후): ' + validationErrors.join(', '));
+      throw new Error('발행 전 검수 실패(보정 2회 후): ' + validationErrors.join(', '));
     }
 
     fs.mkdirSync(checkpointDir, { recursive: true });

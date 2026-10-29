@@ -3,7 +3,7 @@
 // ⚠️ [혼동 방지 경고]
 // 1. 이 파일은 '3호기 (AI & 업무자동화)'입니다. 향후 나올 '2-3호기'나 다른 호기와 절대 혼동하지 말 것!
 // 2. 카테고리는 대표님의 지시 전까지 'automation'으로 영구 고정한다. (임의 변경 절대 금지)
-// 3. 이미지 생성 방식은 Picsum work- 시드 URL 방식을 영구 유지한다.
+// 3. PEXELS_API_KEY가 있으면 주제 기반 Pexels 사진 2장을 선택하고, 없거나 검색 실패 시 Picsum으로 대체한다.
 // 4. 대표님과의 모든 설명, 질문, 대화 및 주석은 반드시 100% 한국어로만 진행한다.
 // =========================================================================
 
@@ -21,18 +21,111 @@ const POSTS_BASE_DIR = path.resolve('src/data/post');
 const TOPICS_FILE = path.resolve('topics.txt');
 
 // =========================================================================
-// [3호기 전용] 100% 무에러 영구 고정 Picsum 실사 CDN 매핑
+// [3호기] 주제에 맞는 Pexels 사진을 우선 검색하고 Picsum을 안전 대체로 사용
 // =========================================================================
-function getPostImages(topic, index) {
-  const seedBase = Date.now().toString(36);
-  const coverSeed = `work-${seedBase}-${index}-c`;
-  const bodySeed = `work-${seedBase}-${index}-b`;
+// =========================================================================
+// Pexels topic-matched photos with a non-breaking Picsum fallback.
+// Pexels API results expose alt text, not a tags array; search relevance is the primary match.
+const PEXELS_API_KEY = process.env.PEXELS_API_KEY;
+const PEXELS_IMAGE_CACHE = new Map();
+let pexelsFallbackWarningShown = false;
+const PEXELS_LOCALE_BY_LANG = {
+  ko: 'ko-KR', en: 'en-US', ja: 'ja-JP', de: 'de-DE', fr: 'fr-FR',
+  es: 'es-ES', it: 'it-IT', pt: 'pt-BR', nl: 'nl-NL', pl: 'pl-PL',
+  id: 'id-ID', vi: 'vi-VN'
+};
 
+function getPicsumFallback(topic, index) {
+  const seedBase = Date.now().toString(36);
+  const coverSeed = 'mob-' + seedBase + '-' + index + '-c';
+  const bodySeed = 'mob-' + seedBase + '-' + index + '-b';
   return {
-    coverUrl: `https://picsum.photos/seed/${coverSeed}/1200/675.jpg`,
-    bodyUrl: `https://picsum.photos/seed/${bodySeed}/1000/550.jpg`
+    coverUrl: 'https://picsum.photos/seed/' + coverSeed + '/1200/675.jpg',
+    bodyUrl: 'https://picsum.photos/seed/' + bodySeed + '/1000/550.jpg',
+    bodyAlt: topic + ' guide'
   };
 }
+
+function imageTopicTerms(topic) {
+  const stopWords = new Set(['the', 'and', 'for', 'with', 'from', 'about', 'what', 'when', 'how', 'guide', 'problem']);
+  return String(topic || '').toLowerCase().split(/\s+/)
+    .map((term) => term.trim())
+    .filter((term) => term.length > 1 && !stopWords.has(term));
+}
+
+async function getPostImages(topic, index, langCode = 'en') {
+  const fallback = () => getPicsumFallback(topic, index);
+  if (!PEXELS_API_KEY) {
+    if (!pexelsFallbackWarningShown) {
+      console.warn('⚠️ PEXELS_API_KEY가 없어 기존 Picsum 이미지로 안전하게 대체합니다. Pexels를 사용하려면 GitHub Actions Secret에 키를 설정해야 합니다.');
+      pexelsFallbackWarningShown = true;
+    }
+    return fallback();
+  }
+
+  const query = String(topic || '').trim().slice(0, 100);
+  if (!query) {
+    if (!pexelsFallbackWarningShown) {
+      console.warn('⚠️ 주제가 비어 있어 기존 Picsum 이미지로 대체합니다.');
+      pexelsFallbackWarningShown = true;
+    }
+    return fallback();
+  }
+
+  const locale = PEXELS_LOCALE_BY_LANG[langCode] || 'en-US';
+  const cacheKey = locale + '|' + query.toLowerCase();
+  try {
+    let photos = PEXELS_IMAGE_CACHE.get(cacheKey);
+    if (!photos) {
+      const url = 'https://api.pexels.com/v1/search?query=' + encodeURIComponent(query)
+        + '&per_page=40&orientation=landscape&locale=' + encodeURIComponent(locale);
+      const response = await fetch(url, {
+        headers: { Authorization: PEXELS_API_KEY },
+        signal: AbortSignal.timeout(12000)
+      });
+      if (!response.ok) throw new Error('Pexels HTTP ' + response.status);
+      const payload = await response.json();
+      photos = Array.isArray(payload.photos) ? payload.photos : [];
+      PEXELS_IMAGE_CACHE.set(cacheKey, photos);
+    }
+
+    const terms = imageTopicTerms(query);
+    const candidates = photos
+      .filter((photo) => photo && photo.id && photo.src && (photo.src.landscape || photo.src.large))
+      .map((photo, order) => {
+        const alt = String(photo.alt || '').trim();
+        const altLower = alt.toLowerCase();
+        const score = terms.reduce((sum, term) => sum + (altLower.includes(term) ? 1 : 0), 0);
+        return { photo, order, score, alt };
+      })
+      .sort((a, b) => b.score - a.score || a.order - b.order);
+
+    const unique = [];
+    const seenIds = new Set();
+    for (const candidate of candidates) {
+      const id = String(candidate.photo.id);
+      if (seenIds.has(id)) continue;
+      seenIds.add(id);
+      unique.push(candidate);
+      if (unique.length === 2) break;
+    }
+    if (unique.length < 2) throw new Error('Pexels 검색에서 서로 다른 사진 2장을 찾지 못했습니다.');
+
+    return {
+      coverUrl: unique[0].photo.src.landscape || unique[0].photo.src.large,
+      bodyUrl: unique[1].photo.src.landscape || unique[1].photo.src.large,
+      coverAlt: unique[0].alt || query,
+      bodyAlt: unique[1].alt || query
+    };
+  } catch (error) {
+    if (!pexelsFallbackWarningShown) {
+      console.warn('⚠️ Pexels 사진 검색에 실패해 기존 Picsum 이미지로 대체합니다: ' + error.message);
+      pexelsFallbackWarningShown = true;
+    }
+    return fallback();
+  }
+}
+// =========================================================================
 
 // =========================================================================
 // 한국 시간(KST) 기준 안전한 당일 발행 날짜 생성 함수
@@ -254,39 +347,6 @@ function writeEncryptedCheckpoint(filePath, text) {
 }
 console.log(`📌 오늘 처리할 주제 [3호기 AI & 업무자동화]: "${currentTopic}"`);
 
-const AUTOMATION_CRISIS_SCENARIOS_30 = [
-  "금요일 오후 5시 45분, 마지막 주간 실적 엑셀을 저장하려는데 #REF!와 #VALUE! 에러가 수십 개 셀에 동시다발로 터진 순간",
-  "월말 결산일 당일, 수만 행짜리 로우데이터(Raw Data) VLOOKUP 수식을 걸자마자 '응답 없음'으로 엑셀이 하얗게 굳어버렸을 때",
-  "임원진에게 공유된 실시간 구글 스프레드시트에서 누군가 필터를 잘못 건드려 전사 매출 지표 합계가 뒤틀린 아찔한 상황",
-  "점심시간 10분 전, 수기로 복사 붙여넣기 하던 작업 시트의 행 번호가 한 칸씩 밀려 이전 작업 2시간 치가 백지로 돌아갈 위기",
-  "퇴근 알람이 울리기 직전, 팀장님이 '이 파일 다른 부서 형식에 맞춰서 10분 안에 양식 바꿔와'라고 불시에 시트를 던졌을 때",
-  "월요일 출근하자마자 본사에서 내려온 100MB가 넘는 CSV 파일이 열리지 않아 메모장과 씨름하던 긴박한 오전",
-  "해외 지사에서 제각각 다른 포맷으로 보내온 12개 엑셀 파일을 하나로 합쳐야 하는데 폰트와 날짜 형식이 제각각 깨져 있을 때",
-  "야간 잔업 중, 2시간 동안 작성한 피벗 테이블과 매크로가 저장 버튼을 누르기 직전 비정상 종료로 날아갔을 때",
-  "기존 담당자가 인수인계 없이 남겨둔 정체불명의 복잡한 VBA 매크로 버튼을 눌렀다가 디버그(Debug) 런타임 오류가 떴을 때",
-  "ERP 전산 시스템에서 내려받은 원장 데이터를 파워 쿼리로 불러오는 중 알 수 없는 데이터 형식 충돌로 새로고침이 멈춘 순간",
-  "사내 업무 툴 간 웹훅(Webhook) 및 Zapier 자동화 트리거가 중간에 끊겨 고객 주문 건 300개가 누락될 뻔한 상황",
-  "매달 반복되는 수작업 서식 변환 작업 때문에 신입 사원 셋이 달라붙어 반나절을 허비하고 있는 비효율을 목격했을 때",
-  "구글 앱스 스크립트(GAS)로 자동 메일 발송 트리거를 걸어두었는데 발송 할당량(Quota) 초과로 정지 경고가 뜬 아침",
-  "거래처 50곳에 각각 다른 첨부파일과 맞춤형 견적서를 메일로 일괄 발송해야 하는 촉박한 마감 30분 전",
-  "데이터베이스(DB)에서 쿼리로 추출한 텍스트 데이터의 앞뒤 공백과 유령 줄바꿈 때문에 함수 인식이 전혀 안 될 때",
-  "엑셀 버전이 다른 부서 간 파일 공유 과정에서 최신 동적 배열 함수(XLOOKUP, FILTER)가 구버전에서 인식 불가가 되었을 때",
-  "챗GPT나 Claude에게 방대한 회의록 정리를 맡겼는데 핵심 내용은 다 빠뜨리고 엉뚱한 요약본만 내놓아 답답했던 순간",
-  "기획안 초안을 30분 만에 작성해야 하는데 AI 프롬프트 답변이 겉도는 교과서적 말투만 반복해 당황스러웠을 때",
-  "복잡한 다중 조건 IF 수식을 짜기 위해 AI에게 질문했으나 괄호 개수도 안 맞는 엉터리 수식을 알려줘 머리가 지끈거릴 때",
-  "사내 보안 규정상 민감한 고객 개인정보를 직접 AI에 넣을 수 없어 가명 처리와 자동화 사이에서 딜레마에 빠진 상황",
-  "AI로 대량의 마케팅 카피 50개를 뽑아냈지만 브랜드 톤앤매너와 완전히 어긋나 처음부터 다시 프롬프트를 빌드해야 할 때",
-  "노코드 웹 크롤러를 돌려 경쟁사 가격 모니터링을 자동화하려다 사이트 구조 변경으로 스크래핑 에러가 쏟아진 날",
-  "팀 회의에서 '업무 자동화 도입 방안'을 갑작스럽게 발표하게 되어 당장 보여줄 수 있는 실질적인 데모가 필요할 때",
-  "PDF 전자문서 100장에 흩어진 계약 조건 표를 엑셀 데이터 테이블로 빠르게 변환해야 하는 긴급 업무가 떨어졌을 때",
-  "중요한 사내 감사 직전, 자동화 스크립트가 실수로 폴더 내 원본 마스터 파일을 덮어써서 백업본을 찾아 헤매던 순간",
-  "동료가 보호된 워크시트 암호를 잊어버려 당장 수정해야 하는 기안서 파일의 수식 잠금을 해제하지 못하던 상황",
-  "클라우드 공유 드라이브 버전 충돌로 인해 같은 파일이 '사본(1)', '사본(2)'로 끝없이 분열되어 작업이 꼬였을 때",
-  "텍스트로 저장된 숫자가 일반 숫자로 변환되지 않아 SUM 함수 결과값이 계속 '0'으로 찍히는 어처구니없는 상황",
-  "타 부서에서 링크로 걸어둔 외부 참조 엑셀 파일의 경로가 바뀌어 통합 문서 전체에 보안 경고창이 도배되었을 때",
-  "보고서 그래프와 차트 데이터 범위가 고정되어 있어 신규 데이터가 들어와도 시각화가 자동 반영되지 않던 난감한 시점"
-];
-
 const THEME_PRESETS = [
   { id: 1, name: "Cyberpunk Terminal", primaryColor: "#00ffcc", bgColor: "#111827", layout: "CLI/터미널 스타일, 자동화 단축 경로 최상단 배치" },
   { id: 2, name: "Modern Minimalist Slate", primaryColor: "#3b82f6", bgColor: "#f8fafc", layout: "미니멀 가이드 스타일, 여백 중심의 깔끔한 단계별 넘버링, 직관적 핵심 요약" },
@@ -384,14 +444,45 @@ function validateGeneratedPost(text, langCode) {
   for (const field of ['title', 'description', 'publishDate', 'image']) {
     if (!new RegExp('^' + field + ':\\s*\\S', 'm').test(fm[1])) errors.push(field + ' 누락');
   }
-  if (body.length < (langCode === 'ko' ? 1000 : 1800)) errors.push('본문 길이 부족 또는 잘림');
-  if ((body.match(/^##\s+/gm) || []).length < 5) errors.push('H2 섹션 5개 미만');
-  if ((body.match(/\*\*Q[1-3]\.\*\*/gi) || []).length < 3) errors.push('FAQ 질문 3개 미만');
-  if ((body.match(/\*\*A[1-3]\.\*\*/gi) || []).length < 3) errors.push('FAQ 답변 3개 미만');
-  if (langCode !== 'ko' && /[가-힣]/.test(body)) errors.push('비한국어 본문에 한글 포함');
+  const description = fm[1].match(/^description:\s*["']?([^\r\n"']*)/m)?.[1]?.trim() || '';
+  if (description.length > 160) errors.push('description 160자 초과');
+  if (!/^image:\s*["']?https?:\/\//m.test(fm[1])) errors.push('image URL 형식 오류');
+
+  const bodyWithoutCode = body.replace(/```[\s\S]*?```/g, ' ');
+  const plainBody = bodyWithoutCode
+    .replace(/!\[[^\]]*\]\([^)]+\)/g, ' ')
+    .replace(/\[[^\]]+\]\([^)]+\)/g, ' ')
+    .replace(/`([^`]+)`/g, '$1')
+    .replace(/<[^>]*>/g, ' ')
+    .replace(/^#+\s*/gm, '')
+    .replace(/[>*_~|]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+  const nonSpaceLength = [...plainBody].filter((char) => !/\s/u.test(char)).length;
+  const words = [...plainBody.matchAll(/[\p{L}\p{N}]+(?:['’.-][\p{L}\p{N}]+)*/gu)].length;
+  if ((bodyWithoutCode.match(/^##\s+/gm) || []).length !== 5) errors.push('H2 섹션은 정확히 5개여야 함');
+  for (const n of [1, 2, 3]) {
+    const questionMarker = '**Q' + n + '.**';
+    const answerMarker = '**A' + n + '.**';
+    if (bodyWithoutCode.split(questionMarker).length - 1 !== 1) errors.push('FAQ 질문 Q' + n + ' 표식이 정확히 1개 필요');
+    if (bodyWithoutCode.split(answerMarker).length - 1 !== 1) errors.push('FAQ 답변 A' + n + ' 표식이 정확히 1개 필요');
+  }
+  if (langCode === 'ko' && nonSpaceLength < 1800) errors.push('한국어 본문 공백 제외 1,800자 미만');
+  if (langCode === 'ko' && nonSpaceLength > 3600) errors.push('한국어 본문 공백 제외 3,600자 초과');
+  if (langCode === 'ja' && nonSpaceLength < 900) errors.push('일본어 본문 공백 제외 900자 미만');
+  if (!['ko', 'ja'].includes(langCode) && words < 650) errors.push('본문 650단어 미만');
+  if (!['ko', 'ja'].includes(langCode) && words > 1500) errors.push('본문 1,500단어 초과');
+
+  const hangulCount = (plainBody.match(/[가-힣]/g) || []).length;
+  const kanaCount = (plainBody.match(/[\u3040-\u30ff]/g) || []).length;
+  const latinCount = (plainBody.match(/\p{Script=Latin}/gu) || []).length;
+  if (langCode === 'ko' && hangulCount < 300) errors.push('한국어 본문 한글 문자 부족');
+  if (langCode === 'ja' && kanaCount < 80) errors.push('일본어 본문 가나 문자 부족');
+  if (langCode !== 'ko' && hangulCount > 0) errors.push('비한국어 본문에 한글 포함');
+  if (langCode !== 'ja' && kanaCount > 40) errors.push('일본어 외 본문에 가나 문자 과다 포함');
+  if (!['ko', 'ja'].includes(langCode) && latinCount < words * 0.6) errors.push('본문 문자 체계가 라틴 문자 locale과 맞지 않음');
   return errors;
 }
-
 async function generateSinglePost(lang, index) {
   const checkpointPath = path.join(checkpointDir, `${lang.code}.enc`);
   if (fs.existsSync(checkpointPath)) {
@@ -412,79 +503,62 @@ async function generateSinglePost(lang, index) {
   }
 
   const selectedTheme = THEME_PRESETS[Math.floor(Math.random() * THEME_PRESETS.length)];
-  const selectedScenario = AUTOMATION_CRISIS_SCENARIOS_30[Math.floor(Math.random() * AUTOMATION_CRISIS_SCENARIOS_30.length)];
-  const i18n = I18N_SECTIONS[lang.code] || I18N_SECTIONS.ko;
+    const i18n = I18N_SECTIONS[lang.code] || I18N_SECTIONS.ko;
 
   console.log(`\n🚀 [${index + 1}/12] ${lang.name} (${lang.code}) 3호기 애드센스 표준 생성 중... (테마: ${selectedTheme.name})`);
 
-  const { coverUrl, bodyUrl } = getPostImages(currentTopic, index);
+  const { coverUrl, bodyUrl, bodyAlt } = await getPostImages(currentTopic, index, lang.code);
   const pubDateIso = getKstPublishDateIso();
 
   // 🎯 [애드센스 승인 최적화 프롬프트: 2,400~2,600자 정량화]
   const prompt = `
-You are a ${lang.persona}.
-Write a high-quality, practical workflow & AI troubleshooting guide natively in ${lang.name}.
-Target Culture: "${lang.localeContext}"
-Assigned Situation: "${selectedScenario}"
+Write an original practical guide natively in ${lang.name}, with independent wording and examples for this locale. This is a separate locale-specific article generation call, not a translation.
 Topic: "${currentTopic}"
+Audience and cultural context: "${lang.localeContext}"
+Do not introduce unrelated Excel, spreadsheet, API, or workplace emergencies unless the topic itself requires them. Do not claim to have personally handled the situation or to have credentials. Do not invent facts, quotations, customer cases, or outcomes.
 
-[ADSENSE QUALITY & LENGTH REQUIREMENT]
-- For Korean (ko): Write exactly around 2,400 - 2,600 characters (do NOT exceed 3,000 characters).
-- For other languages: Write exactly 900 - 1,100 words.
-- Tone: Highly informative, professional, practical productivity advice.
-- Narrative voice: Write in a first-person storytelling voice ("I"/the natural first-person form in ${lang.name}) from the assigned expert persona's perspective.
-- Open with a vivid but clearly illustrative scene based on the assigned situation; use roughly 30% of the article for first-person story and transitions and 70% for verified explanations, step-by-step guidance, and safety information. Build a story arc from the urgent problem through diagnosis, safe action, and outcome.
-- Do not falsely claim that an illustrative scenario is a real customer case or the author's personal experience. Do not invent verified outcomes, quotations, or facts. Clearly frame hypothetical/composite events as illustrative.
-- Keep first-person narration throughout the opening and transitions, while making technical instructions, safety warnings, and sources precise and factual.
+Length and style:
+- Korean: about 2,400–2,600 characters, maximum 3,000 characters.
+- Other locales: about 900–1,100 words (Japanese: at least 900 non-space characters).
+- Aim for an engaging opening and transitions (about 30%) and useful, accurate explanation and actionable steps (about 70%).
+- Use first-person procedural phrasing only where natural (for example, "I would first check…"). Do not imply a real personal event.
+- Write idiomatic ${lang.name}, not translated wording. Localize examples and UI labels only when relevant.
 
-[STRUCTURE - STRICT 5 H2 HEADINGS]
-Use these exact H2 headings:
-
+Use these five localized H2 headings exactly, in this order:
 ## ${i18n.s1}
-Write 2 detailed paragraphs describing the sudden workplace bottleneck, formula crash, and urgent deadline panic based on: "${selectedScenario}".
-
+Introduce a recognizable situation directly connected to "${currentTopic}" without presenting invented events as real.
 ## ${i18n.s2}
-Write 2 analytical paragraphs explaining the technical root causes (syntax errors, data type mismatches, circular calculation locks, or API sync drops).
-
+Explain the topic-specific causes, limits, and observable clues. Do not force unrelated technical failure types.
 ## ${i18n.s3}
-Provide 3 concrete resolution steps matching "${lang.osUi}". Use clean numbered lists with practical action items, formulas, and exact settings.
-
+Give clear, safe, numbered steps that solve or investigate the assigned topic.
 ## ${i18n.s4}
-Write 2 paragraphs of practical precautions and operational tips to prevent recurrence.
-
+Explain relevant precautions, common mistakes, prevention, and when to seek expert help.
 ## ${i18n.s5}
-Provide exactly 3 practical Q&A items. You MUST put an empty line between Question and Answer:
+Provide exactly three useful Q&A pairs with a blank line between each question and answer:
+**Q1.** Localized question
 
-**Q1.** Question text
+**A1.** Clear, useful answer.
 
-**A1.** Detailed answer (3-4 sentences).
+**Q2.** Localized question
 
-**Q2.** Question text
+**A2.** Clear, useful answer.
 
-**A2.** Detailed answer (3-4 sentences).
+**Q3.** Localized question
 
-**Q3.** Question text
+**A3.** Clear, useful answer.
 
-**A3.** Detailed answer (3-4 sentences).
+Use reliable sources for factual claims and include links only when you can identify a relevant source accurately. Do not fill sections with repetition. Use Markdown, keep headings free of bold markers, and put commands or formulas in inline code. ${lang.code !== 'ko' ? '- Do not use Korean characters.' : ''}
 
-[FORMATTING RULES]
-1. Never put asterisks (**) inside H2 headings.
-2. Bold keywords with strict syntax: **keyword** (no space inside asterisks).
-3. Put formulas, cell coordinates, or menu commands in inline backticks (e.g. \`XLOOKUP\`, \`A1\`, \`Power Query\`).
-${lang.code !== 'ko' ? `- Absolutely NO Korean characters in non-Korean posts.` : ''}
-
-[Strict Output Format]
-Return ONLY raw Markdown starting directly with frontmatter:
+Return only raw Markdown with this frontmatter:
 ---
-title: "Native Clear Title in ${lang.name}"
-description: "Native concise description in ${lang.name} under 160 characters"
+title: "Native clear title in ${lang.name}"
+description: "Native concise description in ${lang.name}, maximum 160 characters"
 publishDate: ${pubDateIso}
 image: "${coverUrl}"
 category: "automation"
 tags: ${JSON.stringify(i18n.tags)}
 theme: "${selectedTheme.name}"
----
-`;
+---`;
 
   try {
     const normalizeGeneratedResponse = (rawText) => {
@@ -504,7 +578,7 @@ theme: "${selectedTheme.name}"
 
       body = inspectAndHealMarkdown(body, lang.code);
       const safeAlt = currentTopic.replace(/[\[\]\(\)"']/g, '').trim();
-      const middleImageMarkdown = `\n\n![${safeAlt} AI Automation Guide](${bodyUrl})\n\n`;
+      const middleImageMarkdown = `\n\n![${bodyAlt || safeAlt}](${bodyUrl})\n\n`;
       if (!body.includes(bodyUrl)) {
         if (body.includes('## 2.')) body = body.replace(/(##\s*2\.[^\n]+)/, `${middleImageMarkdown}$1`);
         else body = `${middleImageMarkdown}${body}`;

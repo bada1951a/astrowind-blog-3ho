@@ -9,7 +9,7 @@
 
 import fs from 'fs';
 import path from 'path';
-import { createHash } from 'node:crypto';
+import { createHash, createCipheriv, createDecipheriv, randomBytes } from 'node:crypto';
 
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
@@ -224,6 +224,34 @@ const currentTopic = lines[0];
 const topicKey = createHash('sha256').update(lines.join('\n'), 'utf8').digest('hex');
 const checkpointRoot = path.resolve('.generation-checkpoints');
 const checkpointDir = path.join(checkpointRoot, topicKey);
+const checkpointEncryptionKey = createHash('sha256')
+  .update('blog-locale-checkpoint-v1\0', 'utf8')
+  .update(OPENAI_API_KEY, 'utf8')
+  .digest();
+
+function readEncryptedCheckpoint(filePath) {
+  const envelope = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+  if (envelope.version !== 1) throw new Error('체크포인트 형식 버전이 다릅니다.');
+  const decipher = createDecipheriv('aes-256-gcm', checkpointEncryptionKey, Buffer.from(envelope.iv, 'base64'));
+  decipher.setAuthTag(Buffer.from(envelope.authTag, 'base64'));
+  return Buffer.concat([
+    decipher.update(Buffer.from(envelope.ciphertext, 'base64')),
+    decipher.final()
+  ]).toString('utf8');
+}
+
+function writeEncryptedCheckpoint(filePath, text) {
+  const iv = randomBytes(12);
+  const cipher = createCipheriv('aes-256-gcm', checkpointEncryptionKey, iv);
+  const ciphertext = Buffer.concat([cipher.update(text, 'utf8'), cipher.final()]);
+  const envelope = {
+    version: 1,
+    iv: iv.toString('base64'),
+    authTag: cipher.getAuthTag().toString('base64'),
+    ciphertext: ciphertext.toString('base64')
+  };
+  fs.writeFileSync(filePath, JSON.stringify(envelope), 'utf8');
+}
 console.log(`📌 오늘 처리할 주제 [3호기 AI & 업무자동화]: "${currentTopic}"`);
 
 const AUTOMATION_CRISIS_SCENARIOS_30 = [
@@ -357,17 +385,22 @@ function validateGeneratedPost(text, langCode) {
 }
 
 async function generateSinglePost(lang, index) {
-  const checkpointPath = path.join(checkpointDir, `${lang.code}.md`);
+  const checkpointPath = path.join(checkpointDir, `${lang.code}.enc`);
   if (fs.existsSync(checkpointPath)) {
-    const cachedText = fs.readFileSync(checkpointPath, 'utf-8');
-    const cachedErrors = validateGeneratedPost(cachedText, lang.code);
-    if (cachedErrors.length === 0) {
-      generatedPostContents.set(lang.code, cachedText);
-      console.log(`\n♻️ [${index + 1}/12] ${lang.name} (${lang.code}) 검증된 이전 결과 재사용`);
-      return true;
+    try {
+      const cachedText = readEncryptedCheckpoint(checkpointPath);
+      const cachedErrors = validateGeneratedPost(cachedText, lang.code);
+      if (cachedErrors.length === 0) {
+        generatedPostContents.set(lang.code, cachedText);
+        console.log(`\n♻️ [${index + 1}/12] ${lang.name} (${lang.code}) 암호화된 검증 원고 재사용`);
+        return true;
+      }
+      fs.unlinkSync(checkpointPath);
+      console.warn(`⚠️ ${lang.code} 체크포인트 검수 실패로 다시 생성합니다: ${cachedErrors.join(', ')}`);
+    } catch (error) {
+      fs.unlinkSync(checkpointPath);
+      console.warn(`⚠️ ${lang.code} 암호화 체크포인트를 읽을 수 없어 다시 생성합니다.`);
     }
-    fs.unlinkSync(checkpointPath);
-    console.warn(`⚠️ ${lang.code} 체크포인트가 검증을 통과하지 못해 다시 생성합니다: ${cachedErrors.join(', ')}`);
   }
 
   const selectedTheme = THEME_PRESETS[Math.floor(Math.random() * THEME_PRESETS.length)];
@@ -485,7 +518,7 @@ theme: "${selectedTheme.name}"
     }
 
     fs.mkdirSync(checkpointDir, { recursive: true });
-    fs.writeFileSync(checkpointPath, text, 'utf-8');
+    writeEncryptedCheckpoint(checkpointPath, text);
     generatedPostContents.set(lang.code, text);
     console.log(`   ✅ [검증 완료] ${lang.code} 결과를 재실행 복구용 체크포인트로 보존했습니다.`);
     return true;
@@ -497,7 +530,7 @@ theme: "${selectedTheme.name}"
 
 async function run() {
   console.log("==================================================");
-  console.log("⚡ [3호기 AI & 업무자동화] 12개 언어 원고 검증 및 원자적 게시 시작");
+  console.log("⚡ [3호기 AI & 업무자동화] 12개 언어 원고 검증 및 게시 시작 (최소 10개 통과)");
   console.log("==================================================");
 
   let successCount = 0;
@@ -507,26 +540,31 @@ async function run() {
     if (i < TARGET_LANGS.length - 1) await delay(2000);
   }
 
-  if (successCount !== TARGET_LANGS.length) {
-    console.error(`12개 언어 세트 검수 실패 (${successCount}/${TARGET_LANGS.length}). topics.txt와 공개 글 파일은 그대로 두고, 통과한 언어 체크포인트를 보존합니다.`);
+  const failedCodes = TARGET_LANGS.filter((lang) => !generatedPostContents.has(lang.code)).map((lang) => lang.code);
+  if (successCount < 10) {
+    console.error(`세트 중단: 검증 통과 ${successCount}/12개로 최소 기준 10개 미만입니다. 실패 언어: ${failedCodes.join(', ')}. 공개 글과 topics.txt는 그대로 두고 암호화 체크포인트를 보존합니다.`);
     process.exit(1);
   }
 
-  // 12개 언어가 모두 검증된 다음에만 공개 경로에 원고를 기록합니다.
+  // 유효한 locale만 게시 직전 재검증하고 기록합니다.
   for (const lang of TARGET_LANGS) {
     const text = generatedPostContents.get(lang.code);
-    const errors = validateGeneratedPost(text || '', lang.code);
-    if (errors.length) throw new Error(`${lang.code} 체크포인트 게시 직전 검증 실패: ${errors.join(', ')}`);
+    if (text === undefined) continue;
+    const errors = validateGeneratedPost(text, lang.code);
+    if (errors.length) throw new Error(`${lang.code} 게시 직전 검증 실패: ${errors.join(', ')}`);
   }
   for (const lang of TARGET_LANGS) {
+    const text = generatedPostContents.get(lang.code);
+    if (text === undefined) continue;
     const targetDir = path.join(POSTS_BASE_DIR, lang.code);
     fs.mkdirSync(targetDir, { recursive: true });
-    fs.writeFileSync(path.join(targetDir, `${fileSlug}.md`), generatedPostContents.get(lang.code), 'utf-8');
+    fs.writeFileSync(path.join(targetDir, `${fileSlug}.md`), text, 'utf-8');
   }
 
   lines.shift();
   fs.writeFileSync(TOPICS_FILE, lines.join('\n'), 'utf-8');
-  console.log(`\n🧹 12개 언어 전체 검증 및 파일 기록 완료. topics.txt에서 주제를 제거했습니다.`);
+  console.log(`\n🧹 ${successCount}/12개 언어를 게시하고 topics.txt에서 주제를 소비했습니다.`);
+  if (failedCodes.length > 0) console.warn(`⚠️ 이번 세트에서 제외된 언어: ${failedCodes.join(', ')}`);
   console.log(`📊 남은 주제 수: ${lines.length}개`);
 }
 

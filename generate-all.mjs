@@ -9,6 +9,7 @@
 
 import fs from 'fs';
 import path from 'path';
+import { createHash } from 'node:crypto';
 
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
@@ -220,6 +221,9 @@ if (lines.length === 0) {
 }
 
 const currentTopic = lines[0];
+const topicKey = createHash('sha256').update(currentTopic, 'utf8').digest('hex');
+const checkpointRoot = path.resolve('.generation-checkpoints');
+const checkpointDir = path.join(checkpointRoot, topicKey);
 console.log(`📌 오늘 처리할 주제 [3호기 AI & 업무자동화]: "${currentTopic}"`);
 
 const AUTOMATION_CRISIS_SCENARIOS_30 = [
@@ -279,9 +283,18 @@ const TARGET_LANGS = [
 ];
 
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
-const fileSlug = `post-${Date.now().toString(36)}`;
+const fileSlug = `post-${topicKey.slice(0, 12)}`;
+const generatedPostContents = new Map();
 
-const generatedPostFiles = [];
+// 이전 주제의 체크포인트는 현재 주제가 바뀌면 제거해 캐시 크기가 계속 늘지 않게 합니다.
+// 현재 주제의 체크포인트는 실패 후 다음 실행에서 재사용합니다.
+if (fs.existsSync(checkpointRoot)) {
+  for (const entry of fs.readdirSync(checkpointRoot, { withFileTypes: true })) {
+    if (entry.isDirectory() && entry.name !== topicKey) {
+      fs.rmSync(path.join(checkpointRoot, entry.name), { recursive: true, force: true });
+    }
+  }
+}
 
 // =========================================================================
 // [호출 함수] maxOutputTokens: 8192 (2,500자 정량 생성 최적화)
@@ -344,6 +357,19 @@ function validateGeneratedPost(text, langCode) {
 }
 
 async function generateSinglePost(lang, index) {
+  const checkpointPath = path.join(checkpointDir, `${lang.code}.md`);
+  if (fs.existsSync(checkpointPath)) {
+    const cachedText = fs.readFileSync(checkpointPath, 'utf-8');
+    const cachedErrors = validateGeneratedPost(cachedText, lang.code);
+    if (cachedErrors.length === 0) {
+      generatedPostContents.set(lang.code, cachedText);
+      console.log(`\n♻️ [${index + 1}/12] ${lang.name} (${lang.code}) 검증된 이전 결과 재사용`);
+      return true;
+    }
+    fs.unlinkSync(checkpointPath);
+    console.warn(`⚠️ ${lang.code} 체크포인트가 검증을 통과하지 못해 다시 생성합니다: ${cachedErrors.join(', ')}`);
+  }
+
   const selectedTheme = THEME_PRESETS[Math.floor(Math.random() * THEME_PRESETS.length)];
   const selectedScenario = AUTOMATION_CRISIS_SCENARIOS_30[Math.floor(Math.random() * AUTOMATION_CRISIS_SCENARIOS_30.length)];
   const i18n = I18N_SECTIONS[lang.code] || I18N_SECTIONS.ko;
@@ -420,53 +446,48 @@ theme: "${selectedTheme.name}"
 `;
 
   try {
-    let rawText = await fetchWithRetry(prompt);
-    let text = rawText.trim();
-    if (text.startsWith('```markdown')) text = text.replace(/^```markdown\n/, '').replace(/\n```$/, '');
-    if (text.startsWith('```')) text = text.replace(/^```\n/, '').replace(/\n```$/, '');
+    const normalizeGeneratedResponse = (rawText) => {
+      let text = rawText.trim();
+      if (text.startsWith('```markdown')) text = text.replace(/^```markdown\n/, '').replace(/\n```$/, '');
+      if (text.startsWith('```')) text = text.replace(/^```\n/, '').replace(/\n```$/, '');
 
-    const fmMatch = text.match(/^---[\s\S]*?---\n*/);
-    if (fmMatch) {
+      const fmMatch = text.match(/^---[\s\S]*?---\n*/);
+      if (!fmMatch) return text;
       let frontmatter = fmMatch[0].trim();
       let body = text.slice(fmMatch[0].length).trim();
       body = body.replace(/^#\s+[^\n]+\n+/, '');
 
-      // ⚠️ 3호기 카테고리 'automation' 영구 보존 강제 검증
+      // 3호기 고정 카테고리를 보존합니다.
       frontmatter = frontmatter.replace(/category:\s*["'][^"']*["']/i, "category: 'automation'")
                                .replace(/category:\s*[^\n\r]+/i, "category: 'automation'");
 
-      // 🩺 [자가 검수 및 치유 엔진 가동]
       body = inspectAndHealMarkdown(body, lang.code);
-
-      if (lang.code === 'ko') {
-        console.log(`   📏 [3호기 본문 최종 글자 수] ${body.length}자 (애드센스 표준: 2,400~2,600자)`);
-      }
-
-      // 본문 중간 이미지 배치 (2번 섹션 직전)
       const safeAlt = currentTopic.replace(/[\[\]\(\)"']/g, '').trim();
       const middleImageMarkdown = `\n\n![${safeAlt} AI Automation Guide](${bodyUrl})\n\n`;
-
-      if (body.includes('## 2.')) {
-        body = body.replace(/(##\s*2\.[^\n]+)/, `${middleImageMarkdown}$1`);
-      } else {
-        body = `${middleImageMarkdown}${body}`;
+      if (!body.includes(bodyUrl)) {
+        if (body.includes('## 2.')) body = body.replace(/(##\s*2\.[^\n]+)/, `${middleImageMarkdown}$1`);
+        else body = `${middleImageMarkdown}${body}`;
       }
+      return `${frontmatter}\n\n${body}\n`;
+    };
 
-      text = `${frontmatter}\n\n${body}\n`;
+    let text = normalizeGeneratedResponse(await fetchWithRetry(prompt));
+    let validationErrors = validateGeneratedPost(text, lang.code);
+    if (validationErrors.length > 0) {
+      console.warn(`⚠️ ${lang.code} 검수 실패(${validationErrors.join(', ')}). 해당 언어만 1회 보정 요청합니다.`);
+      const repairPrompt = `You are repairing one previously generated ${lang.name} article for the same topic: "${currentTopic}".\n\nThe article failed these exact checks: ${validationErrors.join(', ')}.\nReturn the complete corrected Markdown article, including its original frontmatter. Preserve its topic, useful explanations, factual meaning, and existing wording wherever possible. Correct only the listed validation failures. If H2 sections are missing, use these exact localized headings: ${[i18n.s1, i18n.s2, i18n.s3, i18n.s4, i18n.s5].map((heading) => '## ' + heading).join(' | ')}. Reorganize only existing relevant material; do not add filler, unsupported facts, fake first-person experiences, or customer anecdotes. Keep the article in ${lang.name}, preserve the required FAQ markers, and return raw Markdown only.\n\nOriginal article:\n${text}`;
+      text = normalizeGeneratedResponse(await fetchWithRetry(repairPrompt, 1));
+      validationErrors = validateGeneratedPost(text, lang.code);
     }
 
-    const targetDir = path.join(POSTS_BASE_DIR, lang.code);
-    if (!fs.existsSync(targetDir)) {
-      fs.mkdirSync(targetDir, { recursive: true });
+    if (validationErrors.length > 0) {
+      throw new Error('발행 전 검수 실패(보정 1회 후): ' + validationErrors.join(', '));
     }
 
-    const validationErrors = validateGeneratedPost(text, lang.code);
-    if (validationErrors.length) throw new Error('발행 전 검수 실패: ' + validationErrors.join(', '));
-
-    const filePath = path.join(targetDir, `${fileSlug}.md`);
-    fs.writeFileSync(filePath, text, 'utf-8');
-    generatedPostFiles.push(filePath);
-    console.log(`   ✅ [성공] 3호기 저장 완료: src/data/post/${lang.code}/${fileSlug}.md`);
+    fs.mkdirSync(checkpointDir, { recursive: true });
+    fs.writeFileSync(checkpointPath, text, 'utf-8');
+    generatedPostContents.set(lang.code, text);
+    console.log(`   ✅ [검증 완료] ${lang.code} 결과를 재실행 복구용 체크포인트로 보존했습니다.`);
     return true;
   } catch (error) {
     console.error(`❌ [최종 실패] ${lang.name} 생성 실패:`, error.message);
@@ -476,32 +497,37 @@ theme: "${selectedTheme.name}"
 
 async function run() {
   console.log("==================================================");
-  console.log("⚡ [3호기 AI & 업무자동화] (카테고리: automation) 12개국 고속 자동 포스팅 시작");
+  console.log("⚡ [3호기 AI & 업무자동화] 12개 언어 원고 검증 및 원자적 게시 시작");
   console.log("==================================================");
 
-  const batchStart = generatedPostFiles.length;
   let successCount = 0;
-
   for (let i = 0; i < TARGET_LANGS.length; i++) {
     const isSuccess = await generateSinglePost(TARGET_LANGS[i], i);
     if (isSuccess) successCount++;
-    if (i < TARGET_LANGS.length - 1) {
-      await delay(2000);
-    }
+    if (i < TARGET_LANGS.length - 1) await delay(2000);
   }
 
-  if (successCount === TARGET_LANGS.length) {
-    lines.shift();
-    fs.writeFileSync(TOPICS_FILE, lines.join('\n'), 'utf-8');
-    console.log(`\n🧹 총 ${successCount}개국 포스팅 완료. topics.txt에서 주제를 제거했습니다.`);
-    console.log(`📊 남은 주제 수: ${lines.length}개`);
-  } else {
-    for (const filePath of generatedPostFiles.slice(batchStart)) {
-      if (fs.existsSync(filePath)) fs.unlinkSync(filePath);
-    }
-    console.error(`12개 언어 세트 검수 실패 (${successCount}/${TARGET_LANGS.length}). 생성된 이번 세트 파일을 되돌리고 topics.txt의 주제를 보존합니다.`);
+  if (successCount !== TARGET_LANGS.length) {
+    console.error(`12개 언어 세트 검수 실패 (${successCount}/${TARGET_LANGS.length}). topics.txt와 공개 글 파일은 그대로 두고, 통과한 언어 체크포인트를 보존합니다.`);
     process.exit(1);
   }
+
+  // 12개 언어가 모두 검증된 다음에만 공개 경로에 원고를 기록합니다.
+  for (const lang of TARGET_LANGS) {
+    const text = generatedPostContents.get(lang.code);
+    const errors = validateGeneratedPost(text || '', lang.code);
+    if (errors.length) throw new Error(`${lang.code} 체크포인트 게시 직전 검증 실패: ${errors.join(', ')}`);
+  }
+  for (const lang of TARGET_LANGS) {
+    const targetDir = path.join(POSTS_BASE_DIR, lang.code);
+    fs.mkdirSync(targetDir, { recursive: true });
+    fs.writeFileSync(path.join(targetDir, `${fileSlug}.md`), generatedPostContents.get(lang.code), 'utf-8');
+  }
+
+  lines.shift();
+  fs.writeFileSync(TOPICS_FILE, lines.join('\n'), 'utf-8');
+  console.log(`\n🧹 12개 언어 전체 검증 및 파일 기록 완료. topics.txt에서 주제를 제거했습니다.`);
+  console.log(`📊 남은 주제 수: ${lines.length}개`);
 }
 
 run();

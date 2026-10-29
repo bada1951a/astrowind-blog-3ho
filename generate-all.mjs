@@ -324,6 +324,14 @@ if (fs.existsSync(checkpointRoot)) {
   }
 }
 
+if (fs.existsSync(checkpointDir)) {
+  for (const fileName of fs.readdirSync(checkpointDir)) {
+    if (fileName.endsWith('.md')) {
+      fs.unlinkSync(path.join(checkpointDir, fileName));
+    }
+  }
+}
+
 // =========================================================================
 // [호출 함수] maxOutputTokens: 8192 (2,500자 정량 생성 최적화)
 // =========================================================================

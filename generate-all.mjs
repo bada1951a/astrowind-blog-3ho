@@ -221,7 +221,7 @@ if (lines.length === 0) {
 }
 
 const currentTopic = lines[0];
-const topicKey = createHash('sha256').update(currentTopic, 'utf8').digest('hex');
+const topicKey = createHash('sha256').update(lines.join('\n'), 'utf8').digest('hex');
 const checkpointRoot = path.resolve('.generation-checkpoints');
 const checkpointDir = path.join(checkpointRoot, topicKey);
 console.log(`📌 오늘 처리할 주제 [3호기 AI & 업무자동화]: "${currentTopic}"`);
@@ -476,7 +476,7 @@ theme: "${selectedTheme.name}"
     if (validationErrors.length > 0) {
       console.warn(`⚠️ ${lang.code} 검수 실패(${validationErrors.join(', ')}). 해당 언어만 1회 보정 요청합니다.`);
       const repairPrompt = `You are repairing one previously generated ${lang.name} article for the same topic: "${currentTopic}".\n\nThe article failed these exact checks: ${validationErrors.join(', ')}.\nReturn the complete corrected Markdown article, including its original frontmatter. Preserve its topic, useful explanations, factual meaning, and existing wording wherever possible. Correct only the listed validation failures. If H2 sections are missing, use these exact localized headings: ${[i18n.s1, i18n.s2, i18n.s3, i18n.s4, i18n.s5].map((heading) => '## ' + heading).join(' | ')}. Reorganize only existing relevant material; do not add filler, unsupported facts, fake first-person experiences, or customer anecdotes. Keep the article in ${lang.name}, preserve the required FAQ markers, and return raw Markdown only.\n\nOriginal article:\n${text}`;
-      text = normalizeGeneratedResponse(await fetchWithRetry(repairPrompt, 1));
+      text = normalizeGeneratedResponse(await fetchWithRetry(repairPrompt));
       validationErrors = validateGeneratedPost(text, lang.code);
     }
 

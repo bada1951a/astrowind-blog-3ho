@@ -3,7 +3,7 @@
 // ⚠️ [혼동 방지 경고]
 // 1. 이 파일은 '3호기 (AI & 업무자동화)'입니다. 향후 나올 '2-3호기'나 다른 호기와 절대 혼동하지 말 것!
 // 2. 카테고리는 대표님의 지시 전까지 'automation'으로 영구 고정한다. (임의 변경 절대 금지)
-// 3. 이미지 생성 방식은 Picsum work- 시드 URL 방식을 영구 유지한다.
+// 3. PEXELS_API_KEY가 있으면 주제 검색으로 사진 2장을 선택하고, 없거나 검색 실패 시 Picsum으로 대체한다.
 // 4. 대표님과의 모든 설명, 질문, 대화 및 주석은 반드시 100% 한국어로만 진행한다.
 // =========================================================================
 
@@ -20,19 +20,110 @@ const POSTS_BASE_DIR = path.resolve('src/data/post');
 const TOPICS_FILE = path.resolve('topics.txt');
 
 // =========================================================================
-// [3호기 전용] 100% 무에러 영구 고정 Picsum 실사 CDN 매핑
+// [3호기] 주제에 맞는 Pexels 사진을 우선 검색하고 Picsum을 안전 대체로 사용
 // =========================================================================
-function getPostImages(topic, index) {
-  const seedBase = Date.now().toString(36);
-  const coverSeed = `work-${seedBase}-${index}-c`;
-  const bodySeed = `work-${seedBase}-${index}-b`;
+// =========================================================================
+// Pexels topic-matched photos with a non-breaking Picsum fallback.
+// Pexels API results expose alt text, not a tags array; search relevance is the primary match.
+const PEXELS_API_KEY = process.env.PEXELS_API_KEY;
+const PEXELS_IMAGE_CACHE = new Map();
+let pexelsFallbackWarningShown = false;
+const PEXELS_LOCALE_BY_LANG = {
+  ko: 'ko-KR', en: 'en-US', ja: 'ja-JP', de: 'de-DE', fr: 'fr-FR',
+  es: 'es-ES', it: 'it-IT', pt: 'pt-BR', nl: 'nl-NL', pl: 'pl-PL',
+  id: 'id-ID', vi: 'vi-VN'
+};
 
+function getPicsumFallback(topic, index) {
+  const seedBase = Date.now().toString(36);
+  const coverSeed = 'work-' + seedBase + '-' + index + '-c';
+  const bodySeed = 'work-' + seedBase + '-' + index + '-b';
   return {
-    coverUrl: `https://picsum.photos/seed/${coverSeed}/1200/675.jpg`,
-    bodyUrl: `https://picsum.photos/seed/${bodySeed}/1000/550.jpg`
+    coverUrl: 'https://picsum.photos/seed/' + coverSeed + '/1200/675.jpg',
+    bodyUrl: 'https://picsum.photos/seed/' + bodySeed + '/1000/550.jpg',
+    bodyAlt: topic + ' guide'
   };
 }
 
+function imageTopicTerms(topic) {
+  const stopWords = new Set(['the', 'and', 'for', 'with', 'from', 'about', 'what', 'when', 'how', 'guide', 'problem']);
+  return String(topic || '').toLowerCase().split(/\s+/)
+    .map((term) => term.trim())
+    .filter((term) => term.length > 1 && !stopWords.has(term));
+}
+
+async function getPostImages(topic, index, langCode = 'en') {
+  const fallback = () => getPicsumFallback(topic, index);
+  if (!PEXELS_API_KEY) {
+    if (!pexelsFallbackWarningShown) {
+      console.warn('⚠️ PEXELS_API_KEY가 없어 기존 Picsum 이미지로 안전하게 대체합니다. Pexels를 사용하려면 GitHub Actions Secret에 키를 설정해야 합니다.');
+      pexelsFallbackWarningShown = true;
+    }
+    return fallback();
+  }
+
+  const query = String(topic || '').trim().slice(0, 100);
+  if (!query) {
+    if (!pexelsFallbackWarningShown) {
+      console.warn('⚠️ 주제가 비어 있어 기존 Picsum 이미지로 대체합니다.');
+      pexelsFallbackWarningShown = true;
+    }
+    return fallback();
+  }
+
+  const locale = PEXELS_LOCALE_BY_LANG[langCode] || 'en-US';
+  const cacheKey = locale + '|' + query.toLowerCase();
+  try {
+    let photos = PEXELS_IMAGE_CACHE.get(cacheKey);
+    if (!photos) {
+      const url = 'https://api.pexels.com/v1/search?query=' + encodeURIComponent(query)
+        + '&per_page=40&orientation=landscape&locale=' + encodeURIComponent(locale);
+      const response = await fetch(url, {
+        headers: { Authorization: PEXELS_API_KEY },
+        signal: AbortSignal.timeout(12000)
+      });
+      if (!response.ok) throw new Error('Pexels HTTP ' + response.status);
+      const payload = await response.json();
+      photos = Array.isArray(payload.photos) ? payload.photos : [];
+      PEXELS_IMAGE_CACHE.set(cacheKey, photos);
+    }
+
+    const terms = imageTopicTerms(query);
+    const candidates = photos
+      .filter((photo) => photo && photo.id && photo.src && (photo.src.landscape || photo.src.large))
+      .map((photo, order) => {
+        const alt = String(photo.alt || '').trim();
+        const altLower = alt.toLowerCase();
+        const score = terms.reduce((sum, term) => sum + (altLower.includes(term) ? 1 : 0), 0);
+        return { photo, order, score, alt };
+      })
+      .sort((a, b) => b.score - a.score || a.order - b.order);
+
+    const unique = [];
+    const seenIds = new Set();
+    for (const candidate of candidates) {
+      const id = String(candidate.photo.id);
+      if (seenIds.has(id)) continue;
+      seenIds.add(id);
+      unique.push(candidate);
+      if (unique.length === 2) break;
+    }
+    if (unique.length < 2) throw new Error('Pexels 검색에서 서로 다른 사진 2장을 찾지 못했습니다.');
+
+    return {
+      coverUrl: unique[0].photo.src.landscape || unique[0].photo.src.large,
+      bodyUrl: unique[1].photo.src.landscape || unique[1].photo.src.large,
+      coverAlt: unique[0].alt || query,
+      bodyAlt: unique[1].alt || query
+    };
+  } catch (error) {
+    if (!pexelsFallbackWarningShown) {
+      console.warn('⚠️ Pexels 사진 검색에 실패해 기존 Picsum 이미지로 대체합니다: ' + error.message);
+      pexelsFallbackWarningShown = true;
+    }
+    return fallback();
+  }
+}
 // =========================================================================
 // 한국 시간(KST) 기준 안전한 당일 발행 날짜 생성 함수
 // =========================================================================
@@ -350,7 +441,7 @@ async function generateSinglePost(lang, index) {
 
   console.log(`\n🚀 [${index + 1}/12] ${lang.name} (${lang.code}) 3호기 애드센스 표준 생성 중... (테마: ${selectedTheme.name})`);
 
-  const { coverUrl, bodyUrl } = getPostImages(currentTopic, index);
+  const { coverUrl, bodyUrl, bodyAlt } = await getPostImages(currentTopic, index, lang.code);
   const pubDateIso = getKstPublishDateIso();
 
   // 🎯 [애드센스 승인 최적화 프롬프트: 2,400~2,600자 정량화]
@@ -444,7 +535,7 @@ theme: "${selectedTheme.name}"
 
       // 본문 중간 이미지 배치 (2번 섹션 직전)
       const safeAlt = currentTopic.replace(/[\[\]\(\)"']/g, '').trim();
-      const middleImageMarkdown = `\n\n![${safeAlt} AI Automation Guide](${bodyUrl})\n\n`;
+      const middleImageMarkdown = `\n\n![${bodyAlt || safeAlt}](${bodyUrl})\n\n`;
 
       if (body.includes('## 2.')) {
         body = body.replace(/(##\s*2\.[^\n]+)/, `${middleImageMarkdown}$1`);

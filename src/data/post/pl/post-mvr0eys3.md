@@ -12,9 +12,9 @@ theme: "Matte Black stealth"
 
 Zegar w warszawskim centrum biznesowym nieubłaganie wskazywał godzinę 17:15, a na biurku starszego menedżera compliance spoczywało nowe, opasłe tomiszcze – 150-stronicowy dokument PDF zawierający najnowsze, skomplikowane regulacje prawne i wewnętrzne procedury nadzoru finansowego. Presja ze strony zarządu była gigantyczna, ponieważ kluczowa prezentacja strategiczna miała odbyć się następnego dnia o 9:00 rano, a zarząd oczekiwał precyzyjnego streszczenia kluczowych zmian oraz analizy ryzyka prawnego. Tradycyjne metody czytania i ręcznego wypisywania notatek w tym tempie stawały się fizyczną niemożliwością, co groziło całkowitym fiaskiem projektu i poważnymi konsekwencjami wizerunkowymi dla całego działu analitycznego.
 
-W obliczu kryzysu zespół postanowił sięgnąć po zaawansowane narzędzie sztucznej inteligencji, Claude 3.5 Sonnet, słynące ze swojej niezrównanej zdolności do głębokiej analizy tekstu i zaawansowanego rozumienia kontekstu biznesowego. Niestety, w momencie próby system wklejania danych natychmiast zablokował się, wyrzucając krytyczny błąd bezpieczeństw
+W obliczu kryzysu zespół postanowił sięgnąć po zaawansowane narzędzie sztucznej inteligencji, Claude 3.5 Sonnet, słynące ze swojej niezrównanej zdolności do głębokiej analizy tekstu i zaawansowanego rozumienia kontekstu biznesowego. Niestety, w momencie próby system wklejania danych natychmiast zablokował się, wyrzucając krytyczny błąd bezpieczeństwa.
 
-**A.** Okazało się, że surowe przepisy wewnętrzne dotyczące ochrony danych osobowych i tajemnicy przedsiębiorstwa kategorycznie zabraniają przesyłania niezaszyfrowanych dokumentów zawierających wrażliwe identyfikatory klientów oraz wewnętrzne wskaźniki ryzyka bezpośrednio do zewnętrznych chmur AI bez uprzedniej anonimizacji. Zespół znalazł się w klasycznym punkcie ślepym: z jednej strony pilna potrzeba automatyzacji i przyspieszenia pracy, z drugiej zaś rygorystyczne bariery prawne i technologiczne.
+Okazało się, że surowe przepisy wewnętrzne dotyczące ochrony danych osobowych i tajemnicy przedsiębiorstwa kategorycznie zabraniają przesyłania niezaszyfrowanych dokumentów zawierających wrażliwe identyfikatory klientów oraz wewnętrzne wskaźniki ryzyka bezpośrednio do zewnętrznych chmur AI bez uprzedniej anonimizacji. Zespół znalazł się w klasycznym punkcie ślepym: z jednej strony pilna potrzeba automatyzacji i przyspieszenia pracy, z drugiej zaś rygorystyczne bariery prawne i technologiczne.
 
 Przez kolejne dwie godziny podejmowano rozpaczliwe próby ręcznego wycinania fragmentów tekstu, co w praktyce okazało się totalną porażką. Kopiowanie mniejszych partii dokumentu prowadziło do utraty spójności kontekstowej, a algorytmy AI bez globalnego podsumowania gubiły kluczowe powiązania między rozdziałami dotyczącymi kar administracyjnych a nowymi wymogami sprawozdawczymi. Co gorsza, ręczna cenzura danych osobowych za pomocą podstawowych funkcji znajdź i zamień w edytorze tekstowym generowała liczne błędy ludzkie – w tekście wciąż pozostawały ukryte numery kont oraz specyficzne identyfikatory transakcyjne, co uniemożliwiało bezpieczne wykorzystanie jakiegokolwiek modelu chmurowego.
 
@@ -28,16 +28,16 @@ Stawka była niezwykle wysoka, a ryzyko wycieku poufnych danych powstrzymywało 
 
 Głównym źródłem paraliżu systemu w opisanym scenariuszu była fundamentalna niezgodność między architekturą przetwarzania języka naturalnego w modelach chmurowych a lokalnymi politykami DLP (Data Loss Prevention). Modele takie jak Claude 3.5 Sonnet operują na tokenach tekstowych i analizują całe sekwencje danych w pamięci podręcznej kontekstu, co oznacza, że każde przesłane słowo trafia do silnika uwagi. Jeśli dokument PDF zawiera surowe dane wrażliwe (PII), algorytmy filtrujące po stronie bramy sieciowej przedsiębiorstwa natychmiast przerywają połączenie TCP, generując błąd protokołu HTTPS lub blokadę polityki bezpieczeństwa, co uniemożliwia przesłanie pliku.
 
-Kolejnym technicznym wąskim gardłem okazał się sam format plików PDF o dużej objętości. Dokumenty regulacyjne często zawierają zagnieżdżone tablice, wykresy rastrowe oraz skomplikowane formatowanie dwukolumnowe, które przy tradycyjnym kopiowaniu tekstu rozpadają się na bezładny ciąg znaków. Kiedy użytkownicy próbują przekazać taki niesformatowany blok danych do AI, model traci strukturę hierarchiczną nagłówków, co drastycznie obniża jakość generowanego streszczeni
+Kolejnym technicznym wąskim gardłem okazał się sam format plików PDF o dużej objętości. Dokumenty regulacyjne często zawierają zagnieżdżone tablice, wykresy rastrowe oraz skomplikowane formatowanie dwukolumnowe, które przy tradycyjnym kopiowaniu tekstu rozpadają się na bezładny ciąg znaków. Kiedy użytkownicy próbują przekazać taki niesformatowany blok danych do AI, model traci strukturę hierarchiczną nagłówków, co drastycznie obniża jakość generowanego streszczenia.
 
-**A.** Ponadto, lokalne narzędzia do redakcji tekstu często zawodziły przy masowym usuwaniu wzorców danych, ponieważ nie uwzględniały niestandardowych formatów zapisów prawnych, takich jak specyficzne sygnatury akt czy wewnętrzne kody korelacji.
+Ponadto, lokalne narzędzia do redakcji tekstu często zawodziły przy masowym usuwaniu wzorców danych, ponieważ nie uwzględniały niestandardowych formatów zapisów prawnych, takich jak specyficzne sygnatury akt czy wewnętrzne kody korelacji.
 
 <div style="border-left: 4px solid #ffffff; padding: 14px 18px; margin: 24px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Wskazówka architektoniczn
+<strong>Wskazówka architektoniczna.</strong> Przetwarzanie wielostronicowych dokumentów prawnych wymaga oddzielenia warstwy ekstrakcji tekstu od warstwy inferencji AI przy jednoczesnym zastosowaniu lokalnego skryptu maskującego, który działa jako bufor bezpieczeństwa.
 
-**A.** </strong> Przetwarzanie wielostronicowych dokumentów prawnych wymaga oddzielenia warstwy ekstrakcji tekstu od warstwy inferencji AI przy jednoczesnym zastosowaniu lokalnego skryptu maskującego, który działa jako bufor bezpieczeństw
 
-**A.** </div>
+
+</div>
 
 Warto również zwrócić uwagę na ograniczenia limitu okna kontekstowego oraz wydajność tokenizacji przy przesyłaniu 150 stron tekstu naraz. Nawet modele o dużym oknie kontekstowym mogą pominąć subtelne detale prawne, jeśli dane wejściowe są zaszufladkowane bez wyraźnych znaczników sekcji. Próby automatycznego dzielenia pliku na mniejsze części za pomocą skryptów niskiej jakości prowadziły do utraty spójności definicji prawnych, co skutkowało błędnymi wnioskami w wygenerowanym przez AI podsumowaniu.
 
@@ -99,14 +99,38 @@ Drugim kluczowym aspektem utrzymania stabilności środowiska automatyzacji jest
 
 ## 5. Najczęściej zadawane pytania (FAQ)
 
-**Q1.** Dlaczego zwykłe kopiowanie tekstu ze 150-stronicowego pliku PDF bezpośrednio do Claude 3.5 Sonnet kończy się błędem lub niepełnym podsumowaniem?
 
-**A1.** Bezpośrednie kopiowanie tak ogromnych bloków tekstowych często przekracza optymalne limity tokenizacji wejściowej oraz powoduje zerwanie ciągłości formatowania dwukolumnowego i tabelarycznego. Ponadto, algorytmy DLP (Data Loss Prevention) zainstalowane na bramkach sieciowych większości korporacji automatycznie blokują przesyłanie niesformatowanych plików zawierających potencjalne identyfikatory wrażliwe. Podział dokumentu na mniejsze, ustrukturyzowane fragmenty połączony z lokalną anonimizacją eliminuje te problemy, zapewniając pełną poprawność analizy.
 
-**Q2.** Czy skrypt w Pythonie oparty na bibliotece pypdf w 100% gwarantuje usunięcie wszystkich danych wrażliwych przed wysłaniem do AI?
 
-**A2.** Skrypt oparty na podstawowych wyrażeniach regularnych (regex) stanowi pierwszą i bardzo skuteczną linię obrony, jednak nie gwarantuje stuprocentowej eliminacji nietypowych lub ukrytych danych osobowych o niestandardowej strukturze. Wyrażenia regularne skutecznie radzą sobie z numerami PESEL, NIP czy adresami email, ale specyficzne opisy zdarzeń czy unikalne nazwy wewnętrzne projektów wymagają dodatkowego, ręcznego przeglądu lub zastosowania zaawansowanych modeli NLP dedykowanych do maskowania danych (NER).
 
-**Q3.** W jaki sposób zweryfikować, czy wygenerowane przez Claude 3.5 Sonnet podsumowanie nie pomija kluczowych zmian w przepisach prawnych?
+Q1. Dlaczego zwykłe kopiowanie tekstu ze 150-stronicowego pliku PDF bezpośrednio do Claude 3.5 Sonnet kończy się błędem lub niepełnym podsumowaniem?
 
-**A3.** Najlepszą praktyką analityczną jest zastosowanie techniki weryfikacji krzyżowej poprzez zadanie modelowi precyzyjnych pytań kontrolnych dotyczących konkretnych artykułów lub kar finansowych wymienionych w spisie treści oryginalnego dokumentu. Ponieważ podzieliliśmy tekst na mniejsze bloki, warto poprosić model o wskazanie numerów stron, na których oparto poszczególne wnioski. Dzięki temu audytor może błyskawicznie odnaleźć dany fragment w oryginalnym, zarchiwizowanym pliku źródłowym i potwierdzić zgodność stanu faktycznego.
+
+
+
+
+A1. Bezpośrednie kopiowanie tak ogromnych bloków tekstowych często przekracza optymalne limity tokenizacji wejściowej oraz powoduje zerwanie ciągłości formatowania dwukolumnowego i tabelarycznego. Ponadto, algorytmy DLP (Data Loss Prevention) zainstalowane na bramkach sieciowych większości korporacji automatycznie blokują przesyłanie niesformatowanych plików zawierających potencjalne identyfikatory wrażliwe. Podział dokumentu na mniejsze, ustrukturyzowane fragmenty połączony z lokalną anonimizacją eliminuje te problemy, zapewniając pełną poprawność analizy.
+
+
+
+
+
+Q2. Czy skrypt w Pythonie oparty na bibliotece pypdf w 100% gwarantuje usunięcie wszystkich danych wrażliwych przed wysłaniem do AI?
+
+
+
+
+
+A2. Skrypt oparty na podstawowych wyrażeniach regularnych (regex) stanowi pierwszą i bardzo skuteczną linię obrony, jednak nie gwarantuje stuprocentowej eliminacji nietypowych lub ukrytych danych osobowych o niestandardowej strukturze. Wyrażenia regularne skutecznie radzą sobie z numerami PESEL, NIP czy adresami email, ale specyficzne opisy zdarzeń czy unikalne nazwy wewnętrzne projektów wymagają dodatkowego, ręcznego przeglądu lub zastosowania zaawansowanych modeli NLP dedykowanych do maskowania danych (NER).
+
+
+
+
+
+Q3. W jaki sposób zweryfikować, czy wygenerowane przez Claude 3.5 Sonnet podsumowanie nie pomija kluczowych zmian w przepisach prawnych?
+
+
+
+
+
+A3. Najlepszą praktyką analityczną jest zastosowanie techniki weryfikacji krzyżowej poprzez zadanie modelowi precyzyjnych pytań kontrolnych dotyczących konkretnych artykułów lub kar finansowych wymienionych w spisie treści oryginalnego dokumentu. Ponieważ podzieliliśmy tekst na mniejsze bloki, warto poprosić model o wskazanie numerów stron, na których oparto poszczególne wnioski. Dzięki temu audytor może błyskawicznie odnaleźć dany fragment w oryginalnym, zarchiwizowanym pliku źródłowym i potwierdzić zgodność stanu faktycznego.

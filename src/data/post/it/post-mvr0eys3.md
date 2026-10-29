@@ -42,9 +42,9 @@ Per ripristinare l'integrità del sistema e automatizzare la gestione dei docume
 
 Questo approccio sfrutta gli strumenti nativi dell'interfaccia utente per individuare, reindirizzare o rimuovere i collegamenti interrotti senza rischiare la perdita di dati storici importanti.
 
-1. Aprire la cartella di lavoro principale che presenta i messaggi di avviso e ignorare temporaneamente il caricamento dei collegamenti esterni cliccando su `Disattiva aggiornamento` se richiesto dall'avviso di sicurezz
+1. Aprire la cartella di lavoro principale che presenta i messaggi di avviso e ignorare temporaneamente il caricamento dei collegamenti esterni cliccando su `Disattiva aggiornamento` se richiesto dall'avviso di sicurezza.
 
-**A.** 2. Navigare nella barra multifunzione superiore, selezionare la scheda `Dati` e individuare il gruppo `Connessioni`.
+2. Navigare nella barra multifunzione superiore, selezionare la scheda `Dati` e individuare il gruppo `Connessioni`.
 3. Cliccare sul pulsante `Modifica collegamenti` per aprire la finestra di dialogo dedicata che elenca tutte le origini esterne associate al documento.
 4. Esaminare lo stato di ciascun collegamento: quelli contrassegnati come `Errore: Origine non trovata` richiedono un intervento immediato.
 5. Selezionare il collegamento danneggiato e cliccare sul pulsante `Cambia origine`.
@@ -100,8 +100,22 @@ Inoltre, l'utilizzo di componenti aggiuntivi di terze parti o di macro scaricate
 
 ## 5. Domande Frequenti (FAQ)
 
-Q1.** Come posso evitare che i collegamenti Excel si rompano ogni volta che un collega sposta un file di supporto in un'altra cartella di rete? A1.** Per prevenire definitivamente questo problema, è consigliabile convertire i collegamenti basati su percorsi assoluti in collegamenti basati su percorsi relativi, oppure migrare l'intera logica di importazione dati all'interno di Power Query. Power Query memorizza i passaggi di connessione in modo strutturato e consente di aggiornare il percorso di origine centrale attraverso un'unica interfaccia, evitando che le singole formule di cella si disallineino a causa di modifiche minori alle directory di rete.Q2.** È possibile automatizzare l'estrazione di informazioni chiave da un PDF normativo di 150 pagine senza rischiare errori di interpretazione umana? A2.** Certamente, l'utilizzo di modelli di intelligenza artificiale avanzati come Claude 3.5 Sonnet, dotati di ampie finestre di contesto, permette di caricare l'intero documento PDF e di interrogare direttamente il testo tramite prompt mirati. Per ottenere risultati privi di errori, è opportuno suddividere l'analisi in sezioni tematiche specifiche e richiedere esplicitamente all'AI di citare i numeri di pagina e i paragrafi di riferimento per ogni singola clausola o conformità individuat
 
-**A.
 
-**Q3.** Quali sono i rischi legati all'attivazione di macro sconosciute quando si aprono file Excel ricevuti da reparti esterni? A3.** L'attivazione di macro non verificate può consentire l'esecuzione di codice malevolo in background, compromettendo la sicurezza dell'intera rete aziendale e portando alla corruzione dei dati finanziari presenti nelle cartelle di lavoro aperte. È fondamentale mantenere sempre attivo il livello di protezione elevato di Excel, esaminando preventivamente il codice sorgente tramite l'editor VBA e autorizzando l'esecuzione esclusivamente di script provenienti da fonti interne certificate e validate dal dipartimento IT.
+Q1. Come posso evitare che i collegamenti Excel si rompano ogni volta che un collega sposta un file di supporto in un'altra cartella di rete? 
+
+A1. Per prevenire definitivamente questo problema, è consigliabile convertire i collegamenti basati su percorsi assoluti in collegamenti basati su percorsi relativi, oppure migrare l'intera logica di importazione dati all'interno di Power Query. Power Query memorizza i passaggi di connessione in modo strutturato e consente di aggiornare il percorso di origine centrale attraverso un'unica interfaccia, evitando che le singole formule di cella si disallineino a causa di modifiche minori alle directory di rete.
+
+Q2. È possibile automatizzare l'estrazione di informazioni chiave da un PDF normativo di 150 pagine senza rischiare errori di interpretazione umana? 
+
+A2. Certamente, l'utilizzo di modelli di intelligenza artificiale avanzati come Claude 3.5 Sonnet, dotati di ampie finestre di contesto, permette di caricare l'intero documento PDF e di interrogare direttamente il testo tramite prompt mirati. Per ottenere risultati privi di errori, è opportuno suddividere l'analisi in sezioni tematiche specifiche e richiedere esplicitamente all'AI di citare i numeri di pagina e i paragrafi di riferimento per ogni singola clausola o conformità individuata.
+
+A.
+
+
+
+
+
+Q3. Quali sono i rischi legati all'attivazione di macro sconosciute quando si aprono file Excel ricevuti da reparti esterni? 
+
+A3. L'attivazione di macro non verificate può consentire l'esecuzione di codice malevolo in background, compromettendo la sicurezza dell'intera rete aziendale e portando alla corruzione dei dati finanziari presenti nelle cartelle di lavoro aperte. È fondamentale mantenere sempre attivo il livello di protezione elevato di Excel, esaminando preventivamente il codice sorgente tramite l'editor VBA e autorizzando l'esecuzione esclusivamente di script provenienti da fonti interne certificate e validate dal dipartimento IT.

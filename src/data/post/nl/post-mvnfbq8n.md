@@ -22,9 +22,9 @@ Het was half vijf op een regenachtige donderdagmiddag in ons kantoor aan de Gust
 
 Voordat we ontdekten hoe we Claude 3.5 Sonnet optimaal konden inzetten voor dit soort enorme documenten, liepen we structureel tegen dezelfde drie muren aan:
 
-* **De beperking van traditionele PDF-tools:** Standaard pdf-lezers kunnen wel zoeken, maar missen de contextuele intelligentie om juridische nuances en compliance-risico's uit een document van 150 pagina's te filteren.
-* **Datavervuiling door export:** De query-export vanuit onze interne database bevatte talloze verborgen regeleinden en voorloopspaties. AI-modellen raakten daardoor de draad kwijt, waardoor de gegenereerde samenvatting onsamenhangend of incompleet werd.
-* **Contextvenster-overbelasting:** Eerdere pogingen met verouderde modellen liepen vast op de enorme hoeveelheid tokens, waardoor het model halverwege het document simpelweg begon te hallucineren of belangrijke paragrafen oversloeg.
+* <strong>De beperking van traditionele PDF-tools:</strong> Standaard pdf-lezers kunnen wel zoeken, maar missen de contextuele intelligentie om juridische nuances en compliance-risico's uit een document van 150 pagina's te filteren.
+* <strong>Datavervuiling door export:</strong> De query-export vanuit onze interne database bevatte talloze verborgen regeleinden en voorloopspaties. AI-modellen raakten daardoor de draad kwijt, waardoor de gegenereerde samenvatting onsamenhangend of incompleet werd.
+* <strong>Contextvenster-overbelasting:</strong> Eerdere pogingen met verouderde modellen liepen vast op de enorme hoeveelheid tokens, waardoor het model halverwege het document simpelweg begon te hallucineren of belangrijke paragrafen oversloeg.
 
 ## 3. Stappenplan voor een feilloze AI-samenvatting
 
@@ -59,9 +59,9 @@ Formateer het antwoord in duidelijke koppen en bullet points.
 
 Bij het werken met gevoelige bedrijfsdocumenten en wetgeving via externe AI-tools is voorzichtigheid geboden. Houd rekening met de volgende richtlijnen:
 
-* **Controleer op privacy:** Zorg ervoor dat vertrouwelijke cliëntgegevens of privacygevoelige persoonsgegevens (AVG/GDPR) altijd worden geanonimiseerd voordat je ze uploadt naar een cloudgebaseerde AI-omgeving.
-* **Hanteer het human-in-the-loop principe:** Gebruik de output van Claude 3.5 Sonnet als een uiterst krachtige eerste versie (draft), maar laat een specialist de finale juridische controle uitvoeren voordat het naar het management gaat.
-* **Maak gebruik van versiebeheer:** Sla succesvolle prompts op in een gedeelde teammap zodat iedereen dezelfde gestandaardiseerde kwaliteit kan behalen bij toekomstige wetgevingswijzigingen.
+* <strong>Controleer op privacy:</strong> Zorg ervoor dat vertrouwelijke cliëntgegevens of privacygevoelige persoonsgegevens (AVG/GDPR) altijd worden geanonimiseerd voordat je ze uploadt naar een cloudgebaseerde AI-omgeving.
+* <strong>Hanteer het human-in-the-loop principe:</strong> Gebruik de output van Claude 3.5 Sonnet als een uiterst krachtige eerste versie (draft), maar laat een specialist de finale juridische controle uitvoeren voordat het naar het management gaat.
+* <strong>Maak gebruik van versiebeheer:</strong> Sla succesvolle prompts op in een gedeelde teammap zodat iedereen dezelfde gestandaardiseerde kwaliteit kan behalen bij toekomstige wetgevingswijzigingen.
 
 ## 5. Veelgestelde vragen
 

@@ -8,14 +8,10 @@ tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]
 theme: "Rosewood Hardware Guide"
 ---
 
-## 1. Awaryjna sytuacja i paraliż pracy w biurze
-
 Godzina 17:40 w biurze w samym sercu warszawskiego centrum biznesowego. Za dwadzieścia minut mam wysłać do zarządu zbiorczy raport wydatków kwartalnych, a na biurku leży stos papierowych faktur od dostawców. Trzy z nich są zgniecione, a jedna ma tak blady wydruk z termicznej kasy, że tekst prawie zanikł. Próba ręcznego wpisywania pozycji do Excela skończyła się katastrofą: pomyliłem NIP, rozjechały się sumy kontrolne, a formuły zaczęły krzyczeć błędami typu #ARG! i #ADR!. Kiedy ręce opadają, a czas ucieka, tradycyjne przepisywanie danych to prosta droga do nerwicy.
 
 <div style="border-left: 4px solid #be123c; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Awaryjny sygnał z biur
-
-A. </strong> Nigdy więcej ręcznego wklepywania danych z papieru! Ten przewodnik pokaże Ci, jak w 3 krokach zamienić bezużyteczny skan w gotową tabelę Excela bez wydawania ani grosza na drogie oprogramowanie komercyjne.
+<strong>Awaryjny sygnał z biura:</strong> Nigdy więcej ręcznego wklepywania danych z papieru! Ten przewodnik pokaże Ci, jak w 3 krokach zamienić bezużyteczny skan w gotową tabelę Excela bez wydawania ani grosza na drogie oprogramowanie komercyjne.
 </div>
 
 ![AI Productivity & Workflow Automation](https://picsum.photos/seed/office167/1000/550)
@@ -24,13 +20,11 @@ A. </strong> Nigdy więcej ręcznego wklepywania danych z papieru! Ten przewodni
 
 Zanim przejdziemy do skutecznego rozwiązania, warto zrozumieć, dlaczego zwykłe kopiowanie i proste programy OCR często generują błędy:
 
-1. Zła jakość skanów i dokumentów termicznych: Faktury drukowane na papierze termicznym blakną, a zdjęcia robione smartfonem pod kątem mają zniekształconą perspektywę, której tradycyjny OCR nie potrafi poprawnie zinterpretować.
+1. <strong>Zła jakość skanów i dokumentów termicznych:</strong> Faktury drukowane na papierze termicznym blakną, a zdjęcia robione smartfonem pod kątem mają zniekształconą perspektywę, której tradycyjny OCR nie potrafi poprawnie zinterpretować.
+2. <strong>Niestandardowe układy tabel:</strong> Każdy dostawca ma inny wzór faktury. Automatyczne wykrywanie kolumn gubi się, gdy opis towaru przechodzi do następnej linii, a cena jednostkowa ląduje w kolumnie z ilością.
+3. <strong>Brak kontekstu walutowego i podatkowego:</strong> Zwykłe programy do odczytu tekstu widzą ciąg cyfr, ale nie rozróżniają kwoty netto, stawki VAT (np. 23%) oraz kwoty brutto, co powoduje totalny chaos w formułach arkusza.
 
-2. Niestandardowe układy tabel: Każdy dostawca ma inny wzór faktury. Automatyczne wykrywanie kolumn gubi się, gdy opis towaru przechodzi do następnej linii, a cena jednostkowa ląduje w kolumnie z ilością.
-
-3. Brak kontekstu walutowego i podatkowego: Zwykłe programy do odczytu tekstu widzą ciąg cyfr, ale nie rozróżniają kwoty netto, stawki VAT (np. 23%) oraz kwoty brutto, co powoduje totalny chaos w formułach arkusz
-
-A. ---
+---
 
 ## Krok po kroku: Jak przejść od skanu do czystego Excela
 
@@ -48,16 +42,12 @@ Przeciągnij swój plik do darmowego narzędzia AI (np. ChatGPT z funkcją zał�
 
 ### Krok 3: Wklejenie i finalne dopracowanie w Excelu
 Gdy AI wygeneruje gotową tabelę:
-1. Zaznacz wygenerowaną tabelę na ekranie i wybierz opcję Kopiuj.
-
-2. Otwórz swój arkusz Excela, kliknij wybraną komórkę, przejdź do zakładki Narzędzia główne > Wklej lub użyj skrótu Ctrl + Alt + V, wybierając formatowanie tekstowe.
-
-3. Jeśli liczby mają kropki zamiast przecinków (częsty problem po eksporcie z AI), zaznacz kolumnę z kwotami, naciśnij `Ctrl + H` (Znajdź i zamień), wpisz kropkę w pole "Znajdź" oraz przecinek w pole "Zamień na", a następnie kliknij Zamień wszystko.
+1. Zaznacz wygenerowaną tabelę na ekranie i wybierz opcję <strong>Kopiuj</strong>.
+2. Otwórz swój arkusz Excela, kliknij wybraną komórkę, przejdź do zakładki <strong>Narzędzia główne > Wklej</strong> lub użyj skrótu Ctrl + Alt + V, wybierając formatowanie tekstowe.
+3. Jeśli liczby mają kropki zamiast przecinków (częsty problem po eksporcie z AI), zaznacz kolumnę z kwotami, naciśnij `Ctrl + H` (Znajdź i zamień), wpisz kropkę w pole "Znajdź" oraz przecinek w pole "Zamień na", a następnie kliknij <strong>Zamień wszystko</strong>.
 
 <div style="border-left: 4px solid #be123c; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Wskazówka ekspert
-
-A. </strong> Aby uniknąć błędów w podsumowaniach, upewnij się, że kolumny z cenami mają w Excelu ustawiony format liczbowy lub walutowy, a nie tekstowy. Zwróć uwagę na zielone trójkąty w rogu komórek – jeśli się pojawią, kliknij je i wybierz "Konwertuj na liczbę".
+<strong>Wskazówka eksperta:</strong> Aby uniknąć błędów w podsumowaniach, upewnij się, że kolumny z cenami mają w Excelu ustawiony format liczbowy lub walutowy, a nie tekstowy. Zwróć uwagę na zielone trójkąty w rogu komórek – jeśli się pojawią, kliknij je i wybierz "Konwertuj na liczbę".
 </div>
 
 ---
@@ -68,10 +58,10 @@ A. </strong> Aby uniknąć błędów w podsumowaniach, upewnij się, że kolumny
 Jeśli pracujesz na dokumentach zawierających poufne dane klientów lub tajemnice przedsiębiorstwa, unikaj wrzucania ich do publicznych modeli AI w wersjach darmowych, które mogą uczyć się na Twoich danych. Korzystaj z narzędzi korporacyjnych zapewniających poufność lub lokalnych rozwiązań OCR wbudowanych w pakiety biurkowe (np. funkcje danych z obrazu w Excelu).
 
 ### Co zrobić, gdy AI przekręci nazwy specyficznych produktów lub specyficznych kodów kreskowych?
-Modele AI świetnie radzą sobie z językiem naturalnym, ale specyficzne kody magazynowe bywają trudne. Najlepszym sposobem jest dodanie do promptu słownika branżowego lub krótka korekta bezpośrednio po wklejeniu danych do Excela przy użyciu funkcji Filtr
+Modele AI świetnie radzą sobie z językiem naturalnym, ale specyficzne kody magazynowe bywają trudne. Najlepszym sposobem jest dodanie do promptu słownika branżowego lub krótka korekta bezpośrednio po wklejeniu danych do Excela przy użyciu funkcji Filtra.
 
-A. ### Czy Excel ma wbudowane narzędzie do odczytu danych ze zdjęć?
-Tak! W nowszych wersjach programu Excel (dla systemu Windows i Mac w ramach subskrypcji) w zakładce Dane znajdziesz opcję Z obrazu (Data from Picture). Narzędzie to automatycznie konwertuje zdjęcia tabel na żywe arkusze bez potrzeby korzystania z zewnętrznych stron internetowych.
+### Czy Excel ma wbudowane narzędzie do odczytu danych ze zdjęć?
+Tak! W nowszych wersjach programu Excel (dla systemu Windows i Mac w ramach subskrypcji) w zakładce <strong>Dane</strong> znajdziesz opcję <strong>Z obrazu</strong> (Data from Picture). Narzędzie to automatycznie konwertuje zdjęcia tabel na żywe arkusze bez potrzeby korzystania z zewnętrznych stron internetowych.
 
 ---
 

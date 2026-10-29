@@ -8,8 +8,6 @@ tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]
 theme: "Mint Fresh Engineering"
 ---
 
-## 1. Noodsituatie en knelpunt op de werkvloer
-
 Het is kwart voor negen 's ochtends in een kantoor aan de Amsterdamse Zuidas. Over precies vijftien minuten begint de cruciale budgetmeeting met de directie. Mijn bureau ligt bezaaid met gekreukelde papieren facturen en bonnetjes van leveranciers die ineens allemaal verwerkt moeten worden in één strakke prognose-spreadsheet. Mijn voorganger vertrok vorig jaar en liet dit papieren archief achter, en handmatig overtypen van tientallen regels met BTW-tarieven, factuurnummers en bedragen zou me minstens twee uur kosten. Mijn scherm knippert leeg, de koffie is op, en de paniek stijgt.
 
 Dit soort acute spreadsheetproblemen vlak voor een deadline zijn de ultieme test voor je werkmethoden. Urenlang cijfers overkloppen is nergens voor nodig in het tijdperk van gratis OCR (Optical Character Recognition) en AI. 
@@ -28,11 +26,9 @@ In dit artikel deel ik exact hoe je deze nachtmerrie binnen vijf minuten oplost 
 
 Voordat we naar de oplossing kijken, moeten we erkennen waarom de traditionele methode zo frustrerend is. Dit zijn de drie hoofdredenen waarom papieren facturen verwerken in Excel vaak spaak loopt:
 
-1. Menselijke typefouten: Na vijftig regels data verslapt je concentratie. Een komma die opeens een punt wordt, sloopt je hele som-formule in Excel.
-
-2. Onoverzichtelijke tabellen: Scans of foto's van papieren facturen hebben vaak rare hoeken, schaduwen of gekreukeld papier, waardoor traditionele PDF-converters onleesbare hiërogliefen spugen.
-
-3. Ontbrekende structuur: Zelfs als het tekst wordt, staat het vaak onder elkaar in plaats van netjes verdeeld over kolommen zoals *Datum*, *Leverancier*, *Omschrijving*, *Bedrag* en *BTW*.
+1. <strong>Menselijke typefouten:</strong> Na vijftig regels data verslapt je concentratie. Een komma die opeens een punt wordt, sloopt je hele som-formule in Excel.
+2. <strong>Onoverzichtelijke tabellen:</strong> Scans of foto's van papieren facturen hebben vaak rare hoeken, schaduwen of gekreukeld papier, waardoor traditionele PDF-converters onleesbare hiërogliefen spugen.
+3. <strong>Ontbrekende structuur:</strong> Zelfs als het tekst wordt, staat het vaak onder elkaar in plaats van netjes verdeeld over kolommen zoals *Datum*, *Leverancier*, *Omschrijving*, *Bedrag* en *BTW*.
 
 ---
 
@@ -59,11 +55,8 @@ Gebruik een directe, no-nonsense prompt die specifiek vraagt om output in tabell
 
 #### Stap 3: Plakken en controleren in Excel
 1. Open je Excel-werkblad.
-
 2. Selecteer de tabel die de AI heeft gegenereerd en druk op `Ctrl + C` (of `Cmd + C` op de Mac).
-
-3. Ga naar cel `A1` in Excel, klik met de rechtermuisknop en kies voor Plakken (of gebruik `Ctrl + V`).
-
+3. Ga naar cel `A1` in Excel, klik met de rechtermuisknop en kies voor <strong>Plakken</strong> (of gebruik `Ctrl + V`).
 4. Controleer even snel de sommen met een simpele `=SOM()` formule om te zien of alle cijfers correct zijn overgenomen.
 
 ---
@@ -71,20 +64,18 @@ Gebruik een directe, no-nonsense prompt die specifiek vraagt om output in tabell
 ### Expert Waarschuwing: Privacy en Data-veiligheid
 
 <div style="border-left: 4px solid #059669; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Let op bij gevoelige bedrijfsdat
-
-**A.** </strong> Upload nooit privacygevoelige persoonsgegevens, salarissen of uiterst vertrouwelijke concurrentiegevoelige contracten naar openbare gratis AI-tools zonder de privacy-instellingen te controleren. Voor standaard leveranciersfacturen met KvK-nummers en openbare zakelijke adressen is het geen probleem, maar anonimiseer waar nodig.
+<strong>Let op bij gevoelige bedrijfsdata:</strong> Upload nooit privacygevoelige persoonsgegevens, salarissen of uiterst vertrouwelijke concurrentiegevoelige contracten naar openbare gratis AI-tools zonder de privacy-instellingen te controleren. Voor standaard leveranciersfacturen met KvK-nummers en openbare zakelijke adressen is het geen probleem, maar anonimiseer waar nodig.
 </div>
 
 ---
 
 ### Veelgestelde Vragen (FAQ)
 
-1. Wat als mijn factuur in het buitenland is opgesteld met afwijkende valuta of datumnotaties?
+<strong>1. Wat als mijn factuur in het buitenland is opgesteld met afwijkende valuta of datumnotaties?</strong>
 Geef dit expliciet mee in je prompt aan de AI. Zeg bijvoorbeeld: *"Converteer alle datums naar de Nederlandse notatie (DD-MM-JJJJ) en behoud de originele valuta in een aparte kolom."* De AI past dit direct voor je aan voordat je het naar Excel kopieert.
 
-2. Kan ik meerdere facturen tegelijk verwerken?
+<strong>2. Kan ik meerdere facturen tegelijk verwerken?</strong>
 Jazeker. Je kunt meerdere foto's of een PDF met een multipagina-factuur tegelijk uploaden naar de AI-tool. Vraag de AI in de prompt om alle pagina's samen te voegen tot één doorlopende tabel, zodat je niet per bonnetje hoeft te knippen en plakken.
 
-3. Wat moet ik doen als Excel de geplakt data in één lange cel zet in plaats van nette kolommen?
-Als het plakken als één grote tekstblok binnenkomt, ga dan in Excel naar het tabblad Gegevens (Data) en kies voor Tekst naar kolommen. Selecteer 'Gescheiden' en vink het hokje voor 'Tabulator' aan. Binnen één klik staat alles netjes in aparte kolommen verdeeld.
+<strong>3. Wat moet ik doen als Excel de geplakt data in één lange cel zet in plaats van nette kolommen?</strong>
+Als het plakken als één grote tekstblok binnenkomt, ga dan in Excel naar het tabblad <strong>Gegevens</strong> (Data) en kies voor <strong>Tekst naar kolommen</strong>. Selecteer 'Gescheiden' en vink het hokje voor 'Tabulator' aan. Binnen één klik staat alles netjes in aparte kolommen verdeeld.

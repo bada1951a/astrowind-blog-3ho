@@ -8,31 +8,29 @@ tags: ["Claude AI", "Automatyzacja", "Biuro", "Warszawa"]
 theme: "Dracula Purple Dev"
 ---
 
-## 1. Awaryjna sytuacja i paraliż pracy w biurze
+## 1. [Opening Story/Problem]
 
-Wyobraź sobie standardowy poranek w biurze w warszawskim centrum biznesowym przy rondzie Daszyńskiego. Godzina 8:50, a na skrzynkę mailową właśnie wpada najgorsza możliwa wiadomość od dyrektora departamentu prawnego: „Słuchajcie, dostałem 150-stronicowy projekt nowych unijnych dyrektyw i krajowych regulacji compliance, które wchodzą w życie od następnego miesiąc
-
-A. Musimy wyciągnąć kluczowe ryzyka marketingowe dla naszych 50 nowych produktów. Na 11:00 potrzebuję precyzyjnego zestawienia i podsumowania zmian”. 
+Wyobraź sobie standardowy poranek w biurze w warszawskim centrum biznesowym przy rondzie Daszyńskiego. Godzina 8:50, a na skrzynkę mailową właśnie wpada najgorsza możliwa wiadomość od dyrektora departamentu prawnego: „Słuchajcie, dostałem 150-stronicowy projekt nowych unijnych dyrektyw i krajowych regulacji compliance, które wchodzą w życie od następnego miesiąca. Musimy wyciągnąć kluczowe ryzyka marketingowe dla naszych 50 nowych produktów. Na 11:00 potrzebuję precyzyjnego zestawienia i podsumowania zmian”. 
 
 W tym momencie próbujesz szybko wygenerować chociaż wstępny zarys za pomocą masowego promptowania w asystencie AI, licząc na szybki sukces. Jednak po kilku minutach okazuje się, że dostajesz 50 bezużytecznych, generycznych akapitów, które całkowicie rozmijają się z realiami Waszej marki, tonem komunikacji i specyfiką branży. Prompt nadaje się do kosza, a ty utknąłeś z ręką w nocniku, patrząc na tykający zegar i setki stron nudnego, prawniczego żargonu, którego nie sposób przetrawić ręcznie w dwie godziny.
 
+
+
 ![How to Summarize 150-Page Regulatory Compliance PDFs in 3 Minutes Using Claude 3.5 Sonnet AI Automation Guide](https://picsum.photos/seed/work-mvov16cc-9-b/1000/550.jpg)
 
-## 2. Szczegółowa analiza przyczyn błędów formuł i procesów
+## 2. Root Cause Breakdown
 
 Dlaczego tak się stało i dlaczego standardowe podejście do AI zawiodło w tym krytycznym momencie? Oto trzy główne przyczyny, które zazwyczaj psują pracę z dużymi dokumentami i generowaniem treści:
 
-* Przeciążenie kontekstu (Context Window Saturation): Wrzucenie 150 stron tekstu naraz do słabszego modelu lub bez odpowiedniej struktury sprawia, że sztuczna inteligencja "gubi" wątki i zaczyna halucynować, pomijając kluczowe paragrafy oraz definicje prawne.
-* Brak precyzyjnej inżynierii promptów kontekstowych: Zamiast nakierować model na konkretne wytyczne dotyczące tonu i struktury odpowiedzi, daliśmy mu zbyt ogólne polecenie typu "podsumuj ten dokument".
-* Mylenie celów biznesowych: Próba jednoczesnego streszczania dokumentu regulacyjnego i wymyślania kreatywnych treści marketingowych bez rozbicia tego na logiczne etapy operacyjne.
+* <strong>Przeciążenie kontekstu (Context Window Saturation):</strong> Wrzucenie 150 stron tekstu naraz do słabszego modelu lub bez odpowiedniej struktury sprawia, że sztuczna inteligencja "gubi" wątki i zaczyna halucynować, pomijając kluczowe paragrafy oraz definicje prawne.
+* <strong>Brak precyzyjnej inżynierii promptów kontekstowych:</strong> Zamiast nakierować model na konkretne wytyczne dotyczące tonu i struktury odpowiedzi, daliśmy mu zbyt ogólne polecenie typu "podsumuj ten dokument".
+* <strong>Mylenie celów biznesowych:</strong> Próba jednoczesnego streszczania dokumentu regulacyjnego i wymyślania kreatywnych treści marketingowych bez rozbicia tego na logiczne etapy operacyjne.
 
 <div style="border-left: 4px solid #bd93f9; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Wskazówka ekspert
-
-A. </strong> Claude 3.5 Sonnet radzi sobie genialnie z dużymi plikami PDF dzięki zaawansowanemu oknu kontekstowemu. Kluczem nie jest samo czytanie, ale poprawnie sformatowany prompt wstępny, który wymusza na modelu działanie w roli rygorystycznego analityka compliance.
+<strong>Wskazówka eksperta:</strong> Claude 3.5 Sonnet radzi sobie genialnie z dużymi plikami PDF dzięki zaawansowanemu oknu kontekstowemu. Kluczem nie jest samo czytanie, ale poprawnie sformatowany prompt wstępny, który wymusza na modelu działanie w roli rygorystycznego analityka compliance.
 </div>
 
-## 3. Praktyczne rozwiązanie automatyzujące krok po kroku
+## 3. Step-by-Step Resolution
 
 Aby uratować sytuację i wyciągnąć esencję ze 150-stronicowego dokumentu w zaledwie 3 minuty, wykonaj dokładnie te trzy kroki przy użyciu Claude 3.5 Sonnet:
 
@@ -62,23 +60,23 @@ Przygotuj tabelę zawierającą kolumny:
 ### Krok 3: Eksport i wdrożenie w zespole
 Skopiuj gotową tabelę bezpośrednio do arkusza Google Sheets lub programu Excel, klikając opcję kopiowania w rogu okna czatu Claude. Masz gotowy, profesjonalny materiał na spotkanie z dyrektorem na długo przed wyznaczoną godziną 11:00.
 
-## 4. Wskazówki i ostrzeżenia eksperta ds. automatyzacji
+## 4. Expert Advice
 
 Pracując z poufnymi dokumentami prawnymi i korporacyjnymi w narzędziach AI, zawsze miej na uwadze politykę bezpieczeństwa danych w swojej firmie (Data Privacy). 
 
-* **Zasada anonimizacji:** Jeśli dokument zawiera wrażliwe dane klientów, tajemnice handlowe lub klauzule zastrzeżone, upewnij się, że korzystasz z płatnej wersji korporacyjnej Claude, która gwarantuje, że Twoje dane nie są wykorzystywane do trenowania publicznych modeli.
-* Weryfikacja źródeł:Claude podaje numery stron – zawsze sprawdź przynajmniej dwie z nich manualnie, aby upewnić się, że model nie dokonał nadinterpretacji przepisów.
+* <strong>Zasada anonimizacji:</strong> Jeśli dokument zawiera wrażliwe dane klientów, tajemnice handlowe lub klauzule zastrzeżone, upewnij się, że korzystasz z płatnej wersji korporacyjnej Claude, która gwarantuje, że Twoje dane nie są wykorzystywane do trenowania publicznych modeli.
+* <strong>Weryfikacja źródeł:</strong> Claude podaje numery stron – zawsze sprawdź przynajmniej dwie z nich manualnie, aby upewnić się, że model nie dokonał nadinterpretacji przepisów.
 
-## 5. Najczęściej zadawane pytania (FAQ)
+## 5. Frequently Asked Questions
 
-Q. Czy Claude 3.5 Sonnet radzi sobie z dokumentami w języku polskim?
+Q: Czy Claude 3.5 Sonnet radzi sobie z dokumentami w języku polskim?
 
-A. Tak, model doskonale rozumie polską terminologię prawniczą, urzędową oraz biznesową, a także bez problemu przetwarza dokumenty zapisane w tym języku.
+A: Tak, model doskonale rozumie polską terminologię prawniczą, urzędową oraz biznesową, a także bez problemu przetwarza dokumenty zapisane w tym języku.
 
-Q. Co zrobić, gdy plik PDF jest skanem i zawiera teksty nieczytelne dla OCR?
+Q: Co zrobić, gdy plik PDF jest skanem i zawiera teksty nieczytelne dla OCR?
 
-A. Zanim wgrasz plik do Claude, upewnij się, że przeszedł on przez proces rozpoznawania tekstu (OCR) w programie takim jak Adobe Acrobat. Claude potrzebuje warstwy tekstowej, aby poprawnie odczytać dokument.
+A: Zanim wgrasz plik do Claude, upewnij się, że przeszedł on przez proces rozpoznawania tekstu (OCR) w programie takim jak Adobe Acrobat. Claude potrzebuje warstwy tekstowej, aby poprawnie odczytać dokument.
 
-Q. Czy mogę wgrać kilka plików naraz zamiast jednego 150-stronicowego molocha?
+Q: Czy mogę wgrać kilka plików naraz zamiast jednego 150-stronicowego molocha?
 
-A. Tak, Claude pozwala na wgrywanie wielu dokumentów jednocześnie. Możesz podzielić duży raport na mniejsze części lub wgrać regulację razem z wewnętrznym kodeksem etyki firmy, aby model porównał oba dokumenty.
+A: Tak, Claude pozwala na wgrywanie wielu dokumentów jednocześnie. Możesz podzielić duży raport na mniejsze części lub wgrać regulację razem z wewnętrznym kodeksem etyki firmy, aby model porównał oba dokumenty.

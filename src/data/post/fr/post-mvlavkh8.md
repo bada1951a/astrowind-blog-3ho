@@ -27,7 +27,7 @@ ASTUCE TERMINAL : Ne perdez plus une seule minute à coder des macros VBA comple
 Étape 1 : Préparer et formuler le prompt exact pour l'IA
 Au lieu de demander à ChatGPT de trier les données à notre place, nous allons lui demander de rédiger la formule Excel parfaite. Copiez-collez ce prompt dans votre interface I
 
-**A.** ```text
+```text
 Agis en expert absolu d'Excel. J'ai une colonne A contenant des adresses postales françaises suivies d'un numéro de téléphone au format international (par exemple : '15 rue de la Paix 75001 Paris +33123456789'). Fournis-moi deux formules Excel distinctes : une pour extraire uniquement l'adresse dans la colonne B, et une autre pour extraire uniquement le numéro de téléphone dans la colonne C. Pas de bavardage, donne-moi directement les formules adaptées aux versions récentes d'Excel.
 ```
 
@@ -44,14 +44,38 @@ AVERTISSEMENT SÉCURITÉ : Veillez à anonymiser ou masquer les données personn
 
 FAQ
 
-**Q1.** Puis-je utiliser cette méthode si mes données mélangent des formats fixes et des formats aléatoires ?
 
-**A1.** Oui, mais dans ce cas, il est préférable d'utiliser l'outil Power Query accessible via l'onglet Données > Obtenir des données, qui permet d'ajouter des colonnes conditionnelles basées sur des motifs textuels plutôt que des formules rigides.
 
-**Q2.** Comment faire si ChatGPT me donne une formule en anglais alors que mon Excel est en français ?
 
-**A2.** Précisez toujours dans votre prompt initial : "Attention, mon Excel utilise la version française, donne-moi les noms de fonctions en français (ex: NBCAR au lieu de LEN)".
 
-**Q3.** Que faire si la formule renvoie une erreur #VALEUR ! ?
+Q1. Puis-je utiliser cette méthode si mes données mélangent des formats fixes et des formats aléatoires ?
 
-**A3.** Cela signifie généralement qu'un caractère recherché (comme le signe + du téléphone ou une virgule) est absent sur certaines lignes. Demandez à l'IA d'intégrer une gestion d'erreur avec la fonction SI.ERREUR dans sa formule.
+
+
+
+
+A1. Oui, mais dans ce cas, il est préférable d'utiliser l'outil Power Query accessible via l'onglet Données > Obtenir des données, qui permet d'ajouter des colonnes conditionnelles basées sur des motifs textuels plutôt que des formules rigides.
+
+
+
+
+
+Q2. Comment faire si ChatGPT me donne une formule en anglais alors que mon Excel est en français ?
+
+
+
+
+
+A2. Précisez toujours dans votre prompt initial : "Attention, mon Excel utilise la version française, donne-moi les noms de fonctions en français (ex: NBCAR au lieu de LEN)".
+
+
+
+
+
+Q3. Que faire si la formule renvoie une erreur #VALEUR ! ?
+
+
+
+
+
+A3. Cela signifie généralement qu'un caractère recherché (comme le signe + du téléphone ou une virgule) est absent sur certaines lignes. Demandez à l'IA d'intégrer une gestion d'erreur avec la fonction SI.ERREUR dans sa formule.

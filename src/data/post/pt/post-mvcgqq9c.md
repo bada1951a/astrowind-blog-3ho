@@ -8,8 +8,6 @@ tags: ["Excel", "ChatGPT", "Python", "Produtividade", "Automação"]
 theme: "Industrial Blueprint"
 ---
 
-## 1. Situação de emergência e gargalo crítico no escritório
-
 Eram 18h45 de uma quinta-feira de fechamento de mês em nosso escritório na Berrini, em São Paulo. O ar-condicionado central já tinha desligado, a equipe financeira contava os minutos para ir embora, e a minha planilha consolidada de 45 megabytes simplesmente congelou ao tentar recalcular a aba de comissões. O ponteiro do mouse virou aquela rodinha infinita de carregamento e, segundos depois, a fatídica mensagem: *O Microsoft Excel parou de funcionar*. Sem salvar os últimos trinta minutos de ajustes manuais nas fórmulas PROCV e SOMASES. 
 
 Se você já passou pelo desespero de ver uma planilha gigante travar bem na hora de enviar o relatório para a diretoria, sabe exatamente o tamanho desse pânico. O problema é que, quando o arquivo ultrapassa dezenas de megabytes e acumula anos de cópias e colagens de diferentes fontes, o Excel nativo sofre para encontrar o gargalo. Ficar caçando fórmulas voláteis ou formatações condicionais corrompidas célula por célula é uma perda de tempo inaceitável.
@@ -19,9 +17,7 @@ Se você já passou pelo desespero de ver uma planilha gigante travar bem na hor
 A solução definitiva que adotou-se na nossa rotina envolve combinar a capacidade analítica do ChatGPT com um script em Python para inspecionar, depurar e otimizar o arquivo por dentro, sem precisar abrir a interface gráfica pesada do Excel.
 
 <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Diagnóstico de Engenhari
-
-A. </strong> O peso excessivo e os travamentos do Excel raramente são causados apenas pelo volume de dados. Na maioria das vezes, o problema reside em estruturas invisíveis corrompidas, excesso de estilos de células duplicados ou referências circulares ocultas.
+<strong>Diagnóstico de Engenharia:</strong> O peso excessivo e os travamentos do Excel raramente são causados apenas pelo volume de dados. Na maioria das vezes, o problema reside em estruturas invisíveis corrompidas, excesso de estilos de células duplicados ou referências circulares ocultas.
 </div>
 
 ---
@@ -30,11 +26,9 @@ A. </strong> O peso excessivo e os travamentos do Excel raramente são causados 
 
 Antes de aplicar a automação, vale entender os três principais vilões que derrubam o desempenho do Excel corporativo:
 
-1. Inchaço de Estilos (Styles Bloat): Cada vez que você copia e cola células de outros arquivos, o Excel importa a formatação junto. Planilhas antigas acumulam milhares de estilos de fontes e cores lixeira que pesam no motor de renderização.
-
-2. Fórmulas Voláteis em Excesso: Funções como `HOJE()`, `AGORA()`, `INDIRETO()` e `DESLOC()` forçam o Excel a recalcular a planilha inteira a cada mínima alteração feita em qualquer célul
-
-A. 3. Lixo de Intervalo (Used Range Corrupto): O Excel acha que seus dados vão até a linha 1.048.576 porque alguém acidentalmente apertou formatação na linha um milhão, gerando um processamento fantasma absurdo.
+1. <strong>Inchaço de Estilos (Styles Bloat):</strong> Cada vez que você copia e cola células de outros arquivos, o Excel importa a formatação junto. Planilhas antigas acumulam milhares de estilos de fontes e cores lixeira que pesam no motor de renderização.
+2. <strong>Fórmulas Voláteis em Excesso:</strong> Funções como `HOJE()`, `AGORA()`, `INDIRETO()` e `DESLOC()` forçam o Excel a recalcular a planilha inteira a cada mínima alteração feita em qualquer célula.
+3. <strong>Lixo de Intervalo (Used Range Corrupto):</strong> O Excel acha que seus dados vão até a linha 1.048.576 porque alguém acidentalmente apertou formatação na linha um milhão, gerando um processamento fantasma absurdo.
 
 ---
 
@@ -61,20 +55,19 @@ Copie o código fornecido, cole no seu ambiente Python (ou Google Colab), faça 
 
 ### Cuidados Importantes e Boas Práticas
 
-* Sigilo e LGPD: Se a sua planilha contém dados sensíveis de clientes ou salários da diretoria, nunca envie arquivos brutos diretamente para versões públicas de inteligência artificial. Nesses casos, substitua os valores numéricos por dados fictícios (mas mantendo a estrutura de fórmulas e abas) antes de pedir análises de código ao ChatGPT.
-* Sempre faça backup: Antes de rodar qualquer script de modificação de arquivos, faça uma cópia de segurança da planilha original na pasta de arquivos recentes.
-* Menu Arquivo > Opções: No dia a dia, lembre-se de configurar o cálculo do Excel para "Automático, exceto tabelas de dados" para evitar recálculos desnecessários enquanto você edit
+* <strong>Sigilo e LGPD:</strong> Se a sua planilha contém dados sensíveis de clientes ou salários da diretoria, <strong>nunca</strong> envie arquivos brutos diretamente para versões públicas de inteligência artificial. Nesses casos, substitua os valores numéricos por dados fictícios (mas mantendo a estrutura de fórmulas e abas) antes de pedir análises de código ao ChatGPT.
+* <strong>Sempre faça backup:</strong> Antes de rodar qualquer script de modificação de arquivos, faça uma cópia de segurança da planilha original na pasta de arquivos recentes.
+* <strong>Menu Arquivo > Opções:</strong> No dia a dia, lembre-se de configurar o cálculo do Excel para "Automático, exceto tabelas de dados" para evitar recálculos desnecessários enquanto você edita.
 
-A. ---
+---
 
 ### Perguntas Frequentes (FAQ)
 
-1. Preciso saber programar em Python para usar esse método?
+<strong>1. Preciso saber programar em Python para usar esse método?</strong>
 Zero conhecimento prévio em programação é necessário. O papel do usuário aqui é apenas de "diretor de orquestra": você explica o problema para o ChatGPT, copia o código pronto que ele gera, executa e colhe o resultado.
 
-2. Essa limpeza apaga minhas fórmulas ou formatações importantes?
+<strong>2. Essa limpeza apaga minhas fórmulas ou formatações importantes?</strong>
 Não. Os scripts focam em limpar o "lixo" estrutural que fica invisível (estilos duplicados acumulados ao longo de anos de cópia e cola e metadados corrompidos). Suas fórmulas de negócio, formatações condicionais válidas e dados permanecem intactos.
 
-Q. Posso usar o Google Colab para processar arquivos da empresa?
-
-A. Sim, o Google Colab roda na nuvem e é seguro para a grande maioria dos fluxos corporativos rotineiros. No entanto, se a sua empresa possui políticas rígidas de compliance contra ferramentas de nuvem externas, você pode rodar o mesmo código localmente instalando o Python e o pacote `openpyxl` via prompt de comando (`pip install openpyxl`).
+<strong>3. Posso usar o Google Colab para processar arquivos da empresa?</strong>
+Sim, o Google Colab roda na nuvem e é seguro para a grande maioria dos fluxos corporativos rotineiros. No entanto, se a sua empresa possui políticas rígidas de compliance contra ferramentas de nuvem externas, você pode rodar o mesmo código localmente instalando o Python e o pacote `openpyxl` via prompt de comando (`pip install openpyxl`).

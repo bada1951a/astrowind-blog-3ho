@@ -72,14 +72,38 @@ Achten Sie beim Zusammenführen internationaler Dateien immer darauf, dass die T
 
 ## 5. Häufig gestellte Fragen (FAQ)
 
-**Q1.** Was mache ich, wenn Excel die mit ChatGPT generierte Formel mit einem #WERT!-Fehler quittiert?
 
-**A1.** Das liegt meist daran, dass das Trennzeichen (z. B. ein Komma oder ein Punkt) in der jeweiligen Zelle fehlt oder das verwendete Excel-Format eine englische Funktionsbezeichnung statt der deutschen verlangt. Prüfen Sie, ob Sie TEXTSPLIT oder TEXTTEILEN verwenden, je nachdem, welche Spracheinstellung Ihr Excel hat.
 
-**Q2.** Kann ChatGPT die 12 Excel-Dateien direkt bearbeiten, ohne dass ich Formeln kopieren muss?
 
-**A2.** Wenn Sie die kostenpflichtige Version mit erweiterten Datenanalyse-Funktionen nutzen, können Sie kleine CSV-Dateien direkt hochladen und von ChatGPT ein Python-Skript generieren lassen, das die Dateien auf Ihrem Rechner bereinigt. Für sensible Unternehmensdaten im Finanzsektor empfiehlt sich jedoch das manuelle Einfügen von Formeln oder die Nutzung von lokalen Power-Query-Routinen.
 
-**Q3.** Wie verhindere ich, dass Excel beim Import von Telefonnummern die führende Null verschluckt?
+Q1. Was mache ich, wenn Excel die mit ChatGPT generierte Formel mit einem #WERT!-Fehler quittiert?
 
-**A3.** Formatieren Sie die Zielspalte in Excel vor dem Einfügen oder Importieren unbedingt als "Text" (nicht als Standard oder Zahl). Andernfalls interpretiert Excel die führende Null in internationalen Vorwahlen als mathematisches Format und löscht sie automatisch heraus.
+
+
+
+
+A1. Das liegt meist daran, dass das Trennzeichen (z. B. ein Komma oder ein Punkt) in der jeweiligen Zelle fehlt oder das verwendete Excel-Format eine englische Funktionsbezeichnung statt der deutschen verlangt. Prüfen Sie, ob Sie TEXTSPLIT oder TEXTTEILEN verwenden, je nachdem, welche Spracheinstellung Ihr Excel hat.
+
+
+
+
+
+Q2. Kann ChatGPT die 12 Excel-Dateien direkt bearbeiten, ohne dass ich Formeln kopieren muss?
+
+
+
+
+
+A2. Wenn Sie die kostenpflichtige Version mit erweiterten Datenanalyse-Funktionen nutzen, können Sie kleine CSV-Dateien direkt hochladen und von ChatGPT ein Python-Skript generieren lassen, das die Dateien auf Ihrem Rechner bereinigt. Für sensible Unternehmensdaten im Finanzsektor empfiehlt sich jedoch das manuelle Einfügen von Formeln oder die Nutzung von lokalen Power-Query-Routinen.
+
+
+
+
+
+Q3. Wie verhindere ich, dass Excel beim Import von Telefonnummern die führende Null verschluckt?
+
+
+
+
+
+A3. Formatieren Sie die Zielspalte in Excel vor dem Einfügen oder Importieren unbedingt als "Text" (nicht als Standard oder Zahl). Andernfalls interpretiert Excel die führende Null in internationalen Vorwahlen als mathematisches Format und löscht sie automatisch heraus.

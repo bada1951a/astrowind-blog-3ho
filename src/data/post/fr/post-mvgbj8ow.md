@@ -8,8 +8,6 @@ tags: ["Google Sheets", "Apps Script", "Automation", "Productivite"]
 theme: "Forest Emerald Bio"
 ---
 
-## 1. Situation d'urgence critique au bureau
-
 Il est 17h55 un vendredi au cœur de La Défense, et c'est la panique générale dans l'open space : le tableau de bord des KPIs de la semaine est resté bloqué sur une ancienne version Google Sheets, et le comité de direction s'attend à recevoir son rapport PDF avant 18h00 pile. Pendant que mon collègue s'acharne à exporter manuellement chaque onglet en PDF tout en pestant contre la mise en page qui saute, je me rappelle pourquoi j'ai arrêté de perdre mes vendredis soirs avec des tâches répétitives. 
 
 Si vous en avez assez de copier-coller des données, de générer des PDF à la main et de risquer l'oubli chaque semaine, cet article est votre passeport pour le week-end à l'heure. Voyons comment configurer un petit script Apps Script élégant qui s'occupe de tout, tout seul.
@@ -24,21 +22,19 @@ Si vous en avez assez de copier-coller des données, de générer des PDF à la 
 
 Avant de plonger dans le code, analysons pourquoi le processus actuel coince :
 
-1. L'oubli ou le retard stratégique : Pris dans une réunion de dernière minute, vous ratez l'horaire d'envoi et votre manager s'interroge sur l'avancement.
-
-2. La mise en page imprévisible : Exporter un Google Sheet en PDF de manière native via l'interface génère souvent des coupures de pages hasardeuses sur les graphiques.
-
-3. La fatigue opérationnelle : Répéter les mêmes clics (Fichier > Télécharger > Document PDF > Ouvrir Gmail > Joindre le fichier) chaque semaine est une source majeure d'erreurs d'inattention.
+1. <strong>L'oubli ou le retard stratégique :</strong> Pris dans une réunion de dernière minute, vous ratez l'horaire d'envoi et votre manager s'interroge sur l'avancement.
+2. <strong>La mise en page imprévisible :</strong> Exporter un Google Sheet en PDF de manière native via l'interface génère souvent des coupures de pages hasardeuses sur les graphiques.
+3. <strong>La fatigue opérationnelle :</strong> Répéter les mêmes clics (Fichier > Télécharger > Document PDF > Ouvrir Gmail > Joindre le fichier) chaque semaine est une source majeure d'erreurs d'inattention.
 
 ---
 
 ## Guide pas à pas : Votre premier script d'automatisation PDF
 
-Pas besoin d'être un développeur expert en Silicon Valley pour s'en sortir. Google Sheets intègre un environnement de développement complet basé sur JavaScript : Apps Script. Suivez ces étapes pour mettre en place votre robot d'envoi automatique.
+Pas besoin d'être un développeur expert en Silicon Valley pour s'en sortir. Google Sheets intègre un environnement de développement complet basé sur JavaScript : <strong>Apps Script</strong>. Suivez ces étapes pour mettre en place votre robot d'envoi automatique.
 
 ### Étape 1 : Ouvrir l'éditeur de script
 Dans votre Google Sheets, rendez-vous dans le menu supérieur, puis cliquez sur :
-> Extensions > Apps Script
+> <strong>Extensions > Apps Script</strong>
 
 ### Étape 2 : Coller le code d'automatisation
 Effacez tout code par défaut dans l'éditeur et collez le script ci-dessous. Ce script cible une plage spécifique de votre feuille, la convertit proprement en PDF aux dimensions adaptées, et l'envoie à votre liste de diffusion.
@@ -92,16 +88,11 @@ function envoyerRapportHebdoPDF() {
 
 ### Étape 3 : Automatiser l'envoi (Déclencheur)
 Pour que ce script s'exécute tout seul sans intervention humaine :
-1. Dans l'interface Apps Script, cliquez sur l'icône d'horloge à gauche (Déclencheurs).
-
-2. Cliquez sur Ajouter un déclencheur en bas à droite.
-
+1. Dans l'interface Apps Script, cliquez sur l'icône d'horloge à gauche (<strong>Déclencheurs</strong>).
+2. Cliquez sur <strong>Ajouter un déclencheur</strong> en bas à droite.
 3. Choisissez la fonction `envoyerRapportHebdoPDF`.
-
-4. Sélectionnez la source de l'événement : Basé sur le temps.
-
-5. Choisissez le type de déclencheur : Par semaine, puis sélectionnez votre jour (ex: Vendredi) et votre plage horaire (ex: 17h - 18h).
-
+4. Sélectionnez la source de l'événement : <strong>Basé sur le temps</strong>.
+5. Choisissez le type de déclencheur : <strong>Par semaine</strong>, puis sélectionnez votre jour (ex: Vendredi) et votre plage horaire (ex: 17h - 18h).
 6. Enregistrez et validez les autorisations de compte Google.
 
 <div style="border-left: 4px solid #10b981; padding: 12px 16px; margin: 20px 0; background-color: rgba(16, 185, 129, 0.08); border-radius: 4px; color: #111827;">
@@ -112,22 +103,19 @@ Pour que ce script s'exécute tout seul sans intervention humaine :
 
 ## Précautions d'expert et bonnes pratiques
 
-- Sécurité des données : Le script s'exécute avec vos propres droits d'accès. Assurez-vous que les e-mails destinataires saisis dans le code sont corrects pour éviter toute fuite de données financières ou RH confidentielles.
-- Quota d'envoi Gmail : Google impose des quotas quotidiens sur l'envoi d'e-mails via Apps Script (généralement 100 e-mails/jour pour les comptes gratuits, 1500 pour Google Workspace). Pour un rapport hebdomadaire à un comité, vous êtes largement dans les clous.
-- Gestion des erreurs : Renommez bien l'onglet source dans le code (`getSheetByName("Dashboard")`) pour qu'il corresponde exactement au nom de votre onglet dans Google Sheets, sous peine d'obtenir une erreur d'exécution.
+- <strong>Sécurité des données :</strong> Le script s'exécute avec vos propres droits d'accès. Assurez-vous que les e-mails destinataires saisis dans le code sont corrects pour éviter toute fuite de données financières ou RH confidentielles.
+- <strong>Quota d'envoi Gmail :</strong> Google impose des quotas quotidiens sur l'envoi d'e-mails via Apps Script (généralement 100 e-mails/jour pour les comptes gratuits, 1500 pour Google Workspace). Pour un rapport hebdomadaire à un comité, vous êtes largement dans les clous.
+- <strong>Gestion des erreurs :</strong> Renommez bien l'onglet source dans le code (`getSheetByName("Dashboard")`) pour qu'il corresponde exactement au nom de votre onglet dans Google Sheets, sous peine d'obtenir une erreur d'exécution.
 
 ---
 
-## 5. Foire Aux Questions (FAQ)
+## Foire Aux Questions (FAQ)
 
-**Q1.** Puis-je envoyer le rapport PDF à plusieurs destinataires en même temps ?
+<strong>Q1 : Puis-je envoyer le rapport PDF à plusieurs destinataires en même temps ?</strong>
+R : Tout à fait. Il vous suffit de remplacer la variable `destinataire` par une chaîne de caractères séparée par des virgules, par exemple : `"manager@entreprise.com, directeur@entreprise.com"`.
 
-**A.** Tout à fait. Il vous suffit de remplacer la variable `destinataire` par une chaîne de caractères séparée par des virgules, par exemple : `"manager@entreprise.com, directeur@entreprise.com"`.
+<strong>Q2 : Comment modifier l'orientation du PDF (passer du format Portrait au Paysage) ?</strong>
+R : Dans l'objet `optionsExport` du script, modifiez la ligne `portrait: "false"` par `portrait: "true"` si vous préférez un format portrait vertical classique.
 
-**Q2.** Comment modifier l'orientation du PDF (passer du format Portrait au Paysage) ?
-
-**A.** Dans l'objet `optionsExport` du script, modifiez la ligne `portrait: "false"` par `portrait: "true"` si vous préférez un format portrait vertical classique.
-
-**Q3.** Que faire si le script m'affiche une erreur d'autorisation lors du premier test ?
-
-**A.** C'est un comportement standard de sécurité Google. Cliquez sur "Paramètres avancés", puis sur "Accéder au projet (non sécurisé)" pour autoriser le script à interagir avec votre Google Sheets et votre Gmail.
+<strong>Q3 : Que faire si le script m'affiche une erreur d'autorisation lors du premier test ?</strong>
+R : C'est un comportement standard de sécurité Google. Cliquez sur "Paramètres avancés", puis sur "Accéder au projet (non sécurisé)" pour autoriser le script à interagir avec votre Google Sheets et votre Gmail.

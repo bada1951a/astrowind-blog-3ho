@@ -8,8 +8,6 @@ tags: ["Google Sheets", "ChatGPT", "Regex", "Datenbereinigung", "Office Tips"]
 theme: "Nordic Clean Ice"
 ---
 
-## 1. Kritische Fehlersituation im Büroalltag
-
 Es ist Donnerstag, 16:45 Uhr im Frankfurter Finanzdistrikt. In genau 45 Minuten beginnt das entscheidende Quartals-Board-Meeting, und mein Hauptbildschirm zeigt ein absolutes Datendesaster in Google Sheets. Die Finanzdaten aus drei verschiedenen Legacy-Systemen wurden exportiert, aber die Spalten sind völlig verunreinigt: IBANs kleben an Namen, Postleitzahlen hängen mitten in Straßennamen, und die Regex-Formel, die das eigentlich bereinigen sollte, wirft seit zwanzig Minuten nur den berüchtigten `#WERT!`-Fehler aus. Der Adspiegel steigt, der Vorstand wartet, und manuelles Tippen bei über 5.000 Zeilen ist schlicht unmöglich.
 
 <div style="border-left: 4px solid #0284c7; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -20,20 +18,18 @@ Es ist Donnerstag, 16:45 Uhr im Frankfurter Finanzdistrikt. In genau 45 Minuten 
 
 Bevor wir zur Lösung kommen, schauen wir uns an, warum wir überhaupt in diese Situation geraten sind. Es liegt meist an drei typischen Stolpersteinen im Büroalltag:
 
-1. Inkonsistente Rohdaten: Unterschiedliche Quellsysteme nutzen unterschiedliche Trennzeichen (Semikolon, Komma, Leerzeichen) und Formatierungen.
-
-2. Die Grenzen normaler Formeln: Standardfunktionen wie `=TEIL()` oder `=FINDEN()` stoßen bei variablen Textlängen und komplexen Mustern sofort an ihre Grenzen. Man bräuchte Regex-Funktionen wie `=REGEXEXTRACT()`, deren Syntax aber extrem fehleranfällig ist.
-
-3. Der Zeitfaktor: Wer unter Adrenalin versucht, eine verschachtelte Formel zu debuggen, übersieht oft nur ein einziges Anführungszeichen oder eine falsche Klammersetzung.
+1. <strong>Inkonsistente Rohdaten:</strong> Unterschiedliche Quellsysteme nutzen unterschiedliche Trennzeichen (Semikolon, Komma, Leerzeichen) und Formatierungen.
+2. <strong>Die Grenzen normaler Formeln:</strong> Standardfunktionen wie `=TEIL()` oder `=FINDEN()` stoßen bei variablen Textlängen und komplexen Mustern sofort an ihre Grenzen. Man bräuchte Regex-Funktionen wie `=REGEXEXTRACT()`, deren Syntax aber extrem fehleranfällig ist.
+3. <strong>Der Zeitfaktor:</strong> Wer unter Adrenalin versucht, eine verschachtelte Formel zu debuggen, übersieht oft nur ein einziges Anführungszeichen oder eine falsche Klammersetzung.
 
 ## Schritt-für-Schritt-Anleitung: So zähmst du Daten mit ChatGPT und Google Sheets
 
 Anstatt stundenlang in Foren nach passenden Formelschnipseln zu suchen, nutzen wir ChatGPT als persönlichen Formel-Entwickler. Hier ist der bewährte Workflow, der mich an jenem Nachmittag in Frankfurt gerettet hat.
 
 ### Schritt 1: Den perfekten Prompt für ChatGPT formulieren
-Gebe ChatGPT nicht nur das Ziel, sondern füttere es mit einem konkreten Beispiel. Ein guter Prompt für Regex- und Datenbereinigungsformeln folgt diesem Schem
+Gebe ChatGPT nicht nur das Ziel, sondern füttere es mit einem konkreten Beispiel. Ein guter Prompt für Regex- und Datenbereinigungsformeln folgt diesem Schema:
 
-**A.** > "Du bist ein Experte für Google Sheets und reguläre Ausdrücke. Ich habe eine Zelle A2 mit folgendem Inhalt: 'Müller, Hans (Kunde-Nr: 98765-DE)'. Ich brauche eine einzige Google Sheets Formel mit `=REGEXEXTRACT()` oder ähnlichen Funktionen, um nur die Kundennummer (die Zahlen nach 'Kunde-Nr: ') in eine neue Zelle zu extrahieren. Antworte nur mit der Formel und einer kurzen Erklärung."
+> "Du bist ein Experte für Google Sheets und reguläre Ausdrücke. Ich habe eine Zelle A2 mit folgendem Inhalt: 'Müller, Hans (Kunde-Nr: 98765-DE)'. Ich brauche eine einzige Google Sheets Formel mit `=REGEXEXTRACT()` oder ähnlichen Funktionen, um nur die Kundennummer (die Zahlen nach 'Kunde-Nr: ') in eine neue Zelle zu extrahieren. Antworte nur mit der Formel und einer kurzen Erklärung."
 
 ### Schritt 2: Formel in Google Sheets einfügen und testen
 Kopiere die generierte Formel (im obigen Fall meist etwas wie `=REGEXEXTRACT(A2; "Kunde-Nr: (\d+)")`) und füge sie in deine Zelle ein. 
@@ -55,15 +51,17 @@ Bitten Sie ChatGPT in diesem Fall sofort um ein Update mit Fehlerbehandlung:
 <strong>Datenschutz-Warnung (DSGVO):</strong> Lade niemals echte Kundennamen, IBANs oder sensible Finanzdaten unverschlüsselt oder im Klartext in öffentliche KI-Tools hoch! Ersetze sensible Werte in deinen Prompts immer durch anonymisierte Platzhalter wie 'Name, Vorname (Kunde-Nr: 12345-XY)'.
 </div>
 
-* Immer ein Backup erstellen: Bevor du komplexe Massenbereinigungen über ein Tabellenblatt laufen lässt, dupliziere das Tabellenblatt über das Kontextmenü unten links.
-* Formeln in Werte umwandeln: Sobald die Regex-Bereinigung erfolgreich durchgelaufen ist, markiere die Spalte, drücke `Strg + C` und füge sie via `Strg + Umschalt + V` als reine Werte ein. Das verhindert spätere Neuberechnungsfehler, wenn Quelldaten gelöscht werden.
+* <strong>Immer ein Backup erstellen:</strong> Bevor du komplexe Massenbereinigungen über ein Tabellenblatt laufen lässt, dupliziere das Tabellenblatt über das Kontextmenü unten links.
+* <strong>Formeln in Werte umwandeln:</strong> Sobald die Regex-Bereinigung erfolgreich durchgelaufen ist, markiere die Spalte, drücke `Strg + C` und füge sie via `Strg + Umschalt + V` als reine Werte ein. Das verhindert spätere Neuberechnungsfehler, wenn Quelldaten gelöscht werden.
 
 ---
 
-## 5. Häufig gestellte Fragen (FAQ)
+## Häufig gestellte Fragen (FAQ)
 
 ### 1. Warum zeigt Google Sheets nach dem Einfügen der ChatGPT-Formel einen Syntaxfehler an?
 Das liegt meist an unterschiedlichen Spracheinstellungen. Deutsche Google-Sheets-Versionen erwarten deutsche Funktionsnamen (z. B. `=WENN()` statt `=IF()`) und das Semikolon als Trenner. Sage ChatGPT im Prompt explizit: *“Schreibe die Formel für ein deutsches Google Sheets mit Semikolon.”*
+
+
 
 ![AI Productivity & Workflow Automation](https://picsum.photos/seed/office207/1000/550)
 

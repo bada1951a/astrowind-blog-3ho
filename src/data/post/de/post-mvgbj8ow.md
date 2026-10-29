@@ -8,8 +8,6 @@ tags: ["Google Apps Script", "Google Sheets", "Automatisierung", "Office Tipps",
 theme: "Cobalt Enterprise Lab"
 ---
 
-## 1. Kritische Fehlersituation im Büroalltag
-
 Es war Freitag, Punkt 16:45 Uhr im Frankfurter Finanzdistrikt. In zwanzig Minuten sollte das monatliche Vorstandstreffen beginnen, und auf meinem Schreibtisch herrschte das pure Chaos. Die Zahlen für den Quartalsabschluss waren zwar in der Google Tabelle aktuell, aber ich musste sie noch manuell als PDF exportieren, den Dateinamen anpassen, das Outlook-Fenster öffnen und den Bericht an fünf verschiedene Bereichsleiter im zehnten Stock mailen. Natürlich ist genau in diesem Moment Excel beziehungsweise Google Sheets beim Export hängen geblieben, das Layout der PDF zerschoss sich, und die Panik stieg. Wieder einmal wertvolle Minuten vergeudet für rein mechanische Copy-Paste-Arbeit, während die echten Analysen liegen blieben.
 
 Genug ist genug. An diesem Abend habe ich mich hingesetzt und ein sauberes, wiederverwendbares Google Apps Script geschrieben, das mir diese Arbeit seitdem jeden Freitag komplett abnimmt. Heute zeige ich Ihnen genau diesen Workflow, damit Sie nie wieder vor dem Vorstand ins Schwitzen kommen.
@@ -24,11 +22,9 @@ Genug ist genug. An diesem Abend habe ich mich hingesetzt und ein sauberes, wied
 
 Bevor wir in den Code springen, schauen wir uns an, warum der herkömmliche Weg so fehleranfällig ist:
 
-1. Formatierungschaos beim Export: Wenn man unvorbereitete Google Tabellen direkt als PDF exportiert, ignoriert das System oft die definierten Druckbereiche. Spalten werden abgeschnitten, und wichtige Kennzahlen landen auf Seite zwei.
-
-2. Falsche Dateinamen und Versionen: Werden Berichte wöchentlich manuell umbenannt (z.B. *Bericht_final_v2_FINAL.pdf*), führt das unweigerlich zu Verwirrung im Postfach der Geschäftsführung.
-
-3. Faktor Mensch: Freitagnachmittag ist man müde. Da vergisst man schnell mal einen Empfänger im CC oder hängt versehentlich die falsche Vorwochen-Datei an.
+1. <strong>Formatierungschaos beim Export:</strong> Wenn man unvorbereitete Google Tabellen direkt als PDF exportiert, ignoriert das System oft die definierten Druckbereiche. Spalten werden abgeschnitten, und wichtige Kennzahlen landen auf Seite zwei.
+2. <strong>Falsche Dateinamen und Versionen:</strong> Werden Berichte wöchentlich manuell umbenannt (z.B. *Bericht_final_v2_FINAL.pdf*), führt das unweigerlich zu Verwirrung im Postfach der Geschäftsführung.
+3. <strong>Faktor Mensch:</strong> Freitagnachmittag ist man müde. Da vergisst man schnell mal einen Empfänger im CC oder hängt versehentlich die falsche Vorwochen-Datei an.
 
 ---
 
@@ -37,7 +33,7 @@ Bevor wir in den Code springen, schauen wir uns an, warum der herkömmliche Weg 
 Wir lösen das Problem über den integrierten Skript-Editor von Google Workspace. Keine Angst, Sie müssen kein Profi-Entwickler sein – kopieren Sie einfach den folgenden Code und passen Sie die E-Mail-Adresse an.
 
 ### Schritt 1: Den Skript-Editor öffnen
-Öffnen Sie Ihre Google Tabelle, die den Monatsabschluss enthält. Klicken Sie oben im Menü auf Erweiterungen und wählen Sie Apps Script.
+Öffnen Sie Ihre Google Tabelle, die den Monatsabschluss enthält. Klicken Sie oben im Menü auf <strong>Erweiterungen</strong> und wählen Sie <strong>Apps Script</strong>.
 
 ### Schritt 2: Den Code einfügen
 Löschen Sie den eventuell vorhandenen Beispielcode und fügen Sie dieses Skript ein:
@@ -84,13 +80,10 @@ function sendWeeklyReportPDF() {
 
 ### Schritt 3: Den Trigger (Zeitplan) einrichten
 Damit das Skript nun jeden Freitag vollautomatisch läuft, ohne dass Sie einen Finger rühren müssen:
-1. Klicken Sie im linken Menü des Apps Script Editors auf das Uhren-Symbol (Trigger).
-
-2. Unten rechts auf Trigger hinzufügen klicken.
-
+1. Klicken Sie im linken Menü des Apps Script Editors auf das Uhren-Symbol (<strong>Trigger</strong>).
+2. Unten rechts auf <strong>Trigger hinzufügen</strong> klicken.
 3. Wählen Sie die Funktion `sendWeeklyReportPDF` aus.
-
-4. Wählen Sie als Ereignisquelle Zeitgesteuert und stellen Sie ein wöchentliches Intervall (z.B. Freitags zwischen 15:00 und 16:00 Uhr) ein.
+4. Wählen Sie als Ereignisquelle <strong>Zeitgesteuert</strong> und stellen Sie ein wöchentliches Intervall (z.B. Freitags zwischen 15:00 und 16:00 Uhr) ein.
 
 <div style="border-left: 4px solid #1e40af; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Wichtiger Sicherheitshinweis:</strong> Beim ersten Ausführen fragt Google nach Berechtigungen ("Berechtigungen prüfen"). Das ist völlig normal, da das Skript auf Ihre Tabelle zugreifen und in Ihrem Namen E-Mails versenden muss. Klicken Sie auf Ihr Konto, dann auf "Erweitert" und "Zu Untitled project (unsicher) wechseln" (oder den von Ihnen vergebenen Projektnamen), um den Zugriff zu erlauben.
@@ -98,14 +91,10 @@ Damit das Skript nun jeden Freitag vollautomatisch läuft, ohne dass Sie einen F
 
 ---
 
-## 5. Häufig gestellte Fragen (FAQ)
+## Häufig gestellte Fragen (FAQ)
 
 ### Kann ich mehrere Empfänger gleichzeitig in das Skript einbinden?
-Ja, absolut. Sie können die Variable `recipient` einfach als Array definieren oder durch Kommata trennen, zum Beispiel: `var recipient = "vorstand@firm
-
-**A.** de, controlling@firm
-
-**A.** de";`. Alternativ nutzen Sie die CC- oder BCC-Option in den erweiterten Parametern von `GmailApp.sendEmail`.
+Ja, absolut. Sie können die Variable `recipient` einfach als Array definieren oder durch Kommata trennen, zum Beispiel: `var recipient = "vorstand@firma.de, controlling@firma.de";`. Alternativ nutzen Sie die CC- oder BCC-Option in den erweiterten Parametern von `GmailApp.sendEmail`.
 
 ### Wie verhindere ich, dass das PDF unvollständig exportiert wird?
 Im Code nutzen wir den Parameter `fitw=true` (Fit to width). Das zwingt Google Sheets dazu, die gesamte Tabellenbreite auf eine DIN-A4-Seite einzupassen. Achten Sie zusätzlich darauf, dass Ihr Arbeitsblatt im Bereich "Drucken" richtig formatiert ist.

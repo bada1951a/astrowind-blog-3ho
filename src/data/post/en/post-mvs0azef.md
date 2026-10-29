@@ -38,4 +38,28 @@ Additionally, when leveraging advanced AI tools like Claude 3.5 Sonnet to ingest
 
 ## 5. Frequently Asked Questions (FAQ)
 
-**Q1.**Why do my lookup formulas still return errors even after I manually deleted the spaces in the formula bar?**A1.**Manual deletion often fails because database extractions contain non-breaking spaces or unprintable ASCII control characters that standard backspace operations cannot target. You must use dedicated sanitization functions like `CLEAN` or automated transformation tools to completely eradicate these hidden tokens from your data arrays.**Q2.**Can Claude 3.5 Sonnet handle scanned PDF documents that lack native text layers?**A2.**Standard LLM text parsers require selectable text layers to accurately read and summarize documents without heavy OCR processing errors. For scanned compliance documents, you should first run a reliable OCR conversion tool to generate a clean, searchable text layer before uploading the file for analysis.**Q3.**Is it possible to automate the Power Query cleaning steps so I do not have to repeat them every time I pull a new report?**A3.** Absolutely, `Power Query` automatically records every transformation step you apply, creating a repeatable macro-like script. When you refresh your data source with a newly exported database file, all your trimming, cleaning, and formatting rules will execute instantly with a single click.
+
+
+
+
+Q1. Why do my lookup formulas still return errors even after I manually deleted the spaces in the formula bar?
+
+
+
+A1. Manual deletion often fails because database extractions contain non-breaking spaces or unprintable ASCII control characters that standard backspace operations cannot target. You must use dedicated sanitization functions like `CLEAN` or automated transformation tools to completely eradicate these hidden tokens from your data arrays.
+
+
+
+Q2. Can Claude 3.5 Sonnet handle scanned PDF documents that lack native text layers?
+
+
+
+A2. Standard LLM text parsers require selectable text layers to accurately read and summarize documents without heavy OCR processing errors. For scanned compliance documents, you should first run a reliable OCR conversion tool to generate a clean, searchable text layer before uploading the file for analysis.
+
+
+
+Q3. Is it possible to automate the Power Query cleaning steps so I do not have to repeat them every time I pull a new report?
+
+
+
+A3. Absolutely, `Power Query` automatically records every transformation step you apply, creating a repeatable macro-like script. When you refresh your data source with a newly exported database file, all your trimming, cleaning, and formatting rules will execute instantly with a single click.

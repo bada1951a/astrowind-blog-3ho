@@ -20,9 +20,9 @@ Mein Kollege, frisch aus dem Homeoffice eingetroffen, saß bereits seit einer St
 
 Warum scheitern die meisten Büroangestellten beim täglichen Preis-Tracking von Wettbewerbern? Wenn man sich anschaut, warum einfache Lösungsansätze oft im Desaster enden, lassen sich drei Hauptursachen ausmachen:
 
-* **Das Captcha- und Blockade-Problem:** Webseiten wie Amazon schützen sich massiv vor automatisiertem Datenabruf. Wer versucht, mit primitiven Skripten oder Standard-Browser-Erweiterungen im Sekundentakt Daten abzugreifen, landet schnell vor einer Sperrseite.
-* **Dynamische HTML-Strukturen:** Die Preisangaben auf Amazon sind nicht starr. Ob Hauptpreis, Streichpreis, Prime-Rabatt oder Verfügbarkeit – die CSS-Selektoren oder HTML-Klassen ändern sich regelmäßig, wodurch klassische Web-Scraping-Tools plötzlich leere Zellen in Google Sheets liefern.
-* **Fehlende Automatisierungs-Logik:** Viele versuchen, sich mit komplexen Makros oder teuren Zusatzsoftware-Lösungen zu behelfen, deren Einrichtung Tage dauert. Ohne eine schlanke Cloud-Anbindung, die im Hintergrund läuft, während der Rechner ausgeschaltet ist, bleibt man immer im manuellen Betrieb gefangen.
+* <strong>Das Captcha- und Blockade-Problem:</strong> Webseiten wie Amazon schützen sich massiv vor automatisiertem Datenabruf. Wer versucht, mit primitiven Skripten oder Standard-Browser-Erweiterungen im Sekundentakt Daten abzugreifen, landet schnell vor einer Sperrseite.
+* <strong>Dynamische HTML-Strukturen:</strong> Die Preisangaben auf Amazon sind nicht starr. Ob Hauptpreis, Streichpreis, Prime-Rabatt oder Verfügbarkeit – die CSS-Selektoren oder HTML-Klassen ändern sich regelmäßig, wodurch klassische Web-Scraping-Tools plötzlich leere Zellen in Google Sheets liefern.
+* <strong>Fehlende Automatisierungs-Logik:</strong> Viele versuchen, sich mit komplexen Makros oder teuren Zusatzsoftware-Lösungen zu behelfen, deren Einrichtung Tage dauert. Ohne eine schlanke Cloud-Anbindung, die im Hintergrund läuft, während der Rechner ausgeschaltet ist, bleibt man immer im manuellen Betrieb gefangen.
 
 <div style="border-left: 4px solid #78350f; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Experten-Hinweis:</strong> Verzichten Sie auf starre lokale Skripte. Nutzen Sie stattdessen cloudbasierte No-Code-Tools, die direkt mit Google Sheets kommunizieren und die IP-Adressen rotieren lassen, um Amazon-Sperren zu umgehen.
@@ -37,7 +37,7 @@ Nutzen Sie einen etablierten Web-Scraper-Dienst wie *Browse AI* oder *Apify*, de
 
 1. Erstellen Sie einen kostenlosen Account bei einem Cloud-Scraping-Anbieter.
 
-2. Wählen Sie die Vorlage für das **Amazon Product Scraper**Tool aus.
+2. Wählen Sie die Vorlage für das <strong>Amazon Product Scraper</strong> Tool aus.
 
 3. Fügen Sie die URLs der gewünschten Konkurrenzprodukte in das Eingabefeld ein.
 
@@ -46,7 +46,7 @@ Anstatt die Daten täglich manuell als CSV herunterzuladen, verknüpfen wir den 
 
 1. Öffnen Sie Ihre Google Sheets Zieltabelle im Browser.
 
-2. Gehen Sie im Scraper-Dashboard auf den Reiter**Integrations**und wählen Sie**Google Sheets**aus.
+2. Gehen Sie im Scraper-Dashboard auf den Reiter <strong>Integrations</strong> und wählen Sie <strong>Google Sheets</strong> aus.
 
 3. Melden Sie sich mit Ihrem Google-Konto an und erlauben Sie den Zugriff.
 
@@ -55,36 +55,36 @@ Anstatt die Daten täglich manuell als CSV herunterzuladen, verknüpfen wir den 
 ### Schritt 3: Den täglichen Zeitplan (Cron-Job) aktivieren
 Damit die Daten jeden Morgen pünktlich vor Arbeitsbeginn frisch auf Ihrem Tisch liegen, richten wir eine automatische Ausführung ein.
 
-1. Klicken Sie im Scraper auf**Schedule Task**.
+1. Klicken Sie im Scraper auf <strong>Schedule Task</strong>.
 
-2. Stellen Sie das Intervall auf**Daily** (Ttäglich) und wählen Sie eine Uhrzeit, beispielsweise um 06:00 Uhr morgens (vor dem ersten Kaffeetrinken im Büro).
+2. Stellen Sie das Intervall auf <strong>Daily</strong> (Ttäglich) und wählen Sie eine Uhrzeit, beispielsweise um 06:00 Uhr morgens (vor dem ersten Kaffeetrinken im Büro).
 
 3. Speichern Sie die Einstellungen. Ab sofort zieht das System die Daten im Hintergrund.
 
 ```text
-Ablauf-Schem
+Ablauf-Schema.
 
-**A.** [Cloud-Scraper] --(Täglich 06:00 Uhr)--> [Amazon.de] --(Datenextraktion)--> [Google Sheets API] --> [Ihre Preistabelle]
+[Cloud-Scraper] --(Täglich 06:00 Uhr)--> [Amazon.de] --(Datenextraktion)--> [Google Sheets API] --> [Ihre Preistabelle]
 ```
 
 ## 4. Praxistipps und Warnungen vom Automatisierungs-Experten
 
 Damit Ihr tägliches Preis-Monitoring reibungslos funktioniert und Sie keine bösen Überraschungen erleben, beachten Sie diese Praxis-Tipps aus dem Büroalltag:
 
-* **ASIN statt langer URLs verwenden:** Nutzen Sie in Ihren Scraping-Listen immer die eindeutige Amazon Standard Identification Number (ASIN) anstelle von langen URLs mit Tracking-Parametern. Das verhindert Fehler, wenn sich Produktlinks bei Amazon leicht verändern.
-* **Datenschutz und interne Richtlinien:** Achten Sie darauf, dass Sie öffentlich zugängliche Marktpreise analysieren und keine internen, vertraulichen Daten über Drittanbieter-Tools leiten. Für reine Preisrecherchen im B2C-Bereich ist dieses Vorgehen vollkommen unbedenklich.
-* **Fehlertoleranz einbauen:**Nutzen Sie in Google Sheets Formeln wie `WENNFEHLER` (oder `IFERROR`), falls ein Produkt an einem Tag ausverkauft sein sollte und der Preiswert leer bleibt. So verhindern Sie unschöne Darstellungsfehler in Ihren Dashboards.
+* <strong>ASIN statt langer URLs verwenden:</strong> Nutzen Sie in Ihren Scraping-Listen immer die eindeutige Amazon Standard Identification Number (ASIN) anstelle von langen URLs mit Tracking-Parametern. Das verhindert Fehler, wenn sich Produktlinks bei Amazon leicht verändern.
+* <strong>Datenschutz und interne Richtlinien:</strong> Achten Sie darauf, dass Sie öffentlich zugängliche Marktpreise analysieren und keine internen, vertraulichen Daten über Drittanbieter-Tools leiten. Für reine Preisrecherchen im B2C-Bereich ist dieses Vorgehen vollkommen unbedenklich.
+* <strong>Fehlertoleranz einbauen:</strong> Nutzen Sie in Google Sheets Formeln wie `WENNFEHLER` (oder `IFERROR`), falls ein Produkt an einem Tag ausverkauft sein sollte und der Preiswert leer bleibt. So verhindern Sie unschöne Darstellungsfehler in Ihren Dashboards.
 
 ## 5. Häufig gestellte Fragen (FAQ)
 
-**Q.** Was passiert, wenn Amazon die Produktstruktur ändert und der Scraper keine Preise mehr findet?
+<strong>Q.</strong> Was passiert, wenn Amazon die Produktstruktur ändert und der Scraper keine Preise mehr findet?
 
-**A.** Die meisten modernen No-Code-Scraper nutzen KI-gestützte Erkennung, um sich an kleinere Layout-Änderungen anzupassen. Sollte dennoch ein Fehler auftreten, erhalten Sie in der Regel eine E-Mail-Benachrichtigung und können das Template im Dashboard mit wenigen Klicks aktualisieren.
+A. Die meisten modernen No-Code-Scraper nutzen KI-gestützte Erkennung, um sich an kleinere Layout-Änderungen anzupassen. Sollte dennoch ein Fehler auftreten, erhalten Sie in der Regel eine E-Mail-Benachrichtigung und können das Template im Dashboard mit wenigen Klicks aktualisieren.
 
-**Q.** Ist diese Art von Preis-Tracking rechtlich zulässig?
+<strong>Q.</strong> Ist diese Art von Preis-Tracking rechtlich zulässig?
 
-**A.** Ja, das Abgreifen öffentlich zugänglicher Preisinformationen zu Markt- und Wettbewerbsanalysen (Web-Scraping public data) ist im geschäftlichen Rahmen üblich und rechtlich zulässig, solange keine personenbezogenen Daten oder passwortgeschützten Bereiche betroffen sind.
+A. Ja, das Abgreifen öffentlich zugänglicher Preisinformationen zu Markt- und Wettbewerbsanalysen (Web-Scraping public data) ist im geschäftlichen Rahmen üblich und rechtlich zulässig, solange keine personenbezogenen Daten oder passwortgeschützten Bereiche betroffen sind.
 
-**Q.** Kann ich die Daten auch in ein Microsoft Excel Sheet statt in Google Sheets senden?
+<strong>Q.</strong> Kann ich die Daten auch in ein Microsoft Excel Sheet statt in Google Sheets senden?
 
-**A.** Absolut. Die meisten Cloud-Scraper bieten neben Google Sheets auch direkte Integrationen für Microsoft OneDrive (Excel) oder Webhooks an, über die Sie die Daten via Power Automate in Ihre lokalen Systeme spiegeln können.
+A. Absolut. Die meisten Cloud-Scraper bieten neben Google Sheets auch direkte Integrationen für Microsoft OneDrive (Excel) oder Webhooks an, über die Sie die Daten via Power Automate in Ihre lokalen Systeme spiegeln können.

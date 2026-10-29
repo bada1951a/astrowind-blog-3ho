@@ -12,9 +12,9 @@ theme: "Solarized Amber Warm"
 
 Ayer por la tarde, en plena oficina corporativa en Madrid, monte un grafico de monitorizacion automatizada de precios de la competencia usando un rastreador web sin codigo. Todo iba sobre ruedas hasta que la pagina cambio de estructura de repente, rompiendo el scraper y vomitando una autentica montanya de datos en una sola celda de Excel. Me encontre con quinientas filas donde la direccion postal, el codigo postal y el numero de telefono aparecian mezclados en un bloque ilegible. El comite directivo esperaba el informe de precios listo para la primera hora del dia siguiente, y hacerlo a mano celda por celda habria significado pasar toda la noche en vela pegado al teclado.
 
-Intentar arreglar aquello con las funciones clasicas de texto de Excel fue una pesadilla inmediat
+Intentar arreglar aquello con las funciones clasicas de texto de Excel fue una pesadilla inmediata.
 
-**A.** Como cada proveedor escribia la direccion de forma diferente, las funciones de extraccion de caracteres se saltaban de linea o cortaban los numeros de telefono a la mitad. Despues de perder una hora intentando adivinar formulas anidadas larguisimas que solo devolvian errores de sintaxis, decidi dejar de pelearme con la hoja de calculo de la forma tradicional y usar ChatGPT como mi asistente personal de formulas y expresiones regulares.
+Como cada proveedor escribia la direccion de forma diferente, las funciones de extraccion de caracteres se saltaban de linea o cortaban los numeros de telefono a la mitad. Despues de perder una hora intentando adivinar formulas anidadas larguisimas que solo devolvian errores de sintaxis, decidi dejar de pelearme con la hoja de calculo de la forma tradicional y usar ChatGPT como mi asistente personal de formulas y expresiones regulares.
 
 ![How to Auto-Split Address and Phone Number Columns in Excel with ChatGPT Assistance AI Automation Guide](https://picsum.photos/seed/work-mvlawk0m-5-b/1000/550.jpg)
 
@@ -39,9 +39,9 @@ Paso 1: Copia una pequena muestra representativa de tus datos desordenados, aseg
 Paso 2: Abre ChatGPT y utiliza un mensaje muy especifico que defina claramente el origen y el resultado deseado. Por ejemplo, puedes usar este texto base:
 
 ```text
-Tengo una celda en Excel con una direccion y un telefono mezclados, por ejemplo: "Calle Alcala 45, 2D 28014 Madrid 600123456". Necesito extraer unicamente el numero de telefono en una columna y la direccion postal limpia en otr
+Tengo una celda en Excel con una direccion y un telefono mezclados, por ejemplo: "Calle Alcala 45, 2D 28014 Madrid 600123456". Necesito extraer unicamente el numero de telefono en una columna y la direccion postal limpia en otra.
 
-**A.** Dame las formulas exactas para Excel en espanol usando funciones de texto o expresiones regulares si es necesario.
+Dame las formulas exactas para Excel en espanol usando funciones de texto o expresiones regulares si es necesario.
 ```
 
 Paso 3: Copia la formula que te proporcione el asistente. Ve a tu hoja de Excel, selecciona la celda de destino y pegala ajustando las referencias de celdas segun corresponda, por ejemplo cambiando A1 por la celda real donde tienes el texto bruto.
@@ -49,23 +49,47 @@ Paso 3: Copia la formula que te proporcione el asistente. Ve a tu hoja de Excel,
 Paso 4: Arrastra la formula hacia abajo en toda la columna para procesar cientos de filas en menos de un segundo. Si alguna fila falla por un caso muy extrano, pidele a ChatGPT un ajuste especifico para ese patron anomalo.
 
 <div style="border-left: 4px solid #d97706; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-Consejo de seguridad corporativ
+Consejo de seguridad corporativa.
 
-**A.** Si trabajas con datos sensibles de clientes o informacion confidencial de la empresa, anonimiza los datos de muestra antes de pegarlos en herramientas de inteligencia artificial externas.
+Si trabajas con datos sensibles de clientes o informacion confidencial de la empresa, anonimiza los datos de muestra antes de pegarlos en herramientas de inteligencia artificial externas.
 </div>
 
 ## 5. Preguntas Frecuentes (FAQ)
 
-**Q1.** ¿Puedo hacer esto mismo si mi Excel esta en ingles en lugar de espanol?
 
-**A1.** Si, solo debes indicarle explicitamente a ChatGPT que te devuelva las formulas usando los nombres de funciones en ingles, como LEFT, RIGHT, MID o FIND, para que coincidan con tu configuracion regional.
 
-**Q2.** ¿Que hago si la formula me devuelve un error de tipo #VALOR o #NOMBRE?
 
-**A2.** Generalmente ocurre porque alguna version antigua de Excel no soporta funciones modernas como TEXTBEFORE o TEXTAFTER. Pidele a ChatGPT que te cree una solucion alternativa usando combinaciones de EXTRAE, HALLAR y LARGO.
 
-**Q3.** ¿Es seguro usar ChatGPT para limpiar bases de datos grandes de la empresa?
+Q1. ¿Puedo hacer esto mismo si mi Excel esta en ingles en lugar de espanol?
 
-**A3.** Para datos publicos o informacion anonimizada de precios de la competencia no hay problem
 
-**A.** Para datos personales protegidos por normativa de privacidad, utiliza versiones empresariales que garanticen que tus datos no se usan para entrenar modelos publicos.
+
+
+
+A1. Si, solo debes indicarle explicitamente a ChatGPT que te devuelva las formulas usando los nombres de funciones en ingles, como LEFT, RIGHT, MID o FIND, para que coincidan con tu configuracion regional.
+
+
+
+
+
+Q2. ¿Que hago si la formula me devuelve un error de tipo #VALOR o #NOMBRE?
+
+
+
+
+
+A2. Generalmente ocurre porque alguna version antigua de Excel no soporta funciones modernas como TEXTBEFORE o TEXTAFTER. Pidele a ChatGPT que te cree una solucion alternativa usando combinaciones de EXTRAE, HALLAR y LARGO.
+
+
+
+
+
+Q3. ¿Es seguro usar ChatGPT para limpiar bases de datos grandes de la empresa?
+
+
+
+
+
+A3. Para datos publicos o informacion anonimizada de precios de la competencia no hay problema.
+
+Para datos personales protegidos por normativa de privacidad, utiliza versiones empresariales que garanticen que tus datos no se usan para entrenar modelos publicos.

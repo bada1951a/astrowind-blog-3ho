@@ -10,18 +10,18 @@ theme: "Rosewood Hardware Guide"
 
 ## 1. Emergencia crítica en el trabajo y bloqueo de tareas
 
-Eran las 8:45 de la mañana en nuestra oficina del Paseo de la Castellana en Madrid. Faltaban exactamente quince minutos para la reunión mensual con el director financiero, y mi pantalla parecía una escena del crimen: celdas con errores de referencia, fórmulas BUSCARV rotas porque alguien cambió el nombre de una columna en el archivo de ventas de mayo, y tres pestañas distintas con datos que simplemente no cuadraban. Llevaba dos horas haciendo "copiar y pegar" como un autómata, rezando para que el total coincidier
+Eran las 8:45 de la mañana en nuestra oficina del Paseo de la Castellana en Madrid. Faltaban exactamente quince minutos para la reunión mensual con el director financiero, y mi pantalla parecía una escena del crimen: celdas con errores de referencia, fórmulas BUSCARV rotas porque alguien cambió el nombre de una columna en el archivo de ventas de mayo, y tres pestañas distintas con datos que simplemente no cuadraban. Llevaba dos horas haciendo "copiar y pegar" como un autómata, rezando para que el total coincidiera.
 
-**A.** Sobra decir que el ambiente cortaba la respiración.
+Sobra decir que el ambiente cortaba la respiración.
 
 Ese fue mi punto de quiebre. Decidí que nunca más volvería a perder un viernes sufriendo con archivos de Excel desconectados. Si tú también te pasas la mitad del cierre de mes uniendo hojas de cálculo manuales, te urge dejar de sufrir y pasar al siguiente nivel con Power Query.
 
 ![AI Productivity & Workflow Automation](https://picsum.photos/seed/office862/1000/550)
 
 <div style="border-left: 4px solid #be123c; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>El secreto de los analistas eficientes:</strong> No luches contra el formato de los datos mes tras mes. Diseña una sola vez un flujo de Power Query que limpie, combine y cargue tus ventas automáticamente cada vez que actualices la carpet
+<strong>El secreto de los analistas eficientes:</strong> No luches contra el formato de los datos mes tras mes. Diseña una sola vez un flujo de Power Query que limpie, combine y cargue tus ventas automáticamente cada vez que actualices la carpeta.
 
-**A.** </div>
+</div>
 
 ## Por qué tus reportes mensuales siempre fallan (Las 3 causas raíz)
 
@@ -31,9 +31,9 @@ Antes de aplicar la solución, analicemos por qué caemos en este bucle de estr�
 
 2. Estructuras de datos inconsistentes: El equipo comercial de la zona norte usa un formato de fecha (DD/MM/AAAA) y el equipo de levante usa otro (MM/DD/AAAA), lo que descoloca cualquier suma global.
 
-3. Procesos manuales propensos al error humano: Hacer un pegado masivo de 5,000 filas a medianoche es la receta perfecta para arrastrar errores de un mes a otro sin darte cuent
+3. Procesos manuales propensos al error humano: Hacer un pegado masivo de 5,000 filas a medianoche es la receta perfecta para arrastrar errores de un mes a otro sin darte cuenta.
 
-**A.** ---
+---
 
 ## 3. Solución práctica paso a paso para optimizar el flujo: Automatiza tu consolidación con Power Query
 
@@ -47,16 +47,16 @@ Abre un libro de Excel nuevo que será tu Reporte Maestro.
 
 1. Ve a la pestaña superior Datos.
 
-2. Haz clic en Obtener datos > De un archivo > De una carpet
+2. Haz clic en Obtener datos > De un archivo > De una carpeta.
 
-**A.** 3. Selecciona la carpeta `Ventas2026` que creaste en el paso anterior y pulsa Abrir.
+3. Selecciona la carpeta `Ventas2026` que creaste en el paso anterior y pulsa Abrir.
 
 ### Paso 3: Combina y Transforma los datos
-Se abrirá una ventana de vista previ
+Se abrirá una ventana de vista previa.
 
-**A.** No le des directamente a combinar; haz clic en Transformar datos para abrir el Editor de Power Query. Aquí es donde ocurre la magi
+No le des directamente a combinar; haz clic en Transformar datos para abrir el Editor de Power Query. Aquí es donde ocurre la magia.
 
-**A.** * Verás una columna llamada `Content` con los archivos. Haz clic en el botón de combinar archivos (los dos iconos de flechas hacia abajo en la cabecera de la columna).
+* Verás una columna llamada `Content` con los archivos. Haz clic en el botón de combinar archivos (los dos iconos de flechas hacia abajo en la cabecera de la columna).
 * Power Query te pedirá que elijas una muestra (selecciona la Hoja1 o la tabla principal). Pulsa Aceptar.
 * Automáticamente se creará un paso aplicado que une todo el contenido de la carpeta en una sola tabla gigante.
 
@@ -86,18 +86,18 @@ Cuidado con las rutas locales absolutas (`C:\Users\TuNombre\Desktop\...`) si com
 
 ## 5. Preguntas Frecuentes (FAQ)
 
-**Q.** ¿Qué pasa si un archivo nuevo tiene una columna extra que los demás no tienen?
+<strong>Q.</strong> ¿Qué pasa si un archivo nuevo tiene una columna extra que los demás no tienen?
 
-**A.** Power Query es lo suficientemente inteligente como para integrarl
+A. Power Query es lo suficientemente inteligente como para integrarla.
 
-**A.** Creará una columna nueva en la tabla consolidada y pondrá valores vacíos (`null`) en las filas de los meses anteriores que no la tenían, sin romper ninguna fórmul
+A. Creará una columna nueva en la tabla consolidada y pondrá valores vacíos (`null`) en las filas de los meses anteriores que no la tenían, sin romper ninguna fórmul
 
-**A.Q.** ¿Funciona si los archivos de Excel tienen contraseñas o están protegidos?
+<strong>A.Q.</strong> ¿Funciona si los archivos de Excel tienen contraseñas o están protegidos?
 
-**A.** Por motivos de seguridad, Power Query no puede extraer datos de archivos protegidos con contraseña de apertura de forma automátic
+A. Por motivos de seguridad, Power Query no puede extraer datos de archivos protegidos con contraseña de apertura de forma automática.
 
-**A.** Los archivos en la carpeta de origen deben ser accesibles libremente por el sistem
+Los archivos en la carpeta de origen deben ser accesibles libremente por el sistem
 
-**A.Q.** ¿Puedo usar Power Query para consolidar archivos CSV en lugar de Excel?
+<strong>A.Q.</strong> ¿Puedo usar Power Query para consolidar archivos CSV en lugar de Excel?
 
-**A.** ¡Por supuesto! El proceso es prácticamente idéntico. En lugar de seleccionar "De una carpeta" y filtrar archivos Excel, puedes usar la opción de combinar archivos CSV desde una carpeta y el editor aplicará la misma lógica de transformación.
+A. ¡Por supuesto! El proceso es prácticamente idéntico. En lugar de seleccionar "De una carpeta" y filtrar archivos Excel, puedes usar la opción de combinar archivos CSV desde una carpeta y el editor aplicará la misma lógica de transformación.

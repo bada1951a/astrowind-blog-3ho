@@ -28,9 +28,9 @@ Understanding the root mechanical failures prevents future office firefighting:
 
 1. Hardcoded External References: When another department links formulas to a file path on their local machine or a restricted SharePoint folder, moving or renaming that file instantly turns every formula reference into a broken link trigger.
 
-2. Inconsistent Delimiters in Raw Dat
+2. Inconsistent Delimiters in Raw Data.
 
-**A.** Automated CRM or database exports often pack street names, postal codes, and phone numbers into a single cell separated by random commas, spaces, or missing punctuation, breaking standard parsing tools.
+Automated CRM or database exports often pack street names, postal codes, and phone numbers into a single cell separated by random commas, spaces, or missing punctuation, breaking standard parsing tools.
 
 3. Security Policy Interruption: Corporate security compliance configurations aggressively flag and lock external workbook connections, preventing automated batch updates until manual link breaking or path reassignment is completed.
 
@@ -89,14 +89,38 @@ PRO-TIP: Always create an isolated local backup copy of your master file before 
 
 ## 5. Frequently Asked Questions (FAQ)
 
-**Q1.** What if my address strings do not have a consistent separator like a dash before the phone number?
 
-**A1.** Ask ChatGPT to write a custom formula or a quick VBA macro tailored to regular expressions that identify standard 10-digit phone number patterns regardless of preceding punctuation.
 
-**Q2.** Why is the Edit Links option still greyed out in my Excel ribbon?
 
-**A2.** This usually happens if your workbook is currently in Protected View or Sheet Protection is enabled. Click "Enable Editing" at the top of the window, or go to Review > Unprotect Sheet before managing links.
 
-**Q3.** Can I automate this entire process so I do not have to write formulas manually every week?
+Q1. What if my address strings do not have a consistent separator like a dash before the phone number?
 
-**A3.** Yes. You can record a simple Excel Macro or use Power Query to automatically filter out external path dependencies and apply transformation steps upon every file refresh.
+
+
+
+
+A1. Ask ChatGPT to write a custom formula or a quick VBA macro tailored to regular expressions that identify standard 10-digit phone number patterns regardless of preceding punctuation.
+
+
+
+
+
+Q2. Why is the Edit Links option still greyed out in my Excel ribbon?
+
+
+
+
+
+A2. This usually happens if your workbook is currently in Protected View or Sheet Protection is enabled. Click "Enable Editing" at the top of the window, or go to Review > Unprotect Sheet before managing links.
+
+
+
+
+
+Q3. Can I automate this entire process so I do not have to write formulas manually every week?
+
+
+
+
+
+A3. Yes. You can record a simple Excel Macro or use Power Query to automatically filter out external path dependencies and apply transformation steps upon every file refresh.

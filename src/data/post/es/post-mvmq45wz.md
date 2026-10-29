@@ -12,9 +12,9 @@ theme: "Graphite Technical Paper"
 
 Eran las 9:00 de la mañana en nuestra oficina corporativa en Madrid. El director de operaciones acababa de lanzar la bomba en plena reunión de equipo: "Necesitamos ver una propuesta real de automatización de procesos para el próximo comité de dirección, algo que demuestre que podemos ahorrar horas en el análisis de la competencia". 
 
-Mis compañeros empezaron a sudar frío pensando en scripts de Python, APIs complejas de Amazon y semanas de desarrollo con el departamento de IT. Yo necesitaba un comodín inmediato, un demo visual y funcional que pudiera mostrar en directo antes de que terminara la reunión de las diez, sin escribir una sola línea de código y utilizando únicamente herramientas que ya pagamos en la empres
+Mis compañeros empezaron a sudar frío pensando en scripts de Python, APIs complejas de Amazon y semanas de desarrollo con el departamento de IT. Yo necesitaba un comodín inmediato, un demo visual y funcional que pudiera mostrar en directo antes de que terminara la reunión de las diez, sin escribir una sola línea de código y utilizando únicamente herramientas que ya pagamos en la empresa.
 
-**A.** ![How to Scrape Amazon Competitor Pricing into Google Sheets Daily Without Writing Code AI Automation Guide](https://picsum.photos/seed/work-mvmq56dk-5-b/1000/550.jpg)
+![How to Scrape Amazon Competitor Pricing into Google Sheets Daily Without Writing Code AI Automation Guide](https://picsum.photos/seed/work-mvmq56dk-5-b/1000/550.jpg)
 
 ## 2. Análisis de causas raíz de errores de fórmulas y flujo
 
@@ -24,11 +24,11 @@ Mis compañeros empezaron a sudar frío pensando en scripts de Python, APIs comp
 <strong>Diagnóstico técnico:</strong> El cuello de botella no es la falta de datos, sino la fricción entre la estructura dinámica de las páginas web y las limitaciones de las hojas de cálculo estáticas.
 </div>
 
-1. **Bloqueos anti-scraping de Amazon:**Las páginas de comercio electrónico cambian sus selectores HTML constantemente y bloquean peticiones masivas mediante IPs repetitivas, haciendo que las macros caseras fallen al tercer dí
+1. <strong>Bloqueos anti-scraping de Amazon:</strong> Las páginas de comercio electrónico cambian sus selectores HTML constantemente y bloquean peticiones masivas mediante IPs repetitivas, haciendo que las macros caseras fallen al tercer día.
 
-**A.** 2.**Limitaciones de las funciones nativas:**Usar funciones básicas como**IMPORTXML**en Google Sheets suele devolver errores de tipo `#N/A` o `#REF!` debido a la protección contra bots que implementan los grandes marketplaces.
+2.<strong>Limitaciones de las funciones nativas:</strong> Usar funciones básicas como <strong>IMPORTXML</strong> en Google Sheets suele devolver errores de tipo `#N/A` o `#REF!` debido a la protección contra bots que implementan los grandes marketplaces.
 
-3.**Falta de persistencia temporal:**Incluso cuando logras extraer un precio puntual, Google Sheets no guarda un registro histórico diario por defecto, lo que impide generar gráficos de evolución sin bases de datos externas.
+3.<strong>Falta de persistencia temporal:</strong> Incluso cuando logras extraer un precio puntual, Google Sheets no guarda un registro histórico diario por defecto, lo que impide generar gráficos de evolución sin bases de datos externas.
 
 ## 3. Solución práctica paso a paso para optimizar el flujo
 
@@ -38,13 +38,13 @@ Para montar este demo en tiempo récord sin tocar código, utilizaremos una comb
 Abre una hoja de cálculo nueva en Google Workspace y prepara las columnas básicas para el monitoreo:
 
 ```text
-Columna
+Columna A:
 
-**A.** Producto
-Columna B: ASIN / Código de Amazon
-Columna C: URL de la página
-Columna D: Precio Actual
-Columna E: Fecha de Actualización
+Producto
+Columna A: B: ASIN / Código de Amazon
+Columna A: C: URL de la página
+Columna A: D: Precio Actual
+Columna A: E: Fecha de Actualización
 ```
 
 ### Paso 2: Utilizar la función IMPORTXML optimizada con selectores de clase
@@ -54,15 +54,15 @@ En lugar de arriesgarte con fórmulas masivas, utiliza una consulta XPath espec�
 =IMPORTXML(C2; "//*[@id='corePrice_desktop']//span[@class='a-offscreen']")
 ```
 
-*Nota táctic
+*Nota táctica.
 
-**A.** * Si Amazon bloquea el `IMPORTXML` estándar, el truco definitivo para entornos corporativos sin presupuesto de desarrollo es utilizar extensiones de navegador nativas de Google Workspace como **Web Scraper Builder** o complementos gratuitos de extracción directa que vuelcan el resultado a tu Drive mediante un activador diario (*trigger*).
+* Si Amazon bloquea el `IMPORTXML` estándar, el truco definitivo para entornos corporativos sin presupuesto de desarrollo es utilizar extensiones de navegador nativas de Google Workspace como <strong>Web Scraper Builder</strong> o complementos gratuitos de extracción directa que vuelcan el resultado a tu Drive mediante un activador diario (*trigger*).
 
 ### Paso 3: Automatizar la ejecución diaria sin programadores
 Para que el archivo se actualice solo cada mañana a las 8:00 antes de que llegue el director:
-1. Ve al menú superior de Google Sheets y haz clic en **Extensiones > Apps Script**(tranquilo, no escribiremos código, solo usaremos una función predefinida de refresco).
+1. Ve al menú superior de Google Sheets y haz clic en <strong>Extensiones > Apps Script</strong>(tranquilo, no escribiremos código, solo usaremos una función predefinida de refresco).
 
-2. O mejor aún, utiliza la automatización integrada de Google configurando una regla de actualización de datos importados en**Datos > Actualización de datos > Conexiones**.
+2. O mejor aún, utiliza la automatización integrada de Google configurando una regla de actualización de datos importados en <strong>Datos > Actualización de datos > Conexiones</strong>.
 
 3. Configura el activador temporal nativo para que guarde una copia del valor del precio en otra pestaña a modo de registro histórico (*Appended Rows*).
 
@@ -76,14 +76,14 @@ Asegúrate de mantener siempre una copia de seguridad estática de los datos de 
 
 ## 5. Preguntas Frecuentes (FAQ)
 
-**Q.** ¿Qué hago si la fórmula IMPORTXML me devuelve continuamente el error #N/A?
+<strong>Q.</strong> ¿Qué hago si la fórmula IMPORTXML me devuelve continuamente el error #N/A?
 
-**A.** Significa que Amazon ha detectado la petición como tráfico automatizado. La solución rápida sin código es utilizar un complemento de navegador de scraping visual en la nube o cambiar temporalmente la URL por un enlace acortado del producto.
+A. Significa que Amazon ha detectado la petición como tráfico automatizado. La solución rápida sin código es utilizar un complemento de navegador de scraping visual en la nube o cambiar temporalmente la URL por un enlace acortado del producto.
 
-**Q.** ¿Puedo recibir una alerta en mi correo si el precio de la competencia baja un 10%?
+<strong>Q.</strong> ¿Puedo recibir una alerta en mi correo si el precio de la competencia baja un 10%?
 
-**A.** Sí. Puedes combinar tu Google Sheet resultante con herramientas nativas de alertas de Google o reglas condicionales conectadas directamente a notificaciones por correo electrónico sin necesidad de servidores externos.
+A. Sí. Puedes combinar tu Google Sheet resultante con herramientas nativas de alertas de Google o reglas condicionales conectadas directamente a notificaciones por correo electrónico sin necesidad de servidores externos.
 
-**Q.** ¿Es legal realizar este monitoreo diario de precios públicos?
+<strong>Q.</strong> ¿Es legal realizar este monitoreo diario de precios públicos?
 
-**A.** Sí, extraer información pública de precios minoristas para análisis de mercado interno y benchmarking competitivo es una práctica estándar en el sector retail, siempre y cuando no satures los servidores con ataques de denegación de servicio ni utilices los datos para prácticas de competencia desleal.
+A. Sí, extraer información pública de precios minoristas para análisis de mercado interno y benchmarking competitivo es una práctica estándar en el sector retail, siempre y cuando no satures los servidores con ataques de denegación de servicio ni utilices los datos para prácticas de competencia desleal.

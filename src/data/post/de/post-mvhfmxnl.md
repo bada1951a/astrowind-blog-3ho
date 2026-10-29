@@ -8,8 +8,6 @@ tags: ["Excel", "KI Tools", "Bestandsplanung", "Automatisierung"]
 theme: "Tokyo Neon Violet"
 ---
 
-## 1. Kritische Fehlersituation im Büroalltag
-
 Es ist 18:45 Uhr an einem Dienstag im Frankfurter Finanzdistrikt. In genau 14 Stunden beginnt das entscheidende Vorstandstreffen, und auf meinem Schreibtisch stapeln sich die dringenden Monatsabschlussberichte. Plötzlich schickt mir der Supply-Chain-Leiter eine verklausulierte Excel-Tabelle mit den historischen Verkaufszahlen der letzten drei Jahre und der knappen Nachricht: "Wir brauchen bis morgen Früh eine realistische Prognose für den Lagerbestand im kommenden Quartal. Keine Schätzungen, harte Zahlen bitte!" Bisher bedeutete das für mich: Nachtschicht, stundenlanges Herumschlagen mit unvollständigen Pivot-Tabellen und das mühsame Erraten von saisonalen Trends in Excel, nur um am Ende wieder manuell an den Parametern zu drehen.
 
 Genau in solchen Momenten bricht das klassische, manuelle Arbeiten im Controlling zusammen. Die Daten sind zwar da, aber die Zeit reicht hinten und vorne nicht, um komplexe Prognosemodelle händisch aufzubauen.
@@ -24,11 +22,9 @@ Genau in solchen Momenten bricht das klassische, manuelle Arbeiten im Controllin
 
 Bevor wir zu der schnellen KI-Lösung kommen, sollten wir kurz analysieren, warum die bisherige Methode regelmäßig in Stress ausartet:
 
-1. Fehlende Saisonalitäts-Erkennung in Standard-Formeln: Einfache Excel-Formeln wie der gleitende Durchschnitt ignorieren plötzliche Marktschwankungen, Feiertage oder Aktionen komplett.
-
-2. Manuelle Dateninkonsistenzen: Verschiedene Abteilungen liefern Daten in unterschiedlichen Formaten. Das Bereinigen dauert oft doppelt so lange wie die eigentliche Analyse.
-
-3. Mangelnde Flexibilität bei What-If-Szenarien: Wenn der Vorstand fragt: "Was passiert, wenn die Lieferkette um 15 Prozent einbricht?", müssen Sie das Modell komplett neu aufsetzen.
+1. <strong>Fehlende Saisonalitäts-Erkennung in Standard-Formeln:</strong> Einfache Excel-Formeln wie der gleitende Durchschnitt ignorieren plötzliche Marktschwankungen, Feiertage oder Aktionen komplett.
+2. <strong>Manuelle Dateninkonsistenzen:</strong> Verschiedene Abteilungen liefern Daten in unterschiedlichen Formaten. Das Bereinigen dauert oft doppelt so lange wie die eigentliche Analyse.
+3. <strong>Mangelnde Flexibilität bei What-If-Szenarien:</strong> Wenn der Vorstand fragt: "Was passiert, wenn die Lieferkette um 15 Prozent einbricht?", müssen Sie das Modell komplett neu aufsetzen.
 
 ## Schritt-für-Schritt-Anleitung: KI-Bestandsvorhersage direkt in Excel
 
@@ -50,18 +46,15 @@ berechneten Zielwerte direkt in einer neuen Tabelle aus.
 ### Schritt 3: Nutzung der integrierten Excel-Prognoseblätter
 Wenn Sie ohne externe KI-Add-Ins arbeiten möchten, nutzen Sie das native Werkzeug von Excel, das im Hintergrund mit exponentieller Glättung (ETS-Algorithmus) arbeitet:
 1. Markieren Sie Ihre Datenreihe (Datum und Verkaufszahlen).
-
-2. Navigieren Sie in der Menüleiste auf Daten > Prognoseblatt (Forecast Sheet).
-
+2. Navigieren Sie in der Menüleiste auf <strong>Daten > Prognoseblatt</strong> (Forecast Sheet).
 3. Wählen Sie als Prognoseende das Ende des nächsten Quartals.
-
-4. Klicken Sie auf Erstellen, um ein voll dynamisches, KI-unterstütztes Diagramm inklusive oberer und unterer Konfidenzintervalle zu erhalten.
+4. Klicken Sie auf <strong>Erstellen</strong>, um ein voll dynamisches, KI-unterstütztes Diagramm inklusive oberer und unterer Konfidenzintervalle zu erhalten.
 
 <div style="border-left: 4px solid #8b5cf6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Wichtiger Hinweis zum Datenschutz:</strong> Wenn Sie interne Unternehmensdaten in KI-Tools eingeben, stellen Sie sicher, dass Sie die DSGVO-konformen Enterprise-Versionen Ihrer Software (wie Microsoft 365 Copilot mit Unternehmensdatenschutz) verwenden. Speisen Sie niemals vertrauliche Bestandsdaten in öffentliche, kostenlose KI-Websites ein!
 </div>
 
-## 5. Häufig gestellte Fragen (FAQ)
+## Häufig gestellte Fragen (FAQ)
 
 ### Kann die KI auch unvollständige Lagerdaten ausgleichen?
 Ja, moderne KI-Algorithmen erkennen Muster und können fehlende Zwischenwerte (z. B. durch Feiertage oder Systemausfälle) plausibel interpolieren, bevor die eigentliche Vorhersage für das nächste Quartal berechnet wird.

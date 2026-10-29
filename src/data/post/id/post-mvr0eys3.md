@@ -26,48 +26,48 @@ Upaya awal yang naif dengan menyalin teks acak dari PDF ke dalam editor dokumen 
 
 ## 2. Analisis Mendalam Akar Masalah Formula dan Alur Kerja
 
-Akar permasalahan dari kelumpuhan sistem ini terletak pada buruknya manajemen arsitektur pemanggilan API dan logika eksekusi skrip otomatis. Secara teknis, fungsi `UrlFetchApp` atau layanan `MailApp` di dalam Google Apps Script memiliki batasan ketat harian—misalnya 100 email per hari untuk akun gratis atau 1.500 untuk akun Workspace berbayar. Ketika pemicu waktu disetel ulang tanpa menghapus pemicu lama, skrip berjalan secara paralel (*concurrent execution*), melipatgandakan jumlah permintaan hingga melewati ambang batas kuota seketik
+Akar permasalahan dari kelumpuhan sistem ini terletak pada buruknya manajemen arsitektur pemanggilan API dan logika eksekusi skrip otomatis. Secara teknis, fungsi `UrlFetchApp` atau layanan `MailApp` di dalam Google Apps Script memiliki batasan ketat harian—misalnya 100 email per hari untuk akun gratis atau 1.500 untuk akun Workspace berbayar. Ketika pemicu waktu disetel ulang tanpa menghapus pemicu lama, skrip berjalan secara paralel (*concurrent execution*), melipatgandakan jumlah permintaan hingga melewati ambang batas kuota seketika.
 
-**A.** Sistem Google secara otomatis memberikan sanksi pembatasan (*temporary suspension*) untuk melindungi infrastruktur mereka dari serangan DDoS terselubung.
+Sistem Google secara otomatis memberikan sanksi pembatasan (*temporary suspension*) untuk melindungi infrastruktur mereka dari serangan DDoS terselubung.
 
 Dari sudut pandang pengolahan data dokumen hukum, tantangan utamanya adalah kompleksitas struktur hierarki regulasi setebal 150 halaman. Dokumen PDF hukum di Indonesia umumnya menggunakan format pindaian atau tata letak multi-kolom yang rumit, sehingga ekstraksi teks konvensional sering gagal mengenali struktur pasal, ayat, dan lampiran. Ketika data mentah ini dimasukkan langsung ke dalam model bahasa tanpa pra-pemrosesan yang tepat, token limit dari AI akan terlampaui, menyebabkan respons terpotong atau terjadinya halusinasi data yang sangat berbahaya dalam konteks kepatuhan hukum perusahaan.
 
-Perbedaan antara pemrosesan dokumen manual dan pemrosesan berbasis AI terletak pada kapasitas jendela konteks (*context window*). Claude 3.5 Sonnet memiliki keunggulan kompetitif berupa kapasitas penanganan token yang sangat besar serta pemahaman semantik tingkat tinggi terhadap bahasa hukum formal. Namun, tanpa panduan *prompt* yang terstruktur dan pembersihan antrean skrip yang benar, utilitas alat canggih ini tidak akan memberikan hasil yang akurat. Analisis mendalam menunjukkan bahwa kita membutuhkan solusi hibrid
+Perbedaan antara pemrosesan dokumen manual dan pemrosesan berbasis AI terletak pada kapasitas jendela konteks (*context window*). Claude 3.5 Sonnet memiliki keunggulan kompetitif berupa kapasitas penanganan token yang sangat besar serta pemahaman semantik tingkat tinggi terhadap bahasa hukum formal. Namun, tanpa panduan *prompt* yang terstruktur dan pembersihan antrean skrip yang benar, utilitas alat canggih ini tidak akan memberikan hasil yang akurat. Analisis mendalam menunjukkan bahwa kita membutuhkan solusi hibrida.
 
-**A.** menghentikan pemicu skrip yang rusak secara permanen, membersihkan antrean pengiriman, dan memanfaatkan Claude 3.5 Sonnet untuk mengekstrak intisari regulasi secara kilat.
+menghentikan pemicu skrip yang rusak secara permanen, membersihkan antrean pengiriman, dan memanfaatkan Claude 3.5 Sonnet untuk mengekstrak intisari regulasi secara kilat.
 
 ## 3. Panduan Langkah demi Langkah Otomatisasi dan Solusi Cepat
 
 Untuk mengatasi krisis kuota pengiriman email sekaligus merangkum dokumen regulasi 150 halaman dalam 3 menit, ikuti prosedur operasional standar berikut dengan teliti:
 
-1. **Langkah 1: Menghentikan Total Eksekusi Skrip yang Bermasalah**- Buka lembar kerja Google Sheets yang terhubung dengan skrip otomatisasi And
+1. <strong>Langkah 1: Menghentikan Total Eksekusi Skrip yang Bermasalah</strong>- Buka lembar kerja Google Sheets yang terhubung dengan skrip otomatisasi Anda.
 
-**A.** - Navigasi ke menu**Ekstensi**>**Apps Script**.
+- Navigasi ke menu <strong>Ekstensi</strong>><strong>Apps Script</strong>.
    - Di panel sebelah kiri, klik ikon jam (*Triggers*).
    - Hapus semua pemicu aktif yang terdaftar untuk mencegah pengiriman email berulang yang memicu suspensi kuota lebih lanjut.
 
-2. **Langkah 2: Pembersihan Antrean Email Keluar (Gmail Outbox)**- Buka akun Gmail Anda melalui peramban web.
-   - Periksa folder**Draft**dan**Terkirim (Sent)**untuk memastikan tidak ada email massal tersisa yang terjebak dalam antrean.
+2. <strong>Langkah 2: Pembersihan Antrean Email Keluar (Gmail Outbox)</strong>- Buka akun Gmail Anda melalui peramban web.
+   - Periksa folder <strong>Draft</strong> dan <strong>Terkirim (Sent)</strong> untuk memastikan tidak ada email massal tersisa yang terjebak dalam antrean.
    - Jika ada antrean yang masih berjalan, gunakan fitur pembatalan atau jeda sinkronisasi akun sementara waktu.
 
-3.**Langkah 3: Unggah dan Ringkas Dokumen Menggunakan Claude 3.5 Sonnet**
-   - Buka platform Claude.ai di peramban And
+3.<strong>Langkah 3: Unggah dan Ringkas Dokumen Menggunakan Claude 3.5 Sonnet</strong>
+   - Buka platform Claude.ai di peramban Anda.
 
-**A.** - Klik ikon lampiran klip kertas pada kotak *prompt*, lalu unggah file PDF regulasi 150 halaman tersebut.
+- Klik ikon lampiran klip kertas pada kotak *prompt*, lalu unggah file PDF regulasi 150 halaman tersebut.
    - Masukkan *prompt* instruksi spesifik berikut ke dalam kolom teks:
      ```text
-     Bertindaklah sebagai Konsultan Hukum Korporat senior di Jakart
+     Bertindaklah sebagai Konsultan Hukum Korporat senior di Jakarta.
 
-**A.** Analisis dokumen PDF regulasi terlampir. Berikan ringkasan eksekutif dalam waktu 3 menit dengan struktur: 
+Analisis dokumen PDF regulasi terlampir. Berikan ringkasan eksekutif dalam waktu 3 menit dengan struktur: 
      1. Inti Perubahan Kebijakan Utama, 
      2. Dampak Langsung terhadap Operasional Perusahaan di SCBD, 
-     3. Tindakan Kepatuhan Wajib (Action Items) beserta batas waktuny
+     3. Tindakan Kepatuhan Wajib (Action Items) beserta batas waktunya.
 
-**A.** Gunakan format poin-poin yang padat, profesional, dan bebas dari jargon berlebihan.
+Gunakan format poin-poin yang padat, profesional, dan bebas dari jargon berlebihan.
      ```
    - Tekan tombol Kirim dan biarkan Claude memproses seluruh dokumen tebal tersebut dalam hitungan detik.
 
-4. **Langkah 4: Validasi dan Distribusi Manual Sementara**
+4. <strong>Langkah 4: Validasi dan Distribusi Manual Sementara</strong>
    - Salin hasil ringkasan yang dihasilkan oleh Claude 3.5 Sonnet.
    - Buat email baru secara manual di klien email Anda, tujukan langsung kepada para direksi dengan subjek mendesak: `[RINGKASAN DARURAT] Pembaruan Regulasi Kepatuhan Terbaru`.
    - Lampirkan ringkasan bersih tersebut untuk memastikan para pengambil keputusan mendapatkan informasi krusial tepat waktu tanpa melanggar kuota sistem otomatisasi.
@@ -76,22 +76,44 @@ Untuk mengatasi krisis kuota pengiriman email sekaligus merangkum dokumen regula
 
 Dalam mengelola otomatisasi kantor dan pemrosesan dokumen berbasis AI, keamanan data dan integritas sistem adalah harga mati yang tidak bisa ditawar. Risiko terbesar dari penggunaan alat kecerdasan buatan pihak ketiga adalah kebocoran data rahasia perusahaan (*data leakage*). Pastikan Anda selalu menghapus file sensitif dari riwayat penyimpanan peladen AI setelah sesi pekerjaan selesai, atau gunakan mode perusahaan (*Enterprise Privacy*) yang menjamin data dokumen regulasi internal tidak digunakan untuk pelatihan model publik.
 
-Selain itu, jangan pernah mengaktifkan kembali skrip otomatisasi (*triggers*) sebelum melakukan pengujian menyeluruh di lingkungan pengujian terpisah (*sandbox environment*). Buatlah kebiasaan untuk selalu menerapkan fungsi penanganan galat (*error handling* try-catch) serta pembatas kecepatan (*rate limiting*) di dalam setiap baris kode Google Apps Script And
+Selain itu, jangan pernah mengaktifkan kembali skrip otomatisasi (*triggers*) sebelum melakukan pengujian menyeluruh di lingkungan pengujian terpisah (*sandbox environment*). Buatlah kebiasaan untuk selalu menerapkan fungsi penanganan galat (*error handling* try-catch) serta pembatas kecepatan (*rate limiting*) di dalam setiap baris kode Google Apps Script Anda.
 
-**A.** Disiplin dalam menerapkan kontrol versi (*version control*) pada skrip kantor akan menyelamatkan Anda dari kekacauan operasional serupa di masa depan.
+Disiplin dalam menerapkan kontrol versi (*version control*) pada skrip kantor akan menyelamatkan Anda dari kekacauan operasional serupa di masa depan.
 
 ## 5. Pertanyaan yang Sering Diajukan (FAQ)
 
-**Q1.** Apakah aman mengunggah dokumen regulasi perusahaan yang bersifat rahasia ke dalam platform Claude 3.5 Sonnet?
 
-**A1.** Keamanan data sangat bergantung pada jenis akun yang Anda gunakan. Jika Anda menggunakan langganan enterprise atau API berbayar dengan kebijakan privasi data ketat, dokumen Anda tidak akan disimpan atau digunakan untuk melatih model publik. Namun, untuk dokumen dengan tingkat kerahasiaan ekstrem seperti rahasia dagang atau paten, disarankan untuk menyamarkan nama entitas atau menggunakan versi ringkasan publik yang tersedi
 
-**A.Q2.** Mengapa skrip Google Apps Script saya sering mengalami penghentian kuota mendadak padahal sudah diatur dengan benar?
 
-**A2.** Masalah ini biasanya terjadi karena adanya penumpukan eksekusi paralel akibat pemicu berbasis waktu yang tumpang tindih dari beberapa sesi pengeditan sebelumny
 
-**A.** Google menerapkan batasan kuota harian yang ketat untuk mencegah penyalahgunaan sumber daya peladen. Solusi terbaik adalah secara berkala membersihkan seluruh pemicu lama di menu *Triggers* konsol Apps Script sebelum menerapkan skrip versi baru.
+Q1. Apakah aman mengunggah dokumen regulasi perusahaan yang bersifat rahasia ke dalam platform Claude 3.5 Sonnet?
 
-**Q3.** Bagaimana cara memastikan bahwa ringkasan yang dihasilkan oleh Claude 3.5 Sonnet tidak melewatkan pasal-pasal krusial dari dokumen 150 halaman tersebut?
 
-**A3.** Anda dapat mengoptimalkan hasil ringkasan dengan memberikan *prompt* terarah yang meminta model untuk mencari bab atau kata kunci spesifik terlebih dahulu sebelum membuat ringkasan umum. Selain itu, mintalah Claude menyertakan referensi nomor pasal dan ayat pada setiap poin ringkasan agar tim hukum internal dapat melakukan verifikasi silang dengan cepat dan akurat.
+
+
+
+A1. Keamanan data sangat bergantung pada jenis akun yang Anda gunakan. Jika Anda menggunakan langganan enterprise atau API berbayar dengan kebijakan privasi data ketat, dokumen Anda tidak akan disimpan atau digunakan untuk melatih model publik. Namun, untuk dokumen dengan tingkat kerahasiaan ekstrem seperti rahasia dagang atau paten, disarankan untuk menyamarkan nama entitas atau menggunakan versi ringkasan publik yang tersedia.
+
+
+
+Q2. Mengapa skrip Google Apps Script saya sering mengalami penghentian kuota mendadak padahal sudah diatur dengan benar?
+
+
+
+
+
+A2. Masalah ini biasanya terjadi karena adanya penumpukan eksekusi paralel akibat pemicu berbasis waktu yang tumpang tindih dari beberapa sesi pengeditan sebelumnya.
+
+A. Google menerapkan batasan kuota harian yang ketat untuk mencegah penyalahgunaan sumber daya peladen. Solusi terbaik adalah secara berkala membersihkan seluruh pemicu lama di menu *Triggers* konsol Apps Script sebelum menerapkan skrip versi baru.
+
+
+
+
+
+Q3. Bagaimana cara memastikan bahwa ringkasan yang dihasilkan oleh Claude 3.5 Sonnet tidak melewatkan pasal-pasal krusial dari dokumen 150 halaman tersebut?
+
+
+
+
+
+A3. Anda dapat mengoptimalkan hasil ringkasan dengan memberikan *prompt* terarah yang meminta model untuk mencari bab atau kata kunci spesifik terlebih dahulu sebelum membuat ringkasan umum. Selain itu, mintalah Claude menyertakan referensi nomor pasal dan ayat pada setiap poin ringkasan agar tim hukum internal dapat melakukan verifikasi silang dengan cepat dan akurat.

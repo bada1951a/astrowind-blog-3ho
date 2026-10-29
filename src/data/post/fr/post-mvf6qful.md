@@ -8,8 +8,6 @@ tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]
 theme: "Warm Coffee Latte"
 ---
 
-## 1. Situation d'urgence critique au bureau
-
 Il est 14h45 au 24e étage d'une tour à La Défense. Le comité de direction commence à 15h00 pile, et mon écran affiche un tableau Google Sheets de 4 500 lignes absolument chaotique. Entre les commerciaux qui ont écrit "Dupont SARL", ceux qui ont noté "dupont sarl" et les fiches doublonnées par trois suite à la fusion des bases de données régionales, le fichier est inexploitable. Mon café est froid, la sueur froide, elle, est bien réelle. Utiliser le bouton natif "Supprimer les doublons" ne sert à rien : les variations orthographiques et les erreurs de frappe trompent l'outil. Heureusement, j'ai ouvert le panneau latéral de Gemini, et cette petite astuce m'a sauvé la mise en moins de deux minutes.
 
 Voici comment automatiser ce nettoyage redoutable et transformer un enfer de données en un fichier client propre et unifié.
@@ -26,11 +24,9 @@ Voici comment automatiser ce nettoyage redoutable et transformer un enfer de don
 
 Avant de passer à la solution magique, faisons face à la réalité. Si vous en êtes là, c'est que vous vous êtes heurté à ces trois murs invisibles :
 
-1. Les variations de casse et d'espaces : Pour un tableur, "Martin & Co" et "martin & co " sont deux entités totalement différentes. Le résultat, c'est que vos e-mails marketing risquent d'être envoyés deux fois au même client.
-
-2. Les fautes de frappe et variations de saisie : "Jean-François Dupont" d'un côté, "Jean Francois Dupont" de l'autre. Aucune formule standard de suppression de doublons ne détectera qu'il s'agit de la même personne physique.
-
-3. Le piège des données partielles : Une ligne contient le numéro de téléphone mais pas l'e-mail, tandis que la ligne du dessous a l'e-mail mais pas le téléphone. Si vous supprimez bêtement un doublon, vous perdez de l'information précieuse.
+1. <strong>Les variations de casse et d'espaces :</strong> Pour un tableur, "Martin & Co" et "martin & co " sont deux entités totalement différentes. Le résultat, c'est que vos e-mails marketing risquent d'être envoyés deux fois au même client.
+2. <strong>Les fautes de frappe et variations de saisie :</strong> "Jean-François Dupont" d'un côté, "Jean Francois Dupont" de l'autre. Aucune formule standard de suppression de doublons ne détectera qu'il s'agit de la même personne physique.
+3. <strong>Le piège des données partielles :</strong> Une ligne contient le numéro de téléphone mais pas l'e-mail, tandis que la ligne du dessous a l'e-mail mais pas le téléphone. Si vous supprimez bêtement un doublon, vous perdez de l'information précieuse.
 
 ---
 
@@ -64,20 +60,18 @@ Gemini va vous générer une formule sur-mesure ou un script Google Apps Script 
 
 Avant de balancer la base de données de vos clients grands comptes dans une IA, gardez en tête ces quelques règles d'or en entreprise :
 
-- Anonymisation : Si vous travaillez sur des données sensibles ou couvertes par le RGPD, remplacez les noms réels par des pseudonymes (Client_A, Client_B) avant de les soumettre à Gemini, ou utilisez la version d'entreprise de Workspace qui garantit la confidentialité de vos données promptées.
-- Sauvegarde systématique : Ne travaillez jamais sur l'exemplaire unique. Conservez toujours une version brute "archive" au cas où le script nettoyeur serait un peu trop zélé.
+- <strong>Anonymisation :</strong> Si vous travaillez sur des données sensibles ou couvertes par le RGPD, remplacez les noms réels par des pseudonymes (Client_A, Client_B) avant de les soumettre à Gemini, ou utilisez la version d'entreprise de Workspace qui garantit la confidentialité de vos données promptées.
+- <strong>Sauvegarde systématique :</strong> Ne travaillez jamais sur l'exemplaire unique. Conservez toujours une version brute "archive" au cas où le script nettoyeur serait un peu trop zélé.
 
 ---
 
-## 5. Foire Aux Questions (FAQ)
+### Foire aux questions (FAQ)
 
-**Q.** Est-ce que Gemini peut supprimer directement les lignes dans mon Google Sheets à ma place ?
+<strong>1. Est-ce que Gemini peut supprimer directement les lignes dans mon Google Sheets à ma place ?</strong>
+Si vous utilisez Gemini directement intégré dans l'écosystème Google Workspace (via le panneau latéral payant), il peut interagir plus facilement, mais la méthode la plus robuste et gratuite reste de lui demander de rédiger un script Apps Script que vous exécutez en un clic dans les extensions.
 
-**A.** Si vous utilisez Gemini directement intégré dans l'écosystème Google Workspace (via le panneau latéral payant), il peut interagir plus facilement, mais la méthode la plus robuste et gratuite reste de lui demander de rédiger un script Apps Script que vous exécutez en un clic dans les extensions.
+<strong>2. Comment l'IA gère-t-elle les homonymes parfaits mais qui sont des personnes différentes ?</strong>
+C'est pour cela qu'il ne faut jamais automatiser à l'aveugle. Demandez toujours à Gemini de lister les "doublons probables" dans une colonne de revue pour valider visuellement avant la suppression définitive.
 
-**Q.** Comment l'IA gère-t-elle les homonymes parfaits mais qui sont des personnes différentes ?
-
-**A.** C'est pour cela qu'il ne faut jamais automatiser à l'aveugle. Demandez toujours à Gemini de lister les "doublons probables" dans une colonne de revue pour valider visuellement avant la suppression définitive.
-
-3. Cette méthode fonctionne-t-elle avec des fichiers Excel traditionnels ?
+<strong>3. Cette méthode fonctionne-t-elle avec des fichiers Excel traditionnels ?</strong>
 Le principe reste le même, mais la synergie est optimale avec Google Sheets grâce à la passerelle naturelle avec l'écosystème Google et les scripts JavaScript intégrés. Pour Excel, vous passerez par l'assistant Copilot ou l'import direct des données nettoyées par Gemini.

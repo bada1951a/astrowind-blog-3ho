@@ -24,13 +24,13 @@ Malam itu juga, saya bersumpah tidak mau lagi buang waktu berharga untuk hal rem
 
 ### Akar Masalah: Kenapa Pekerjaan Konversi Kurs Sering Bikin Stres?
 
-Sebelum masuk ke solusi teknis, mari kita bedah tiga alasan utama kenapa pekerjaan rekapitulasi kurs mata uang di kantor sering berujung petak
+Sebelum masuk ke solusi teknis, mari kita bedah tiga alasan utama kenapa pekerjaan rekapitulasi kurs mata uang di kantor sering berujung petaka.
 
-**A.** 1. Ketergantungan pada Input Manual: Menyalin kurs harian secara manual rentan terhadap *human error*. Salah ketik satu digit saja bisa membuat selisih laporan jutaan rupiah.
+1. Ketergantungan pada Input Manual: Menyalin kurs harian secara manual rentan terhadap *human error*. Salah ketik satu digit saja bisa membuat selisih laporan jutaan rupiah.
 
-2. Add-in Pihak Ketiga yang Berbayar atau Kedaluwars
+2. Add-in Pihak Ketiga yang Berbayar atau Kedaluwarsa.
 
-**A.** Banyak ekstensi Google Sheets yang menawarkan fitur kurs otomatis, tapi versi gratisnya sangat dibatasi atau tiba-tiba meminta langganan bulanan dalam dolar.
+Banyak ekstensi Google Sheets yang menawarkan fitur kurs otomatis, tapi versi gratisnya sangat dibatasi atau tiba-tiba meminta langganan bulanan dalam dolar.
 
 3. Format Tanggal dan Simbol Mata Uang yang Tidak Konsisten: Data mentah dari klien atau cabang global sering kali menggunakan format teks biasa (`USD 1,500`), bukan format angka, sehingga rumus matematika standar langsung memunculkan error `#VALUE!`.
 
@@ -51,13 +51,13 @@ Contoh formula di sel B2 untuk menarik kurs USD ke IDR hari ini:
 Untuk mata uang lain seperti SGD, EUR, atau JPY, cukup ubah kodenya menjadi `SGDIDR`, `EURIDR`, atau `JPYIDR`.
 
 #### Langkah 2: Bersihkan Data Transaksi Mentah
-Sering kali data transaksi masuk dalam bentuk teks campuran. Gunakan rumus pembersih teks atau pastikan kolom nominal terpisah dari kode mata uangny
+Sering kali data transaksi masuk dalam bentuk teks campuran. Gunakan rumus pembersih teks atau pastikan kolom nominal terpisah dari kode mata uangnya.
 
-**A.** * Kolom
+* Kolom A:
 
-**A.** Tanggal Transaksi
-* Kolom B: Kode Mata Uang (Contoh: USD)
-* Kolom C: Nominal Asli (Contoh: 500)
+Tanggal Transaksi
+* Kolom A: B: Kode Mata Uang (Contoh: USD)
+* Kolom A: C: Nominal Asli (Contoh: 500)
 
 #### Langkah 3: Gabungkan dengan Rumus VLOOKUP dan GOOGLEFINANCE Dinamis
 Alih-alih mengetik manual, kita gabungkan fungsi `VLOOKUP` untuk mencocokkan mata uang transaksi dengan tabel referensi kurs yang sudah kita buat di Langkah 1.
@@ -66,7 +66,7 @@ Masukkan rumus ini di kolom "Total dalam IDR" (Kolom D):
 ```text
 =C2 * VLOOKUP(B2, 'Referensi_Kurs'!
 
-**A.** B, 2, FALSE)
+B, 2, FALSE)
 ```
 
 Rumus di atas secara otomatis akan membaca nominal di C2, mencari nilai kurs terkini berdasarkan kode mata uang di B2 dari tab referensi, lalu mengalikannya secara instan.
@@ -79,16 +79,16 @@ Rumus di atas secara otomatis akan membaca nominal di C2, mencari nilai kurs ter
 
 ### Tanya Jawab (FAQ) Seputar Google Sheets dan Kurs Mata Uang
 
-**Q.** Apakah rumus GOOGLEFINANCE bisa digunakan untuk kripto seperti Bitcoin (BTC) ke IDR?
+<strong>Q.</strong> Apakah rumus GOOGLEFINANCE bisa digunakan untuk kripto seperti Bitcoin (BTC) ke IDR?
 
-**A.** Ya, bis
+A. Ya, bisa.
 
-**A.** Anda cukup mengetik `=GOOGLEFINANCE("CURRENCY:BTCIDR")` atau menggunakan simbol bursa tertentu, meskipun untuk aset kripto volatilitasnya sangat tinggi dan pembaruannya mengikuti pasar 24 jam.
+Anda cukup mengetik `=GOOGLEFINANCE("CURRENCY:BTCIDR")` atau menggunakan simbol bursa tertentu, meskipun untuk aset kripto volatilitasnya sangat tinggi dan pembaruannya mengikuti pasar 24 jam.
 
-**Q.** Kenapa lembar kerja saya tiba-tiba muncul error `#N/A` pada fungsi GOOGLEFINANCE?
+<strong>Q.</strong> Kenapa lembar kerja saya tiba-tiba muncul error `#N/A` pada fungsi GOOGLEFINANCE?
 
-**A.** Error ini biasanya terjadi karena salah penulisan simbol mata uang (misalnya harusnya `USDIDR` malah ditulis `USD-IDR`), atau pasar keuangan sedang tutup (libur nasional/akhir pekan) sehingga Google belum merefresh data terbaru. Cek kembali penulisan kodeny
+A. Error ini biasanya terjadi karena salah penulisan simbol mata uang (misalnya harusnya `USDIDR` malah ditulis `USD-IDR`), atau pasar keuangan sedang tutup (libur nasional/akhir pekan) sehingga Google belum merefresh data terbaru. Cek kembali penulisan kodeny
 
-**A.Q.** Apakah ada batasan jumlah baris (row limit) saat menggunakan rumus ini dalam jumlah besar?
+<strong>A.Q.</strong> Apakah ada batasan jumlah baris (row limit) saat menggunakan rumus ini dalam jumlah besar?
 
-**A.** Google Sheets memiliki batasan kuota untuk pemanggilan fungsi `GOOGLEFINANCE` dalam satu dokumen (biasanya maksimal sekitar beberapa ratus pemanggilan simultan). Jika file spreadsheet Anda sangat besar (ribuan baris), disarankan untuk menarik data kurs di satu tabel ringkasan terpusat, lalu merujuk (refer) ke tabel tersebut alih-alih memasukkan fungsi `GOOGLEFINANCE` di setiap baris transaksi.
+A. Google Sheets memiliki batasan kuota untuk pemanggilan fungsi `GOOGLEFINANCE` dalam satu dokumen (biasanya maksimal sekitar beberapa ratus pemanggilan simultan). Jika file spreadsheet Anda sangat besar (ribuan baris), disarankan untuk menarik data kurs di satu tabel ringkasan terpusat, lalu merujuk (refer) ke tabel tersebut alih-alih memasukkan fungsi `GOOGLEFINANCE` di setiap baris transaksi.

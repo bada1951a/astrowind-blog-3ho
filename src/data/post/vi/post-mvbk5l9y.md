@@ -8,11 +8,9 @@ tags: ["Google Sheets", "Tài chính", "Tự động hóa", "Mẹo văn phòng"]
 theme: "Retro Monokai"
 ---
 
-## 1. Tình huống sự cố khẩn cấp và tắc nghẽn công việc văn phòng
+Đồng hồ góc phải màn hình máy tính nhảy tanh tách về mốc 17:15 chiều. Sếp vừa tạt qua bàn vứt một câu xanh rờn: "Em ơi, cập nhật lại toàn bộ báo cáo doanh thu quý bằng tỷ giá nóng hôm nay nhé, hội đồng quản trị chuẩn bị xem đấy!". Nhìn vào file Google Sheets gồm hàng chục dòng quy đổi từ USD, EUR, JPY sang VND mà sếp gửi, tay tôi bắt đầu lạnh toát. Mọi lần, cứ đến hạn nộp báo cáo số liệu trước giờ tan ca là cả phòng lại hì hục lên Google tra từng ngoại tệ rồi gõ thủ công vào bảng tính. Đã thế, sếp lại vừa gí thêm yêu cầu: tuyệt đối không mua mấy cái plugin trả phí đắt đỏ vì chính sách bảo mật công ty cấm tuyệt đối việc cấp quyền tài khoản bên thứ ba. 
 
-Đồng hồ góc phải màn hình máy tính nhảy tanh tách về mốc 17:15 chiều. Sếp vừa tạt qua bàn vứt một câu xanh rờn: "Em ơi, cập nhật lại toàn bộ báo cáo doanh thu quý bằng tỷ giá nóng hôm nay nhé, hội đồng quản trị chuẩn bị xem đấy!". Nhìn vào file Google Sheets gồm hàng chục dòng quy đổi từ USD, EUR, JPY sang VND mà sếp gửi, tay tôi bắt đầu lạnh toát. Mọi lần, cứ đến hạn nộp báo cáo số liệu trước giờ tan ca là cả phòng lại hì hục lên Google tra từng ngoại tệ rồi gõ thủ công vào bảng tính. Đã thế, sếp lại vừa gí thêm yêu cầu: tuyệt đối không mua mấy cái plugin trả phí đắt đỏ vì chính sách bảo mật công ty cấm tuyệt đối việc cấp quyền tài khoản bên thứ b
-
-A. Quay cuồng trong đống hỗn độn đó, tôi tự nhủ phải tìm ra cách dứt điểm cảnh tra cứu thủ công này ngay trong tối nay. Và đây là giải pháp bảng tỷ giá tự động trên Google Sheets mà tôi đã đúc rút được, chạy mượt mà, chính xác và quan trọng nhất là hoàn toàn miễn phí.
+Quay cuồng trong đống hỗn độn đó, tôi tự nhủ phải tìm ra cách dứt điểm cảnh tra cứu thủ công này ngay trong tối nay. Và đây là giải pháp bảng tỷ giá tự động trên Google Sheets mà tôi đã đúc rút được, chạy mượt mà, chính xác và quan trọng nhất là hoàn toàn miễn phí.
 
 ![AI Productivity & Workflow Automation](https://picsum.photos/seed/office266/1000/550)
 
@@ -26,11 +24,9 @@ A. Quay cuồng trong đống hỗn độn đó, tôi tự nhủ phải tìm ra 
 
 Trước khi nhảy vào cách làm, hãy điểm mặt lại những cái bẫy mà dân văn phòng hay mắc phải khiến việc làm báo cáo tài chính trở thành ác mộng:
 
-1. Phụ thuộc vào tra cứu thủ công: Mỗi lần làm báo cáo là lại mở tab mới, gõ "tỷ giá USD VND hôm nay", copy dán vào file Excel/Sheets. Chỉ cần sơ suất copy nhầm giá mua vào thành giá bán ra là lệch cả triệu đồng.
-
-2. Dùng Add-on trả phí không rõ nguồn gốc: Cài mấy tiện ích mở rộng trên mạng đòi quyền truy cập toàn bộ tài khoản Google Drive, vừa tốn tiền subscription hàng tháng vừa vi phạm bảo mật dữ liệu công ty.
-
-3. Cấu trúc file thiếu linh hoạt: Hard-code (cố định) con số tỷ giá vào công thức tính toán. Hôm nay tỷ giá khác, ngày mai khác là phải vào sửa từng công thức trong hàng trăm ô tính.
+1. <strong>Phụ thuộc vào tra cứu thủ công:</strong> Mỗi lần làm báo cáo là lại mở tab mới, gõ "tỷ giá USD VND hôm nay", copy dán vào file Excel/Sheets. Chỉ cần sơ suất copy nhầm giá mua vào thành giá bán ra là lệch cả triệu đồng.
+2. <strong>Dùng Add-on trả phí không rõ nguồn gốc:</strong> Cài mấy tiện ích mở rộng trên mạng đòi quyền truy cập toàn bộ tài khoản Google Drive, vừa tốn tiền subscription hàng tháng vừa vi phạm bảo mật dữ liệu công ty.
+3. <strong>Cấu trúc file thiếu linh hoạt:</strong> Hard-code (cố định) con số tỷ giá vào công thức tính toán. Hôm nay tỷ giá khác, ngày mai khác là phải vào sửa từng công thức trong hàng trăm ô tính.
 
 ---
 
@@ -40,9 +36,7 @@ May mắn là Google Sheets có sẵn một thứ vũ khí cực kỳ mạnh m�
 
 #### Bước 1: Tạo bảng danh mục tiền tệ chuẩn
 Mở file Google Sheets báo cáo của bạn lên. Tạo một tab mới hoặc một khu vực riêng đặt tên là `Tham_So_Ty_Gia`. Lập sẵn các cột:
-- Cột
-
-A. Mã tiền tệ (Ví dụ: USD, EUR, JPY, SGD)
+- Cột A: Mã tiền tệ (Ví dụ: USD, EUR, JPY, SGD)
 - Cột B: Tên loại tiền
 - Cột C: Tỷ giá quy đổi tự động
 
@@ -62,9 +56,7 @@ Bây giờ, tại bảng doanh thu chính, thay vì gõ cứng con số tỷ gi�
 
 Ví dụ, bạn muốn đổi 5000 USD ở cột Doanh Thu (Ô B5) sang VND, công thức tại ô kết quả sẽ là:
 
-`=B5 * VLOOKUP("USD", Tham_So_Ty_Gia!
-
-A2. C10, 3, FALSE)`
+`=B5 * VLOOKUP("USD", Tham_So_Ty_Gia!A2:C10, 3, FALSE)`
 
 Cách làm này giúp bạn chỉ cần update tỷ giá ở một nơi duy nhất, toàn bộ hàng trăm dòng báo cáo bên dưới sẽ tự động nhảy số theo chuẩn xác từng giây.
 
@@ -81,11 +73,11 @@ Cách làm này giúp bạn chỉ cần update tỷ giá ở một nơi duy nh�
 
 ### Giải đáp thắc mắc thường gặp (FAQ)
 
-1. Dữ liệu tỷ giá từ hàm GOOGLEFINANCE có được cập nhật theo thời gian thực không?
+<strong>1. Dữ liệu tỷ giá từ hàm GOOGLEFINANCE có được cập nhật theo thời gian thực không?</strong>
 Dữ liệu của GOOGLEFINANCE được lấy từ các sàn giao dịch tài chính lớn và có thể có độ trễ từ 10 đến 20 phút so với thời gian thực. Tuy nhiên, mức độ chính xác này hoàn toàn đáp ứng tốt cho các báo cáo nội chính, tài chính tuần và tháng của doanh nghiệp.
 
-2. Tại sao công thức của tôi báo lỗi #NAME? mặc dù đã nhập đúng cú pháp?
+<strong>2. Tại sao công thức của tôi báo lỗi #NAME? mặc dù đã nhập đúng cú pháp?</strong>
 Lỗi này thường xảy ra do ngôn ngữ của file Google Sheets đang được cài đặt là tiếng Việt nhưng cú pháp hàm yêu cầu dấu phân cách là dấu phẩy (,) thay vì chấm phẩy (;), hoặc ngược lại. Hãy kiểm tra lại định dạng ngôn ngữ trong phần *Tệp > Cài đặt bảng tính* (File > Spreadsheet settings) hoặc đổi dấu phẩy trong hàm thành dấu chấm phẩy tùy theo máy.
 
-3. Tôi có thể dùng cách này để quy đổi ngược từ VND sang ngoại tệ không?
+<strong>3. Tôi có thể dùng cách này để quy đổi ngược từ VND sang ngoại tệ không?</strong>
 Hoàn toàn được. Nếu bạn có số tiền VND và muốn quy đổi ra USD, bạn chỉ cần lấy 1 chia cho tỷ giá USDVND vừa lấy được, hoặc đơn giản là đảo chiều cặp tiền tệ trong hàm thành `=GOOGLEFINANCE("CURRENCY:VNDUSD")` tùy thuộc vào bài toán báo cáo của bạn.

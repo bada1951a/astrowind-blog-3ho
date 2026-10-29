@@ -10,9 +10,9 @@ theme: "Pastel Lavender Tech"
 
 ## 1. Situasi Kritis dan Hambatan Kerja Mendesak di Kantor
 
-Jam baru menunjukkan pukul 09.15 pagi di salah satu gedung pencakar langit kawasan bisnis SCBD Jakart
+Jam baru menunjukkan pukul 09.15 pagi di salah satu gedung pencakar langit kawasan bisnis SCBD Jakarta.
 
-**A.** Baru saja saya menyeruput kopi hitam pertama, sebuah pesan beruntun masuk ke grup *chat* kantor dengan nada panik dari bagian keuangan. Rupanya, sesaat sebelum rapat pleno direksi dimulai, Google Spreadsheet laporan keuangan utama mendadak berantakan. Seseorang tidak sengaja mengubah pengaturan filter di kolom utama, membuat angka akumulasi pendapatan bersih seluruh cabang berubah menjadi tidak masuk akal di hadapan para C-level. 
+Baru saja saya menyeruput kopi hitam pertama, sebuah pesan beruntun masuk ke grup *chat* kantor dengan nada panik dari bagian keuangan. Rupanya, sesaat sebelum rapat pleno direksi dimulai, Google Spreadsheet laporan keuangan utama mendadak berantakan. Seseorang tidak sengaja mengubah pengaturan filter di kolom utama, membuat angka akumulasi pendapatan bersih seluruh cabang berubah menjadi tidak masuk akal di hadapan para C-level. 
 
 Suasana langsung menegang karena data tersebut harus disinkronkan dengan dokumen regulasi kepatuhan (*compliance*) setebal 150 halaman yang baru saja diterbitkan oleh instansi pemerintah. Membaca ratusan halaman aturan hukum dan mencocokkannya dengan baris data finansial secara manual dalam waktu tiga menit adalah hal yang mustahil. Jika salah interpretasi pasal, risiko salah ambil keputusan strategis bisa berakibat fatal bagi perusahaan. Di sinilah saya harus bergerak cepat memanfaatkan Claude 3.5 Sonnet untuk membedah dokumen tebal tersebut.
 
@@ -20,18 +20,18 @@ Suasana langsung menegang karena data tersebut harus disinkronkan dengan dokumen
 
 ## 2. Analisis Mendalam Akar Masalah Formula dan Alur Kerja
 
-Mengapa tugas membaca dokumen regulasi tebal sering kali menjadi momok yang melumpuhkan produktivitas kantor? Berdasarkan pengalaman mendampingi berbagai tim korporat di Jakarta, ada tiga akar penyebab utamany
+Mengapa tugas membaca dokumen regulasi tebal sering kali menjadi momok yang melumpuhkan produktivitas kantor? Berdasarkan pengalaman mendampingi berbagai tim korporat di Jakarta, ada tiga akar penyebab utamanya.
 
-**A.** 1. **Volume Teks yang Masif:**Dokumen regulasi, pajak, atau hukum biasanya dipenuhi dengan bahasa birokratis yang bertele-tele, membuat pembaca cepat lelah secara kognitif.
+1. <strong>Volume Teks yang Masif:</strong> Dokumen regulasi, pajak, atau hukum biasanya dipenuhi dengan bahasa birokratis yang bertele-tele, membuat pembaca cepat lelah secara kognitif.
 
-2.**Keterbatasan Waktu Tenggat:** Manajemen puncak atau *board of directors* sering meminta *executive summary* dalam hitungan menit, bukan hari, padahal dokumen baru saja diterim
+2.<strong>Keterbatasan Waktu Tenggat:</strong> Manajemen puncak atau *board of directors* sering meminta *executive summary* dalam hitungan menit, bukan hari, padahal dokumen baru saja diterima.
 
-**A.** 3. **Kesalahan Kontekstual Manual:** Saat membaca cepat secara manual, poin-poin krusial terkait denda, tenggat waktu pelaporan, atau perubahan persentase pajak sering terlewat karena tertutup narasi hukum yang panjang.
+3. <strong>Kesalahan Kontekstual Manual:</strong> Saat membaca cepat secara manual, poin-poin krusial terkait denda, tenggat waktu pelaporan, atau perubahan persentase pajak sering terlewat karena tertutup narasi hukum yang panjang.
 
 <div style="border-left: 4px solid #7c3aed; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Catatan Praktis:</strong> Jangan pernah mencoba membaca teks 150 halaman baris per baris ketika tenggat waktu sudah di depan mat
+<strong>Catatan Praktis:</strong> Jangan pernah mencoba membaca teks 150 halaman baris per baris ketika tenggat waktu sudah di depan mata.
 
-**A.** Gunakan pendekatan berbasis kecerdasan buatan untuk mengekstrak inti informasi secara terstruktur.
+Gunakan pendekatan berbasis kecerdasan buatan untuk mengekstrak inti informasi secara terstruktur.
 </div>
 
 ## 3. Panduan Langkah demi Langkah Otomatisasi dan Solusi Cepat
@@ -61,14 +61,14 @@ Sebelum Anda memasukkan dokumen penting perusahaan ke dalam perangkat AI publik,
 
 ## 5. Pertanyaan yang Sering Diajukan (FAQ)
 
-**Q.** Apakah Claude 3.5 Sonnet bisa membaca file PDF berbahasa hukum yang sangat kaku?
+<strong>Q.</strong> Apakah Claude 3.5 Sonnet bisa membaca file PDF berbahasa hukum yang sangat kaku?
 
-**A.** Ya, Claude memiliki kemampuan pemahaman bahasa alami yang sangat tinggi, termasuk dalam menerjemahkan istilah hukum yang rumit menjadi ringkasan yang mudah dipahami oleh staf non-legal.
+A. Ya, Claude memiliki kemampuan pemahaman bahasa alami yang sangat tinggi, termasuk dalam menerjemahkan istilah hukum yang rumit menjadi ringkasan yang mudah dipahami oleh staf non-legal.
 
-**Q.** Berapa lama waktu yang dibutuhkan untuk memproses dokumen 150 halaman?
+<strong>Q.</strong> Berapa lama waktu yang dibutuhkan untuk memproses dokumen 150 halaman?
 
-**A.** Biasanya proses unggah dan pembacaan awal hanya memakan waktu sekitar 30 hingga 60 detik, tergantung pada kecepatan koneksi internet kantor And
+A. Biasanya proses unggah dan pembacaan awal hanya memakan waktu sekitar 30 hingga 60 detik, tergantung pada kecepatan koneksi internet kantor And
 
-**A.Q.** Apakah hasil ringkasan ini aman dibagikan langsung kepada jajaran direksi?
+<strong>A.Q.</strong> Apakah hasil ringkasan ini aman dibagikan langsung kepada jajaran direksi?
 
-**A.** Sangat aman, asalkan Anda sudah membaca sekilas untuk memastikan tidak ada konteks penting yang terlewat oleh sistem AI sebelum dipresentasikan.
+A. Sangat aman, asalkan Anda sudah membaca sekilas untuk memastikan tidak ada konteks penting yang terlewat oleh sistem AI sebelum dipresentasikan.

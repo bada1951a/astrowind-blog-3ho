@@ -18,19 +18,19 @@ Ese fue el punto de quiebre donde decidí dejar de sufrir con hojas de cálculo 
 
 <div style="border-left: 4px solid #64748b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Ticket de Soporte Técnico #MS-2026-04</strong><br>
-<strong>Síntom
+<strong>Síntoma.</strong> Duplicados masivos en base de datos de clientes con variaciones tipográficas (ej. "Empresa S.
 
-**A.** </strong> Duplicados masivos en base de datos de clientes con variaciones tipográficas (ej. "Empresa S.
 
-**A.** ", "Empresa SA", "empresa s.
 
-**A.** ").<br>
-<strong>Impacto:</strong> Métricas de conversión infladas y riesgo de fallo en presentación ejecutiv
+", "Empresa SA", "empresa s.
 
-**A.** <br>
-<strong>Solución rápid
+").<br>
+<strong>Impacto:</strong> Métricas de conversión infladas y riesgo de fallo en presentación ejecutiva.
 
-**A.** </strong> Automatización mediante prompt estructurado en Gemini para Google Workspace.
+<br>
+<strong>Solución rápida.</strong> Automatización mediante prompt estructurado en Gemini para Google Workspace.
+
+
 </div>
 
 ## Diagnóstico: Por qué fallan los métodos tradicionales
@@ -41,7 +41,7 @@ Antes de aplicar la solución definitiva, analicemos por qué las herramientas n
 
 2. Variaciones en razones sociales: Los nombres de empresas se registran de mil formas diferentes ("Telefónica España", "Telefonica", "Telefónica S.
 
-**A.** "), lo que confunde a las fórmulas lógicas estándar como BUSCARV o COINCIDIR.
+"), lo que confunde a las fórmulas lógicas estándar como BUSCARV o COINCIDIR.
 
 3. Falta de contexto relacional: Las fórmulas complejas de Apps Script requieren tiempo de programación que no tienes cuando el comité directivo está esperando en la sala de juntas.
 
@@ -59,7 +59,7 @@ Abre el panel lateral de Gemini en Google Workspace o copia los datos en la inte
 
 > "Actúa como un analista de datos experto en Google Sheets. Tengo una lista de clientes con nombres duplicados debido a errores tipográficos, mayúsculas y variaciones en sufijos legales (como S.
 
-**A.** , SL, etc.). Analiza los datos pegados a continuación, unifica los registros que correspondan a la misma entidad real basándote en el correo electrónico o similitud de nombre, y devuélveme una tabla limpia en formato CSV con tres columnas: ID Único, Nombre Normalizado y Correo Principal. No incluyas texto adicional, solo los datos listos para copiar."
+, SL, etc.). Analiza los datos pegados a continuación, unifica los registros que correspondan a la misma entidad real basándote en el correo electrónico o similitud de nombre, y devuélveme una tabla limpia en formato CSV con tres columnas: ID Único, Nombre Normalizado y Correo Principal. No incluyas texto adicional, solo los datos listos para copiar."
 
 ### Paso 3: Importación y validación rápida
 1. Copia la tabla limpia que te devolvió Gemini.
@@ -77,10 +77,10 @@ Abre el panel lateral de Gemini en Google Workspace o copia los datos en la inte
 ## 5. Preguntas Frecuentes (FAQ)
 
 ¿Qué hago si la lista de clientes supera las diez mil filas y Gemini se corta?
-Divide tu base de datos en bloques lógicos de tres mil o cuatro mil filas (por ejemplo, dividiendo alfabéticamente por la inicial del cliente). Procesar lotes más pequeños garantiza que la IA no omita registros debido a límites de tokens en una sola respuest
+Divide tu base de datos en bloques lógicos de tres mil o cuatro mil filas (por ejemplo, dividiendo alfabéticamente por la inicial del cliente). Procesar lotes más pequeños garantiza que la IA no omita registros debido a límites de tokens en una sola respuesta.
 
-**A.** ¿Puedo automatizar esto para que se ejecute solo cada lunes por la mañana?
-Sí. Puedes conectar este flujo utilizando Google Apps Script junto con la API de Gemini, configurando un activador temporal (*trigger*) para que limpie la hoja de clientes automáticamente antes de que llegues a la oficin
+¿Puedo automatizar esto para que se ejecute solo cada lunes por la mañana?
+Sí. Puedes conectar este flujo utilizando Google Apps Script junto con la API de Gemini, configurando un activador temporal (*trigger*) para que limpie la hoja de clientes automáticamente antes de que llegues a la oficina.
 
-**A.** ¿Qué pasa si Gemini une por error a dos clientes diferentes con nombres similares?
+¿Qué pasa si Gemini une por error a dos clientes diferentes con nombres similares?
 La IA es excelente detectando patrones, pero siempre debes revisar visualmente el resultado en la columna de nombres normalizados antes de presentar métricas oficiales. Mantén siempre una copia de seguridad en una pestaña oculta llamada `Backup_Bruto`.

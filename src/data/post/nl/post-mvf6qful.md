@@ -8,8 +8,6 @@ tags: ["Google Sheets", "Gemini AI", "Productiviteit", "Data Opschonen"]
 theme: "Deep Ocean Cobalt"
 ---
 
-## 1. Noodsituatie en knelpunt op de werkvloer
-
 Kwart over acht 's ochtends op de Zuidas in Amsterdam. Om negen uur start de cruciale kwartaalmeeting met de directie, en ik sta te zweten achter mijn laptop. Op mijn scherm staat een Google Sheet met meer dan tienduizend rijen aan klantgegevens, geëxporteerd uit drie verschillende CRM-systemen. Het resultaat? Een complete chaos van dubbele invoer: "J. de Vries", "Jan de Vries" en "J. de Vries (oud)" staan krisras door elkaar. Handmatig sorteren en filteren is onbegonnen werk in deze tijdslimiet, en de standaard functie "Duplicaten verwijderen" faalt omdat de spelling net afwijkt. Mijn hartslag tikt mee met de klok in de vergaderzaal.
 
 <div style="border-left: 4px solid #2563eb; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -22,11 +20,9 @@ Kwart over acht 's ochtends op de Zuidas in Amsterdam. Om negen uur start de cru
 
 In de hectiek van de dag proberen we vaak snel een oplossing te erzinnen met simpele formules. Toch liep ik tegen drie hardnekkige muren aan voordat ik de juiste workflow vond:
 
-1. Variaties in naamgeving en schrijfwijze: Een simpele `=UNIEK()` of de ingebouwde Google Sheets optie "Gegevens > Duplicaten verwijderen" werkt alleen op exact identieke tekenreeksen. Hoofdletters, spaties en afkortingen ("B.V." versus "BV") worden door de computer gezien als volkomen unieke waarden.
-
-2. Slecht gecombineerde contactgegevens: Klanten staan verspreid over kolommen met e-mailadressen die soms wel en soms niet zijn ingevuld, waardoor handmatig vergelijken via `=VERT.ZOEKEN()` of `=XLOOKUP()` resulteert in foutmeldingen of gemiste matches.
-
-3. Beperkingen van traditionele formules: Complexe geneste formules met `ALS`, `VERGELIJKEN` en `INDEX` worden zo traag als dikke modder zodra je dataset de grens van vijfduizend rijen overschrijdt, wat je spreadsheet volledig laat vastlopen.
+1. <strong>Variaties in naamgeving en schrijfwijze:</strong> Een simpele `=UNIEK()` of de ingebouwde Google Sheets optie "Gegevens > Duplicaten verwijderen" werkt alleen op exact identieke tekenreeksen. Hoofdletters, spaties en afkortingen ("B.V." versus "BV") worden door de computer gezien als volkomen unieke waarden.
+2. <strong>Slecht gecombineerde contactgegevens:</strong> Klanten staan verspreid over kolommen met e-mailadressen die soms wel en soms niet zijn ingevuld, waardoor handmatig vergelijken via `=VERT.ZOEKEN()` of `=XLOOKUP()` resulteert in foutmeldingen of gemiste matches.
+3. <strong>Beperkingen van traditionele formules:</strong> Complexe geneste formules met `ALS`, `VERGELIJKEN` en `INDEX` worden zo traag als dikke modder zodra je dataset de grens van vijfduizend rijen overschrijdt, wat je spreadsheet volledig laat vastlopen.
 
 ## De doorbraak: Slim opschonen met Gemini prompts
 
@@ -35,9 +31,9 @@ In plaats van urenlang hannesen met complexe macro's of handmatig knippen en pla
 Volg deze concrete stappen om dit direct toe te passen in jouw Google Workspace:
 
 ### Stap 1: Bereid je data voor
-Zorg dat je kolommen heldere koppen hebben (bijvoorbeeld: `Klantnaam`, `E-mail`, `Bedrijf`, `Omzet`). Selecteer het bereik met vervuilde dat
+Zorg dat je kolommen heldere koppen hebben (bijvoorbeeld: `Klantnaam`, `E-mail`, `Bedrijf`, `Omzet`). Selecteer het bereik met vervuilde data.
 
-**A.** ### Stap 2: Activeer Gemini in Google Workspace
+### Stap 2: Activeer Gemini in Google Workspace
 Open je zijbalk in Google Sheets via het Gemini-icoon rechtsboven, of gebruik een gekoppeld tabblad waarin je de volgende gerichte prompt invoert.
 
 ### Stap 3: Gebruik de juiste ontdubbelings-prompt
@@ -57,11 +53,11 @@ Gemini spuugt binnen enkele seconden een opgeschoonde tabel uit. Kopieer deze sc
 
 ## Veelgestelde Vragen (FAQ)
 
-1. Is het veilig om klantdata te delen met Gemini in Google Sheets?
+<strong>1. Is het veilig om klantdata te delen met Gemini in Google Sheets?</strong>
 Ja, mits je werkt binnen een zakelijk Google Workspace-account. Bedrijfsgegevens die je deelt via de ingebouwde Gemini-integratie binnen Workspace worden niet gebruikt om de openbare modellen te trainen en vallen onder de strenge AVG-privacyvoorwaarden van Google.
 
-2. Wat moet ik doen als mijn dataset groter is dan de limiet van de AI-prompt?
+<strong>2. Wat moet ik doen als mijn dataset groter is dan de limiet van de AI-prompt?</strong>
 Als je meer dan twintigduizend rijen hebt, raad ik aan om de data op te knippen in brokken van vijfduizend rijen per tabblad. Laat Gemini elke brok afzonderlijk ontdubbelen en voeg de schone resultaten daarna samen.
 
-3. Kan Gemini ook automatisch telefoonnummers en adressen standardiseren tijdens het ontdubbelen?
+<strong>3. Kan Gemini ook automatisch telefoonnummers en adressen standardiseren tijdens het ontdubbelen?</strong>
 Zeker weten. Je kunt de prompt uitbreiden door toe te voegen: "Formatteer tegelijkertijd alle telefoonnummers naar het internationale formaat (+31...) en zorg dat alle plaatsnamen correct zijn gespeld."

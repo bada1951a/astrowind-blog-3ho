@@ -8,8 +8,6 @@ tags: ["Google Sheets", "Gemini AI", "Office Automatisierung", "Datenbereinigung
 theme: "High-Contrast Charcoal"
 ---
 
-## 1. Kritische Fehlersituation im Büroalltag
-
 Es ist Donnerstag, 17:45 Uhr im Frankfurter Bankenviertel. Um 18:30 Uhr startet das Vorstandstreffen, und auf meinem Schreibtisch liegt die dringende Aufgabe, die konsolidierten Kundendaten für den Monatsabschluss zu finalisieren. Der Vorstand will exakt wissen, wie viele unique Enterprise-Kunden wir aktuell betreuen. Doch als ich die Excel-Exportdatei unseres Sales-Teams in Google Sheets hochlade, trifft mich der Schlag: Über 4.500 Zeilen voller Kundendatensätze, bei denen durch unterschiedliche Schreibweisen, Tippfehler und Namenszusätze ("GmbH", "GmbH & Co. KG", "AG") exakt dieselben Firmen mehrfach auftauchen. Die Standardfunktion "Dubletten entfernen" versagt komplett, weil "Deutsche Bank AG" und "Deutsche Bank" als zwei verschiedene Unternehmen gewertet werden. Der Puls steigt, die Zeit läuft ab.
 
 Das ist der klassische Moment, in dem man stundenlang manuell Zeilen löschen möchte – oder eben zu smarteren Methoden greift.
@@ -24,11 +22,9 @@ Das ist der klassische Moment, in dem man stundenlang manuell Zeilen löschen m�
 
 Bevor ich den rettenden KI-Weg fand, habe ich wertvolle Minuten mit den typischen Stolperfallen verschwendet. Die Ursachen für dieses Chaos sind meistens banal, aber hartnäckig:
 
-1. Inkonsistente Namenskonventionen: Mal steht dort "Müller & Partner", mal "Mueller und Partner OHG" oder schlicht "Müller". Reines String-Matching über Formeln scheitert hier gnadenlos.
-
-2. Falsch zugeordnete Spalten: Durch Copy-Paste-Fehler aus verschiedenen CRM-Systemen sind E-Mail-Adressen und Firmennamen in Spalten verrutscht, was Standardfilter unbrauchbar macht.
-
-3. Leerzeichen und Sonderzeichen-Salat: Unsichtbare Leerzeichen am Ende von Zellen verhindern, dass exakte Übereinstimmungen erkannt werden.
+1. <strong>Inkonsistente Namenskonventionen:</strong> Mal steht dort "Müller & Partner", mal "Mueller und Partner OHG" oder schlicht "Müller". Reines String-Matching über Formeln scheitert hier gnadenlos.
+2. <strong>Falsch zugeordnete Spalten:</strong> Durch Copy-Paste-Fehler aus verschiedenen CRM-Systemen sind E-Mail-Adressen und Firmennamen in Spalten verrutscht, was Standardfilter unbrauchbar macht.
+3. <strong>Leerzeichen und Sonderzeichen-Salat:</strong> Unsichtbare Leerzeichen am Ende von Zellen verhindern, dass exakte Übereinstimmungen erkannt werden.
 
 ## In 3 Schritten zur sauberen Dubletten-Bereinigung mit Gemini
 
@@ -53,13 +49,13 @@ Kopieren Sie das von Gemini generierte CSV-Ergebnis. Gehen Sie in Google Sheets 
 <strong>Pro-Tipp für den Datenschutz:</strong> Wenn Sie mit vertraulichen Finanzdaten oder echten Kundennamen arbeiten, ersetzen Sie kritische Namen vor dem Prompten durch Platzhalter wie "Kunde_A", "Kunde_B" oder nutzen Sie die Enterprise-Versionen mit garantierten Datenschutz-Richtlinien.
 </div>
 
-## 5. Häufig gestellte Fragen (FAQ)
+## Häufig gestellte Fragen (FAQ)
 
-1. Was mache ich, wenn Gemini bei sehr großen Tabellen (> 5.000 Zeilen) das Token-Limit erreicht?
+<strong>1. Was mache ich, wenn Gemini bei sehr großen Tabellen (> 5.000 Zeilen) das Token-Limit erreicht?</strong>
 Teilen Sie Ihre Daten in handliche Häppchen von je 1.000 bis 1.500 Zeilen auf. Arbeiten Sie sich Block für Block durch die Tabelle und fügen Sie die bereinigten Ergebnisse am Ende in einem Master-Sheet zusammen.
 
-2. Erkennt Gemini auch Tippfehler wie "Siemens AG" vs. "Seimens AG"?
+<strong>2. Erkennt Gemini auch Tippfehler wie "Siemens AG" vs. "Seimens AG"?</strong>
 Ja, genau darin liegt die Stärke von LLMs. Während klassische Excel-Formeln bei Tippfhlern versagen, erkennt Gemini durch den Kontext sofort, dass es sich um denselben Konzern handelt.
 
-3. Kann ich diesen Prozess dauerhaft als Makro oder App Script automatisieren?
+<strong>3. Kann ich diesen Prozess dauerhaft als Makro oder App Script automatisieren?</strong>
 Für einmalige Monatsabschlüsse ist der Prompt-Weg am schnellsten. Wer diesen Prozess wöchentlich benötigt, kann Gemini bitten, ein maßgeschneidertes Google Apps Script zu schreiben, das direkt als Erweiterung in Sheets läuft.

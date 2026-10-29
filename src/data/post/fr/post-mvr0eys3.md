@@ -60,7 +60,7 @@ anonymiser_document('reglement_brut.txt', 'reglement_securise.txt')
 Méthode 2 : Découpage et injection séquentielle optimisée pour Claude 3.5 Sonnet
 Plutôt que de soumettre le document en un seul bloc indigeste, utilisez une approche par lots pour préserver la précision de l'analyse. Divisez votre fichier nettoyé en blocs de 30 pages maximum et utilisez un prompt système structuré pour guider l'I
 
-**A.** ```text
+```text
 Rôle : Expert senior en conformité réglementaire bancaire et financière.
 Tâche : Analyser le fragment de document ci-dessous et extraire uniquement les obligations, les échéances critiques et les impacts opérationnels.
 Format de sortie : Bullet points clairs avec indication de la section source.
@@ -86,4 +86,16 @@ Règle d'or de l'ingénierie des processus : L'automatisation n'exonère jamais 
 
 ## 5. Foire Aux Questions (FAQ)
 
-Q1.** Est-il réellement possible de traiter un document de 150 pages en trois minutes sans perdre en précision juridique ? A1.** Oui, à condition d'avoir préalablement structuré et nettoyé le texte pour éliminer les éléments parasites tels que les index, les tables des matières redondantes et les en-têtes de page. En utilisant les capacités de traitement rapide de Claude 3.5 Sonnet combinées à un prompt directif ciblant les obligations et les pénalités, le modèle extrait l'essence juridique en un temps record tout en maintenant un niveau de fidélité contextuelle exceptionnel.Q2.** Comment s'assurer qu'aucune information nominative sensible n'a échappé au processus d'anonymisation avant l'envoi à l'IA ? A2.** L'utilisation d'expressions régulières (Regex) combinée à une double vérification par mots-clés interdits dans votre script de préparation garantit un premier niveau de sécurité très élevé. Pour les environnements ultra-sensibles, l'utilisation d'outils de Deep Learning locaux spécialisés dans la novation d'entités (NER) permet d'identifier et de masquer les structures nominatives complexes avant toute interaction avec une interface cloud.Q3.** Que faire si Claude 3.5 Sonnet génère une hallucination sur une date d'application réglementaire critique ? A3.** Les hallucinations textuelles, bien que rares sur des tâches de synthèse pure avec ce modèle, peuvent survenir si le texte source est ambigu ou mal découpé. Pour éliminer ce risque, exigez systématiquement dans votre prompt que le modèle associe chaque obligation ou date clé à un numéro de page ou de section précis, ce qui vous permet de vérifier instantanément la source dans le document original en cas de doute.
+
+
+Q1. Est-il réellement possible de traiter un document de 150 pages en trois minutes sans perdre en précision juridique ? 
+
+A1. Oui, à condition d'avoir préalablement structuré et nettoyé le texte pour éliminer les éléments parasites tels que les index, les tables des matières redondantes et les en-têtes de page. En utilisant les capacités de traitement rapide de Claude 3.5 Sonnet combinées à un prompt directif ciblant les obligations et les pénalités, le modèle extrait l'essence juridique en un temps record tout en maintenant un niveau de fidélité contextuelle exceptionnel.
+
+Q2. Comment s'assurer qu'aucune information nominative sensible n'a échappé au processus d'anonymisation avant l'envoi à l'IA ? 
+
+A2. L'utilisation d'expressions régulières (Regex) combinée à une double vérification par mots-clés interdits dans votre script de préparation garantit un premier niveau de sécurité très élevé. Pour les environnements ultra-sensibles, l'utilisation d'outils de Deep Learning locaux spécialisés dans la novation d'entités (NER) permet d'identifier et de masquer les structures nominatives complexes avant toute interaction avec une interface cloud.
+
+Q3. Que faire si Claude 3.5 Sonnet génère une hallucination sur une date d'application réglementaire critique ? 
+
+A3. Les hallucinations textuelles, bien que rares sur des tâches de synthèse pure avec ce modèle, peuvent survenir si le texte source est ambigu ou mal découpé. Pour éliminer ce risque, exigez systématiquement dans votre prompt que le modèle associe chaque obligation ou date clé à un numéro de page ou de section précis, ce qui vous permet de vérifier instantanément la source dans le document original en cas de doute.

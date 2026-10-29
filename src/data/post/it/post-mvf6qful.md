@@ -10,13 +10,13 @@ theme: "Industrial Blueprint"
 
 ## 1. Emergenza improvvisa e blocco delle attività in ufficio
 
-Erano le 16:45 di un martedì pomeriggio nel nostro ufficio in zona Porta Nuova a Milano. Mancavano esattamente quindici minuti alla riunione di allineamento con il cliente principale e il file Google Sheets con la lista dei lead commerciali era un vero campo di battagli
+Erano le 16:45 di un martedì pomeriggio nel nostro ufficio in zona Porta Nuova a Milano. Mancavano esattamente quindici minuti alla riunione di allineamento con il cliente principale e il file Google Sheets con la lista dei lead commerciali era un vero campo di battaglia.
 
-**A.** "Ragazzi, abbiamo tre righe diverse per lo stesso cliente con email scritte in minuscolo, maiuscolo e con spazi di troppo," ha esclamato il collega di reparto, indicando lo schermo con la frustrazione dipinta sul volto. Usare la funzione nativa "Rimuovi duplicati" non serviva a nulla, perché le stringhe erano leggermente disallineate e il sistema le considerava unique. Correggere manualmente 4.500 righe prima delle 17:00? Follia pur
+"Ragazzi, abbiamo tre righe diverse per lo stesso cliente con email scritte in minuscolo, maiuscolo e con spazi di troppo," ha esclamato il collega di reparto, indicando lo schermo con la frustrazione dipinta sul volto. Usare la funzione nativa "Rimuovi duplicati" non serviva a nulla, perché le stringhe erano leggermente disallineate e il sistema le considerava unique. Correggere manualmente 4.500 righe prima delle 17:00? Follia pura.
 
-**A.** Questa è la classica situazione in cui il lavoro d'ufficio si trasforma in un incubo di copia-incoll
+Questa è la classica situazione in cui il lavoro d'ufficio si trasforma in un incubo di copia-incolla.
 
-**A.** Se anche tu ti sei trovato a perdere ore preziose cercando di pulire database sporchi prima di una scadenza critica, questa guida fa al caso tuo.
+Se anche tu ti sei trovato a perdere ore preziose cercando di pulire database sporchi prima di una scadenza critica, questa guida fa al caso tuo.
 
 ![How to Automate Duplicate Customer Removal in Google Sheets Using Gemini Prompts AI Automation Guide](https://picsum.photos/seed/work-mvf6ryxe-6-b/1000/550.jpg)
 
@@ -24,19 +24,19 @@ Erano le 16:45 di un martedì pomeriggio nel nostro ufficio in zona Porta Nuova 
 <strong>Blueprint dell'Esperto:</strong> Non lottare contro i dati sporchi usando solo le funzioni base. Combiniamo la logica di Google Sheets con l'intelligenza contestuale di Gemini per identificare, normalizzare ed eliminare i duplicati nascosti in un singolo flusso automatizzato.
 </div>
 
-## Anatomia di un Collo di Bottigli
+## Anatomia di un Collo di Bottiglia.
 
-**A.** Perché i Dati si Duplicano
+Perché i Dati si Duplicano
 
 Prima di applicare la soluzione, capiamo perché i metodi tradizionali falliscono miseramente quando gestiamo elenchi di clienti reali:
 
-1. Incoerenza di digitazione uman
+1. Incoerenza di digitazione umana.
 
-**A.** Un utente inserisce "Mario Rossi", un altro "mario rossi" e un terzo "Mario Rossi ". Per un foglio di calcolo elettronico si tratta di tre entità distinte.
+Un utente inserisce "Mario Rossi", un altro "mario rossi" e un terzo "Mario Rossi ". Per un foglio di calcolo elettronico si tratta di tre entità distinte.
 
-2. Campi chiave frammentati: Nome, cognome e indirizzo email sono distribuiti su colonne separate, rendendo inefficaci i normali filtri di unicità basati su una sola colonn
+2. Campi chiave frammentati: Nome, cognome e indirizzo email sono distribuiti su colonne separate, rendendo inefficaci i normali filtri di unicità basati su una sola colonna.
 
-**A.** 3. Variazioni nei domini e nei formati: Numeri di telefono scritti con o senza prefisso internazionale (+39), email aziendali scritte in modo errato ma simili.
+3. Variazioni nei domini e nei formati: Numeri di telefono scritti con o senza prefisso internazionale (+39), email aziendali scritte in modo errato ma simili.
 
 ## Il Metodo in 3 Step: Pulizia Intelligente con Gemini
 
@@ -59,20 +59,20 @@ Copia e incolla questo prompt testato sul campo:
 Incolla l'output pulito fornito da Gemini in un nuovo foglio di Google Sheets per un controllo visivo rapido (sanity check). Una volta verificata la correttezza, sostituisci il blocco dati originale. 
 
 <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Consiglio Pro:</strong> Se gestisci elenchi estremamente sensibili o coperti da rigide normative sulla privacy aziendale (GDPR), assicurati di anonimizzare i dati nominativi (es. sostituendo i nomi reali con ID cliente temporanei) prima di passarli a qualsiasi prompt di AI estern
+<strong>Consiglio Pro:</strong> Se gestisci elenchi estremamente sensibili o coperti da rigide normative sulla privacy aziendale (GDPR), assicurati di anonimizzare i dati nominativi (es. sostituendo i nomi reali con ID cliente temporanei) prima di passarli a qualsiasi prompt di AI esterna.
 
-**A.** </div>
+</div>
 
 ## Domande Frequenti (FAQ)
 
 D: Posso automatizzare questo processo senza copiare e incollare i dati manualmente ogni volta?
 
-**A.** Sì. Se utilizzi Google Sheets, puoi integrare Gemini tramite Google Apps Script o estensioni dedicate per creare una funzione personalizzata che pulisce i dati in background ogni volta che un nuovo lead viene inserito.
+A. Sì. Se utilizzi Google Sheets, puoi integrare Gemini tramite Google Apps Script o estensioni dedicate per creare una funzione personalizzata che pulisce i dati in background ogni volta che un nuovo lead viene inserito.
 
 D: Come gestisce Gemini i casi in cui due clienti hanno lo stesso nome ma email diverse?
 
-**A.** A differenza delle formule rigide di Google Sheets, l'intelligenza artificiale comprende il contesto. Nel prompt puoi specificare esplicitamente di considerare come chiave primaria univoca l'indirizzo email e non il nome del contatto, evitando così di cancellare clienti distinti che condividono lo stesso nome.
+A. A differenza delle formule rigide di Google Sheets, l'intelligenza artificiale comprende il contesto. Nel prompt puoi specificare esplicitamente di considerare come chiave primaria univoca l'indirizzo email e non il nome del contatto, evitando così di cancellare clienti distinti che condividono lo stesso nome.
 
 D: Cosa faccio se il file Google Sheets supera il limite di righe gestibili in una sola chat?
 
-**A.** Suddividi il database in blocchi da 1.000 righe ciascuno, oppure utilizza la funzione di analisi dei dati filtrando preventivamente le righe vuote o prive di email prima di interrogare Gemini.
+A. Suddividi il database in blocchi da 1.000 righe ciascuno, oppure utilizza la funzione di analisi dei dati filtrando preventivamente le righe vuote o prive di email prima di interrogare Gemini.

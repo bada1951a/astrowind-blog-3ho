@@ -38,12 +38,12 @@ Om dit complexe probleem binnen enkele minuten op te lossen zonder handmatige fo
 
 ### Methode 1: Gegevens samenvoegen via Power Query in Excel
 1. Open een nieuw, leeg Excel-werkblad en navigeer naar het lint bovenaan het scherm.
-2. Klik op het tabblad **Gegevens**, kies**Gegevens ophalen**en selecteer**Uit bestand**gevolgd door**Uit map**.
-3. Blader naar de map waarin de twaalf chaotische Excel-bestanden zijn opgeslagen en klik op**Openen**.
-4. Klik in het overzichtsscherm onderaan op**Gegevens combineren**en selecteer**Gegevens combineren en transformeren**.
-5. Selecteer in het venster dat opent het juiste tabblad of de naam van de tabel waarin de gegevens zich bevinden en klik op**OK**.
-6. Power Query opent nu de Editor; gebruik de optie**Gegevenstype wijzigen**om kolommen expliciet te converteren naar getallen en datums conform de Nederlandse standaard.
-7. Klik linksboven op**Sluiten en laden** om alle twaalf bestanden foutloos en gestandaardiseerd samen te voegen in één hoofdtabel.
+2. Klik op het tabblad <strong>Gegevens</strong>, kies <strong>Gegevens ophalen</strong> en selecteer <strong>Uit bestand</strong> gevolgd door <strong>Uit map</strong>.
+3. Blader naar de map waarin de twaalf chaotische Excel-bestanden zijn opgeslagen en klik op <strong>Openen</strong>.
+4. Klik in het overzichtsscherm onderaan op <strong>Gegevens combineren</strong> en selecteer <strong>Gegevens combineren en transformeren</strong>.
+5. Selecteer in het venster dat opent het juiste tabblad of de naam van de tabel waarin de gegevens zich bevinden en klik op <strong>OK</strong>.
+6. Power Query opent nu de Editor; gebruik de optie <strong>Gegevenstype wijzigen</strong> om kolommen expliciet te converteren naar getallen en datums conform de Nederlandse standaard.
+7. Klik linksboven op <strong>Sluiten en laden</strong> om alle twaalf bestanden foutloos en gestandaardiseerd samen te voegen in één hoofdtabel.
 
 ### Methode 2: Geavanceerd Python-script voor automatische opschoning en consolidatie
 Indien de bestanden te complex zijn voor standaard GUI-tools, kunt u onderstaand script uitvoeren in een Python-omgeving om de bestanden in een fractie van een seconde te harmoniseren:
@@ -92,14 +92,38 @@ Daarnaast is het van essentieel belang om te investeren in duurzame sjabloonbehe
 
 ## 5. Veelgestelde Vragen (FAQ)
 
-**Q1.** Hoe voorkom ik dat datums en getallen corrumperen bij het samenvoegen van Excel-bestanden uit verschillende tijdzones en landen?
 
-**A1.** Om datacorruptie te voorkomen, kunt u het best gebruikmaken van Power Query in plaats van handmatig kopiëren en plakken. Power Query herkent regionale instellingen en stelt u in staat om expliciet gegevenstypen vast te leggen voordat de tabbladen worden samengevoegd, waardoor landspecifieke notatiefouten automatisch worden gecorrigeerd.
 
-**Q2.** Is het veilig om vertrouwelijke compliance-documenten van 150 pagina's te uploaden naar AI-modellen zoals Claude 3.5 Sonnet?
 
-**A2.** Ja, mits u gebruikmaakt van een zakelijk enterprise-abonnement waarbij data-privacy en gegevensbescherming contractueel zijn gewaarborgd. In deze afgeschermde zakelijke omgevingen worden uw geüploade documenten en prompts strikt vertrouwelijk behandeld en nimmer gebruikt voor het trainen van openbare modellen.
 
-**Q3.** Wat moet ik doen als een Excel-bestand blijft hangen op een geheugenfout tijdens het verwerken van grote hoeveelheden data?
+Q1. Hoe voorkom ik dat datums en getallen corrumperen bij het samenvoegen van Excel-bestanden uit verschillende tijdzones en landen?
 
-**A3.** Wanneer een bestand vastloopt door geheugenoverbelasting, kunt u het best de automatische berekeningsmodus tijdelijk uitschakelen via het menu Formules door te kiezen voor handmatige berekening. Verwijder daarna overbodige opmaak, ongebruikte voorwaardelijke opmaakregels en sla het bestand op in het moderne binaire bestandsformaat om de prestaties direct te optimaliseren.
+
+
+
+
+A1. Om datacorruptie te voorkomen, kunt u het best gebruikmaken van Power Query in plaats van handmatig kopiëren en plakken. Power Query herkent regionale instellingen en stelt u in staat om expliciet gegevenstypen vast te leggen voordat de tabbladen worden samengevoegd, waardoor landspecifieke notatiefouten automatisch worden gecorrigeerd.
+
+
+
+
+
+Q2. Is het veilig om vertrouwelijke compliance-documenten van 150 pagina's te uploaden naar AI-modellen zoals Claude 3.5 Sonnet?
+
+
+
+
+
+A2. Ja, mits u gebruikmaakt van een zakelijk enterprise-abonnement waarbij data-privacy en gegevensbescherming contractueel zijn gewaarborgd. In deze afgeschermde zakelijke omgevingen worden uw geüploade documenten en prompts strikt vertrouwelijk behandeld en nimmer gebruikt voor het trainen van openbare modellen.
+
+
+
+
+
+Q3. Wat moet ik doen als een Excel-bestand blijft hangen op een geheugenfout tijdens het verwerken van grote hoeveelheden data?
+
+
+
+
+
+A3. Wanneer een bestand vastloopt door geheugenoverbelasting, kunt u het best de automatische berekeningsmodus tijdelijk uitschakelen via het menu Formules door te kiezen voor handmatige berekening. Verwijder daarna overbodige opmaak, ongebruikte voorwaardelijke opmaakregels en sla het bestand op in het moderne binaire bestandsformaat om de prestaties direct te optimaliseren.

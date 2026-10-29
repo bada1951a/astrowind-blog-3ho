@@ -8,8 +8,6 @@ tags: ["AI Tools", "Workflow", "Automation", "Office Tips"]
 theme: "Forest Emerald Bio"
 ---
 
-## 1. Noodsituatie en knelpunt op de werkvloer
-
 Het is kwart over drie op een drukke middag in een glazen kantoorpand op de Zuidas in Amsterdam. Over precies vijfenveertig minuten start de kwartaalmeeting met de directie. Mijn laptop staat open, de beamer is al getest, maar de spreadsheet met de belangrijkste omzetdata van afgelopen maand is één grote puinhoop. Klantnamen staan door elkaar met BTW-nummers in dezelfde cel, e-mailadressen zijn half afgekapt, en mijn handmatige pogingen om dit met REGEXEXTRACT op te lossen resulteren alleen maar in `#WAARDE!` en `#FOUT!`. Zweten geblazen, want de tijd tikt door en handmatig alles omzetten is simpelweg geen optie meer.
 
 Herkenbaar? Die momenten waarop je vastloopt op een formule in Google Sheets terwijl de deadline over je schouder meekijkt, zijn de nagel aan de kist van elke kantoormedewerker. Gelukkig hoef je het wiel niet meer zelf uit te vinden. Met de juiste ChatGPT-prompt tover je een complexe reguliere expressie (regex) of een geneste Google Sheets formule tevoorschijn in de tijd dat het kost om een kop koffie te halen. 
@@ -22,11 +20,9 @@ In deze gids laat ik je zien hoe je ChatGPT inzet als je persoonlijke spreadshee
 
 Voordat we naar de oplossing kijken, moeten we begrijpen waarom het zo vaak misgaat in spreadsheets. Dit zijn de drie grootste boosdoeners bij data-opschoning:
 
-1. De complexiteit van Reguliere Expressies (Regex): Syntax zoals `^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$` leest als een geheime code. Eén verkeerd geplaatst sterretje of puntje zorgt ervoor dat de hele formule faalt in Google Sheets (die werkt met de RE2-standaard).
-
-2. Oneindig geneste formules: Als je `ALS`, `VERT.ZOEKEN`, `INDEX` en `VERGELIJKEN` door elkaar gaat gebruiken, raak je snel de draad kwijt met haakjes die niet sluiten.
-
-3. Beperkte zoektijd onder druk: Vlak voor een meeting zoek je op Google naar vergelijkbare situaties op fora, maar de oplossingen sluiten net niet aan op jouw specifieke kolomstructuur.
+1. <strong>De complexiteit van Reguliere Expressies (Regex):</strong> Syntax zoals `^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$` leest als een geheime code. Eén verkeerd geplaatst sterretje of puntje zorgt ervoor dat de hele formule faalt in Google Sheets (die werkt met de RE2-standaard).
+2. <strong>Oneindig geneste formules:</strong> Als je `ALS`, `VERT.ZOEKEN`, `INDEX` en `VERGELIJKEN` door elkaar gaat gebruiken, raak je snel de draad kwijt met haakjes die niet sluiten.
+3. <strong>Beperkte zoektijd onder druk:</strong> Vlak voor een meeting zoek je op Google naar vergelijkbare situaties op fora, maar de oplossingen sluiten net niet aan op jouw specifieke kolomstructuur.
 
 <div style="border-left: 4px solid #10b981; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Tijd-besparingsindicator:</strong> Waar je vroeger al snel 30 tot 45 minuten kwijt was aan het debuggen van één enkele regex of formule, reduceer je dit met AI tot minder dan 60 seconden.
@@ -44,18 +40,14 @@ Voordat je ChatGPTent, kopieer je een anoniem voorbeeld van drie rijen uit je Go
 ### Stap 2: Gebruik de juiste prompt-structuur
 Geef ChatGPT een specifieke rol en vertel exact wat het invoerformaat en het gewenste uitvoerformaat is. 
 
-Kopieer deze kant-en-klare prompt:
+<strong>Kopieer deze kant-en-klare prompt:</strong>
 > "Je bent een expert in Google Sheets en reguliere expressies (regex). Ik heb een kolom in Google Sheets (kolom A) met slordige data, bijvoorbeeld: 'Bedrijf B - 020-1234567 - Amsterdam'. Schrijf voor mij een Google Sheets formule met REGEXEXTRACT of REGEXREPLACE om alleen het telefoonnummer eruit te filteren. Geef direct de formule en leg in één zin uit hoe ik hem moet aanpassen als de kolomwijziging verschuift."
 
 ### Stap 3: Plak en test in Google Sheets
-ChatGPT geeft je de formule (bijvoorbeeld `=REGEXEXTRACT(A2; "\d{2,3}-\d{6,7}")`).
-
+ChatGPT geeft je de formule (bijvoorbeeld `=REGEXEXTRACT(A2; "\d{2,3}-\d{6,7}")`). 
 1. Ga naar je Google Sheet.
-
 2. Klik op de cel waar het resultaat moet komen.
-
-3. Plak de formule en druk op Enter.
-
+3. Plak de formule en druk op Enter. 
 4. Trek de formule naar beneden via de vulgreep in de hoek van de cel.
 
 ### Stap 4: Finetunen bij foutmeldingen
@@ -67,10 +59,9 @@ Krijg je alsnog een foutmelding? Copy-paste de foutmelding direct terug naar Cha
 
 Hoewel AI een enorme tijdsbesparing oplevert, moet je slim omgaan met bedrijfsdata en automatisering:
 
-* Let op privacy en AVG: Upload nooit gevoelige persoonsgegevens (PII), salarisadministraties of vertrouwelijke financiële cijfers naar openbare AI-tools. Anonimiseer altijd je testdat
-
-**A.** * Controleer steekproefsgewijs: Vertrouw nooit blind op een gegenereerde formule met tienduizenden rijen. Check altijd de eerste tien en laatste tien rijen van je dataset om onverwachte uitschieters te ontdekken.
-* Documenteer je succes: Sla succesvolle prompts op in een gezamenlijk teamdocument (zoals Notion of Confluence), zodat collega's bij volgende rapportages niet opnieuw het wiel hoeven uit te vinden.
+* <strong>Let op privacy en AVG:</strong> Upload nooit gevoelige persoonsgegevens (PII), salarisadministraties of vertrouwelijke financiële cijfers naar openbare AI-tools. Anonimiseer altijd je testdata.
+* <strong>Controleer steekproefsgewijs:</strong> Vertrouw nooit blind op een gegenereerde formule met tienduizenden rijen. Check altijd de eerste tien en laatste tien rijen van je dataset om onverwachte uitschieters te ontdekken.
+* <strong>Documenteer je succes:</strong> Sla succesvolle prompts op in een gezamenlijk teamdocument (zoals Notion of Confluence), zodat collega's bij volgende rapportages niet opnieuw het wiel hoeven uit te vinden.
 
 ---
 
@@ -78,6 +69,8 @@ Hoewel AI een enorme tijdsbesparing oplevert, moet je slim omgaan met bedrijfsda
 
 ### 1. Waarom werkt een regex die ik van ChatGPT krijg niet direct in Google Sheets?
 Google Sheets maakt gebruik van de RE2-regex-engine, die strengere regels hanteert dan bijvoorbeeld Python of JavaScript (PCRE). Soms gebruikt ChatGPT syntax die niet compatibel is. Zeg in dat geval tegen ChatGPT: *"Zorg dat de regex compatibel is met Google Sheets RE2."*
+
+
 
 ![AI Productivity & Workflow Automation](https://picsum.photos/seed/office572/1000/550)
 

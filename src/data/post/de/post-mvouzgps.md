@@ -24,11 +24,11 @@ Um Zeit zu sparen, wollte ich mir von einer herkömmlichen KI-Abfrage eine kompl
 
 Warum scheitern die meisten Büroangestellten und Analysten daran, große regulatorische PDFs effizient mit KI zu verarbeiten? Hier sind die drei Hauptursachen:
 
-1. **Fehlendes Kontextfenster und Informationsfragmentierung:**Das Dokument wird in zu kleine Stücke gehackt, wodurch Querverweise zwischen Kapitel 2 und Kapitel 12 verloren gehen.
+1. <strong>Fehlendes Kontextfenster und Informationsfragmentierung:</strong> Das Dokument wird in zu kleine Stücke gehackt, wodurch Querverweise zwischen Kapitel 2 und Kapitel 12 verloren gehen.
 
-2.**Unpräzise Prompts ohne Rollenzuweisung:**Die KI weiß nicht, ob sie für einen Rechtsanwalt, einen Wirtschaftsprüfer oder einen genervten Sachbearbeiter schreibt.
+2.<strong>Unpräzise Prompts ohne Rollenzuweisung:</strong> Die KI weiß nicht, ob sie für einen Rechtsanwalt, einen Wirtschaftsprüfer oder einen genervten Sachbearbeiter schreibt.
 
-3.**Mangelnde Strukturierung der Ausgabe:** Statt klarer Handlungsempfehlungen liefert das Tool oft nur oberflächliche Zusammenfassungen, die für offizielle Berichte unbrauchbar sind.
+3.<strong>Mangelnde Strukturierung der Ausgabe:</strong> Statt klarer Handlungsempfehlungen liefert das Tool oft nur oberflächliche Zusammenfassungen, die für offizielle Berichte unbrauchbar sind.
 
 ## 3. Schritt-für-Schritt-Anleitung zur Effizienzsteigerung
 
@@ -62,19 +62,19 @@ Claude liefert Ihnen innerhalb von Sekunden eine saubere, markdown-basierte Stru
 
 Als Automatisierungs-Experte rate ich Ihnen im Umgang mit sensiblen Unternehmensdaten zu folgenden Vorsichtsmaßnahmen:
 
-* **Datenschutz beachten:** Prüfen Sie die Datenschutzrichtlinien Ihres Firmenkontos. Nutzen Sie für vertrauliche Mandantendaten niemals kostenlose Standard-Accounts, sondern Unternehmensversionen mit deaktiviertem Modelltraining.
-* **Quellen-Check:**Nutzen Sie die Zitat- oder Seitennummerierungsfunktion von Claude, um wichtige Passagen im Original-PDF schnell gegenzuprüfen.
+* <strong>Datenschutz beachten:</strong> Prüfen Sie die Datenschutzrichtlinien Ihres Firmenkontos. Nutzen Sie für vertrauliche Mandantendaten niemals kostenlose Standard-Accounts, sondern Unternehmensversionen mit deaktiviertem Modelltraining.
+* <strong>Quellen-Check:</strong> Nutzen Sie die Zitat- oder Seitennummerierungsfunktion von Claude, um wichtige Passagen im Original-PDF schnell gegenzuprüfen.
 
 ## 5. Häufig gestellte Fragen (FAQ)
 
-**Q.** Kann Claude 3.5 Sonnet wirklich 150 Seiten auf einmal lesen?
+<strong>Q.</strong> Kann Claude 3.5 Sonnet wirklich 150 Seiten auf einmal lesen?
 
-**A.** Ja, das Modell verfügt über ein extrem großes Kontextfenster, das selbst umfangreiche Jahresberichte oder regulatorische Richtlinien problemlos in einem Durchgang verarbeitet.
+A. Ja, das Modell verfügt über ein extrem großes Kontextfenster, das selbst umfangreiche Jahresberichte oder regulatorische Richtlinien problemlos in einem Durchgang verarbeitet.
 
-**Q.** Was mache ich, wenn das PDF passwortgeschützt ist?
+<strong>Q.</strong> Was mache ich, wenn das PDF passwortgeschützt ist?
 
-**A.** Gesetzlich oder technisch geschützte PDFs müssen vor dem Upload mit einem offiziellen Entsorgungstool oder PDF-Editor von ihrem Passwortschutz befreit werden, da die KI sonst keinen Zugriff erhält.
+A. Gesetzlich oder technisch geschützte PDFs müssen vor dem Upload mit einem offiziellen Entsorgungstool oder PDF-Editor von ihrem Passwortschutz befreit werden, da die KI sonst keinen Zugriff erhält.
 
-**Q.** Wie verhindere ich, dass die KI Daten erfindet (Halluzinationen)?
+<strong>Q.</strong> Wie verhindere ich, dass die KI Daten erfindet (Halluzinationen)?
 
-**A.** Ergänzen Sie Ihren Prompt immer mit dem Satz: "Falls eine Information nicht im Dokument steht, antworte explizit, dass sie im Text nicht enthalten ist." Das reduziert Spekulationen auf nahezu null.
+A. Ergänzen Sie Ihren Prompt immer mit dem Satz: "Falls eine Information nicht im Dokument steht, antworte explizit, dass sie im Text nicht enthalten ist." Das reduziert Spekulationen auf nahezu null.

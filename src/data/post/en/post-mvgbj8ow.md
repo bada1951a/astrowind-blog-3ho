@@ -8,8 +8,6 @@ tags: ["Google Sheets", "Apps Script", "Automation", "Productivity"]
 theme: "Deep Ocean Cobalt"
 ---
 
-## 1. Critical Workplace Bottleneck Emergency
-
 My Slack was blowing up. It was 1:45 PM on a Thursday, exactly fifteen minutes before our weekly executive sync in the conference room. My VP dropped a message into our leadership channel: "Hey, can someone drop the updated Q3 pipeline summary PDF in here before we start? The old numbers from Tuesday won't cut it." Panic instantly set in. My Google Sheet had the live data, but manually formatting it, downloading it as a clean PDF without cutting off the columns, and attaching it to an email while my hands were shaking always felt like a recipe for a formatting disaster. I needed a way to make this happen instantly, and more importantly, never touch it manually again.
 
 <div style="border-left: 4px solid #2563eb; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -22,18 +20,16 @@ My Slack was blowing up. It was 1:45 PM on a Thursday, exactly fifteen minutes b
 
 If you manage recurring team reports, you have likely run into these three classic bottlenecks:
 
-1. The Formatting Nightmare: Google Sheets export URLs default to standard portrait letter size, chopping off your rightmost columns or squeezing 20 rows of data into an unreadable micro-font.
+1. <strong>The Formatting Nightmare:</strong> Google Sheets export URLs default to standard portrait letter size, chopping off your rightmost columns or squeezing 20 rows of data into an unreadable micro-font.
+2. <strong>The Timing Crunch:</strong> Relying on manual memory means someone always forgets to hit export until leadership asks for the file during the actual meeting.
+3. <strong>The Stale Cache Problem:</strong> Copy-pasting data into static slides or separate PDF editors breaks your single source of truth, leading to conflicting numbers across department decks.
 
-2. The Timing Crunch: Relying on manual memory means someone always forgets to hit export until leadership asks for the file during the actual meeting.
-
-3. The Stale Cache Problem: Copy-pasting data into static slides or separate PDF editors breaks your single source of truth, leading to conflicting numbers across department decks.
-
-## 3. Step-by-Step Practical Resolution Practical Resolution Practical Productivity Resolution Building Your Custom Apps Script
+## Step-by-Step Resolution: Building Your Custom Apps Script
 
 Let's fix this once and for all. We are going to build a lightweight script that grabs a specific tab, formats it cleanly into a landscape PDF, and emails it to your stakeholder list.
 
 ### Step 1: Open the Script Editor
-In your Google Sheet, navigate to the top menu and select Extensions > Apps Script. This opens your development environment right in the browser.
+In your Google Sheet, navigate to the top menu and select <strong>Extensions > Apps Script</strong>. This opens your development environment right in the browser.
 
 ### Step 2: Paste and Customize the Automation Code
 Clear out any placeholder code and paste the script below. Be sure to update the spreadsheet ID, sheet name, and recipient email address with your actual corporate details.
@@ -82,21 +78,17 @@ function sendSheetAsPDF() {
 
 ### Step 3: Set Up Your Weekly Trigger
 Don't just run it manually—let's automate it on a schedule:
-1. In the left sidebar of the Apps Script editor, click on the Triggers icon (looks like a clock).
-
-2. Click Add Trigger in the bottom right corner.
-
+1. In the left sidebar of the Apps Script editor, click on the <strong>Triggers</strong> icon (looks like a clock).
+2. Click <strong>Add Trigger</strong> in the bottom right corner.
 3. Choose `sendSheetAsPDF` as the function to run.
-
-4. Select event source as Time-driven, choose Week timer, and pick your preferred day and hour (e.g., every Monday at 8:00 AM).
-
+4. Select event source as <strong>Time-driven</strong>, choose <strong>Week timer</strong>, and pick your preferred day and hour (e.g., every Monday at 8:00 AM).
 5. Save the trigger and authorize the requested Google account permissions.
 
 <div style="border-left: 4px solid #2563eb; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Expert Tip:</strong> Always run the function manually once using the "Run" button in the script editor to verify that your Google account permissions are granted and that the email arrives cleanly in your inbox before relying on the automated weekly trigger.
 </div>
 
-## 5. Frequently Asked Questions (FAQ)
+## Frequently Asked Questions
 
 ### Can I include multiple tabs in a single PDF attachment?
 The standard export URL method targets one `gid` (sheet ID) at a time. If you need multiple tabs, you can write loops in Apps Script to generate multiple blobs and pass an array of attachments into the `GmailApp.sendEmail` options object.

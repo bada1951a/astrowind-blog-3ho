@@ -34,11 +34,11 @@ Enfin, les différences subtiles de version entre les suites bureautiques locale
 
 Pour éliminer définitivement ce type de blocage et automatiser le traitement des documents réglementaires complexes, suivez cette procédure méthodique en trois étapes distinctes.
 
-1. **Préparation et nettoyage des paramètres dans l'interface du tableur**- Ouvrez votre tableur et accédez à l'onglet**Fichier**>**Options**>**Formules**.
-   - Assurez-vous que l'option**Calcul automatique**est activée pour éviter les désynchronisations de cellules, mais décochez temporairement le calcul multithread si vous diagnostiquez des boucles de référence circulaire.
+1. <strong>Préparation et nettoyage des paramètres dans l'interface du tableur</strong>- Ouvrez votre tableur et accédez à l'onglet <strong>Fichier</strong>><strong>Options</strong>><strong>Formules</strong>.
+   - Assurez-vous que l'option <strong>Calcul automatique</strong> est activée pour éviter les désynchronisations de cellules, mais décochez temporairement le calcul multithread si vous diagnostiquez des boucles de référence circulaire.
    - Utilisez l'outil de recherche et de remplacement (`Ctrl` + `H`) pour normaliser tous les séparateurs d'arguments (remplacez les virgules superflues par des points-virgules selon votre paramétrage linguistique local).
 
-2.**Refactorisation de la logique conditionnelle via Claude 3.5 Sonnet**- Plutôt que de demander un monolithe illisible, fournissez à l'IA un prompt contextuel strict en lui demandant de décomposer la logique en colonnes intermédiaires ou d'utiliser des fonctions modernes plus robustes comme `SI.CONDITIONS` ou `RECHERCHEX`.
+2.<strong>Refactorisation de la logique conditionnelle via Claude 3.5 Sonnet</strong>- Plutôt que de demander un monolithe illisible, fournissez à l'IA un prompt contextuel strict en lui demandant de décomposer la logique en colonnes intermédiaires ou d'utiliser des fonctions modernes plus robustes comme `SI.CONDITIONS` ou `RECHERCHEX`.
    - Copiez et intégrez le bloc de code structuré généré par l'IA dans votre cellule cible :
 
 ```excel
@@ -50,7 +50,7 @@ Pour éliminer définitivement ce type de blocage et automatiser le traitement d
 )
 ```
 
-3.**Mise en place d'un flux d'automatisation par lots pour les documents de conformité**- Pour traiter les rapports réglementaires de 150 pages sans surcharger votre mémoire vive, glissez-déposez le fichier PDF source dans l'espace de travail de Claude 3.5 Sonnet.
+3.<strong>Mise en place d'un flux d'automatisation par lots pour les documents de conformité</strong>- Pour traiter les rapports réglementaires de 150 pages sans surcharger votre mémoire vive, glissez-déposez le fichier PDF source dans l'espace de travail de Claude 3.5 Sonnet.
    - Appliquez le prompt système standardisé pour extraire les métriques clés sous forme de tableau structuré, prêt à être exporté directement au format CSV ou XLSX pour vos analyses croisées.
 
 ## 4. Conseils et précautions d'un expert en automatisation
@@ -61,14 +61,38 @@ Pour garantir une productivité durable, instaurez des habitudes de maintenance 
 
 ## 5. Foire Aux Questions (FAQ)
 
-**Q1.** Pourquoi Claude 3.5 Sonnet est-il particulièrement performant pour résumer des PDF réglementaires de 150 pages en quelques minutes ?
 
-**A1.** Claude 3.5 Sonnet dispose d'une fenêtre de contexte exceptionnellement large et d'une capacité de traitement sémantique avancée qui lui permettent d'ingérer l'intégralité d'un document technique sans perte d'information. Contrairement aux modèles généralistes qui tronquent les documents volumineux, il analyse la structure hiérarchique du texte, identifie les obligations de conformité majeures et synthétise les points critiques sous forme de tableaux ou de puces exploitables quasi instantanément.
 
-**Q2.** Comment éviter que mes formules complexes ne génèrent à nouveau des erreurs de syntaxe lors de modifications ultérieures ?
 
-**A2.** La meilleure pratique consiste à abandonner les imbrications massives de fonctions `SI` au profit de fonctions logiques modernes telles que `SI.CONDITIONS` ou de découper la logique métier sur plusieurs colonnes de calcul intermédiaires. Cette approche modulaire facilite grandement la lecture, simplifie le diagnostic des erreurs et permet aux assistants IA de générer des blocs de code syntaxiquement irréprochables.
 
-**Q3.** Est-il sécurisé de téléverser des documents financiers ou juridiques confidentiels dans un outil d'intelligence artificielle en ligne ?
+Q1. Pourquoi Claude 3.5 Sonnet est-il particulièrement performant pour résumer des PDF réglementaires de 150 pages en quelques minutes ?
 
-**A3.** La sécurité dépend strictement de l'abonnement et des protocoles de gouvernance des données de votre entreprise. Il est impératif d'utiliser des versions professionnelles d'entreprise (comme les offres Claude Enterprise ou Team) qui garantissent que vos données cryptées ne sont en aucun cas réutilisées pour l'entraînement public des modèles de langage, garantissant ainsi la conformité avec le RGPD et les politiques de confidentialité internes.
+
+
+
+
+A1. Claude 3.5 Sonnet dispose d'une fenêtre de contexte exceptionnellement large et d'une capacité de traitement sémantique avancée qui lui permettent d'ingérer l'intégralité d'un document technique sans perte d'information. Contrairement aux modèles généralistes qui tronquent les documents volumineux, il analyse la structure hiérarchique du texte, identifie les obligations de conformité majeures et synthétise les points critiques sous forme de tableaux ou de puces exploitables quasi instantanément.
+
+
+
+
+
+Q2. Comment éviter que mes formules complexes ne génèrent à nouveau des erreurs de syntaxe lors de modifications ultérieures ?
+
+
+
+
+
+A2. La meilleure pratique consiste à abandonner les imbrications massives de fonctions `SI` au profit de fonctions logiques modernes telles que `SI.CONDITIONS` ou de découper la logique métier sur plusieurs colonnes de calcul intermédiaires. Cette approche modulaire facilite grandement la lecture, simplifie le diagnostic des erreurs et permet aux assistants IA de générer des blocs de code syntaxiquement irréprochables.
+
+
+
+
+
+Q3. Est-il sécurisé de téléverser des documents financiers ou juridiques confidentiels dans un outil d'intelligence artificielle en ligne ?
+
+
+
+
+
+A3. La sécurité dépend strictement de l'abonnement et des protocoles de gouvernance des données de votre entreprise. Il est impératif d'utiliser des versions professionnelles d'entreprise (comme les offres Claude Enterprise ou Team) qui garantissent que vos données cryptées ne sont en aucun cas réutilisées pour l'entraînement public des modèles de langage, garantissant ainsi la conformité avec le RGPD et les politiques de confidentialité internes.

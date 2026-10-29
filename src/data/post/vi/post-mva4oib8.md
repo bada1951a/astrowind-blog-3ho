@@ -8,11 +8,7 @@ tags: ["Google Sheets", "ChatGPT", "Regex", "Data Cleaning", "Office Tips"]
 theme: "Mint Fresh Engineering"
 ---
 
-## 1. Tình huống sự cố khẩn cấp và tắc nghẽn công việc văn phòng
-
-Đồng hồ trên góc phải màn hình máy tính vừa điểm 17:15 chiều thứ Sáu tại văn phòng ở quận 1, TP.HCM. Sếp lớn vừa ném vào group chat một file Google Sheets chứa hàng chục nghìn dòng dữ liệu khách hàng lộn xộn: số điện thoại lúc có dấu cộng, lúc có khoảng trắng, mã đơn hàng dính chùm các ký tự đặc biệt, và email thì viết hoa viết thường lung tung. Hạn chót gửi báo cáo tổng hợp cho ban giám đốc là 17:45 trước giờ tan c
-
-A. Nhìn đống dữ liệu đó, bạn có cảm giác như mình đang phải mò kim đáy bể với mớ hàm `REGEXREPLACE`, `INDEX/MATCH` hay `QUERY` lằng nhằng mà từ trước đến nay mình chỉ toàn dùng mấy hàm cơ bản như `SUM` hay `VLOOKUP`.
+Đồng hồ trên góc phải màn hình máy tính vừa điểm 17:15 chiều thứ Sáu tại văn phòng ở quận 1, TP.HCM. Sếp lớn vừa ném vào group chat một file Google Sheets chứa hàng chục nghìn dòng dữ liệu khách hàng lộn xộn: số điện thoại lúc có dấu cộng, lúc có khoảng trắng, mã đơn hàng dính chùm các ký tự đặc biệt, và email thì viết hoa viết thường lung tung. Hạn chót gửi báo cáo tổng hợp cho ban giám đốc là 17:45 trước giờ tan ca. Nhìn đống dữ liệu đó, bạn có cảm giác như mình đang phải mò kim đáy bể với mớ hàm `REGEXREPLACE`, `INDEX/MATCH` hay `QUERY` lằng nhằng mà từ trước đến nay mình chỉ toàn dùng mấy hàm cơ bản như `SUM` hay `VLOOKUP`.
 
 Trước đây, trong những tình huống khẩn cấp như thế này, ai cũng sẽ cặm cụi Google tìm kiếm từng dòng hướng dẫn rời rạc trên StackOverflow, copy paste từng đoạn code mẫu rồi sửa đi sửa lại đến khi Google Sheets báo lỗi `#VALUE!` hoặc `#N/A` thì mặt cắt không còn giọt máu. Việc tự mày mò viết biểu thức chính quy (Regex) thủ công để lọc dữ liệu thực sự là một cực hình đối với những ai không phải dân lập trình chuyên nghiệp.
 
@@ -28,11 +24,9 @@ May mắn thay, câu chuyện đã khác kể từ khi chúng ta biết cách bi
 
 Khi đối mặt với một bảng dữ liệu hỗn độn sát giờ deadline, việc áp dụng sai phương pháp thường xuất phát từ 3 nguyên nhân chính sau đây:
 
-1. Thiếu kiến thức nền tảng về Regex: Cú pháp của Regular Expression (Biểu thức chính quy) cực kỳ khó nhớ với các ký tự đặc biệt như `^`, ``, `.*`, `\d+`. Chỉ cần gõ sai một dấu chấm hay dấu ngoặc là công thức vô tác dụng.
-
-2. Hạn chế của các hàm chuẩn trong Sheets: Các hàm như `SUBSTITUTE` hay `MID` thông thường chỉ xử lý được các chuỗi đơn giản. Khi dữ liệu có biến động về định dạng (ví dụ: số điện thoại có độ dài khác nhau), các hàm này hoàn toàn "bó tay".
-
-3. Áp lực thời gian tạo ra tâm lý hoảng loạn: Càng vội vàng, chúng ta càng dễ gõ sai cú pháp hoặc áp dụng nhầm công thức Excel sang Google Sheets (vốn có một số điểm khác biệt nhỏ về cấu trúc hàm).
+1. <strong>Thiếu kiến thức nền tảng về Regex:</strong> Cú pháp của Regular Expression (Biểu thức chính quy) cực kỳ khó nhớ với các ký tự đặc biệt như `^`, ``, `.*`, `\d+`. Chỉ cần gõ sai một dấu chấm hay dấu ngoặc là công thức vô tác dụng.
+2. <strong>Hạn chế của các hàm chuẩn trong Sheets:</strong> Các hàm như `SUBSTITUTE` hay `MID` thông thường chỉ xử lý được các chuỗi đơn giản. Khi dữ liệu có biến động về định dạng (ví dụ: số điện thoại có độ dài khác nhau), các hàm này hoàn toàn "bó tay".
+3. <strong>Áp lực thời gian tạo ra tâm lý hoảng loạn:</strong> Càng vội vàng, chúng ta càng dễ gõ sai cú pháp hoặc áp dụng nhầm công thức Excel sang Google Sheets (vốn có một số điểm khác biệt nhỏ về cấu trúc hàm).
 
 ---
 
@@ -61,15 +55,13 @@ Ngay lập tức, bạn sẽ nhận được một phiên bản công thức nâ
 
 ---
 
-### Cảnh báo chuyên gi
-
-A. Những lưu ý sống còn về bảo mật dữ liệu
+### Cảnh báo chuyên gia: Những lưu ý sống còn về bảo mật dữ liệu
 
 Trước khi hào hứng copy toàn bộ dữ liệu công ty đưa lên các công cụ AI, hãy ghi nhớ những quy tắc an toàn sau:
 
-- Ẩn danh hóa thông tin nhạy cảm: Tuyệt đối không đưa họ tên thật, số căn cước, thông tin tài khoản ngân hàng hoặc số điện thoại thật của khách hàng lên ChatGPT công khai. Hãy thay thế bằng dữ liệu giả lập (Mock data) trước khi nhờ AI viết công thức.
-- Luôn kiểm tra thủ công mẫu ngẫu nhiên (Sampling): Sau khi áp dụng công thức tự động cho 10.000 dòng, hãy dùng bộ lọc (Filter) kiểm tra ngẫu nhiên vài dòng ở đầu, giữa và cuối file để đảm bảo không có sai sót ngầm.
-- Sao lưu file gốc: Trước khi chạy bất kỳ đoạn mã lệnh hoặc công thức Regex hàng loạt nào, hãy luôn nhấn `Tệp > Bản sao` (Make a copy) để lưu lại một bản dự phòng an toàn.
+- <strong>Ẩn danh hóa thông tin nhạy cảm:</strong> Tuyệt đối không đưa họ tên thật, số căn cước, thông tin tài khoản ngân hàng hoặc số điện thoại thật của khách hàng lên ChatGPT công khai. Hãy thay thế bằng dữ liệu giả lập (Mock data) trước khi nhờ AI viết công thức.
+- <strong>Luôn kiểm tra thủ công mẫu ngẫu nhiên (Sampling):</strong> Sau khi áp dụng công thức tự động cho 10.000 dòng, hãy dùng bộ lọc (Filter) kiểm tra ngẫu nhiên vài dòng ở đầu, giữa và cuối file để đảm bảo không có sai sót ngầm.
+- <strong>Sao lưu file gốc:</strong> Trước khi chạy bất kỳ đoạn mã lệnh hoặc công thức Regex hàng loạt nào, hãy luôn nhấn `Tệp > Bản sao` (Make a copy) để lưu lại một bản dự phòng an toàn.
 
 ---
 
@@ -77,8 +69,6 @@ Trước khi hào hứng copy toàn bộ dữ liệu công ty đưa lên các c�
 
 #### 1. Tại sao công thức ChatGPT đưa ra lại báo lỗi #NAME? trong Google Sheets?
 Lỗi này thường xảy ra do hai nguyên nhân: một là bạn gõ sai chính tả tên hàm (ví dụ gõ nhầm `REGEXTRACT` thay vì `REGEXEXTRACT`), hai là hệ thống Google Sheets của bạn đang dùng ngôn ngữ tiếng Việt nhưng công thức yêu cầu tên hàm tiếng Anh chuẩn. Hãy chuyển bảng tính về định dạng ngôn ngữ tiếng Anh hoặc yêu cầu ChatGPT cung cấp đúng cú pháp tương thích.
-
-#
 
 ![AI Productivity & Workflow Automation](https://picsum.photos/seed/office791/1000/550)
 

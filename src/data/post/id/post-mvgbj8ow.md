@@ -8,25 +8,21 @@ tags: ["Google Sheets", "Apps Script", "Otomatisasi", "Produktivitas"]
 theme: "Pure Titanium Clean"
 ---
 
-## 1. Situasi Kritis dan Hambatan Kerja Mendesak di Kantor
-
 Jam 8 malam di kawasan bisnis SCBD Jakarta, saya masih terjebak di kantor menyelesaikan rekap data operasional mingguan yang berantakan karena salah rumus. Besok pagi, laporan tersebut harus sudah ada di meja direksi. Masalahnya bukan cuma datanya yang banyak, tapi proses ekspor manual ke PDF lalu melampirkannya ke email setiap minggu benar-benar membuang waktu dan rentan kelupaan. Jika Anda sering mengalami kepanikan lembur akibat tugas repetitif seperti ini, sudah saatnya kita beresin pakai Google Apps Script. 
 
-Mari kita bedah kenapa sistem manual ini sering bikin frustrasi dan bagaimana cara mengotomatisasinya sekali jalan untuk selamany
+Mari kita bedah kenapa sistem manual ini sering bikin frustrasi dan bagaimana cara mengotomatisasinya sekali jalan untuk selamanya.
 
-**A.** ![How to Write Custom Apps Script to Email Weekly PDF Reports from Google Sheets AI Automation Guide](https://picsum.photos/seed/work-mvgbluze-10-b/1000/550.jpg)
+![How to Write Custom Apps Script to Email Weekly PDF Reports from Google Sheets AI Automation Guide](https://picsum.photos/seed/work-mvgbluze-10-b/1000/550.jpg)
 
 ## Akar Masalah: Kenapa Kirim Laporan Manual Sering Gagal?
 
 Sebelum masuk ke kodenya, mari kita pahami tiga biang kerok utama yang biasa bikin proses rekap mingguan kantor berantakan:
 
-1. Human Error saat Ekspor PDF: Mengatur orientasi halaman (landscape/portrait), ukuran kertas, dan area cetak secara manual di Google Sheets sering kali hasilnya berantakan saat dibuka bos di ponsel.
+1. <strong>Human Error saat Ekspor PDF:</strong> Mengatur orientasi halaman (landscape/portrait), ukuran kertas, dan area cetak secara manual di Google Sheets sering kali hasilnya berantakan saat dibuka bos di ponsel.
+2. <strong>Keterlambatan Pengiriman:</strong> Karena dikerjakan manual, sering kali staf lupa mengirim laporan tepat waktu karena sibuk dengan urusan operasional lain di hari Senin pagi.
+3. <strong>Format Email yang Tidak Konsisten:</strong> Mengetik subjek dan isi email secara manual tiap minggu berisiko salah ketik atau salah melampirkan file versi lama.
 
-2. Keterlambatan Pengiriman: Karena dikerjakan manual, sering kali staf lupa mengirim laporan tepat waktu karena sibuk dengan urusan operasional lain di hari Senin pagi.
-
-3. Format Email yang Tidak Konsisten: Mengetik subjek dan isi email secara manual tiap minggu berisiko salah ketik atau salah melampirkan file versi lam
-
-**A.** <div style="border-left: 4px solid #334155; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
+<div style="border-left: 4px solid #334155; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Catatan Profesional:</strong> Otomatisasi bukan sekadar soal malas, tapi soal meminimalkan celah kesalahan manusia (human error) pada data penting perusahaan.
 </div>
 
@@ -37,16 +33,14 @@ Sebelum masuk ke kodenya, mari kita pahami tiga biang kerok utama yang biasa bik
 Kita tidak butuh aplikasi tambahan yang mahal. Cukup gunakan Google Sheets dan sedikit baris kode Apps Script yang bisa Anda salin langsung.
 
 ### Langkah 1: Buka Editor Apps Script
-1. Buka file Google Sheets laporan And
-
-**A.** 2. Di menu atas, klik Ekstensi > Apps Script.
-
+1. Buka file Google Sheets laporan Anda.
+2. Di menu atas, klik <strong>Ekstensi</strong> > <strong>Apps Script</strong>.
 3. Hapus semua kode default yang ada di dalam editor.
 
 ### Langkah 2: Masukkan Kode Skrip Otomatis
-Salin kode praktis di bawah ini ke dalam editor Apps Script And
+Salin kode praktis di bawah ini ke dalam editor Apps Script Anda:
 
-**A.** ```javascript
+```javascript
 function kirimLaporanMingguan() {
   var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Laporan");
   var emailPenerima = "direksi@perusahaan.com";
@@ -64,9 +58,7 @@ function kirimLaporanMingguan() {
     size: "a4",
     portrait: "false", // set true jika ingin portrait
     fitw: "true",
-    sheetranges: "
-
-**A1.** G20", // sesuaikan range data Anda
+    sheetranges: "A1:G20", // sesuaikan range data Anda
     gid: sheetId
   };
 
@@ -94,19 +86,14 @@ function kirimLaporanMingguan() {
 ```
 
 ### Langkah 3: Atur Jadwal Otomatis (Trigger)
-Supaya Anda tidak perlu klik tombol apa pun setiap mingguny
-
-**A.** 1. Di halaman Apps Script, klik ikon Jam (Pemicu / Triggers) di menu sebelah kiri.
-
-2. Klik tombol Tambah Pemicu di pojok kanan bawah.
-
+Supaya Anda tidak perlu klik tombol apa pun setiap minggunya:
+1. Di halaman Apps Script, klik ikon <strong>Jam</strong> (Pemicu / Triggers) di menu sebelah kiri.
+2. Klik tombol <strong>Tambah Pemicu</strong> di pojok kanan bawah.
 3. Pilih fungsi `kirimLaporanMingguan`.
+4. Pilih jenis waktu: <strong>Berbasis waktu</strong> > <strong>Pemicu minggu</strong> > Pilih hari Senin jam 07:00 - 08:00 pagi.
+5. Simpan dan berikan izin akses akun Google Anda.
 
-4. Pilih jenis waktu: Berbasis waktu > Pemicu minggu > Pilih hari Senin jam 07:00 - 08:00 pagi.
-
-5. Simpan dan berikan izin akses akun Google And
-
-**A.** <div style="border-left: 4px solid #334155; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
+<div style="border-left: 4px solid #334155; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Tips Penting:</strong> Pastikan nama tab sheet di kode (`"Laporan"`) sama persis dengan nama sheet yang ada di file Excel/Google Sheets Anda agar tidak muncul error <em>Sheet not found</em>.
 </div>
 
@@ -114,15 +101,11 @@ Supaya Anda tidak perlu klik tombol apa pun setiap mingguny
 
 ## Tanya Jawab (FAQ)
 
-1. Apakah skrip ini aman untuk data perusahaan yang bersifat rahasia?
+<strong>1. Apakah skrip ini aman untuk data perusahaan yang bersifat rahasia?</strong>
 Ya, sangat aman karena skrip berjalan di dalam akun ekosistem Google Workspace privat Anda sendiri tanpa melibatkan server pihak ketiga atau aplikasi langganan luar.
 
-2. Bagaimana jika saya ingin mengirim ke beberapa orang sekaligus?
+<strong>2. Bagaimana jika saya ingin mengirim ke beberapa orang sekaligus?</strong>
 Anda bisa mengubah variabel `emailPenerima` menjadi bentuk array atau memisahkan alamat email dengan koma, contoh: `"bos1@perusahaan.com, bos2@perusahaan.com"`.
 
-3. Kenapa file PDF yang terkirim kadang terpotong halamannya?
-Hal ini biasanya karena pengaturan `sheetranges` atau ukuran kolom terlalu lebar. Anda bisa menyesuaikan parameter `sheetranges: "
-
-**A1.** G20"` di dalam kode agar pas dengan area cetak dokumen And
-
-**A.**
+<strong>3. Kenapa file PDF yang terkirim kadang terpotong halamannya?</strong>
+Hal ini biasanya karena pengaturan `sheetranges` atau ukuran kolom terlalu lebar. Anda bisa menyesuaikan parameter `sheetranges: "A1:G20"` di dalam kode agar pas dengan area cetak dokumen Anda.

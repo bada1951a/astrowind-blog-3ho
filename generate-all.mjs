@@ -20,12 +20,11 @@ const POSTS_BASE_DIR = path.resolve('src/data/post');
 const TOPICS_FILE = path.resolve('topics.txt');
 
 // =========================================================================
-// [3호기 전용] 100% 무에러 영구 고정 Picsum 실사 CDN 매핑
+// [3ho호기] Pexels 검색과 Picsum 안전 대체
 // =========================================================================
 // =========================================================================
 // Pexels topic-matched photos with a non-breaking Picsum fallback.
-// Pexels search returns alt text and photographer/source metadata, not tags.
-// =========================================================================
+// Pexels API results expose alt text, not a tags array; search relevance is the primary match.
 const PEXELS_API_KEY = process.env.PEXELS_API_KEY;
 const PEXELS_IMAGE_CACHE = new Map();
 let pexelsFallbackWarningShown = false;
@@ -37,8 +36,8 @@ const PEXELS_LOCALE_BY_LANG = {
 
 function getPicsumFallback(topic, index) {
   const seedBase = Date.now().toString(36);
-  const coverSeed = '"work"-' + seedBase + '-' + index + '-c';
-  const bodySeed = '"work"-' + seedBase + '-' + index + '-b';
+  const coverSeed = 'work-' + seedBase + '-' + index + '-c';
+  const bodySeed = 'work-' + seedBase + '-' + index + '-b';
   return {
     coverUrl: 'https://picsum.photos/seed/' + coverSeed + '/1200/675.jpg',
     bodyUrl: 'https://picsum.photos/seed/' + bodySeed + '/1000/550.jpg',
@@ -47,8 +46,9 @@ function getPicsumFallback(topic, index) {
 }
 
 function imageTopicTerms(topic) {
-  const stopWords = new Set(['the', 'and', 'for', 'with', 'from', 'about', 'what', 'when', 'how', 'guide', 'problem', '방법', '해결', '문제']);
-  return (String(topic || '').toLowerCase().match(/[p{L}p{N}]+/gu) || [])
+  const stopWords = new Set(['the', 'and', 'for', 'with', 'from', 'about', 'what', 'when', 'how', 'guide', 'problem']);
+  return String(topic || '').toLowerCase().split(/\s+/)
+    .map((term) => term.trim())
     .filter((term) => term.length > 1 && !stopWords.has(term));
 }
 
@@ -108,7 +108,7 @@ async function getPostImages(topic, index, langCode = 'en') {
       unique.push(candidate);
       if (unique.length === 2) break;
     }
-    if (unique.length < 2) throw new Error('주제에 맞는 서로 다른 Pexels 사진 2장을 찾지 못했습니다.');
+    if (unique.length < 2) throw new Error('Pexels 검색에서 서로 다른 사진 2장을 찾지 못했습니다.');
 
     return {
       coverUrl: unique[0].photo.src.landscape || unique[0].photo.src.large,
@@ -124,7 +124,6 @@ async function getPostImages(topic, index, langCode = 'en') {
     return fallback();
   }
 }
-
 // =========================================================================
 // 한국 시간(KST) 기준 안전한 당일 발행 날짜 생성 함수
 // =========================================================================

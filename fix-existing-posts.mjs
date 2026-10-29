@@ -14,13 +14,16 @@ function sanitizeMarkdownText(content) {
   text = text.replace(/\*\*([^*]{50,})\*\*/g, '$1');
 
   // 3. 줄 단위 짝 안 맞는 홀수 ** 태그 강제 정리 (줄 끝 덜 닫힌 ** 삭제)
-  text = text.split('\n').map(line => {
-    const boldCount = (line.match(/\*\*/g) || []).length;
-    if (boldCount % 2 !== 0) {
-      return line.replace(/\*\*(?![\s\S]*\*\*)/, '');
-    }
-    return line;
-  }).join('\n');
+  text = text
+    .split('\n')
+    .map((line) => {
+      const boldCount = (line.match(/\*\*/g) || []).length;
+      if (boldCount % 2 !== 0) {
+        return line.replace(/\*\*(?![\s\S]*\*\*)/, '');
+      }
+      return line;
+    })
+    .join('\n');
 
   // 4. 단독으로 남아있는 외톨이 ** 태그 청소
   text = text.replace(/(^|\s)\*\*(\s|$)/g, '$1$2');
@@ -56,7 +59,7 @@ function runActionFix() {
   console.log(`🎯 최신 포스트 ${targetFiles.length}개 정밀 수술 시작...`);
   let fixedCount = 0;
 
-  targetFiles.forEach(item => {
+  targetFiles.forEach((item) => {
     const original = fs.readFileSync(item.path, 'utf-8');
     const fixed = sanitizeMarkdownText(original);
 

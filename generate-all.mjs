@@ -10,8 +10,9 @@
 import fs from 'fs';
 import path from 'path';
 import { createHash, createCipheriv, createDecipheriv, randomBytes } from 'node:crypto';
+import { createCheckpointKey, createTopicFileSlug } from './generation-identity.mjs';
 
-
+const GENERATION_PROMPT_VERSION = '2026-10-30-first-person-story-v2';
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 if (!OPENAI_API_KEY) {
   console.error('❌ OPENAI_API_KEY 환경변수가 설정되지 않았습니다.');
@@ -30,10 +31,9 @@ function getPostImages(topic, index) {
 
   return {
     coverUrl: `https://picsum.photos/seed/${coverSeed}/1200/675.jpg`,
-    bodyUrl: `https://picsum.photos/seed/${bodySeed}/1000/550.jpg`
+    bodyUrl: `https://picsum.photos/seed/${bodySeed}/1000/550.jpg`,
   };
 }
-
 
 // =========================================================================
 // 한국 시간(KST) 기준 안전한 당일 발행 날짜 생성 함수
@@ -52,101 +52,101 @@ function getKstPublishDateIso() {
 // =========================================================================
 const I18N_SECTIONS = {
   ko: {
-    s1: "1. 직장인 멘붕 오는 업무 병목 돌발 상황",
-    s2: "2. 수식 에러 및 자동화 실패의 진짜 핵심 원인",
-    s3: "3. 1분 만에 끝내는 단계별 실무 해결법",
-    s4: "4. 현직 자동화 전문가의 핵심 주의사항 및 팁",
-    s5: "5. 자주 묻는 질문 (FAQ)",
-    tags: ["업무자동화", "엑셀팁", "생산성도구", "오피스꿀팁"]
+    s1: '1. 직장인 멘붕 오는 업무 병목 돌발 상황',
+    s2: '2. 수식 에러 및 자동화 실패의 진짜 핵심 원인',
+    s3: '3. 1분 만에 끝내는 단계별 실무 해결법',
+    s4: '4. 현직 자동화 전문가의 핵심 주의사항 및 팁',
+    s5: '5. 자주 묻는 질문 (FAQ)',
+    tags: ['업무자동화', '엑셀팁', '생산성도구', '오피스꿀팁'],
   },
   en: {
-    s1: "1. Critical Workplace Bottleneck Emergency",
-    s2: "2. Root Cause Breakdown of Formula and Workflow Errors",
-    s3: "3. Step-by-Step Practical Productivity Resolution",
-    s4: "4. Professional Automation Expert Precautions & Tips",
-    s5: "5. Frequently Asked Questions (FAQ)",
-    tags: ["Workflow", "Automation", "Excel Tips", "Office Productivity"]
+    s1: '1. Critical Workplace Bottleneck Emergency',
+    s2: '2. Root Cause Breakdown of Formula and Workflow Errors',
+    s3: '3. Step-by-Step Practical Productivity Resolution',
+    s4: '4. Professional Automation Expert Precautions & Tips',
+    s5: '5. Frequently Asked Questions (FAQ)',
+    tags: ['Workflow', 'Automation', 'Excel Tips', 'Office Productivity'],
   },
   ja: {
-    s1: "1. 職場で冷や汗をかいた業務停止トラブル",
-    s2: "2. 数式エラーと自動化トラブルの根本原因",
-    s3: "3. 1分で完了する実践的な業務効率化手順",
-    s4: "4. 現役自動化専門家が教える注意点とコツ",
-    s5: "5. よくある質問 (FAQ)",
-    tags: ["業務効率化", "エクセル時短", "自動化ツール", "オフィスハック"]
+    s1: '1. 職場で冷や汗をかいた業務停止トラブル',
+    s2: '2. 数式エラーと自動化トラブルの根本原因',
+    s3: '3. 1分で完了する実践的な業務効率化手順',
+    s4: '4. 現役自動化専門家が教える注意点とコツ',
+    s5: '5. よくある質問 (FAQ)',
+    tags: ['業務効率化', 'エクセル時短', '自動化ツール', 'オフィスハック'],
   },
   de: {
-    s1: "1. Kritische Fehlersituation im Büroalltag",
-    s2: "2. Detaillierte Ursachenanalyse von Formel- und Prozessfehlern",
-    s3: "3. Schritt-für-Schritt-Anleitung zur Effizienzsteigerung",
-    s4: "4. Praxistipps und Warnungen vom Automatisierungs-Experten",
-    s5: "5. Häufig gestellte Fragen (FAQ)",
-    tags: ["Automatisierung", "Excel-Tipps", "Produktivität", "Büro-Tools"]
+    s1: '1. Kritische Fehlersituation im Büroalltag',
+    s2: '2. Detaillierte Ursachenanalyse von Formel- und Prozessfehlern',
+    s3: '3. Schritt-für-Schritt-Anleitung zur Effizienzsteigerung',
+    s4: '4. Praxistipps und Warnungen vom Automatisierungs-Experten',
+    s5: '5. Häufig gestellte Fragen (FAQ)',
+    tags: ['Automatisierung', 'Excel-Tipps', 'Produktivität', 'Büro-Tools'],
   },
   fr: {
     s1: "1. Situation d'urgence critique au bureau",
-    s2: "2. Analyse approfondie des erreurs de formule et de processus",
+    s2: '2. Analyse approfondie des erreurs de formule et de processus',
     s3: "3. Guide étape par étape pour automatiser et résoudre l'erreur",
     s4: "4. Conseils et précautions d'un expert en automatisation",
-    s5: "5. Foire Aux Questions (FAQ)",
-    tags: ["Automatisation", "Astuces Excel", "Productivité", "Outils Bureautiques"]
+    s5: '5. Foire Aux Questions (FAQ)',
+    tags: ['Automatisation', 'Astuces Excel', 'Productivité', 'Outils Bureautiques'],
   },
   es: {
-    s1: "1. Emergencia crítica en el trabajo y bloqueo de tareas",
-    s2: "2. Análisis de causas raíz de errores de fórmulas y flujo",
-    s3: "3. Solución práctica paso a paso para optimizar el flujo",
-    s4: "4. Consejos y advertencias de un experto en productividad",
-    s5: "5. Preguntas Frecuentes (FAQ)",
-    tags: ["Automatización", "Consejos Excel", "Productividad", "Herramientas Oficina"]
+    s1: '1. Emergencia crítica en el trabajo y bloqueo de tareas',
+    s2: '2. Análisis de causas raíz de errores de fórmulas y flujo',
+    s3: '3. Solución práctica paso a paso para optimizar el flujo',
+    s4: '4. Consejos y advertencias de un experto en productividad',
+    s5: '5. Preguntas Frecuentes (FAQ)',
+    tags: ['Automatización', 'Consejos Excel', 'Productividad', 'Herramientas Oficina'],
   },
   it: {
-    s1: "1. Emergenza improvvisa e blocco delle attività in ufficio",
-    s2: "2. Analisi approfondita degli errori di formula e di processo",
-    s3: "3. Guida pratica di risoluzione e ottimizzazione passo dopo passo",
+    s1: '1. Emergenza improvvisa e blocco delle attività in ufficio',
+    s2: '2. Analisi approfondita degli errori di formula e di processo',
+    s3: '3. Guida pratica di risoluzione e ottimizzazione passo dopo passo',
     s4: "4. Avvertenze e raccomandazioni dell'esperto di automazione",
-    s5: "5. Domande Frequenti (FAQ)",
-    tags: ["Automazione", "Trucchi Excel", "Produttività", "Strumenti Ufficio"]
+    s5: '5. Domande Frequenti (FAQ)',
+    tags: ['Automazione', 'Trucchi Excel', 'Produttività', 'Strumenti Ufficio'],
   },
   pt: {
-    s1: "1. Situação de emergência e gargalo crítico no escritório",
-    s2: "2. Análise da causa raiz de falhas de fórmula e processos",
-    s3: "3. Guia prático passo a passo para automação e produtividade",
-    s4: "4. Recomendações e alertas de especialistas em automação",
-    s5: "5. Perguntas Frequentes (FAQ)",
-    tags: ["Automação", "Dicas Excel", "Produtividade", "Rotina de Escritório"]
+    s1: '1. Situação de emergência e gargalo crítico no escritório',
+    s2: '2. Análise da causa raiz de falhas de fórmula e processos',
+    s3: '3. Guia prático passo a passo para automação e produtividade',
+    s4: '4. Recomendações e alertas de especialistas em automação',
+    s5: '5. Perguntas Frequentes (FAQ)',
+    tags: ['Automação', 'Dicas Excel', 'Produtividade', 'Rotina de Escritório'],
   },
   nl: {
-    s1: "1. Noodsituatie en knelpunt op de werkvloer",
-    s2: "2. Grondige analyse van formulefouten en werkstroomproblemen",
-    s3: "3. Stapsgewijze praktische automatiseringsoplossing",
-    s4: "4. Belangrijke adviezen van automatiseringsspecialisten",
-    s5: "5. Veelgestelde Vragen (FAQ)",
-    tags: ["Automatisering", "Excel Tips", "Productiviteit", "Kantoortools"]
+    s1: '1. Noodsituatie en knelpunt op de werkvloer',
+    s2: '2. Grondige analyse van formulefouten en werkstroomproblemen',
+    s3: '3. Stapsgewijze praktische automatiseringsoplossing',
+    s4: '4. Belangrijke adviezen van automatiseringsspecialisten',
+    s5: '5. Veelgestelde Vragen (FAQ)',
+    tags: ['Automatisering', 'Excel Tips', 'Productiviteit', 'Kantoortools'],
   },
   pl: {
-    s1: "1. Awaryjna sytuacja i paraliż pracy w biurze",
-    s2: "2. Szczegółowa analiza przyczyn błędów formuł i procesów",
-    s3: "3. Praktyczne rozwiązanie automatyzujące krok po kroku",
-    s4: "4. Wskazówki i ostrzeżenia eksperta ds. automatyzacji",
-    s5: "5. Najczęściej zadawane pytania (FAQ)",
-    tags: ["Automatyzacja", "Triki Excel", "Produktywność", "Narzędzia Biurowe"]
+    s1: '1. Awaryjna sytuacja i paraliż pracy w biurze',
+    s2: '2. Szczegółowa analiza przyczyn błędów formuł i procesów',
+    s3: '3. Praktyczne rozwiązanie automatyzujące krok po kroku',
+    s4: '4. Wskazówki i ostrzeżenia eksperta ds. automatyzacji',
+    s5: '5. Najczęściej zadawane pytania (FAQ)',
+    tags: ['Automatyzacja', 'Triki Excel', 'Produktywność', 'Narzędzia Biurowe'],
   },
   id: {
-    s1: "1. Situasi Kritis dan Hambatan Kerja Mendesak di Kantor",
-    s2: "2. Analisis Mendalam Akar Masalah Formula dan Alur Kerja",
-    s3: "3. Panduan Langkah demi Langkah Otomatisasi dan Solusi Cepat",
-    s4: "4. Tips & Peringatan Penting Pakar Otomatisasi Kantor",
-    s5: "5. Pertanyaan yang Sering Diajukan (FAQ)",
-    tags: ["Otomatisasi", "Tips Excel", "Produktivitas", "Solusi Kerja"]
+    s1: '1. Situasi Kritis dan Hambatan Kerja Mendesak di Kantor',
+    s2: '2. Analisis Mendalam Akar Masalah Formula dan Alur Kerja',
+    s3: '3. Panduan Langkah demi Langkah Otomatisasi dan Solusi Cepat',
+    s4: '4. Tips & Peringatan Penting Pakar Otomatisasi Kantor',
+    s5: '5. Pertanyaan yang Sering Diajukan (FAQ)',
+    tags: ['Otomatisasi', 'Tips Excel', 'Produktivitas', 'Solusi Kerja'],
   },
   vi: {
-    s1: "1. Tình huống sự cố khẩn cấp và tắc nghẽn công việc văn phòng",
-    s2: "2. Phân tích nguyên nhân gốc rễ lỗi công thức và luồng xử lý",
-    s3: "3. Các bước khắc phục và tối ưu hóa quy trình thực tế",
-    s4: "4. Lời khuyên và cảnh báo quan trọng từ chuyên gia tối ưu",
-    s5: "5. Các câu hỏi thường gặp (FAQ)",
-    tags: ["Tự Động Hóa", "Mẹo Excel", "Năng Suất", "Tin Học Văn Phòng"]
-  }
+    s1: '1. Tình huống sự cố khẩn cấp và tắc nghẽn công việc văn phòng',
+    s2: '2. Phân tích nguyên nhân gốc rễ lỗi công thức và luồng xử lý',
+    s3: '3. Các bước khắc phục và tối ưu hóa quy trình thực tế',
+    s4: '4. Lời khuyên và cảnh báo quan trọng từ chuyên gia tối ưu',
+    s5: '5. Các câu hỏi thường gặp (FAQ)',
+    tags: ['Tự Động Hóa', 'Mẹo Excel', 'Năng Suất', 'Tin Học Văn Phòng'],
+  },
 };
 
 // =========================================================================
@@ -167,7 +167,7 @@ function inspectAndHealMarkdown(body, langCode) {
 
   if (!healed.startsWith('## 1.')) {
     healed = `## ${i18n.s1}\n\n` + healed;
-    auditLogs.push("1번 헤딩 주입");
+    auditLogs.push('1번 헤딩 주입');
   }
 
   // 2) 🛡️ Q&A 줄바꿈 뭉개짐 자동 분리 치유 (질문과 답변 사이 빈 줄 2개 보장)
@@ -177,15 +177,16 @@ function inspectAndHealMarkdown(body, langCode) {
     healed = healed.replace(/\s*(\*\*A[1-3]\.\*\*|A[1-3]\.)\s*/gi, '\n\n**$1** ');
     healed = healed.replace(/\*\*\s*\*\*(Q[1-3]\.|A[1-3]\.)\*\*\s*\*\*/gi, '**$1**');
     healed = healed.replace(/\*\*(Q[1-3]\.|A[1-3]\.)\*\*/gi, '**$1**');
-    auditLogs.push("Q&A 줄바꿈 2열 분리 치유");
+    auditLogs.push('Q&A 줄바꿈 2열 분리 치유');
   }
 
   // 3) 볼드 기호 안쪽 공백 정돈 (** 단어 ** -> **단어**)
   if (/\*\*\s+[^*]+?\s+\*\*/.test(healed)) {
-    healed = healed.replace(/\*\*\s+([^*]+?)\s+\*\*/g, '**$1**')
-                   .replace(/\*\*\s+([^*]+?)\*\*/g, '**$1**')
-                   .replace(/\*\*([^*]+?)\s+\*\*/g, '**$1**');
-    auditLogs.push("볼드 공백 정돈");
+    healed = healed
+      .replace(/\*\*\s+([^*]+?)\s+\*\*/g, '**$1**')
+      .replace(/\*\*\s+([^*]+?)\*\*/g, '**$1**')
+      .replace(/\*\*([^*]+?)\s+\*\*/g, '**$1**');
+    auditLogs.push('볼드 공백 정돈');
   }
 
   // 4) 엑셀 셀 참조, 수식, 변수 및 LaTeX 기호 인라인 백틱화
@@ -193,10 +194,11 @@ function inspectAndHealMarkdown(body, langCode) {
     return `\`${match.replace(/\$/g, '').trim()}\``;
   });
   healed = healed.replace(/\$([A-Za-z0-9_-]+)\$/g, '`$1`');
-  healed = healed.replace(/\\times/g, 'x')
-                 .replace(/\\circ/g, '°')
-                 .replace(/\\approx/g, '≈')
-                 .replace(/~/g, '-');
+  healed = healed
+    .replace(/\\times/g, 'x')
+    .replace(/\\circ/g, '°')
+    .replace(/\\approx/g, '≈')
+    .replace(/~/g, '-');
 
   // 5) 연속 빈 줄 압축
   healed = healed.replace(/\n{3,}/g, '\n\n').trim();
@@ -209,20 +211,23 @@ function inspectAndHealMarkdown(body, langCode) {
 }
 
 if (!fs.existsSync(TOPICS_FILE)) {
-  console.error("❌ topics.txt 파일이 존재하지 않습니다.");
+  console.error('❌ topics.txt 파일이 존재하지 않습니다.');
   process.exit(1);
 }
 
 const fileContent = fs.readFileSync(TOPICS_FILE, 'utf-8');
-const lines = fileContent.split('\n').map(l => l.trim()).filter(l => l.length > 0);
+const lines = fileContent
+  .split('\n')
+  .map((l) => l.trim())
+  .filter((l) => l.length > 0);
 
 if (lines.length === 0) {
-  console.log("⚠️ topics.txt에 남은 주제가 없습니다. 생성을 건너뜁니다.");
+  console.log('⚠️ topics.txt에 남은 주제가 없습니다. 생성을 건너뜁니다.');
   process.exit(0);
 }
 
 const currentTopic = lines[0];
-const topicKey = createHash('sha256').update(lines.join('\n'), 'utf8').digest('hex');
+const topicKey = createCheckpointKey(lines, GENERATION_PROMPT_VERSION);
 const checkpointRoot = path.resolve('.generation-checkpoints');
 const checkpointDir = path.join(checkpointRoot, topicKey);
 const checkpointEncryptionKey = createHash('sha256')
@@ -235,10 +240,9 @@ function readEncryptedCheckpoint(filePath) {
   if (envelope.version !== 1) throw new Error('체크포인트 형식 버전이 다릅니다.');
   const decipher = createDecipheriv('aes-256-gcm', checkpointEncryptionKey, Buffer.from(envelope.iv, 'base64'));
   decipher.setAuthTag(Buffer.from(envelope.authTag, 'base64'));
-  return Buffer.concat([
-    decipher.update(Buffer.from(envelope.ciphertext, 'base64')),
-    decipher.final()
-  ]).toString('utf8');
+  return Buffer.concat([decipher.update(Buffer.from(envelope.ciphertext, 'base64')), decipher.final()]).toString(
+    'utf8'
+  );
 }
 
 function writeEncryptedCheckpoint(filePath, text) {
@@ -249,37 +253,139 @@ function writeEncryptedCheckpoint(filePath, text) {
     version: 1,
     iv: iv.toString('base64'),
     authTag: cipher.getAuthTag().toString('base64'),
-    ciphertext: ciphertext.toString('base64')
+    ciphertext: ciphertext.toString('base64'),
   };
   fs.writeFileSync(filePath, JSON.stringify(envelope), 'utf8');
 }
 console.log(`📌 오늘 처리할 주제 [3호기 AI & 업무자동화]: "${currentTopic}"`);
 
 const THEME_PRESETS = [
-  { id: 1, name: "Cyberpunk Terminal", primaryColor: "#00ffcc", bgColor: "#111827", layout: "CLI/터미널 스타일, 자동화 단축 경로 최상단 배치" },
-  { id: 2, name: "Modern Minimalist Slate", primaryColor: "#3b82f6", bgColor: "#f8fafc", layout: "미니멀 가이드 스타일, 여백 중심의 깔끔한 단계별 넘버링, 직관적 핵심 요약" },
-  { id: 3, name: "Industrial Blueprint", primaryColor: "#f59e0b", bgColor: "#1e293b", layout: "엔지니어링 청사진 스타일, 워크플로우 병목 원인 시각화, 쉬운 3단 비교표 포함" },
-  { id: 4, name: "Retro Monokai", primaryColor: "#a6e22e", bgColor: "#272822", layout: "개발자 에디터 스타일, 실전 프롬프트 코드 박스 중심 전개, 디버깅 팁" },
-  { id: 5, name: "Nordic Clean Ice", primaryColor: "#0284c7", bgColor: "#f0f9ff", layout: "북유럽 감성 클린 레이아웃, 인용구 중심 도입부, 실무 체크리스트" }
+  {
+    id: 1,
+    name: 'Cyberpunk Terminal',
+    primaryColor: '#00ffcc',
+    bgColor: '#111827',
+    layout: 'CLI/터미널 스타일, 자동화 단축 경로 최상단 배치',
+  },
+  {
+    id: 2,
+    name: 'Modern Minimalist Slate',
+    primaryColor: '#3b82f6',
+    bgColor: '#f8fafc',
+    layout: '미니멀 가이드 스타일, 여백 중심의 깔끔한 단계별 넘버링, 직관적 핵심 요약',
+  },
+  {
+    id: 3,
+    name: 'Industrial Blueprint',
+    primaryColor: '#f59e0b',
+    bgColor: '#1e293b',
+    layout: '엔지니어링 청사진 스타일, 워크플로우 병목 원인 시각화, 쉬운 3단 비교표 포함',
+  },
+  {
+    id: 4,
+    name: 'Retro Monokai',
+    primaryColor: '#a6e22e',
+    bgColor: '#272822',
+    layout: '개발자 에디터 스타일, 실전 프롬프트 코드 박스 중심 전개, 디버깅 팁',
+  },
+  {
+    id: 5,
+    name: 'Nordic Clean Ice',
+    primaryColor: '#0284c7',
+    bgColor: '#f0f9ff',
+    layout: '북유럽 감성 클린 레이아웃, 인용구 중심 도입부, 실무 체크리스트',
+  },
 ];
 
 const TARGET_LANGS = [
-  { code: 'ko', name: 'Korean', persona: '친절하고 경험 많은 엑셀/AI 자동화 실무 전문가 (사내 칼퇴 치트키 장인)', osUi: '파일 > 옵션, 데이터 > 파워 쿼리, 수식 탭, 확장 프로그램', localeContext: '서울/판교 IT 기업 및 대기업 오피스' },
-  { code: 'en', name: 'English', persona: 'Friendly Silicon Valley productivity specialist sharing no-code and AI shortcuts', osUi: 'File > Options, Data > Power Query, Formula Tab, Add-ons', localeContext: 'Silicon Valley tech firm / NYC corporate finance office' },
-  { code: 'ja', name: 'Japanese', persona: '業務効率化とAIツール活用を分かりやすく教える日本の現役ITワーカー', osUi: 'ファイル > オプション, データ > パワークエリ, 数式タブ, 拡張機能', localeContext: '丸の内・品川のビジネスオフィス' },
-  { code: 'de', name: 'German', persona: 'Praxisnaher deutscher Automatisierungs-Experte für Office- und KI-Tools', osUi: 'Datei > Optionen, Daten > Power Query, Formeln, Add-Ins', localeContext: 'Frankfurter Finanzdistrikt und Industrieunternehmen' },
-  { code: 'fr', name: 'French', persona: 'Spécialiste support bureautique et IA expliquant les astuces de productivité', osUi: 'Fichier > Options, Données > Power Query, Formules, Extensions', localeContext: 'Siège d\'entreprise à Paris La Défense' },
-  { code: 'es', name: 'Spanish', persona: 'Especialista en productividad y automatización que explica trucos prácticos sin rodeos', osUi: 'Archivo > Opciones, Datos > Power Query, Fórmulas, Complementos', localeContext: 'Oficina corporativa en Madrid y centros de negocio' },
-  { code: 'it', name: 'Italian', persona: 'Esperto di automazione e AI che semplifica il lavoro d\'ufficio quotidiano', osUi: 'File > Opzioni, Dati > Power Query, Formule, Componenti aggiuntivi', localeContext: 'Uffici direzionali e aziende a Milano' },
-  { code: 'pt', name: 'Portuguese', persona: 'Especialista em automação de escritório que ensina truques práticos de produtividade', osUi: 'Arquivo > Opções, Dados > Power Query, Fórmulas, Suplementos', localeContext: 'Escritório corporativo na Avenida Paulista em São Paulo' },
-  { code: 'nl', name: 'Dutch', persona: 'Nederlandse productiviteits- en AI-specialist die slimme werkmethoden uitlegt', osUi: 'Bestand > Opties, Gegevens > Power Query, Formules, Invoegtoepassingen', localeContext: 'Zuidas zakendistrict in Amsterdam' },
-  { code: 'pl', name: 'Polish', persona: 'Polski ekspert od automatyzacji biurowej i narzędzi AI tłumaczący triki krok po kroku', osUi: 'Plik > Opcje, Dane > Power Query, Formuły, Dodatki', localeContext: 'Warszawskie centrum biznesowe' },
-  { code: 'id', name: 'Indonesian', persona: 'Praktisi produktivitas dan otomatisasi kantor yang berbagi solusi praktis sehari-hari', osUi: 'File > Opsi, Data > Power Query, Rumus, Add-in', localeContext: 'Kawasan bisnis SCBD Jakarta' },
-  { code: 'vi', name: 'Vietnamese', persona: 'Chuyên viên tối ưu hóa quy trình làm việc và công cụ AI thực chiến', osUi: 'Tệp > Tùy chọn, Dữ liệu > Power Query, Công thức, Tiện ích bổ sung', localeContext: 'Tòa nhà văn phòng trung tâm tại TP.HCM / Hà Nội' }
+  {
+    code: 'ko',
+    name: 'Korean',
+    persona: '친절하고 경험 많은 엑셀/AI 자동화 실무 전문가 (사내 칼퇴 치트키 장인)',
+    osUi: '파일 > 옵션, 데이터 > 파워 쿼리, 수식 탭, 확장 프로그램',
+    localeContext: '서울/판교 IT 기업 및 대기업 오피스',
+  },
+  {
+    code: 'en',
+    name: 'English',
+    persona: 'Friendly Silicon Valley productivity specialist sharing no-code and AI shortcuts',
+    osUi: 'File > Options, Data > Power Query, Formula Tab, Add-ons',
+    localeContext: 'Silicon Valley tech firm / NYC corporate finance office',
+  },
+  {
+    code: 'ja',
+    name: 'Japanese',
+    persona: '業務効率化とAIツール活用を分かりやすく教える日本の現役ITワーカー',
+    osUi: 'ファイル > オプション, データ > パワークエリ, 数式タブ, 拡張機能',
+    localeContext: '丸の内・品川のビジネスオフィス',
+  },
+  {
+    code: 'de',
+    name: 'German',
+    persona: 'Praxisnaher deutscher Automatisierungs-Experte für Office- und KI-Tools',
+    osUi: 'Datei > Optionen, Daten > Power Query, Formeln, Add-Ins',
+    localeContext: 'Frankfurter Finanzdistrikt und Industrieunternehmen',
+  },
+  {
+    code: 'fr',
+    name: 'French',
+    persona: 'Spécialiste support bureautique et IA expliquant les astuces de productivité',
+    osUi: 'Fichier > Options, Données > Power Query, Formules, Extensions',
+    localeContext: "Siège d'entreprise à Paris La Défense",
+  },
+  {
+    code: 'es',
+    name: 'Spanish',
+    persona: 'Especialista en productividad y automatización que explica trucos prácticos sin rodeos',
+    osUi: 'Archivo > Opciones, Datos > Power Query, Fórmulas, Complementos',
+    localeContext: 'Oficina corporativa en Madrid y centros de negocio',
+  },
+  {
+    code: 'it',
+    name: 'Italian',
+    persona: "Esperto di automazione e AI che semplifica il lavoro d'ufficio quotidiano",
+    osUi: 'File > Opzioni, Dati > Power Query, Formule, Componenti aggiuntivi',
+    localeContext: 'Uffici direzionali e aziende a Milano',
+  },
+  {
+    code: 'pt',
+    name: 'Portuguese',
+    persona: 'Especialista em automação de escritório que ensina truques práticos de produtividade',
+    osUi: 'Arquivo > Opções, Dados > Power Query, Fórmulas, Suplementos',
+    localeContext: 'Escritório corporativo na Avenida Paulista em São Paulo',
+  },
+  {
+    code: 'nl',
+    name: 'Dutch',
+    persona: 'Nederlandse productiviteits- en AI-specialist die slimme werkmethoden uitlegt',
+    osUi: 'Bestand > Opties, Gegevens > Power Query, Formules, Invoegtoepassingen',
+    localeContext: 'Zuidas zakendistrict in Amsterdam',
+  },
+  {
+    code: 'pl',
+    name: 'Polish',
+    persona: 'Polski ekspert od automatyzacji biurowej i narzędzi AI tłumaczący triki krok po kroku',
+    osUi: 'Plik > Opcje, Dane > Power Query, Formuły, Dodatki',
+    localeContext: 'Warszawskie centrum biznesowe',
+  },
+  {
+    code: 'id',
+    name: 'Indonesian',
+    persona: 'Praktisi produktivitas dan otomatisasi kantor yang berbagi solusi praktis sehari-hari',
+    osUi: 'File > Opsi, Data > Power Query, Rumus, Add-in',
+    localeContext: 'Kawasan bisnis SCBD Jakarta',
+  },
+  {
+    code: 'vi',
+    name: 'Vietnamese',
+    persona: 'Chuyên viên tối ưu hóa quy trình làm việc và công cụ AI thực chiến',
+    osUi: 'Tệp > Tùy chọn, Dữ liệu > Power Query, Công thức, Tiện ích bổ sung',
+    localeContext: 'Tòa nhà văn phòng trung tâm tại TP.HCM / Hà Nội',
+  },
 ];
 
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
-const fileSlug = `post-${topicKey.slice(0, 12)}`;
+const fileSlug = createTopicFileSlug(currentTopic);
 const generatedPostContents = new Map();
 
 // 이전 주제의 체크포인트는 현재 주제가 바뀌면 제거해 캐시 크기가 계속 늘지 않게 합니다.
@@ -372,7 +478,8 @@ function validateGeneratedPost(text, langCode) {
   for (const n of [1, 2, 3]) {
     const questionMarker = '**Q' + n + '.**';
     const answerMarker = '**A' + n + '.**';
-    if (bodyWithoutCode.split(questionMarker).length - 1 !== 1) errors.push('FAQ 질문 Q' + n + ' 표식이 정확히 1개 필요');
+    if (bodyWithoutCode.split(questionMarker).length - 1 !== 1)
+      errors.push('FAQ 질문 Q' + n + ' 표식이 정확히 1개 필요');
     if (bodyWithoutCode.split(answerMarker).length - 1 !== 1) errors.push('FAQ 답변 A' + n + ' 표식이 정확히 1개 필요');
   }
   if (langCode === 'ko' && nonSpaceLength < 1800) errors.push('한국어 본문 공백 제외 1,800자 미만');
@@ -388,7 +495,8 @@ function validateGeneratedPost(text, langCode) {
   if (langCode === 'ja' && kanaCount < 80) errors.push('일본어 본문 가나 문자 부족');
   if (langCode !== 'ko' && hangulCount > 0) errors.push('비한국어 본문에 한글 포함');
   if (langCode !== 'ja' && kanaCount > 40) errors.push('일본어 외 본문에 가나 문자 과다 포함');
-  if (!['ko', 'ja'].includes(langCode) && latinCount < words * 0.6) errors.push('본문 문자 체계가 라틴 문자 locale과 맞지 않음');
+  if (!['ko', 'ja'].includes(langCode) && latinCount < words * 0.6)
+    errors.push('본문 문자 체계가 라틴 문자 locale과 맞지 않음');
   return errors;
 }
 async function generateSinglePost(lang, index) {
@@ -404,16 +512,18 @@ async function generateSinglePost(lang, index) {
       }
       fs.unlinkSync(checkpointPath);
       console.warn(`⚠️ ${lang.code} 체크포인트 검수 실패로 다시 생성합니다: ${cachedErrors.join(', ')}`);
-    } catch (error) {
+    } catch {
       fs.unlinkSync(checkpointPath);
       console.warn(`⚠️ ${lang.code} 암호화 체크포인트를 읽을 수 없어 다시 생성합니다.`);
     }
   }
 
   const selectedTheme = THEME_PRESETS[Math.floor(Math.random() * THEME_PRESETS.length)];
-    const i18n = I18N_SECTIONS[lang.code] || I18N_SECTIONS.ko;
+  const i18n = I18N_SECTIONS[lang.code] || I18N_SECTIONS.ko;
 
-  console.log(`\n🚀 [${index + 1}/12] ${lang.name} (${lang.code}) 3호기 애드센스 표준 생성 중... (테마: ${selectedTheme.name})`);
+  console.log(
+    `\n🚀 [${index + 1}/12] ${lang.name} (${lang.code}) 3호기 애드센스 표준 생성 중... (테마: ${selectedTheme.name})`
+  );
 
   const { coverUrl, bodyUrl } = getPostImages(currentTopic, index);
   const pubDateIso = getKstPublishDateIso();
@@ -430,6 +540,7 @@ Length and style:
 - Other locales: about 900–1,100 words (Japanese: at least 900 non-space characters).
 - Aim for an engaging opening and transitions (about 30%) and useful, accurate explanation and actionable steps (about 70%).
 - Use first-person procedural phrasing only where natural (for example, "I would first check…"). Do not imply a real personal event.
+- In the opening paragraph, naturally present a specific situation the reader may recognize and the key unresolved question. Answer it in useful stages, using first-person reasoning and brief transitions to give readers a reason to continue. Avoid clickbait, exaggeration, fabricated personal or customer experiences, hypothetical-scene disclaimers, and rigid opening formulas; phrase this naturally for the locale.
 - Write idiomatic ${lang.name}, not translated wording. Localize examples and UI labels only when relevant.
 
 Use these five localized H2 headings exactly, in this order:
@@ -481,11 +592,19 @@ theme: "${selectedTheme.name}"
       body = body.replace(/^#\s+[^\n]+\n+/, '');
 
       // 3호기 고정 카테고리를 보존합니다.
-      frontmatter = frontmatter.replace(/category:\s*["'][^"']*["']/i, "category: 'automation'")
-                               .replace(/category:\s*[^\n\r]+/i, "category: 'automation'");
+      frontmatter = frontmatter
+        .replace(/category:\s*["'][^"']*["']/i, "category: 'automation'")
+        .replace(/category:\s*[^\n\r]+/i, "category: 'automation'");
 
       body = inspectAndHealMarkdown(body, lang.code);
-      const safeAlt = currentTopic.replace(/[\[\]\(\)"']/g, '').trim();
+      const safeAlt = currentTopic
+        .replaceAll('[', '')
+        .replaceAll(']', '')
+        .replaceAll('(', '')
+        .replaceAll(')', '')
+        .replaceAll('"', '')
+        .replaceAll("'", '')
+        .trim();
       const middleImageMarkdown = `\n\n![${safeAlt} AI Automation Guide](${bodyUrl})\n\n`;
       if (!body.includes(bodyUrl)) {
         if (body.includes('## 2.')) body = body.replace(/(##\s*2\.[^\n]+)/, `${middleImageMarkdown}$1`);
@@ -497,8 +616,10 @@ theme: "${selectedTheme.name}"
     let text = normalizeGeneratedResponse(await fetchWithRetry(prompt));
     let validationErrors = validateGeneratedPost(text, lang.code);
     for (let correctionAttempt = 1; validationErrors.length > 0 && correctionAttempt <= 2; correctionAttempt++) {
-      console.warn(`⚠️ ${lang.code} 검수 실패(${validationErrors.join(', ')}). 해당 언어 보정 ${correctionAttempt}/2 요청합니다.`);
-      const repairPrompt = `You are repairing one previously generated ${lang.name} article for the same topic: "${currentTopic}".\\n\\nThe article failed these exact checks: ${validationErrors.join(', ')}. Return the complete corrected Markdown article, including its original frontmatter. Preserve its topic, useful explanations, factual meaning, and existing wording wherever possible. Correct only the listed validation failures. If H2 sections are missing, use these exact localized headings: ${[i18n.s1, i18n.s2, i18n.s3, i18n.s4, i18n.s5].map((heading) => '## ' + heading).join(' | ')}. Reorganize only existing relevant material; do not add filler, unsupported facts, fake first-person experiences, or customer anecdotes. Keep the article in ${lang.name}, preserve the required FAQ markers, and return raw Markdown only.\\n\\nOriginal article:\\n${text}`;
+      console.warn(
+        `⚠️ ${lang.code} 검수 실패(${validationErrors.join(', ')}). 해당 언어 보정 ${correctionAttempt}/2 요청합니다.`
+      );
+      const repairPrompt = `You are repairing one previously generated ${lang.name} article for the same topic: "${currentTopic}".\n\nThe article failed these exact checks: ${validationErrors.join(', ')}. Return the complete corrected Markdown article, including its original frontmatter. Preserve its topic, useful explanations, factual meaning, and existing wording wherever possible. Correct only the listed validation failures. If H2 sections are missing, use these exact localized headings: ${[i18n.s1, i18n.s2, i18n.s3, i18n.s4, i18n.s5].map((heading) => '## ' + heading).join(' | ')}. Reorganize only existing relevant material; do not add filler, unsupported facts, fake first-person experiences, or customer anecdotes. Keep the article in ${lang.name}, preserve the required FAQ markers, and return raw Markdown only.\n\nOriginal article:\n${text}`;
       text = normalizeGeneratedResponse(await fetchWithRetry(repairPrompt));
       validationErrors = validateGeneratedPost(text, lang.code);
     }
@@ -519,9 +640,9 @@ theme: "${selectedTheme.name}"
 }
 
 async function run() {
-  console.log("==================================================");
-  console.log("⚡ [3호기 AI & 업무자동화] 12개 언어 원고 검증 및 게시 시작 (최소 10개 통과)");
-  console.log("==================================================");
+  console.log('==================================================');
+  console.log('⚡ [3호기 AI & 업무자동화] 12개 언어 원고 검증 및 게시 시작 (최소 10개 통과)');
+  console.log('==================================================');
 
   let successCount = 0;
   for (let i = 0; i < TARGET_LANGS.length; i++) {
@@ -532,7 +653,9 @@ async function run() {
 
   const failedCodes = TARGET_LANGS.filter((lang) => !generatedPostContents.has(lang.code)).map((lang) => lang.code);
   if (successCount < 10) {
-    console.error(`세트 중단: 검증 통과 ${successCount}/12개로 최소 기준 10개 미만입니다. 실패 언어: ${failedCodes.join(', ')}. 공개 글과 topics.txt는 그대로 두고 암호화 체크포인트를 보존합니다.`);
+    console.error(
+      `세트 중단: 검증 통과 ${successCount}/12개로 최소 기준 10개 미만입니다. 실패 언어: ${failedCodes.join(', ')}. 공개 글과 topics.txt는 그대로 두고 암호화 체크포인트를 보존합니다.`
+    );
     process.exit(1);
   }
 

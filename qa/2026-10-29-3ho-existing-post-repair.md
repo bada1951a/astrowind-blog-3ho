@@ -12,6 +12,7 @@
 - 사장님의 호기별 수정 후 배포 승인에 따라 콘텐츠만 운영에 반영. Luna PR#1은 별도 Draft 유지. 자동발행 중지 및 유료 API 금지 유지.
 
 ## 수정 파일
+
 - `src/data/post/de/post-mv9md577.md`
 - `src/data/post/de/post-mva4oib8.md`
 - `src/data/post/de/post-mvb1q9ua.md`

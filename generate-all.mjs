@@ -22,15 +22,107 @@ const TOPICS_FILE = path.resolve('topics.txt');
 // =========================================================================
 // [3호기 전용] 100% 무에러 영구 고정 Picsum 실사 CDN 매핑
 // =========================================================================
-function getPostImages(topic, index) {
-  const seedBase = Date.now().toString(36);
-  const coverSeed = `work-${seedBase}-${index}-c`;
-  const bodySeed = `work-${seedBase}-${index}-b`;
+// =========================================================================
+// Pexels topic-matched photos with a non-breaking Picsum fallback.
+// Pexels search returns alt text and photographer/source metadata, not tags.
+// =========================================================================
+const PEXELS_API_KEY = process.env.PEXELS_API_KEY;
+const PEXELS_IMAGE_CACHE = new Map();
+let pexelsFallbackWarningShown = false;
+const PEXELS_LOCALE_BY_LANG = {
+  ko: 'ko-KR', en: 'en-US', ja: 'ja-JP', de: 'de-DE', fr: 'fr-FR',
+  es: 'es-ES', it: 'it-IT', pt: 'pt-BR', nl: 'nl-NL', pl: 'pl-PL',
+  id: 'id-ID', vi: 'vi-VN'
+};
 
+function getPicsumFallback(topic, index) {
+  const seedBase = Date.now().toString(36);
+  const coverSeed = '"work"-' + seedBase + '-' + index + '-c';
+  const bodySeed = '"work"-' + seedBase + '-' + index + '-b';
   return {
-    coverUrl: `https://picsum.photos/seed/${coverSeed}/1200/675.jpg`,
-    bodyUrl: `https://picsum.photos/seed/${bodySeed}/1000/550.jpg`
+    coverUrl: 'https://picsum.photos/seed/' + coverSeed + '/1200/675.jpg',
+    bodyUrl: 'https://picsum.photos/seed/' + bodySeed + '/1000/550.jpg',
+    bodyAlt: topic + ' guide'
   };
+}
+
+function imageTopicTerms(topic) {
+  const stopWords = new Set(['the', 'and', 'for', 'with', 'from', 'about', 'what', 'when', 'how', 'guide', 'problem', '방법', '해결', '문제']);
+  return (String(topic || '').toLowerCase().match(/[p{L}p{N}]+/gu) || [])
+    .filter((term) => term.length > 1 && !stopWords.has(term));
+}
+
+async function getPostImages(topic, index, langCode = 'en') {
+  const fallback = () => getPicsumFallback(topic, index);
+  if (!PEXELS_API_KEY) {
+    if (!pexelsFallbackWarningShown) {
+      console.warn('⚠️ PEXELS_API_KEY가 없어 기존 Picsum 이미지로 안전하게 대체합니다. Pexels를 사용하려면 GitHub Actions Secret에 키를 설정해야 합니다.');
+      pexelsFallbackWarningShown = true;
+    }
+    return fallback();
+  }
+
+  const query = String(topic || '').trim().slice(0, 100);
+  if (!query) {
+    if (!pexelsFallbackWarningShown) {
+      console.warn('⚠️ 주제가 비어 있어 기존 Picsum 이미지로 대체합니다.');
+      pexelsFallbackWarningShown = true;
+    }
+    return fallback();
+  }
+
+  const locale = PEXELS_LOCALE_BY_LANG[langCode] || 'en-US';
+  const cacheKey = locale + '|' + query.toLowerCase();
+  try {
+    let photos = PEXELS_IMAGE_CACHE.get(cacheKey);
+    if (!photos) {
+      const url = 'https://api.pexels.com/v1/search?query=' + encodeURIComponent(query)
+        + '&per_page=40&orientation=landscape&locale=' + encodeURIComponent(locale);
+      const response = await fetch(url, {
+        headers: { Authorization: PEXELS_API_KEY },
+        signal: AbortSignal.timeout(12000)
+      });
+      if (!response.ok) throw new Error('Pexels HTTP ' + response.status);
+      const payload = await response.json();
+      photos = Array.isArray(payload.photos) ? payload.photos : [];
+      PEXELS_IMAGE_CACHE.set(cacheKey, photos);
+    }
+
+    const terms = imageTopicTerms(query);
+    const candidates = photos
+      .filter((photo) => photo && photo.id && photo.src && (photo.src.landscape || photo.src.large))
+      .map((photo, order) => {
+        const alt = String(photo.alt || '').trim();
+        const altLower = alt.toLowerCase();
+        const score = terms.reduce((sum, term) => sum + (altLower.includes(term) ? 1 : 0), 0);
+        return { photo, order, score, alt };
+      })
+      .sort((a, b) => b.score - a.score || a.order - b.order);
+
+    const unique = [];
+    const seenIds = new Set();
+    for (const candidate of candidates) {
+      const id = String(candidate.photo.id);
+      if (seenIds.has(id)) continue;
+      seenIds.add(id);
+      unique.push(candidate);
+      if (unique.length === 2) break;
+    }
+    if (unique.length < 2) throw new Error('주제에 맞는 서로 다른 Pexels 사진 2장을 찾지 못했습니다.');
+
+    return {
+      coverUrl: unique[0].photo.src.landscape || unique[0].photo.src.large,
+      bodyUrl: unique[1].photo.src.landscape || unique[1].photo.src.large,
+      coverAlt: unique[0].alt || query,
+      bodyAlt: unique[1].alt || query
+    };
+  } catch (error) {
+    if (!pexelsFallbackWarningShown) {
+      console.warn('⚠️ Pexels 사진 검색에 실패해 기존 Picsum 이미지로 대체합니다: ' + error.message);
+      pexelsFallbackWarningShown = true;
+    }
+    return fallback();
+  }
 }
 
 // =========================================================================
@@ -350,7 +442,7 @@ async function generateSinglePost(lang, index) {
 
   console.log(`\n🚀 [${index + 1}/12] ${lang.name} (${lang.code}) 3호기 애드센스 표준 생성 중... (테마: ${selectedTheme.name})`);
 
-  const { coverUrl, bodyUrl } = getPostImages(currentTopic, index);
+  const { coverUrl, bodyUrl, bodyAlt } = await getPostImages(currentTopic, index, lang.code);
   const pubDateIso = getKstPublishDateIso();
 
   // 🎯 [애드센스 승인 최적화 프롬프트: 2,400~2,600자 정량화]
@@ -444,7 +536,7 @@ theme: "${selectedTheme.name}"
 
       // 본문 중간 이미지 배치 (2번 섹션 직전)
       const safeAlt = currentTopic.replace(/[\[\]\(\)"']/g, '').trim();
-      const middleImageMarkdown = `\n\n![${safeAlt} AI Automation Guide](${bodyUrl})\n\n`;
+      const middleImageMarkdown = `\n\n![${bodyAlt || safeAlt}](${bodyUrl})\n\n`;
 
       if (body.includes('## 2.')) {
         body = body.replace(/(##\s*2\.[^\n]+)/, `${middleImageMarkdown}$1`);

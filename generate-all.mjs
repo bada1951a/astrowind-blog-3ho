@@ -47,6 +47,18 @@ function getKstPublishDateIso() {
   return new Date(Date.UTC(year, month - 1, day, 10, 20, 0)).toISOString();
 }
 
+function refreshPublishDate(text, publishDate) {
+  const frontmatterMatch = text.match(/^---\r?\n[\s\S]*?\r?\n---(?=\r?\n)/);
+  if (!frontmatterMatch) throw new Error('Checkpoint has no frontmatter.');
+  const dateLines = frontmatterMatch[0].match(/^publishDate:\s*.*$/gm) || [];
+  if (dateLines.length !== 1) throw new Error('Checkpoint must have exactly one publishDate field.');
+  const updatedFrontmatter = frontmatterMatch[0].replace(/^publishDate:\s*.*$/m, 'publishDate: ' + publishDate);
+  return updatedFrontmatter + text.slice(frontmatterMatch[0].length);
+}
+
+const CURRENT_PUBLISH_DATE = getKstPublishDateIso();
+
+
 // =========================================================================
 // [3호기 전용] 12개국 100% 현지어 섹션 제목 및 치환 딕셔너리 (영구 고정)
 // =========================================================================
@@ -504,9 +516,11 @@ async function generateSinglePost(lang, index) {
   if (fs.existsSync(checkpointPath)) {
     try {
       const cachedText = readEncryptedCheckpoint(checkpointPath);
-      const cachedErrors = validateGeneratedPost(cachedText, lang.code);
+      const refreshedCachedText = refreshPublishDate(cachedText, CURRENT_PUBLISH_DATE);
+      const cachedErrors = validateGeneratedPost(refreshedCachedText, lang.code);
       if (cachedErrors.length === 0) {
-        generatedPostContents.set(lang.code, cachedText);
+        if (refreshedCachedText !== cachedText) writeEncryptedCheckpoint(checkpointPath, refreshedCachedText);
+        generatedPostContents.set(lang.code, refreshedCachedText);
         console.log(`\n♻️ [${index + 1}/12] ${lang.name} (${lang.code}) 암호화된 검증 원고 재사용`);
         return true;
       }
@@ -526,7 +540,7 @@ async function generateSinglePost(lang, index) {
   );
 
   const { coverUrl, bodyUrl } = getPostImages(currentTopic, index);
-  const pubDateIso = getKstPublishDateIso();
+  const pubDateIso = CURRENT_PUBLISH_DATE;
 
   // 🎯 [애드센스 승인 최적화 프롬프트: 2,400~2,600자 정량화]
   const prompt = `

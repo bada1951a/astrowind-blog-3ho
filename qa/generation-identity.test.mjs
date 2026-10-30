@@ -70,6 +70,9 @@ test('generator uses the tested publication plan to gate and select written loca
 
 test('generator prompt specifies a topic-fit first-person narrative and practical balance', () => {
   const source = readFileSync(new URL('../generate-all.mjs', import.meta.url), 'utf8');
+  assert.ok(source.includes('Write concise headings in the target language that fit ${currentTopic}'));
+  assert.ok(source.includes('Do not use generic boilerplate, promise guaranteed resolution times or outcomes'));
+  assert.ok(source.includes('never copy their brackets or placeholder text'));
   assert.ok(source.includes('roughly 30% narrator reasoning'));
   assert.ok(source.includes('70% practical explanations'));
 });
@@ -109,7 +112,7 @@ const productionMarkdown = new Function(
 
 test('bold normalization never crosses lines and preserves separate FAQ markers and blank lines', () => {
   const raw = [
-    '## 1. First',
+    '## 1. Restore an unsaved workbook before changing the macro',
     '** spaced phrase',
     'continued phrase **',
     '',
@@ -141,6 +144,7 @@ test('bold normalization never crosses lines and preserves separate FAQ markers 
     healed.includes(['** spaced phrase', 'continued phrase **'].join(newline)),
     'multiline bold-like text must retain its line break and spacing'
   );
+  assert.ok(healed.includes('## 1. Restore an unsaved workbook before changing the macro'));
   const lines = healed.split(newline);
   for (let n = 1; n <= 3; n++) {
     const questionLine = lines.findIndex((line) => line.startsWith('**Q' + n + '.**'));

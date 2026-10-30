@@ -1,7 +1,7 @@
-How to Summarize 150-Page Regulatory Compliance PDFs in 3 Minutes Using Claude 3.5 Sonnet
+How to Summarize a Long Regulatory Compliance PDF with Claude and Verify Each Key Obligation
 How to Turn 60-Minute Zoom Meeting Recordings into Executive Action Items with Whisper AI
 How to Use Gamma App to Turn Rough Product Pitch Notes into 10 Clean Presentation Slides
-How to Convert Complex Legal NDA Contracts into Plain English Summary Using Gemini 1.5 Pro
+How to Turn NDA Clauses into a Plain-Language Summary with Gemini
 How to Auto-Generate Weekly Status Update Emails for Your Boss Using ChatGPT Prompts
 Top Free AI Tools to Remove Background Echo and Dog Barks from Recorded Client Calls
 How to Transcribe In-Person Client Interviews Offline for Free Without Cloud Privacy Risks
@@ -63,7 +63,7 @@ How to Use ChatGPT to Convert Complex Excel Macros into Python Scripts
 How to Clean Messy International Phone Number Formats in Spreadsheets with AI
 How to Auto-Generate Social Media Carousel Posts from Blog URLs Using Gamma
 How to Build an Automated Lead Routing System Between Calendly and Airtable
-How to Extract Key Financial Ratios from Annual Reports Using Gemini 1.5 Flash
+How to Extract Key Financial Ratios from Annual Reports with Gemini and Check the Source Figures
 How to Connect Google Sheets with Telegram to Receive Real-Time Order Alerts
 How to Use Whisper AI to Generate Accurate Subtitles for Team Training Videos
 How to Auto-Categorize Bank Statement Line Items in Excel with Free AI Prompts

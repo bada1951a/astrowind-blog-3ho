@@ -12,7 +12,7 @@ import path from 'path';
 import { createHash, createCipheriv, createDecipheriv, randomBytes } from 'node:crypto';
 import { createCheckpointKey, createTopicFileSlug, decidePublishLocales } from './generation-identity.mjs';
 
-const GENERATION_PROMPT_VERSION = '2026-10-30-first-person-story-v3';
+const GENERATION_PROMPT_VERSION = '2026-10-30-topic-specific-headings-v1';
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 if (!OPENAI_API_KEY) {
   console.error('❌ OPENAI_API_KEY 환경변수가 설정되지 않았습니다.');
@@ -170,16 +170,12 @@ function inspectAndHealMarkdown(body, langCode) {
 
   // 1) 헤딩 내부 볼드 제거 및 3호기 표준 소제목 강제 안착
   healed = healed.replace(/^(#{1,6}\s+)\*\*(.*?)\*\*/gm, '$1$2');
-  healed = healed.replace(/^#{1,6}\s*1[.\s]+([^\n]+)/m, `## ${i18n.s1}`);
-  healed = healed.replace(/^#{1,6}\s*2[.\s]+([^\n]+)/m, `## ${i18n.s2}`);
-  healed = healed.replace(/^#{1,6}\s*3[.\s]+([^\n]+)/m, `## ${i18n.s3}`);
-  healed = healed.replace(/^#{1,6}\s*4[.\s]+([^\n]+)/m, `## ${i18n.s4}`);
-  healed = healed.replace(/^#{1,6}\s*5[.\s]+([^\n]+)/m, `## ${i18n.s5}`);
+  healed = healed.replace(/^#{1,6}\s*1[.\s]+([^\n]+)/m, (_match, title) => `## 1. ${title.trim()}`);
+  healed = healed.replace(/^#{1,6}\s*2[.\s]+([^\n]+)/m, (_match, title) => `## 2. ${title.trim()}`);
+  healed = healed.replace(/^#{1,6}\s*3[.\s]+([^\n]+)/m, (_match, title) => `## 3. ${title.trim()}`);
+  healed = healed.replace(/^#{1,6}\s*4[.\s]+([^\n]+)/m, (_match, title) => `## 4. ${title.trim()}`);
+  healed = healed.replace(/^#{1,6}\s*5[.\s]+([^\n]+)/m, (_match, title) => `## 5. ${title.trim()}`);
 
-  if (!healed.startsWith('## 1.')) {
-    healed = `## ${i18n.s1}\n\n` + healed;
-    auditLogs.push('1번 헤딩 주입');
-  }
 
   // 2) 🛡️ Q&A 줄바꿈 뭉개짐 자동 분리 치유 (질문과 답변 사이 빈 줄 2개 보장)
   const rawQnACount = (healed.match(/Q[1-3]\./gi) || []).length;
@@ -563,16 +559,16 @@ Length and style:
 - In the opening paragraph, naturally present a specific situation the reader may recognize and the key unresolved question. Answer it in useful stages, using first-person reasoning and brief transitions to give readers a reason to continue. Avoid clickbait, exaggeration, fabricated personal or customer experiences, hypothetical-scene disclaimers, and rigid opening formulas; phrase this naturally for the locale.
 - Write idiomatic ${lang.name}, not translated wording. Localize examples and UI labels only when relevant.
 
-Use these five localized H2 headings exactly, in this order:
-## ${i18n.s1}
+Write exactly five numbered H2 headings in ${lang.name}, numbered 1 through 5. Write concise headings in the target language that fit ${currentTopic} and each section's content. Do not use generic boilerplate, promise guaranteed resolution times or outcomes, or imply unverified professional credentials.
+## 1. [topic-specific opening heading]
 Introduce a recognizable situation directly connected to "${currentTopic}" without presenting invented events as real.
-## ${i18n.s2}
+## 2. [topic-specific heading in ${lang.name}]
 Explain the topic-specific causes, limits, and observable clues. Do not force unrelated technical failure types.
-## ${i18n.s3}
+## 3. [topic-specific heading in ${lang.name}]
 Give clear, safe, numbered steps that solve or investigate the assigned topic.
-## ${i18n.s4}
+## 4. [topic-specific heading in ${lang.name}]
 Explain relevant precautions, common mistakes, prevention, and when to seek expert help.
-## ${i18n.s5}
+## 5. [topic-specific heading in ${lang.name}]
 Provide exactly three useful Q&A pairs with a blank line between each question and answer:
 **Q1.** Localized question
 
@@ -639,7 +635,7 @@ theme: "${selectedTheme.name}"
       console.warn(
         `⚠️ ${lang.code} 검수 실패(${validationErrors.join(', ')}). 해당 언어 보정 ${correctionAttempt}/2 요청합니다.`
       );
-      const repairPrompt = `You are repairing one previously generated ${lang.name} article for the same topic: "${currentTopic}".\n\nThe article failed these exact checks: ${validationErrors.join(', ')}. Return the complete corrected Markdown article, including its original frontmatter. Preserve its topic, useful explanations, factual meaning, and existing wording wherever possible. Correct only the listed validation failures. If H2 sections are missing, use these exact localized headings: ${[i18n.s1, i18n.s2, i18n.s3, i18n.s4, i18n.s5].map((heading) => '## ' + heading).join(' | ')}. Reorganize only existing relevant material; do not add filler, unsupported facts, fake first-person experiences, or customer anecdotes. Keep the article in ${lang.name}, preserve the required FAQ markers, and return raw Markdown only.\n\nOriginal article:\n${text}`;
+      const repairPrompt = `You are repairing one previously generated ${lang.name} article for the same topic: "${currentTopic}".\n\nThe article failed these exact checks: ${validationErrors.join(', ')}. Return the complete corrected Markdown article, including its original frontmatter. Preserve its topic, useful explanations, factual meaning, and existing wording wherever possible. Correct only the listed validation failures. If H2 sections are missing or malformed, add five concise numbered headings in ${lang.name} that fit this topic and the existing content. Avoid generic boilerplate, unsupported credentials, and guaranteed time or outcome claims. Reorganize only existing relevant material; do not add filler, unsupported facts, fake first-person experiences, or customer anecdotes. Keep the article in ${lang.name}, preserve the required FAQ markers, and return raw Markdown only.\n\nOriginal article:\n${text}`;
       text = normalizeGeneratedResponse(await fetchWithRetry(repairPrompt));
       validationErrors = validateGeneratedPost(text, lang.code);
     }

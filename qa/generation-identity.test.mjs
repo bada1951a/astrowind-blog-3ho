@@ -18,7 +18,7 @@ test('checkpoint identity follows the current topic and prompt version, not late
   assert.equal(addedTail, v1);
   assert.notEqual(changedCurrentTopic, v1);
   assert.notEqual(v2, v1);
-}
+});
 
 test('the topic slug is stable when later queue rows change', () => {
   const slug = createTopicFileSlug('Assigned topic');

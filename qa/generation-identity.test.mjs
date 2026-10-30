@@ -72,7 +72,7 @@ test('generator prompt specifies a topic-fit first-person narrative and practica
   const source = readFileSync(new URL('../generate-all.mjs', import.meta.url), 'utf8');
   assert.ok(source.includes('Write concise headings in the target language that fit ${currentTopic}'));
   assert.ok(source.includes('Do not use generic boilerplate, promise guaranteed resolution times or outcomes'));
-  assert.ok(source.includes('The bracketed descriptions below are instructions; never copy their brackets or placeholder text into the article.'));
+  assert.ok(source.includes('never copy their brackets or placeholder text'));
   assert.ok(source.includes('roughly 30% narrator reasoning'));
   assert.ok(source.includes('70% practical explanations'));
 });

@@ -12,7 +12,7 @@ import path from 'path';
 import { createHash, createCipheriv, createDecipheriv, randomBytes } from 'node:crypto';
 import { createCheckpointKey, createTopicFileSlug, decidePublishLocales } from './generation-identity.mjs';
 
-const GENERATION_PROMPT_VERSION = '2026-10-30-topic-specific-headings-v1';
+const GENERATION_PROMPT_VERSION = '2026-10-30-truthful-first-person-v3';
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 if (!OPENAI_API_KEY) {
   console.error('❌ OPENAI_API_KEY 환경변수가 설정되지 않았습니다.');
@@ -307,86 +307,86 @@ const TARGET_LANGS = [
   {
     code: 'ko',
     name: 'Korean',
-    persona: '친절하고 경험 많은 엑셀/AI 자동화 실무 전문가 (사내 칼퇴 치트키 장인)',
+    persona: '실용적인 업무 자동화와 AI 활용 안내를 쉽게 풀어 쓰는 글쓴이',
     osUi: '파일 > 옵션, 데이터 > 파워 쿼리, 수식 탭, 확장 프로그램',
-    localeContext: '서울/판교 IT 기업 및 대기업 오피스',
+    localeContext: 'Korean-language readers in South Korea',
   },
   {
     code: 'en',
     name: 'English',
-    persona: 'Friendly Silicon Valley productivity specialist sharing no-code and AI shortcuts',
+    persona: 'Practical guide writer explaining office automation and AI clearly',
     osUi: 'File > Options, Data > Power Query, Formula Tab, Add-ons',
-    localeContext: 'Silicon Valley tech firm / NYC corporate finance office',
+    localeContext: 'English-language readers in the United States',
   },
   {
     code: 'ja',
     name: 'Japanese',
-    persona: '業務効率化とAIツール活用を分かりやすく教える日本の現役ITワーカー',
+    persona: '業務自動化とAI活用を分かりやすく案内する実用ガイドの書き手',
     osUi: 'ファイル > オプション, データ > パワークエリ, 数式タブ, 拡張機能',
-    localeContext: '丸の内・品川のビジネスオフィス',
+    localeContext: 'Japanese-language readers in Japan',
   },
   {
     code: 'de',
     name: 'German',
-    persona: 'Praxisnaher deutscher Automatisierungs-Experte für Office- und KI-Tools',
+    persona: 'Praktischer Ratgeberautor für verständliche Büroautomatisierung und KI',
     osUi: 'Datei > Optionen, Daten > Power Query, Formeln, Add-Ins',
-    localeContext: 'Frankfurter Finanzdistrikt und Industrieunternehmen',
+    localeContext: 'German-language readers in Germany',
   },
   {
     code: 'fr',
     name: 'French',
-    persona: 'Spécialiste support bureautique et IA expliquant les astuces de productivité',
+    persona: 'Rédacteur de guides pratiques sur automatisation du travail et IA',
     osUi: 'Fichier > Options, Données > Power Query, Formules, Extensions',
-    localeContext: "Siège d'entreprise à Paris La Défense",
+    localeContext: 'French-language readers in France',
   },
   {
     code: 'es',
     name: 'Spanish',
-    persona: 'Especialista en productividad y automatización que explica trucos prácticos sin rodeos',
+    persona: 'Redactor de guías prácticas sobre automatización del trabajo e IA',
     osUi: 'Archivo > Opciones, Datos > Power Query, Fórmulas, Complementos',
-    localeContext: 'Oficina corporativa en Madrid y centros de negocio',
+    localeContext: 'Spanish-language readers in Spain',
   },
   {
     code: 'it',
     name: 'Italian',
-    persona: "Esperto di automazione e AI che semplifica il lavoro d'ufficio quotidiano",
+    persona: 'Autore di guide pratiche su automazione del lavoro e IA',
     osUi: 'File > Opzioni, Dati > Power Query, Formule, Componenti aggiuntivi',
-    localeContext: 'Uffici direzionali e aziende a Milano',
+    localeContext: 'Italian-language readers in Italy',
   },
   {
     code: 'pt',
     name: 'Portuguese',
-    persona: 'Especialista em automação de escritório que ensina truques práticos de produtividade',
+    persona: 'Redator de guias práticos sobre automação do trabalho e IA',
     osUi: 'Arquivo > Opções, Dados > Power Query, Fórmulas, Suplementos',
-    localeContext: 'Escritório corporativo na Avenida Paulista em São Paulo',
+    localeContext: 'Portuguese-language readers in Brazil',
   },
   {
     code: 'nl',
     name: 'Dutch',
-    persona: 'Nederlandse productiviteits- en AI-specialist die slimme werkmethoden uitlegt',
+    persona: 'Praktische gidsenschrijver over werkautomatisering en AI',
     osUi: 'Bestand > Opties, Gegevens > Power Query, Formules, Invoegtoepassingen',
-    localeContext: 'Zuidas zakendistrict in Amsterdam',
+    localeContext: 'Dutch-language readers in the Netherlands',
   },
   {
     code: 'pl',
     name: 'Polish',
-    persona: 'Polski ekspert od automatyzacji biurowej i narzędzi AI tłumaczący triki krok po kroku',
+    persona: 'Autor praktycznych poradników o automatyzacji pracy i AI',
     osUi: 'Plik > Opcje, Dane > Power Query, Formuły, Dodatki',
-    localeContext: 'Warszawskie centrum biznesowe',
+    localeContext: 'Polish-language readers in Poland',
   },
   {
     code: 'id',
     name: 'Indonesian',
-    persona: 'Praktisi produktivitas dan otomatisasi kantor yang berbagi solusi praktis sehari-hari',
+    persona: 'Penulis panduan praktis tentang otomatisasi kerja dan AI',
     osUi: 'File > Opsi, Data > Power Query, Rumus, Add-in',
-    localeContext: 'Kawasan bisnis SCBD Jakarta',
+    localeContext: 'Indonesian-language readers in Indonesia',
   },
   {
     code: 'vi',
     name: 'Vietnamese',
-    persona: 'Chuyên viên tối ưu hóa quy trình làm việc và công cụ AI thực chiến',
+    persona: 'Người viết hướng dẫn thực tế về tự động hóa công việc và AI',
     osUi: 'Tệp > Tùy chọn, Dữ liệu > Power Query, Công thức, Tiện ích bổ sung',
-    localeContext: 'Tòa nhà văn phòng trung tâm tại TP.HCM / Hà Nội',
+    localeContext: 'Vietnamese-language readers in Vietnam',
   },
 ];
 
@@ -549,18 +549,22 @@ Write an original practical guide natively in ${lang.name}, with independent wor
 Topic: "${currentTopic}"
 Audience and cultural context: "${lang.localeContext}"
 Do not introduce unrelated Excel, spreadsheet, API, or workplace emergencies unless the topic itself requires them. Do not claim to have personally handled the situation or to have credentials. Do not invent facts, quotations, customer cases, or outcomes.
+- Use first person only for the guide narrator's present reasoning and recommendations, such as what I would check next; do not claim past events.
+- Open with the assigned topic's symptom, reader question, or decision point, then explain what I would check and why. Do not stage a personal scene.
+- Unless the user supplied it as verified fact, do not invent or imply a narrator's past event, commute, customer interaction, meeting, named person, specific city, date, time, or case.
+- Do not add a disclaimer that a scene is hypothetical, fictional, illustrative, or not a real customer case.
 
 Length and style:
 - Korean: about 2,400–2,600 characters, maximum 3,000 characters.
 - Other locales: about 900–1,100 words (Japanese: at least 900 non-space characters).
 - Aim for an engaging opening and transitions (about 30%) and useful, accurate explanation and actionable steps (about 70%).
 - Carry a natural first-person storytelling voice through the article. Aim for roughly 30% narrator reasoning, decisions, and transitions and 70% practical explanations, verifiable steps, and safety information. Use first person to explain what the guide would check and why; do not claim real personal events, credentials, customer cases, or results.
-- In the opening paragraph, naturally present a specific situation the reader may recognize and the key unresolved question. Answer it in useful stages, using first-person reasoning and brief transitions to give readers a reason to continue. Avoid clickbait, exaggeration, fabricated personal or customer experiences, hypothetical-scene disclaimers, and rigid opening formulas; phrase this naturally for the locale.
+- Open on the assigned topic's concrete symptom, reader question, or decision point. Use the narrator's present-tense first-person reasoning and useful transitions to explain what I would check next and why. Keep it natural and engaging without staging a personal scene, inventing a past event, or adding filler.
 - Write idiomatic ${lang.name}, not translated wording. Localize examples and UI labels only when relevant.
 
 Write exactly five numbered H2 headings in ${lang.name}, numbered 1 through 5. Write concise headings in the target language that fit ${currentTopic} and each section's content. Do not use generic boilerplate, promise guaranteed resolution times or outcomes, or imply unverified professional credentials. The bracketed descriptions below are instructions; never copy their brackets or placeholder text into the article.
 ## 1. [topic-specific opening heading]
-Introduce a recognizable situation directly connected to "${currentTopic}" without presenting invented events as real.
+Frame the assigned topic's observable symptom, reader question, or decision point. Do not create an event or personal scene.
 ## 2. [topic-specific heading in ${lang.name}]
 Explain the topic-specific causes, limits, and observable clues. Do not force unrelated technical failure types.
 ## 3. [topic-specific heading in ${lang.name}]
@@ -634,7 +638,7 @@ theme: "${selectedTheme.name}"
       console.warn(
         `⚠️ ${lang.code} 검수 실패(${validationErrors.join(', ')}). 해당 언어 보정 ${correctionAttempt}/2 요청합니다.`
       );
-      const repairPrompt = `You are repairing one previously generated ${lang.name} article for the same topic: "${currentTopic}".\n\nThe article failed these exact checks: ${validationErrors.join(', ')}. Return the complete corrected Markdown article, including its original frontmatter. Preserve its topic, useful explanations, factual meaning, and existing wording wherever possible. Correct only the listed validation failures. If H2 sections are missing or malformed, add five concise numbered headings in ${lang.name} that fit this topic and the existing content. Avoid generic boilerplate, unsupported credentials, and guaranteed time or outcome claims. Reorganize only existing relevant material; do not add filler, unsupported facts, fake first-person experiences, or customer anecdotes. Keep the article in ${lang.name}, preserve the required FAQ markers, and return raw Markdown only.\n\nOriginal article:\n${text}`;
+      const repairPrompt = `You are repairing one previously generated ${lang.name} article for the same topic: "${currentTopic}".\n\nThe article failed these exact checks: ${validationErrors.join(', ')}. Return the complete corrected Markdown article, including its original frontmatter. Preserve its topic, useful explanations, factual meaning, and existing wording wherever possible. Correct only the listed validation failures. If H2 sections are missing or malformed, add five concise numbered headings in ${lang.name} that fit this topic and the existing content. Avoid generic boilerplate, unsupported credentials, and guaranteed time or outcome claims. Reorganize only existing relevant material; do not add filler, unsupported facts, fake first-person experiences, or customer anecdotes. Use first person only for the guide's present reasoning. Do not invent or imply a past event, commute, customer interaction, meeting, named person, specific city, date, time, or case. Do not add a hypothetical-scene disclaimer. Keep the article in ${lang.name}, preserve the required FAQ markers, and return raw Markdown only.\n\nOriginal article:\n${text}`;
       text = normalizeGeneratedResponse(await fetchWithRetry(repairPrompt));
       validationErrors = validateGeneratedPost(text, lang.code);
     }

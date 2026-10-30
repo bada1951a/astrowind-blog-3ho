@@ -6,6 +6,10 @@ on:
       timezone: 'Asia/Seoul'
   workflow_dispatch: # 수동 즉시 실행 지원
 
+concurrency:
+  group: blog-publish-${{ github.repository }}-${{ github.ref }}
+  cancel-in-progress: false
+  queue: max
 permissions:
   contents: write # 생성된 마크다운 글 커밋 및 푸시 권한
 
@@ -20,6 +24,14 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
+
+      - name: Restore validated locale checkpoints
+        uses: actions/cache/restore@v4
+        with:
+          path: .generation-checkpoints/
+          key: 3ho-locale-checkpoints-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            3ho-locale-checkpoints-
 
       - name: Run Auto Publishing Script
         env:
@@ -36,3 +48,11 @@ jobs:
           git add src/data/post/ topics.txt
           git commit -m "Auto published new multi-language automation posts" || echo "No changes to commit"
           git push
+
+      # 실패한 언어 실행에서도 검증된 원고 체크포인트를 다음 실행에 넘깁니다.
+      - name: Save validated locale checkpoints
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: .generation-checkpoints/
+          key: 3ho-locale-checkpoints-${{ github.run_id }}-${{ github.run_attempt }}

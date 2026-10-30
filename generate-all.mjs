@@ -558,7 +558,7 @@ Length and style:
 - In the opening paragraph, naturally present a specific situation the reader may recognize and the key unresolved question. Answer it in useful stages, using first-person reasoning and brief transitions to give readers a reason to continue. Avoid clickbait, exaggeration, fabricated personal or customer experiences, hypothetical-scene disclaimers, and rigid opening formulas; phrase this naturally for the locale.
 - Write idiomatic ${lang.name}, not translated wording. Localize examples and UI labels only when relevant.
 
-Write exactly five numbered H2 headings in ${lang.name}, numbered 1 through 5. Write concise headings in the target language that fit ${currentTopic} and each section's content. Do not use generic boilerplate, promise guaranteed resolution times or outcomes, or imply unverified professional credentials.
+Write exactly five numbered H2 headings in ${lang.name}, numbered 1 through 5. Write concise headings in the target language that fit ${currentTopic} and each section's content. Do not use generic boilerplate, promise guaranteed resolution times or outcomes, or imply unverified professional credentials. The bracketed descriptions below are instructions; never copy their brackets or placeholder text into the article.
 ## 1. [topic-specific opening heading]
 Introduce a recognizable situation directly connected to "${currentTopic}" without presenting invented events as real.
 ## 2. [topic-specific heading in ${lang.name}]

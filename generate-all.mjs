@@ -493,7 +493,7 @@ function validateGeneratedPost(text, langCode) {
       errors.push('FAQ 질문 Q' + n + ' 표식이 정확히 1개 필요');
     if (bodyWithoutCode.split(answerMarker).length - 1 !== 1) errors.push('FAQ 답변 A' + n + ' 표식이 정확히 1개 필요');
     const pairPattern = new RegExp(
-      String.raw\`^[ \t]*\*\*Q\${n}\.\*\*[^\r\n]*\r?\n\r?\n[ \t]*\*\*A\${n}\.\*\*\`,
+      '^[ \\t]*\\*\\*Q' + n + '\\.\\*\\*[^\\r\\n]*\\r?\\n\\r?\\n[ \\t]*\\*\\*A' + n + '\\.\\*\\*',
       'm'
     );
     if (!pairPattern.test(bodyWithoutCode)) errors.push('FAQ Q' + n + '/A' + n + '는 별도 줄과 빈 줄로 분리되어야 함');

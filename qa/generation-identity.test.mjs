@@ -135,7 +135,7 @@ test("generator uses the tested publication plan to gate and select written loca
   );
   assert.match(
     source,
-    /decidePublishLocales\(TARGET_LANGS, \[\.\.\.generatedPostContents\.keys\(\)\], 10\)/,
+    /decidePublishLocales\s*\(\s*TARGET_LANGS,\s*\[\s*\.\.\.generatedPostContents\.keys\(\)\s*\],\s*10\s*\)/,
   );
   assert.match(source, /if \(!publication\.canPublish\)/);
   assert.match(source, /for \(const lang of publication\.passingLocales\)/);

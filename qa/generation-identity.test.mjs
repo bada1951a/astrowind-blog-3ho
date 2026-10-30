@@ -146,7 +146,10 @@ test('bold normalization never crosses lines and preserves separate FAQ markers 
     const questionLine = lines.findIndex((line) => line.startsWith('**Q' + n + '.**'));
     assert.notEqual(questionLine, -1, `Q${n} marker should remain at line start`);
     assert.equal(lines[questionLine + 1], '', `Q${n}/A${n} must retain a blank line`);
-    assert.ok(lines[questionLine + 2]?.startsWith('**A' + n + '.**'), `A${n} marker should remain on the following line`);
+    assert.ok(
+      lines[questionLine + 2]?.startsWith('**A' + n + '.**'),
+      `A${n} marker should remain on the following line`
+    );
   }
 });
 

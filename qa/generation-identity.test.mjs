@@ -113,7 +113,7 @@ test('generator prompt enables engaging truthful storytelling in independent loc
     'never present it as a real event involving the narrator or a customer',
     'Describe past tests or outcomes only when supported by evidence',
     'separate locale-specific article generation call, not a translation',
-    'Write concise headings in ${lang.name}',
+    'Write concise headings in the target language',
   ]) assert.ok(source.includes(directive), 'Missing storytelling directive: ' + directive);
 });
 

@@ -73,3 +73,111 @@ test('generator prompt specifies a topic-fit first-person narrative and practica
   assert.ok(source.includes('roughly 30% narrator reasoning'));
   assert.ok(source.includes('70% practical explanations'));
 });
+
+const generatorSource = readFileSync(new URL('../generate-all.mjs', import.meta.url), 'utf8');
+
+function extractFunction(source, signature, nextDeclaration) {
+  const start = source.indexOf(signature);
+  const end = source.indexOf(nextDeclaration, start);
+  assert.notEqual(start, -1, `missing production function: ${signature}`);
+  assert.notEqual(end, -1, `missing function boundary after: ${signature}`);
+  return source.slice(start, end).trim();
+}
+
+const inspectDeclaration = extractFunction(
+  generatorSource,
+  'function inspectAndHealMarkdown(body, langCode) {',
+  '\\nif (!fs.existsSync(TOPICS_FILE))'
+);
+const validateDeclaration = extractFunction(
+  generatorSource,
+  'function validateGeneratedPost(text, langCode) {',
+  '\\nasync function generateSinglePost(lang, index)'
+);
+const productionMarkdown = new Function(
+  'I18N_SECTIONS',
+  'console',
+  `${inspectDeclaration}\\n${validateDeclaration}\\nreturn { inspectAndHealMarkdown, validateGeneratedPost };`
+)(
+  {
+    en: { s1: '1. First', s2: '2. Second', s3: '3. Third', s4: '4. Fourth', s5: '5. FAQ' },
+    ko: { s1: '1. First', s2: '2. Second', s3: '3. Third', s4: '4. Fourth', s5: '5. FAQ' },
+  },
+  { log() {} }
+);
+
+test('bold normalization never crosses lines and preserves separate FAQ markers and blank lines', () => {
+  const raw = [
+    '## 1. First',
+    '** spaced phrase',
+    'continued phrase **',
+    '',
+    '## 2. Second',
+    'A normal explanation.',
+    '',
+    '## 3. Third',
+    'A normal explanation.',
+    '',
+    '## 4. Fourth',
+    'A normal explanation.',
+    '',
+    '## 5. FAQ',
+    '**Q1.** Question one?',
+    '',
+    '**A1.** Answer one.',
+    '',
+    '**Q2.** Question two?',
+    '',
+    '**A2.** Answer two.',
+    '',
+    '**Q3.** Question three?',
+    '',
+    '**A3.** Answer three.',
+  ].join('\\n');
+
+  const healed = productionMarkdown.inspectAndHealMarkdown(raw, 'en');
+  assert.ok(healed.includes('** spaced phrase\\ncontinued phrase **'), 'multiline bold-like text must retain its line break and spacing');
+  for (let n = 1; n <= 3; n++) {
+    assert.match(
+      healed,
+      new RegExp('\\*\\*Q' + n + '\\\\.\\*\\*[^\\n]*\\n{2,}\\*\\*A' + n + '\\\\.\\*\\*'),
+      `Q${n}/A${n} markers must stay on separate lines with a blank line`
+    );
+  }
+});
+
+test('validator rejects a collapsed FAQ question and answer marker pair', () => {
+  const filler = Array(700).fill('useful').join(' ');
+  const article = [
+    '---',
+    'title: "A practical guide"',
+    'description: "A concise practical guide."',
+    'publishDate: 2026-10-30T00:00:00.000Z',
+    'image: "https://example.com/cover.jpg"',
+    'category: "guide"',
+    'tags: []',
+    '---',
+    '',
+    '## 1. First',
+    filler,
+    '## 2. Second',
+    'A careful explanation.',
+    '## 3. Third',
+    'A useful step.',
+    '## 4. Fourth',
+    'A safety note.',
+    '## 5. FAQ',
+    '**Q1.** Question one? **A1.** Answer one.',
+    '',
+    '**Q2.** Question two?',
+    '',
+    '**A2.** Answer two.',
+    '',
+    '**Q3.** Question three?',
+    '',
+    '**A3.** Answer three.',
+  ].join('\\n');
+
+  const errors = productionMarkdown.validateGeneratedPost(article, 'en');
+  assert.ok(errors.includes('FAQ Q1/A1는 별도 줄과 빈 줄로 분리되어야 함'));
+});

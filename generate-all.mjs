@@ -10,7 +10,7 @@
 import fs from 'fs';
 import path from 'path';
 import { createHash, createCipheriv, createDecipheriv, randomBytes } from 'node:crypto';
-import { createCheckpointKey, createTopicFileSlug } from './generation-identity.mjs';
+import { createCheckpointKey, createTopicFileSlug, decidePublishLocales } from './generation-identity.mjs';
 
 const GENERATION_PROMPT_VERSION = '2026-10-30-first-person-story-v2';
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
@@ -644,15 +644,15 @@ async function run() {
   console.log('⚡ [3호기 AI & 업무자동화] 12개 언어 원고 검증 및 게시 시작 (최소 10개 통과)');
   console.log('==================================================');
 
-  let successCount = 0;
   for (let i = 0; i < TARGET_LANGS.length; i++) {
-    const isSuccess = await generateSinglePost(TARGET_LANGS[i], i);
-    if (isSuccess) successCount++;
+    await generateSinglePost(TARGET_LANGS[i], i);
     if (i < TARGET_LANGS.length - 1) await delay(2000);
   }
 
-  const failedCodes = TARGET_LANGS.filter((lang) => !generatedPostContents.has(lang.code)).map((lang) => lang.code);
-  if (successCount < 10) {
+  const publication = decidePublishLocales(TARGET_LANGS, [...generatedPostContents.keys()], 10);
+  const successCount = publication.passingCodes.length;
+  const failedCodes = publication.failedCodes;
+  if (!publication.canPublish) {
     console.error(
       `세트 중단: 검증 통과 ${successCount}/12개로 최소 기준 10개 미만입니다. 실패 언어: ${failedCodes.join(', ')}. 공개 글과 topics.txt는 그대로 두고 암호화 체크포인트를 보존합니다.`
     );
@@ -660,15 +660,15 @@ async function run() {
   }
 
   // 유효한 locale만 게시 직전 재검증하고 기록합니다.
-  for (const lang of TARGET_LANGS) {
+  for (const lang of publication.passingLocales) {
     const text = generatedPostContents.get(lang.code);
-    if (text === undefined) continue;
+    if (typeof text !== 'string') throw new Error(`Missing validated locale checkpoint: ${lang.code}`);
     const errors = validateGeneratedPost(text, lang.code);
     if (errors.length) throw new Error(`${lang.code} 게시 직전 검증 실패: ${errors.join(', ')}`);
   }
-  for (const lang of TARGET_LANGS) {
+  for (const lang of publication.passingLocales) {
     const text = generatedPostContents.get(lang.code);
-    if (text === undefined) continue;
+    if (typeof text !== 'string') throw new Error(`Missing validated locale checkpoint: ${lang.code}`);
     const targetDir = path.join(POSTS_BASE_DIR, lang.code);
     fs.mkdirSync(targetDir, { recursive: true });
     fs.writeFileSync(path.join(targetDir, `${fileSlug}.md`), text, 'utf-8');

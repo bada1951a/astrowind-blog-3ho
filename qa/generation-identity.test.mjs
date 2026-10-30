@@ -3,6 +3,7 @@ import test from 'node:test';
 import { readFileSync } from 'node:fs';
 
 import { createCheckpointKey, createTopicFileSlug, decidePublishLocales } from '../generation-identity.mjs';
+import { normalizeFaqArtifacts } from '../generation-markdown.mjs';
 
 test('a prompt update invalidates cached drafts but the same version can resume', () => {
   const topics = ['Assigned topic', 'Next topic'];
@@ -191,4 +192,36 @@ test('validator rejects a collapsed FAQ question and answer marker pair', () => 
 
   const errors = productionMarkdown.validateGeneratedPost(article, 'en');
   assert.ok(errors.includes('FAQ Q1/A1는 별도 줄과 빈 줄로 분리되어야 함'));
+});
+
+test('FAQ cleanup removes standalone bold lines and orphan trailing markers without changing prose', () => {
+  const malformedFaq = [
+    '## 5. Frequently Asked Questions (FAQ)',
+    '',
+    '**',
+    '**Q1.** Question one?**',
+    '**',
+    '**A1.** Answer one.**',
+    '',
+    '**Q2.** Question two?**',
+    '**',
+    '**A2.** Answer two.**',
+    '',
+    '**Q3.** Question three?**',
+    '**',
+    '**A3.** Answer three.**',
+  ].join('\n');
+
+  const normalized = normalizeFaqArtifacts(malformedFaq);
+  assert.equal(normalized.includes('\n**\n'), false);
+  assert.match(normalized, /\*\*Q1\.\*\* Question one\?\n\n\*\*A1\.\*\* Answer one\./);
+  assert.match(normalized, /\*\*Q2\.\*\* Question two\?\n\n\*\*A2\.\*\* Answer two\./);
+  assert.match(normalized, /\*\*Q3\.\*\* Question three\?\n\n\*\*A3\.\*\* Answer three\./);
+  assert.ok(normalized.endsWith('**A3.** Answer three.'));
+
+  const preserved = normalizeFaqArtifacts(
+    '## 4. Notes\n\n**Keep this emphasis**\n\n## 5. FAQ\n\n**Q1.** Q?**\n\n**A1.** A.**'
+  );
+  assert.ok(preserved.includes('**Keep this emphasis**'));
+  assert.ok(preserved.includes('**Q1.** Q?\n\n**A1.** A.'));
 });

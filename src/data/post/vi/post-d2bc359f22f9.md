@@ -52,20 +52,17 @@ Cũng không nên gửi bản ghi có nội dung nhạy cảm lên website chuy�
 
 ## 5. Các câu hỏi thường gặp (FAQ)
 
-**
 
-**Q1.**Whisper có chép tiếng Việt cho bản ghi Zoom dài 60 phút không?**
+**Q1.**Whisper có chép tiếng Việt cho bản ghi Zoom dài 60 phút không?
 
 **A1.** Có thể dùng Whisper để nhận dạng tiếng Việt trong bản ghi, nhưng độ chính xác phụ thuộc chất lượng âm thanh, giọng nói, tiếng nền và thuật ngữ. Hãy kiểm tra bản chép trước khi dùng làm căn cứ phân công.
 
-**
 
-**Q2.**Có thể dùng bản chép tự động làm biên bản chính thức không?**
+**Q2.**Có thể dùng bản chép tự động làm biên bản chính thức không?
 
 **A2.** Không nên dùng nguyên trạng. Hãy đối chiếu các quyết định, tên người, số liệu và thời hạn với âm thanh hoặc người tham dự; chỉ phát hành theo quy trình phê duyệt của đơn vị.
 
-**
 
-**Q3.**Làm sao tạo việc cần làm khi cuộc họp không chốt người phụ trách hoặc hạn chót?**
+**Q3.**Làm sao tạo việc cần làm khi cuộc họp không chốt người phụ trách hoặc hạn chót?
 
 **A3.** Ghi rõ phần chưa xác định, không tự suy diễn. Gửi câu hỏi xác nhận cho người điều phối hoặc nhóm liên quan, rồi cập nhật người phụ trách và thời hạn sau khi được thống nhất.

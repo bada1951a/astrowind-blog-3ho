@@ -165,10 +165,9 @@ const I18N_SECTIONS = {
 // =========================================================================
 function inspectAndHealMarkdown(body, langCode) {
   let healed = body.trim();
-  const i18n = I18N_SECTIONS[langCode] || I18N_SECTIONS.ko;
   const auditLogs = [];
 
-  // 1) 헤딩 내부 볼드 제거 및 3호기 표준 소제목 강제 안착
+  // 1) 헤딩 볼드를 정리하고 번호만 표준화해 원고별 제목을 보존
   healed = healed.replace(/^(#{1,6}\s+)\*\*(.*?)\*\*/gm, '$1$2');
   healed = healed.replace(/^#{1,6}\s*1[.\s]+([^\n]+)/m, (_match, title) => `## 1. ${title.trim()}`);
   healed = healed.replace(/^#{1,6}\s*2[.\s]+([^\n]+)/m, (_match, title) => `## 2. ${title.trim()}`);

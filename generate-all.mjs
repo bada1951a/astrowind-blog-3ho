@@ -11,6 +11,7 @@ import fs from 'fs';
 import path from 'path';
 import { createHash, createCipheriv, createDecipheriv, randomBytes } from 'node:crypto';
 import { createCheckpointKey, createTopicFileSlug, decidePublishLocales } from './generation-identity.mjs';
+import { normalizeFaqArtifacts } from './generation-markdown.mjs';
 
 const GENERATION_PROMPT_VERSION = '2026-10-30-truthful-first-person-v3';
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
@@ -185,6 +186,10 @@ function inspectAndHealMarkdown(body, langCode) {
     healed = healed.replace(/\*\*(Q[1-3]\.|A[1-3]\.)\*\*/gi, '**$1**');
     auditLogs.push('Q&A 줄바꿈 2열 분리 치유');
   }
+
+  const faqNormalized = normalizeFaqArtifacts(healed);
+  if (faqNormalized !== healed) auditLogs.push('FAQ의 독립 볼드 표식 및 여분 종료 표식 정돈');
+  healed = faqNormalized;
 
   // 3) 볼드 기호 안쪽 공백 정돈 (** 단어 ** -> **단어**)
   if (/\*\*[ \t]+[^*\r\n]+?[ \t]+\*\*/.test(healed)) {
@@ -701,3 +706,4 @@ async function run() {
 }
 
 run();
+

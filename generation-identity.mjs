@@ -1,6 +1,21 @@
 import { createHash } from 'node:crypto';
 
 export function createCheckpointKey(topicLines, promptVersion) {
+  if (!Array.isArray(topicLines) || topicLines.length === 0) {
+    throw new TypeError('topicLines must contain the current topic.');
+  }
+  const currentTopic = topicLines[0];
+  if (typeof currentTopic !== 'string' || !currentTopic.trim()) {
+    throw new TypeError('The current topic must be a non-empty string.');
+  }
+  if (typeof promptVersion !== 'string' || !promptVersion.trim()) {
+    throw new TypeError('promptVersion must be a non-empty string.');
+  }
+  const identity = JSON.stringify({ currentTopic: currentTopic.trim(), promptVersion: promptVersion.trim() });
+  return createHash('sha256').update(identity, 'utf8').digest('hex');
+}
+
+export function createLegacyCheckpointKey(topicLines, promptVersion) {
   const identity = JSON.stringify({ topicLines, promptVersion });
   return createHash('sha256').update(identity, 'utf8').digest('hex');
 }

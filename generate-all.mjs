@@ -521,7 +521,9 @@ async function generateSinglePost(lang, index) {
       const refreshedCachedText = refreshPublishDate(cachedText, CURRENT_PUBLISH_DATE);
       const cachedErrors = validateGeneratedPost(refreshedCachedText, lang.code);
       if (cachedErrors.length === 0) {
-        if (refreshedCachedText !== cachedText) writeEncryptedCheckpoint(checkpointPath, refreshedCachedText);
+        if (refreshedCachedText !== cachedText) {
+          writeEncryptedCheckpoint(checkpointPath, refreshedCachedText);
+        }
         generatedPostContents.set(lang.code, refreshedCachedText);
         console.log(`\n♻️ [${index + 1}/12] ${lang.name} (${lang.code}) 암호화된 검증 원고 재사용`);
         return true;

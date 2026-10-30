@@ -11,7 +11,6 @@ export function createTopicFileSlug(topic) {
   return `post-${digest.slice(0, 12)}`;
 }
 
-
 export function decidePublishLocales(targetLanguages, successfulLocaleCodes, minimum = 10) {
   if (!Array.isArray(targetLanguages) || targetLanguages.length === 0) {
     throw new TypeError('targetLanguages must be a non-empty array.');

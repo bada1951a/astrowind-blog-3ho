@@ -12,7 +12,7 @@ import path from 'path';
 import { createHash, createCipheriv, createDecipheriv, randomBytes } from 'node:crypto';
 import { createCheckpointKey, createTopicFileSlug, decidePublishLocales } from './generation-identity.mjs';
 
-const GENERATION_PROMPT_VERSION = '2026-10-30-first-person-story-v2';
+const GENERATION_PROMPT_VERSION = '2026-10-30-first-person-story-v3';
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 if (!OPENAI_API_KEY) {
   console.error('❌ OPENAI_API_KEY 환경변수가 설정되지 않았습니다.');
@@ -539,7 +539,7 @@ Length and style:
 - Korean: about 2,400–2,600 characters, maximum 3,000 characters.
 - Other locales: about 900–1,100 words (Japanese: at least 900 non-space characters).
 - Aim for an engaging opening and transitions (about 30%) and useful, accurate explanation and actionable steps (about 70%).
-- Use first-person procedural phrasing only where natural (for example, "I would first check…"). Do not imply a real personal event.
+- Carry a natural first-person storytelling voice through the article. Aim for roughly 30% narrator reasoning, decisions, and transitions and 70% practical explanations, verifiable steps, and safety information. Use first person to explain what the guide would check and why; do not claim real personal events, credentials, customer cases, or results.
 - In the opening paragraph, naturally present a specific situation the reader may recognize and the key unresolved question. Answer it in useful stages, using first-person reasoning and brief transitions to give readers a reason to continue. Avoid clickbait, exaggeration, fabricated personal or customer experiences, hypothetical-scene disclaimers, and rigid opening formulas; phrase this naturally for the locale.
 - Write idiomatic ${lang.name}, not translated wording. Localize examples and UI labels only when relevant.
 

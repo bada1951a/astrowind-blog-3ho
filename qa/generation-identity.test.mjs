@@ -302,4 +302,3 @@ test('FAQ cleanup is bounded by section headings, preserves fenced examples, the
   assert.match(normalized, /\*\*Q3\.\*\* Question three\?\n\n\*\*A3\.\*\* Answer three\./);
   assert.ok(normalized.includes('**A3.** Answer three.\n```markdown'));
 });
-

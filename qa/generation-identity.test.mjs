@@ -75,6 +75,7 @@ test('generator prompt specifies a topic-fit first-person narrative and practica
 });
 
 const generatorSource = readFileSync(new URL('../generate-all.mjs', import.meta.url), 'utf8');
+const newline = String.fromCharCode(10);
 
 function extractFunction(source, signature, nextDeclaration) {
   const start = source.indexOf(signature);
@@ -87,17 +88,17 @@ function extractFunction(source, signature, nextDeclaration) {
 const inspectDeclaration = extractFunction(
   generatorSource,
   'function inspectAndHealMarkdown(body, langCode) {',
-  '\\nif (!fs.existsSync(TOPICS_FILE))'
+  newline + 'if (!fs.existsSync(TOPICS_FILE))'
 );
 const validateDeclaration = extractFunction(
   generatorSource,
   'function validateGeneratedPost(text, langCode) {',
-  '\\nasync function generateSinglePost(lang, index)'
+  newline + 'async function generateSinglePost(lang, index)'
 );
 const productionMarkdown = new Function(
   'I18N_SECTIONS',
   'console',
-  `${inspectDeclaration}\\n${validateDeclaration}\\nreturn { inspectAndHealMarkdown, validateGeneratedPost };`
+  [inspectDeclaration, validateDeclaration, 'return { inspectAndHealMarkdown, validateGeneratedPost };'].join(newline)
 )(
   {
     en: { s1: '1. First', s2: '2. Second', s3: '3. Third', s4: '4. Fourth', s5: '5. FAQ' },
@@ -133,16 +134,19 @@ test('bold normalization never crosses lines and preserves separate FAQ markers 
     '**Q3.** Question three?',
     '',
     '**A3.** Answer three.',
-  ].join('\\n');
+  ].join(newline);
 
   const healed = productionMarkdown.inspectAndHealMarkdown(raw, 'en');
-  assert.ok(healed.includes('** spaced phrase\\ncontinued phrase **'), 'multiline bold-like text must retain its line break and spacing');
+  assert.ok(
+    healed.includes(['** spaced phrase', 'continued phrase **'].join(newline)),
+    'multiline bold-like text must retain its line break and spacing'
+  );
+  const lines = healed.split(newline);
   for (let n = 1; n <= 3; n++) {
-    assert.match(
-      healed,
-      new RegExp('\\*\\*Q' + n + '\\\\.\\*\\*[^\\n]*\\n{2,}\\*\\*A' + n + '\\\\.\\*\\*'),
-      `Q${n}/A${n} markers must stay on separate lines with a blank line`
-    );
+    const questionLine = lines.findIndex((line) => line.startsWith('**Q' + n + '.**'));
+    assert.notEqual(questionLine, -1, `Q${n} marker should remain at line start`);
+    assert.equal(lines[questionLine + 1], '', `Q${n}/A${n} must retain a blank line`);
+    assert.ok(lines[questionLine + 2]?.startsWith('**A' + n + '.**'), `A${n} marker should remain on the following line`);
   }
 });
 
@@ -176,7 +180,7 @@ test('validator rejects a collapsed FAQ question and answer marker pair', () => 
     '**Q3.** Question three?',
     '',
     '**A3.** Answer three.',
-  ].join('\\n');
+  ].join(newline);
 
   const errors = productionMarkdown.validateGeneratedPost(article, 'en');
   assert.ok(errors.includes('FAQ Q1/A1는 별도 줄과 빈 줄로 분리되어야 함'));

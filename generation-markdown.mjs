@@ -73,4 +73,3 @@ export function normalizeFaqArtifacts(markdown) {
 
   return lines.join(newline);
 }
-

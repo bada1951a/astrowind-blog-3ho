@@ -2,7 +2,12 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { readFileSync } from 'node:fs';
 
-import { createCheckpointKey, createTopicFileSlug, decidePublishLocales } from '../generation-identity.mjs';
+import {
+  createCheckpointKey,
+  createLegacyCheckpointKey,
+  createTopicFileSlug,
+  decidePublishLocales,
+} from '../generation-identity.mjs';
 import { normalizeFaqArtifacts } from '../generation-markdown.mjs';
 
 test('a prompt update invalidates cached drafts but the same version can resume', () => {
@@ -21,6 +26,34 @@ test('the topic slug is stable when later queue rows change', () => {
   assert.equal(createTopicFileSlug('Assigned topic'), slug);
   assert.equal(createTopicFileSlug('Assigned topic').startsWith('post-'), true);
   assert.notEqual(createTopicFileSlug('Different topic'), slug);
+});
+
+test('checkpoint identity follows the current topic and prompt version, not later queue rows', () => {
+  const topics = ['Assigned topic', 'Next topic'];
+  const key = createCheckpointKey(topics, 'prompt-v1');
+
+  assert.equal(createCheckpointKey(['Assigned topic', 'Edited next topic'], 'prompt-v1'), key);
+  assert.equal(createCheckpointKey(['Assigned topic', 'Next topic', 'Added topic'], 'prompt-v1'), key);
+  assert.notEqual(createCheckpointKey(['Different topic', 'Next topic'], 'prompt-v1'), key);
+  assert.notEqual(createCheckpointKey(topics, 'prompt-v2'), key);
+});
+
+test('legacy checkpoint key preserves the full topic queue identity for safe migration', () => {
+  const topics = ['Assigned topic', 'Next topic'];
+  const key = createLegacyCheckpointKey(topics, 'prompt-v1');
+
+  assert.equal(createLegacyCheckpointKey([...topics], 'prompt-v1'), key);
+  assert.notEqual(createLegacyCheckpointKey(['Assigned topic', 'Edited next topic'], 'prompt-v1'), key);
+});
+
+test('generator migrates an exact-queue legacy cache before removing other keys', () => {
+  const source = readFileSync(new URL('../generate-all.mjs', import.meta.url), 'utf8');
+
+  assert.match(source, /const legacyCheckpointDir = path\.join\(checkpointRoot, legacyCheckpointKey\)/);
+  assert.match(
+    source,
+    /fs\.existsSync\(legacyCheckpointDir\)[\s\S]*?fs\.renameSync\(legacyCheckpointDir, checkpointDir\)/
+  );
 });
 
 const publicationTargets = ['ko', 'en', 'ja', 'de', 'fr', 'es', 'it', 'pt', 'nl', 'pl', 'id', 'vi'].map((code) => ({

@@ -12,7 +12,7 @@ import path from 'path';
 import { createHash, createCipheriv, createDecipheriv, randomBytes } from 'node:crypto';
 import { createCheckpointKey, createTopicFileSlug, decidePublishLocales } from './generation-identity.mjs';
 
-const GENERATION_PROMPT_VERSION = '2026-10-30-truthful-first-person-v2';
+const GENERATION_PROMPT_VERSION = '2026-10-30-truthful-first-person-v3';
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 if (!OPENAI_API_KEY) {
   console.error('❌ OPENAI_API_KEY 환경변수가 설정되지 않았습니다.');
@@ -307,84 +307,84 @@ const TARGET_LANGS = [
   {
     code: 'ko',
     name: 'Korean',
-    persona: '친절하고 경험 많은 엑셀/AI 자동화 실무 전문가 (사내 칼퇴 치트키 장인)',
+    persona: '실용적인 업무 자동화와 AI 활용 안내를 쉽게 풀어 쓰는 글쓴이',
     osUi: '파일 > 옵션, 데이터 > 파워 쿼리, 수식 탭, 확장 프로그램',
     localeContext: 'Korean-language readers in South Korea',
   },
   {
     code: 'en',
     name: 'English',
-    persona: 'Friendly Silicon Valley productivity specialist sharing no-code and AI shortcuts',
+    persona: 'Practical guide writer explaining office automation and AI clearly',
     osUi: 'File > Options, Data > Power Query, Formula Tab, Add-ons',
     localeContext: 'English-language readers in the United States',
   },
   {
     code: 'ja',
     name: 'Japanese',
-    persona: '業務効率化とAIツール活用を分かりやすく教える日本の現役ITワーカー',
+    persona: '業務自動化とAI活用を分かりやすく案内する実用ガイドの書き手',
     osUi: 'ファイル > オプション, データ > パワークエリ, 数式タブ, 拡張機能',
     localeContext: 'Japanese-language readers in Japan',
   },
   {
     code: 'de',
     name: 'German',
-    persona: 'Praxisnaher deutscher Automatisierungs-Experte für Office- und KI-Tools',
+    persona: 'Praktischer Ratgeberautor für verständliche Büroautomatisierung und KI',
     osUi: 'Datei > Optionen, Daten > Power Query, Formeln, Add-Ins',
     localeContext: 'German-language readers in Germany',
   },
   {
     code: 'fr',
     name: 'French',
-    persona: 'Spécialiste support bureautique et IA expliquant les astuces de productivité',
+    persona: 'Rédacteur de guides pratiques sur automatisation du travail et IA',
     osUi: 'Fichier > Options, Données > Power Query, Formules, Extensions',
-    localeContext: "French-language readers in France",
+    localeContext: 'French-language readers in France',
   },
   {
     code: 'es',
     name: 'Spanish',
-    persona: 'Especialista en productividad y automatización que explica trucos prácticos sin rodeos',
+    persona: 'Redactor de guías prácticas sobre automatización del trabajo e IA',
     osUi: 'Archivo > Opciones, Datos > Power Query, Fórmulas, Complementos',
     localeContext: 'Spanish-language readers in Spain',
   },
   {
     code: 'it',
     name: 'Italian',
-    persona: "Esperto di automazione e AI che semplifica il lavoro d'ufficio quotidiano",
+    persona: 'Autore di guide pratiche su automazione del lavoro e IA',
     osUi: 'File > Opzioni, Dati > Power Query, Formule, Componenti aggiuntivi',
     localeContext: 'Italian-language readers in Italy',
   },
   {
     code: 'pt',
     name: 'Portuguese',
-    persona: 'Especialista em automação de escritório que ensina truques práticos de produtividade',
+    persona: 'Redator de guias práticos sobre automação do trabalho e IA',
     osUi: 'Arquivo > Opções, Dados > Power Query, Fórmulas, Suplementos',
     localeContext: 'Portuguese-language readers in Brazil',
   },
   {
     code: 'nl',
     name: 'Dutch',
-    persona: 'Nederlandse productiviteits- en AI-specialist die slimme werkmethoden uitlegt',
+    persona: 'Praktische gidsenschrijver over werkautomatisering en AI',
     osUi: 'Bestand > Opties, Gegevens > Power Query, Formules, Invoegtoepassingen',
     localeContext: 'Dutch-language readers in the Netherlands',
   },
   {
     code: 'pl',
     name: 'Polish',
-    persona: 'Polski ekspert od automatyzacji biurowej i narzędzi AI tłumaczący triki krok po kroku',
+    persona: 'Autor praktycznych poradników o automatyzacji pracy i AI',
     osUi: 'Plik > Opcje, Dane > Power Query, Formuły, Dodatki',
     localeContext: 'Polish-language readers in Poland',
   },
   {
     code: 'id',
     name: 'Indonesian',
-    persona: 'Praktisi produktivitas dan otomatisasi kantor yang berbagi solusi praktis sehari-hari',
+    persona: 'Penulis panduan praktis tentang otomatisasi kerja dan AI',
     osUi: 'File > Opsi, Data > Power Query, Rumus, Add-in',
     localeContext: 'Indonesian-language readers in Indonesia',
   },
   {
     code: 'vi',
     name: 'Vietnamese',
-    persona: 'Chuyên viên tối ưu hóa quy trình làm việc và công cụ AI thực chiến',
+    persona: 'Người viết hướng dẫn thực tế về tự động hóa công việc và AI',
     osUi: 'Tệp > Tùy chọn, Dữ liệu > Power Query, Công thức, Tiện ích bổ sung',
     localeContext: 'Vietnamese-language readers in Vietnam',
   },

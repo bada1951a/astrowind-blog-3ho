@@ -67,3 +67,8 @@ test('generator uses the tested publication plan to gate and select written loca
   assert.match(source, /if \(!publication\.canPublish\)/);
   assert.match(source, /for \(const lang of publication\.passingLocales\)/);
 });
+
+test('generator prompt specifies a topic-fit first-person narrative and practical balance', () => {
+  const source = readFileSync(new URL('../generate-all.mjs', import.meta.url), 'utf8');
+  assert.match(source, /roughly 30%[\\s\\S]*70%/);
+});

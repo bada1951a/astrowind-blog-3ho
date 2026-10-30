@@ -4,15 +4,21 @@ import { readFileSync } from 'node:fs';
 
 import { createCheckpointKey, createTopicFileSlug, decidePublishLocales } from '../generation-identity.mjs';
 
-test('a prompt update invalidates cached drafts but the same version can resume', () => {
+test('checkpoint identity follows the current topic and prompt version, not later queue rows', () => {
   const topics = ['Assigned topic', 'Next topic'];
   const v1 = createCheckpointKey(topics, 'prompt-v1');
   const resumed = createCheckpointKey(topics, 'prompt-v1');
+  const changedTail = createCheckpointKey(['Assigned topic', 'Edited next topic'], 'prompt-v1');
+  const addedTail = createCheckpointKey(['Assigned topic', 'Next topic', 'Another topic'], 'prompt-v1');
+  const changedCurrentTopic = createCheckpointKey(['Different topic', 'Next topic'], 'prompt-v1');
   const v2 = createCheckpointKey(topics, 'prompt-v2');
 
   assert.equal(resumed, v1);
+  assert.equal(changedTail, v1);
+  assert.equal(addedTail, v1);
+  assert.notEqual(changedCurrentTopic, v1);
   assert.notEqual(v2, v1);
-});
+}
 
 test('the topic slug is stable when later queue rows change', () => {
   const slug = createTopicFileSlug('Assigned topic');

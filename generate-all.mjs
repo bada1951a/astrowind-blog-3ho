@@ -192,11 +192,11 @@ function inspectAndHealMarkdown(body, langCode) {
   }
 
   // 3) 볼드 기호 안쪽 공백 정돈 (** 단어 ** -> **단어**)
-  if (/\*\*\s+[^*]+?\s+\*\*/.test(healed)) {
+  if (/\*\*[ \t]+[^*\r\n]+?[ \t]+\*\*/.test(healed)) {
     healed = healed
-      .replace(/\*\*\s+([^*]+?)\s+\*\*/g, '**$1**')
-      .replace(/\*\*\s+([^*]+?)\*\*/g, '**$1**')
-      .replace(/\*\*([^*]+?)\s+\*\*/g, '**$1**');
+      .replace(/\*\*[ \t]+([^*\r\n]+?)[ \t]+\*\*/g, '**$1**')
+      .replace(/\*\*[ \t]+([^*\r\n]+?)\*\*/g, '**$1**')
+      .replace(/\*\*([^*\r\n]+?)[ \t]+\*\*/g, '**$1**');
     auditLogs.push('볼드 공백 정돈');
   }
 
@@ -492,6 +492,11 @@ function validateGeneratedPost(text, langCode) {
     if (bodyWithoutCode.split(questionMarker).length - 1 !== 1)
       errors.push('FAQ 질문 Q' + n + ' 표식이 정확히 1개 필요');
     if (bodyWithoutCode.split(answerMarker).length - 1 !== 1) errors.push('FAQ 답변 A' + n + ' 표식이 정확히 1개 필요');
+    const pairPattern = new RegExp(
+      '^[ \t]*\*\*Q' + n + '\.\*\*[^\r\n]*\r?\n\r?\n[ \t]*\*\*A' + n + '\.\*\*',
+      'm'
+    );
+    if (!pairPattern.test(bodyWithoutCode)) errors.push('FAQ Q' + n + '/A' + n + '는 별도 줄과 빈 줄로 분리되어야 함');
   }
   if (langCode === 'ko' && nonSpaceLength < 1800) errors.push('한국어 본문 공백 제외 1,800자 미만');
   if (langCode === 'ko' && nonSpaceLength > 3600) errors.push('한국어 본문 공백 제외 3,600자 초과');

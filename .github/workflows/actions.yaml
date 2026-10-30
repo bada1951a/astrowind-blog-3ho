@@ -31,6 +31,9 @@ jobs:
         run: npm install --legacy-peer-deps
         working-directory: ${{ github.workspace }}
 
+      - name: Test generator recovery and topic identity
+        run: node --test qa/generation-identity.test.mjs
+
       - name: Run checks
         run: npm run check
         working-directory: ${{ github.workspace }}

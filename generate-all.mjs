@@ -10,7 +10,7 @@
 import fs from 'fs';
 import path from 'path';
 import { createHash, createCipheriv, createDecipheriv, randomBytes } from 'node:crypto';
-import { createCheckpointKey, createTopicFileSlug, decidePublishLocales } from './generation-identity.mjs';
+import { createCheckpointKey, createLegacyCheckpointKey, createTopicFileSlug, decidePublishLocales } from './generation-identity.mjs';
 
 const GENERATION_PROMPT_VERSION = '2026-10-30-first-person-story-v3';
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
@@ -241,6 +241,18 @@ const currentTopic = lines[0];
 const topicKey = createCheckpointKey(lines, GENERATION_PROMPT_VERSION);
 const checkpointRoot = path.resolve('.generation-checkpoints');
 const checkpointDir = path.join(checkpointRoot, topicKey);
+const legacyCheckpointKey = createLegacyCheckpointKey(lines, GENERATION_PROMPT_VERSION);
+const legacyCheckpointDir = path.join(checkpointRoot, legacyCheckpointKey);
+
+// Migrate a pre-fix cache only when the full topic queue still matches exactly.
+if (
+  legacyCheckpointKey !== topicKey &&
+  fs.existsSync(legacyCheckpointDir) &&
+  !fs.existsSync(checkpointDir)
+) {
+  fs.renameSync(legacyCheckpointDir, checkpointDir);
+  console.log('♻️ 기존 전체 topic 목록 기준 locale 체크포인트를 현재 주제 키로 이전합니다.');
+}
 const checkpointEncryptionKey = createHash('sha256')
   .update('blog-locale-checkpoint-v1\0', 'utf8')
   .update(OPENAI_API_KEY, 'utf8')

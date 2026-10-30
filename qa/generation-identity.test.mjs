@@ -102,13 +102,15 @@ const validateDeclaration = extractFunction(
 const productionMarkdown = new Function(
   'I18N_SECTIONS',
   'console',
+  'normalizeFaqArtifacts',
   [inspectDeclaration, validateDeclaration, 'return { inspectAndHealMarkdown, validateGeneratedPost };'].join(newline)
 )(
   {
     en: { s1: '1. First', s2: '2. Second', s3: '3. Third', s4: '4. Fourth', s5: '5. FAQ' },
     ko: { s1: '1. First', s2: '2. Second', s3: '3. Third', s4: '4. Fourth', s5: '5. FAQ' },
   },
-  { log() {} }
+  { log() {} },
+  normalizeFaqArtifacts
 );
 
 test('bold normalization never crosses lines and preserves separate FAQ markers and blank lines', () => {

@@ -433,7 +433,7 @@ if (fs.existsSync(checkpointDir)) {
 // =========================================================================
 // [호출 함수] maxOutputTokens: 8192 (2,500자 정량 생성 최적화)
 // =========================================================================
-async function fetchWithRetry(prompt, maxRetries = 3, delayMs = 3000) {
+async function fetchWithRetry(prompt, maxRetries = 2, delayMs = 3000) {
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
       const response = await fetch('https://api.openai.com/v1/responses', {
